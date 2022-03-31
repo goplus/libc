@@ -1,3 +1,5 @@
+*.json
+*.c.i
 *.o
 *.lo
 *.a
@@ -8,3 +10,4 @@ lib/musl-gcc.specs
 /obj/
 
 .vscode
+.DS_Store
