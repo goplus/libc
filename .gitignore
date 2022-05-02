@@ -22,4 +22,4 @@ lib/musl-gcc.specs
 *.c.go
 
 build/
-go.*
+go.work*
