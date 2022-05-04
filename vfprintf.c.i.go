@@ -1552,7 +1552,7 @@ overflow:
 	*___errno_location() = int32(75)
 	return int32(-1)
 }
-func vfprintf(f *struct__IO_FILE, fmt *int8, ap []interface {
+func Vfprintf(f *struct__IO_FILE, fmt *int8, ap []interface {
 }) int32 {
 	var ap2 []interface {
 	}
