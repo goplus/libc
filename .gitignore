@@ -18,8 +18,6 @@ lib/musl-gcc.specs
 *.log
 *.i
 *.json
-*.i.go
-*.c.go
 
 build/
 go.work*
