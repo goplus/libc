@@ -1,7 +1,7 @@
 libc - Porting libc from C to Go
 ======
 
-This is a subproject of the [c2go](https://github.com/goplus/c2go) project.
+This is a subproject of [the c2go project](https://github.com/goplus/c2go).
 
 ## What's our plan?
 
