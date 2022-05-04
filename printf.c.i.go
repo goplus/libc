@@ -6,6 +6,6 @@ func Printf(fmt *int8, __cgo_args ...interface {
 	var ap []interface {
 	}
 	ap = __cgo_args
-	ret = vfprintf(&__stdout_FILE, fmt, ap)
+	ret = Vfprintf(&__stdout_FILE, fmt, ap)
 	return ret
 }
