@@ -2,8 +2,18 @@ package libc
 
 import unsafe "unsafe"
 
-type size_t = uint32
+func __isspace(_c int32) int32 {
+	return func() int32 {
+		if _c == ' ' || uint32(_c)-uint32('\t') < uint32(5) {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+
 type locale_t = *struct___locale_struct
+type size_t = uint32
 type uintptr_t = uint32
 type intptr_t = int32
 type int8_t = int8
@@ -91,17 +101,6 @@ type struct__IO_FILE struct {
 	next_locked  *struct__IO_FILE
 	locale       *struct___locale_struct
 }
-
-func __isspace(_c int32) int32 {
-	return func() int32 {
-		if _c == ' ' || uint32(_c)-uint32('\t') < uint32(5) {
-			return 1
-		} else {
-			return 0
-		}
-	}()
-}
-
 type wchar_t = uint32
 type _cgoa_1 struct {
 	__ll int64

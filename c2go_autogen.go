@@ -37,9 +37,6 @@ func __unlockfile(*struct__IO_FILE) {
 func frexpl(float64, *int32) float64 {
 	panic("notimpl")
 }
-func isdigit(int32) int32 {
-	panic("notimpl")
-}
 func strerror(int32) *int8 {
 	panic("notimpl")
 }
