@@ -1,7 +1,5 @@
 package libc
 
-import unsafe "unsafe"
-
 type struct___locale_struct struct {
 }
 type struct___pthread struct {
@@ -42,13 +40,7 @@ func frexpl(float64, *int32) float64 {
 func isdigit(int32) int32 {
 	panic("notimpl")
 }
-func memset(unsafe.Pointer, int32, uint32) unsafe.Pointer {
-	panic("notimpl")
-}
 func strerror(int32) *int8 {
-	panic("notimpl")
-}
-func strnlen(*int8, uint32) uint32 {
 	panic("notimpl")
 }
 func wctomb(*int8, uint32) int32 {

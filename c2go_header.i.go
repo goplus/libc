@@ -3,6 +3,35 @@ package libc
 import unsafe "unsafe"
 
 type size_t = uint32
+type locale_t = *struct___locale_struct
+type uintptr_t = uint32
+type intptr_t = int32
+type int8_t = int8
+type int16_t = int16
+type int32_t = int32
+type int64_t = int64
+type intmax_t = int64
+type uint8_t = uint8
+type uint16_t = uint16
+type uint32_t = uint32
+type uint64_t = uint64
+type uintmax_t = uint64
+type int_fast8_t = int8
+type int_fast64_t = int64
+type int_least8_t = int8
+type int_least16_t = int16
+type int_least32_t = int32
+type int_least64_t = int64
+type uint_fast8_t = uint8
+type uint_fast64_t = uint64
+type uint_least8_t = uint8
+type uint_least16_t = uint16
+type uint_least32_t = uint32
+type uint_least64_t = uint64
+type int_fast16_t = int32
+type int_fast32_t = int32
+type uint_fast16_t = uint32
+type uint_fast32_t = uint32
 type ssize_t = int32
 type off_t = int64
 type FILE = struct__IO_FILE
@@ -73,7 +102,6 @@ func __isspace(_c int32) int32 {
 	}()
 }
 
-type locale_t = *struct___locale_struct
 type wchar_t = uint32
 type _cgoa_1 struct {
 	__ll int64
@@ -99,34 +127,6 @@ type struct___mbstate_t struct {
 	__opaque2 uint32
 }
 type mbstate_t = struct___mbstate_t
-type uintptr_t = uint32
-type intptr_t = int32
-type int8_t = int8
-type int16_t = int16
-type int32_t = int32
-type int64_t = int64
-type intmax_t = int64
-type uint8_t = uint8
-type uint16_t = uint16
-type uint32_t = uint32
-type uint64_t = uint64
-type uintmax_t = uint64
-type int_fast8_t = int8
-type int_fast64_t = int64
-type int_least8_t = int8
-type int_least16_t = int16
-type int_least32_t = int32
-type int_least64_t = int64
-type uint_fast8_t = uint8
-type uint_fast64_t = uint64
-type uint_least8_t = uint8
-type uint_least16_t = uint16
-type uint_least32_t = uint32
-type uint_least64_t = uint64
-type int_fast16_t = int32
-type int_fast32_t = int32
-type uint_fast16_t = uint32
-type uint_fast32_t = uint32
 type _cgoa_5 struct {
 	quot int64
 	rem  int64
