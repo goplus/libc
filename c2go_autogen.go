@@ -1,10 +1,6 @@
 package libc
 
-type struct___locale_struct struct {
-}
-type struct___pthread struct {
-}
-type struct_tm struct {
+type struct___locale_map struct {
 }
 
 func ___errno_location() *int32 {
@@ -16,10 +12,16 @@ func __fpclassifyl(float64) int32 {
 func __fwritex(*uint8, uint32, *struct__IO_FILE) uint32 {
 	panic("notimpl")
 }
-func __lockfile(*struct__IO_FILE) int32 {
+func __get_tp() uint32 {
 	panic("notimpl")
 }
 func __signbitl(float64) int32 {
+	panic("notimpl")
+}
+func __syscall3(n int64, a int64, b int64, c int64) int64 {
+	panic("notimpl")
+}
+func __syscall4(n int64, a int64, b int64, c int64, d int64) int64 {
 	panic("notimpl")
 }
 func __syscall6(n int64, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
@@ -31,7 +33,7 @@ func __syscall_cp(int64, int64, int64, int64, int64, int64, int64) int64 {
 func __towrite(*struct__IO_FILE) int32 {
 	panic("notimpl")
 }
-func __unlockfile(*struct__IO_FILE) {
+func a_cas(p *int32, t int32, s int32) int32 {
 	panic("notimpl")
 }
 func frexpl(float64, *int32) float64 {
