@@ -2,12 +2,12 @@ package libc
 
 import unsafe "unsafe"
 
-func memchr(src unsafe.Pointer, c int32, n uint32) unsafe.Pointer {
+func memchr(src unsafe.Pointer, c int32, n uint64) unsafe.Pointer {
 	var s *uint8 = (*uint8)(src)
 	c = int32(uint8(c))
-	for ; uint64(uint32(uintptr(unsafe.Pointer(s))))&(4-uint64(1)) != 0 && n != 0 && int32(*s) != c; func() uint32 {
+	for ; uint64(uintptr(unsafe.Pointer(s)))&(8-uint64(1)) != 0 && n != 0 && int32(*s) != c; func() uint64 {
 		*(*uintptr)(unsafe.Pointer(&s))++
-		return func() (_cgo_ret uint32) {
+		return func() (_cgo_ret uint64) {
 			_cgo_addr := &n
 			_cgo_ret = *_cgo_addr
 			*_cgo_addr--
@@ -16,23 +16,23 @@ func memchr(src unsafe.Pointer, c int32, n uint32) unsafe.Pointer {
 	}() {
 	}
 	if n != 0 && int32(*s) != c {
-		type word = uint32
-		var w *uint32
-		var k uint32 = uint32(4294967295) / uint32(255) * uint32(c)
-		for w = (*uint32)(unsafe.Pointer(s)); uint64(n) >= 4 && !((*w^k-uint32(4294967295)/uint32(255)) & ^(*w^k) & (uint32(4294967295)/uint32(255)*uint32(255/2+1)) != 0); func() uint32 {
-			*(*uintptr)(unsafe.Pointer(&w)) += 4
-			return func() (_cgo_ret uint32) {
+		type word = uint64
+		var w *uint64
+		var k uint64 = uint64(18446744073709551615) / uint64(255) * uint64(c)
+		for w = (*uint64)(unsafe.Pointer(s)); n >= 8 && !((*w^k-uint64(18446744073709551615)/uint64(255)) & ^(*w^k) & (uint64(18446744073709551615)/uint64(255)*uint64(255/2+1)) != 0); func() uint64 {
+			*(*uintptr)(unsafe.Pointer(&w)) += 8
+			return func() (_cgo_ret uint64) {
 				_cgo_addr := &n
-				*_cgo_addr -= uint32(4)
+				*_cgo_addr -= uint64(8)
 				return *_cgo_addr
 			}()
 		}() {
 		}
 		s = (*uint8)(unsafe.Pointer(w))
 	}
-	for ; n != 0 && int32(*s) != c; func() uint32 {
+	for ; n != 0 && int32(*s) != c; func() uint64 {
 		*(*uintptr)(unsafe.Pointer(&s))++
-		return func() (_cgo_ret uint32) {
+		return func() (_cgo_ret uint64) {
 			_cgo_addr := &n
 			_cgo_ret = *_cgo_addr
 			*_cgo_addr--

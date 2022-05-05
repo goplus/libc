@@ -4,7 +4,7 @@ import unsafe "unsafe"
 
 func __lockfile(f *struct__IO_FILE) int32 {
 	var owner int32 = f.lock
-	var tid int32 = (*struct___pthread)(unsafe.Pointer(uintptr(uint64(__get_tp()) - 184 - uint64(0)))).tid
+	var tid int32 = (*struct___pthread)(unsafe.Pointer(uintptr(__get_tp() - 200 - uint64(0)))).tid
 	if owner & ^1073741824 == tid {
 		return int32(0)
 	}

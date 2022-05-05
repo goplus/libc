@@ -9,10 +9,10 @@ func ___errno_location() *int32 {
 func __fpclassifyl(float64) int32 {
 	panic("notimpl")
 }
-func __fwritex(*uint8, uint32, *struct__IO_FILE) uint32 {
+func __fwritex(*uint8, uint64, *struct__IO_FILE) uint64 {
 	panic("notimpl")
 }
-func __get_tp() uint32 {
+func __get_tp() uint64 {
 	panic("notimpl")
 }
 func __signbitl(float64) int32 {

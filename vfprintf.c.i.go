@@ -133,8 +133,8 @@ func pop_arg(arg *union_arg, type_ int32, ap *[]interface {
 		break
 	case SIZET:
 		arg.i = uint64(func(__cgo_args []interface {
-		}) (_cgo_ret uint32) {
-			_cgo_ret = __cgo_args[0].(uint32)
+		}) (_cgo_ret uint64) {
+			_cgo_ret = __cgo_args[0].(uint64)
 			*ap = __cgo_args[1:]
 			return
 		}(*ap))
@@ -157,14 +157,14 @@ func pop_arg(arg *union_arg, type_ int32, ap *[]interface {
 		break
 	case PDIFF:
 		arg.i = uint64(func(__cgo_args []interface {
-		}) (_cgo_ret int32) {
-			_cgo_ret = __cgo_args[0].(int32)
+		}) (_cgo_ret int64) {
+			_cgo_ret = __cgo_args[0].(int64)
 			*ap = __cgo_args[1:]
 			return
 		}(*ap))
 		break
 	case UIPTR:
-		arg.i = uint64(uint32(uintptr(func(__cgo_args []interface {
+		arg.i = uint64(uint64(uintptr(func(__cgo_args []interface {
 		}) (_cgo_ret unsafe.Pointer) {
 			_cgo_ret = __cgo_args[0].(unsafe.Pointer)
 			*ap = __cgo_args[1:]
@@ -188,7 +188,7 @@ func pop_arg(arg *union_arg, type_ int32, ap *[]interface {
 		}(*ap)
 	}
 }
-func out(f *struct__IO_FILE, s *int8, l uint32) {
+func out(f *struct__IO_FILE, s *int8, l uint64) {
 	if !(f.flags&uint32(32) != 0) {
 		__fwritex((*uint8)(unsafe.Pointer(s)), l, f)
 	}
@@ -199,17 +199,17 @@ func pad(f *struct__IO_FILE, c int8, w int32, l int32, fl int32) {
 		return
 	}
 	l = w - l
-	memset(unsafe.Pointer((*int8)(unsafe.Pointer(&pad))), int32(c), uint32(func() uint64 {
+	memset(unsafe.Pointer((*int8)(unsafe.Pointer(&pad))), int32(c), func() uint64 {
 		if uint64(l) > 256 {
 			return 256
 		} else {
 			return uint64(l)
 		}
-	}()))
+	}())
 	for ; uint64(l) >= 256; l -= int32(256) {
-		out(f, (*int8)(unsafe.Pointer(&pad)), uint32(256))
+		out(f, (*int8)(unsafe.Pointer(&pad)), 256)
 	}
-	out(f, (*int8)(unsafe.Pointer(&pad)), uint32(l))
+	out(f, (*int8)(unsafe.Pointer(&pad)), uint64(l))
 }
 
 var xdigits [16]int8 = [16]int8{'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'}
@@ -350,8 +350,8 @@ func fmt_fp(f *struct__IO_FILE, y float64, w int32, p int32, fl int32, t int32) 
 			}()
 		}
 		pad(f, int8(' '), w, 3+pl, int32(uint32(fl)&4294901759))
-		out(f, prefix, uint32(pl))
-		out(f, s, uint32(3))
+		out(f, prefix, uint64(pl))
+		out(f, s, uint64(3))
 		pad(f, int8(' '), w, 3+pl, int32(uint32(fl)^1<<('-'-' ')))
 		return func() int32 {
 			if w > 3+pl {
@@ -458,11 +458,11 @@ func fmt_fp(f *struct__IO_FILE, y float64, w int32, p int32, fl int32, t int32) 
 			l = int32(uintptr(unsafe.Pointer(s)) - uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf)))) + (uintptr(unsafe.Pointer(ebuf)) - uintptr(unsafe.Pointer(estr))))
 		}
 		pad(f, int8(' '), w, pl+l, fl)
-		out(f, prefix, uint32(pl))
+		out(f, prefix, uint64(pl))
 		pad(f, int8('0'), w, pl+l, int32(uint32(fl)^1<<('0'-' ')))
-		out(f, (*int8)(unsafe.Pointer(&buf)), uint32(uintptr(unsafe.Pointer(s))-uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))))
+		out(f, (*int8)(unsafe.Pointer(&buf)), uint64(uintptr(unsafe.Pointer(s))-uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))))
 		pad(f, int8('0'), int32(int64(l)-int64(uintptr(unsafe.Pointer(ebuf))-uintptr(unsafe.Pointer(estr)))-int64(uintptr(unsafe.Pointer(s))-uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf)))))), 0, 0)
-		out(f, estr, uint32(uintptr(unsafe.Pointer(ebuf))-uintptr(unsafe.Pointer(estr))))
+		out(f, estr, uint64(uintptr(unsafe.Pointer(ebuf))-uintptr(unsafe.Pointer(estr))))
 		pad(f, int8(' '), w, pl+l, int32(uint32(fl)^1<<('-'-' ')))
 		return func() int32 {
 			if w > pl+l {
@@ -847,7 +847,7 @@ func fmt_fp(f *struct__IO_FILE, y float64, w int32, p int32, fl int32, t int32) 
 		return int32(-1)
 	}
 	pad(f, int8(' '), w, pl+l, fl)
-	out(f, prefix, uint32(pl))
+	out(f, prefix, uint64(pl))
 	pad(f, int8('0'), w, pl+l, int32(uint32(fl)^1<<('0'-' ')))
 	if t|32 == 'f' {
 		if uintptr(unsafe.Pointer(a)) > uintptr(unsafe.Pointer(r)) {
@@ -870,10 +870,10 @@ func fmt_fp(f *struct__IO_FILE, y float64, w int32, p int32, fl int32, t int32) 
 					return *_cgo_addr
 				}() = int8('0')
 			}
-			out(f, s, uint32(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))+uintptr(9)))))-uintptr(unsafe.Pointer(s))))
+			out(f, s, uint64(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))+uintptr(9)))))-uintptr(unsafe.Pointer(s))))
 		}
 		if p != 0 || uint32(fl)&(1<<('#'-' ')) != 0 {
-			out(f, (*int8)(unsafe.Pointer(&[2]int8{'.', '\x00'})), uint32(1))
+			out(f, (*int8)(unsafe.Pointer(&[2]int8{'.', '\x00'})), uint64(1))
 		}
 		for ; uintptr(unsafe.Pointer(d)) < uintptr(unsafe.Pointer(z)) && p > 0; func() int32 {
 			*(*uintptr)(unsafe.Pointer(&d)) += 4
@@ -891,7 +891,7 @@ func fmt_fp(f *struct__IO_FILE, y float64, w int32, p int32, fl int32, t int32) 
 					return *_cgo_addr
 				}() = int8('0')
 			}
-			out(f, s, uint32(func() int32 {
+			out(f, s, uint64(func() int32 {
 				if 9 < p {
 					return 9
 				} else {
@@ -927,12 +927,12 @@ func fmt_fp(f *struct__IO_FILE, y float64, w int32, p int32, fl int32, t int32) 
 					_cgo_ret = *_cgo_addr
 					*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 					return
-				}(), uint32(1))
+				}(), uint64(1))
 				if p > 0 || uint32(fl)&(1<<('#'-' ')) != 0 {
-					out(f, (*int8)(unsafe.Pointer(&[2]int8{'.', '\x00'})), uint32(1))
+					out(f, (*int8)(unsafe.Pointer(&[2]int8{'.', '\x00'})), uint64(1))
 				}
 			}
-			out(f, s, uint32(func() int64 {
+			out(f, s, uint64(func() int64 {
 				if uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))+uintptr(9)))))-uintptr(unsafe.Pointer(s)) < uintptr(int64(p)) {
 					return int64(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))+uintptr(9))))) - uintptr(unsafe.Pointer(s)))
 				} else {
@@ -942,7 +942,7 @@ func fmt_fp(f *struct__IO_FILE, y float64, w int32, p int32, fl int32, t int32) 
 			p -= int32(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))+uintptr(9))))) - uintptr(unsafe.Pointer(s)))
 		}
 		pad(f, int8('0'), p+18, 18, 0)
-		out(f, estr, uint32(uintptr(unsafe.Pointer(ebuf))-uintptr(unsafe.Pointer(estr))))
+		out(f, estr, uint64(uintptr(unsafe.Pointer(ebuf))-uintptr(unsafe.Pointer(estr))))
 	}
 	pad(f, int8(' '), w, pl+l, int32(uint32(fl)^1<<('-'-' ')))
 	return func() int32 {
@@ -996,7 +996,7 @@ func printf_core(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 	var ps uint32
 	var cnt int32 = 0
 	var l int32 = 0
-	var i uint32
+	var i uint64
 	var buf [40]int8
 	var prefix *int8
 	var t int32
@@ -1028,7 +1028,7 @@ func printf_core(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 		}
 		l = int32(uintptr(unsafe.Pointer(z)) - uintptr(unsafe.Pointer(a)))
 		if f != nil {
-			out(f, a, uint32(l))
+			out(f, a, uint64(l))
 		}
 		if l != 0 {
 			continue
@@ -1229,7 +1229,7 @@ func printf_core(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 			*(*uint8)(*(*unsafe.Pointer)(unsafe.Pointer(&arg))) = uint8(cnt)
 			break
 		case uint32(ZTPRE):
-			*(*uint32)(*(*unsafe.Pointer)(unsafe.Pointer(&arg))) = uint32(cnt)
+			*(*uint64)(*(*unsafe.Pointer)(unsafe.Pointer(&arg))) = uint64(cnt)
 			break
 		case uint32(JPRE):
 			*(*uint64)(*(*unsafe.Pointer)(unsafe.Pointer(&arg))) = uint64(cnt)
@@ -1385,7 +1385,7 @@ func printf_core(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 			}
 		}())
 	_cgol_14:
-		z = (*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(a)) + uintptr(strnlen(a, uint32(func() int32 {
+		z = (*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(a)) + uintptr(strnlen(a, uint64(func() int32 {
 			if p < 0 {
 				return 2147483647
 			} else {
@@ -1413,11 +1413,11 @@ func printf_core(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 		}
 		_nm_cgo2 = false
 		ws = (*uint32)(*(*unsafe.Pointer)(unsafe.Pointer(&arg)))
-		for i = uint32(func() (_cgo_ret int32) {
+		for i = uint64(func() (_cgo_ret int32) {
 			_cgo_addr := &l
 			*_cgo_addr = int32(0)
 			return *_cgo_addr
-		}()); i < uint32(p) && *ws != 0 && func() (_cgo_ret int32) {
+		}()); i < uint64(p) && *ws != 0 && func() (_cgo_ret int32) {
 			_cgo_addr := &l
 			*_cgo_addr = wctomb((*int8)(unsafe.Pointer(&mb)), *func() (_cgo_ret *uint32) {
 				_cgo_addr := &ws
@@ -1426,18 +1426,18 @@ func printf_core(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 				return
 			}())
 			return *_cgo_addr
-		}() >= 0 && uint32(l) <= uint32(p)-i; i += uint32(l) {
+		}() >= 0 && uint64(l) <= uint64(p)-i; i += uint64(l) {
 		}
 		if l < 0 {
 			return int32(-1)
 		}
-		if i > uint32(2147483647) {
+		if i > uint64(2147483647) {
 			goto overflow
 		}
 		p = int32(i)
 		pad(f, int8(' '), w, p, int32(fl))
 		ws = (*uint32)(*(*unsafe.Pointer)(unsafe.Pointer(&arg)))
-		for i = uint32(0); i < 0+uint32(p) && *ws != 0 && i+uint32(func() (_cgo_ret int32) {
+		for i = uint64(0); i < uint64(0+uint32(p)) && *ws != 0 && i+uint64(func() (_cgo_ret int32) {
 			_cgo_addr := &l
 			*_cgo_addr = wctomb((*int8)(unsafe.Pointer(&mb)), *func() (_cgo_ret *uint32) {
 				_cgo_addr := &ws
@@ -1446,8 +1446,8 @@ func printf_core(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 				return
 			}())
 			return *_cgo_addr
-		}()) <= uint32(p); i += uint32(l) {
-			out(f, (*int8)(unsafe.Pointer(&mb)), uint32(l))
+		}()) <= uint64(p); i += uint64(l) {
+			out(f, (*int8)(unsafe.Pointer(&mb)), uint64(l))
 		}
 		pad(f, int8(' '), w, p, int32(fl^1<<('-'-' ')))
 		l = func() int32 {
@@ -1523,10 +1523,10 @@ func printf_core(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 			goto overflow
 		}
 		pad(f, int8(' '), w, pl+p, int32(fl))
-		out(f, prefix, uint32(pl))
+		out(f, prefix, uint64(pl))
 		pad(f, int8('0'), w, pl+p, int32(fl^1<<('0'-' ')))
 		pad(f, int8('0'), p, int32(uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(a))), 0)
-		out(f, a, uint32(uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(a))))
+		out(f, a, uint64(uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(a))))
 		pad(f, int8(' '), w, pl+p, int32(fl^1<<('-'-' ')))
 		l = w
 	}
@@ -1536,12 +1536,12 @@ func printf_core(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 	if !(l10n != 0) {
 		return int32(0)
 	}
-	for i = uint32(1); i <= uint32(9) && *(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer(nl_type)) + uintptr(i)*4)) != 0; i++ {
+	for i = uint64(1); i <= uint64(9) && *(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer(nl_type)) + uintptr(i)*4)) != 0; i++ {
 		pop_arg((*union_arg)(unsafe.Pointer(uintptr(unsafe.Pointer(nl_arg))+uintptr(i)*8)), *(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer(nl_type)) + uintptr(i)*4)), ap)
 	}
-	for ; i <= uint32(9) && !(*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer(nl_type)) + uintptr(i)*4)) != 0); i++ {
+	for ; i <= uint64(9) && !(*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer(nl_type)) + uintptr(i)*4)) != 0); i++ {
 	}
-	if i <= uint32(9) {
+	if i <= uint64(9) {
 		goto inval
 	}
 	return int32(1)
@@ -1580,7 +1580,7 @@ func Vfprintf(f *struct__IO_FILE, fmt *int8, ap []interface {
 	if !(f.buf_size != 0) {
 		saved_buf = f.buf
 		f.buf = (*uint8)(unsafe.Pointer(&internal_buf))
-		f.buf_size = uint32(80)
+		f.buf_size = uint64(80)
 		f.wpos = func() (_cgo_ret *uint8) {
 			_cgo_addr := &f.wbase
 			*_cgo_addr = func() (_cgo_ret *uint8) {
@@ -1597,12 +1597,12 @@ func Vfprintf(f *struct__IO_FILE, fmt *int8, ap []interface {
 		ret = printf_core(f, fmt, &ap2, (*union_arg)(unsafe.Pointer(&nl_arg)), (*int32)(unsafe.Pointer(&nl_type)))
 	}
 	if saved_buf != nil {
-		f.write(f, nil, uint32(0))
+		f.write(f, nil, uint64(0))
 		if !(f.wpos != nil) {
 			ret = int32(-1)
 		}
 		f.buf = saved_buf
-		f.buf_size = uint32(0)
+		f.buf_size = uint64(0)
 		f.wpos = func() (_cgo_ret *uint8) {
 			_cgo_addr := &f.wbase
 			*_cgo_addr = func() (_cgo_ret *uint8) {

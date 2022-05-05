@@ -13,9 +13,9 @@ func __isspace(_c int32) int32 {
 }
 
 type locale_t = *struct___locale_struct
-type size_t = uint32
-type uintptr_t = uint32
-type intptr_t = int32
+type size_t = uint64
+type uintptr_t = uint64
+type intptr_t = int64
 type int8_t = int8
 type int16_t = int16
 type int32_t = int32
@@ -42,7 +42,7 @@ type int_fast16_t = int32
 type int_fast32_t = int32
 type uint_fast16_t = uint32
 type uint_fast32_t = uint32
-type ssize_t = int32
+type ssize_t = int64
 type off_t = int64
 type FILE = struct__IO_FILE
 type va_list = []interface {
@@ -77,11 +77,11 @@ type struct__IO_FILE struct {
 	wpos         *uint8
 	mustbezero_1 *uint8
 	wbase        *uint8
-	read         func(*struct__IO_FILE, *uint8, uint32) uint32
-	write        func(*struct__IO_FILE, *uint8, uint32) uint32
+	read         func(*struct__IO_FILE, *uint8, uint64) uint64
+	write        func(*struct__IO_FILE, *uint8, uint64) uint64
 	seek         func(*struct__IO_FILE, int64, int32) int64
 	buf          *uint8
-	buf_size     uint32
+	buf_size     uint64
 	prev         *struct__IO_FILE
 	next         *struct__IO_FILE
 	fd           int32
@@ -221,7 +221,7 @@ type mcontext_t = struct_sigcontext
 type struct_sigaltstack struct {
 	ss_sp    unsafe.Pointer
 	ss_flags int32
-	ss_size  uint32
+	ss_size  uint64
 }
 type struct___ucontext struct {
 	uc_flags    uint64
@@ -332,10 +332,10 @@ type struct___locale_struct struct {
 type struct_tls_module struct {
 	next   *struct_tls_module
 	image  unsafe.Pointer
-	len    uint32
-	size   uint32
-	align  uint32
-	offset uint32
+	len    uint64
+	size   uint64
+	align  uint64
+	offset uint64
 }
 type struct___libc struct {
 	can_do_threads  int8
@@ -343,12 +343,12 @@ type struct___libc struct {
 	secure          int8
 	need_locks      int8
 	threads_minus_1 int32
-	auxv            *uint32
+	auxv            *uint64
 	tls_head        *struct_tls_module
-	tls_size        uint32
-	tls_align       uint32
-	tls_cnt         uint32
-	page_size       uint32
+	tls_size        uint64
+	tls_align       uint64
+	tls_cnt         uint64
+	page_size       uint64
 	global_locale   struct___locale_struct
 }
 
@@ -542,7 +542,7 @@ type struct___pthread struct {
 	self          *struct___pthread
 	prev          *struct___pthread
 	next          *struct___pthread
-	sysinfo       uint32
+	sysinfo       uint64
 	tid           int32
 	errno_val     int32
 	detach_state  int32
@@ -551,10 +551,10 @@ type struct___pthread struct {
 	cancelasync   uint8
 	Xbf_0         uint8
 	map_base      *uint8
-	map_size      uint32
+	map_size      uint64
 	stack         unsafe.Pointer
-	stack_size    uint32
-	guard_size    uint32
+	stack_size    uint64
+	guard_size    uint64
 	result        unsafe.Pointer
 	cancelbuf     *struct___ptcb
 	tsd           *unsafe.Pointer
@@ -565,8 +565,8 @@ type struct___pthread struct {
 	killlock      [1]int32
 	dlerror_buf   *int8
 	stdio_locks   unsafe.Pointer
-	canary        uint32
-	dtv           *uint32
+	canary        uint64
+	dtv           *uint64
 }
 
 const (
@@ -596,7 +596,7 @@ type _cgoa_37 struct {
 	__ll int64
 	__ld float64
 }
-type ptrdiff_t = int32
+type ptrdiff_t = int64
 
 
 
