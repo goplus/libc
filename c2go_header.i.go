@@ -583,13 +583,17 @@ func __wake(addr unsafe.Pointer, cnt int32, priv int32) {
 	if cnt < 0 {
 		cnt = int32(2147483647)
 	}
-	__syscall3(int64(240), int64(uintptr(addr)), int64(1|priv), int64(cnt)) != int64(-38) || __syscall3(int64(240), int64(uintptr(addr)), int64(1), int64(cnt)) != 0
+	if !(__syscall3(int64(240), int64(uintptr(addr)), int64(1|priv), int64(cnt)) != int64(-38)) {
+		__syscall3(int64(240), int64(uintptr(addr)), int64(1), int64(cnt))
+	}
 }
 func __futexwait(addr unsafe.Pointer, val int32, priv int32) {
 	if priv != 0 {
 		priv = int32(128)
 	}
-	__syscall4(int64(240), int64(uintptr(addr)), int64(0|priv), int64(val), int64(0)) != int64(-38) || __syscall4(int64(240), int64(uintptr(addr)), int64(0), int64(val), int64(0)) != 0
+	if !(__syscall4(int64(240), int64(uintptr(addr)), int64(0|priv), int64(val), int64(0)) != int64(-38)) {
+		__syscall4(int64(240), int64(uintptr(addr)), int64(0), int64(val), int64(0))
+	}
 }
 
 type _cgoa_37 struct {
