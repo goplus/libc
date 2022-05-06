@@ -98,22 +98,46 @@ type struct___pthread struct {
 	errno_val int32
 	locale    *struct___locale_struct
 }
+
+
+
+
+type _cgoa_20 struct {
+	__i [14]int32
+}
+
+type _cgoa_22 struct {
+	__i [10]int32
+}
+
+type _cgoa_24 struct {
+	__i [12]int32
+}
+
+type _cgoa_26 struct {
+	__i [14]int32
+}
+
+type _cgoa_28 struct {
+	__i [8]int32
+}
+
 type float_t = float32
 type double_t = float64
 
 func __FLOAT_BITS(__f float32) uint32 {
-	type _cgoa_15 struct {
+	type _cgoa_29 struct {
 		__f float32
 	}
-	var __u _cgoa_15
+	var __u _cgoa_29
 	__u.__f = __f
 	return *(*uint32)(unsafe.Pointer(&__u))
 }
 func __DOUBLE_BITS(__f float64) uint64 {
-	type _cgoa_16 struct {
+	type _cgoa_30 struct {
 		__f float64
 	}
-	var __u _cgoa_16
+	var __u _cgoa_30
 	__u.__f = __f
 	return *(*uint64)(unsafe.Pointer(&__u))
 }
@@ -1362,6 +1386,30 @@ type int_fast32_t = int32
 type uint_fast16_t = uint32
 type uint_fast32_t = uint32
 
+
+
+
+type _cgoa_37 struct {
+	__i [14]int32
+}
+
+type _cgoa_39 struct {
+	__i [10]int32
+}
+
+type _cgoa_41 struct {
+	__i [12]int32
+}
+
+type _cgoa_43 struct {
+	__i [14]int32
+}
+
+type _cgoa_45 struct {
+	__i [8]int32
+}
+
+
 func __bswap16(__x uint16) uint16 {
 	return uint16(int32(__x)<<8 | int32(__x)>>8)
 }
@@ -1409,6 +1457,128 @@ func fp_force_evall(x float64) {
 	_ = y
 	y = x
 }
+
+
+
+
+
+type _cgoa_51 struct {
+	__i [14]int32
+}
+
+type _cgoa_53 struct {
+	__i [10]int32
+}
+
+type _cgoa_55 struct {
+	__i [12]int32
+}
+
+type _cgoa_57 struct {
+	__i [14]int32
+}
+
+type _cgoa_59 struct {
+	__i [8]int32
+}
+
+
+
+
+
+type _cgoa_66 struct {
+	__i [14]int32
+}
+
+type _cgoa_68 struct {
+	__i [10]int32
+}
+
+type _cgoa_70 struct {
+	__i [12]int32
+}
+
+type _cgoa_72 struct {
+	__i [14]int32
+}
+
+type _cgoa_74 struct {
+	__i [8]int32
+}
+
+
+
+
+
+type _cgoa_80 struct {
+	__i [14]int32
+}
+
+type _cgoa_82 struct {
+	__i [10]int32
+}
+
+type _cgoa_84 struct {
+	__i [12]int32
+}
+
+type _cgoa_86 struct {
+	__i [14]int32
+}
+
+type _cgoa_88 struct {
+	__i [8]int32
+}
+
+
+
+
+
+type _cgoa_95 struct {
+	__i [14]int32
+}
+
+type _cgoa_97 struct {
+	__i [10]int32
+}
+
+type _cgoa_99 struct {
+	__i [12]int32
+}
+
+type _cgoa_101 struct {
+	__i [14]int32
+}
+
+type _cgoa_103 struct {
+	__i [8]int32
+}
+
+
+
+
+
+type _cgoa_109 struct {
+	__i [14]int32
+}
+
+type _cgoa_111 struct {
+	__i [10]int32
+}
+
+type _cgoa_113 struct {
+	__i [12]int32
+}
+
+type _cgoa_115 struct {
+	__i [14]int32
+}
+
+type _cgoa_117 struct {
+	__i [8]int32
+}
+
+
 func __isspace(_c int32) int32 {
 	return func() int32 {
 		if _c == ' ' || uint32(_c)-uint32('\t') < uint32(5) {
@@ -1419,8 +1589,128 @@ func __isspace(_c int32) int32 {
 	}()
 }
 
+
+
+
+
+type _cgoa_123 struct {
+	__i [14]int32
+}
+
+type _cgoa_125 struct {
+	__i [10]int32
+}
+
+type _cgoa_127 struct {
+	__i [12]int32
+}
+
+type _cgoa_129 struct {
+	__i [14]int32
+}
+
+type _cgoa_131 struct {
+	__i [8]int32
+}
+
+
+
+
+
+type _cgoa_137 struct {
+	__i [14]int32
+}
+
+type _cgoa_139 struct {
+	__i [10]int32
+}
+
+type _cgoa_141 struct {
+	__i [12]int32
+}
+
+type _cgoa_143 struct {
+	__i [14]int32
+}
+
+type _cgoa_145 struct {
+	__i [8]int32
+}
+
+
+
+
+
+type _cgoa_151 struct {
+	__i [14]int32
+}
+
+type _cgoa_153 struct {
+	__i [10]int32
+}
+
+type _cgoa_155 struct {
+	__i [12]int32
+}
+
+type _cgoa_157 struct {
+	__i [14]int32
+}
+
+type _cgoa_159 struct {
+	__i [8]int32
+}
+
+
+
+
+
+type _cgoa_165 struct {
+	__i [14]int32
+}
+
+type _cgoa_167 struct {
+	__i [10]int32
+}
+
+type _cgoa_169 struct {
+	__i [12]int32
+}
+
+type _cgoa_171 struct {
+	__i [14]int32
+}
+
+type _cgoa_173 struct {
+	__i [8]int32
+}
+
+
+
+
+
+type _cgoa_179 struct {
+	__i [14]int32
+}
+
+type _cgoa_181 struct {
+	__i [10]int32
+}
+
+type _cgoa_183 struct {
+	__i [12]int32
+}
+
+type _cgoa_185 struct {
+	__i [14]int32
+}
+
+type _cgoa_187 struct {
+	__i [8]int32
+}
+
 type wchar_t = uint32
-type _cgoa_20 struct {
+type _cgoa_188 struct {
 	__ll int64
 	__ld float64
 }
@@ -1451,15 +1741,15 @@ type struct_lconv struct {
 	int_p_sign_posn    int8
 	int_n_sign_posn    int8
 }
-type _cgoa_21 struct {
+type _cgoa_189 struct {
 	quot int32
 	rem  int32
 }
-type _cgoa_22 struct {
+type _cgoa_190 struct {
 	quot int64
 	rem  int64
 }
-type _cgoa_23 struct {
+type _cgoa_191 struct {
 	quot int64
 	rem  int64
 }
@@ -1499,153 +1789,39 @@ type struct___libc struct {
 	page_size       uint64
 	global_locale   struct___locale_struct
 }
+type struct___locale_map struct {
+	map_     unsafe.Pointer
+	map_size uint64
+	name     [24]int8
+	next     *struct___locale_map
+}
 
 
 
 
-type _cgoa_29 struct {
+type _cgoa_199 struct {
 	__i [14]int32
 }
 
-type _cgoa_31 struct {
+type _cgoa_201 struct {
 	__i [10]int32
 }
 
-type _cgoa_33 struct {
+type _cgoa_203 struct {
 	__i [12]int32
 }
 
-type _cgoa_35 struct {
+type _cgoa_205 struct {
 	__i [14]int32
 }
 
-type _cgoa_37 struct {
+type _cgoa_207 struct {
 	__i [8]int32
 }
 
 type uid_t = uint32
-type stack_t = struct_sigaltstack
-type greg_t = int32
-type gregset_t = [18]int32
-type struct_sigcontext struct {
-	trap_no       uint64
-	error_code    uint64
-	oldmask       uint64
-	arm_r0        uint64
-	arm_r1        uint64
-	arm_r2        uint64
-	arm_r3        uint64
-	arm_r4        uint64
-	arm_r5        uint64
-	arm_r6        uint64
-	arm_r7        uint64
-	arm_r8        uint64
-	arm_r9        uint64
-	arm_r10       uint64
-	arm_fp        uint64
-	arm_ip        uint64
-	arm_sp        uint64
-	arm_lr        uint64
-	arm_pc        uint64
-	arm_cpsr      uint64
-	fault_address uint64
-}
-type mcontext_t = struct_sigcontext
-type struct_sigaltstack struct {
-	ss_sp    unsafe.Pointer
-	ss_flags int32
-	ss_size  uint64
-}
-type struct___ucontext struct {
-	uc_flags    uint64
-	uc_link     *struct___ucontext
-	uc_stack    struct_sigaltstack
-	uc_mcontext struct_sigcontext
-	uc_sigmask  struct___sigset_t
-	uc_regspace [64]uint64
-}
-type ucontext_t = struct___ucontext
-type union_sigval struct {
-	sival_ptr unsafe.Pointer
-}
-type _cgoa_42 struct {
-	si_pid int32
-	si_uid uint32
-}
-type _cgoa_43 struct {
-	si_timerid int32
-	si_overrun int32
-}
-type _cgoa_41 struct {
-	__piduid _cgoa_42
-}
-type _cgoa_45 struct {
-	si_status int32
-	si_utime  int64
-	si_stime  int64
-}
-type _cgoa_44 struct {
-	__sigchld _cgoa_45
-}
-type _cgoa_40 struct {
-	__first  _cgoa_41
-	__second _cgoa_44
-}
-type _cgoa_48 struct {
-	si_lower unsafe.Pointer
-	si_upper unsafe.Pointer
-}
-type _cgoa_47 struct {
-	__addr_bnd _cgoa_48
-}
-type _cgoa_46 struct {
-	si_addr     unsafe.Pointer
-	si_addr_lsb int16
-	__first     _cgoa_47
-}
-type _cgoa_49 struct {
-	si_band int64
-	si_fd   int32
-}
-type _cgoa_50 struct {
-	si_call_addr unsafe.Pointer
-	si_syscall   int32
-	si_arch      uint32
-}
-type _cgoa_39 struct {
-	__pad [112]int8
-}
-type _cgoa_38 struct {
-	si_signo    int32
-	si_errno    int32
-	si_code     int32
-	__si_fields _cgoa_39
-}
-type _cgoa_51 struct {
-	sa_handler func(int32)
-}
-type struct_sigaction struct {
-	__sa_handler _cgoa_51
-	sa_mask      struct___sigset_t
-	sa_flags     int32
-	sa_restorer  func()
-}
-type _cgoa_53 struct {
-	sigev_notify_function   func(union_sigval)
-	sigev_notify_attributes *_cgoa_5
-}
-type _cgoa_52 struct {
-	__pad [48]int8
-}
-type struct_sigevent struct {
-	sigev_value  union_sigval
-	sigev_signo  int32
-	sigev_notify int32
-	__sev_fields _cgoa_52
-}
-type sig_t = func(int32)
-type sig_atomic_t = int32
-type mode_t = uint32
+type gid_t = uint32
+type useconds_t = uint32
 type syscall_arg_t = int64
 
 func __alt_socketcall(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
@@ -1660,213 +1836,31 @@ func __alt_socketcall(sys int32, sock int32, cp int32, a int64, b int64, c int64
 	}
 	return r
 }
-func a_fetch_add(p *int32, v int32) int32 {
-	var old int32
-	for {
-		old = a_ll(p)
-		if !!(a_sc(p, int32(uint32(old)+uint32(v))) != 0) {
-			break
-		}
-	}
-	return old
-}
-func a_fetch_and(p *int32, v int32) int32 {
-	var old int32
-	for {
-		old = a_ll(p)
-		if !!(a_sc(p, old&v) != 0) {
-			break
-		}
-	}
-	return old
-}
-func a_fetch_or(p *int32, v int32) int32 {
-	var old int32
-	for {
-		old = a_ll(p)
-		if !!(a_sc(p, old|v) != 0) {
-			break
-		}
-	}
-	return old
-}
-func a_and(p *int32, v int32) {
-	a_fetch_and(p, v)
-}
-func a_or(p *int32, v int32) {
-	a_fetch_or(p, v)
-}
-func a_inc(p *int32) {
-	a_fetch_add(p, 1)
-}
-func a_dec(p *int32) {
-	a_fetch_add(p, -1)
-}
-func a_store(p *int32, v int32) {
-	a_swap(p, v)
-}
-func a_barrier() {
-	var tmp int32 = 0
-	_ = tmp
-	a_cas(&tmp, 0, 0)
-}
-func a_and_64(p *uint64, v uint64) {
-	type _cgoa_54 struct {
-		v uint64
-	}
-	var u _cgoa_54
-	u.v = v
-	if *(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&*(*[2]uint32)(unsafe.Pointer(&u)))))) + uintptr(0)*4))+uint32(1) != 0 {
-		a_and((*int32)(unsafe.Pointer(p)), int32(*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&*(*[2]uint32)(unsafe.Pointer(&u)))))) + uintptr(0)*4))))
-	}
-	if *(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&*(*[2]uint32)(unsafe.Pointer(&u)))))) + uintptr(1)*4))+uint32(1) != 0 {
-		a_and((*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(p))))+uintptr(1)*4)), int32(*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&*(*[2]uint32)(unsafe.Pointer(&u)))))) + uintptr(1)*4))))
-	}
-}
-func a_or_64(p *uint64, v uint64) {
-	type _cgoa_55 struct {
-		v uint64
-	}
-	var u _cgoa_55
-	u.v = v
-	if *(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&*(*[2]uint32)(unsafe.Pointer(&u)))))) + uintptr(0)*4)) != 0 {
-		a_or((*int32)(unsafe.Pointer(p)), int32(*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&*(*[2]uint32)(unsafe.Pointer(&u)))))) + uintptr(0)*4))))
-	}
-	if *(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&*(*[2]uint32)(unsafe.Pointer(&u)))))) + uintptr(1)*4)) != 0 {
-		a_or((*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(p))))+uintptr(1)*4)), int32(*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&*(*[2]uint32)(unsafe.Pointer(&u)))))) + uintptr(1)*4))))
-	}
-}
-func a_or_l(p unsafe.Pointer, v int64) {
-	if 8 == 4 {
-		a_or((*int32)(p), int32(v))
-	} else {
-		a_or_64((*uint64)(p), uint64(v))
-	}
-}
-func a_crash() {
-	*(*int8)(nil) = int8(0)
-}
-func a_ctz_32(x uint32) int32 {
-	var debruijn32 [32]int8 = [32]int8{int8(0), int8(1), int8(23), int8(2), int8(29), int8(24), int8(19), int8(3), int8(30), int8(27), int8(25), int8(11), int8(20), int8(8), int8(4), int8(13), int8(31), int8(22), int8(28), int8(18), int8(26), int8(10), int8(7), int8(12), int8(21), int8(17), int8(9), int8(6), int8(16), int8(5), int8(15), int8(14)}
-	return int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&debruijn32)))) + uintptr(x&-x*uint32(124511785)>>27))))
-}
-func a_ctz_64(x uint64) int32 {
-	var debruijn64 [64]int8 = [64]int8{int8(0), int8(1), int8(2), int8(53), int8(3), int8(7), int8(54), int8(27), int8(4), int8(38), int8(41), int8(8), int8(34), int8(55), int8(48), int8(28), int8(62), int8(5), int8(39), int8(46), int8(44), int8(42), int8(22), int8(9), int8(24), int8(35), int8(59), int8(56), int8(49), int8(18), int8(29), int8(11), int8(63), int8(52), int8(6), int8(26), int8(37), int8(40), int8(33), int8(47), int8(61), int8(45), int8(43), int8(21), int8(23), int8(58), int8(17), int8(10), int8(51), int8(25), int8(36), int8(32), int8(60), int8(20), int8(57), int8(16), int8(50), int8(31), int8(19), int8(15), int8(30), int8(14), int8(13), int8(12)}
-	if false {
-		var y uint32 = uint32(x)
-		if !(y != 0) {
-			y = uint32(x >> 32)
-			return 32 + a_ctz_32(y)
-		}
-		return a_ctz_32(y)
-	}
-	return int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&debruijn64)))) + uintptr(x&-x*157587932685088877>>58))))
-}
-func a_ctz_l(x uint64) int32 {
-	return func() int32 {
-		if false {
-			return a_ctz_32(uint32(x))
-		} else {
-			return a_ctz_64(uint64(x))
-		}
-	}()
-}
-func a_clz_64(x uint64) int32 {
-	var y uint32
-	var r int32
-	if x>>32 != 0 {
-		func() int32 {
-			y = uint32(x >> 32)
-			return func() (_cgo_ret int32) {
-				_cgo_addr := &r
-				*_cgo_addr = int32(0)
-				return *_cgo_addr
-			}()
-		}()
-	} else {
-		func() int32 {
-			y = uint32(x)
-			return func() (_cgo_ret int32) {
-				_cgo_addr := &r
-				*_cgo_addr = int32(32)
-				return *_cgo_addr
-			}()
-		}()
-	}
-	if y>>16 != 0 {
-		y >>= 16
-	} else {
-		r |= int32(16)
-	}
-	if y>>8 != 0 {
-		y >>= 8
-	} else {
-		r |= int32(8)
-	}
-	if y>>4 != 0 {
-		y >>= 4
-	} else {
-		r |= int32(4)
-	}
-	if y>>2 != 0 {
-		y >>= 2
-	} else {
-		r |= int32(2)
-	}
-	return r | func() int32 {
-		if !(y>>1 != 0) {
-			return 1
-		} else {
-			return 0
-		}
-	}()
-}
-func a_clz_32(x uint32) int32 {
-	x >>= 1
-	x |= x >> 1
-	x |= x >> 2
-	x |= x >> 4
-	x |= x >> 8
-	x |= x >> 16
-	x++
-	return 31 - a_ctz_32(x)
+
+
+
+
+
+type _cgoa_213 struct {
+	__i [14]int32
 }
 
-const (
-	DT_EXITED   int32 = 0
-	DT_EXITING  int32 = 1
-	DT_JOINABLE int32 = 2
-	DT_DETACHED int32 = 3
-)
-
-func __wake(addr unsafe.Pointer, cnt int32, priv int32) {
-	if priv != 0 {
-		priv = int32(128)
-	}
-	if cnt < 0 {
-		cnt = int32(2147483647)
-	}
-	if !(__syscall3(int64(-1), int64(uintptr(addr)), int64(1|priv), int64(cnt)) != int64(-38)) {
-		__syscall3(int64(-1), int64(uintptr(addr)), int64(1), int64(cnt))
-	}
-}
-func __futexwait(addr unsafe.Pointer, val int32, priv int32) {
-	if priv != 0 {
-		priv = int32(128)
-	}
-	if !(__syscall4(int64(-1), int64(uintptr(addr)), int64(0|priv), int64(val), int64(0)) != int64(-38)) {
-		__syscall4(int64(-1), int64(uintptr(addr)), int64(0), int64(val), int64(0))
-	}
+type _cgoa_215 struct {
+	__i [10]int32
 }
 
-type struct___locale_map struct {
-	map_     unsafe.Pointer
-	map_size uint64
-	name     [24]int8
-	next     *struct___locale_map
+type _cgoa_217 struct {
+	__i [12]int32
 }
-type gid_t = uint32
-type useconds_t = uint32
+
+type _cgoa_219 struct {
+	__i [14]int32
+}
+
+type _cgoa_221 struct {
+	__i [8]int32
+}
+
 type struct__IO_FILE struct {
 	flags        uint32
 	rpos         *uint8
@@ -1904,23 +1898,167 @@ type struct__IO_FILE struct {
 
 
 
-type _cgoa_64 struct {
+type _cgoa_227 struct {
 	__i [14]int32
 }
 
-type _cgoa_66 struct {
+type _cgoa_229 struct {
 	__i [10]int32
 }
 
-type _cgoa_68 struct {
+type _cgoa_231 struct {
 	__i [12]int32
 }
 
-type _cgoa_70 struct {
+type _cgoa_233 struct {
 	__i [14]int32
 }
 
-type _cgoa_72 struct {
+type _cgoa_235 struct {
+	__i [8]int32
+}
+
+
+
+
+
+type _cgoa_241 struct {
+	__i [14]int32
+}
+
+type _cgoa_243 struct {
+	__i [10]int32
+}
+
+type _cgoa_245 struct {
+	__i [12]int32
+}
+
+type _cgoa_247 struct {
+	__i [14]int32
+}
+
+type _cgoa_249 struct {
+	__i [8]int32
+}
+
+
+
+
+
+type _cgoa_255 struct {
+	__i [14]int32
+}
+
+type _cgoa_257 struct {
+	__i [10]int32
+}
+
+type _cgoa_259 struct {
+	__i [12]int32
+}
+
+type _cgoa_261 struct {
+	__i [14]int32
+}
+
+type _cgoa_263 struct {
+	__i [8]int32
+}
+
+
+
+
+
+type _cgoa_269 struct {
+	__i [14]int32
+}
+
+type _cgoa_271 struct {
+	__i [10]int32
+}
+
+type _cgoa_273 struct {
+	__i [12]int32
+}
+
+type _cgoa_275 struct {
+	__i [14]int32
+}
+
+type _cgoa_277 struct {
+	__i [8]int32
+}
+
+
+
+
+
+type _cgoa_284 struct {
+	__i [14]int32
+}
+
+type _cgoa_286 struct {
+	__i [10]int32
+}
+
+type _cgoa_288 struct {
+	__i [12]int32
+}
+
+type _cgoa_290 struct {
+	__i [14]int32
+}
+
+type _cgoa_292 struct {
+	__i [8]int32
+}
+
+
+
+
+
+type _cgoa_298 struct {
+	__i [14]int32
+}
+
+type _cgoa_300 struct {
+	__i [10]int32
+}
+
+type _cgoa_302 struct {
+	__i [12]int32
+}
+
+type _cgoa_304 struct {
+	__i [14]int32
+}
+
+type _cgoa_306 struct {
+	__i [8]int32
+}
+
+
+
+
+
+type _cgoa_312 struct {
+	__i [14]int32
+}
+
+type _cgoa_314 struct {
+	__i [10]int32
+}
+
+type _cgoa_316 struct {
+	__i [12]int32
+}
+
+type _cgoa_318 struct {
+	__i [14]int32
+}
+
+type _cgoa_320 struct {
 	__i [8]int32
 }
 
@@ -1928,12 +2066,252 @@ type struct_iovec struct {
 	iov_base unsafe.Pointer
 	iov_len  uint64
 }
+
+
+
+
+type _cgoa_326 struct {
+	__i [14]int32
+}
+
+type _cgoa_328 struct {
+	__i [10]int32
+}
+
+type _cgoa_330 struct {
+	__i [12]int32
+}
+
+type _cgoa_332 struct {
+	__i [14]int32
+}
+
+type _cgoa_334 struct {
+	__i [8]int32
+}
+
+
+
+
+
+type _cgoa_340 struct {
+	__i [14]int32
+}
+
+type _cgoa_342 struct {
+	__i [10]int32
+}
+
+type _cgoa_344 struct {
+	__i [12]int32
+}
+
+type _cgoa_346 struct {
+	__i [14]int32
+}
+
+type _cgoa_348 struct {
+	__i [8]int32
+}
+
+
+
+
+
+type _cgoa_354 struct {
+	__i [14]int32
+}
+
+type _cgoa_356 struct {
+	__i [10]int32
+}
+
+type _cgoa_358 struct {
+	__i [12]int32
+}
+
+type _cgoa_360 struct {
+	__i [14]int32
+}
+
+type _cgoa_362 struct {
+	__i [8]int32
+}
+
+
+
+
+
+type _cgoa_368 struct {
+	__i [14]int32
+}
+
+type _cgoa_370 struct {
+	__i [10]int32
+}
+
+type _cgoa_372 struct {
+	__i [12]int32
+}
+
+type _cgoa_374 struct {
+	__i [14]int32
+}
+
+type _cgoa_376 struct {
+	__i [8]int32
+}
+
 type struct_winsize struct {
 	ws_row    uint16
 	ws_col    uint16
 	ws_xpixel uint16
 	ws_ypixel uint16
 }
+
+
+
+
+type _cgoa_382 struct {
+	__i [14]int32
+}
+
+type _cgoa_384 struct {
+	__i [10]int32
+}
+
+type _cgoa_386 struct {
+	__i [12]int32
+}
+
+type _cgoa_388 struct {
+	__i [14]int32
+}
+
+type _cgoa_390 struct {
+	__i [8]int32
+}
+
+
+
+
+
+type _cgoa_398 struct {
+	__i [14]int32
+}
+
+type _cgoa_400 struct {
+	__i [10]int32
+}
+
+type _cgoa_402 struct {
+	__i [12]int32
+}
+
+type _cgoa_404 struct {
+	__i [14]int32
+}
+
+type _cgoa_406 struct {
+	__i [8]int32
+}
+
+
+
+
+
+type _cgoa_413 struct {
+	__i [14]int32
+}
+
+type _cgoa_415 struct {
+	__i [10]int32
+}
+
+type _cgoa_417 struct {
+	__i [12]int32
+}
+
+type _cgoa_419 struct {
+	__i [14]int32
+}
+
+type _cgoa_421 struct {
+	__i [8]int32
+}
+
+
+
+
+
+type _cgoa_428 struct {
+	__i [14]int32
+}
+
+type _cgoa_430 struct {
+	__i [10]int32
+}
+
+type _cgoa_432 struct {
+	__i [12]int32
+}
+
+type _cgoa_434 struct {
+	__i [14]int32
+}
+
+type _cgoa_436 struct {
+	__i [8]int32
+}
+
+
+
+
+
+type _cgoa_443 struct {
+	__i [14]int32
+}
+
+type _cgoa_445 struct {
+	__i [10]int32
+}
+
+type _cgoa_447 struct {
+	__i [12]int32
+}
+
+type _cgoa_449 struct {
+	__i [14]int32
+}
+
+type _cgoa_451 struct {
+	__i [8]int32
+}
+
+
+
+
+
+type _cgoa_457 struct {
+	__i [14]int32
+}
+
+type _cgoa_459 struct {
+	__i [10]int32
+}
+
+type _cgoa_461 struct {
+	__i [12]int32
+}
+
+type _cgoa_463 struct {
+	__i [14]int32
+}
+
+type _cgoa_465 struct {
+	__i [8]int32
+}
+
 
 
 
@@ -1945,7 +2323,31 @@ type struct___mbstate_t struct {
 	__opaque2 uint32
 }
 type mbstate_t = struct___mbstate_t
-type _cgoa_82 struct {
+type _cgoa_470 struct {
 	quot int64
 	rem  int64
 }
+
+
+
+
+type _cgoa_478 struct {
+	__i [14]int32
+}
+
+type _cgoa_480 struct {
+	__i [10]int32
+}
+
+type _cgoa_482 struct {
+	__i [12]int32
+}
+
+type _cgoa_484 struct {
+	__i [14]int32
+}
+
+type _cgoa_486 struct {
+	__i [8]int32
+}
+

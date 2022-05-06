@@ -3,10 +3,10 @@ package libc
 import unsafe "unsafe"
 
 func __signbit(x float64) int32 {
-	type _cgoa_18 struct {
+	type _cgoa_60 struct {
 		d float64
 	}
-	var y _cgoa_18
+	var y _cgoa_60
 	y.d = x
 	return int32(*(*uint64)(unsafe.Pointer(&y)) >> 63)
 }
