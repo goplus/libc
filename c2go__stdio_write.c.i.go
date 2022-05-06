@@ -9,7 +9,7 @@ func __stdio_write(f *struct__IO_FILE, buf *uint8, len uint64) uint64 {
 	var iovcnt int32 = 2
 	var cnt int64
 	for {
-		cnt = __syscall_ret(uint64(__syscall3(int64(146), int64(f.fd), int64(uintptr(unsafe.Pointer(iov))), int64(iovcnt))))
+		cnt = __syscall_ret(uint64(__syscall3(int64(121), int64(f.fd), int64(uintptr(unsafe.Pointer(iov))), int64(iovcnt))))
 		if uint64(cnt) == rem {
 			f.wend = (*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(f.buf)) + uintptr(f.buf_size)))
 			f.wpos = func() (_cgo_ret *uint8) {

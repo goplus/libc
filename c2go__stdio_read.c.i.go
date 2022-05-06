@@ -13,7 +13,7 @@ func __stdio_read(f *struct__IO_FILE, buf *uint8, len uint64) uint64 {
 	var cnt int64
 	cnt = func() int64 {
 		if (*(*struct_iovec)(unsafe.Pointer(uintptr(unsafe.Pointer((*struct_iovec)(unsafe.Pointer(&iov)))) + uintptr(0)*16))).iov_len != 0 {
-			return __syscall_ret(uint64(__syscall3(int64(145), int64(f.fd), int64(uintptr(unsafe.Pointer((*struct_iovec)(unsafe.Pointer(&iov))))), int64(2))))
+			return __syscall_ret(uint64(__syscall3(int64(120), int64(f.fd), int64(uintptr(unsafe.Pointer((*struct_iovec)(unsafe.Pointer(&iov))))), int64(2))))
 		} else {
 			return __syscall_ret(uint64(__syscall3(int64(3), int64(f.fd), int64(uintptr((*(*struct_iovec)(unsafe.Pointer(uintptr(unsafe.Pointer((*struct_iovec)(unsafe.Pointer(&iov)))) + uintptr(1)*16))).iov_base)), int64((*(*struct_iovec)(unsafe.Pointer(uintptr(unsafe.Pointer((*struct_iovec)(unsafe.Pointer(&iov)))) + uintptr(1)*16))).iov_len))))
 		}

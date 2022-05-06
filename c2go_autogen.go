@@ -21,9 +21,6 @@ func __stdio_seek(*struct__IO_FILE, int64, int32) int64 {
 func __syscall1(n int64, a int64) int64 {
 	panic("notimpl")
 }
-func __syscall3(n int64, a int64, b int64, c int64) int64 {
-	panic("notimpl")
-}
 func __syscall4(n int64, a int64, b int64, c int64, d int64) int64 {
 	panic("notimpl")
 }
