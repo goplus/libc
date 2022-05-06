@@ -1327,15 +1327,10 @@ type locale_t = *struct___locale_struct
 type size_t = uint64
 type ssize_t = int64
 type off_t = int64
-type FILE = struct__IO_FILE
-type va_list = []interface {
-}
-type __isoc_va_list = []interface {
-}
-type union__G_fpos64_t struct {
-	__opaque [16]int8
-}
-type fpos_t = union__G_fpos64_t
+type pid_t = int32
+type uid_t = uint32
+type gid_t = uint32
+type useconds_t = uint32
 type syscall_arg_t = int64
 
 func __alt_socketcall(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
@@ -1351,6 +1346,15 @@ func __alt_socketcall(sys int32, sock int32, cp int32, a int64, b int64, c int64
 	return r
 }
 
+type FILE = struct__IO_FILE
+type va_list = []interface {
+}
+type __isoc_va_list = []interface {
+}
+type union__G_fpos64_t struct {
+	__opaque [16]int8
+}
+type fpos_t = union__G_fpos64_t
 type struct__IO_FILE struct {
 	flags        uint32
 	rpos         *uint8
@@ -1442,7 +1446,6 @@ type _cgoa_20 struct {
 type _cgoa_19 struct {
 	__u _cgoa_20
 }
-type pid_t = int32
 type struct_sched_param struct {
 	sched_priority int32
 	__reserved1    int32

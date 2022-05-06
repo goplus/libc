@@ -22,9 +22,6 @@ func __lock(*int32) {
 func __pthread_self() *struct___pthread {
 	panic("notimpl")
 }
-func __stdio_seek(*struct__IO_FILE, int64, int32) int64 {
-	panic("notimpl")
-}
 func __syscall_cp(int64, int64, int64, int64, int64, int64, int64) int64 {
 	panic("notimpl")
 }
