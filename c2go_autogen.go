@@ -9,7 +9,22 @@ func ___errno_location() *int32 {
 func __get_tp() uint64 {
 	panic("notimpl")
 }
-func __stdio_exit_needed() {
+func __ofl_lock() **struct__IO_FILE {
+	panic("notimpl")
+}
+func __stdio_close(*struct__IO_FILE) int32 {
+	panic("notimpl")
+}
+func __stdio_read(*struct__IO_FILE, *uint8, uint64) uint64 {
+	panic("notimpl")
+}
+func __stdio_seek(*struct__IO_FILE, int64, int32) int64 {
+	panic("notimpl")
+}
+func __stdio_write(*struct__IO_FILE, *uint8, uint64) uint64 {
+	panic("notimpl")
+}
+func __stdout_write(*struct__IO_FILE, *uint8, uint64) uint64 {
 	panic("notimpl")
 }
 func __syscall3(n int64, a int64, b int64, c int64) int64 {

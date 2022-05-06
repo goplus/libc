@@ -1396,9 +1396,6 @@ type pthread_t = *struct___pthread
 type pthread_once_t = int32
 type pthread_key_t = uint32
 type pthread_spinlock_t = int32
-type _cgoa_6 struct {
-	__attr uint32
-}
 type _cgoa_7 struct {
 	__attr uint32
 }
@@ -1406,41 +1403,44 @@ type _cgoa_8 struct {
 	__attr uint32
 }
 type _cgoa_9 struct {
+	__attr uint32
+}
+type _cgoa_10 struct {
 	__attr [2]uint32
 }
 type struct___sigset_t struct {
 	__bits [16]uint64
 }
 type sigset_t = struct___sigset_t
-type _cgoa_11 struct {
+type _cgoa_12 struct {
 	__i [14]int32
 }
-type _cgoa_10 struct {
-	__u _cgoa_11
-}
-type _cgoa_13 struct {
-	__i [10]int32
-}
-type _cgoa_12 struct {
-	__u _cgoa_13
-}
-type _cgoa_15 struct {
-	__i [12]int32
+type _cgoa_11 struct {
+	__u _cgoa_12
 }
 type _cgoa_14 struct {
-	__u _cgoa_15
+	__i [10]int32
 }
-type _cgoa_17 struct {
-	__i [14]int32
+type _cgoa_13 struct {
+	__u _cgoa_14
 }
 type _cgoa_16 struct {
-	__u _cgoa_17
+	__i [12]int32
 }
-type _cgoa_19 struct {
-	__i [8]int32
+type _cgoa_15 struct {
+	__u _cgoa_16
 }
 type _cgoa_18 struct {
-	__u _cgoa_19
+	__i [14]int32
+}
+type _cgoa_17 struct {
+	__u _cgoa_18
+}
+type _cgoa_20 struct {
+	__i [8]int32
+}
+type _cgoa_19 struct {
+	__u _cgoa_20
 }
 type pid_t = int32
 type struct_sched_param struct {
@@ -1518,94 +1518,94 @@ type ucontext_t = struct___ucontext
 type union_sigval struct {
 	sival_ptr unsafe.Pointer
 }
-type _cgoa_24 struct {
+type _cgoa_25 struct {
 	si_pid int32
 	si_uid uint32
 }
-type _cgoa_25 struct {
+type _cgoa_26 struct {
 	si_timerid int32
 	si_overrun int32
 }
-type _cgoa_23 struct {
-	__piduid _cgoa_24
+type _cgoa_24 struct {
+	__piduid _cgoa_25
 }
-type _cgoa_27 struct {
+type _cgoa_28 struct {
 	si_status int32
 	si_utime  int64
 	si_stime  int64
 }
-type _cgoa_26 struct {
-	__sigchld _cgoa_27
+type _cgoa_27 struct {
+	__sigchld _cgoa_28
 }
-type _cgoa_22 struct {
-	__first  _cgoa_23
-	__second _cgoa_26
+type _cgoa_23 struct {
+	__first  _cgoa_24
+	__second _cgoa_27
 }
-type _cgoa_30 struct {
+type _cgoa_31 struct {
 	si_lower unsafe.Pointer
 	si_upper unsafe.Pointer
 }
-type _cgoa_29 struct {
-	__addr_bnd _cgoa_30
+type _cgoa_30 struct {
+	__addr_bnd _cgoa_31
 }
-type _cgoa_28 struct {
+type _cgoa_29 struct {
 	si_addr     unsafe.Pointer
 	si_addr_lsb int16
-	__first     _cgoa_29
+	__first     _cgoa_30
 }
-type _cgoa_31 struct {
+type _cgoa_32 struct {
 	si_band int64
 	si_fd   int32
 }
-type _cgoa_32 struct {
+type _cgoa_33 struct {
 	si_call_addr unsafe.Pointer
 	si_syscall   int32
 	si_arch      uint32
 }
-type _cgoa_21 struct {
+type _cgoa_22 struct {
 	__pad [112]int8
 }
-type _cgoa_20 struct {
+type _cgoa_21 struct {
 	si_signo    int32
 	si_errno    int32
 	si_code     int32
-	__si_fields _cgoa_21
+	__si_fields _cgoa_22
 }
-type _cgoa_33 struct {
+type _cgoa_34 struct {
 	sa_handler func(int32)
 }
 type struct_sigaction struct {
-	__sa_handler _cgoa_33
+	__sa_handler _cgoa_34
 	sa_mask      struct___sigset_t
 	sa_flags     int32
 	sa_restorer  func()
 }
-type _cgoa_35 struct {
+type _cgoa_36 struct {
 	sigev_notify_function   func(union_sigval)
-	sigev_notify_attributes *_cgoa_10
+	sigev_notify_attributes *_cgoa_11
 }
-type _cgoa_34 struct {
+type _cgoa_35 struct {
 	__pad [48]int8
 }
 type struct_sigevent struct {
 	sigev_value  union_sigval
 	sigev_signo  int32
 	sigev_notify int32
-	__sev_fields _cgoa_34
+	__sev_fields _cgoa_35
 }
 type sig_t = func(int32)
 type sig_atomic_t = int32
 type mode_t = uint32
 type wchar_t = uint32
-type _cgoa_36 struct {
+type _cgoa_37 struct {
 	quot int32
 	rem  int32
 }
-type _cgoa_37 struct {
+type _cgoa_38 struct {
 	quot int64
 	rem  int64
 }
-type _cgoa_38 struct {
+type _cgoa_39 struct {
 	quot int64
 	rem  int64
 }
@@ -1696,10 +1696,10 @@ func a_barrier() {
 	a_cas(&tmp, 0, 0)
 }
 func a_and_64(p *uint64, v uint64) {
-	type _cgoa_39 struct {
+	type _cgoa_40 struct {
 		v uint64
 	}
-	var u _cgoa_39
+	var u _cgoa_40
 	u.v = v
 	if *(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&*(*[2]uint32)(unsafe.Pointer(&u)))))) + uintptr(0)*4))+uint32(1) != 0 {
 		a_and((*int32)(unsafe.Pointer(p)), int32(*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&*(*[2]uint32)(unsafe.Pointer(&u)))))) + uintptr(0)*4))))
@@ -1709,10 +1709,10 @@ func a_and_64(p *uint64, v uint64) {
 	}
 }
 func a_or_64(p *uint64, v uint64) {
-	type _cgoa_40 struct {
+	type _cgoa_41 struct {
 		v uint64
 	}
-	var u _cgoa_40
+	var u _cgoa_41
 	u.v = v
 	if *(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&*(*[2]uint32)(unsafe.Pointer(&u)))))) + uintptr(0)*4)) != 0 {
 		a_or((*int32)(unsafe.Pointer(p)), int32(*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&*(*[2]uint32)(unsafe.Pointer(&u)))))) + uintptr(0)*4))))
@@ -1817,7 +1817,7 @@ func a_clz_32(x uint32) int32 {
 	return 31 - a_ctz_32(x)
 }
 
-type _cgoa_41 struct {
+type _cgoa_42 struct {
 	head    unsafe.Pointer
 	off     int64
 	pending unsafe.Pointer
@@ -1842,7 +1842,7 @@ type struct___pthread struct {
 	result        unsafe.Pointer
 	cancelbuf     *struct___ptcb
 	tsd           *unsafe.Pointer
-	robust_list   _cgoa_41
+	robust_list   _cgoa_42
 	h_errno_val   int32
 	timer_id      int32
 	locale        *struct___locale_struct
@@ -1880,7 +1880,7 @@ func __futexwait(addr unsafe.Pointer, val int32, priv int32) {
 	}
 }
 
-type _cgoa_42 struct {
+type _cgoa_46 struct {
 	__ll int64
 	__ld float64
 }
@@ -1895,7 +1895,7 @@ type struct___mbstate_t struct {
 	__opaque2 uint32
 }
 type mbstate_t = struct___mbstate_t
-type _cgoa_46 struct {
+type _cgoa_50 struct {
 	quot int64
 	rem  int64
 }
