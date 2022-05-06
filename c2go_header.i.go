@@ -42,6 +42,17 @@ type int_fast16_t = int32
 type int_fast32_t = int32
 type uint_fast16_t = uint32
 type uint_fast32_t = uint32
+
+func __bswap16(__x uint16) uint16 {
+	return uint16(int32(__x)<<8 | int32(__x)>>8)
+}
+func __bswap32(__x uint32) uint32 {
+	return __x>>24 | __x>>8&uint32(65280) | __x<<8&uint32(16711680) | __x<<24
+}
+func __bswap64(__x uint64) uint64 {
+	return (uint64(__bswap32(uint32(__x)))+0)<<32 | uint64(__bswap32(uint32(__x>>32)))
+}
+
 type ssize_t = int64
 type off_t = int64
 type FILE = struct__IO_FILE

@@ -9,13 +9,13 @@ func ___errno_location() *int32 {
 func __fpclassifyl(float64) int32 {
 	panic("notimpl")
 }
-func __fwritex(*uint8, uint64, *struct__IO_FILE) uint64 {
-	panic("notimpl")
-}
 func __get_tp() uint64 {
 	panic("notimpl")
 }
 func __signbitl(float64) int32 {
+	panic("notimpl")
+}
+func __stdio_exit_needed() {
 	panic("notimpl")
 }
 func __syscall3(n int64, a int64, b int64, c int64) int64 {
@@ -28,9 +28,6 @@ func __syscall6(n int64, a int64, b int64, c int64, d int64, e int64, f int64) i
 	panic("notimpl")
 }
 func __syscall_cp(int64, int64, int64, int64, int64, int64, int64) int64 {
-	panic("notimpl")
-}
-func __towrite(*struct__IO_FILE) int32 {
 	panic("notimpl")
 }
 func a_cas(p *int32, t int32, s int32) int32 {
