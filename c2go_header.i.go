@@ -1635,21 +1635,11 @@ type struct___libc struct {
 	global_locale   struct___locale_struct
 }
 
-func a_swap(p *int32, v int32) int32 {
-	var old int32
-	for {
-		old = *p
-		if !(a_cas(p, old, v) != old) {
-			break
-		}
-	}
-	return old
-}
 func a_fetch_add(p *int32, v int32) int32 {
 	var old int32
 	for {
-		old = *p
-		if !(a_cas(p, old, int32(uint32(old)+uint32(v))) != old) {
+		old = a_ll(p)
+		if !!(a_sc(p, int32(uint32(old)+uint32(v))) != 0) {
 			break
 		}
 	}
@@ -1658,8 +1648,8 @@ func a_fetch_add(p *int32, v int32) int32 {
 func a_fetch_and(p *int32, v int32) int32 {
 	var old int32
 	for {
-		old = *p
-		if !(a_cas(p, old, old&v) != old) {
+		old = a_ll(p)
+		if !!(a_sc(p, old&v) != 0) {
 			break
 		}
 	}
@@ -1668,8 +1658,8 @@ func a_fetch_and(p *int32, v int32) int32 {
 func a_fetch_or(p *int32, v int32) int32 {
 	var old int32
 	for {
-		old = *p
-		if !(a_cas(p, old, old|v) != old) {
+		old = a_ll(p)
+		if !!(a_sc(p, old|v) != 0) {
 			break
 		}
 	}
