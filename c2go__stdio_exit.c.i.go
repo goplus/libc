@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-var dummy_file_cgo6 *struct__IO_FILE = nil
+var dummy_file_cgo58 *struct__IO_FILE = nil
 
 func close_file(f *struct__IO_FILE) {
 	if !(f != nil) {

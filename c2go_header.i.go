@@ -2,22 +2,118 @@ package libc
 
 import unsafe "unsafe"
 
+type size_t = uint64
+type time_t = int64
+type clockid_t = int32
+type struct_timespec struct {
+	tv_sec  int64
+	Xbf_0   int32
+	tv_nsec int64
+	Xbf_1   int32
+}
+type pthread_t = *struct___pthread
+type pthread_once_t = int32
+type pthread_key_t = uint32
+type pthread_spinlock_t = int32
+type _cgoa_1 struct {
+	__attr uint32
+}
+type _cgoa_2 struct {
+	__attr uint32
+}
+type _cgoa_3 struct {
+	__attr uint32
+}
+type _cgoa_4 struct {
+	__attr [2]uint32
+}
+type struct___sigset_t struct {
+	__bits [16]uint64
+}
+type sigset_t = struct___sigset_t
+type _cgoa_6 struct {
+	__i [14]int32
+}
+type _cgoa_5 struct {
+	__u _cgoa_6
+}
+type _cgoa_8 struct {
+	__i [10]int32
+}
+type _cgoa_7 struct {
+	__u _cgoa_8
+}
+type _cgoa_10 struct {
+	__i [12]int32
+}
+type _cgoa_9 struct {
+	__u _cgoa_10
+}
+type _cgoa_12 struct {
+	__i [14]int32
+}
+type _cgoa_11 struct {
+	__u _cgoa_12
+}
+type _cgoa_14 struct {
+	__i [8]int32
+}
+type _cgoa_13 struct {
+	__u _cgoa_14
+}
+type pid_t = int32
+type struct_sched_param struct {
+	sched_priority int32
+	__reserved1    int32
+	__reserved2    [4]int64
+	__reserved3    int32
+}
+type timer_t = unsafe.Pointer
+type clock_t = int64
+type locale_t = *struct___locale_struct
+type struct_tm struct {
+	tm_sec    int32
+	tm_min    int32
+	tm_hour   int32
+	tm_mday   int32
+	tm_mon    int32
+	tm_year   int32
+	tm_wday   int32
+	tm_yday   int32
+	tm_isdst  int32
+	tm_gmtoff int64
+	tm_zone   *int8
+}
+type struct_itimerspec struct {
+	it_interval struct_timespec
+	it_value    struct_timespec
+}
+type struct___ptcb struct {
+	__f    func(unsafe.Pointer)
+	__x    unsafe.Pointer
+	__next *struct___ptcb
+}
+type struct___pthread struct {
+	tid       int32
+	errno_val int32
+	locale    *struct___locale_struct
+}
 type float_t = float32
 type double_t = float64
 
 func __FLOAT_BITS(__f float32) uint32 {
-	type _cgoa_1 struct {
+	type _cgoa_15 struct {
 		__f float32
 	}
-	var __u _cgoa_1
+	var __u _cgoa_15
 	__u.__f = __f
 	return *(*uint32)(unsafe.Pointer(&__u))
 }
 func __DOUBLE_BITS(__f float64) uint64 {
-	type _cgoa_2 struct {
+	type _cgoa_16 struct {
 		__f float64
 	}
-	var __u _cgoa_2
+	var __u _cgoa_16
 	__u.__f = __f
 	return *(*uint64)(unsafe.Pointer(&__u))
 }
@@ -1323,14 +1419,233 @@ func __isspace(_c int32) int32 {
 	}()
 }
 
-type locale_t = *struct___locale_struct
-type size_t = uint64
+type wchar_t = uint32
+type _cgoa_20 struct {
+	__ll int64
+	__ld float64
+}
+type ptrdiff_t = int64
+type struct_lconv struct {
+	decimal_point      *int8
+	thousands_sep      *int8
+	grouping           *int8
+	int_curr_symbol    *int8
+	currency_symbol    *int8
+	mon_decimal_point  *int8
+	mon_thousands_sep  *int8
+	mon_grouping       *int8
+	positive_sign      *int8
+	negative_sign      *int8
+	int_frac_digits    int8
+	frac_digits        int8
+	p_cs_precedes      int8
+	p_sep_by_space     int8
+	n_cs_precedes      int8
+	n_sep_by_space     int8
+	p_sign_posn        int8
+	n_sign_posn        int8
+	int_p_cs_precedes  int8
+	int_p_sep_by_space int8
+	int_n_cs_precedes  int8
+	int_n_sep_by_space int8
+	int_p_sign_posn    int8
+	int_n_sign_posn    int8
+}
+type _cgoa_21 struct {
+	quot int32
+	rem  int32
+}
+type _cgoa_22 struct {
+	quot int64
+	rem  int64
+}
+type _cgoa_23 struct {
+	quot int64
+	rem  int64
+}
 type ssize_t = int64
 type off_t = int64
-type pid_t = int32
+type FILE = struct__IO_FILE
+type va_list = []interface {
+}
+type __isoc_va_list = []interface {
+}
+type union__G_fpos64_t struct {
+	__opaque [16]int8
+}
+type fpos_t = union__G_fpos64_t
+type struct___locale_struct struct {
+	cat [6]*struct___locale_map
+}
+type struct_tls_module struct {
+	next   *struct_tls_module
+	image  unsafe.Pointer
+	len    uint64
+	size   uint64
+	align  uint64
+	offset uint64
+}
+type struct___libc struct {
+	can_do_threads  int8
+	threaded        int8
+	secure          int8
+	need_locks      int8
+	threads_minus_1 int32
+	auxv            *uint64
+	tls_head        *struct_tls_module
+	tls_size        uint64
+	tls_align       uint64
+	tls_cnt         uint64
+	page_size       uint64
+	global_locale   struct___locale_struct
+}
+
+
+
+
+type _cgoa_29 struct {
+	__i [14]int32
+}
+
+type _cgoa_31 struct {
+	__i [10]int32
+}
+
+type _cgoa_33 struct {
+	__i [12]int32
+}
+
+type _cgoa_35 struct {
+	__i [14]int32
+}
+
+type _cgoa_37 struct {
+	__i [8]int32
+}
+
 type uid_t = uint32
-type gid_t = uint32
-type useconds_t = uint32
+type stack_t = struct_sigaltstack
+type greg_t = int32
+type gregset_t = [18]int32
+type struct_sigcontext struct {
+	trap_no       uint64
+	error_code    uint64
+	oldmask       uint64
+	arm_r0        uint64
+	arm_r1        uint64
+	arm_r2        uint64
+	arm_r3        uint64
+	arm_r4        uint64
+	arm_r5        uint64
+	arm_r6        uint64
+	arm_r7        uint64
+	arm_r8        uint64
+	arm_r9        uint64
+	arm_r10       uint64
+	arm_fp        uint64
+	arm_ip        uint64
+	arm_sp        uint64
+	arm_lr        uint64
+	arm_pc        uint64
+	arm_cpsr      uint64
+	fault_address uint64
+}
+type mcontext_t = struct_sigcontext
+type struct_sigaltstack struct {
+	ss_sp    unsafe.Pointer
+	ss_flags int32
+	ss_size  uint64
+}
+type struct___ucontext struct {
+	uc_flags    uint64
+	uc_link     *struct___ucontext
+	uc_stack    struct_sigaltstack
+	uc_mcontext struct_sigcontext
+	uc_sigmask  struct___sigset_t
+	uc_regspace [64]uint64
+}
+type ucontext_t = struct___ucontext
+type union_sigval struct {
+	sival_ptr unsafe.Pointer
+}
+type _cgoa_42 struct {
+	si_pid int32
+	si_uid uint32
+}
+type _cgoa_43 struct {
+	si_timerid int32
+	si_overrun int32
+}
+type _cgoa_41 struct {
+	__piduid _cgoa_42
+}
+type _cgoa_45 struct {
+	si_status int32
+	si_utime  int64
+	si_stime  int64
+}
+type _cgoa_44 struct {
+	__sigchld _cgoa_45
+}
+type _cgoa_40 struct {
+	__first  _cgoa_41
+	__second _cgoa_44
+}
+type _cgoa_48 struct {
+	si_lower unsafe.Pointer
+	si_upper unsafe.Pointer
+}
+type _cgoa_47 struct {
+	__addr_bnd _cgoa_48
+}
+type _cgoa_46 struct {
+	si_addr     unsafe.Pointer
+	si_addr_lsb int16
+	__first     _cgoa_47
+}
+type _cgoa_49 struct {
+	si_band int64
+	si_fd   int32
+}
+type _cgoa_50 struct {
+	si_call_addr unsafe.Pointer
+	si_syscall   int32
+	si_arch      uint32
+}
+type _cgoa_39 struct {
+	__pad [112]int8
+}
+type _cgoa_38 struct {
+	si_signo    int32
+	si_errno    int32
+	si_code     int32
+	__si_fields _cgoa_39
+}
+type _cgoa_51 struct {
+	sa_handler func(int32)
+}
+type struct_sigaction struct {
+	__sa_handler _cgoa_51
+	sa_mask      struct___sigset_t
+	sa_flags     int32
+	sa_restorer  func()
+}
+type _cgoa_53 struct {
+	sigev_notify_function   func(union_sigval)
+	sigev_notify_attributes *_cgoa_5
+}
+type _cgoa_52 struct {
+	__pad [48]int8
+}
+type struct_sigevent struct {
+	sigev_value  union_sigval
+	sigev_signo  int32
+	sigev_notify int32
+	__sev_fields _cgoa_52
+}
+type sig_t = func(int32)
+type sig_atomic_t = int32
+type mode_t = uint32
 type syscall_arg_t = int64
 
 func __alt_socketcall(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
@@ -1345,16 +1660,213 @@ func __alt_socketcall(sys int32, sock int32, cp int32, a int64, b int64, c int64
 	}
 	return r
 }
+func a_fetch_add(p *int32, v int32) int32 {
+	var old int32
+	for {
+		old = a_ll(p)
+		if !!(a_sc(p, int32(uint32(old)+uint32(v))) != 0) {
+			break
+		}
+	}
+	return old
+}
+func a_fetch_and(p *int32, v int32) int32 {
+	var old int32
+	for {
+		old = a_ll(p)
+		if !!(a_sc(p, old&v) != 0) {
+			break
+		}
+	}
+	return old
+}
+func a_fetch_or(p *int32, v int32) int32 {
+	var old int32
+	for {
+		old = a_ll(p)
+		if !!(a_sc(p, old|v) != 0) {
+			break
+		}
+	}
+	return old
+}
+func a_and(p *int32, v int32) {
+	a_fetch_and(p, v)
+}
+func a_or(p *int32, v int32) {
+	a_fetch_or(p, v)
+}
+func a_inc(p *int32) {
+	a_fetch_add(p, 1)
+}
+func a_dec(p *int32) {
+	a_fetch_add(p, -1)
+}
+func a_store(p *int32, v int32) {
+	a_swap(p, v)
+}
+func a_barrier() {
+	var tmp int32 = 0
+	_ = tmp
+	a_cas(&tmp, 0, 0)
+}
+func a_and_64(p *uint64, v uint64) {
+	type _cgoa_54 struct {
+		v uint64
+	}
+	var u _cgoa_54
+	u.v = v
+	if *(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&*(*[2]uint32)(unsafe.Pointer(&u)))))) + uintptr(0)*4))+uint32(1) != 0 {
+		a_and((*int32)(unsafe.Pointer(p)), int32(*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&*(*[2]uint32)(unsafe.Pointer(&u)))))) + uintptr(0)*4))))
+	}
+	if *(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&*(*[2]uint32)(unsafe.Pointer(&u)))))) + uintptr(1)*4))+uint32(1) != 0 {
+		a_and((*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(p))))+uintptr(1)*4)), int32(*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&*(*[2]uint32)(unsafe.Pointer(&u)))))) + uintptr(1)*4))))
+	}
+}
+func a_or_64(p *uint64, v uint64) {
+	type _cgoa_55 struct {
+		v uint64
+	}
+	var u _cgoa_55
+	u.v = v
+	if *(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&*(*[2]uint32)(unsafe.Pointer(&u)))))) + uintptr(0)*4)) != 0 {
+		a_or((*int32)(unsafe.Pointer(p)), int32(*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&*(*[2]uint32)(unsafe.Pointer(&u)))))) + uintptr(0)*4))))
+	}
+	if *(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&*(*[2]uint32)(unsafe.Pointer(&u)))))) + uintptr(1)*4)) != 0 {
+		a_or((*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(p))))+uintptr(1)*4)), int32(*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&*(*[2]uint32)(unsafe.Pointer(&u)))))) + uintptr(1)*4))))
+	}
+}
+func a_or_l(p unsafe.Pointer, v int64) {
+	if 8 == 4 {
+		a_or((*int32)(p), int32(v))
+	} else {
+		a_or_64((*uint64)(p), uint64(v))
+	}
+}
+func a_crash() {
+	*(*int8)(nil) = int8(0)
+}
+func a_ctz_32(x uint32) int32 {
+	var debruijn32 [32]int8 = [32]int8{int8(0), int8(1), int8(23), int8(2), int8(29), int8(24), int8(19), int8(3), int8(30), int8(27), int8(25), int8(11), int8(20), int8(8), int8(4), int8(13), int8(31), int8(22), int8(28), int8(18), int8(26), int8(10), int8(7), int8(12), int8(21), int8(17), int8(9), int8(6), int8(16), int8(5), int8(15), int8(14)}
+	return int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&debruijn32)))) + uintptr(x&-x*uint32(124511785)>>27))))
+}
+func a_ctz_64(x uint64) int32 {
+	var debruijn64 [64]int8 = [64]int8{int8(0), int8(1), int8(2), int8(53), int8(3), int8(7), int8(54), int8(27), int8(4), int8(38), int8(41), int8(8), int8(34), int8(55), int8(48), int8(28), int8(62), int8(5), int8(39), int8(46), int8(44), int8(42), int8(22), int8(9), int8(24), int8(35), int8(59), int8(56), int8(49), int8(18), int8(29), int8(11), int8(63), int8(52), int8(6), int8(26), int8(37), int8(40), int8(33), int8(47), int8(61), int8(45), int8(43), int8(21), int8(23), int8(58), int8(17), int8(10), int8(51), int8(25), int8(36), int8(32), int8(60), int8(20), int8(57), int8(16), int8(50), int8(31), int8(19), int8(15), int8(30), int8(14), int8(13), int8(12)}
+	if false {
+		var y uint32 = uint32(x)
+		if !(y != 0) {
+			y = uint32(x >> 32)
+			return 32 + a_ctz_32(y)
+		}
+		return a_ctz_32(y)
+	}
+	return int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&debruijn64)))) + uintptr(x&-x*157587932685088877>>58))))
+}
+func a_ctz_l(x uint64) int32 {
+	return func() int32 {
+		if false {
+			return a_ctz_32(uint32(x))
+		} else {
+			return a_ctz_64(uint64(x))
+		}
+	}()
+}
+func a_clz_64(x uint64) int32 {
+	var y uint32
+	var r int32
+	if x>>32 != 0 {
+		func() int32 {
+			y = uint32(x >> 32)
+			return func() (_cgo_ret int32) {
+				_cgo_addr := &r
+				*_cgo_addr = int32(0)
+				return *_cgo_addr
+			}()
+		}()
+	} else {
+		func() int32 {
+			y = uint32(x)
+			return func() (_cgo_ret int32) {
+				_cgo_addr := &r
+				*_cgo_addr = int32(32)
+				return *_cgo_addr
+			}()
+		}()
+	}
+	if y>>16 != 0 {
+		y >>= 16
+	} else {
+		r |= int32(16)
+	}
+	if y>>8 != 0 {
+		y >>= 8
+	} else {
+		r |= int32(8)
+	}
+	if y>>4 != 0 {
+		y >>= 4
+	} else {
+		r |= int32(4)
+	}
+	if y>>2 != 0 {
+		y >>= 2
+	} else {
+		r |= int32(2)
+	}
+	return r | func() int32 {
+		if !(y>>1 != 0) {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func a_clz_32(x uint32) int32 {
+	x >>= 1
+	x |= x >> 1
+	x |= x >> 2
+	x |= x >> 4
+	x |= x >> 8
+	x |= x >> 16
+	x++
+	return 31 - a_ctz_32(x)
+}
 
-type FILE = struct__IO_FILE
-type va_list = []interface {
+const (
+	DT_EXITED   int32 = 0
+	DT_EXITING  int32 = 1
+	DT_JOINABLE int32 = 2
+	DT_DETACHED int32 = 3
+)
+
+func __wake(addr unsafe.Pointer, cnt int32, priv int32) {
+	if priv != 0 {
+		priv = int32(128)
+	}
+	if cnt < 0 {
+		cnt = int32(2147483647)
+	}
+	if !(__syscall3(int64(-1), int64(uintptr(addr)), int64(1|priv), int64(cnt)) != int64(-38)) {
+		__syscall3(int64(-1), int64(uintptr(addr)), int64(1), int64(cnt))
+	}
 }
-type __isoc_va_list = []interface {
+func __futexwait(addr unsafe.Pointer, val int32, priv int32) {
+	if priv != 0 {
+		priv = int32(128)
+	}
+	if !(__syscall4(int64(-1), int64(uintptr(addr)), int64(0|priv), int64(val), int64(0)) != int64(-38)) {
+		__syscall4(int64(-1), int64(uintptr(addr)), int64(0), int64(val), int64(0))
+	}
 }
-type union__G_fpos64_t struct {
-	__opaque [16]int8
+
+type struct___locale_map struct {
+	map_     unsafe.Pointer
+	map_size uint64
+	name     [24]int8
+	next     *struct___locale_map
 }
-type fpos_t = union__G_fpos64_t
+type gid_t = uint32
+type useconds_t = uint32
 type struct__IO_FILE struct {
 	flags        uint32
 	rpos         *uint8
@@ -1388,98 +1900,30 @@ type struct__IO_FILE struct {
 	next_locked  *struct__IO_FILE
 	locale       *struct___locale_struct
 }
-type time_t = int64
-type clockid_t = int32
-type struct_timespec struct {
-	tv_sec  int64
-	Xbf_0   int32
-	tv_nsec int64
-	Xbf_1   int32
-}
-type pthread_t = *struct___pthread
-type pthread_once_t = int32
-type pthread_key_t = uint32
-type pthread_spinlock_t = int32
-type _cgoa_7 struct {
-	__attr uint32
-}
-type _cgoa_8 struct {
-	__attr uint32
-}
-type _cgoa_9 struct {
-	__attr uint32
-}
-type _cgoa_10 struct {
-	__attr [2]uint32
-}
-type struct___sigset_t struct {
-	__bits [16]uint64
-}
-type sigset_t = struct___sigset_t
-type _cgoa_12 struct {
+
+
+
+
+type _cgoa_64 struct {
 	__i [14]int32
 }
-type _cgoa_11 struct {
-	__u _cgoa_12
-}
-type _cgoa_14 struct {
+
+type _cgoa_66 struct {
 	__i [10]int32
 }
-type _cgoa_13 struct {
-	__u _cgoa_14
-}
-type _cgoa_16 struct {
+
+type _cgoa_68 struct {
 	__i [12]int32
 }
-type _cgoa_15 struct {
-	__u _cgoa_16
-}
-type _cgoa_18 struct {
+
+type _cgoa_70 struct {
 	__i [14]int32
 }
-type _cgoa_17 struct {
-	__u _cgoa_18
-}
-type _cgoa_20 struct {
+
+type _cgoa_72 struct {
 	__i [8]int32
 }
-type _cgoa_19 struct {
-	__u _cgoa_20
-}
-type struct_sched_param struct {
-	sched_priority int32
-	__reserved1    int32
-	__reserved2    [4]int64
-	__reserved3    int32
-}
-type timer_t = unsafe.Pointer
-type clock_t = int64
-type struct_tm struct {
-	tm_sec    int32
-	tm_min    int32
-	tm_hour   int32
-	tm_mday   int32
-	tm_mon    int32
-	tm_year   int32
-	tm_wday   int32
-	tm_yday   int32
-	tm_isdst  int32
-	tm_gmtoff int64
-	tm_zone   *int8
-}
-type struct_itimerspec struct {
-	it_interval struct_timespec
-	it_value    struct_timespec
-}
-type struct___ptcb struct {
-	__f    func(unsafe.Pointer)
-	__x    unsafe.Pointer
-	__next *struct___ptcb
-}
-type struct___pthread struct {
-	tid       int32
-	errno_val int32
-}
+
 type struct_iovec struct {
 	iov_base unsafe.Pointer
 	iov_len  uint64
@@ -1490,24 +1934,10 @@ type struct_winsize struct {
 	ws_xpixel uint16
 	ws_ypixel uint16
 }
-type wchar_t = uint32
-type _cgoa_26 struct {
-	__ll int64
-	__ld float64
-}
-type ptrdiff_t = int64
-type _cgoa_27 struct {
-	quot int32
-	rem  int32
-}
-type _cgoa_28 struct {
-	quot int64
-	rem  int64
-}
-type _cgoa_29 struct {
-	quot int64
-	rem  int64
-}
+
+
+
+
 type wint_t = uint32
 type wctype_t = uint64
 type struct___mbstate_t struct {
@@ -1515,7 +1945,7 @@ type struct___mbstate_t struct {
 	__opaque2 uint32
 }
 type mbstate_t = struct___mbstate_t
-type _cgoa_30 struct {
+type _cgoa_82 struct {
 	quot int64
 	rem  int64
 }

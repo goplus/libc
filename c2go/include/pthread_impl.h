@@ -9,6 +9,7 @@
 struct pthread {
 	int tid;
 	int errno_val;
+	locale_t locale;
 };
 
 pthread_t __pthread_self();

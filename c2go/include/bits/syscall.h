@@ -1,7 +1,7 @@
 // For MacOS
 // TODO: how to across platform
 
-// #define SYS_futex_time64  -1
+#define SYS_futex_time64  -1
 // TODO: SYS_futex_time64 - value?
 
 #define	SYS_syscall        0

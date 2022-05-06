@@ -60,7 +60,7 @@ func Vsnprintf(s *int8, n uint64, fmt *int8, ap []interface {
 	}()}
 	var f struct__IO_FILE = struct__IO_FILE{0, nil, nil, nil, nil, nil, nil, nil, nil, sn_write, nil, (*uint8)(unsafe.Pointer(&buf)), 0, nil, nil, 0, 0, 0, 0, -1, -1, unsafe.Pointer(&c), 0, nil, nil, nil, 0, 0, nil, nil, nil}
 	if n > uint64(2147483647) {
-		*___errno_location() = int32(75)
+		*__errno_location() = int32(75)
 		return int32(-1)
 	}
 	*c.s = int8(0)

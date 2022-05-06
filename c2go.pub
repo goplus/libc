@@ -5,6 +5,7 @@ memchr
 memset
 memcpy
 strnlen
+strerror
 fwrite
 vsnprintf
 vsprintf
