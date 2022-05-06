@@ -1880,6 +1880,16 @@ func __futexwait(addr unsafe.Pointer, val int32, priv int32) {
 	}
 }
 
+type struct_iovec struct {
+	iov_base unsafe.Pointer
+	iov_len  uint64
+}
+type struct_winsize struct {
+	ws_row    uint16
+	ws_col    uint16
+	ws_xpixel uint16
+	ws_ypixel uint16
+}
 type _cgoa_46 struct {
 	__ll int64
 	__ld float64
