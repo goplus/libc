@@ -36,18 +36,6 @@ func __syscall_cp(int64, int64, int64, int64, int64, int64, int64) int64 {
 func __syscall_ret(uint64) int64 {
 	panic("notimpl")
 }
-func a_cas(p *int32, t int32, s int32) int32 {
-	panic("notimpl")
-}
-func a_ll(p *int32) int32 {
-	panic("notimpl")
-}
-func a_sc(p *int32, v int32) int32 {
-	panic("notimpl")
-}
-func a_swap(p *int32, v int32) int32 {
-	panic("notimpl")
-}
 func strerror(int32) *int8 {
 	panic("notimpl")
 }
