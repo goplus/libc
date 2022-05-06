@@ -1,3 +1,6 @@
+#ifndef _C2GO_ATOMIC_H
+#define _C2GO_ATOMIC_H
+
 #define a_ll a_ll
 int a_ll(volatile int *p);
 
@@ -18,3 +21,5 @@ void *a_cas_p(volatile void *p, void *t, void *s);
 
 #define a_swap a_swap
 int a_swap(volatile int *p, int v);
+
+#endif
