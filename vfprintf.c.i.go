@@ -34,7 +34,7 @@ const (
 	MAXSTATE int32 = 28
 )
 
-var states_cgo51 [8][58]uint8 = [8][58]uint8{[58]uint8{uint8(DBL), 0, uint8(INT), 0, uint8(DBL), uint8(DBL), uint8(DBL), 0, 0, 0, 0, uint8(BIGLPRE), 0, 0, 0, 0, 0, 0, uint8(PTR), 0, 0, 0, 0, uint8(UINT), 0, 0, 0, 0, 0, 0, 0, 0, uint8(DBL), 0, uint8(CHAR), uint8(INT), uint8(DBL), uint8(DBL), uint8(DBL), uint8(HPRE), uint8(INT), uint8(JPRE), 0, uint8(LPRE), uint8(NOARG), uint8(PTR), uint8(UINT), uint8(UIPTR), 0, 0, uint8(PTR), uint8(ZTPRE), uint8(UINT), 0, 0, uint8(UINT), 0, uint8(ZTPRE)}, [58]uint8{uint8(DBL), 0, 0, 0, uint8(DBL), uint8(DBL), uint8(DBL), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(ULONG), 0, 0, 0, 0, 0, 0, 0, 0, uint8(DBL), 0, uint8(INT), uint8(LONG), uint8(DBL), uint8(DBL), uint8(DBL), 0, uint8(LONG), 0, 0, uint8(LLPRE), 0, uint8(PTR), uint8(ULONG), 0, 0, 0, uint8(PTR), 0, uint8(ULONG), 0, 0, uint8(ULONG)}, [58]uint8{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(ULLONG), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(LLONG), 0, 0, 0, 0, uint8(LLONG), 0, 0, 0, 0, uint8(PTR), uint8(ULLONG), 0, 0, 0, 0, 0, uint8(ULLONG), 0, 0, uint8(ULLONG)}, [58]uint8{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(USHORT), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(SHORT), 0, 0, 0, uint8(HHPRE), uint8(SHORT), 0, 0, 0, 0, uint8(PTR), uint8(USHORT), 0, 0, 0, 0, 0, uint8(USHORT), 0, 0, uint8(USHORT)}, [58]uint8{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(UCHAR), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(CHAR), 0, 0, 0, 0, uint8(CHAR), 0, 0, 0, 0, uint8(PTR), uint8(UCHAR), 0, 0, 0, 0, 0, uint8(UCHAR), 0, 0, uint8(UCHAR)}, [58]uint8{uint8(LDBL), 0, 0, 0, uint8(LDBL), uint8(LDBL), uint8(LDBL), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(LDBL), 0, 0, 0, uint8(LDBL), uint8(LDBL), uint8(LDBL), 0, 0, 0, 0, 0, 0, uint8(PTR)}, [58]uint8{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(SIZET), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(PDIFF), 0, 0, 0, 0, uint8(PDIFF), 0, 0, 0, 0, uint8(PTR), uint8(SIZET), 0, 0, 0, 0, 0, uint8(SIZET), 0, 0, uint8(SIZET)}, [58]uint8{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(UMAX), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(IMAX), 0, 0, 0, 0, uint8(IMAX), 0, 0, 0, 0, uint8(PTR), uint8(UMAX), 0, 0, 0, 0, 0, uint8(UMAX), 0, 0, uint8(UMAX)}}
+var states_cgo53 [8][58]uint8 = [8][58]uint8{[58]uint8{uint8(DBL), 0, uint8(INT), 0, uint8(DBL), uint8(DBL), uint8(DBL), 0, 0, 0, 0, uint8(BIGLPRE), 0, 0, 0, 0, 0, 0, uint8(PTR), 0, 0, 0, 0, uint8(UINT), 0, 0, 0, 0, 0, 0, 0, 0, uint8(DBL), 0, uint8(CHAR), uint8(INT), uint8(DBL), uint8(DBL), uint8(DBL), uint8(HPRE), uint8(INT), uint8(JPRE), 0, uint8(LPRE), uint8(NOARG), uint8(PTR), uint8(UINT), uint8(UIPTR), 0, 0, uint8(PTR), uint8(ZTPRE), uint8(UINT), 0, 0, uint8(UINT), 0, uint8(ZTPRE)}, [58]uint8{uint8(DBL), 0, 0, 0, uint8(DBL), uint8(DBL), uint8(DBL), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(ULONG), 0, 0, 0, 0, 0, 0, 0, 0, uint8(DBL), 0, uint8(INT), uint8(LONG), uint8(DBL), uint8(DBL), uint8(DBL), 0, uint8(LONG), 0, 0, uint8(LLPRE), 0, uint8(PTR), uint8(ULONG), 0, 0, 0, uint8(PTR), 0, uint8(ULONG), 0, 0, uint8(ULONG)}, [58]uint8{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(ULLONG), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(LLONG), 0, 0, 0, 0, uint8(LLONG), 0, 0, 0, 0, uint8(PTR), uint8(ULLONG), 0, 0, 0, 0, 0, uint8(ULLONG), 0, 0, uint8(ULLONG)}, [58]uint8{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(USHORT), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(SHORT), 0, 0, 0, uint8(HHPRE), uint8(SHORT), 0, 0, 0, 0, uint8(PTR), uint8(USHORT), 0, 0, 0, 0, 0, uint8(USHORT), 0, 0, uint8(USHORT)}, [58]uint8{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(UCHAR), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(CHAR), 0, 0, 0, 0, uint8(CHAR), 0, 0, 0, 0, uint8(PTR), uint8(UCHAR), 0, 0, 0, 0, 0, uint8(UCHAR), 0, 0, uint8(UCHAR)}, [58]uint8{uint8(LDBL), 0, 0, 0, uint8(LDBL), uint8(LDBL), uint8(LDBL), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(LDBL), 0, 0, 0, uint8(LDBL), uint8(LDBL), uint8(LDBL), 0, 0, 0, 0, 0, 0, uint8(PTR)}, [58]uint8{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(SIZET), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(PDIFF), 0, 0, 0, 0, uint8(PDIFF), 0, 0, 0, 0, uint8(PTR), uint8(SIZET), 0, 0, 0, 0, 0, uint8(SIZET), 0, 0, uint8(SIZET)}, [58]uint8{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(UMAX), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(IMAX), 0, 0, 0, 0, uint8(IMAX), 0, 0, 0, 0, uint8(PTR), uint8(UMAX), 0, 0, 0, 0, 0, uint8(UMAX), 0, 0, uint8(UMAX)}}
 
 type union_arg struct {
 	i uint64
@@ -212,7 +212,7 @@ func pad(f *struct__IO_FILE, c int8, w int32, l int32, fl int32) {
 	out(f, (*int8)(unsafe.Pointer(&pad)), uint64(l))
 }
 
-var xdigits_cgo52 [16]int8 = [16]int8{'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'}
+var xdigits_cgo54 [16]int8 = [16]int8{'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'}
 
 func fmt_x(x uint64, s *int8, lower int32) *int8 {
 	for ; x != 0; x >>= 4 {
@@ -220,7 +220,7 @@ func fmt_x(x uint64, s *int8, lower int32) *int8 {
 			_cgo_addr := &s
 			*(*uintptr)(unsafe.Pointer(_cgo_addr))--
 			return *_cgo_addr
-		}() = int8(int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&xdigits_cgo52)))) + uintptr(x&uint64(15))))) | lower)
+		}() = int8(int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&xdigits_cgo54)))) + uintptr(x&uint64(15))))) | lower)
 	}
 	return s
 }
@@ -435,7 +435,7 @@ func fmt_fp(f *struct__IO_FILE, y float64, w int32, p int32, fl int32, t int32) 
 				_cgo_ret = *_cgo_addr
 				*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 				return
-			}() = int8(int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&xdigits_cgo52)))) + uintptr(x)))) | t&32)
+			}() = int8(int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&xdigits_cgo54)))) + uintptr(x)))) | t&32)
 			y = float64(16) * (y - float64(x))
 			if int64(uintptr(unsafe.Pointer(s))-uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))) == int64(1) && (y != 0 || p > 0 || uint32(fl)&(1<<('#'-' ')) != 0) {
 				*func() (_cgo_ret *int8) {
@@ -1163,7 +1163,7 @@ func printf_core(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 				goto inval
 			}
 			ps = st
-			st = uint32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint8)(unsafe.Pointer(&*(*[58]uint8)(unsafe.Pointer(uintptr(unsafe.Pointer((*[58]uint8)(unsafe.Pointer(&states_cgo51)))) + uintptr(st)*58)))))) + uintptr(int32(*func() (_cgo_ret *int8) {
+			st = uint32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint8)(unsafe.Pointer(&*(*[58]uint8)(unsafe.Pointer(uintptr(unsafe.Pointer((*[58]uint8)(unsafe.Pointer(&states_cgo53)))) + uintptr(st)*58)))))) + uintptr(int32(*func() (_cgo_ret *int8) {
 				_cgo_addr := &s
 				_cgo_ret = *_cgo_addr
 				*(*uintptr)(unsafe.Pointer(_cgo_addr))++

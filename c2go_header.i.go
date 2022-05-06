@@ -1880,7 +1880,7 @@ type struct_winsize struct {
 	ws_xpixel uint16
 	ws_ypixel uint16
 }
-type _cgoa_46 struct {
+type _cgoa_48 struct {
 	__ll int64
 	__ld float64
 }
@@ -1895,7 +1895,7 @@ type struct___mbstate_t struct {
 	__opaque2 uint32
 }
 type mbstate_t = struct___mbstate_t
-type _cgoa_50 struct {
+type _cgoa_52 struct {
 	quot int64
 	rem  int64
 }
