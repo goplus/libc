@@ -199,7 +199,7 @@ func pad(f *struct__IO_FILE, c int8, w int32, l int32, fl int32) {
 		return
 	}
 	l = w - l
-	memset(unsafe.Pointer((*int8)(unsafe.Pointer(&pad))), int32(c), func() uint64 {
+	Memset(unsafe.Pointer((*int8)(unsafe.Pointer(&pad))), int32(c), func() uint64 {
 		if uint64(l) > 256 {
 			return 256
 		} else {
@@ -361,7 +361,7 @@ func fmt_fp(f *struct__IO_FILE, y float64, w int32, p int32, fl int32, t int32) 
 			}
 		}()
 	}
-	y = frexpl(y, &e2) * float64(2)
+	y = Frexpl(y, &e2) * float64(2)
 	if y != 0 {
 		e2--
 	}
@@ -957,7 +957,7 @@ func getint(s **int8) int32 {
 	var i int32
 	for i = int32(0); func() int32 {
 		if 0 != 0 {
-			return isdigit(int32(**s))
+			return Isdigit(int32(**s))
 		} else {
 			return func() int32 {
 				if uint32(**s)-uint32('0') < uint32(10) {
@@ -1035,7 +1035,7 @@ func printf_core(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 		}
 		if func() int32 {
 			if 0 != 0 {
-				return isdigit(int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(s)) + uintptr(1)))))
+				return Isdigit(int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(s)) + uintptr(1)))))
 			} else {
 				return func() int32 {
 					if uint32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(s)) + uintptr(1))))-uint32('0') < uint32(10) {
@@ -1059,7 +1059,7 @@ func printf_core(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 		if int32(*s) == '*' {
 			if func() int32 {
 				if 0 != 0 {
-					return isdigit(int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(s)) + uintptr(1)))))
+					return Isdigit(int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(s)) + uintptr(1)))))
 				} else {
 					return func() int32 {
 						if uint32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(s)) + uintptr(1))))-uint32('0') < uint32(10) {
@@ -1111,7 +1111,7 @@ func printf_core(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 		if int32(*s) == '.' && int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(s)) + uintptr(1)))) == '*' {
 			if func() int32 {
 				if 0 != 0 {
-					return isdigit(int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(s)) + uintptr(2)))))
+					return Isdigit(int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(s)) + uintptr(2)))))
 				} else {
 					return func() int32 {
 						if uint32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(s)) + uintptr(2))))-uint32('0') < uint32(10) {
@@ -1385,7 +1385,7 @@ func printf_core(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 			}
 		}())
 	_cgol_14:
-		z = (*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(a)) + uintptr(strnlen(a, uint64(func() int32 {
+		z = (*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(a)) + uintptr(Strnlen(a, uint64(func() int32 {
 			if p < 0 {
 				return 2147483647
 			} else {

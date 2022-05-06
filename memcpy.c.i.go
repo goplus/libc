@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func memcpy(dest unsafe.Pointer, src unsafe.Pointer, n uint64) unsafe.Pointer {
+func Memcpy(dest unsafe.Pointer, src unsafe.Pointer, n uint64) unsafe.Pointer {
 	var d *uint8 = (*uint8)(dest)
 	var s *uint8 = (*uint8)(src)
 	type u32 = uint32

@@ -1,2 +1,17 @@
+frexp
+frexpl
+isdigit
+memchr
+memset
+memcpy
+strnlen
+fwrite
+vsnprintf
+vsprintf
+snprintf
+sprintf
 printf
 vfprintf
+stdin
+stdout
+stderr

@@ -22,11 +22,11 @@ func __fwritex(s *uint8, l uint64, f *struct__IO_FILE) uint64 {
 			l -= i
 		}
 	}
-	memcpy(unsafe.Pointer(f.wpos), unsafe.Pointer(s), l)
+	Memcpy(unsafe.Pointer(f.wpos), unsafe.Pointer(s), l)
 	*(*uintptr)(unsafe.Pointer(&f.wpos)) += uintptr(l)
 	return l + i
 }
-func fwrite(src unsafe.Pointer, size uint64, nmemb uint64, f *struct__IO_FILE) uint64 {
+func Fwrite(src unsafe.Pointer, size uint64, nmemb uint64, f *struct__IO_FILE) uint64 {
 	var k uint64
 	var l uint64 = size * nmemb
 	if !(size != 0) {

@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func memset(dest unsafe.Pointer, c int32, n uint64) unsafe.Pointer {
+func Memset(dest unsafe.Pointer, c int32, n uint64) unsafe.Pointer {
 	var s *uint8 = (*uint8)(dest)
 	var k uint64
 	if !(n != 0) {

@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func memchr(src unsafe.Pointer, c int32, n uint64) unsafe.Pointer {
+func Memchr(src unsafe.Pointer, c int32, n uint64) unsafe.Pointer {
 	var s *uint8 = (*uint8)(src)
 	c = int32(uint8(c))
 	for ; uint64(uintptr(unsafe.Pointer(s)))&(8-uint64(1)) != 0 && n != 0 && int32(*s) != c; func() uint64 {
