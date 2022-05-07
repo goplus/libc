@@ -29,5 +29,10 @@ func __syscall6(n int64, a int64, b int64, c int64, d int64, e int64, f int64) i
 }
 
 func __syscall_ret(uint64) int64 {
-	return int64(g_r1)
+	r := g_r1
+	if r > 18446744073709547520 {
+		*__errno_location() = int32(-r)
+		return int64(-1)
+	}
+	return int64(r)
 }

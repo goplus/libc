@@ -98,27 +98,137 @@ type struct___pthread struct {
 	errno_val int32
 	locale    *struct___locale_struct
 }
-
-
-
-
-type _cgoa_20 struct {
-	__i [14]int32
+type wchar_t = uint32
+type _cgoa_15 struct {
+	__ll int64
+	__ld float64
+}
+type ptrdiff_t = int64
+type struct_lconv struct {
+	decimal_point      *int8
+	thousands_sep      *int8
+	grouping           *int8
+	int_curr_symbol    *int8
+	currency_symbol    *int8
+	mon_decimal_point  *int8
+	mon_thousands_sep  *int8
+	mon_grouping       *int8
+	positive_sign      *int8
+	negative_sign      *int8
+	int_frac_digits    int8
+	frac_digits        int8
+	p_cs_precedes      int8
+	p_sep_by_space     int8
+	n_cs_precedes      int8
+	n_sep_by_space     int8
+	p_sign_posn        int8
+	n_sign_posn        int8
+	int_p_cs_precedes  int8
+	int_p_sep_by_space int8
+	int_n_cs_precedes  int8
+	int_n_sep_by_space int8
+	int_p_sign_posn    int8
+	int_n_sign_posn    int8
+}
+type _cgoa_16 struct {
+	quot int32
+	rem  int32
+}
+type _cgoa_17 struct {
+	quot int64
+	rem  int64
+}
+type _cgoa_18 struct {
+	quot int64
+	rem  int64
+}
+type ssize_t = int64
+type off_t = int64
+type FILE = struct__IO_FILE
+type va_list = []interface {
+}
+type __isoc_va_list = []interface {
+}
+type union__G_fpos64_t struct {
+	__opaque [16]int8
+}
+type fpos_t = union__G_fpos64_t
+type struct___locale_struct struct {
+	cat [6]*struct___locale_map
+}
+type struct_tls_module struct {
+	next   *struct_tls_module
+	image  unsafe.Pointer
+	len    uint64
+	size   uint64
+	align  uint64
+	offset uint64
+}
+type struct___libc struct {
+	can_do_threads  int8
+	threaded        int8
+	secure          int8
+	need_locks      int8
+	threads_minus_1 int32
+	auxv            *uint64
+	tls_head        *struct_tls_module
+	tls_size        uint64
+	tls_align       uint64
+	tls_cnt         uint64
+	page_size       uint64
+	global_locale   struct___locale_struct
+}
+type struct___locale_map struct {
+	map_     unsafe.Pointer
+	map_size uint64
+	name     [24]int8
+	next     *struct___locale_map
 }
 
-type _cgoa_22 struct {
-	__i [10]int32
-}
 
-type _cgoa_24 struct {
-	__i [12]int32
-}
+
 
 type _cgoa_26 struct {
 	__i [14]int32
 }
 
 type _cgoa_28 struct {
+	__i [10]int32
+}
+
+type _cgoa_30 struct {
+	__i [12]int32
+}
+
+type _cgoa_32 struct {
+	__i [14]int32
+}
+
+type _cgoa_34 struct {
+	__i [8]int32
+}
+
+
+
+
+
+type _cgoa_40 struct {
+	__i [14]int32
+}
+
+type _cgoa_42 struct {
+	__i [10]int32
+}
+
+type _cgoa_44 struct {
+	__i [12]int32
+}
+
+type _cgoa_46 struct {
+	__i [14]int32
+}
+
+type _cgoa_48 struct {
 	__i [8]int32
 }
 
@@ -126,18 +236,18 @@ type float_t = float32
 type double_t = float64
 
 func __FLOAT_BITS(__f float32) uint32 {
-	type _cgoa_29 struct {
+	type _cgoa_49 struct {
 		__f float32
 	}
-	var __u _cgoa_29
+	var __u _cgoa_49
 	__u.__f = __f
 	return *(*uint32)(unsafe.Pointer(&__u))
 }
 func __DOUBLE_BITS(__f float64) uint64 {
-	type _cgoa_30 struct {
+	type _cgoa_50 struct {
 		__f float64
 	}
-	var __u _cgoa_30
+	var __u _cgoa_50
 	__u.__f = __f
 	return *(*uint64)(unsafe.Pointer(&__u))
 }
@@ -1389,23 +1499,23 @@ type uint_fast32_t = uint32
 
 
 
-type _cgoa_37 struct {
+type _cgoa_57 struct {
 	__i [14]int32
 }
 
-type _cgoa_39 struct {
+type _cgoa_59 struct {
 	__i [10]int32
 }
 
-type _cgoa_41 struct {
+type _cgoa_61 struct {
 	__i [12]int32
 }
 
-type _cgoa_43 struct {
+type _cgoa_63 struct {
 	__i [14]int32
 }
 
-type _cgoa_45 struct {
+type _cgoa_65 struct {
 	__i [8]int32
 }
 
@@ -1462,71 +1572,47 @@ func fp_force_evall(x float64) {
 
 
 
-type _cgoa_51 struct {
+type _cgoa_71 struct {
 	__i [14]int32
 }
 
-type _cgoa_53 struct {
+type _cgoa_73 struct {
 	__i [10]int32
 }
 
-type _cgoa_55 struct {
+type _cgoa_75 struct {
 	__i [12]int32
 }
 
-type _cgoa_57 struct {
+type _cgoa_77 struct {
 	__i [14]int32
 }
 
-type _cgoa_59 struct {
+type _cgoa_79 struct {
 	__i [8]int32
 }
 
 
 
 
-
-type _cgoa_66 struct {
-	__i [14]int32
-}
-
-type _cgoa_68 struct {
-	__i [10]int32
-}
-
-type _cgoa_70 struct {
-	__i [12]int32
-}
-
-type _cgoa_72 struct {
-	__i [14]int32
-}
-
-type _cgoa_74 struct {
-	__i [8]int32
-}
-
-
-
-
-
-type _cgoa_80 struct {
-	__i [14]int32
-}
-
-type _cgoa_82 struct {
-	__i [10]int32
-}
-
-type _cgoa_84 struct {
-	__i [12]int32
-}
 
 type _cgoa_86 struct {
 	__i [14]int32
 }
 
 type _cgoa_88 struct {
+	__i [10]int32
+}
+
+type _cgoa_90 struct {
+	__i [12]int32
+}
+
+type _cgoa_92 struct {
+	__i [14]int32
+}
+
+type _cgoa_94 struct {
 	__i [8]int32
 }
 
@@ -1534,47 +1620,71 @@ type _cgoa_88 struct {
 
 
 
-type _cgoa_95 struct {
+type _cgoa_100 struct {
 	__i [14]int32
 }
 
-type _cgoa_97 struct {
+type _cgoa_102 struct {
 	__i [10]int32
 }
 
-type _cgoa_99 struct {
+type _cgoa_104 struct {
 	__i [12]int32
 }
 
-type _cgoa_101 struct {
+type _cgoa_106 struct {
 	__i [14]int32
 }
 
-type _cgoa_103 struct {
+type _cgoa_108 struct {
 	__i [8]int32
 }
 
 
 
 
-
-type _cgoa_109 struct {
-	__i [14]int32
-}
-
-type _cgoa_111 struct {
-	__i [10]int32
-}
-
-type _cgoa_113 struct {
-	__i [12]int32
-}
 
 type _cgoa_115 struct {
 	__i [14]int32
 }
 
 type _cgoa_117 struct {
+	__i [10]int32
+}
+
+type _cgoa_119 struct {
+	__i [12]int32
+}
+
+type _cgoa_121 struct {
+	__i [14]int32
+}
+
+type _cgoa_123 struct {
+	__i [8]int32
+}
+
+
+
+
+
+type _cgoa_129 struct {
+	__i [14]int32
+}
+
+type _cgoa_131 struct {
+	__i [10]int32
+}
+
+type _cgoa_133 struct {
+	__i [12]int32
+}
+
+type _cgoa_135 struct {
+	__i [14]int32
+}
+
+type _cgoa_137 struct {
 	__i [8]int32
 }
 
@@ -1593,208 +1703,98 @@ func __isspace(_c int32) int32 {
 
 
 
-type _cgoa_123 struct {
-	__i [14]int32
-}
-
-type _cgoa_125 struct {
-	__i [10]int32
-}
-
-type _cgoa_127 struct {
-	__i [12]int32
-}
-
-type _cgoa_129 struct {
-	__i [14]int32
-}
-
-type _cgoa_131 struct {
-	__i [8]int32
-}
-
-
-
-
-
-type _cgoa_137 struct {
-	__i [14]int32
-}
-
-type _cgoa_139 struct {
-	__i [10]int32
-}
-
-type _cgoa_141 struct {
-	__i [12]int32
-}
-
 type _cgoa_143 struct {
 	__i [14]int32
 }
 
 type _cgoa_145 struct {
+	__i [10]int32
+}
+
+type _cgoa_147 struct {
+	__i [12]int32
+}
+
+type _cgoa_149 struct {
+	__i [14]int32
+}
+
+type _cgoa_151 struct {
 	__i [8]int32
 }
 
 
 
 
-
-type _cgoa_151 struct {
-	__i [14]int32
-}
-
-type _cgoa_153 struct {
-	__i [10]int32
-}
-
-type _cgoa_155 struct {
-	__i [12]int32
-}
 
 type _cgoa_157 struct {
 	__i [14]int32
 }
 
 type _cgoa_159 struct {
+	__i [10]int32
+}
+
+type _cgoa_161 struct {
+	__i [12]int32
+}
+
+type _cgoa_163 struct {
+	__i [14]int32
+}
+
+type _cgoa_165 struct {
 	__i [8]int32
 }
 
 
 
 
-
-type _cgoa_165 struct {
-	__i [14]int32
-}
-
-type _cgoa_167 struct {
-	__i [10]int32
-}
-
-type _cgoa_169 struct {
-	__i [12]int32
-}
 
 type _cgoa_171 struct {
 	__i [14]int32
 }
 
 type _cgoa_173 struct {
+	__i [10]int32
+}
+
+type _cgoa_175 struct {
+	__i [12]int32
+}
+
+type _cgoa_177 struct {
+	__i [14]int32
+}
+
+type _cgoa_179 struct {
 	__i [8]int32
 }
 
 
 
 
-
-type _cgoa_179 struct {
-	__i [14]int32
-}
-
-type _cgoa_181 struct {
-	__i [10]int32
-}
-
-type _cgoa_183 struct {
-	__i [12]int32
-}
 
 type _cgoa_185 struct {
 	__i [14]int32
 }
 
 type _cgoa_187 struct {
+	__i [10]int32
+}
+
+type _cgoa_189 struct {
+	__i [12]int32
+}
+
+type _cgoa_191 struct {
+	__i [14]int32
+}
+
+type _cgoa_193 struct {
 	__i [8]int32
 }
 
-type wchar_t = uint32
-type _cgoa_188 struct {
-	__ll int64
-	__ld float64
-}
-type ptrdiff_t = int64
-type struct_lconv struct {
-	decimal_point      *int8
-	thousands_sep      *int8
-	grouping           *int8
-	int_curr_symbol    *int8
-	currency_symbol    *int8
-	mon_decimal_point  *int8
-	mon_thousands_sep  *int8
-	mon_grouping       *int8
-	positive_sign      *int8
-	negative_sign      *int8
-	int_frac_digits    int8
-	frac_digits        int8
-	p_cs_precedes      int8
-	p_sep_by_space     int8
-	n_cs_precedes      int8
-	n_sep_by_space     int8
-	p_sign_posn        int8
-	n_sign_posn        int8
-	int_p_cs_precedes  int8
-	int_p_sep_by_space int8
-	int_n_cs_precedes  int8
-	int_n_sep_by_space int8
-	int_p_sign_posn    int8
-	int_n_sign_posn    int8
-}
-type _cgoa_189 struct {
-	quot int32
-	rem  int32
-}
-type _cgoa_190 struct {
-	quot int64
-	rem  int64
-}
-type _cgoa_191 struct {
-	quot int64
-	rem  int64
-}
-type ssize_t = int64
-type off_t = int64
-type FILE = struct__IO_FILE
-type va_list = []interface {
-}
-type __isoc_va_list = []interface {
-}
-type union__G_fpos64_t struct {
-	__opaque [16]int8
-}
-type fpos_t = union__G_fpos64_t
-type struct___locale_struct struct {
-	cat [6]*struct___locale_map
-}
-type struct_tls_module struct {
-	next   *struct_tls_module
-	image  unsafe.Pointer
-	len    uint64
-	size   uint64
-	align  uint64
-	offset uint64
-}
-type struct___libc struct {
-	can_do_threads  int8
-	threaded        int8
-	secure          int8
-	need_locks      int8
-	threads_minus_1 int32
-	auxv            *uint64
-	tls_head        *struct_tls_module
-	tls_size        uint64
-	tls_align       uint64
-	tls_cnt         uint64
-	page_size       uint64
-	global_locale   struct___locale_struct
-}
-type struct___locale_map struct {
-	map_     unsafe.Pointer
-	map_size uint64
-	name     [24]int8
-	next     *struct___locale_map
-}
 
 
 
