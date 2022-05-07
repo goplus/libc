@@ -12,6 +12,7 @@ vsprintf
 snprintf
 sprintf
 printf
+fprintf
 vfprintf
 stdin
 stdout

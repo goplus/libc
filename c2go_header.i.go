@@ -2351,3 +2351,27 @@ type _cgoa_486 struct {
 	__i [8]int32
 }
 
+
+
+
+
+type _cgoa_492 struct {
+	__i [14]int32
+}
+
+type _cgoa_494 struct {
+	__i [10]int32
+}
+
+type _cgoa_496 struct {
+	__i [12]int32
+}
+
+type _cgoa_498 struct {
+	__i [14]int32
+}
+
+type _cgoa_500 struct {
+	__i [8]int32
+}
+
