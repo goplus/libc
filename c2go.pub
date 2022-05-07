@@ -4,7 +4,9 @@ isdigit
 memchr
 memset
 memcpy
+getenv
 strnlen
+strcmp
 strerror
 fwrite
 vsnprintf

@@ -24,4 +24,6 @@
 
 off_t __lseek(int, off_t, int);
 
+extern char **__environ;
+
 #endif // _C2GO_UNISTD_H

@@ -9,6 +9,7 @@
 
 #define ___errno_location __errno_location
 
+#define UNISTD_H // don't include old unistd.h
 #define _PTHREAD_IMPL_H // don't include old pthread_impl.h
 #include "pthread_impl.h"
 

@@ -16,7 +16,7 @@ func __lctrans_impl(msg *int8, lm *struct___locale_map) *int8 {
 	}()
 }
 
-var envvars_cgo424 [6][12]int8 = [6][12]int8{[12]int8{'L', 'C', '_', 'C', 'T', 'Y', 'P', 'E', '\x00'}, [12]int8{'L', 'C', '_', 'N', 'U', 'M', 'E', 'R', 'I', 'C', '\x00'}, [12]int8{'L', 'C', '_', 'T', 'I', 'M', 'E', '\x00'}, [12]int8{'L', 'C', '_', 'C', 'O', 'L', 'L', 'A', 'T', 'E', '\x00'}, [12]int8{'L', 'C', '_', 'M', 'O', 'N', 'E', 'T', 'A', 'R', 'Y', '\x00'}, [12]int8{'L', 'C', '_', 'M', 'E', 'S', 'S', 'A', 'G', 'E', 'S', '\x00'}}
+var envvars_cgo483 [6][12]int8 = [6][12]int8{[12]int8{'L', 'C', '_', 'C', 'T', 'Y', 'P', 'E', '\x00'}, [12]int8{'L', 'C', '_', 'N', 'U', 'M', 'E', 'R', 'I', 'C', '\x00'}, [12]int8{'L', 'C', '_', 'T', 'I', 'M', 'E', '\x00'}, [12]int8{'L', 'C', '_', 'C', 'O', 'L', 'L', 'A', 'T', 'E', '\x00'}, [12]int8{'L', 'C', '_', 'M', 'O', 'N', 'E', 'T', 'A', 'R', 'Y', '\x00'}, [12]int8{'L', 'C', '_', 'M', 'E', 'S', 'S', 'A', 'G', 'E', 'S', '\x00'}}
 var __locale_lock [1]int32
 var __locale_lockptr *int32 = (*int32)(unsafe.Pointer(&__locale_lock))
 
@@ -33,15 +33,15 @@ func __get_locale(cat int32, val *int8) *struct___locale_map {
 	if !(*val != 0) {
 		if !(func() (_cgo_ret *int8) {
 			_cgo_addr := &val
-			*_cgo_addr = getenv((*int8)(unsafe.Pointer(&[7]int8{'L', 'C', '_', 'A', 'L', 'L', '\x00'})))
+			*_cgo_addr = Getenv((*int8)(unsafe.Pointer(&[7]int8{'L', 'C', '_', 'A', 'L', 'L', '\x00'})))
 			return *_cgo_addr
 		}() != nil && int32(*val) != 0 || func() (_cgo_ret *int8) {
 			_cgo_addr := &val
-			*_cgo_addr = getenv((*int8)(unsafe.Pointer(&*(*[12]int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*[12]int8)(unsafe.Pointer(&envvars_cgo424)))) + uintptr(cat)*12)))))
+			*_cgo_addr = Getenv((*int8)(unsafe.Pointer(&*(*[12]int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*[12]int8)(unsafe.Pointer(&envvars_cgo483)))) + uintptr(cat)*12)))))
 			return *_cgo_addr
 		}() != nil && int32(*val) != 0 || func() (_cgo_ret *int8) {
 			_cgo_addr := &val
-			*_cgo_addr = getenv((*int8)(unsafe.Pointer(&[5]int8{'L', 'A', 'N', 'G', '\x00'})))
+			*_cgo_addr = Getenv((*int8)(unsafe.Pointer(&[5]int8{'L', 'A', 'N', 'G', '\x00'})))
 			return *_cgo_addr
 		}() != nil && int32(*val) != 0) {
 			func() (_cgo_ret *int8) {
@@ -57,7 +57,7 @@ func __get_locale(cat int32, val *int8) *struct___locale_map {
 		val = (*int8)(unsafe.Pointer(&[8]int8{'C', '.', 'U', 'T', 'F', '-', '8', '\x00'}))
 	}
 	var builtin int32 = func() int32 {
-		if int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(val)) + uintptr(0)))) == 'C' && !(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(val)) + uintptr(1))) != 0) || !(strcmp(val, (*int8)(unsafe.Pointer(&[8]int8{'C', '.', 'U', 'T', 'F', '-', '8', '\x00'}))) != 0) || !(strcmp(val, (*int8)(unsafe.Pointer(&[6]int8{'P', 'O', 'S', 'I', 'X', '\x00'}))) != 0) {
+		if int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(val)) + uintptr(0)))) == 'C' && !(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(val)) + uintptr(1))) != 0) || !(Strcmp(val, (*int8)(unsafe.Pointer(&[8]int8{'C', '.', 'U', 'T', 'F', '-', '8', '\x00'}))) != 0) || !(Strcmp(val, (*int8)(unsafe.Pointer(&[6]int8{'P', 'O', 'S', 'I', 'X', '\x00'}))) != 0) {
 			return 1
 		} else {
 			return 0
@@ -70,12 +70,12 @@ func __get_locale(cat int32, val *int8) *struct___locale_map {
 		return (*struct___locale_map)(nil)
 	}
 	for p = (*struct___locale_map)(loc_head); p != nil; p = p.next {
-		if !(strcmp(val, (*int8)(unsafe.Pointer(&p.name))) != 0) {
+		if !(Strcmp(val, (*int8)(unsafe.Pointer(&p.name))) != 0) {
 			return p
 		}
 	}
 	if !(__libc.secure != 0) {
-		path = getenv((*int8)(unsafe.Pointer(&[13]int8{'M', 'U', 'S', 'L', '_', 'L', 'O', 'C', 'P', 'A', 'T', 'H', '\x00'})))
+		path = Getenv((*int8)(unsafe.Pointer(&[13]int8{'M', 'U', 'S', 'L', '_', 'L', 'O', 'C', 'P', 'A', 'T', 'H', '\x00'})))
 	}
 	if path != nil {
 		for ; *path != 0; path = (*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(z)) + func() uintptr {

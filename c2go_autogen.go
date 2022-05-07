@@ -29,9 +29,6 @@ func __munmap(unsafe.Pointer, uint64) int32 {
 func __pthread_self() *struct___pthread {
 	panic("notimpl")
 }
-func __strchrnul(*int8, int32) *int8 {
-	panic("notimpl")
-}
 func __syscall_cp(int64, int64, int64, int64, int64, int64, int64) int64 {
 	panic("notimpl")
 }
@@ -41,10 +38,10 @@ func __unlock(*int32) {
 func __wake(addr unsafe.Pointer, cnt int32, priv int32) {
 	panic("notimpl")
 }
-func getenv(*int8) *int8 {
+func strlen(*int8) uint64 {
 	panic("notimpl")
 }
-func strcmp(*int8, *int8) int32 {
+func strncmp(*int8, *int8, uint64) int32 {
 	panic("notimpl")
 }
 func wctomb(*int8, uint32) int32 {
