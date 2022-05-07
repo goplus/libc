@@ -8311,91 +8311,10 @@ type _cgoa_471 struct {
 	__i [8]int32
 }
 
-
-
-
-
-
-
-
-type _cgoa_481 struct {
-	__i [14]int32
-}
-
-type _cgoa_483 struct {
-	__i [10]int32
-}
-
-type _cgoa_485 struct {
-	__i [12]int32
-}
-
-type _cgoa_487 struct {
-	__i [14]int32
-}
-
-type _cgoa_489 struct {
-	__i [8]int32
-}
-
-
-
-
-
-
-
-
-type _cgoa_499 struct {
-	__i [14]int32
-}
-
-type _cgoa_501 struct {
-	__i [10]int32
-}
-
-type _cgoa_503 struct {
-	__i [12]int32
-}
-
-type _cgoa_505 struct {
-	__i [14]int32
-}
-
-type _cgoa_507 struct {
-	__i [8]int32
-}
-
 type mode_t = uint32
-
-
-
-
-
-
-
-type _cgoa_517 struct {
-	__i [14]int32
-}
-
-type _cgoa_519 struct {
-	__i [10]int32
-}
-
-type _cgoa_521 struct {
-	__i [12]int32
-}
-
-type _cgoa_523 struct {
-	__i [14]int32
-}
-
-type _cgoa_525 struct {
-	__i [8]int32
-}
-
 type syscall_arg_t = int64
 
-func __alt_socketcall_cgo526(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+func __alt_socketcall_cgo472(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
 	var r int64
 	if cp != 0 {
 		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
@@ -8412,28 +8331,267 @@ func __alt_socketcall_cgo526(sys int32, sock int32, cp int32, a int64, b int64, 
 
 
 
-type _cgoa_532 struct {
+type _cgoa_479 struct {
 	__i [14]int32
 }
 
-type _cgoa_534 struct {
+type _cgoa_481 struct {
 	__i [10]int32
 }
 
-type _cgoa_536 struct {
+type _cgoa_483 struct {
 	__i [12]int32
 }
 
-type _cgoa_538 struct {
+type _cgoa_485 struct {
 	__i [14]int32
 }
 
-type _cgoa_540 struct {
+type _cgoa_487 struct {
+	__i [8]int32
+}
+
+type struct_flock struct {
+	l_type   int16
+	l_whence int16
+	l_start  int64
+	l_len    int64
+	l_pid    int32
+}
+type nlink_t = uint32
+type ino_t = uint64
+type dev_t = uint64
+type blksize_t = int64
+type blkcnt_t = int64
+type _cgoa_488 struct {
+	tv_sec  int64
+	tv_nsec int64
+}
+type struct_stat struct {
+	st_dev             uint64
+	__st_dev_padding   int32
+	__st_ino_truncated int64
+	st_mode            uint32
+	st_nlink           uint32
+	st_uid             uint32
+	st_gid             uint32
+	st_rdev            uint64
+	__st_rdev_padding  int32
+	st_size            int64
+	st_blksize         int64
+	st_blocks          int64
+	__st_atim32        _cgoa_488
+	__st_mtim32        _cgoa_488
+	__st_ctim32        _cgoa_488
+	st_ino             uint64
+	st_atim            struct_timespec
+	st_mtim            struct_timespec
+	st_ctim            struct_timespec
+}
+
+func __alt_socketcall_cgo489(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+	var r int64
+	if cp != 0 {
+		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	} else {
+		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	}
+	if r != int64(-38) {
+		return r
+	}
+	return r
+}
+
+type struct_kstat struct {
+	st_dev             uint64
+	__st_dev_padding   int32
+	__st_ino_truncated int64
+	st_mode            uint32
+	st_nlink           uint32
+	st_uid             uint32
+	st_gid             uint32
+	st_rdev            uint64
+	__st_rdev_padding  int32
+	st_size            int64
+	st_blksize         int64
+	st_blocks          int64
+	st_atime_sec       int64
+	st_atime_nsec      int64
+	st_mtime_sec       int64
+	st_mtime_nsec      int64
+	st_ctime_sec       int64
+	st_ctime_nsec      int64
+	st_ino             uint64
+}
+
+
+
+
+type _cgoa_495 struct {
+	__i [14]int32
+}
+
+type _cgoa_497 struct {
+	__i [10]int32
+}
+
+type _cgoa_499 struct {
+	__i [12]int32
+}
+
+type _cgoa_501 struct {
+	__i [14]int32
+}
+
+type _cgoa_503 struct {
 	__i [8]int32
 }
 
 
-func __alt_socketcall_cgo541(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+
+
+
+type _cgoa_510 struct {
+	__i [14]int32
+}
+
+type _cgoa_512 struct {
+	__i [10]int32
+}
+
+type _cgoa_514 struct {
+	__i [12]int32
+}
+
+type _cgoa_516 struct {
+	__i [14]int32
+}
+
+type _cgoa_518 struct {
+	__i [8]int32
+}
+
+
+
+
+
+
+
+
+type _cgoa_528 struct {
+	__i [14]int32
+}
+
+type _cgoa_530 struct {
+	__i [10]int32
+}
+
+type _cgoa_532 struct {
+	__i [12]int32
+}
+
+type _cgoa_534 struct {
+	__i [14]int32
+}
+
+type _cgoa_536 struct {
+	__i [8]int32
+}
+
+
+
+
+
+
+
+
+type _cgoa_546 struct {
+	__i [14]int32
+}
+
+type _cgoa_548 struct {
+	__i [10]int32
+}
+
+type _cgoa_550 struct {
+	__i [12]int32
+}
+
+type _cgoa_552 struct {
+	__i [14]int32
+}
+
+type _cgoa_554 struct {
+	__i [8]int32
+}
+
+
+
+
+
+
+
+
+type _cgoa_564 struct {
+	__i [14]int32
+}
+
+type _cgoa_566 struct {
+	__i [10]int32
+}
+
+type _cgoa_568 struct {
+	__i [12]int32
+}
+
+type _cgoa_570 struct {
+	__i [14]int32
+}
+
+type _cgoa_572 struct {
+	__i [8]int32
+}
+
+
+func __alt_socketcall_cgo573(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+	var r int64
+	if cp != 0 {
+		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	} else {
+		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	}
+	if r != int64(-38) {
+		return r
+	}
+	return r
+}
+
+
+
+
+
+type _cgoa_579 struct {
+	__i [14]int32
+}
+
+type _cgoa_581 struct {
+	__i [10]int32
+}
+
+type _cgoa_583 struct {
+	__i [12]int32
+}
+
+type _cgoa_585 struct {
+	__i [14]int32
+}
+
+type _cgoa_587 struct {
+	__i [8]int32
+}
+
+
+func __alt_socketcall_cgo588(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
 	var r int64
 	if cp != 0 {
 		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
@@ -8483,186 +8641,72 @@ type struct__IO_FILE struct {
 
 
 
-type _cgoa_548 struct {
+type _cgoa_595 struct {
 	__i [14]int32
 }
 
-type _cgoa_550 struct {
+type _cgoa_597 struct {
 	__i [10]int32
 }
 
-type _cgoa_552 struct {
+type _cgoa_599 struct {
 	__i [12]int32
 }
 
-type _cgoa_554 struct {
+type _cgoa_601 struct {
 	__i [14]int32
 }
 
-type _cgoa_556 struct {
+type _cgoa_603 struct {
 	__i [8]int32
 }
 
 
 
 
-
-type _cgoa_562 struct {
-	__i [14]int32
-}
-
-type _cgoa_564 struct {
-	__i [10]int32
-}
-
-type _cgoa_566 struct {
-	__i [12]int32
-}
-
-type _cgoa_568 struct {
-	__i [14]int32
-}
-
-type _cgoa_570 struct {
-	__i [8]int32
-}
-
-
-
-
-
-type _cgoa_576 struct {
-	__i [14]int32
-}
-
-type _cgoa_578 struct {
-	__i [10]int32
-}
-
-type _cgoa_580 struct {
-	__i [12]int32
-}
-
-type _cgoa_582 struct {
-	__i [14]int32
-}
-
-type _cgoa_584 struct {
-	__i [8]int32
-}
-
-
-
-
-
-type _cgoa_590 struct {
-	__i [14]int32
-}
-
-type _cgoa_592 struct {
-	__i [10]int32
-}
-
-type _cgoa_594 struct {
-	__i [12]int32
-}
-
-type _cgoa_596 struct {
-	__i [14]int32
-}
-
-type _cgoa_598 struct {
-	__i [8]int32
-}
-
-
-func __alt_socketcall_cgo599(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
-	var r int64
-	if cp != 0 {
-		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
-	} else {
-		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
-	}
-	if r != int64(-38) {
-		return r
-	}
-	return r
-}
-
-
-
-
-
-type _cgoa_607 struct {
-	__i [14]int32
-}
 
 type _cgoa_609 struct {
-	__i [10]int32
+	__i [14]int32
 }
 
 type _cgoa_611 struct {
-	__i [12]int32
-}
-
-type _cgoa_613 struct {
-	__i [14]int32
-}
-
-type _cgoa_615 struct {
-	__i [8]int32
-}
-
-
-func __alt_socketcall_cgo616(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
-	var r int64
-	if cp != 0 {
-		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
-	} else {
-		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
-	}
-	if r != int64(-38) {
-		return r
-	}
-	return r
-}
-
-
-
-
-
-type _cgoa_622 struct {
-	__i [14]int32
-}
-
-type _cgoa_624 struct {
 	__i [10]int32
 }
 
-type _cgoa_626 struct {
+type _cgoa_613 struct {
 	__i [12]int32
 }
 
-type _cgoa_628 struct {
+type _cgoa_615 struct {
 	__i [14]int32
 }
 
-type _cgoa_630 struct {
+type _cgoa_617 struct {
 	__i [8]int32
 }
 
 
-func __alt_socketcall_cgo631(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
-	var r int64
-	if cp != 0 {
-		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
-	} else {
-		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
-	}
-	if r != int64(-38) {
-		return r
-	}
-	return r
+
+
+
+type _cgoa_623 struct {
+	__i [14]int32
+}
+
+type _cgoa_625 struct {
+	__i [10]int32
+}
+
+type _cgoa_627 struct {
+	__i [12]int32
+}
+
+type _cgoa_629 struct {
+	__i [14]int32
+}
+
+type _cgoa_631 struct {
+	__i [8]int32
 }
 
 
@@ -8703,6 +8747,120 @@ func __alt_socketcall_cgo646(sys int32, sock int32, cp int32, a int64, b int64, 
 	return r
 }
 
+
+
+
+
+type _cgoa_654 struct {
+	__i [14]int32
+}
+
+type _cgoa_656 struct {
+	__i [10]int32
+}
+
+type _cgoa_658 struct {
+	__i [12]int32
+}
+
+type _cgoa_660 struct {
+	__i [14]int32
+}
+
+type _cgoa_662 struct {
+	__i [8]int32
+}
+
+
+func __alt_socketcall_cgo663(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+	var r int64
+	if cp != 0 {
+		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	} else {
+		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	}
+	if r != int64(-38) {
+		return r
+	}
+	return r
+}
+
+
+
+
+
+type _cgoa_669 struct {
+	__i [14]int32
+}
+
+type _cgoa_671 struct {
+	__i [10]int32
+}
+
+type _cgoa_673 struct {
+	__i [12]int32
+}
+
+type _cgoa_675 struct {
+	__i [14]int32
+}
+
+type _cgoa_677 struct {
+	__i [8]int32
+}
+
+
+func __alt_socketcall_cgo678(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+	var r int64
+	if cp != 0 {
+		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	} else {
+		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	}
+	if r != int64(-38) {
+		return r
+	}
+	return r
+}
+
+
+
+
+
+type _cgoa_684 struct {
+	__i [14]int32
+}
+
+type _cgoa_686 struct {
+	__i [10]int32
+}
+
+type _cgoa_688 struct {
+	__i [12]int32
+}
+
+type _cgoa_690 struct {
+	__i [14]int32
+}
+
+type _cgoa_692 struct {
+	__i [8]int32
+}
+
+
+func __alt_socketcall_cgo693(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+	var r int64
+	if cp != 0 {
+		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	} else {
+		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	}
+	if r != int64(-38) {
+		return r
+	}
+	return r
+}
+
 type struct_iovec struct {
 	iov_base unsafe.Pointer
 	iov_len  uint64
@@ -8711,28 +8869,28 @@ type struct_iovec struct {
 
 
 
-type _cgoa_652 struct {
+type _cgoa_699 struct {
 	__i [14]int32
 }
 
-type _cgoa_654 struct {
+type _cgoa_701 struct {
 	__i [10]int32
 }
 
-type _cgoa_656 struct {
+type _cgoa_703 struct {
 	__i [12]int32
 }
 
-type _cgoa_658 struct {
+type _cgoa_705 struct {
 	__i [14]int32
 }
 
-type _cgoa_660 struct {
+type _cgoa_707 struct {
 	__i [8]int32
 }
 
 
-func __alt_socketcall_cgo661(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+func __alt_socketcall_cgo708(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
 	var r int64
 	if cp != 0 {
 		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
@@ -8749,28 +8907,28 @@ func __alt_socketcall_cgo661(sys int32, sock int32, cp int32, a int64, b int64, 
 
 
 
-type _cgoa_667 struct {
+type _cgoa_714 struct {
 	__i [14]int32
 }
 
-type _cgoa_669 struct {
+type _cgoa_716 struct {
 	__i [10]int32
 }
 
-type _cgoa_671 struct {
+type _cgoa_718 struct {
 	__i [12]int32
 }
 
-type _cgoa_673 struct {
+type _cgoa_720 struct {
 	__i [14]int32
 }
 
-type _cgoa_675 struct {
+type _cgoa_722 struct {
 	__i [8]int32
 }
 
 
-func __alt_socketcall_cgo676(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+func __alt_socketcall_cgo723(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
 	var r int64
 	if cp != 0 {
 		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
@@ -8787,28 +8945,28 @@ func __alt_socketcall_cgo676(sys int32, sock int32, cp int32, a int64, b int64, 
 
 
 
-type _cgoa_682 struct {
+type _cgoa_729 struct {
 	__i [14]int32
 }
 
-type _cgoa_684 struct {
+type _cgoa_731 struct {
 	__i [10]int32
 }
 
-type _cgoa_686 struct {
+type _cgoa_733 struct {
 	__i [12]int32
 }
 
-type _cgoa_688 struct {
+type _cgoa_735 struct {
 	__i [14]int32
 }
 
-type _cgoa_690 struct {
+type _cgoa_737 struct {
 	__i [8]int32
 }
 
 
-func __alt_socketcall_cgo691(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+func __alt_socketcall_cgo738(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
 	var r int64
 	if cp != 0 {
 		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
@@ -8825,28 +8983,28 @@ func __alt_socketcall_cgo691(sys int32, sock int32, cp int32, a int64, b int64, 
 
 
 
-type _cgoa_698 struct {
+type _cgoa_745 struct {
 	__i [14]int32
 }
 
-type _cgoa_700 struct {
+type _cgoa_747 struct {
 	__i [10]int32
 }
 
-type _cgoa_702 struct {
+type _cgoa_749 struct {
 	__i [12]int32
 }
 
-type _cgoa_704 struct {
+type _cgoa_751 struct {
 	__i [14]int32
 }
 
-type _cgoa_706 struct {
+type _cgoa_753 struct {
 	__i [8]int32
 }
 
 
-func __alt_socketcall_cgo707(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+func __alt_socketcall_cgo754(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
 	var r int64
 	if cp != 0 {
 		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
@@ -8869,142 +9027,28 @@ type struct_winsize struct {
 
 
 
-type _cgoa_713 struct {
+type _cgoa_760 struct {
 	__i [14]int32
 }
-
-type _cgoa_715 struct {
-	__i [10]int32
-}
-
-type _cgoa_717 struct {
-	__i [12]int32
-}
-
-type _cgoa_719 struct {
-	__i [14]int32
-}
-
-type _cgoa_721 struct {
-	__i [8]int32
-}
-
-
-func __alt_socketcall_cgo722(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
-	var r int64
-	if cp != 0 {
-		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
-	} else {
-		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
-	}
-	if r != int64(-38) {
-		return r
-	}
-	return r
-}
-
-
-
-
-
-type _cgoa_730 struct {
-	__i [14]int32
-}
-
-type _cgoa_732 struct {
-	__i [10]int32
-}
-
-type _cgoa_734 struct {
-	__i [12]int32
-}
-
-type _cgoa_736 struct {
-	__i [14]int32
-}
-
-type _cgoa_738 struct {
-	__i [8]int32
-}
-
-
-func __alt_socketcall_cgo739(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
-	var r int64
-	if cp != 0 {
-		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
-	} else {
-		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
-	}
-	if r != int64(-38) {
-		return r
-	}
-	return r
-}
-
-
-
-
-
-type _cgoa_746 struct {
-	__i [14]int32
-}
-
-type _cgoa_748 struct {
-	__i [10]int32
-}
-
-type _cgoa_750 struct {
-	__i [12]int32
-}
-
-type _cgoa_752 struct {
-	__i [14]int32
-}
-
-type _cgoa_754 struct {
-	__i [8]int32
-}
-
-
-func __alt_socketcall_cgo755(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
-	var r int64
-	if cp != 0 {
-		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
-	} else {
-		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
-	}
-	if r != int64(-38) {
-		return r
-	}
-	return r
-}
-
-
-
-
 
 type _cgoa_762 struct {
-	__i [14]int32
+	__i [10]int32
 }
 
 type _cgoa_764 struct {
-	__i [10]int32
-}
-
-type _cgoa_766 struct {
 	__i [12]int32
 }
 
-type _cgoa_768 struct {
+type _cgoa_766 struct {
 	__i [14]int32
 }
 
-type _cgoa_770 struct {
+type _cgoa_768 struct {
 	__i [8]int32
 }
 
 
-func __alt_socketcall_cgo771(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+func __alt_socketcall_cgo769(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
 	var r int64
 	if cp != 0 {
 		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
@@ -9021,28 +9065,28 @@ func __alt_socketcall_cgo771(sys int32, sock int32, cp int32, a int64, b int64, 
 
 
 
-type _cgoa_778 struct {
+type _cgoa_777 struct {
 	__i [14]int32
 }
 
-type _cgoa_780 struct {
+type _cgoa_779 struct {
 	__i [10]int32
 }
 
-type _cgoa_782 struct {
+type _cgoa_781 struct {
 	__i [12]int32
 }
 
-type _cgoa_784 struct {
+type _cgoa_783 struct {
 	__i [14]int32
 }
 
-type _cgoa_786 struct {
+type _cgoa_785 struct {
 	__i [8]int32
 }
 
 
-func __alt_socketcall_cgo787(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+func __alt_socketcall_cgo786(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
 	var r int64
 	if cp != 0 {
 		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
@@ -9092,7 +9136,121 @@ func __alt_socketcall_cgo802(sys int32, sock int32, cp int32, a int64, b int64, 
 	}
 	return r
 }
-func __isspace_cgo803(_c int32) int32 {
+
+
+
+
+
+type _cgoa_809 struct {
+	__i [14]int32
+}
+
+type _cgoa_811 struct {
+	__i [10]int32
+}
+
+type _cgoa_813 struct {
+	__i [12]int32
+}
+
+type _cgoa_815 struct {
+	__i [14]int32
+}
+
+type _cgoa_817 struct {
+	__i [8]int32
+}
+
+
+func __alt_socketcall_cgo818(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+	var r int64
+	if cp != 0 {
+		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	} else {
+		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	}
+	if r != int64(-38) {
+		return r
+	}
+	return r
+}
+
+
+
+
+
+type _cgoa_825 struct {
+	__i [14]int32
+}
+
+type _cgoa_827 struct {
+	__i [10]int32
+}
+
+type _cgoa_829 struct {
+	__i [12]int32
+}
+
+type _cgoa_831 struct {
+	__i [14]int32
+}
+
+type _cgoa_833 struct {
+	__i [8]int32
+}
+
+
+func __alt_socketcall_cgo834(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+	var r int64
+	if cp != 0 {
+		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	} else {
+		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	}
+	if r != int64(-38) {
+		return r
+	}
+	return r
+}
+
+
+
+
+
+type _cgoa_840 struct {
+	__i [14]int32
+}
+
+type _cgoa_842 struct {
+	__i [10]int32
+}
+
+type _cgoa_844 struct {
+	__i [12]int32
+}
+
+type _cgoa_846 struct {
+	__i [14]int32
+}
+
+type _cgoa_848 struct {
+	__i [8]int32
+}
+
+
+func __alt_socketcall_cgo849(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+	var r int64
+	if cp != 0 {
+		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	} else {
+		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	}
+	if r != int64(-38) {
+		return r
+	}
+	return r
+}
+func __isspace_cgo850(_c int32) int32 {
 	return func() int32 {
 		if _c == ' ' || uint32(_c)-uint32('\t') < uint32(5) {
 			return 1
@@ -9113,34 +9271,34 @@ type struct___mbstate_t struct {
 	__opaque2 uint32
 }
 type mbstate_t = struct___mbstate_t
-type _cgoa_808 struct {
+type _cgoa_855 struct {
 	quot int64
 	rem  int64
 }
 
-func __FLOAT_BITS_cgo809(__f float32) uint32 {
-	type _cgoa_810 struct {
+func __FLOAT_BITS_cgo856(__f float32) uint32 {
+	type _cgoa_857 struct {
 		__f float32
 	}
-	var __u _cgoa_810
+	var __u _cgoa_857
 	__u.__f = __f
 	return *(*uint32)(unsafe.Pointer(&__u))
 }
-func __DOUBLE_BITS_cgo811(__f float64) uint64 {
-	type _cgoa_812 struct {
+func __DOUBLE_BITS_cgo858(__f float64) uint64 {
+	type _cgoa_859 struct {
 		__f float64
 	}
-	var __u _cgoa_812
+	var __u _cgoa_859
 	__u.__f = __f
 	return *(*uint64)(unsafe.Pointer(&__u))
 }
-func __islessf_cgo813(__x float32, __y float32) int32 {
+func __islessf_cgo860(__x float32, __y float32) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
 				if 4 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS_cgo809(__x)&uint32(2147483647) > uint32(2139095040) {
+						if __FLOAT_BITS_cgo856(__x)&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -9150,7 +9308,7 @@ func __islessf_cgo813(__x float32, __y float32) int32 {
 					return func() int32 {
 						if 4 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS_cgo811(float64(__x))&18446744073709551615 > 2047<<52 {
+								if __DOUBLE_BITS_cgo858(float64(__x))&18446744073709551615 > 2047<<52 {
 									return 1
 								} else {
 									return 0
@@ -9179,7 +9337,7 @@ func __islessf_cgo813(__x float32, __y float32) int32 {
 				return func() int32 {
 					if 4 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS_cgo809(__y)&uint32(2147483647) > uint32(2139095040) {
+							if __FLOAT_BITS_cgo856(__y)&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -9189,7 +9347,7 @@ func __islessf_cgo813(__x float32, __y float32) int32 {
 						return func() int32 {
 							if 4 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS_cgo811(float64(__y))&18446744073709551615 > 2047<<52 {
+									if __DOUBLE_BITS_cgo858(float64(__y))&18446744073709551615 > 2047<<52 {
 										return 1
 									} else {
 										return 0
@@ -9215,13 +9373,13 @@ func __islessf_cgo813(__x float32, __y float32) int32 {
 		}
 	}()
 }
-func __isless_cgo814(__x float64, __y float64) int32 {
+func __isless_cgo861(__x float64, __y float64) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
 				if 8 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS_cgo809(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+						if __FLOAT_BITS_cgo856(float32(__x))&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -9231,7 +9389,7 @@ func __isless_cgo814(__x float64, __y float64) int32 {
 					return func() int32 {
 						if 8 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS_cgo811(__x)&18446744073709551615 > 2047<<52 {
+								if __DOUBLE_BITS_cgo858(__x)&18446744073709551615 > 2047<<52 {
 									return 1
 								} else {
 									return 0
@@ -9260,7 +9418,7 @@ func __isless_cgo814(__x float64, __y float64) int32 {
 				return func() int32 {
 					if 8 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS_cgo809(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+							if __FLOAT_BITS_cgo856(float32(__y))&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -9270,7 +9428,7 @@ func __isless_cgo814(__x float64, __y float64) int32 {
 						return func() int32 {
 							if 8 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS_cgo811(__y)&18446744073709551615 > 2047<<52 {
+									if __DOUBLE_BITS_cgo858(__y)&18446744073709551615 > 2047<<52 {
 										return 1
 									} else {
 										return 0
@@ -9296,13 +9454,13 @@ func __isless_cgo814(__x float64, __y float64) int32 {
 		}
 	}()
 }
-func __islessl_cgo815(__x float64, __y float64) int32 {
+func __islessl_cgo862(__x float64, __y float64) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
 				if 8 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS_cgo809(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+						if __FLOAT_BITS_cgo856(float32(__x))&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -9312,7 +9470,7 @@ func __islessl_cgo815(__x float64, __y float64) int32 {
 					return func() int32 {
 						if 8 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS_cgo811(float64(__x))&18446744073709551615 > 2047<<52 {
+								if __DOUBLE_BITS_cgo858(float64(__x))&18446744073709551615 > 2047<<52 {
 									return 1
 								} else {
 									return 0
@@ -9341,7 +9499,7 @@ func __islessl_cgo815(__x float64, __y float64) int32 {
 				return func() int32 {
 					if 8 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS_cgo809(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+							if __FLOAT_BITS_cgo856(float32(__y))&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -9351,7 +9509,7 @@ func __islessl_cgo815(__x float64, __y float64) int32 {
 						return func() int32 {
 							if 8 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS_cgo811(float64(__y))&18446744073709551615 > 2047<<52 {
+									if __DOUBLE_BITS_cgo858(float64(__y))&18446744073709551615 > 2047<<52 {
 										return 1
 									} else {
 										return 0
@@ -9377,13 +9535,13 @@ func __islessl_cgo815(__x float64, __y float64) int32 {
 		}
 	}()
 }
-func __islessequalf_cgo816(__x float32, __y float32) int32 {
+func __islessequalf_cgo863(__x float32, __y float32) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
 				if 4 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS_cgo809(__x)&uint32(2147483647) > uint32(2139095040) {
+						if __FLOAT_BITS_cgo856(__x)&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -9393,7 +9551,7 @@ func __islessequalf_cgo816(__x float32, __y float32) int32 {
 					return func() int32 {
 						if 4 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS_cgo811(float64(__x))&18446744073709551615 > 2047<<52 {
+								if __DOUBLE_BITS_cgo858(float64(__x))&18446744073709551615 > 2047<<52 {
 									return 1
 								} else {
 									return 0
@@ -9422,7 +9580,7 @@ func __islessequalf_cgo816(__x float32, __y float32) int32 {
 				return func() int32 {
 					if 4 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS_cgo809(__y)&uint32(2147483647) > uint32(2139095040) {
+							if __FLOAT_BITS_cgo856(__y)&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -9432,7 +9590,7 @@ func __islessequalf_cgo816(__x float32, __y float32) int32 {
 						return func() int32 {
 							if 4 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS_cgo811(float64(__y))&18446744073709551615 > 2047<<52 {
+									if __DOUBLE_BITS_cgo858(float64(__y))&18446744073709551615 > 2047<<52 {
 										return 1
 									} else {
 										return 0
@@ -9458,13 +9616,13 @@ func __islessequalf_cgo816(__x float32, __y float32) int32 {
 		}
 	}()
 }
-func __islessequal_cgo817(__x float64, __y float64) int32 {
+func __islessequal_cgo864(__x float64, __y float64) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
 				if 8 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS_cgo809(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+						if __FLOAT_BITS_cgo856(float32(__x))&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -9474,7 +9632,7 @@ func __islessequal_cgo817(__x float64, __y float64) int32 {
 					return func() int32 {
 						if 8 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS_cgo811(__x)&18446744073709551615 > 2047<<52 {
+								if __DOUBLE_BITS_cgo858(__x)&18446744073709551615 > 2047<<52 {
 									return 1
 								} else {
 									return 0
@@ -9503,7 +9661,7 @@ func __islessequal_cgo817(__x float64, __y float64) int32 {
 				return func() int32 {
 					if 8 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS_cgo809(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+							if __FLOAT_BITS_cgo856(float32(__y))&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -9513,7 +9671,7 @@ func __islessequal_cgo817(__x float64, __y float64) int32 {
 						return func() int32 {
 							if 8 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS_cgo811(__y)&18446744073709551615 > 2047<<52 {
+									if __DOUBLE_BITS_cgo858(__y)&18446744073709551615 > 2047<<52 {
 										return 1
 									} else {
 										return 0
@@ -9539,13 +9697,13 @@ func __islessequal_cgo817(__x float64, __y float64) int32 {
 		}
 	}()
 }
-func __islessequall_cgo818(__x float64, __y float64) int32 {
+func __islessequall_cgo865(__x float64, __y float64) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
 				if 8 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS_cgo809(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+						if __FLOAT_BITS_cgo856(float32(__x))&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -9555,7 +9713,7 @@ func __islessequall_cgo818(__x float64, __y float64) int32 {
 					return func() int32 {
 						if 8 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS_cgo811(float64(__x))&18446744073709551615 > 2047<<52 {
+								if __DOUBLE_BITS_cgo858(float64(__x))&18446744073709551615 > 2047<<52 {
 									return 1
 								} else {
 									return 0
@@ -9584,7 +9742,7 @@ func __islessequall_cgo818(__x float64, __y float64) int32 {
 				return func() int32 {
 					if 8 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS_cgo809(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+							if __FLOAT_BITS_cgo856(float32(__y))&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -9594,7 +9752,7 @@ func __islessequall_cgo818(__x float64, __y float64) int32 {
 						return func() int32 {
 							if 8 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS_cgo811(float64(__y))&18446744073709551615 > 2047<<52 {
+									if __DOUBLE_BITS_cgo858(float64(__y))&18446744073709551615 > 2047<<52 {
 										return 1
 									} else {
 										return 0
@@ -9620,13 +9778,13 @@ func __islessequall_cgo818(__x float64, __y float64) int32 {
 		}
 	}()
 }
-func __islessgreaterf_cgo819(__x float32, __y float32) int32 {
+func __islessgreaterf_cgo866(__x float32, __y float32) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
 				if 4 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS_cgo809(__x)&uint32(2147483647) > uint32(2139095040) {
+						if __FLOAT_BITS_cgo856(__x)&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -9636,7 +9794,7 @@ func __islessgreaterf_cgo819(__x float32, __y float32) int32 {
 					return func() int32 {
 						if 4 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS_cgo811(float64(__x))&18446744073709551615 > 2047<<52 {
+								if __DOUBLE_BITS_cgo858(float64(__x))&18446744073709551615 > 2047<<52 {
 									return 1
 								} else {
 									return 0
@@ -9665,7 +9823,7 @@ func __islessgreaterf_cgo819(__x float32, __y float32) int32 {
 				return func() int32 {
 					if 4 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS_cgo809(__y)&uint32(2147483647) > uint32(2139095040) {
+							if __FLOAT_BITS_cgo856(__y)&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -9675,7 +9833,7 @@ func __islessgreaterf_cgo819(__x float32, __y float32) int32 {
 						return func() int32 {
 							if 4 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS_cgo811(float64(__y))&18446744073709551615 > 2047<<52 {
+									if __DOUBLE_BITS_cgo858(float64(__y))&18446744073709551615 > 2047<<52 {
 										return 1
 									} else {
 										return 0
@@ -9701,13 +9859,13 @@ func __islessgreaterf_cgo819(__x float32, __y float32) int32 {
 		}
 	}()
 }
-func __islessgreater_cgo820(__x float64, __y float64) int32 {
+func __islessgreater_cgo867(__x float64, __y float64) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
 				if 8 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS_cgo809(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+						if __FLOAT_BITS_cgo856(float32(__x))&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -9717,7 +9875,7 @@ func __islessgreater_cgo820(__x float64, __y float64) int32 {
 					return func() int32 {
 						if 8 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS_cgo811(__x)&18446744073709551615 > 2047<<52 {
+								if __DOUBLE_BITS_cgo858(__x)&18446744073709551615 > 2047<<52 {
 									return 1
 								} else {
 									return 0
@@ -9746,7 +9904,7 @@ func __islessgreater_cgo820(__x float64, __y float64) int32 {
 				return func() int32 {
 					if 8 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS_cgo809(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+							if __FLOAT_BITS_cgo856(float32(__y))&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -9756,7 +9914,7 @@ func __islessgreater_cgo820(__x float64, __y float64) int32 {
 						return func() int32 {
 							if 8 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS_cgo811(__y)&18446744073709551615 > 2047<<52 {
+									if __DOUBLE_BITS_cgo858(__y)&18446744073709551615 > 2047<<52 {
 										return 1
 									} else {
 										return 0
@@ -9782,13 +9940,13 @@ func __islessgreater_cgo820(__x float64, __y float64) int32 {
 		}
 	}()
 }
-func __islessgreaterl_cgo821(__x float64, __y float64) int32 {
+func __islessgreaterl_cgo868(__x float64, __y float64) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
 				if 8 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS_cgo809(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+						if __FLOAT_BITS_cgo856(float32(__x))&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -9798,7 +9956,7 @@ func __islessgreaterl_cgo821(__x float64, __y float64) int32 {
 					return func() int32 {
 						if 8 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS_cgo811(float64(__x))&18446744073709551615 > 2047<<52 {
+								if __DOUBLE_BITS_cgo858(float64(__x))&18446744073709551615 > 2047<<52 {
 									return 1
 								} else {
 									return 0
@@ -9827,7 +9985,7 @@ func __islessgreaterl_cgo821(__x float64, __y float64) int32 {
 				return func() int32 {
 					if 8 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS_cgo809(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+							if __FLOAT_BITS_cgo856(float32(__y))&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -9837,7 +9995,7 @@ func __islessgreaterl_cgo821(__x float64, __y float64) int32 {
 						return func() int32 {
 							if 8 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS_cgo811(float64(__y))&18446744073709551615 > 2047<<52 {
+									if __DOUBLE_BITS_cgo858(float64(__y))&18446744073709551615 > 2047<<52 {
 										return 1
 									} else {
 										return 0
@@ -9863,13 +10021,13 @@ func __islessgreaterl_cgo821(__x float64, __y float64) int32 {
 		}
 	}()
 }
-func __isgreaterf_cgo822(__x float32, __y float32) int32 {
+func __isgreaterf_cgo869(__x float32, __y float32) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
 				if 4 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS_cgo809(__x)&uint32(2147483647) > uint32(2139095040) {
+						if __FLOAT_BITS_cgo856(__x)&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -9879,7 +10037,7 @@ func __isgreaterf_cgo822(__x float32, __y float32) int32 {
 					return func() int32 {
 						if 4 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS_cgo811(float64(__x))&18446744073709551615 > 2047<<52 {
+								if __DOUBLE_BITS_cgo858(float64(__x))&18446744073709551615 > 2047<<52 {
 									return 1
 								} else {
 									return 0
@@ -9908,7 +10066,7 @@ func __isgreaterf_cgo822(__x float32, __y float32) int32 {
 				return func() int32 {
 					if 4 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS_cgo809(__y)&uint32(2147483647) > uint32(2139095040) {
+							if __FLOAT_BITS_cgo856(__y)&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -9918,7 +10076,7 @@ func __isgreaterf_cgo822(__x float32, __y float32) int32 {
 						return func() int32 {
 							if 4 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS_cgo811(float64(__y))&18446744073709551615 > 2047<<52 {
+									if __DOUBLE_BITS_cgo858(float64(__y))&18446744073709551615 > 2047<<52 {
 										return 1
 									} else {
 										return 0
@@ -9944,13 +10102,13 @@ func __isgreaterf_cgo822(__x float32, __y float32) int32 {
 		}
 	}()
 }
-func __isgreater_cgo823(__x float64, __y float64) int32 {
+func __isgreater_cgo870(__x float64, __y float64) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
 				if 8 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS_cgo809(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+						if __FLOAT_BITS_cgo856(float32(__x))&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -9960,7 +10118,7 @@ func __isgreater_cgo823(__x float64, __y float64) int32 {
 					return func() int32 {
 						if 8 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS_cgo811(__x)&18446744073709551615 > 2047<<52 {
+								if __DOUBLE_BITS_cgo858(__x)&18446744073709551615 > 2047<<52 {
 									return 1
 								} else {
 									return 0
@@ -9989,7 +10147,7 @@ func __isgreater_cgo823(__x float64, __y float64) int32 {
 				return func() int32 {
 					if 8 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS_cgo809(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+							if __FLOAT_BITS_cgo856(float32(__y))&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -9999,7 +10157,7 @@ func __isgreater_cgo823(__x float64, __y float64) int32 {
 						return func() int32 {
 							if 8 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS_cgo811(__y)&18446744073709551615 > 2047<<52 {
+									if __DOUBLE_BITS_cgo858(__y)&18446744073709551615 > 2047<<52 {
 										return 1
 									} else {
 										return 0
@@ -10025,13 +10183,13 @@ func __isgreater_cgo823(__x float64, __y float64) int32 {
 		}
 	}()
 }
-func __isgreaterl_cgo824(__x float64, __y float64) int32 {
+func __isgreaterl_cgo871(__x float64, __y float64) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
 				if 8 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS_cgo809(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+						if __FLOAT_BITS_cgo856(float32(__x))&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -10041,7 +10199,7 @@ func __isgreaterl_cgo824(__x float64, __y float64) int32 {
 					return func() int32 {
 						if 8 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS_cgo811(float64(__x))&18446744073709551615 > 2047<<52 {
+								if __DOUBLE_BITS_cgo858(float64(__x))&18446744073709551615 > 2047<<52 {
 									return 1
 								} else {
 									return 0
@@ -10070,7 +10228,7 @@ func __isgreaterl_cgo824(__x float64, __y float64) int32 {
 				return func() int32 {
 					if 8 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS_cgo809(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+							if __FLOAT_BITS_cgo856(float32(__y))&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -10080,7 +10238,7 @@ func __isgreaterl_cgo824(__x float64, __y float64) int32 {
 						return func() int32 {
 							if 8 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS_cgo811(float64(__y))&18446744073709551615 > 2047<<52 {
+									if __DOUBLE_BITS_cgo858(float64(__y))&18446744073709551615 > 2047<<52 {
 										return 1
 									} else {
 										return 0
@@ -10106,13 +10264,13 @@ func __isgreaterl_cgo824(__x float64, __y float64) int32 {
 		}
 	}()
 }
-func __isgreaterequalf_cgo825(__x float32, __y float32) int32 {
+func __isgreaterequalf_cgo872(__x float32, __y float32) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
 				if 4 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS_cgo809(__x)&uint32(2147483647) > uint32(2139095040) {
+						if __FLOAT_BITS_cgo856(__x)&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -10122,7 +10280,7 @@ func __isgreaterequalf_cgo825(__x float32, __y float32) int32 {
 					return func() int32 {
 						if 4 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS_cgo811(float64(__x))&18446744073709551615 > 2047<<52 {
+								if __DOUBLE_BITS_cgo858(float64(__x))&18446744073709551615 > 2047<<52 {
 									return 1
 								} else {
 									return 0
@@ -10151,7 +10309,7 @@ func __isgreaterequalf_cgo825(__x float32, __y float32) int32 {
 				return func() int32 {
 					if 4 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS_cgo809(__y)&uint32(2147483647) > uint32(2139095040) {
+							if __FLOAT_BITS_cgo856(__y)&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -10161,7 +10319,7 @@ func __isgreaterequalf_cgo825(__x float32, __y float32) int32 {
 						return func() int32 {
 							if 4 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS_cgo811(float64(__y))&18446744073709551615 > 2047<<52 {
+									if __DOUBLE_BITS_cgo858(float64(__y))&18446744073709551615 > 2047<<52 {
 										return 1
 									} else {
 										return 0
@@ -10187,13 +10345,13 @@ func __isgreaterequalf_cgo825(__x float32, __y float32) int32 {
 		}
 	}()
 }
-func __isgreaterequal_cgo826(__x float64, __y float64) int32 {
+func __isgreaterequal_cgo873(__x float64, __y float64) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
 				if 8 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS_cgo809(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+						if __FLOAT_BITS_cgo856(float32(__x))&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -10203,7 +10361,7 @@ func __isgreaterequal_cgo826(__x float64, __y float64) int32 {
 					return func() int32 {
 						if 8 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS_cgo811(__x)&18446744073709551615 > 2047<<52 {
+								if __DOUBLE_BITS_cgo858(__x)&18446744073709551615 > 2047<<52 {
 									return 1
 								} else {
 									return 0
@@ -10232,7 +10390,7 @@ func __isgreaterequal_cgo826(__x float64, __y float64) int32 {
 				return func() int32 {
 					if 8 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS_cgo809(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+							if __FLOAT_BITS_cgo856(float32(__y))&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -10242,7 +10400,7 @@ func __isgreaterequal_cgo826(__x float64, __y float64) int32 {
 						return func() int32 {
 							if 8 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS_cgo811(__y)&18446744073709551615 > 2047<<52 {
+									if __DOUBLE_BITS_cgo858(__y)&18446744073709551615 > 2047<<52 {
 										return 1
 									} else {
 										return 0
@@ -10268,13 +10426,13 @@ func __isgreaterequal_cgo826(__x float64, __y float64) int32 {
 		}
 	}()
 }
-func __isgreaterequall_cgo827(__x float64, __y float64) int32 {
+func __isgreaterequall_cgo874(__x float64, __y float64) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
 				if 8 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS_cgo809(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+						if __FLOAT_BITS_cgo856(float32(__x))&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -10284,7 +10442,7 @@ func __isgreaterequall_cgo827(__x float64, __y float64) int32 {
 					return func() int32 {
 						if 8 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS_cgo811(float64(__x))&18446744073709551615 > 2047<<52 {
+								if __DOUBLE_BITS_cgo858(float64(__x))&18446744073709551615 > 2047<<52 {
 									return 1
 								} else {
 									return 0
@@ -10313,7 +10471,7 @@ func __isgreaterequall_cgo827(__x float64, __y float64) int32 {
 				return func() int32 {
 					if 8 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS_cgo809(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+							if __FLOAT_BITS_cgo856(float32(__y))&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -10323,7 +10481,7 @@ func __isgreaterequall_cgo827(__x float64, __y float64) int32 {
 						return func() int32 {
 							if 8 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS_cgo811(float64(__y))&18446744073709551615 > 2047<<52 {
+									if __DOUBLE_BITS_cgo858(float64(__y))&18446744073709551615 > 2047<<52 {
 										return 1
 									} else {
 										return 0
@@ -10354,23 +10512,23 @@ func __isgreaterequall_cgo827(__x float64, __y float64) int32 {
 
 
 
-type _cgoa_844 struct {
+type _cgoa_891 struct {
 	__i [14]int32
 }
 
-type _cgoa_846 struct {
+type _cgoa_893 struct {
 	__i [10]int32
 }
 
-type _cgoa_848 struct {
+type _cgoa_895 struct {
 	__i [12]int32
 }
 
-type _cgoa_850 struct {
+type _cgoa_897 struct {
 	__i [14]int32
 }
 
-type _cgoa_852 struct {
+type _cgoa_899 struct {
 	__i [8]int32
 }
 
@@ -10378,23 +10536,23 @@ type _cgoa_852 struct {
 
 
 
-type _cgoa_858 struct {
+type _cgoa_905 struct {
 	__i [14]int32
 }
 
-type _cgoa_860 struct {
+type _cgoa_907 struct {
 	__i [10]int32
 }
 
-type _cgoa_862 struct {
+type _cgoa_909 struct {
 	__i [12]int32
 }
 
-type _cgoa_864 struct {
+type _cgoa_911 struct {
 	__i [14]int32
 }
 
-type _cgoa_866 struct {
+type _cgoa_913 struct {
 	__i [8]int32
 }
 

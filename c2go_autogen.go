@@ -17,13 +17,7 @@ func __libc_malloc(uint64) unsafe.Pointer {
 func __lock(*int32) {
 	panic("notimpl")
 }
-func __map_file(*int8, *uint64) *uint8 {
-	panic("notimpl")
-}
-func __mo_lookup(unsafe.Pointer, uint64, *int8) *int8 {
-	panic("notimpl")
-}
-func __munmap(unsafe.Pointer, uint64) int32 {
+func __mmap(unsafe.Pointer, uint64, int32, int32, int32, int64) unsafe.Pointer {
 	panic("notimpl")
 }
 func __pthread_self() *struct___pthread {
@@ -33,6 +27,9 @@ func __syscall_cp(int64, int64, int64, int64, int64, int64, int64) int64 {
 	panic("notimpl")
 }
 func __unlock(*int32) {
+	panic("notimpl")
+}
+func __vm_wait() {
 	panic("notimpl")
 }
 func __wake(addr unsafe.Pointer, cnt int32, priv int32) {

@@ -10,6 +10,12 @@ func __syscall1(n int64, a int64) int64 {
 	return int64(ret)
 }
 
+func __syscall2(n int64, a, b int64) int64 {
+	var ret syscall.Errno
+	g_r1, _, ret = syscall.Syscall(uintptr(n), uintptr(a), uintptr(b), 0)
+	return int64(ret)
+}
+
 func __syscall3(n int64, a int64, b int64, c int64) int64 {
 	var ret syscall.Errno
 	g_r1, _, ret = syscall.Syscall(uintptr(n), uintptr(a), uintptr(b), uintptr(c))
