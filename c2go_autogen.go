@@ -38,12 +38,6 @@ func __unlock(*int32) {
 func __wake(addr unsafe.Pointer, cnt int32, priv int32) {
 	panic("notimpl")
 }
-func strlen(*int8) uint64 {
-	panic("notimpl")
-}
-func strncmp(*int8, *int8, uint64) int32 {
-	panic("notimpl")
-}
 func wctomb(*int8, uint32) int32 {
 	panic("notimpl")
 }

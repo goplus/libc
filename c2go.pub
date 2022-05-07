@@ -6,6 +6,8 @@ memset
 memcpy
 getenv
 strnlen
+strlen
+strncmp
 strcmp
 strerror
 fwrite

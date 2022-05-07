@@ -16,7 +16,7 @@ func __lctrans_impl(msg *int8, lm *struct___locale_map) *int8 {
 	}()
 }
 
-var envvars_cgo483 [6][12]int8 = [6][12]int8{[12]int8{'L', 'C', '_', 'C', 'T', 'Y', 'P', 'E', '\x00'}, [12]int8{'L', 'C', '_', 'N', 'U', 'M', 'E', 'R', 'I', 'C', '\x00'}, [12]int8{'L', 'C', '_', 'T', 'I', 'M', 'E', '\x00'}, [12]int8{'L', 'C', '_', 'C', 'O', 'L', 'L', 'A', 'T', 'E', '\x00'}, [12]int8{'L', 'C', '_', 'M', 'O', 'N', 'E', 'T', 'A', 'R', 'Y', '\x00'}, [12]int8{'L', 'C', '_', 'M', 'E', 'S', 'S', 'A', 'G', 'E', 'S', '\x00'}}
+var envvars_cgo511 [6][12]int8 = [6][12]int8{[12]int8{'L', 'C', '_', 'C', 'T', 'Y', 'P', 'E', '\x00'}, [12]int8{'L', 'C', '_', 'N', 'U', 'M', 'E', 'R', 'I', 'C', '\x00'}, [12]int8{'L', 'C', '_', 'T', 'I', 'M', 'E', '\x00'}, [12]int8{'L', 'C', '_', 'C', 'O', 'L', 'L', 'A', 'T', 'E', '\x00'}, [12]int8{'L', 'C', '_', 'M', 'O', 'N', 'E', 'T', 'A', 'R', 'Y', '\x00'}, [12]int8{'L', 'C', '_', 'M', 'E', 'S', 'S', 'A', 'G', 'E', 'S', '\x00'}}
 var __locale_lock [1]int32
 var __locale_lockptr *int32 = (*int32)(unsafe.Pointer(&__locale_lock))
 
@@ -37,7 +37,7 @@ func __get_locale(cat int32, val *int8) *struct___locale_map {
 			return *_cgo_addr
 		}() != nil && int32(*val) != 0 || func() (_cgo_ret *int8) {
 			_cgo_addr := &val
-			*_cgo_addr = Getenv((*int8)(unsafe.Pointer(&*(*[12]int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*[12]int8)(unsafe.Pointer(&envvars_cgo483)))) + uintptr(cat)*12)))))
+			*_cgo_addr = Getenv((*int8)(unsafe.Pointer(&*(*[12]int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*[12]int8)(unsafe.Pointer(&envvars_cgo511)))) + uintptr(cat)*12)))))
 			return *_cgo_addr
 		}() != nil && int32(*val) != 0 || func() (_cgo_ret *int8) {
 			_cgo_addr := &val

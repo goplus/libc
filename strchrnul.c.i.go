@@ -5,7 +5,7 @@ import unsafe "unsafe"
 func __strchrnul(s *int8, c int32) *int8 {
 	c = int32(uint8(c))
 	if !(c != 0) {
-		return (*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(s)))) + uintptr(strlen(s))))
+		return (*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(s)))) + uintptr(Strlen(s))))
 	}
 	type word = uint64
 	var w *uint64

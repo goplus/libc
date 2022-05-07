@@ -34,13 +34,13 @@ const (
 	MAXSTATE int32 = 28
 )
 
-var states_cgo800 [8][58]uint8 = [8][58]uint8{[58]uint8{uint8(DBL), 0, uint8(INT), 0, uint8(DBL), uint8(DBL), uint8(DBL), 0, 0, 0, 0, uint8(BIGLPRE), 0, 0, 0, 0, 0, 0, uint8(PTR), 0, 0, 0, 0, uint8(UINT), 0, 0, 0, 0, 0, 0, 0, 0, uint8(DBL), 0, uint8(CHAR), uint8(INT), uint8(DBL), uint8(DBL), uint8(DBL), uint8(HPRE), uint8(INT), uint8(JPRE), 0, uint8(LPRE), uint8(NOARG), uint8(PTR), uint8(UINT), uint8(UIPTR), 0, 0, uint8(PTR), uint8(ZTPRE), uint8(UINT), 0, 0, uint8(UINT), 0, uint8(ZTPRE)}, [58]uint8{uint8(DBL), 0, 0, 0, uint8(DBL), uint8(DBL), uint8(DBL), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(ULONG), 0, 0, 0, 0, 0, 0, 0, 0, uint8(DBL), 0, uint8(INT), uint8(LONG), uint8(DBL), uint8(DBL), uint8(DBL), 0, uint8(LONG), 0, 0, uint8(LLPRE), 0, uint8(PTR), uint8(ULONG), 0, 0, 0, uint8(PTR), 0, uint8(ULONG), 0, 0, uint8(ULONG)}, [58]uint8{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(ULLONG), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(LLONG), 0, 0, 0, 0, uint8(LLONG), 0, 0, 0, 0, uint8(PTR), uint8(ULLONG), 0, 0, 0, 0, 0, uint8(ULLONG), 0, 0, uint8(ULLONG)}, [58]uint8{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(USHORT), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(SHORT), 0, 0, 0, uint8(HHPRE), uint8(SHORT), 0, 0, 0, 0, uint8(PTR), uint8(USHORT), 0, 0, 0, 0, 0, uint8(USHORT), 0, 0, uint8(USHORT)}, [58]uint8{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(UCHAR), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(CHAR), 0, 0, 0, 0, uint8(CHAR), 0, 0, 0, 0, uint8(PTR), uint8(UCHAR), 0, 0, 0, 0, 0, uint8(UCHAR), 0, 0, uint8(UCHAR)}, [58]uint8{uint8(LDBL), 0, 0, 0, uint8(LDBL), uint8(LDBL), uint8(LDBL), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(LDBL), 0, 0, 0, uint8(LDBL), uint8(LDBL), uint8(LDBL), 0, 0, 0, 0, 0, 0, uint8(PTR)}, [58]uint8{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(SIZET), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(PDIFF), 0, 0, 0, 0, uint8(PDIFF), 0, 0, 0, 0, uint8(PTR), uint8(SIZET), 0, 0, 0, 0, 0, uint8(SIZET), 0, 0, uint8(SIZET)}, [58]uint8{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(UMAX), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(IMAX), 0, 0, 0, 0, uint8(IMAX), 0, 0, 0, 0, uint8(PTR), uint8(UMAX), 0, 0, 0, 0, 0, uint8(UMAX), 0, 0, uint8(UMAX)}}
+var states_cgo828 [8][58]uint8 = [8][58]uint8{[58]uint8{uint8(DBL), 0, uint8(INT), 0, uint8(DBL), uint8(DBL), uint8(DBL), 0, 0, 0, 0, uint8(BIGLPRE), 0, 0, 0, 0, 0, 0, uint8(PTR), 0, 0, 0, 0, uint8(UINT), 0, 0, 0, 0, 0, 0, 0, 0, uint8(DBL), 0, uint8(CHAR), uint8(INT), uint8(DBL), uint8(DBL), uint8(DBL), uint8(HPRE), uint8(INT), uint8(JPRE), 0, uint8(LPRE), uint8(NOARG), uint8(PTR), uint8(UINT), uint8(UIPTR), 0, 0, uint8(PTR), uint8(ZTPRE), uint8(UINT), 0, 0, uint8(UINT), 0, uint8(ZTPRE)}, [58]uint8{uint8(DBL), 0, 0, 0, uint8(DBL), uint8(DBL), uint8(DBL), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(ULONG), 0, 0, 0, 0, 0, 0, 0, 0, uint8(DBL), 0, uint8(INT), uint8(LONG), uint8(DBL), uint8(DBL), uint8(DBL), 0, uint8(LONG), 0, 0, uint8(LLPRE), 0, uint8(PTR), uint8(ULONG), 0, 0, 0, uint8(PTR), 0, uint8(ULONG), 0, 0, uint8(ULONG)}, [58]uint8{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(ULLONG), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(LLONG), 0, 0, 0, 0, uint8(LLONG), 0, 0, 0, 0, uint8(PTR), uint8(ULLONG), 0, 0, 0, 0, 0, uint8(ULLONG), 0, 0, uint8(ULLONG)}, [58]uint8{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(USHORT), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(SHORT), 0, 0, 0, uint8(HHPRE), uint8(SHORT), 0, 0, 0, 0, uint8(PTR), uint8(USHORT), 0, 0, 0, 0, 0, uint8(USHORT), 0, 0, uint8(USHORT)}, [58]uint8{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(UCHAR), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(CHAR), 0, 0, 0, 0, uint8(CHAR), 0, 0, 0, 0, uint8(PTR), uint8(UCHAR), 0, 0, 0, 0, 0, uint8(UCHAR), 0, 0, uint8(UCHAR)}, [58]uint8{uint8(LDBL), 0, 0, 0, uint8(LDBL), uint8(LDBL), uint8(LDBL), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(LDBL), 0, 0, 0, uint8(LDBL), uint8(LDBL), uint8(LDBL), 0, 0, 0, 0, 0, 0, uint8(PTR)}, [58]uint8{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(SIZET), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(PDIFF), 0, 0, 0, 0, uint8(PDIFF), 0, 0, 0, 0, uint8(PTR), uint8(SIZET), 0, 0, 0, 0, 0, uint8(SIZET), 0, 0, uint8(SIZET)}, [58]uint8{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(UMAX), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(IMAX), 0, 0, 0, 0, uint8(IMAX), 0, 0, 0, 0, uint8(PTR), uint8(UMAX), 0, 0, 0, 0, 0, uint8(UMAX), 0, 0, uint8(UMAX)}}
 
 type union_arg struct {
 	i uint64
 }
 
-func pop_arg_cgo801(arg *union_arg, type_ int32, ap *[]interface {
+func pop_arg_cgo829(arg *union_arg, type_ int32, ap *[]interface {
 }) {
 	switch type_ {
 	case PTR:
@@ -188,12 +188,12 @@ func pop_arg_cgo801(arg *union_arg, type_ int32, ap *[]interface {
 		}(*ap)
 	}
 }
-func out_cgo802(f *struct__IO_FILE, s *int8, l uint64) {
+func out_cgo830(f *struct__IO_FILE, s *int8, l uint64) {
 	if !(f.flags&uint32(32) != 0) {
 		__fwritex((*uint8)(unsafe.Pointer(s)), l, f)
 	}
 }
-func pad_cgo803(f *struct__IO_FILE, c int8, w int32, l int32, fl int32) {
+func pad_cgo831(f *struct__IO_FILE, c int8, w int32, l int32, fl int32) {
 	var pad [256]int8
 	if uint32(fl)&(1<<('-'-' ')|1<<('0'-' ')) != 0 || l >= w {
 		return
@@ -207,24 +207,24 @@ func pad_cgo803(f *struct__IO_FILE, c int8, w int32, l int32, fl int32) {
 		}
 	}())
 	for ; uint64(l) >= 256; l -= int32(256) {
-		out_cgo802(f, (*int8)(unsafe.Pointer(&pad)), 256)
+		out_cgo830(f, (*int8)(unsafe.Pointer(&pad)), 256)
 	}
-	out_cgo802(f, (*int8)(unsafe.Pointer(&pad)), uint64(l))
+	out_cgo830(f, (*int8)(unsafe.Pointer(&pad)), uint64(l))
 }
 
-var xdigits_cgo804 [16]int8 = [16]int8{'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'}
+var xdigits_cgo832 [16]int8 = [16]int8{'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'}
 
-func fmt_x_cgo805(x uint64, s *int8, lower int32) *int8 {
+func fmt_x_cgo833(x uint64, s *int8, lower int32) *int8 {
 	for ; x != 0; x >>= 4 {
 		*func() (_cgo_ret *int8) {
 			_cgo_addr := &s
 			*(*uintptr)(unsafe.Pointer(_cgo_addr))--
 			return *_cgo_addr
-		}() = int8(int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&xdigits_cgo804)))) + uintptr(x&uint64(15))))) | lower)
+		}() = int8(int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&xdigits_cgo832)))) + uintptr(x&uint64(15))))) | lower)
 	}
 	return s
 }
-func fmt_o_cgo806(x uint64, s *int8) *int8 {
+func fmt_o_cgo834(x uint64, s *int8) *int8 {
 	for ; x != 0; x >>= 3 {
 		*func() (_cgo_ret *int8) {
 			_cgo_addr := &s
@@ -234,7 +234,7 @@ func fmt_o_cgo806(x uint64, s *int8) *int8 {
 	}
 	return s
 }
-func fmt_u_cgo807(x uint64, s *int8) *int8 {
+func fmt_u_cgo835(x uint64, s *int8) *int8 {
 	var y uint64
 	for ; x > uint64(2*uint64(2147483647)+uint64(1)); x /= uint64(10) {
 		*func() (_cgo_ret *int8) {
@@ -255,7 +255,7 @@ func fmt_u_cgo807(x uint64, s *int8) *int8 {
 
 type compiler_defines_long_double_incorrectly = int32
 
-func fmt_fp_cgo808(f *struct__IO_FILE, y float64, w int32, p int32, fl int32, t int32) int32 {
+func fmt_fp_cgo836(f *struct__IO_FILE, y float64, w int32, p int32, fl int32, t int32) int32 {
 	var big [126]uint32
 	var a *uint32
 	var d *uint32
@@ -276,11 +276,11 @@ func fmt_fp_cgo808(f *struct__IO_FILE, y float64, w int32, p int32, fl int32, t 
 	pl = int32(1)
 	if func() int32 {
 		if 8 == 4 {
-			return int32(__FLOAT_BITS_cgo781(float32(y)) >> 31)
+			return int32(__FLOAT_BITS_cgo809(float32(y)) >> 31)
 		} else {
 			return func() int32 {
 				if 8 == 8 {
-					return int32(__DOUBLE_BITS_cgo783(float64(y)) >> 63)
+					return int32(__DOUBLE_BITS_cgo811(float64(y)) >> 63)
 				} else {
 					return __signbitl(y)
 				}
@@ -305,7 +305,7 @@ func fmt_fp_cgo808(f *struct__IO_FILE, y float64, w int32, p int32, fl int32, t 
 	if !(func() int32 {
 		if 8 == 4 {
 			return func() int32 {
-				if __FLOAT_BITS_cgo781(float32(y))&uint32(2147483647) < uint32(2139095040) {
+				if __FLOAT_BITS_cgo809(float32(y))&uint32(2147483647) < uint32(2139095040) {
 					return 1
 				} else {
 					return 0
@@ -315,7 +315,7 @@ func fmt_fp_cgo808(f *struct__IO_FILE, y float64, w int32, p int32, fl int32, t 
 			return func() int32 {
 				if 8 == 8 {
 					return func() int32 {
-						if __DOUBLE_BITS_cgo783(float64(y))&18446744073709551615 < 2047<<52 {
+						if __DOUBLE_BITS_cgo811(float64(y))&18446744073709551615 < 2047<<52 {
 							return 1
 						} else {
 							return 0
@@ -349,10 +349,10 @@ func fmt_fp_cgo808(f *struct__IO_FILE, y float64, w int32, p int32, fl int32, t 
 				}
 			}()
 		}
-		pad_cgo803(f, int8(' '), w, 3+pl, int32(uint32(fl)&4294901759))
-		out_cgo802(f, prefix, uint64(pl))
-		out_cgo802(f, s, uint64(3))
-		pad_cgo803(f, int8(' '), w, 3+pl, int32(uint32(fl)^1<<('-'-' ')))
+		pad_cgo831(f, int8(' '), w, 3+pl, int32(uint32(fl)&4294901759))
+		out_cgo830(f, prefix, uint64(pl))
+		out_cgo830(f, s, uint64(3))
+		pad_cgo831(f, int8(' '), w, 3+pl, int32(uint32(fl)^1<<('-'-' ')))
 		return func() int32 {
 			if w > 3+pl {
 				return w
@@ -397,7 +397,7 @@ func fmt_fp_cgo808(f *struct__IO_FILE, y float64, w int32, p int32, fl int32, t 
 				y -= round
 			}
 		}
-		estr = fmt_u_cgo807(uint64(func() int32 {
+		estr = fmt_u_cgo835(uint64(func() int32 {
 			if e2 < 0 {
 				return -e2
 			} else {
@@ -435,7 +435,7 @@ func fmt_fp_cgo808(f *struct__IO_FILE, y float64, w int32, p int32, fl int32, t 
 				_cgo_ret = *_cgo_addr
 				*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 				return
-			}() = int8(int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&xdigits_cgo804)))) + uintptr(x)))) | t&32)
+			}() = int8(int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&xdigits_cgo832)))) + uintptr(x)))) | t&32)
 			y = float64(16) * (y - float64(x))
 			if int64(uintptr(unsafe.Pointer(s))-uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))) == int64(1) && (y != 0 || p > 0 || uint32(fl)&(1<<('#'-' ')) != 0) {
 				*func() (_cgo_ret *int8) {
@@ -457,13 +457,13 @@ func fmt_fp_cgo808(f *struct__IO_FILE, y float64, w int32, p int32, fl int32, t 
 		} else {
 			l = int32(uintptr(unsafe.Pointer(s)) - uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf)))) + (uintptr(unsafe.Pointer(ebuf)) - uintptr(unsafe.Pointer(estr))))
 		}
-		pad_cgo803(f, int8(' '), w, pl+l, fl)
-		out_cgo802(f, prefix, uint64(pl))
-		pad_cgo803(f, int8('0'), w, pl+l, int32(uint32(fl)^1<<('0'-' ')))
-		out_cgo802(f, (*int8)(unsafe.Pointer(&buf)), uint64(uintptr(unsafe.Pointer(s))-uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))))
-		pad_cgo803(f, int8('0'), int32(int64(l)-int64(uintptr(unsafe.Pointer(ebuf))-uintptr(unsafe.Pointer(estr)))-int64(uintptr(unsafe.Pointer(s))-uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf)))))), 0, 0)
-		out_cgo802(f, estr, uint64(uintptr(unsafe.Pointer(ebuf))-uintptr(unsafe.Pointer(estr))))
-		pad_cgo803(f, int8(' '), w, pl+l, int32(uint32(fl)^1<<('-'-' ')))
+		pad_cgo831(f, int8(' '), w, pl+l, fl)
+		out_cgo830(f, prefix, uint64(pl))
+		pad_cgo831(f, int8('0'), w, pl+l, int32(uint32(fl)^1<<('0'-' ')))
+		out_cgo830(f, (*int8)(unsafe.Pointer(&buf)), uint64(uintptr(unsafe.Pointer(s))-uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))))
+		pad_cgo831(f, int8('0'), int32(int64(l)-int64(uintptr(unsafe.Pointer(ebuf))-uintptr(unsafe.Pointer(estr)))-int64(uintptr(unsafe.Pointer(s))-uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf)))))), 0, 0)
+		out_cgo830(f, estr, uint64(uintptr(unsafe.Pointer(ebuf))-uintptr(unsafe.Pointer(estr))))
+		pad_cgo831(f, int8(' '), w, pl+l, int32(uint32(fl)^1<<('-'-' ')))
 		return func() int32 {
 			if w > pl+l {
 				return w
@@ -808,7 +808,7 @@ func fmt_fp_cgo808(f *struct__IO_FILE, y float64, w int32, p int32, fl int32, t 
 			l += e
 		}
 	} else {
-		estr = fmt_u_cgo807(uint64(func() int32 {
+		estr = fmt_u_cgo835(uint64(func() int32 {
 			if e < 0 {
 				return -e
 			} else {
@@ -846,15 +846,15 @@ func fmt_fp_cgo808(f *struct__IO_FILE, y float64, w int32, p int32, fl int32, t 
 	if l > 2147483647-pl {
 		return int32(-1)
 	}
-	pad_cgo803(f, int8(' '), w, pl+l, fl)
-	out_cgo802(f, prefix, uint64(pl))
-	pad_cgo803(f, int8('0'), w, pl+l, int32(uint32(fl)^1<<('0'-' ')))
+	pad_cgo831(f, int8(' '), w, pl+l, fl)
+	out_cgo830(f, prefix, uint64(pl))
+	pad_cgo831(f, int8('0'), w, pl+l, int32(uint32(fl)^1<<('0'-' ')))
 	if t|32 == 'f' {
 		if uintptr(unsafe.Pointer(a)) > uintptr(unsafe.Pointer(r)) {
 			a = r
 		}
 		for d = a; uintptr(unsafe.Pointer(d)) <= uintptr(unsafe.Pointer(r)); *(*uintptr)(unsafe.Pointer(&d)) += 4 {
-			var s *int8 = fmt_u_cgo807(uint64(*d), (*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))+uintptr(9))))
+			var s *int8 = fmt_u_cgo835(uint64(*d), (*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))+uintptr(9))))
 			if uintptr(unsafe.Pointer(d)) != uintptr(unsafe.Pointer(a)) {
 				for uintptr(unsafe.Pointer(s)) > uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf)))) {
 					*func() (_cgo_ret *int8) {
@@ -870,10 +870,10 @@ func fmt_fp_cgo808(f *struct__IO_FILE, y float64, w int32, p int32, fl int32, t 
 					return *_cgo_addr
 				}() = int8('0')
 			}
-			out_cgo802(f, s, uint64(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))+uintptr(9)))))-uintptr(unsafe.Pointer(s))))
+			out_cgo830(f, s, uint64(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))+uintptr(9)))))-uintptr(unsafe.Pointer(s))))
 		}
 		if p != 0 || uint32(fl)&(1<<('#'-' ')) != 0 {
-			out_cgo802(f, (*int8)(unsafe.Pointer(&[2]int8{'.', '\x00'})), uint64(1))
+			out_cgo830(f, (*int8)(unsafe.Pointer(&[2]int8{'.', '\x00'})), uint64(1))
 		}
 		for ; uintptr(unsafe.Pointer(d)) < uintptr(unsafe.Pointer(z)) && p > 0; func() int32 {
 			*(*uintptr)(unsafe.Pointer(&d)) += 4
@@ -883,7 +883,7 @@ func fmt_fp_cgo808(f *struct__IO_FILE, y float64, w int32, p int32, fl int32, t 
 				return *_cgo_addr
 			}()
 		}() {
-			var s *int8 = fmt_u_cgo807(uint64(*d), (*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))+uintptr(9))))
+			var s *int8 = fmt_u_cgo835(uint64(*d), (*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))+uintptr(9))))
 			for uintptr(unsafe.Pointer(s)) > uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf)))) {
 				*func() (_cgo_ret *int8) {
 					_cgo_addr := &s
@@ -891,7 +891,7 @@ func fmt_fp_cgo808(f *struct__IO_FILE, y float64, w int32, p int32, fl int32, t 
 					return *_cgo_addr
 				}() = int8('0')
 			}
-			out_cgo802(f, s, uint64(func() int32 {
+			out_cgo830(f, s, uint64(func() int32 {
 				if 9 < p {
 					return 9
 				} else {
@@ -899,13 +899,13 @@ func fmt_fp_cgo808(f *struct__IO_FILE, y float64, w int32, p int32, fl int32, t 
 				}
 			}()))
 		}
-		pad_cgo803(f, int8('0'), p+9, 9, 0)
+		pad_cgo831(f, int8('0'), p+9, 9, 0)
 	} else {
 		if uintptr(unsafe.Pointer(z)) <= uintptr(unsafe.Pointer(a)) {
 			z = (*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer(a)) + uintptr(1)*4))
 		}
 		for d = a; uintptr(unsafe.Pointer(d)) < uintptr(unsafe.Pointer(z)) && p >= 0; *(*uintptr)(unsafe.Pointer(&d)) += 4 {
-			var s *int8 = fmt_u_cgo807(uint64(*d), (*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))+uintptr(9))))
+			var s *int8 = fmt_u_cgo835(uint64(*d), (*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))+uintptr(9))))
 			if uintptr(unsafe.Pointer(s)) == uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))+uintptr(9))))) {
 				*func() (_cgo_ret *int8) {
 					_cgo_addr := &s
@@ -922,17 +922,17 @@ func fmt_fp_cgo808(f *struct__IO_FILE, y float64, w int32, p int32, fl int32, t 
 					}() = int8('0')
 				}
 			} else {
-				out_cgo802(f, func() (_cgo_ret *int8) {
+				out_cgo830(f, func() (_cgo_ret *int8) {
 					_cgo_addr := &s
 					_cgo_ret = *_cgo_addr
 					*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 					return
 				}(), uint64(1))
 				if p > 0 || uint32(fl)&(1<<('#'-' ')) != 0 {
-					out_cgo802(f, (*int8)(unsafe.Pointer(&[2]int8{'.', '\x00'})), uint64(1))
+					out_cgo830(f, (*int8)(unsafe.Pointer(&[2]int8{'.', '\x00'})), uint64(1))
 				}
 			}
-			out_cgo802(f, s, uint64(func() int64 {
+			out_cgo830(f, s, uint64(func() int64 {
 				if uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))+uintptr(9)))))-uintptr(unsafe.Pointer(s)) < uintptr(int64(p)) {
 					return int64(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))+uintptr(9))))) - uintptr(unsafe.Pointer(s)))
 				} else {
@@ -941,10 +941,10 @@ func fmt_fp_cgo808(f *struct__IO_FILE, y float64, w int32, p int32, fl int32, t 
 			}()))
 			p -= int32(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))+uintptr(9))))) - uintptr(unsafe.Pointer(s)))
 		}
-		pad_cgo803(f, int8('0'), p+18, 18, 0)
-		out_cgo802(f, estr, uint64(uintptr(unsafe.Pointer(ebuf))-uintptr(unsafe.Pointer(estr))))
+		pad_cgo831(f, int8('0'), p+18, 18, 0)
+		out_cgo830(f, estr, uint64(uintptr(unsafe.Pointer(ebuf))-uintptr(unsafe.Pointer(estr))))
 	}
-	pad_cgo803(f, int8(' '), w, pl+l, int32(uint32(fl)^1<<('-'-' ')))
+	pad_cgo831(f, int8(' '), w, pl+l, int32(uint32(fl)^1<<('-'-' ')))
 	return func() int32 {
 		if w > pl+l {
 			return w
@@ -953,7 +953,7 @@ func fmt_fp_cgo808(f *struct__IO_FILE, y float64, w int32, p int32, fl int32, t 
 		}
 	}()
 }
-func getint_cgo809(s **int8) int32 {
+func getint_cgo837(s **int8) int32 {
 	var i int32
 	for i = int32(0); func() int32 {
 		if 0 != 0 {
@@ -976,7 +976,7 @@ func getint_cgo809(s **int8) int32 {
 	}
 	return i
 }
-func printf_core_cgo810(f *struct__IO_FILE, fmt *int8, ap *[]interface {
+func printf_core_cgo838(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 }, nl_arg *union_arg, nl_type *int32) int32 {
 	var (
 		_tag_cgo1 int32
@@ -1028,7 +1028,7 @@ func printf_core_cgo810(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 		}
 		l = int32(uintptr(unsafe.Pointer(z)) - uintptr(unsafe.Pointer(a)))
 		if f != nil {
-			out_cgo802(f, a, uint64(l))
+			out_cgo830(f, a, uint64(l))
 		}
 		if l != 0 {
 			continue
@@ -1103,7 +1103,7 @@ func printf_core_cgo810(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 			}
 		} else if func() (_cgo_ret int32) {
 			_cgo_addr := &w
-			*_cgo_addr = getint_cgo809(&s)
+			*_cgo_addr = getint_cgo837(&s)
 			return *_cgo_addr
 		}() < 0 {
 			goto overflow
@@ -1151,7 +1151,7 @@ func printf_core_cgo810(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 			}()
 		} else if int32(*s) == '.' {
 			*(*uintptr)(unsafe.Pointer(&s))++
-			p = getint_cgo809(&s)
+			p = getint_cgo837(&s)
 			xp = int32(1)
 		} else {
 			p = int32(-1)
@@ -1163,7 +1163,7 @@ func printf_core_cgo810(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 				goto inval
 			}
 			ps = st
-			st = uint32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint8)(unsafe.Pointer(&*(*[58]uint8)(unsafe.Pointer(uintptr(unsafe.Pointer((*[58]uint8)(unsafe.Pointer(&states_cgo800)))) + uintptr(st)*58)))))) + uintptr(int32(*func() (_cgo_ret *int8) {
+			st = uint32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint8)(unsafe.Pointer(&*(*[58]uint8)(unsafe.Pointer(uintptr(unsafe.Pointer((*[58]uint8)(unsafe.Pointer(&states_cgo828)))) + uintptr(st)*58)))))) + uintptr(int32(*func() (_cgo_ret *int8) {
 				_cgo_addr := &s
 				_cgo_ret = *_cgo_addr
 				*(*uintptr)(unsafe.Pointer(_cgo_addr))++
@@ -1190,7 +1190,7 @@ func printf_core_cgo810(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 				}()
 			}()
 		} else if f != nil {
-			pop_arg_cgo801(&arg, int32(st), ap)
+			pop_arg_cgo829(&arg, int32(st), ap)
 		} else {
 			return int32(0)
 		}
@@ -1260,7 +1260,7 @@ func printf_core_cgo810(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 			goto _cgol_4
 		}
 		_nm_cgo2 = false
-		a = fmt_x_cgo805(arg.i, z, t&32)
+		a = fmt_x_cgo833(arg.i, z, t&32)
 		if arg.i != 0 && fl&(1<<('#'-' ')) != 0 {
 			func() int32 {
 				*(*uintptr)(unsafe.Pointer(&prefix)) += uintptr(t >> 4)
@@ -1279,7 +1279,7 @@ func printf_core_cgo810(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 			goto _cgol_6
 		}
 		_nm_cgo2 = false
-		a = fmt_o_cgo806(arg.i, z)
+		a = fmt_o_cgo834(arg.i, z)
 		if fl&(1<<('#'-' ')) != 0 && int64(p) < int64(uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(a))+uintptr(int64(1))) {
 			p = int32(uintptr(unsafe.Pointer(z)) - uintptr(unsafe.Pointer(a)) + uintptr(int64(1)))
 		}
@@ -1312,7 +1312,7 @@ func printf_core_cgo810(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 			goto _cgol_10
 		}
 		_nm_cgo2 = false
-		a = fmt_u_cgo807(arg.i, z)
+		a = fmt_u_cgo835(arg.i, z)
 	_cgol_7:
 		if xp != 0 && p < 0 {
 			goto overflow
@@ -1435,7 +1435,7 @@ func printf_core_cgo810(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 			goto overflow
 		}
 		p = int32(i)
-		pad_cgo803(f, int8(' '), w, p, int32(fl))
+		pad_cgo831(f, int8(' '), w, p, int32(fl))
 		ws = (*uint32)(*(*unsafe.Pointer)(unsafe.Pointer(&arg)))
 		for i = uint64(0); i < uint64(0+uint32(p)) && *ws != 0 && i+uint64(func() (_cgo_ret int32) {
 			_cgo_addr := &l
@@ -1447,9 +1447,9 @@ func printf_core_cgo810(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 			}())
 			return *_cgo_addr
 		}()) <= uint64(p); i += uint64(l) {
-			out_cgo802(f, (*int8)(unsafe.Pointer(&mb)), uint64(l))
+			out_cgo830(f, (*int8)(unsafe.Pointer(&mb)), uint64(l))
 		}
-		pad_cgo803(f, int8(' '), w, p, int32(fl^1<<('-'-' ')))
+		pad_cgo831(f, int8(' '), w, p, int32(fl^1<<('-'-' ')))
 		l = func() int32 {
 			if w > p {
 				return w
@@ -1501,7 +1501,7 @@ func printf_core_cgo810(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 		if xp != 0 && p < 0 {
 			goto overflow
 		}
-		l = fmt_fp_cgo808(f, *(*float64)(unsafe.Pointer(&arg)), w, p, int32(fl), t)
+		l = fmt_fp_cgo836(f, *(*float64)(unsafe.Pointer(&arg)), w, p, int32(fl), t)
 		if l < 0 {
 			goto overflow
 		}
@@ -1522,12 +1522,12 @@ func printf_core_cgo810(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 		if w > 2147483647-cnt {
 			goto overflow
 		}
-		pad_cgo803(f, int8(' '), w, pl+p, int32(fl))
-		out_cgo802(f, prefix, uint64(pl))
-		pad_cgo803(f, int8('0'), w, pl+p, int32(fl^1<<('0'-' ')))
-		pad_cgo803(f, int8('0'), p, int32(uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(a))), 0)
-		out_cgo802(f, a, uint64(uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(a))))
-		pad_cgo803(f, int8(' '), w, pl+p, int32(fl^1<<('-'-' ')))
+		pad_cgo831(f, int8(' '), w, pl+p, int32(fl))
+		out_cgo830(f, prefix, uint64(pl))
+		pad_cgo831(f, int8('0'), w, pl+p, int32(fl^1<<('0'-' ')))
+		pad_cgo831(f, int8('0'), p, int32(uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(a))), 0)
+		out_cgo830(f, a, uint64(uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(a))))
+		pad_cgo831(f, int8(' '), w, pl+p, int32(fl^1<<('-'-' ')))
 		l = w
 	}
 	if f != nil {
@@ -1537,7 +1537,7 @@ func printf_core_cgo810(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 		return int32(0)
 	}
 	for i = uint64(1); i <= uint64(9) && *(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer(nl_type)) + uintptr(i)*4)) != 0; i++ {
-		pop_arg_cgo801((*union_arg)(unsafe.Pointer(uintptr(unsafe.Pointer(nl_arg))+uintptr(i)*8)), *(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer(nl_type)) + uintptr(i)*4)), ap)
+		pop_arg_cgo829((*union_arg)(unsafe.Pointer(uintptr(unsafe.Pointer(nl_arg))+uintptr(i)*8)), *(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer(nl_type)) + uintptr(i)*4)), ap)
 	}
 	for ; i <= uint64(9) && !(*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer(nl_type)) + uintptr(i)*4)) != 0); i++ {
 	}
@@ -1563,7 +1563,7 @@ func Vfprintf(f *struct__IO_FILE, fmt *int8, ap []interface {
 	var olderr int32
 	var ret int32
 	ap2 = ap
-	if printf_core_cgo810(nil, fmt, &ap2, (*union_arg)(unsafe.Pointer(&nl_arg)), (*int32)(unsafe.Pointer(&nl_type))) < 0 {
+	if printf_core_cgo838(nil, fmt, &ap2, (*union_arg)(unsafe.Pointer(&nl_arg)), (*int32)(unsafe.Pointer(&nl_type))) < 0 {
 		return int32(-1)
 	}
 	var __need_unlock int32 = func() int32 {
@@ -1594,7 +1594,7 @@ func Vfprintf(f *struct__IO_FILE, fmt *int8, ap []interface {
 	if !(f.wend != nil) && __towrite(f) != 0 {
 		ret = int32(-1)
 	} else {
-		ret = printf_core_cgo810(f, fmt, &ap2, (*union_arg)(unsafe.Pointer(&nl_arg)), (*int32)(unsafe.Pointer(&nl_type)))
+		ret = printf_core_cgo838(f, fmt, &ap2, (*union_arg)(unsafe.Pointer(&nl_arg)), (*int32)(unsafe.Pointer(&nl_type)))
 	}
 	if saved_buf != nil {
 		f.write(f, nil, uint64(0))
