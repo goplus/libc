@@ -17,9 +17,6 @@ func __libc_malloc(uint64) unsafe.Pointer {
 func __lock(*int32) {
 	panic("notimpl")
 }
-func __mmap(unsafe.Pointer, uint64, int32, int32, int32, int64) unsafe.Pointer {
-	panic("notimpl")
-}
 func __pthread_self() *struct___pthread {
 	panic("notimpl")
 }
