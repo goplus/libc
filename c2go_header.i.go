@@ -100,45 +100,14 @@ type struct___pthread struct {
 }
 type wchar_t = uint32
 type _cgoa_15 struct {
-	__ll int64
-	__ld float64
-}
-type ptrdiff_t = int64
-type struct_lconv struct {
-	decimal_point      *int8
-	thousands_sep      *int8
-	grouping           *int8
-	int_curr_symbol    *int8
-	currency_symbol    *int8
-	mon_decimal_point  *int8
-	mon_thousands_sep  *int8
-	mon_grouping       *int8
-	positive_sign      *int8
-	negative_sign      *int8
-	int_frac_digits    int8
-	frac_digits        int8
-	p_cs_precedes      int8
-	p_sep_by_space     int8
-	n_cs_precedes      int8
-	n_sep_by_space     int8
-	p_sign_posn        int8
-	n_sign_posn        int8
-	int_p_cs_precedes  int8
-	int_p_sep_by_space int8
-	int_n_cs_precedes  int8
-	int_n_sep_by_space int8
-	int_p_sign_posn    int8
-	int_n_sign_posn    int8
-}
-type _cgoa_16 struct {
 	quot int32
 	rem  int32
 }
-type _cgoa_17 struct {
+type _cgoa_16 struct {
 	quot int64
 	rem  int64
 }
-type _cgoa_18 struct {
+type _cgoa_17 struct {
 	quot int64
 	rem  int64
 }
@@ -178,6 +147,64 @@ type struct___libc struct {
 	page_size       uint64
 	global_locale   struct___locale_struct
 }
+
+
+
+
+type _cgoa_23 struct {
+	__i [14]int32
+}
+
+type _cgoa_25 struct {
+	__i [10]int32
+}
+
+type _cgoa_27 struct {
+	__i [12]int32
+}
+
+type _cgoa_29 struct {
+	__i [14]int32
+}
+
+type _cgoa_31 struct {
+	__i [8]int32
+}
+
+type _cgoa_32 struct {
+	__ll int64
+	__ld float64
+}
+type ptrdiff_t = int64
+type struct_lconv struct {
+	decimal_point      *int8
+	thousands_sep      *int8
+	grouping           *int8
+	int_curr_symbol    *int8
+	currency_symbol    *int8
+	mon_decimal_point  *int8
+	mon_thousands_sep  *int8
+	mon_grouping       *int8
+	positive_sign      *int8
+	negative_sign      *int8
+	int_frac_digits    int8
+	frac_digits        int8
+	p_cs_precedes      int8
+	p_sep_by_space     int8
+	n_cs_precedes      int8
+	n_sep_by_space     int8
+	p_sign_posn        int8
+	n_sign_posn        int8
+	int_p_cs_precedes  int8
+	int_p_sep_by_space int8
+	int_n_cs_precedes  int8
+	int_n_sep_by_space int8
+	int_p_sign_posn    int8
+	int_n_sign_posn    int8
+}
+
+
+
 type struct___locale_map struct {
 	map_     unsafe.Pointer
 	map_size uint64
@@ -188,23 +215,23 @@ type struct___locale_map struct {
 
 
 
-type _cgoa_26 struct {
+type _cgoa_43 struct {
 	__i [14]int32
 }
 
-type _cgoa_28 struct {
+type _cgoa_45 struct {
 	__i [10]int32
 }
 
-type _cgoa_30 struct {
+type _cgoa_47 struct {
 	__i [12]int32
 }
 
-type _cgoa_32 struct {
+type _cgoa_49 struct {
 	__i [14]int32
 }
 
-type _cgoa_34 struct {
+type _cgoa_51 struct {
 	__i [8]int32
 }
 
@@ -212,52 +239,52 @@ type _cgoa_34 struct {
 
 
 
-type _cgoa_40 struct {
+type _cgoa_57 struct {
 	__i [14]int32
 }
 
-type _cgoa_42 struct {
+type _cgoa_59 struct {
 	__i [10]int32
 }
 
-type _cgoa_44 struct {
+type _cgoa_61 struct {
 	__i [12]int32
 }
 
-type _cgoa_46 struct {
+type _cgoa_63 struct {
 	__i [14]int32
 }
 
-type _cgoa_48 struct {
+type _cgoa_65 struct {
 	__i [8]int32
 }
 
 type float_t = float32
 type double_t = float64
 
-func __FLOAT_BITS(__f float32) uint32 {
-	type _cgoa_49 struct {
+func __FLOAT_BITS_cgo66(__f float32) uint32 {
+	type _cgoa_67 struct {
 		__f float32
 	}
-	var __u _cgoa_49
+	var __u _cgoa_67
 	__u.__f = __f
 	return *(*uint32)(unsafe.Pointer(&__u))
 }
-func __DOUBLE_BITS(__f float64) uint64 {
-	type _cgoa_50 struct {
+func __DOUBLE_BITS_cgo68(__f float64) uint64 {
+	type _cgoa_69 struct {
 		__f float64
 	}
-	var __u _cgoa_50
+	var __u _cgoa_69
 	__u.__f = __f
 	return *(*uint64)(unsafe.Pointer(&__u))
 }
-func __islessf(__x float32, __y float32) int32 {
+func __islessf_cgo70(__x float32, __y float32) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
 				if 4 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS(__x)&uint32(2147483647) > uint32(2139095040) {
+						if __FLOAT_BITS_cgo66(__x)&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -267,7 +294,7 @@ func __islessf(__x float32, __y float32) int32 {
 					return func() int32 {
 						if 4 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS(float64(__x))&18446744073709551615 > 2047<<52 {
+								if __DOUBLE_BITS_cgo68(float64(__x))&18446744073709551615 > 2047<<52 {
 									return 1
 								} else {
 									return 0
@@ -296,7 +323,7 @@ func __islessf(__x float32, __y float32) int32 {
 				return func() int32 {
 					if 4 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS(__y)&uint32(2147483647) > uint32(2139095040) {
+							if __FLOAT_BITS_cgo66(__y)&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -306,7 +333,7 @@ func __islessf(__x float32, __y float32) int32 {
 						return func() int32 {
 							if 4 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS(float64(__y))&18446744073709551615 > 2047<<52 {
+									if __DOUBLE_BITS_cgo68(float64(__y))&18446744073709551615 > 2047<<52 {
 										return 1
 									} else {
 										return 0
@@ -332,13 +359,13 @@ func __islessf(__x float32, __y float32) int32 {
 		}
 	}()
 }
-func __isless(__x float64, __y float64) int32 {
+func __isless_cgo71(__x float64, __y float64) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
 				if 8 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+						if __FLOAT_BITS_cgo66(float32(__x))&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -348,7 +375,7 @@ func __isless(__x float64, __y float64) int32 {
 					return func() int32 {
 						if 8 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS(__x)&18446744073709551615 > 2047<<52 {
+								if __DOUBLE_BITS_cgo68(__x)&18446744073709551615 > 2047<<52 {
 									return 1
 								} else {
 									return 0
@@ -377,7 +404,7 @@ func __isless(__x float64, __y float64) int32 {
 				return func() int32 {
 					if 8 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+							if __FLOAT_BITS_cgo66(float32(__y))&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -387,7 +414,7 @@ func __isless(__x float64, __y float64) int32 {
 						return func() int32 {
 							if 8 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS(__y)&18446744073709551615 > 2047<<52 {
+									if __DOUBLE_BITS_cgo68(__y)&18446744073709551615 > 2047<<52 {
 										return 1
 									} else {
 										return 0
@@ -413,13 +440,13 @@ func __isless(__x float64, __y float64) int32 {
 		}
 	}()
 }
-func __islessl(__x float64, __y float64) int32 {
+func __islessl_cgo72(__x float64, __y float64) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
 				if 8 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+						if __FLOAT_BITS_cgo66(float32(__x))&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -429,7 +456,7 @@ func __islessl(__x float64, __y float64) int32 {
 					return func() int32 {
 						if 8 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS(float64(__x))&18446744073709551615 > 2047<<52 {
+								if __DOUBLE_BITS_cgo68(float64(__x))&18446744073709551615 > 2047<<52 {
 									return 1
 								} else {
 									return 0
@@ -458,7 +485,7 @@ func __islessl(__x float64, __y float64) int32 {
 				return func() int32 {
 					if 8 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+							if __FLOAT_BITS_cgo66(float32(__y))&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -468,7 +495,7 @@ func __islessl(__x float64, __y float64) int32 {
 						return func() int32 {
 							if 8 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS(float64(__y))&18446744073709551615 > 2047<<52 {
+									if __DOUBLE_BITS_cgo68(float64(__y))&18446744073709551615 > 2047<<52 {
 										return 1
 									} else {
 										return 0
@@ -494,13 +521,13 @@ func __islessl(__x float64, __y float64) int32 {
 		}
 	}()
 }
-func __islessequalf(__x float32, __y float32) int32 {
+func __islessequalf_cgo73(__x float32, __y float32) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
 				if 4 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS(__x)&uint32(2147483647) > uint32(2139095040) {
+						if __FLOAT_BITS_cgo66(__x)&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -510,7 +537,7 @@ func __islessequalf(__x float32, __y float32) int32 {
 					return func() int32 {
 						if 4 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS(float64(__x))&18446744073709551615 > 2047<<52 {
+								if __DOUBLE_BITS_cgo68(float64(__x))&18446744073709551615 > 2047<<52 {
 									return 1
 								} else {
 									return 0
@@ -539,7 +566,7 @@ func __islessequalf(__x float32, __y float32) int32 {
 				return func() int32 {
 					if 4 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS(__y)&uint32(2147483647) > uint32(2139095040) {
+							if __FLOAT_BITS_cgo66(__y)&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -549,7 +576,7 @@ func __islessequalf(__x float32, __y float32) int32 {
 						return func() int32 {
 							if 4 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS(float64(__y))&18446744073709551615 > 2047<<52 {
+									if __DOUBLE_BITS_cgo68(float64(__y))&18446744073709551615 > 2047<<52 {
 										return 1
 									} else {
 										return 0
@@ -575,13 +602,13 @@ func __islessequalf(__x float32, __y float32) int32 {
 		}
 	}()
 }
-func __islessequal(__x float64, __y float64) int32 {
+func __islessequal_cgo74(__x float64, __y float64) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
 				if 8 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+						if __FLOAT_BITS_cgo66(float32(__x))&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -591,7 +618,7 @@ func __islessequal(__x float64, __y float64) int32 {
 					return func() int32 {
 						if 8 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS(__x)&18446744073709551615 > 2047<<52 {
+								if __DOUBLE_BITS_cgo68(__x)&18446744073709551615 > 2047<<52 {
 									return 1
 								} else {
 									return 0
@@ -620,7 +647,7 @@ func __islessequal(__x float64, __y float64) int32 {
 				return func() int32 {
 					if 8 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+							if __FLOAT_BITS_cgo66(float32(__y))&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -630,7 +657,7 @@ func __islessequal(__x float64, __y float64) int32 {
 						return func() int32 {
 							if 8 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS(__y)&18446744073709551615 > 2047<<52 {
+									if __DOUBLE_BITS_cgo68(__y)&18446744073709551615 > 2047<<52 {
 										return 1
 									} else {
 										return 0
@@ -656,13 +683,13 @@ func __islessequal(__x float64, __y float64) int32 {
 		}
 	}()
 }
-func __islessequall(__x float64, __y float64) int32 {
+func __islessequall_cgo75(__x float64, __y float64) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
 				if 8 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+						if __FLOAT_BITS_cgo66(float32(__x))&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -672,7 +699,7 @@ func __islessequall(__x float64, __y float64) int32 {
 					return func() int32 {
 						if 8 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS(float64(__x))&18446744073709551615 > 2047<<52 {
+								if __DOUBLE_BITS_cgo68(float64(__x))&18446744073709551615 > 2047<<52 {
 									return 1
 								} else {
 									return 0
@@ -701,7 +728,7 @@ func __islessequall(__x float64, __y float64) int32 {
 				return func() int32 {
 					if 8 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+							if __FLOAT_BITS_cgo66(float32(__y))&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -711,7 +738,7 @@ func __islessequall(__x float64, __y float64) int32 {
 						return func() int32 {
 							if 8 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS(float64(__y))&18446744073709551615 > 2047<<52 {
+									if __DOUBLE_BITS_cgo68(float64(__y))&18446744073709551615 > 2047<<52 {
 										return 1
 									} else {
 										return 0
@@ -737,13 +764,13 @@ func __islessequall(__x float64, __y float64) int32 {
 		}
 	}()
 }
-func __islessgreaterf(__x float32, __y float32) int32 {
+func __islessgreaterf_cgo76(__x float32, __y float32) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
 				if 4 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS(__x)&uint32(2147483647) > uint32(2139095040) {
+						if __FLOAT_BITS_cgo66(__x)&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -753,7 +780,7 @@ func __islessgreaterf(__x float32, __y float32) int32 {
 					return func() int32 {
 						if 4 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS(float64(__x))&18446744073709551615 > 2047<<52 {
+								if __DOUBLE_BITS_cgo68(float64(__x))&18446744073709551615 > 2047<<52 {
 									return 1
 								} else {
 									return 0
@@ -782,7 +809,7 @@ func __islessgreaterf(__x float32, __y float32) int32 {
 				return func() int32 {
 					if 4 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS(__y)&uint32(2147483647) > uint32(2139095040) {
+							if __FLOAT_BITS_cgo66(__y)&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -792,7 +819,7 @@ func __islessgreaterf(__x float32, __y float32) int32 {
 						return func() int32 {
 							if 4 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS(float64(__y))&18446744073709551615 > 2047<<52 {
+									if __DOUBLE_BITS_cgo68(float64(__y))&18446744073709551615 > 2047<<52 {
 										return 1
 									} else {
 										return 0
@@ -818,13 +845,13 @@ func __islessgreaterf(__x float32, __y float32) int32 {
 		}
 	}()
 }
-func __islessgreater(__x float64, __y float64) int32 {
+func __islessgreater_cgo77(__x float64, __y float64) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
 				if 8 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+						if __FLOAT_BITS_cgo66(float32(__x))&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -834,7 +861,7 @@ func __islessgreater(__x float64, __y float64) int32 {
 					return func() int32 {
 						if 8 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS(__x)&18446744073709551615 > 2047<<52 {
+								if __DOUBLE_BITS_cgo68(__x)&18446744073709551615 > 2047<<52 {
 									return 1
 								} else {
 									return 0
@@ -863,7 +890,7 @@ func __islessgreater(__x float64, __y float64) int32 {
 				return func() int32 {
 					if 8 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+							if __FLOAT_BITS_cgo66(float32(__y))&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -873,7 +900,7 @@ func __islessgreater(__x float64, __y float64) int32 {
 						return func() int32 {
 							if 8 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS(__y)&18446744073709551615 > 2047<<52 {
+									if __DOUBLE_BITS_cgo68(__y)&18446744073709551615 > 2047<<52 {
 										return 1
 									} else {
 										return 0
@@ -899,13 +926,13 @@ func __islessgreater(__x float64, __y float64) int32 {
 		}
 	}()
 }
-func __islessgreaterl(__x float64, __y float64) int32 {
+func __islessgreaterl_cgo78(__x float64, __y float64) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
 				if 8 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+						if __FLOAT_BITS_cgo66(float32(__x))&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -915,7 +942,7 @@ func __islessgreaterl(__x float64, __y float64) int32 {
 					return func() int32 {
 						if 8 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS(float64(__x))&18446744073709551615 > 2047<<52 {
+								if __DOUBLE_BITS_cgo68(float64(__x))&18446744073709551615 > 2047<<52 {
 									return 1
 								} else {
 									return 0
@@ -944,7 +971,7 @@ func __islessgreaterl(__x float64, __y float64) int32 {
 				return func() int32 {
 					if 8 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+							if __FLOAT_BITS_cgo66(float32(__y))&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -954,7 +981,7 @@ func __islessgreaterl(__x float64, __y float64) int32 {
 						return func() int32 {
 							if 8 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS(float64(__y))&18446744073709551615 > 2047<<52 {
+									if __DOUBLE_BITS_cgo68(float64(__y))&18446744073709551615 > 2047<<52 {
 										return 1
 									} else {
 										return 0
@@ -980,13 +1007,13 @@ func __islessgreaterl(__x float64, __y float64) int32 {
 		}
 	}()
 }
-func __isgreaterf(__x float32, __y float32) int32 {
+func __isgreaterf_cgo79(__x float32, __y float32) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
 				if 4 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS(__x)&uint32(2147483647) > uint32(2139095040) {
+						if __FLOAT_BITS_cgo66(__x)&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -996,7 +1023,7 @@ func __isgreaterf(__x float32, __y float32) int32 {
 					return func() int32 {
 						if 4 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS(float64(__x))&18446744073709551615 > 2047<<52 {
+								if __DOUBLE_BITS_cgo68(float64(__x))&18446744073709551615 > 2047<<52 {
 									return 1
 								} else {
 									return 0
@@ -1025,7 +1052,7 @@ func __isgreaterf(__x float32, __y float32) int32 {
 				return func() int32 {
 					if 4 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS(__y)&uint32(2147483647) > uint32(2139095040) {
+							if __FLOAT_BITS_cgo66(__y)&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -1035,7 +1062,7 @@ func __isgreaterf(__x float32, __y float32) int32 {
 						return func() int32 {
 							if 4 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS(float64(__y))&18446744073709551615 > 2047<<52 {
+									if __DOUBLE_BITS_cgo68(float64(__y))&18446744073709551615 > 2047<<52 {
 										return 1
 									} else {
 										return 0
@@ -1061,13 +1088,13 @@ func __isgreaterf(__x float32, __y float32) int32 {
 		}
 	}()
 }
-func __isgreater(__x float64, __y float64) int32 {
+func __isgreater_cgo80(__x float64, __y float64) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
 				if 8 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+						if __FLOAT_BITS_cgo66(float32(__x))&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -1077,7 +1104,7 @@ func __isgreater(__x float64, __y float64) int32 {
 					return func() int32 {
 						if 8 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS(__x)&18446744073709551615 > 2047<<52 {
+								if __DOUBLE_BITS_cgo68(__x)&18446744073709551615 > 2047<<52 {
 									return 1
 								} else {
 									return 0
@@ -1106,7 +1133,7 @@ func __isgreater(__x float64, __y float64) int32 {
 				return func() int32 {
 					if 8 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+							if __FLOAT_BITS_cgo66(float32(__y))&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -1116,7 +1143,7 @@ func __isgreater(__x float64, __y float64) int32 {
 						return func() int32 {
 							if 8 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS(__y)&18446744073709551615 > 2047<<52 {
+									if __DOUBLE_BITS_cgo68(__y)&18446744073709551615 > 2047<<52 {
 										return 1
 									} else {
 										return 0
@@ -1142,13 +1169,13 @@ func __isgreater(__x float64, __y float64) int32 {
 		}
 	}()
 }
-func __isgreaterl(__x float64, __y float64) int32 {
+func __isgreaterl_cgo81(__x float64, __y float64) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
 				if 8 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+						if __FLOAT_BITS_cgo66(float32(__x))&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -1158,7 +1185,7 @@ func __isgreaterl(__x float64, __y float64) int32 {
 					return func() int32 {
 						if 8 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS(float64(__x))&18446744073709551615 > 2047<<52 {
+								if __DOUBLE_BITS_cgo68(float64(__x))&18446744073709551615 > 2047<<52 {
 									return 1
 								} else {
 									return 0
@@ -1187,7 +1214,7 @@ func __isgreaterl(__x float64, __y float64) int32 {
 				return func() int32 {
 					if 8 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+							if __FLOAT_BITS_cgo66(float32(__y))&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -1197,7 +1224,7 @@ func __isgreaterl(__x float64, __y float64) int32 {
 						return func() int32 {
 							if 8 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS(float64(__y))&18446744073709551615 > 2047<<52 {
+									if __DOUBLE_BITS_cgo68(float64(__y))&18446744073709551615 > 2047<<52 {
 										return 1
 									} else {
 										return 0
@@ -1223,13 +1250,13 @@ func __isgreaterl(__x float64, __y float64) int32 {
 		}
 	}()
 }
-func __isgreaterequalf(__x float32, __y float32) int32 {
+func __isgreaterequalf_cgo82(__x float32, __y float32) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
 				if 4 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS(__x)&uint32(2147483647) > uint32(2139095040) {
+						if __FLOAT_BITS_cgo66(__x)&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -1239,7 +1266,7 @@ func __isgreaterequalf(__x float32, __y float32) int32 {
 					return func() int32 {
 						if 4 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS(float64(__x))&18446744073709551615 > 2047<<52 {
+								if __DOUBLE_BITS_cgo68(float64(__x))&18446744073709551615 > 2047<<52 {
 									return 1
 								} else {
 									return 0
@@ -1268,7 +1295,7 @@ func __isgreaterequalf(__x float32, __y float32) int32 {
 				return func() int32 {
 					if 4 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS(__y)&uint32(2147483647) > uint32(2139095040) {
+							if __FLOAT_BITS_cgo66(__y)&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -1278,7 +1305,7 @@ func __isgreaterequalf(__x float32, __y float32) int32 {
 						return func() int32 {
 							if 4 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS(float64(__y))&18446744073709551615 > 2047<<52 {
+									if __DOUBLE_BITS_cgo68(float64(__y))&18446744073709551615 > 2047<<52 {
 										return 1
 									} else {
 										return 0
@@ -1304,13 +1331,13 @@ func __isgreaterequalf(__x float32, __y float32) int32 {
 		}
 	}()
 }
-func __isgreaterequal(__x float64, __y float64) int32 {
+func __isgreaterequal_cgo83(__x float64, __y float64) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
 				if 8 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+						if __FLOAT_BITS_cgo66(float32(__x))&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -1320,7 +1347,7 @@ func __isgreaterequal(__x float64, __y float64) int32 {
 					return func() int32 {
 						if 8 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS(__x)&18446744073709551615 > 2047<<52 {
+								if __DOUBLE_BITS_cgo68(__x)&18446744073709551615 > 2047<<52 {
 									return 1
 								} else {
 									return 0
@@ -1349,7 +1376,7 @@ func __isgreaterequal(__x float64, __y float64) int32 {
 				return func() int32 {
 					if 8 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+							if __FLOAT_BITS_cgo66(float32(__y))&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -1359,7 +1386,7 @@ func __isgreaterequal(__x float64, __y float64) int32 {
 						return func() int32 {
 							if 8 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS(__y)&18446744073709551615 > 2047<<52 {
+									if __DOUBLE_BITS_cgo68(__y)&18446744073709551615 > 2047<<52 {
 										return 1
 									} else {
 										return 0
@@ -1385,13 +1412,13 @@ func __isgreaterequal(__x float64, __y float64) int32 {
 		}
 	}()
 }
-func __isgreaterequall(__x float64, __y float64) int32 {
+func __isgreaterequall_cgo84(__x float64, __y float64) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
 				if 8 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+						if __FLOAT_BITS_cgo66(float32(__x))&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -1401,7 +1428,7 @@ func __isgreaterequall(__x float64, __y float64) int32 {
 					return func() int32 {
 						if 8 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS(float64(__x))&18446744073709551615 > 2047<<52 {
+								if __DOUBLE_BITS_cgo68(float64(__x))&18446744073709551615 > 2047<<52 {
 									return 1
 								} else {
 									return 0
@@ -1430,7 +1457,7 @@ func __isgreaterequall(__x float64, __y float64) int32 {
 				return func() int32 {
 					if 8 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+							if __FLOAT_BITS_cgo66(float32(__y))&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -1440,7 +1467,7 @@ func __isgreaterequall(__x float64, __y float64) int32 {
 						return func() int32 {
 							if 8 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS(float64(__y))&18446744073709551615 > 2047<<52 {
+									if __DOUBLE_BITS_cgo68(float64(__y))&18446744073709551615 > 2047<<52 {
 										return 1
 									} else {
 										return 0
@@ -1499,70 +1526,1301 @@ type uint_fast32_t = uint32
 
 
 
-type _cgoa_57 struct {
+type _cgoa_91 struct {
 	__i [14]int32
 }
 
-type _cgoa_59 struct {
+type _cgoa_93 struct {
 	__i [10]int32
 }
 
-type _cgoa_61 struct {
+type _cgoa_95 struct {
 	__i [12]int32
 }
 
-type _cgoa_63 struct {
+type _cgoa_97 struct {
 	__i [14]int32
 }
 
-type _cgoa_65 struct {
+type _cgoa_99 struct {
 	__i [8]int32
 }
 
 
-func __bswap16(__x uint16) uint16 {
+func __FLOAT_BITS_cgo100(__f float32) uint32 {
+	type _cgoa_101 struct {
+		__f float32
+	}
+	var __u _cgoa_101
+	__u.__f = __f
+	return *(*uint32)(unsafe.Pointer(&__u))
+}
+func __DOUBLE_BITS_cgo102(__f float64) uint64 {
+	type _cgoa_103 struct {
+		__f float64
+	}
+	var __u _cgoa_103
+	__u.__f = __f
+	return *(*uint64)(unsafe.Pointer(&__u))
+}
+func __islessf_cgo104(__x float32, __y float32) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 4 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo100(__x)&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 4 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo102(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 4 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo100(__y)&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 4 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo102(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x < __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isless_cgo105(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo100(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo102(__x)&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo100(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo102(__y)&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x < __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessl_cgo106(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo100(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo102(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(__x) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo100(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo102(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(__y) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x < __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessequalf_cgo107(__x float32, __y float32) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 4 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo100(__x)&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 4 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo102(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 4 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo100(__y)&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 4 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo102(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x <= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessequal_cgo108(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo100(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo102(__x)&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo100(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo102(__y)&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x <= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessequall_cgo109(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo100(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo102(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(__x) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo100(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo102(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(__y) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x <= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessgreaterf_cgo110(__x float32, __y float32) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 4 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo100(__x)&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 4 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo102(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 4 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo100(__y)&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 4 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo102(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x != __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessgreater_cgo111(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo100(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo102(__x)&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo100(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo102(__y)&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x != __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessgreaterl_cgo112(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo100(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo102(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(__x) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo100(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo102(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(__y) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x != __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreaterf_cgo113(__x float32, __y float32) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 4 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo100(__x)&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 4 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo102(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 4 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo100(__y)&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 4 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo102(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x > __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreater_cgo114(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo100(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo102(__x)&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo100(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo102(__y)&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x > __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreaterl_cgo115(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo100(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo102(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(__x) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo100(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo102(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(__y) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x > __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreaterequalf_cgo116(__x float32, __y float32) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 4 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo100(__x)&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 4 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo102(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 4 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo100(__y)&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 4 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo102(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x >= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreaterequal_cgo117(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo100(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo102(__x)&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo100(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo102(__y)&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x >= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreaterequall_cgo118(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo100(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo102(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(__x) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo100(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo102(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(__y) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x >= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __bswap16_cgo119(__x uint16) uint16 {
 	return uint16(int32(__x)<<8 | int32(__x)>>8)
 }
-func __bswap32(__x uint32) uint32 {
+func __bswap32_cgo120(__x uint32) uint32 {
 	return __x>>24 | __x>>8&uint32(65280) | __x<<8&uint32(16711680) | __x<<24
 }
-func __bswap64(__x uint64) uint64 {
-	return (uint64(__bswap32(uint32(__x)))+0)<<32 | uint64(__bswap32(uint32(__x>>32)))
+func __bswap64_cgo121(__x uint64) uint64 {
+	return (uint64(__bswap32_cgo120(uint32(__x)))+0)<<32 | uint64(__bswap32_cgo120(uint32(__x>>32)))
 }
-func eval_as_float(x float32) float32 {
+func eval_as_float_cgo122(x float32) float32 {
 	var y float32 = x
 	return y
 }
-func eval_as_double(x float64) float64 {
+func eval_as_double_cgo123(x float64) float64 {
 	var y float64 = x
 	return y
 }
-func fp_barrierf(x float32) float32 {
+func fp_barrierf_cgo124(x float32) float32 {
 	var y float32 = x
 	_ = y
 	return y
 }
-func fp_barrier(x float64) float64 {
+func fp_barrier_cgo125(x float64) float64 {
 	var y float64 = x
 	_ = y
 	return y
 }
-func fp_barrierl(x float64) float64 {
+func fp_barrierl_cgo126(x float64) float64 {
 	var y float64 = x
 	_ = y
 	return y
 }
-func fp_force_evalf(x float32) {
+func fp_force_evalf_cgo127(x float32) {
 	var y float32
 	_ = y
 	y = x
 }
-func fp_force_eval(x float64) {
+func fp_force_eval_cgo128(x float64) {
 	var y float64
 	_ = y
 	y = x
 }
-func fp_force_evall(x float64) {
+func fp_force_evall_cgo129(x float64) {
 	var y float64
 	_ = y
 	y = x
@@ -1571,125 +2829,5198 @@ func fp_force_evall(x float64) {
 
 
 
-
-type _cgoa_71 struct {
-	__i [14]int32
-}
-
-type _cgoa_73 struct {
-	__i [10]int32
-}
-
-type _cgoa_75 struct {
-	__i [12]int32
-}
-
-type _cgoa_77 struct {
-	__i [14]int32
-}
-
-type _cgoa_79 struct {
-	__i [8]int32
-}
-
-
-
-
-
-type _cgoa_86 struct {
-	__i [14]int32
-}
-
-type _cgoa_88 struct {
-	__i [10]int32
-}
-
-type _cgoa_90 struct {
-	__i [12]int32
-}
-
-type _cgoa_92 struct {
-	__i [14]int32
-}
-
-type _cgoa_94 struct {
-	__i [8]int32
-}
-
-
-
-
-
-type _cgoa_100 struct {
-	__i [14]int32
-}
-
-type _cgoa_102 struct {
-	__i [10]int32
-}
-
-type _cgoa_104 struct {
-	__i [12]int32
-}
-
-type _cgoa_106 struct {
-	__i [14]int32
-}
-
-type _cgoa_108 struct {
-	__i [8]int32
-}
-
-
-
-
-
-type _cgoa_115 struct {
-	__i [14]int32
-}
-
-type _cgoa_117 struct {
-	__i [10]int32
-}
-
-type _cgoa_119 struct {
-	__i [12]int32
-}
-
-type _cgoa_121 struct {
-	__i [14]int32
-}
-
-type _cgoa_123 struct {
-	__i [8]int32
-}
-
-
-
-
-
-type _cgoa_129 struct {
-	__i [14]int32
-}
-
-type _cgoa_131 struct {
-	__i [10]int32
-}
-
-type _cgoa_133 struct {
-	__i [12]int32
-}
 
 type _cgoa_135 struct {
 	__i [14]int32
 }
 
 type _cgoa_137 struct {
+	__i [10]int32
+}
+
+type _cgoa_139 struct {
+	__i [12]int32
+}
+
+type _cgoa_141 struct {
+	__i [14]int32
+}
+
+type _cgoa_143 struct {
 	__i [8]int32
 }
 
 
-func __isspace(_c int32) int32 {
+func __FLOAT_BITS_cgo144(__f float32) uint32 {
+	type _cgoa_145 struct {
+		__f float32
+	}
+	var __u _cgoa_145
+	__u.__f = __f
+	return *(*uint32)(unsafe.Pointer(&__u))
+}
+func __DOUBLE_BITS_cgo146(__f float64) uint64 {
+	type _cgoa_147 struct {
+		__f float64
+	}
+	var __u _cgoa_147
+	__u.__f = __f
+	return *(*uint64)(unsafe.Pointer(&__u))
+}
+func __islessf_cgo148(__x float32, __y float32) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 4 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo144(__x)&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 4 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo146(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 4 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo144(__y)&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 4 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo146(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x < __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isless_cgo149(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo144(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo146(__x)&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo144(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo146(__y)&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x < __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessl_cgo150(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo144(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo146(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(__x) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo144(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo146(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(__y) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x < __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessequalf_cgo151(__x float32, __y float32) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 4 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo144(__x)&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 4 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo146(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 4 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo144(__y)&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 4 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo146(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x <= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessequal_cgo152(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo144(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo146(__x)&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo144(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo146(__y)&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x <= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessequall_cgo153(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo144(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo146(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(__x) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo144(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo146(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(__y) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x <= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessgreaterf_cgo154(__x float32, __y float32) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 4 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo144(__x)&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 4 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo146(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 4 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo144(__y)&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 4 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo146(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x != __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessgreater_cgo155(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo144(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo146(__x)&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo144(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo146(__y)&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x != __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessgreaterl_cgo156(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo144(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo146(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(__x) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo144(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo146(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(__y) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x != __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreaterf_cgo157(__x float32, __y float32) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 4 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo144(__x)&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 4 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo146(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 4 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo144(__y)&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 4 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo146(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x > __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreater_cgo158(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo144(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo146(__x)&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo144(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo146(__y)&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x > __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreaterl_cgo159(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo144(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo146(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(__x) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo144(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo146(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(__y) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x > __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreaterequalf_cgo160(__x float32, __y float32) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 4 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo144(__x)&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 4 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo146(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 4 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo144(__y)&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 4 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo146(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x >= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreaterequal_cgo161(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo144(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo146(__x)&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo144(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo146(__y)&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x >= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreaterequall_cgo162(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo144(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo146(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(__x) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo144(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo146(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(__y) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x >= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __bswap16_cgo163(__x uint16) uint16 {
+	return uint16(int32(__x)<<8 | int32(__x)>>8)
+}
+func __bswap32_cgo164(__x uint32) uint32 {
+	return __x>>24 | __x>>8&uint32(65280) | __x<<8&uint32(16711680) | __x<<24
+}
+func __bswap64_cgo165(__x uint64) uint64 {
+	return (uint64(__bswap32_cgo164(uint32(__x)))+0)<<32 | uint64(__bswap32_cgo164(uint32(__x>>32)))
+}
+func eval_as_float_cgo166(x float32) float32 {
+	var y float32 = x
+	return y
+}
+func eval_as_double_cgo167(x float64) float64 {
+	var y float64 = x
+	return y
+}
+func fp_barrierf_cgo168(x float32) float32 {
+	var y float32 = x
+	_ = y
+	return y
+}
+func fp_barrier_cgo169(x float64) float64 {
+	var y float64 = x
+	_ = y
+	return y
+}
+func fp_barrierl_cgo170(x float64) float64 {
+	var y float64 = x
+	_ = y
+	return y
+}
+func fp_force_evalf_cgo171(x float32) {
+	var y float32
+	_ = y
+	y = x
+}
+func fp_force_eval_cgo172(x float64) {
+	var y float64
+	_ = y
+	y = x
+}
+func fp_force_evall_cgo173(x float64) {
+	var y float64
+	_ = y
+	y = x
+}
+
+
+
+
+
+type _cgoa_180 struct {
+	__i [14]int32
+}
+
+type _cgoa_182 struct {
+	__i [10]int32
+}
+
+type _cgoa_184 struct {
+	__i [12]int32
+}
+
+type _cgoa_186 struct {
+	__i [14]int32
+}
+
+type _cgoa_188 struct {
+	__i [8]int32
+}
+
+
+func __FLOAT_BITS_cgo189(__f float32) uint32 {
+	type _cgoa_190 struct {
+		__f float32
+	}
+	var __u _cgoa_190
+	__u.__f = __f
+	return *(*uint32)(unsafe.Pointer(&__u))
+}
+func __DOUBLE_BITS_cgo191(__f float64) uint64 {
+	type _cgoa_192 struct {
+		__f float64
+	}
+	var __u _cgoa_192
+	__u.__f = __f
+	return *(*uint64)(unsafe.Pointer(&__u))
+}
+func __islessf_cgo193(__x float32, __y float32) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 4 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo189(__x)&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 4 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo191(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 4 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo189(__y)&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 4 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo191(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x < __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isless_cgo194(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo189(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo191(__x)&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo189(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo191(__y)&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x < __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessl_cgo195(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo189(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo191(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(__x) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo189(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo191(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(__y) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x < __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessequalf_cgo196(__x float32, __y float32) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 4 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo189(__x)&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 4 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo191(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 4 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo189(__y)&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 4 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo191(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x <= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessequal_cgo197(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo189(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo191(__x)&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo189(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo191(__y)&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x <= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessequall_cgo198(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo189(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo191(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(__x) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo189(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo191(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(__y) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x <= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessgreaterf_cgo199(__x float32, __y float32) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 4 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo189(__x)&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 4 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo191(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 4 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo189(__y)&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 4 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo191(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x != __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessgreater_cgo200(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo189(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo191(__x)&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo189(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo191(__y)&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x != __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessgreaterl_cgo201(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo189(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo191(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(__x) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo189(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo191(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(__y) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x != __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreaterf_cgo202(__x float32, __y float32) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 4 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo189(__x)&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 4 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo191(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 4 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo189(__y)&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 4 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo191(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x > __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreater_cgo203(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo189(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo191(__x)&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo189(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo191(__y)&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x > __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreaterl_cgo204(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo189(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo191(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(__x) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo189(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo191(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(__y) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x > __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreaterequalf_cgo205(__x float32, __y float32) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 4 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo189(__x)&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 4 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo191(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 4 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo189(__y)&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 4 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo191(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x >= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreaterequal_cgo206(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo189(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo191(__x)&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo189(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo191(__y)&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x >= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreaterequall_cgo207(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo189(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo191(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(__x) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo189(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo191(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(__y) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x >= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __bswap16_cgo208(__x uint16) uint16 {
+	return uint16(int32(__x)<<8 | int32(__x)>>8)
+}
+func __bswap32_cgo209(__x uint32) uint32 {
+	return __x>>24 | __x>>8&uint32(65280) | __x<<8&uint32(16711680) | __x<<24
+}
+func __bswap64_cgo210(__x uint64) uint64 {
+	return (uint64(__bswap32_cgo209(uint32(__x)))+0)<<32 | uint64(__bswap32_cgo209(uint32(__x>>32)))
+}
+func eval_as_float_cgo211(x float32) float32 {
+	var y float32 = x
+	return y
+}
+func eval_as_double_cgo212(x float64) float64 {
+	var y float64 = x
+	return y
+}
+func fp_barrierf_cgo213(x float32) float32 {
+	var y float32 = x
+	_ = y
+	return y
+}
+func fp_barrier_cgo214(x float64) float64 {
+	var y float64 = x
+	_ = y
+	return y
+}
+func fp_barrierl_cgo215(x float64) float64 {
+	var y float64 = x
+	_ = y
+	return y
+}
+func fp_force_evalf_cgo216(x float32) {
+	var y float32
+	_ = y
+	y = x
+}
+func fp_force_eval_cgo217(x float64) {
+	var y float64
+	_ = y
+	y = x
+}
+func fp_force_evall_cgo218(x float64) {
+	var y float64
+	_ = y
+	y = x
+}
+
+
+
+
+
+type _cgoa_224 struct {
+	__i [14]int32
+}
+
+type _cgoa_226 struct {
+	__i [10]int32
+}
+
+type _cgoa_228 struct {
+	__i [12]int32
+}
+
+type _cgoa_230 struct {
+	__i [14]int32
+}
+
+type _cgoa_232 struct {
+	__i [8]int32
+}
+
+
+func __FLOAT_BITS_cgo233(__f float32) uint32 {
+	type _cgoa_234 struct {
+		__f float32
+	}
+	var __u _cgoa_234
+	__u.__f = __f
+	return *(*uint32)(unsafe.Pointer(&__u))
+}
+func __DOUBLE_BITS_cgo235(__f float64) uint64 {
+	type _cgoa_236 struct {
+		__f float64
+	}
+	var __u _cgoa_236
+	__u.__f = __f
+	return *(*uint64)(unsafe.Pointer(&__u))
+}
+func __islessf_cgo237(__x float32, __y float32) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 4 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo233(__x)&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 4 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo235(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 4 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo233(__y)&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 4 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo235(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x < __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isless_cgo238(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo233(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo235(__x)&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo233(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo235(__y)&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x < __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessl_cgo239(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo233(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo235(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(__x) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo233(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo235(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(__y) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x < __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessequalf_cgo240(__x float32, __y float32) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 4 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo233(__x)&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 4 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo235(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 4 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo233(__y)&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 4 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo235(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x <= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessequal_cgo241(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo233(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo235(__x)&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo233(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo235(__y)&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x <= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessequall_cgo242(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo233(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo235(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(__x) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo233(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo235(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(__y) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x <= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessgreaterf_cgo243(__x float32, __y float32) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 4 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo233(__x)&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 4 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo235(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 4 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo233(__y)&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 4 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo235(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x != __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessgreater_cgo244(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo233(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo235(__x)&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo233(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo235(__y)&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x != __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessgreaterl_cgo245(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo233(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo235(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(__x) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo233(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo235(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(__y) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x != __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreaterf_cgo246(__x float32, __y float32) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 4 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo233(__x)&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 4 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo235(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 4 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo233(__y)&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 4 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo235(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x > __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreater_cgo247(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo233(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo235(__x)&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo233(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo235(__y)&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x > __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreaterl_cgo248(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo233(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo235(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(__x) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo233(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo235(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(__y) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x > __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreaterequalf_cgo249(__x float32, __y float32) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 4 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo233(__x)&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 4 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo235(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 4 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo233(__y)&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 4 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo235(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x >= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreaterequal_cgo250(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo233(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo235(__x)&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo233(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo235(__y)&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x >= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreaterequall_cgo251(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo233(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo235(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(__x) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo233(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo235(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(__y) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x >= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+
+
+
+
+
+type _cgoa_258 struct {
+	__i [14]int32
+}
+
+type _cgoa_260 struct {
+	__i [10]int32
+}
+
+type _cgoa_262 struct {
+	__i [12]int32
+}
+
+type _cgoa_264 struct {
+	__i [14]int32
+}
+
+type _cgoa_266 struct {
+	__i [8]int32
+}
+
+
+func __FLOAT_BITS_cgo267(__f float32) uint32 {
+	type _cgoa_268 struct {
+		__f float32
+	}
+	var __u _cgoa_268
+	__u.__f = __f
+	return *(*uint32)(unsafe.Pointer(&__u))
+}
+func __DOUBLE_BITS_cgo269(__f float64) uint64 {
+	type _cgoa_270 struct {
+		__f float64
+	}
+	var __u _cgoa_270
+	__u.__f = __f
+	return *(*uint64)(unsafe.Pointer(&__u))
+}
+func __islessf_cgo271(__x float32, __y float32) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 4 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo267(__x)&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 4 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo269(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 4 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo267(__y)&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 4 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo269(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x < __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isless_cgo272(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo267(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo269(__x)&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo267(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo269(__y)&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x < __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessl_cgo273(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo267(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo269(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(__x) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo267(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo269(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(__y) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x < __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessequalf_cgo274(__x float32, __y float32) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 4 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo267(__x)&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 4 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo269(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 4 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo267(__y)&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 4 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo269(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x <= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessequal_cgo275(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo267(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo269(__x)&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo267(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo269(__y)&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x <= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessequall_cgo276(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo267(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo269(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(__x) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo267(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo269(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(__y) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x <= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessgreaterf_cgo277(__x float32, __y float32) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 4 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo267(__x)&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 4 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo269(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 4 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo267(__y)&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 4 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo269(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x != __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessgreater_cgo278(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo267(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo269(__x)&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo267(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo269(__y)&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x != __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessgreaterl_cgo279(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo267(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo269(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(__x) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo267(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo269(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(__y) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x != __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreaterf_cgo280(__x float32, __y float32) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 4 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo267(__x)&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 4 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo269(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 4 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo267(__y)&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 4 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo269(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x > __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreater_cgo281(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo267(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo269(__x)&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo267(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo269(__y)&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x > __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreaterl_cgo282(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo267(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo269(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(__x) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo267(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo269(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(__y) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x > __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreaterequalf_cgo283(__x float32, __y float32) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 4 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo267(__x)&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 4 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo269(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 4 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo267(__y)&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 4 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo269(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x >= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreaterequal_cgo284(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo267(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo269(__x)&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo267(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo269(__y)&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x >= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreaterequall_cgo285(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo267(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo269(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(__x) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo267(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo269(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(__y) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x >= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __bswap16_cgo286(__x uint16) uint16 {
+	return uint16(int32(__x)<<8 | int32(__x)>>8)
+}
+func __bswap32_cgo287(__x uint32) uint32 {
+	return __x>>24 | __x>>8&uint32(65280) | __x<<8&uint32(16711680) | __x<<24
+}
+func __bswap64_cgo288(__x uint64) uint64 {
+	return (uint64(__bswap32_cgo287(uint32(__x)))+0)<<32 | uint64(__bswap32_cgo287(uint32(__x>>32)))
+}
+func eval_as_float_cgo289(x float32) float32 {
+	var y float32 = x
+	return y
+}
+func eval_as_double_cgo290(x float64) float64 {
+	var y float64 = x
+	return y
+}
+func fp_barrierf_cgo291(x float32) float32 {
+	var y float32 = x
+	_ = y
+	return y
+}
+func fp_barrier_cgo292(x float64) float64 {
+	var y float64 = x
+	_ = y
+	return y
+}
+func fp_barrierl_cgo293(x float64) float64 {
+	var y float64 = x
+	_ = y
+	return y
+}
+func fp_force_evalf_cgo294(x float32) {
+	var y float32
+	_ = y
+	y = x
+}
+func fp_force_eval_cgo295(x float64) {
+	var y float64
+	_ = y
+	y = x
+}
+func fp_force_evall_cgo296(x float64) {
+	var y float64
+	_ = y
+	y = x
+}
+
+
+
+
+
+type _cgoa_302 struct {
+	__i [14]int32
+}
+
+type _cgoa_304 struct {
+	__i [10]int32
+}
+
+type _cgoa_306 struct {
+	__i [12]int32
+}
+
+type _cgoa_308 struct {
+	__i [14]int32
+}
+
+type _cgoa_310 struct {
+	__i [8]int32
+}
+
+
+func __isspace_cgo311(_c int32) int32 {
 	return func() int32 {
 		if _c == ' ' || uint32(_c)-uint32('\t') < uint32(5) {
 			return 1
@@ -1703,23 +8034,23 @@ func __isspace(_c int32) int32 {
 
 
 
-type _cgoa_143 struct {
+type _cgoa_317 struct {
 	__i [14]int32
 }
 
-type _cgoa_145 struct {
+type _cgoa_319 struct {
 	__i [10]int32
 }
 
-type _cgoa_147 struct {
+type _cgoa_321 struct {
 	__i [12]int32
 }
 
-type _cgoa_149 struct {
+type _cgoa_323 struct {
 	__i [14]int32
 }
 
-type _cgoa_151 struct {
+type _cgoa_325 struct {
 	__i [8]int32
 }
 
@@ -1727,23 +8058,23 @@ type _cgoa_151 struct {
 
 
 
-type _cgoa_157 struct {
+type _cgoa_331 struct {
 	__i [14]int32
 }
 
-type _cgoa_159 struct {
+type _cgoa_333 struct {
 	__i [10]int32
 }
 
-type _cgoa_161 struct {
+type _cgoa_335 struct {
 	__i [12]int32
 }
 
-type _cgoa_163 struct {
+type _cgoa_337 struct {
 	__i [14]int32
 }
 
-type _cgoa_165 struct {
+type _cgoa_339 struct {
 	__i [8]int32
 }
 
@@ -1751,23 +8082,58 @@ type _cgoa_165 struct {
 
 
 
-type _cgoa_171 struct {
+type _cgoa_345 struct {
 	__i [14]int32
 }
 
-type _cgoa_173 struct {
+type _cgoa_347 struct {
 	__i [10]int32
 }
 
-type _cgoa_175 struct {
+type _cgoa_349 struct {
 	__i [12]int32
 }
 
-type _cgoa_177 struct {
+type _cgoa_351 struct {
 	__i [14]int32
 }
 
-type _cgoa_179 struct {
+type _cgoa_353 struct {
+	__i [8]int32
+}
+
+
+func __bswap16_cgo354(__x uint16) uint16 {
+	return uint16(int32(__x)<<8 | int32(__x)>>8)
+}
+func __bswap32_cgo355(__x uint32) uint32 {
+	return __x>>24 | __x>>8&uint32(65280) | __x<<8&uint32(16711680) | __x<<24
+}
+func __bswap64_cgo356(__x uint64) uint64 {
+	return (uint64(__bswap32_cgo355(uint32(__x)))+0)<<32 | uint64(__bswap32_cgo355(uint32(__x>>32)))
+}
+
+
+
+
+
+type _cgoa_362 struct {
+	__i [14]int32
+}
+
+type _cgoa_364 struct {
+	__i [10]int32
+}
+
+type _cgoa_366 struct {
+	__i [12]int32
+}
+
+type _cgoa_368 struct {
+	__i [14]int32
+}
+
+type _cgoa_370 struct {
 	__i [8]int32
 }
 
@@ -1775,23 +8141,23 @@ type _cgoa_179 struct {
 
 
 
-type _cgoa_185 struct {
+type _cgoa_376 struct {
 	__i [14]int32
 }
 
-type _cgoa_187 struct {
+type _cgoa_378 struct {
 	__i [10]int32
 }
 
-type _cgoa_189 struct {
+type _cgoa_380 struct {
 	__i [12]int32
 }
 
-type _cgoa_191 struct {
+type _cgoa_382 struct {
 	__i [14]int32
 }
 
-type _cgoa_193 struct {
+type _cgoa_384 struct {
 	__i [8]int32
 }
 
@@ -1799,23 +8165,81 @@ type _cgoa_193 struct {
 
 
 
-type _cgoa_199 struct {
+
+
+
+type _cgoa_394 struct {
 	__i [14]int32
 }
 
-type _cgoa_201 struct {
+type _cgoa_396 struct {
 	__i [10]int32
 }
 
-type _cgoa_203 struct {
+type _cgoa_398 struct {
 	__i [12]int32
 }
 
-type _cgoa_205 struct {
+type _cgoa_400 struct {
 	__i [14]int32
 }
 
-type _cgoa_207 struct {
+type _cgoa_402 struct {
+	__i [8]int32
+}
+
+
+
+
+
+
+
+
+type _cgoa_412 struct {
+	__i [14]int32
+}
+
+type _cgoa_414 struct {
+	__i [10]int32
+}
+
+type _cgoa_416 struct {
+	__i [12]int32
+}
+
+type _cgoa_418 struct {
+	__i [14]int32
+}
+
+type _cgoa_420 struct {
+	__i [8]int32
+}
+
+type mode_t = uint32
+
+
+
+
+
+
+
+type _cgoa_430 struct {
+	__i [14]int32
+}
+
+type _cgoa_432 struct {
+	__i [10]int32
+}
+
+type _cgoa_434 struct {
+	__i [12]int32
+}
+
+type _cgoa_436 struct {
+	__i [14]int32
+}
+
+type _cgoa_438 struct {
 	__i [8]int32
 }
 
@@ -1824,7 +8248,7 @@ type gid_t = uint32
 type useconds_t = uint32
 type syscall_arg_t = int64
 
-func __alt_socketcall(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+func __alt_socketcall_cgo439(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
 	var r int64
 	if cp != 0 {
 		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
@@ -1841,24 +8265,38 @@ func __alt_socketcall(sys int32, sock int32, cp int32, a int64, b int64, c int64
 
 
 
-type _cgoa_213 struct {
+type _cgoa_445 struct {
 	__i [14]int32
 }
 
-type _cgoa_215 struct {
+type _cgoa_447 struct {
 	__i [10]int32
 }
 
-type _cgoa_217 struct {
+type _cgoa_449 struct {
 	__i [12]int32
 }
 
-type _cgoa_219 struct {
+type _cgoa_451 struct {
 	__i [14]int32
 }
 
-type _cgoa_221 struct {
+type _cgoa_453 struct {
 	__i [8]int32
+}
+
+
+func __alt_socketcall_cgo454(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+	var r int64
+	if cp != 0 {
+		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	} else {
+		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	}
+	if r != int64(-38) {
+		return r
+	}
+	return r
 }
 
 type struct__IO_FILE struct {
@@ -1898,23 +8336,23 @@ type struct__IO_FILE struct {
 
 
 
-type _cgoa_227 struct {
+type _cgoa_461 struct {
 	__i [14]int32
 }
 
-type _cgoa_229 struct {
+type _cgoa_463 struct {
 	__i [10]int32
 }
 
-type _cgoa_231 struct {
+type _cgoa_465 struct {
 	__i [12]int32
 }
 
-type _cgoa_233 struct {
+type _cgoa_467 struct {
 	__i [14]int32
 }
 
-type _cgoa_235 struct {
+type _cgoa_469 struct {
 	__i [8]int32
 }
 
@@ -1922,23 +8360,23 @@ type _cgoa_235 struct {
 
 
 
-type _cgoa_241 struct {
+type _cgoa_475 struct {
 	__i [14]int32
 }
 
-type _cgoa_243 struct {
+type _cgoa_477 struct {
 	__i [10]int32
 }
 
-type _cgoa_245 struct {
+type _cgoa_479 struct {
 	__i [12]int32
 }
 
-type _cgoa_247 struct {
+type _cgoa_481 struct {
 	__i [14]int32
 }
 
-type _cgoa_249 struct {
+type _cgoa_483 struct {
 	__i [8]int32
 }
 
@@ -1946,23 +8384,23 @@ type _cgoa_249 struct {
 
 
 
-type _cgoa_255 struct {
+type _cgoa_489 struct {
 	__i [14]int32
 }
 
-type _cgoa_257 struct {
+type _cgoa_491 struct {
 	__i [10]int32
 }
 
-type _cgoa_259 struct {
+type _cgoa_493 struct {
 	__i [12]int32
 }
 
-type _cgoa_261 struct {
+type _cgoa_495 struct {
 	__i [14]int32
 }
 
-type _cgoa_263 struct {
+type _cgoa_497 struct {
 	__i [8]int32
 }
 
@@ -1970,96 +8408,152 @@ type _cgoa_263 struct {
 
 
 
-type _cgoa_269 struct {
+type _cgoa_503 struct {
 	__i [14]int32
 }
 
-type _cgoa_271 struct {
+type _cgoa_505 struct {
 	__i [10]int32
 }
 
-type _cgoa_273 struct {
+type _cgoa_507 struct {
 	__i [12]int32
 }
 
-type _cgoa_275 struct {
+type _cgoa_509 struct {
 	__i [14]int32
 }
 
-type _cgoa_277 struct {
+type _cgoa_511 struct {
 	__i [8]int32
 }
 
 
+func __alt_socketcall_cgo512(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+	var r int64
+	if cp != 0 {
+		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	} else {
+		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	}
+	if r != int64(-38) {
+		return r
+	}
+	return r
+}
 
 
 
-type _cgoa_284 struct {
+
+
+type _cgoa_520 struct {
 	__i [14]int32
 }
 
-type _cgoa_286 struct {
+type _cgoa_522 struct {
 	__i [10]int32
 }
 
-type _cgoa_288 struct {
+type _cgoa_524 struct {
 	__i [12]int32
 }
 
-type _cgoa_290 struct {
+type _cgoa_526 struct {
 	__i [14]int32
 }
 
-type _cgoa_292 struct {
+type _cgoa_528 struct {
 	__i [8]int32
 }
 
 
+func __alt_socketcall_cgo529(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+	var r int64
+	if cp != 0 {
+		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	} else {
+		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	}
+	if r != int64(-38) {
+		return r
+	}
+	return r
+}
 
 
 
-type _cgoa_298 struct {
+
+
+type _cgoa_535 struct {
 	__i [14]int32
 }
 
-type _cgoa_300 struct {
+type _cgoa_537 struct {
 	__i [10]int32
 }
 
-type _cgoa_302 struct {
+type _cgoa_539 struct {
 	__i [12]int32
 }
 
-type _cgoa_304 struct {
+type _cgoa_541 struct {
 	__i [14]int32
 }
 
-type _cgoa_306 struct {
+type _cgoa_543 struct {
 	__i [8]int32
 }
 
 
+func __alt_socketcall_cgo544(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+	var r int64
+	if cp != 0 {
+		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	} else {
+		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	}
+	if r != int64(-38) {
+		return r
+	}
+	return r
+}
 
 
 
-type _cgoa_312 struct {
+
+
+type _cgoa_550 struct {
 	__i [14]int32
 }
 
-type _cgoa_314 struct {
+type _cgoa_552 struct {
 	__i [10]int32
 }
 
-type _cgoa_316 struct {
+type _cgoa_554 struct {
 	__i [12]int32
 }
 
-type _cgoa_318 struct {
+type _cgoa_556 struct {
 	__i [14]int32
 }
 
-type _cgoa_320 struct {
+type _cgoa_558 struct {
 	__i [8]int32
+}
+
+
+func __alt_socketcall_cgo559(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+	var r int64
+	if cp != 0 {
+		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	} else {
+		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	}
+	if r != int64(-38) {
+		return r
+	}
+	return r
 }
 
 type struct_iovec struct {
@@ -2070,96 +8564,152 @@ type struct_iovec struct {
 
 
 
-type _cgoa_326 struct {
+type _cgoa_565 struct {
 	__i [14]int32
 }
 
-type _cgoa_328 struct {
+type _cgoa_567 struct {
 	__i [10]int32
 }
 
-type _cgoa_330 struct {
+type _cgoa_569 struct {
 	__i [12]int32
 }
 
-type _cgoa_332 struct {
+type _cgoa_571 struct {
 	__i [14]int32
 }
 
-type _cgoa_334 struct {
+type _cgoa_573 struct {
 	__i [8]int32
 }
 
 
+func __alt_socketcall_cgo574(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+	var r int64
+	if cp != 0 {
+		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	} else {
+		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	}
+	if r != int64(-38) {
+		return r
+	}
+	return r
+}
 
 
 
-type _cgoa_340 struct {
+
+
+type _cgoa_580 struct {
 	__i [14]int32
 }
 
-type _cgoa_342 struct {
+type _cgoa_582 struct {
 	__i [10]int32
 }
 
-type _cgoa_344 struct {
+type _cgoa_584 struct {
 	__i [12]int32
 }
 
-type _cgoa_346 struct {
+type _cgoa_586 struct {
 	__i [14]int32
 }
 
-type _cgoa_348 struct {
+type _cgoa_588 struct {
 	__i [8]int32
 }
 
 
+func __alt_socketcall_cgo589(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+	var r int64
+	if cp != 0 {
+		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	} else {
+		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	}
+	if r != int64(-38) {
+		return r
+	}
+	return r
+}
 
 
 
-type _cgoa_354 struct {
+
+
+type _cgoa_595 struct {
 	__i [14]int32
 }
 
-type _cgoa_356 struct {
+type _cgoa_597 struct {
 	__i [10]int32
 }
 
-type _cgoa_358 struct {
+type _cgoa_599 struct {
 	__i [12]int32
 }
 
-type _cgoa_360 struct {
+type _cgoa_601 struct {
 	__i [14]int32
 }
 
-type _cgoa_362 struct {
+type _cgoa_603 struct {
 	__i [8]int32
 }
 
 
+func __alt_socketcall_cgo604(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+	var r int64
+	if cp != 0 {
+		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	} else {
+		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	}
+	if r != int64(-38) {
+		return r
+	}
+	return r
+}
 
 
 
-type _cgoa_368 struct {
+
+
+type _cgoa_611 struct {
 	__i [14]int32
 }
 
-type _cgoa_370 struct {
+type _cgoa_613 struct {
 	__i [10]int32
 }
 
-type _cgoa_372 struct {
+type _cgoa_615 struct {
 	__i [12]int32
 }
 
-type _cgoa_374 struct {
+type _cgoa_617 struct {
 	__i [14]int32
 }
 
-type _cgoa_376 struct {
+type _cgoa_619 struct {
 	__i [8]int32
+}
+
+
+func __alt_socketcall_cgo620(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+	var r int64
+	if cp != 0 {
+		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	} else {
+		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	}
+	if r != int64(-38) {
+		return r
+	}
+	return r
 }
 
 type struct_winsize struct {
@@ -2172,144 +8722,237 @@ type struct_winsize struct {
 
 
 
-type _cgoa_382 struct {
+type _cgoa_626 struct {
 	__i [14]int32
 }
 
-type _cgoa_384 struct {
+type _cgoa_628 struct {
 	__i [10]int32
 }
 
-type _cgoa_386 struct {
+type _cgoa_630 struct {
 	__i [12]int32
 }
 
-type _cgoa_388 struct {
+type _cgoa_632 struct {
 	__i [14]int32
 }
 
-type _cgoa_390 struct {
+type _cgoa_634 struct {
 	__i [8]int32
 }
 
 
+func __alt_socketcall_cgo635(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+	var r int64
+	if cp != 0 {
+		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	} else {
+		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	}
+	if r != int64(-38) {
+		return r
+	}
+	return r
+}
 
 
 
-type _cgoa_398 struct {
+
+
+type _cgoa_643 struct {
 	__i [14]int32
 }
 
-type _cgoa_400 struct {
+type _cgoa_645 struct {
 	__i [10]int32
 }
 
-type _cgoa_402 struct {
+type _cgoa_647 struct {
 	__i [12]int32
 }
 
-type _cgoa_404 struct {
+type _cgoa_649 struct {
 	__i [14]int32
 }
 
-type _cgoa_406 struct {
+type _cgoa_651 struct {
 	__i [8]int32
 }
 
 
+func __alt_socketcall_cgo652(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+	var r int64
+	if cp != 0 {
+		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	} else {
+		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	}
+	if r != int64(-38) {
+		return r
+	}
+	return r
+}
 
 
 
-type _cgoa_413 struct {
+
+
+type _cgoa_659 struct {
 	__i [14]int32
 }
 
-type _cgoa_415 struct {
+type _cgoa_661 struct {
 	__i [10]int32
 }
 
-type _cgoa_417 struct {
+type _cgoa_663 struct {
 	__i [12]int32
 }
 
-type _cgoa_419 struct {
+type _cgoa_665 struct {
 	__i [14]int32
 }
 
-type _cgoa_421 struct {
+type _cgoa_667 struct {
 	__i [8]int32
 }
 
 
+func __alt_socketcall_cgo668(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+	var r int64
+	if cp != 0 {
+		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	} else {
+		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	}
+	if r != int64(-38) {
+		return r
+	}
+	return r
+}
 
 
 
-type _cgoa_428 struct {
+
+
+type _cgoa_675 struct {
 	__i [14]int32
 }
 
-type _cgoa_430 struct {
+type _cgoa_677 struct {
 	__i [10]int32
 }
 
-type _cgoa_432 struct {
+type _cgoa_679 struct {
 	__i [12]int32
 }
 
-type _cgoa_434 struct {
+type _cgoa_681 struct {
 	__i [14]int32
 }
 
-type _cgoa_436 struct {
+type _cgoa_683 struct {
 	__i [8]int32
 }
 
 
+func __alt_socketcall_cgo684(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+	var r int64
+	if cp != 0 {
+		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	} else {
+		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	}
+	if r != int64(-38) {
+		return r
+	}
+	return r
+}
 
 
 
-type _cgoa_443 struct {
+
+
+type _cgoa_691 struct {
 	__i [14]int32
 }
 
-type _cgoa_445 struct {
+type _cgoa_693 struct {
 	__i [10]int32
 }
 
-type _cgoa_447 struct {
+type _cgoa_695 struct {
 	__i [12]int32
 }
 
-type _cgoa_449 struct {
+type _cgoa_697 struct {
 	__i [14]int32
 }
 
-type _cgoa_451 struct {
+type _cgoa_699 struct {
 	__i [8]int32
 }
 
 
+func __alt_socketcall_cgo700(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+	var r int64
+	if cp != 0 {
+		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	} else {
+		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	}
+	if r != int64(-38) {
+		return r
+	}
+	return r
+}
 
 
 
-type _cgoa_457 struct {
+
+
+type _cgoa_706 struct {
 	__i [14]int32
 }
 
-type _cgoa_459 struct {
+type _cgoa_708 struct {
 	__i [10]int32
 }
 
-type _cgoa_461 struct {
+type _cgoa_710 struct {
 	__i [12]int32
 }
 
-type _cgoa_463 struct {
+type _cgoa_712 struct {
 	__i [14]int32
 }
 
-type _cgoa_465 struct {
+type _cgoa_714 struct {
 	__i [8]int32
+}
+
+
+func __alt_socketcall_cgo715(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+	var r int64
+	if cp != 0 {
+		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	} else {
+		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	}
+	if r != int64(-38) {
+		return r
+	}
+	return r
+}
+func __isspace_cgo716(_c int32) int32 {
+	return func() int32 {
+		if _c == ' ' || uint32(_c)-uint32('\t') < uint32(5) {
+			return 1
+		} else {
+			return 0
+		}
+	}()
 }
 
 
@@ -2323,31 +8966,1264 @@ type struct___mbstate_t struct {
 	__opaque2 uint32
 }
 type mbstate_t = struct___mbstate_t
-type _cgoa_470 struct {
+type _cgoa_721 struct {
 	quot int64
 	rem  int64
 }
 
+func __FLOAT_BITS_cgo722(__f float32) uint32 {
+	type _cgoa_723 struct {
+		__f float32
+	}
+	var __u _cgoa_723
+	__u.__f = __f
+	return *(*uint32)(unsafe.Pointer(&__u))
+}
+func __DOUBLE_BITS_cgo724(__f float64) uint64 {
+	type _cgoa_725 struct {
+		__f float64
+	}
+	var __u _cgoa_725
+	__u.__f = __f
+	return *(*uint64)(unsafe.Pointer(&__u))
+}
+func __islessf_cgo726(__x float32, __y float32) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 4 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo722(__x)&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 4 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo724(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 4 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo722(__y)&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 4 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo724(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x < __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isless_cgo727(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo722(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo724(__x)&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo722(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo724(__y)&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x < __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessl_cgo728(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo722(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo724(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(__x) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo722(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo724(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(__y) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x < __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessequalf_cgo729(__x float32, __y float32) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 4 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo722(__x)&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 4 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo724(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 4 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo722(__y)&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 4 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo724(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x <= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessequal_cgo730(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo722(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo724(__x)&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo722(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo724(__y)&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x <= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessequall_cgo731(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo722(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo724(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(__x) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo722(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo724(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(__y) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x <= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessgreaterf_cgo732(__x float32, __y float32) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 4 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo722(__x)&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 4 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo724(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 4 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo722(__y)&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 4 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo724(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x != __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessgreater_cgo733(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo722(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo724(__x)&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo722(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo724(__y)&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x != __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __islessgreaterl_cgo734(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo722(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo724(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(__x) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo722(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo724(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(__y) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x != __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreaterf_cgo735(__x float32, __y float32) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 4 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo722(__x)&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 4 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo724(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 4 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo722(__y)&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 4 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo724(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x > __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreater_cgo736(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo722(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo724(__x)&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo722(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo724(__y)&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x > __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreaterl_cgo737(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo722(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo724(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(__x) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo722(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo724(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(__y) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x > __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreaterequalf_cgo738(__x float32, __y float32) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 4 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo722(__x)&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 4 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo724(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 4 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo722(__y)&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 4 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo724(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x >= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreaterequal_cgo739(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo722(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo724(__x)&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(float64(__x)) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo722(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo724(__y)&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(float64(__y)) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x >= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+func __isgreaterequall_cgo740(__x float64, __y float64) int32 {
+	return func() int32 {
+		if !(func() int32 {
+			if func() int32 {
+				if 8 == 4 {
+					return func() int32 {
+						if __FLOAT_BITS_cgo722(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+							return 1
+						} else {
+							return 0
+						}
+					}()
+				} else {
+					return func() int32 {
+						if 8 == 8 {
+							return func() int32 {
+								if __DOUBLE_BITS_cgo724(float64(__x))&18446744073709551615 > 2047<<52 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						} else {
+							return func() int32 {
+								if __fpclassifyl(__x) == 0 {
+									return 1
+								} else {
+									return 0
+								}
+							}()
+						}
+					}()
+				}
+			}() != 0 {
+				return int32(func() int {
+					func() int {
+						_ = __y
+						return 0
+					}()
+					return 1
+				}())
+			} else {
+				return func() int32 {
+					if 8 == 4 {
+						return func() int32 {
+							if __FLOAT_BITS_cgo722(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+								return 1
+							} else {
+								return 0
+							}
+						}()
+					} else {
+						return func() int32 {
+							if 8 == 8 {
+								return func() int32 {
+									if __DOUBLE_BITS_cgo724(float64(__y))&18446744073709551615 > 2047<<52 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							} else {
+								return func() int32 {
+									if __fpclassifyl(__y) == 0 {
+										return 1
+									} else {
+										return 0
+									}
+								}()
+							}
+						}()
+					}
+				}()
+			}
+		}() != 0) && __x >= __y {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
 
 
 
-type _cgoa_478 struct {
+
+
+type _cgoa_757 struct {
 	__i [14]int32
 }
 
-type _cgoa_480 struct {
+type _cgoa_759 struct {
 	__i [10]int32
 }
 
-type _cgoa_482 struct {
+type _cgoa_761 struct {
 	__i [12]int32
 }
 
-type _cgoa_484 struct {
+type _cgoa_763 struct {
 	__i [14]int32
 }
 
-type _cgoa_486 struct {
+type _cgoa_765 struct {
 	__i [8]int32
 }
 
@@ -2355,23 +10231,23 @@ type _cgoa_486 struct {
 
 
 
-type _cgoa_492 struct {
+type _cgoa_771 struct {
 	__i [14]int32
 }
 
-type _cgoa_494 struct {
+type _cgoa_773 struct {
 	__i [10]int32
 }
 
-type _cgoa_496 struct {
+type _cgoa_775 struct {
 	__i [12]int32
 }
 
-type _cgoa_498 struct {
+type _cgoa_777 struct {
 	__i [14]int32
 }
 
-type _cgoa_500 struct {
+type _cgoa_779 struct {
 	__i [8]int32
 }
 

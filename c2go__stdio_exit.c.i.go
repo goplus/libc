@@ -2,9 +2,9 @@ package libc
 
 import unsafe "unsafe"
 
-var dummy_file_cgo278 *struct__IO_FILE = nil
+var dummy_file_cgo513 *struct__IO_FILE = nil
 
-func close_file(f *struct__IO_FILE) {
+func close_file_cgo514(f *struct__IO_FILE) {
 	if !(f != nil) {
 		return
 	}
@@ -25,9 +25,9 @@ func close_file(f *struct__IO_FILE) {
 func __stdio_exit() {
 	var f *struct__IO_FILE
 	for f = *__ofl_lock(); f != nil; f = f.next {
-		close_file(f)
+		close_file_cgo514(f)
 	}
-	close_file(__stdin_used)
-	close_file(__stdout_used)
-	close_file(__stderr_used)
+	close_file_cgo514(__stdin_used)
+	close_file_cgo514(__stdout_used)
+	close_file_cgo514(__stderr_used)
 }
