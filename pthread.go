@@ -12,12 +12,11 @@ var (
 
 func __pthread_self() (self *struct___pthread) {
 	id := goid.Get()
-	ret, ok := c2go_gtls.Load(id)
-	if !ok {
+	if ret, ok := c2go_gtls.Load(id); ok {
+		self = ret.(*struct___pthread)
+	} else {
 		self = &struct___pthread{tid: int32(id)}
 		c2go_gtls.Store(id, self)
-	} else {
-		self = ret.(*struct___pthread)
 	}
 	return
 }
