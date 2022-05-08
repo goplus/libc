@@ -10,8 +10,7 @@ var (
 	c2go_gtls sync.Map
 )
 
-func __pthread_self() *struct___pthread {
-	var self *struct___pthread
+func __pthread_self() (self *struct___pthread) {
 	id := goid.Get()
 	ret, ok := c2go_gtls.Load(id)
 	if !ok {
@@ -20,5 +19,5 @@ func __pthread_self() *struct___pthread {
 	} else {
 		self = ret.(*struct___pthread)
 	}
-	return self
+	return
 }
