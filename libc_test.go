@@ -39,3 +39,10 @@ func TestSprintf(t *testing.T) {
 		t.Fatal("TestSprintf:", s)
 	}
 }
+
+func TestFprintf(t *testing.T) {
+	n := Fprintf(Stderr, C("Hi %-7.1f!\n"), 3.1415926)
+	if n != 12 {
+		t.Fatal("TestFprintf:", n)
+	}
+}
