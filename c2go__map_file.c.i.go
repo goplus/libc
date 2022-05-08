@@ -5,7 +5,7 @@ import unsafe "unsafe"
 func __map_file(pathname *int8, size *uint64) *uint8 {
 	var st struct_kstat
 	var map_ *uint8 = (*uint8)(unsafe.Pointer(uintptr(18446744073709551615)))
-	var fd int32 = int32(__syscall_ret(uint64(__syscall2(int64(5), int64(uintptr(unsafe.Pointer(pathname))), int64(0|524288|2048|131072)))))
+	var fd int32 = int32(__syscall2_r1(int64(5), int64(uintptr(unsafe.Pointer(pathname))), int64(0|524288|2048|131072)))
 	if fd < 0 {
 		return (*uint8)(nil)
 	}
