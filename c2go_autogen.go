@@ -11,9 +11,6 @@ func __aio_close(int32) int32 {
 func __futexwait(addr unsafe.Pointer, val int32, priv int32) {
 	panic("notimpl")
 }
-func __libc_malloc(uint64) unsafe.Pointer {
-	panic("notimpl")
-}
 func __lock(*int32) {
 	panic("notimpl")
 }
