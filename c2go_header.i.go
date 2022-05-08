@@ -96,6 +96,7 @@ type struct___ptcb struct {
 type struct___pthread struct {
 	tid       int32
 	errno_val int32
+	sys_r1    int64
 	locale    *struct___locale_struct
 }
 type wchar_t = uint32

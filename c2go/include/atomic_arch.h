@@ -1,5 +1,5 @@
-#ifndef _C2GO_ATOMIC_H
-#define _C2GO_ATOMIC_H
+#ifndef _C2GO_ATOMIC_ARCH_H
+#define _C2GO_ATOMIC_ARCH_H
 
 #define a_ll a_ll
 int a_ll(volatile int *p);

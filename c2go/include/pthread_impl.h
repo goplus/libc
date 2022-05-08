@@ -9,6 +9,7 @@
 struct pthread {
 	int tid;
 	int errno_val;
+	long sys_r1; // syscall_ret r1
 	locale_t locale;
 };
 

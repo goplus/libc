@@ -9,7 +9,7 @@ func __map_file(pathname *int8, size *uint64) *uint8 {
 	if fd < 0 {
 		return (*uint8)(nil)
 	}
-	if !(__syscall_ret(uint64(__syscall2(int64(339), int64(fd), int64(uintptr(unsafe.Pointer(&st)))))) != 0) {
+	if !(__syscall2_r1(int64(339), int64(fd), int64(uintptr(unsafe.Pointer(&st)))) != 0) {
 		map_ = (*uint8)(__mmap(nil, uint64(st.st_size), 1, 1, fd, int64(0)))
 		*size = uint64(st.st_size)
 	}
