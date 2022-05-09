@@ -1,6 +1,12 @@
 libc - Porting libc from C to Go
 ======
 
+[![Build Status](https://github.com/goplus/libc/actions/workflows/go.yml/badge.svg)](https://github.com/goplus/libc/actions/workflows/go.yml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/goplus/libc)](https://goreportcard.com/report/github.com/goplus/libc)
+[![GitHub release](https://img.shields.io/github/v/tag/goplus/libc.svg?label=release)](https://github.com/goplus/libc/releases)
+[![Coverage Status](https://codecov.io/gh/goplus/libc/branch/main/graph/badge.svg)](https://codecov.io/gh/goplus/libc)
+[![GoDoc](https://pkg.go.dev/badge/github.com/goplus/libc.svg)](https://pkg.go.dev/mod/github.com/goplus/libc)
+
 This is a subproject of [the c2go project](https://github.com/goplus/c2go).
 
 ## What's our plan?
