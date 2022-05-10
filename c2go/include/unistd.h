@@ -24,6 +24,9 @@
 
 off_t __lseek(int, off_t, int);
 
+ssize_t write(int, const void *, size_t);
+ssize_t pwrite(int, const void *, size_t, off_t);
+
 extern char **__environ;
 
 #endif // _C2GO_UNISTD_H
