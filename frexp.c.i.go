@@ -3,10 +3,10 @@ package libc
 import unsafe "unsafe"
 
 func Frexp(x float64, e *int32) float64 {
-	type _cgoa_252 struct {
+	type _cgoa_126 struct {
 		d float64
 	}
-	var y _cgoa_252
+	var y _cgoa_126
 	y.d = x
 	var ee int32 = int32(*(*uint64)(unsafe.Pointer(&y)) >> 52 & uint64(2047))
 	if !(ee != 0) {
