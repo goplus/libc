@@ -169,25 +169,15 @@ type struct___libc struct {
 
 
 
-type _cgoa_23 struct {
-	__i [14]int32
-}
 
-type _cgoa_25 struct {
-	__i [10]int32
-}
 
-type _cgoa_27 struct {
-	__i [12]int32
-}
 
-type _cgoa_29 struct {
-	__i [14]int32
-}
 
-type _cgoa_31 struct {
-	__i [8]int32
-}
+
+
+
+
+
 
 type _cgoa_32 struct {
 	__ll int64
@@ -234,49 +224,29 @@ type struct___locale_map struct {
 
 
 
-type _cgoa_43 struct {
-	__i [14]int32
-}
-
-type _cgoa_45 struct {
-	__i [10]int32
-}
-
-type _cgoa_47 struct {
-	__i [12]int32
-}
-
-type _cgoa_49 struct {
-	__i [14]int32
-}
-
-type _cgoa_51 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_57 struct {
-	__i [14]int32
-}
 
-type _cgoa_59 struct {
-	__i [10]int32
-}
 
-type _cgoa_61 struct {
-	__i [12]int32
-}
 
-type _cgoa_63 struct {
-	__i [14]int32
-}
 
-type _cgoa_65 struct {
-	__i [8]int32
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 type float_t = float32
 type Float_t = float32
@@ -1559,25 +1529,15 @@ type uint_fast32_t = uint32
 
 
 
-type _cgoa_74 struct {
-	__i [14]int32
-}
 
-type _cgoa_76 struct {
-	__i [10]int32
-}
 
-type _cgoa_78 struct {
-	__i [12]int32
-}
 
-type _cgoa_80 struct {
-	__i [14]int32
-}
 
-type _cgoa_82 struct {
-	__i [8]int32
-}
+
+
+
+
+
 
 
 func __bswap16(__x uint16) uint16 {
@@ -1632,121 +1592,71 @@ func fp_force_evall(x float64) {
 
 
 
-type _cgoa_88 struct {
-	__i [14]int32
-}
-
-type _cgoa_90 struct {
-	__i [10]int32
-}
-
-type _cgoa_92 struct {
-	__i [12]int32
-}
-
-type _cgoa_94 struct {
-	__i [14]int32
-}
-
-type _cgoa_96 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_103 struct {
-	__i [14]int32
-}
-
-type _cgoa_105 struct {
-	__i [10]int32
-}
-
-type _cgoa_107 struct {
-	__i [12]int32
-}
-
-type _cgoa_109 struct {
-	__i [14]int32
-}
-
-type _cgoa_111 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_117 struct {
-	__i [14]int32
-}
-
-type _cgoa_119 struct {
-	__i [10]int32
-}
-
-type _cgoa_121 struct {
-	__i [12]int32
-}
-
-type _cgoa_123 struct {
-	__i [14]int32
-}
-
-type _cgoa_125 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_132 struct {
-	__i [14]int32
-}
-
-type _cgoa_134 struct {
-	__i [10]int32
-}
-
-type _cgoa_136 struct {
-	__i [12]int32
-}
-
-type _cgoa_138 struct {
-	__i [14]int32
-}
-
-type _cgoa_140 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_146 struct {
-	__i [14]int32
-}
 
-type _cgoa_148 struct {
-	__i [10]int32
-}
 
-type _cgoa_150 struct {
-	__i [12]int32
-}
 
-type _cgoa_152 struct {
-	__i [14]int32
-}
 
-type _cgoa_154 struct {
-	__i [8]int32
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 func __isspace(_c int32) int32 {
@@ -1763,265 +1673,155 @@ func __isspace(_c int32) int32 {
 
 
 
-type _cgoa_160 struct {
-	__i [14]int32
-}
 
-type _cgoa_162 struct {
-	__i [10]int32
-}
 
-type _cgoa_164 struct {
-	__i [12]int32
-}
 
-type _cgoa_166 struct {
-	__i [14]int32
-}
 
-type _cgoa_168 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_174 struct {
-	__i [14]int32
-}
 
-type _cgoa_176 struct {
-	__i [10]int32
-}
 
-type _cgoa_178 struct {
-	__i [12]int32
-}
 
-type _cgoa_180 struct {
-	__i [14]int32
-}
 
-type _cgoa_182 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_188 struct {
-	__i [14]int32
-}
 
-type _cgoa_190 struct {
-	__i [10]int32
-}
 
-type _cgoa_192 struct {
-	__i [12]int32
-}
 
-type _cgoa_194 struct {
-	__i [14]int32
-}
 
-type _cgoa_196 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_202 struct {
-	__i [14]int32
-}
 
-type _cgoa_204 struct {
-	__i [10]int32
-}
 
-type _cgoa_206 struct {
-	__i [12]int32
-}
 
-type _cgoa_208 struct {
-	__i [14]int32
-}
 
-type _cgoa_210 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_216 struct {
-	__i [14]int32
-}
 
-type _cgoa_218 struct {
-	__i [10]int32
-}
 
-type _cgoa_220 struct {
-	__i [12]int32
-}
 
-type _cgoa_222 struct {
-	__i [14]int32
-}
 
-type _cgoa_224 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_230 struct {
-	__i [14]int32
-}
 
-type _cgoa_232 struct {
-	__i [10]int32
-}
 
-type _cgoa_234 struct {
-	__i [12]int32
-}
 
-type _cgoa_236 struct {
-	__i [14]int32
-}
 
-type _cgoa_238 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_244 struct {
-	__i [14]int32
-}
 
-type _cgoa_246 struct {
-	__i [10]int32
-}
 
-type _cgoa_248 struct {
-	__i [12]int32
-}
 
-type _cgoa_250 struct {
-	__i [14]int32
-}
 
-type _cgoa_252 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_258 struct {
-	__i [14]int32
-}
 
-type _cgoa_260 struct {
-	__i [10]int32
-}
 
-type _cgoa_262 struct {
-	__i [12]int32
-}
 
-type _cgoa_264 struct {
-	__i [14]int32
-}
 
-type _cgoa_266 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_272 struct {
-	__i [14]int32
-}
 
-type _cgoa_274 struct {
-	__i [10]int32
-}
 
-type _cgoa_276 struct {
-	__i [12]int32
-}
 
-type _cgoa_278 struct {
-	__i [14]int32
-}
 
-type _cgoa_280 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_286 struct {
-	__i [14]int32
-}
 
-type _cgoa_288 struct {
-	__i [10]int32
-}
 
-type _cgoa_290 struct {
-	__i [12]int32
-}
 
-type _cgoa_292 struct {
-	__i [14]int32
-}
 
-type _cgoa_294 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_300 struct {
-	__i [14]int32
-}
 
-type _cgoa_302 struct {
-	__i [10]int32
-}
 
-type _cgoa_304 struct {
-	__i [12]int32
-}
 
-type _cgoa_306 struct {
-	__i [14]int32
-}
 
-type _cgoa_308 struct {
-	__i [8]int32
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 type uid_t = uint32
 type Uid_t = uint32
@@ -2033,25 +1833,6 @@ type Useconds_t = uint32
 
 
 
-type _cgoa_314 struct {
-	__i [14]int32
-}
-
-type _cgoa_316 struct {
-	__i [10]int32
-}
-
-type _cgoa_318 struct {
-	__i [12]int32
-}
-
-type _cgoa_320 struct {
-	__i [14]int32
-}
-
-type _cgoa_322 struct {
-	__i [8]int32
-}
 
 
 
@@ -2060,25 +1841,24 @@ type _cgoa_322 struct {
 
 
 
-type _cgoa_331 struct {
-	__i [14]int32
-}
 
-type _cgoa_333 struct {
-	__i [10]int32
-}
 
-type _cgoa_335 struct {
-	__i [12]int32
-}
 
-type _cgoa_337 struct {
-	__i [14]int32
-}
 
-type _cgoa_339 struct {
-	__i [8]int32
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 type mode_t = uint32
 type Mode_t = uint32
@@ -2101,49 +1881,29 @@ func __alt_socketcall(sys int32, sock int32, cp int32, a int64, b int64, c int64
 
 
 
-type _cgoa_346 struct {
-	__i [14]int32
-}
-
-type _cgoa_348 struct {
-	__i [10]int32
-}
-
-type _cgoa_350 struct {
-	__i [12]int32
-}
-
-type _cgoa_352 struct {
-	__i [14]int32
-}
-
-type _cgoa_354 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_361 struct {
-	__i [14]int32
-}
 
-type _cgoa_363 struct {
-	__i [10]int32
-}
 
-type _cgoa_365 struct {
-	__i [12]int32
-}
 
-type _cgoa_367 struct {
-	__i [14]int32
-}
 
-type _cgoa_369 struct {
-	__i [8]int32
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 type struct_flock struct {
 	l_type   int16
@@ -2212,49 +1972,19 @@ type struct_kstat struct {
 
 
 
-type _cgoa_376 struct {
-	__i [14]int32
-}
 
-type _cgoa_378 struct {
-	__i [10]int32
-}
 
-type _cgoa_380 struct {
-	__i [12]int32
-}
 
-type _cgoa_382 struct {
-	__i [14]int32
-}
 
-type _cgoa_384 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_391 struct {
-	__i [14]int32
-}
 
-type _cgoa_393 struct {
-	__i [10]int32
-}
 
-type _cgoa_395 struct {
-	__i [12]int32
-}
 
-type _cgoa_397 struct {
-	__i [14]int32
-}
 
-type _cgoa_399 struct {
-	__i [8]int32
-}
 
 
 
@@ -2263,25 +1993,10 @@ type _cgoa_399 struct {
 
 
 
-type _cgoa_409 struct {
-	__i [14]int32
-}
 
-type _cgoa_411 struct {
-	__i [10]int32
-}
 
-type _cgoa_413 struct {
-	__i [12]int32
-}
 
-type _cgoa_415 struct {
-	__i [14]int32
-}
 
-type _cgoa_417 struct {
-	__i [8]int32
-}
 
 
 
@@ -2290,25 +2005,10 @@ type _cgoa_417 struct {
 
 
 
-type _cgoa_427 struct {
-	__i [14]int32
-}
 
-type _cgoa_429 struct {
-	__i [10]int32
-}
 
-type _cgoa_431 struct {
-	__i [12]int32
-}
 
-type _cgoa_433 struct {
-	__i [14]int32
-}
 
-type _cgoa_435 struct {
-	__i [8]int32
-}
 
 
 
@@ -2317,73 +2017,63 @@ type _cgoa_435 struct {
 
 
 
-type _cgoa_445 struct {
-	__i [14]int32
-}
 
-type _cgoa_447 struct {
-	__i [10]int32
-}
 
-type _cgoa_449 struct {
-	__i [12]int32
-}
 
-type _cgoa_451 struct {
-	__i [14]int32
-}
 
-type _cgoa_453 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_459 struct {
-	__i [14]int32
-}
 
-type _cgoa_461 struct {
-	__i [10]int32
-}
 
-type _cgoa_463 struct {
-	__i [12]int32
-}
 
-type _cgoa_465 struct {
-	__i [14]int32
-}
 
-type _cgoa_467 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_473 struct {
-	__i [14]int32
-}
 
-type _cgoa_475 struct {
-	__i [10]int32
-}
 
-type _cgoa_477 struct {
-	__i [12]int32
-}
 
-type _cgoa_479 struct {
-	__i [14]int32
-}
 
-type _cgoa_481 struct {
-	__i [8]int32
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 type struct__IO_FILE struct {
 	flags        uint32
@@ -2422,169 +2112,99 @@ type struct__IO_FILE struct {
 
 
 
-type _cgoa_488 struct {
-	__i [14]int32
-}
-
-type _cgoa_490 struct {
-	__i [10]int32
-}
-
-type _cgoa_492 struct {
-	__i [12]int32
-}
-
-type _cgoa_494 struct {
-	__i [14]int32
-}
-
-type _cgoa_496 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_502 struct {
-	__i [14]int32
-}
-
-type _cgoa_504 struct {
-	__i [10]int32
-}
-
-type _cgoa_506 struct {
-	__i [12]int32
-}
-
-type _cgoa_508 struct {
-	__i [14]int32
-}
-
-type _cgoa_510 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_516 struct {
-	__i [14]int32
-}
-
-type _cgoa_518 struct {
-	__i [10]int32
-}
-
-type _cgoa_520 struct {
-	__i [12]int32
-}
-
-type _cgoa_522 struct {
-	__i [14]int32
-}
-
-type _cgoa_524 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_530 struct {
-	__i [14]int32
-}
-
-type _cgoa_532 struct {
-	__i [10]int32
-}
-
-type _cgoa_534 struct {
-	__i [12]int32
-}
-
-type _cgoa_536 struct {
-	__i [14]int32
-}
-
-type _cgoa_538 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_546 struct {
-	__i [14]int32
-}
-
-type _cgoa_548 struct {
-	__i [10]int32
-}
-
-type _cgoa_550 struct {
-	__i [12]int32
-}
-
-type _cgoa_552 struct {
-	__i [14]int32
-}
-
-type _cgoa_554 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_560 struct {
-	__i [14]int32
-}
-
-type _cgoa_562 struct {
-	__i [10]int32
-}
-
-type _cgoa_564 struct {
-	__i [12]int32
-}
-
-type _cgoa_566 struct {
-	__i [14]int32
-}
-
-type _cgoa_568 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_574 struct {
-	__i [14]int32
-}
 
-type _cgoa_576 struct {
-	__i [10]int32
-}
 
-type _cgoa_578 struct {
-	__i [12]int32
-}
 
-type _cgoa_580 struct {
-	__i [14]int32
-}
 
-type _cgoa_582 struct {
-	__i [8]int32
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 type struct_iovec struct {
 	iov_base unsafe.Pointer
@@ -2594,97 +2214,57 @@ type struct_iovec struct {
 
 
 
-type _cgoa_588 struct {
-	__i [14]int32
-}
-
-type _cgoa_590 struct {
-	__i [10]int32
-}
-
-type _cgoa_592 struct {
-	__i [12]int32
-}
-
-type _cgoa_594 struct {
-	__i [14]int32
-}
-
-type _cgoa_596 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_602 struct {
-	__i [14]int32
-}
-
-type _cgoa_604 struct {
-	__i [10]int32
-}
-
-type _cgoa_606 struct {
-	__i [12]int32
-}
-
-type _cgoa_608 struct {
-	__i [14]int32
-}
-
-type _cgoa_610 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_616 struct {
-	__i [14]int32
-}
-
-type _cgoa_618 struct {
-	__i [10]int32
-}
-
-type _cgoa_620 struct {
-	__i [12]int32
-}
-
-type _cgoa_622 struct {
-	__i [14]int32
-}
-
-type _cgoa_624 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_631 struct {
-	__i [14]int32
-}
 
-type _cgoa_633 struct {
-	__i [10]int32
-}
 
-type _cgoa_635 struct {
-	__i [12]int32
-}
 
-type _cgoa_637 struct {
-	__i [14]int32
-}
 
-type _cgoa_639 struct {
-	__i [8]int32
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 type struct_winsize struct {
 	ws_row    uint16
@@ -2696,145 +2276,85 @@ type struct_winsize struct {
 
 
 
-type _cgoa_645 struct {
-	__i [14]int32
-}
-
-type _cgoa_647 struct {
-	__i [10]int32
-}
-
-type _cgoa_649 struct {
-	__i [12]int32
-}
-
-type _cgoa_651 struct {
-	__i [14]int32
-}
-
-type _cgoa_653 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_661 struct {
-	__i [14]int32
-}
-
-type _cgoa_663 struct {
-	__i [10]int32
-}
-
-type _cgoa_665 struct {
-	__i [12]int32
-}
-
-type _cgoa_667 struct {
-	__i [14]int32
-}
-
-type _cgoa_669 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_676 struct {
-	__i [14]int32
-}
-
-type _cgoa_678 struct {
-	__i [10]int32
-}
-
-type _cgoa_680 struct {
-	__i [12]int32
-}
-
-type _cgoa_682 struct {
-	__i [14]int32
-}
-
-type _cgoa_684 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_691 struct {
-	__i [14]int32
-}
-
-type _cgoa_693 struct {
-	__i [10]int32
-}
-
-type _cgoa_695 struct {
-	__i [12]int32
-}
-
-type _cgoa_697 struct {
-	__i [14]int32
-}
-
-type _cgoa_699 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_706 struct {
-	__i [14]int32
-}
-
-type _cgoa_708 struct {
-	__i [10]int32
-}
-
-type _cgoa_710 struct {
-	__i [12]int32
-}
-
-type _cgoa_712 struct {
-	__i [14]int32
-}
-
-type _cgoa_714 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_720 struct {
-	__i [14]int32
-}
 
-type _cgoa_722 struct {
-	__i [10]int32
-}
 
-type _cgoa_724 struct {
-	__i [12]int32
-}
 
-type _cgoa_726 struct {
-	__i [14]int32
-}
 
-type _cgoa_728 struct {
-	__i [8]int32
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2858,47 +2378,27 @@ type _cgoa_733 struct {
 
 
 
-type _cgoa_750 struct {
-	__i [14]int32
-}
-
-type _cgoa_752 struct {
-	__i [10]int32
-}
-
-type _cgoa_754 struct {
-	__i [12]int32
-}
-
-type _cgoa_756 struct {
-	__i [14]int32
-}
-
-type _cgoa_758 struct {
-	__i [8]int32
-}
 
 
 
 
 
-type _cgoa_764 struct {
-	__i [14]int32
-}
 
-type _cgoa_766 struct {
-	__i [10]int32
-}
 
-type _cgoa_768 struct {
-	__i [12]int32
-}
 
-type _cgoa_770 struct {
-	__i [14]int32
-}
 
-type _cgoa_772 struct {
-	__i [8]int32
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
