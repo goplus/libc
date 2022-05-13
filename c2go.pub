@@ -9,7 +9,9 @@ strnlen
 strlen
 strncmp
 strcmp
+strcpy
 strerror
+write
 fwrite
 vsnprintf
 vsprintf

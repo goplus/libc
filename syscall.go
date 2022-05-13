@@ -81,6 +81,10 @@ func __syscall6_r1(n int64, a int64, b int64, c int64, d int64, e int64, f int64
 	return int64(r1)
 }
 
+func __syscall_cp(n int64, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+	return __syscall6(n, a, b, c, d, e, f)
+}
+
 func __syscall_ret(uint64) int64 {
 	return __pthread_self().sys_r1
 }

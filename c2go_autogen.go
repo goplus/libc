@@ -14,9 +14,6 @@ func __futexwait(addr unsafe.Pointer, val int32, priv int32) {
 func __lock(*int32) {
 	panic("notimpl")
 }
-func __syscall_cp(int64, int64, int64, int64, int64, int64, int64) int64 {
-	panic("notimpl")
-}
 func __unlock(*int32) {
 	panic("notimpl")
 }
