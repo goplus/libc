@@ -10,7 +10,7 @@ func __fwritex(s *uint8, l uint64, f *struct__IO_FILE) uint64 {
 	if l > uint64(uintptr(unsafe.Pointer(f.wend))-uintptr(unsafe.Pointer(f.wpos))) {
 		return f.write(f, s, l)
 	}
-	if f.lbf >= 0 {
+	if f.lbf >= int32(0) {
 		for i = l; i != 0 && int32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(s)) + uintptr(i-uint64(1))))) != '\n'; i-- {
 		}
 		if i != 0 {
@@ -33,10 +33,10 @@ func Fwrite(src unsafe.Pointer, size uint64, nmemb uint64, f *struct__IO_FILE) u
 		nmemb = uint64(0)
 	}
 	var __need_unlock int32 = func() int32 {
-		if f.lock >= 0 {
+		if f.lock >= int32(0) {
 			return __lockfile(f)
 		} else {
-			return 0
+			return int32(0)
 		}
 	}()
 	k = __fwritex((*uint8)(src), l, f)

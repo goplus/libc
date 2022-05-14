@@ -53,18 +53,18 @@ func __get_locale(cat int32, val *int8) *struct___locale_map {
 	}
 	for n = uint64(0); n < uint64(23) && int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(val)) + uintptr(n)))) != 0 && int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(val)) + uintptr(n)))) != '/'; n++ {
 	}
-	if int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(val)) + uintptr(0)))) == '.' || int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(val)) + uintptr(n)))) != 0 {
+	if int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(val)) + uintptr(int32(0))))) == '.' || int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(val)) + uintptr(n)))) != 0 {
 		val = (*int8)(unsafe.Pointer(&[8]int8{'C', '.', 'U', 'T', 'F', '-', '8', '\x00'}))
 	}
 	var builtin int32 = func() int32 {
-		if int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(val)) + uintptr(0)))) == 'C' && !(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(val)) + uintptr(1))) != 0) || !(Strcmp(val, (*int8)(unsafe.Pointer(&[8]int8{'C', '.', 'U', 'T', 'F', '-', '8', '\x00'}))) != 0) || !(Strcmp(val, (*int8)(unsafe.Pointer(&[6]int8{'P', 'O', 'S', 'I', 'X', '\x00'}))) != 0) {
+		if int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(val)) + uintptr(int32(0))))) == 'C' && !(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(val)) + uintptr(int32(1)))) != 0) || !(Strcmp(val, (*int8)(unsafe.Pointer(&[8]int8{'C', '.', 'U', 'T', 'F', '-', '8', '\x00'}))) != 0) || !(Strcmp(val, (*int8)(unsafe.Pointer(&[6]int8{'P', 'O', 'S', 'I', 'X', '\x00'}))) != 0) {
 			return 1
 		} else {
 			return 0
 		}
 	}()
 	if builtin != 0 {
-		if cat == 0 && int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(val)) + uintptr(1)))) == '.' {
+		if cat == int32(0) && int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(val)) + uintptr(int32(1))))) == '.' {
 			return (*struct___locale_map)(unsafe.Pointer(&__c_dot_utf8))
 		}
 		return (*struct___locale_map)(nil)
@@ -92,7 +92,7 @@ func __get_locale(cat int32, val *int8) *struct___locale_map {
 			}
 			Memcpy(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))), unsafe.Pointer(path), l)
 			*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf)))) + uintptr(l))) = int8('/')
-			Memcpy(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))+uintptr(l)))))+uintptr(1)))), unsafe.Pointer(val), n)
+			Memcpy(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))+uintptr(l)))))+uintptr(int32(1))))), unsafe.Pointer(val), n)
 			*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf)))) + uintptr(l+uint64(1)+n))) = int8(0)
 			var map_size uint64
 			var map_ unsafe.Pointer = unsafe.Pointer(__map_file((*int8)(unsafe.Pointer(&buf)), &map_size))
@@ -124,7 +124,7 @@ func __get_locale(cat int32, val *int8) *struct___locale_map {
 		new.next = (*struct___locale_map)(loc_head)
 		loc_head = unsafe.Pointer(new)
 	}
-	if !(new != nil) && cat == 0 {
+	if !(new != nil) && cat == int32(0) {
 		new = (*struct___locale_map)(unsafe.Pointer(&__c_dot_utf8))
 	}
 	return new

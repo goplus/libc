@@ -8,5 +8,5 @@ func __signbit(x float64) int32 {
 	}
 	var y _cgoa_97
 	y.d = x
-	return int32(*(*uint64)(unsafe.Pointer(&y)) >> 63)
+	return int32(*(*uint64)(unsafe.Pointer(&y)) >> int32(63))
 }

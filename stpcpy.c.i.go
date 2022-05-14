@@ -26,7 +26,7 @@ func __stpcpy(d *int8, s *int8) *int8 {
 		}
 		wd = (*uint64)(unsafe.Pointer(d))
 		ws = (*uint64)(unsafe.Pointer(s))
-		for ; !((*ws-uint64(18446744073709551615)/uint64(255)) & ^*ws & (uint64(18446744073709551615)/uint64(255)*uint64(255/2+1)) != 0); *func() (_cgo_ret *uint64) {
+		for ; !((*ws-72340172838076673) & ^*ws & 9259542123273814144 != 0); *func() (_cgo_ret *uint64) {
 			_cgo_addr := &wd
 			_cgo_ret = *_cgo_addr
 			*(*uintptr)(unsafe.Pointer(_cgo_addr)) += 8

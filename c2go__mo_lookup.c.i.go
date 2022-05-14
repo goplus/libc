@@ -5,7 +5,7 @@ import unsafe "unsafe"
 func swapc_cgo385(x uint32, c int32) uint32 {
 	return func() uint32 {
 		if c != 0 {
-			return x>>24 | x>>8&uint32(65280) | x<<8&uint32(16711680) | x<<24
+			return x>>int32(24) | x>>int32(8)&uint32(65280) | x<<int32(8)&uint32(16711680) | x<<int32(24)
 		} else {
 			return x
 		}
@@ -13,11 +13,11 @@ func swapc_cgo385(x uint32, c int32) uint32 {
 }
 func __mo_lookup(p unsafe.Pointer, size uint64, s *int8) *int8 {
 	var mo *uint32 = (*uint32)(p)
-	var sw int32 = int32(*mo - 2500072158)
+	var sw int32 = int32(*mo - uint32(2500072158))
 	var b uint32 = uint32(0)
-	var n uint32 = swapc_cgo385(*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer(mo)) + uintptr(2)*4)), sw)
-	var o uint32 = swapc_cgo385(*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer(mo)) + uintptr(3)*4)), sw)
-	var t uint32 = swapc_cgo385(*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer(mo)) + uintptr(4)*4)), sw)
+	var n uint32 = swapc_cgo385(*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer(mo)) + uintptr(int32(2))*4)), sw)
+	var o uint32 = swapc_cgo385(*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer(mo)) + uintptr(int32(3))*4)), sw)
+	var t uint32 = swapc_cgo385(*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer(mo)) + uintptr(int32(4))*4)), sw)
 	if uint64(n) >= size/uint64(4) || uint64(o) >= size-uint64(uint32(4)*n) || uint64(t) >= size-uint64(uint32(4)*n) || (o|t)%uint32(4) != 0 {
 		return (*int8)(nil)
 	}
@@ -39,7 +39,7 @@ func __mo_lookup(p unsafe.Pointer, size uint64, s *int8) *int8 {
 			return (*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(p))) + uintptr(ts)))
 		} else if n == uint32(1) {
 			return (*int8)(nil)
-		} else if sign < 0 {
+		} else if sign < int32(0) {
 			n /= uint32(2)
 		} else {
 			b += n / uint32(2)

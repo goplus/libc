@@ -3,10 +3,10 @@ package libc
 import unsafe "unsafe"
 
 func __towrite(f *struct__IO_FILE) int32 {
-	f.mode |= f.mode - 1
+	f.mode |= f.mode - int32(1)
 	if f.flags&uint32(8) != 0 {
 		f.flags |= uint32(32)
-		return int32(-1)
+		return -1
 	}
 	f.rpos = func() (_cgo_ret *uint8) {
 		_cgo_addr := &f.rend

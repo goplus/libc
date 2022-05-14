@@ -11,7 +11,7 @@ func Strlen(s *int8) uint64 {
 			return uint64(uintptr(unsafe.Pointer(s)) - uintptr(unsafe.Pointer(a)))
 		}
 	}
-	for w = (*uint64)(unsafe.Pointer(s)); !((*w-uint64(18446744073709551615)/uint64(255)) & ^*w & (uint64(18446744073709551615)/uint64(255)*uint64(255/2+1)) != 0); *(*uintptr)(unsafe.Pointer(&w)) += 8 {
+	for w = (*uint64)(unsafe.Pointer(s)); !((*w-72340172838076673) & ^*w & 9259542123273814144 != 0); *(*uintptr)(unsafe.Pointer(&w)) += 8 {
 	}
 	s = (*int8)(unsafe.Pointer(w))
 	for ; *s != 0; *(*uintptr)(unsafe.Pointer(&s))++ {

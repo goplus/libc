@@ -9,17 +9,17 @@ func close_file_cgo540(f *struct__IO_FILE) {
 		return
 	}
 	func() int32 {
-		if f.lock >= 0 {
+		if f.lock >= int32(0) {
 			return __lockfile(f)
 		} else {
-			return 0
+			return int32(0)
 		}
 	}()
 	if uintptr(unsafe.Pointer(f.wpos)) != uintptr(unsafe.Pointer(f.wbase)) {
 		f.write(f, nil, uint64(0))
 	}
 	if uintptr(unsafe.Pointer(f.rpos)) != uintptr(unsafe.Pointer(f.rend)) {
-		f.seek(f, int64(uintptr(unsafe.Pointer(f.rpos))-uintptr(unsafe.Pointer(f.rend))), 1)
+		f.seek(f, int64(uintptr(unsafe.Pointer(f.rpos))-uintptr(unsafe.Pointer(f.rend))), int32(1))
 	}
 }
 func __stdio_exit() {

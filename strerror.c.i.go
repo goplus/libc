@@ -99,11 +99,11 @@ var errmsgidx_cgo37 [132]uint16 = [132]uint16{uint16(0), uint16(109), uint16(133
 
 func __strerror_l(e int32, loc *struct___locale_struct) *int8 {
 	var s *int8
-	if uint64(e) >= 264/2 {
+	if uint64(e) >= 132 {
 		e = int32(0)
 	}
 	s = (*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&errmsgstr_cgo36)))) + uintptr(int32(*(*uint16)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint16)(unsafe.Pointer(&errmsgidx_cgo37)))) + uintptr(e)*2))))))
-	return (*int8)(unsafe.Pointer(__lctrans(s, *(**struct___locale_map)(unsafe.Pointer(uintptr(unsafe.Pointer((**struct___locale_map)(unsafe.Pointer(&loc.cat)))) + uintptr(5)*8)))))
+	return (*int8)(unsafe.Pointer(__lctrans(s, *(**struct___locale_map)(unsafe.Pointer(uintptr(unsafe.Pointer((**struct___locale_map)(unsafe.Pointer(&loc.cat)))) + uintptr(int32(5))*8)))))
 }
 func Strerror(e int32) *int8 {
 	return __strerror_l(e, __pthread_self().locale)
