@@ -1578,7 +1578,7 @@ type blksize_t = int64
 type Blksize_t = int64
 type blkcnt_t = int64
 type Blkcnt_t = int64
-type _cgoa_370 struct {
+type _cgoa_566 struct {
 	tv_sec  int64
 	tv_nsec int64
 }
@@ -1595,9 +1595,9 @@ type struct_stat struct {
 	st_size            int64
 	st_blksize         int64
 	st_blocks          int64
-	__st_atim32        _cgoa_370
-	__st_mtim32        _cgoa_370
-	__st_ctim32        _cgoa_370
+	__st_atim32        _cgoa_566
+	__st_mtim32        _cgoa_566
+	__st_ctim32        _cgoa_566
 	st_ino             uint64
 	st_atim            struct_timespec
 	st_mtim            struct_timespec
@@ -1677,7 +1677,7 @@ type struct___mbstate_t struct {
 }
 type mbstate_t = struct___mbstate_t
 type Mbstate_t = struct___mbstate_t
-type _cgoa_733 struct {
+type _cgoa_929 struct {
 	quot int64
 	rem  int64
 }

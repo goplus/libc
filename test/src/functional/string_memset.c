@@ -53,7 +53,7 @@ static void test_value(int c)
 
 int main(void)
 {
-	int i,j,k;
+	int i,j;
 
 	pmemset = memset;
 
