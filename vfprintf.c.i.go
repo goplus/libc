@@ -54,9 +54,13 @@ func pop_arg_cgo735(arg *union_arg, type_ int32, ap *[]interface {
 	case INT:
 		arg.i = uint64(func(__cgo_args []interface {
 		}) (_cgo_ret int32) {
-			_cgo_ret, _cgo_ok := __cgo_args[0].(int32)
-			if !_cgo_ok {
-				_cgo_ret = int32(__cgo_args[0].(uint32))
+			switch _cgo_tag := __cgo_args[0].(type) {
+			case int32:
+				_cgo_ret = _cgo_tag
+			case uint32:
+				_cgo_ret = int32(_cgo_tag)
+			case uint64:
+				_cgo_ret = int32(_cgo_tag)
 			}
 			*ap = __cgo_args[1:]
 			return
@@ -65,9 +69,11 @@ func pop_arg_cgo735(arg *union_arg, type_ int32, ap *[]interface {
 	case UINT:
 		arg.i = uint64(func(__cgo_args []interface {
 		}) (_cgo_ret uint32) {
-			_cgo_ret, _cgo_ok := __cgo_args[0].(uint32)
-			if !_cgo_ok {
-				_cgo_ret = uint32(__cgo_args[0].(int32))
+			switch _cgo_tag := __cgo_args[0].(type) {
+			case uint32:
+				_cgo_ret = _cgo_tag
+			case int32:
+				_cgo_ret = uint32(_cgo_tag)
 			}
 			*ap = __cgo_args[1:]
 			return
@@ -76,9 +82,11 @@ func pop_arg_cgo735(arg *union_arg, type_ int32, ap *[]interface {
 	case LONG:
 		arg.i = uint64(func(__cgo_args []interface {
 		}) (_cgo_ret int64) {
-			_cgo_ret, _cgo_ok := __cgo_args[0].(int64)
-			if !_cgo_ok {
-				_cgo_ret = int64(__cgo_args[0].(uint64))
+			switch _cgo_tag := __cgo_args[0].(type) {
+			case int64:
+				_cgo_ret = _cgo_tag
+			case uint64:
+				_cgo_ret = int64(_cgo_tag)
 			}
 			*ap = __cgo_args[1:]
 			return
@@ -87,9 +95,11 @@ func pop_arg_cgo735(arg *union_arg, type_ int32, ap *[]interface {
 	case ULONG:
 		arg.i = uint64(func(__cgo_args []interface {
 		}) (_cgo_ret uint64) {
-			_cgo_ret, _cgo_ok := __cgo_args[0].(uint64)
-			if !_cgo_ok {
-				_cgo_ret = uint64(__cgo_args[0].(int64))
+			switch _cgo_tag := __cgo_args[0].(type) {
+			case uint64:
+				_cgo_ret = _cgo_tag
+			case int64:
+				_cgo_ret = uint64(_cgo_tag)
 			}
 			*ap = __cgo_args[1:]
 			return
@@ -98,9 +108,11 @@ func pop_arg_cgo735(arg *union_arg, type_ int32, ap *[]interface {
 	case ULLONG:
 		arg.i = func(__cgo_args []interface {
 		}) (_cgo_ret uint64) {
-			_cgo_ret, _cgo_ok := __cgo_args[0].(uint64)
-			if !_cgo_ok {
-				_cgo_ret = uint64(__cgo_args[0].(int64))
+			switch _cgo_tag := __cgo_args[0].(type) {
+			case uint64:
+				_cgo_ret = _cgo_tag
+			case int64:
+				_cgo_ret = uint64(_cgo_tag)
 			}
 			*ap = __cgo_args[1:]
 			return
@@ -109,9 +121,13 @@ func pop_arg_cgo735(arg *union_arg, type_ int32, ap *[]interface {
 	case SHORT:
 		arg.i = uint64(int16(func(__cgo_args []interface {
 		}) (_cgo_ret int32) {
-			_cgo_ret, _cgo_ok := __cgo_args[0].(int32)
-			if !_cgo_ok {
-				_cgo_ret = int32(__cgo_args[0].(uint32))
+			switch _cgo_tag := __cgo_args[0].(type) {
+			case int32:
+				_cgo_ret = _cgo_tag
+			case uint32:
+				_cgo_ret = int32(_cgo_tag)
+			case uint64:
+				_cgo_ret = int32(_cgo_tag)
 			}
 			*ap = __cgo_args[1:]
 			return
@@ -120,9 +136,13 @@ func pop_arg_cgo735(arg *union_arg, type_ int32, ap *[]interface {
 	case USHORT:
 		arg.i = uint64(uint16(func(__cgo_args []interface {
 		}) (_cgo_ret int32) {
-			_cgo_ret, _cgo_ok := __cgo_args[0].(int32)
-			if !_cgo_ok {
-				_cgo_ret = int32(__cgo_args[0].(uint32))
+			switch _cgo_tag := __cgo_args[0].(type) {
+			case int32:
+				_cgo_ret = _cgo_tag
+			case uint32:
+				_cgo_ret = int32(_cgo_tag)
+			case uint64:
+				_cgo_ret = int32(_cgo_tag)
 			}
 			*ap = __cgo_args[1:]
 			return
@@ -131,9 +151,13 @@ func pop_arg_cgo735(arg *union_arg, type_ int32, ap *[]interface {
 	case CHAR:
 		arg.i = uint64(int8(func(__cgo_args []interface {
 		}) (_cgo_ret int32) {
-			_cgo_ret, _cgo_ok := __cgo_args[0].(int32)
-			if !_cgo_ok {
-				_cgo_ret = int32(__cgo_args[0].(uint32))
+			switch _cgo_tag := __cgo_args[0].(type) {
+			case int32:
+				_cgo_ret = _cgo_tag
+			case uint32:
+				_cgo_ret = int32(_cgo_tag)
+			case uint64:
+				_cgo_ret = int32(_cgo_tag)
 			}
 			*ap = __cgo_args[1:]
 			return
@@ -142,9 +166,13 @@ func pop_arg_cgo735(arg *union_arg, type_ int32, ap *[]interface {
 	case UCHAR:
 		arg.i = uint64(uint8(func(__cgo_args []interface {
 		}) (_cgo_ret int32) {
-			_cgo_ret, _cgo_ok := __cgo_args[0].(int32)
-			if !_cgo_ok {
-				_cgo_ret = int32(__cgo_args[0].(uint32))
+			switch _cgo_tag := __cgo_args[0].(type) {
+			case int32:
+				_cgo_ret = _cgo_tag
+			case uint32:
+				_cgo_ret = int32(_cgo_tag)
+			case uint64:
+				_cgo_ret = int32(_cgo_tag)
 			}
 			*ap = __cgo_args[1:]
 			return
@@ -153,9 +181,11 @@ func pop_arg_cgo735(arg *union_arg, type_ int32, ap *[]interface {
 	case LLONG:
 		arg.i = uint64(func(__cgo_args []interface {
 		}) (_cgo_ret int64) {
-			_cgo_ret, _cgo_ok := __cgo_args[0].(int64)
-			if !_cgo_ok {
-				_cgo_ret = int64(__cgo_args[0].(uint64))
+			switch _cgo_tag := __cgo_args[0].(type) {
+			case int64:
+				_cgo_ret = _cgo_tag
+			case uint64:
+				_cgo_ret = int64(_cgo_tag)
 			}
 			*ap = __cgo_args[1:]
 			return
@@ -164,9 +194,11 @@ func pop_arg_cgo735(arg *union_arg, type_ int32, ap *[]interface {
 	case SIZET:
 		arg.i = uint64(func(__cgo_args []interface {
 		}) (_cgo_ret uint64) {
-			_cgo_ret, _cgo_ok := __cgo_args[0].(uint64)
-			if !_cgo_ok {
-				_cgo_ret = uint64(__cgo_args[0].(int64))
+			switch _cgo_tag := __cgo_args[0].(type) {
+			case uint64:
+				_cgo_ret = _cgo_tag
+			case int64:
+				_cgo_ret = uint64(_cgo_tag)
 			}
 			*ap = __cgo_args[1:]
 			return
@@ -175,9 +207,11 @@ func pop_arg_cgo735(arg *union_arg, type_ int32, ap *[]interface {
 	case IMAX:
 		arg.i = uint64(func(__cgo_args []interface {
 		}) (_cgo_ret int64) {
-			_cgo_ret, _cgo_ok := __cgo_args[0].(int64)
-			if !_cgo_ok {
-				_cgo_ret = int64(__cgo_args[0].(uint64))
+			switch _cgo_tag := __cgo_args[0].(type) {
+			case int64:
+				_cgo_ret = _cgo_tag
+			case uint64:
+				_cgo_ret = int64(_cgo_tag)
 			}
 			*ap = __cgo_args[1:]
 			return
@@ -186,9 +220,11 @@ func pop_arg_cgo735(arg *union_arg, type_ int32, ap *[]interface {
 	case UMAX:
 		arg.i = func(__cgo_args []interface {
 		}) (_cgo_ret uint64) {
-			_cgo_ret, _cgo_ok := __cgo_args[0].(uint64)
-			if !_cgo_ok {
-				_cgo_ret = uint64(__cgo_args[0].(int64))
+			switch _cgo_tag := __cgo_args[0].(type) {
+			case uint64:
+				_cgo_ret = _cgo_tag
+			case int64:
+				_cgo_ret = uint64(_cgo_tag)
 			}
 			*ap = __cgo_args[1:]
 			return
@@ -197,9 +233,11 @@ func pop_arg_cgo735(arg *union_arg, type_ int32, ap *[]interface {
 	case PDIFF:
 		arg.i = uint64(func(__cgo_args []interface {
 		}) (_cgo_ret int64) {
-			_cgo_ret, _cgo_ok := __cgo_args[0].(int64)
-			if !_cgo_ok {
-				_cgo_ret = int64(__cgo_args[0].(uint64))
+			switch _cgo_tag := __cgo_args[0].(type) {
+			case int64:
+				_cgo_ret = _cgo_tag
+			case uint64:
+				_cgo_ret = int64(_cgo_tag)
 			}
 			*ap = __cgo_args[1:]
 			return
@@ -1121,9 +1159,13 @@ func printf_core_cgo744(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 					if f != nil {
 						return func(__cgo_args []interface {
 						}) (_cgo_ret int32) {
-							_cgo_ret, _cgo_ok := __cgo_args[0].(int32)
-							if !_cgo_ok {
-								_cgo_ret = int32(__cgo_args[0].(uint32))
+							switch _cgo_tag := __cgo_args[0].(type) {
+							case int32:
+								_cgo_ret = _cgo_tag
+							case uint32:
+								_cgo_ret = int32(_cgo_tag)
+							case uint64:
+								_cgo_ret = int32(_cgo_tag)
 							}
 							*ap = __cgo_args[1:]
 							return
@@ -1175,9 +1217,13 @@ func printf_core_cgo744(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 					if f != nil {
 						return func(__cgo_args []interface {
 						}) (_cgo_ret int32) {
-							_cgo_ret, _cgo_ok := __cgo_args[0].(int32)
-							if !_cgo_ok {
-								_cgo_ret = int32(__cgo_args[0].(uint32))
+							switch _cgo_tag := __cgo_args[0].(type) {
+							case int32:
+								_cgo_ret = _cgo_tag
+							case uint32:
+								_cgo_ret = int32(_cgo_tag)
+							case uint64:
+								_cgo_ret = int32(_cgo_tag)
 							}
 							*ap = __cgo_args[1:]
 							return
