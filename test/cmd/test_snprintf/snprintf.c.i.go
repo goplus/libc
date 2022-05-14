@@ -29,7 +29,7 @@ func _cgo_main() int32 {
 	var b [2000]int8
 	if !(func() (_cgo_ret int32) {
 		_cgo_addr := &i
-		*_cgo_addr = libc.Snprintf(nil, uint64(int32(0)), (*int8)(unsafe.Pointer(&[3]int8{'%', 'd', '\x00'})), int32(123456))
+		*_cgo_addr = libc.Snprintf(nil, uint64(0), (*int8)(unsafe.Pointer(&[3]int8{'%', 'd', '\x00'})), int32(123456))
 		return *_cgo_addr
 	}() == int32(6)) {
 		func() int32 {
@@ -39,7 +39,7 @@ func _cgo_main() int32 {
 	}
 	if !(func() (_cgo_ret int32) {
 		_cgo_addr := &i
-		*_cgo_addr = libc.Snprintf(nil, uint64(int32(0)), (*int8)(unsafe.Pointer(&[5]int8{'%', '.', '4', 's', '\x00'})), (*int8)(unsafe.Pointer(&[6]int8{'h', 'e', 'l', 'l', 'o', '\x00'})))
+		*_cgo_addr = libc.Snprintf(nil, uint64(0), (*int8)(unsafe.Pointer(&[5]int8{'%', '.', '4', 's', '\x00'})), (*int8)(unsafe.Pointer(&[6]int8{'h', 'e', 'l', 'l', 'o', '\x00'})))
 		return *_cgo_addr
 	}() == int32(4)) {
 		func() int32 {
@@ -49,7 +49,7 @@ func _cgo_main() int32 {
 	}
 	if !(func() (_cgo_ret int32) {
 		_cgo_addr := &i
-		*_cgo_addr = libc.Snprintf((*int8)(unsafe.Pointer(&b)), uint64(int32(0)), (*int8)(unsafe.Pointer(&[5]int8{'%', '.', '0', 's', '\x00'})), (*int8)(unsafe.Pointer(&[8]int8{'g', 'o', 'o', 'd', 'b', 'y', 'e', '\x00'})))
+		*_cgo_addr = libc.Snprintf((*int8)(unsafe.Pointer(&b)), uint64(0), (*int8)(unsafe.Pointer(&[5]int8{'%', '.', '0', 's', '\x00'})), (*int8)(unsafe.Pointer(&[8]int8{'g', 'o', 'o', 'd', 'b', 'y', 'e', '\x00'})))
 		return *_cgo_addr
 	}() == int32(0)) {
 		func() int32 {
@@ -60,7 +60,7 @@ func _cgo_main() int32 {
 	libc.Strcpy((*int8)(unsafe.Pointer(&b)), (*int8)(unsafe.Pointer(&[9]int8{'x', 'x', 'x', 'x', 'x', 'x', 'x', 'x', '\x00'})))
 	if !(func() (_cgo_ret int32) {
 		_cgo_addr := &i
-		*_cgo_addr = libc.Snprintf((*int8)(unsafe.Pointer(&b)), uint64(int32(4)), (*int8)(unsafe.Pointer(&[3]int8{'%', 'd', '\x00'})), int32(123456))
+		*_cgo_addr = libc.Snprintf((*int8)(unsafe.Pointer(&b)), uint64(4), (*int8)(unsafe.Pointer(&[3]int8{'%', 'd', '\x00'})), int32(123456))
 		return *_cgo_addr
 	}() == int32(6)) {
 		func() int32 {
@@ -167,7 +167,7 @@ func _cgo_main() int32 {
 	}
 	if !(func() (_cgo_ret int32) {
 		_cgo_addr := &i
-		*_cgo_addr = libc.Snprintf(nil, uint64(int32(0)), (*int8)(unsafe.Pointer(&[5]int8{'%', '.', '4', 'a', '\x00'})), 1)
+		*_cgo_addr = libc.Snprintf(nil, uint64(0), (*int8)(unsafe.Pointer(&[5]int8{'%', '.', '4', 'a', '\x00'})), 1)
 		return *_cgo_addr
 	}() == int32(11)) {
 		func() int32 {
