@@ -3,7 +3,9 @@
 *.so
 *.a
 *.exe
+*.out
 config.mak
 REPORT
 
 src/common/options.h
+cmd/_test_*

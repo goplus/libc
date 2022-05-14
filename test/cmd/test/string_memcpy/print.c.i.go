@@ -1,4 +1,4 @@
-package main
+package string_memcpy
 
 import (
 	libc "github.com/goplus/libc"
