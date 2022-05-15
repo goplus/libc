@@ -2,12 +2,16 @@ abort
 frexp
 frexpl
 isdigit
+malloc
+calloc
+free
 memchr
 memrchr
 memset
 memcpy
 memcmp
 getenv
+qsort
 strnlen
 strlen
 strncmp

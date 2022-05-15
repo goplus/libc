@@ -16,7 +16,7 @@ func __lctrans_impl(msg *int8, lm *struct___locale_map) *int8 {
 	}()
 }
 
-var envvars_cgo636 [6][12]int8 = [6][12]int8{[12]int8{'L', 'C', '_', 'C', 'T', 'Y', 'P', 'E', '\x00'}, [12]int8{'L', 'C', '_', 'N', 'U', 'M', 'E', 'R', 'I', 'C', '\x00'}, [12]int8{'L', 'C', '_', 'T', 'I', 'M', 'E', '\x00'}, [12]int8{'L', 'C', '_', 'C', 'O', 'L', 'L', 'A', 'T', 'E', '\x00'}, [12]int8{'L', 'C', '_', 'M', 'O', 'N', 'E', 'T', 'A', 'R', 'Y', '\x00'}, [12]int8{'L', 'C', '_', 'M', 'E', 'S', 'S', 'A', 'G', 'E', 'S', '\x00'}}
+var envvars_cgo663 [6][12]int8 = [6][12]int8{[12]int8{'L', 'C', '_', 'C', 'T', 'Y', 'P', 'E', '\x00'}, [12]int8{'L', 'C', '_', 'N', 'U', 'M', 'E', 'R', 'I', 'C', '\x00'}, [12]int8{'L', 'C', '_', 'T', 'I', 'M', 'E', '\x00'}, [12]int8{'L', 'C', '_', 'C', 'O', 'L', 'L', 'A', 'T', 'E', '\x00'}, [12]int8{'L', 'C', '_', 'M', 'O', 'N', 'E', 'T', 'A', 'R', 'Y', '\x00'}, [12]int8{'L', 'C', '_', 'M', 'E', 'S', 'S', 'A', 'G', 'E', 'S', '\x00'}}
 var __locale_lock [1]int32
 var __locale_lockptr *int32 = (*int32)(unsafe.Pointer(&__locale_lock))
 
@@ -35,7 +35,7 @@ func __get_locale(cat int32, val *int8) *struct___locale_map {
 			return *_cgo_addr
 		}() != nil && int32(*val) != 0 || func() (_cgo_ret *int8) {
 			_cgo_addr := &val
-			*_cgo_addr = Getenv((*int8)(unsafe.Pointer(&*(*[12]int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*[12]int8)(unsafe.Pointer(&envvars_cgo636)))) + uintptr(cat)*12)))))
+			*_cgo_addr = Getenv((*int8)(unsafe.Pointer(&*(*[12]int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*[12]int8)(unsafe.Pointer(&envvars_cgo663)))) + uintptr(cat)*12)))))
 			return *_cgo_addr
 		}() != nil && int32(*val) != 0 || func() (_cgo_ret *int8) {
 			_cgo_addr := &val
@@ -67,7 +67,7 @@ func __get_locale(cat int32, val *int8) *struct___locale_map {
 		}
 		return (*struct___locale_map)(nil)
 	}
-	for p = (*struct___locale_map)(loc_head_cgo637); p != nil; p = p.next {
+	for p = (*struct___locale_map)(loc_head_cgo664); p != nil; p = p.next {
 		if !(Strcmp(val, (*int8)(unsafe.Pointer(&p.name))) != 0) {
 			return p
 		}
@@ -104,8 +104,8 @@ func __get_locale(cat int32, val *int8) *struct___locale_map {
 				new.map_size = map_size
 				Memcpy(unsafe.Pointer((*int8)(unsafe.Pointer(&new.name))), unsafe.Pointer(val), n)
 				*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&new.name)))) + uintptr(n))) = int8(0)
-				new.next = (*struct___locale_map)(loc_head_cgo637)
-				loc_head_cgo637 = unsafe.Pointer(new)
+				new.next = (*struct___locale_map)(loc_head_cgo664)
+				loc_head_cgo664 = unsafe.Pointer(new)
 				break
 			}
 		}
@@ -119,8 +119,8 @@ func __get_locale(cat int32, val *int8) *struct___locale_map {
 		new.map_size = __c_dot_utf8.map_size
 		Memcpy(unsafe.Pointer((*int8)(unsafe.Pointer(&new.name))), unsafe.Pointer(val), n)
 		*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&new.name)))) + uintptr(n))) = int8(0)
-		new.next = (*struct___locale_map)(loc_head_cgo637)
-		loc_head_cgo637 = unsafe.Pointer(new)
+		new.next = (*struct___locale_map)(loc_head_cgo664)
+		loc_head_cgo664 = unsafe.Pointer(new)
 	}
 	if !(new != nil) && cat == int32(0) {
 		new = (*struct___locale_map)(unsafe.Pointer(&__c_dot_utf8))
@@ -128,4 +128,4 @@ func __get_locale(cat int32, val *int8) *struct___locale_map {
 	return new
 }
 
-var loc_head_cgo637 unsafe.Pointer
+var loc_head_cgo664 unsafe.Pointer

@@ -1,12 +1,14 @@
 abort
 blkcnt_t
 blksize_t
+calloc
 clock_t
 clockid_t
 dev_t
 double_t
 float_t
 fprintf
+free
 frexp
 frexpl
 fwrite
@@ -21,6 +23,7 @@ intmax_t
 intptr_t
 isdigit
 locale_t
+malloc
 max_align_t
 mbstate_t
 memchr
@@ -47,6 +50,7 @@ pthread_rwlockattr_t
 pthread_spinlock_t
 pthread_t
 ptrdiff_t
+qsort
 sigset_t
 size_t
 snprintf
