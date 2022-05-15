@@ -1,9 +1,9 @@
-package main
+package snprintf
 
 import (
 	unsafe "unsafe"
 	libc "github.com/goplus/libc"
-	os "os"
+	testing "testing"
 )
 
 type _cgoa_1 struct {
@@ -177,6 +177,8 @@ func _cgo_main() int32 {
 	}
 	return t_status
 }
-func main() {
-	os.Exit(int(_cgo_main()))
+func TestMain(t *testing.T) {
+	if _cgo_ret := _cgo_main(); _cgo_ret != 0 {
+		t.Fatal("exit status", _cgo_ret)
+	}
 }

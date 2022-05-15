@@ -1,4 +1,4 @@
-package main
+package snprintf
 
 import (
 	libc "github.com/goplus/libc"
