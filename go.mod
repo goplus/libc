@@ -3,6 +3,6 @@ module github.com/goplus/libc
 go 1.16
 
 require (
-	github.com/goplus/c2go v0.6.2
+	github.com/goplus/c2go v0.7.0
 	github.com/petermattis/goid v0.0.0-20220331194723-8ee3e6ded87a
 )
