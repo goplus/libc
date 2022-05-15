@@ -21,6 +21,7 @@ intmax_t
 intptr_t
 isdigit
 locale_t
+max_align_t
 mbstate_t
 memchr
 memcmp
@@ -32,8 +33,17 @@ nlink_t
 off_t
 pid_t
 printf
+pthread_attr_t
+pthread_barrier_t
+pthread_barrierattr_t
+pthread_cond_t
+pthread_condattr_t
 pthread_key_t
+pthread_mutex_t
+pthread_mutexattr_t
 pthread_once_t
+pthread_rwlock_t
+pthread_rwlockattr_t
 pthread_spinlock_t
 pthread_t
 ptrdiff_t

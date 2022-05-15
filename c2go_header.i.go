@@ -25,15 +25,23 @@ type Pthread_spinlock_t = int32
 type _cgoa_1 struct {
 	__attr uint32
 }
+type pthread_mutexattr_t = _cgoa_1
+type Pthread_mutexattr_t = _cgoa_1
 type _cgoa_2 struct {
 	__attr uint32
 }
+type pthread_condattr_t = _cgoa_2
+type Pthread_condattr_t = _cgoa_2
 type _cgoa_3 struct {
 	__attr uint32
 }
+type pthread_barrierattr_t = _cgoa_3
+type Pthread_barrierattr_t = _cgoa_3
 type _cgoa_4 struct {
 	__attr [2]uint32
 }
+type pthread_rwlockattr_t = _cgoa_4
+type Pthread_rwlockattr_t = _cgoa_4
 type struct___sigset_t struct {
 	__bits [16]uint64
 }
@@ -45,30 +53,40 @@ type _cgoa_6 struct {
 type _cgoa_5 struct {
 	__u _cgoa_6
 }
+type pthread_attr_t = _cgoa_5
+type Pthread_attr_t = _cgoa_5
 type _cgoa_8 struct {
 	__i [10]int32
 }
 type _cgoa_7 struct {
 	__u _cgoa_8
 }
+type pthread_mutex_t = _cgoa_7
+type Pthread_mutex_t = _cgoa_7
 type _cgoa_10 struct {
 	__i [12]int32
 }
 type _cgoa_9 struct {
 	__u _cgoa_10
 }
+type pthread_cond_t = _cgoa_9
+type Pthread_cond_t = _cgoa_9
 type _cgoa_12 struct {
 	__i [14]int32
 }
 type _cgoa_11 struct {
 	__u _cgoa_12
 }
+type pthread_rwlock_t = _cgoa_11
+type Pthread_rwlock_t = _cgoa_11
 type _cgoa_14 struct {
 	__i [8]int32
 }
 type _cgoa_13 struct {
 	__u _cgoa_14
 }
+type pthread_barrier_t = _cgoa_13
+type Pthread_barrier_t = _cgoa_13
 type pid_t = int32
 type Pid_t = int32
 type struct_sched_param struct {
@@ -117,14 +135,17 @@ type _cgoa_15 struct {
 	quot int32
 	rem  int32
 }
+type div_t = _cgoa_15
 type _cgoa_16 struct {
 	quot int64
 	rem  int64
 }
+type ldiv_t = _cgoa_16
 type _cgoa_17 struct {
 	quot int64
 	rem  int64
 }
+type lldiv_t = _cgoa_17
 type ssize_t = int64
 type Ssize_t = int64
 type off_t = int64
@@ -169,6 +190,8 @@ type _cgoa_32 struct {
 	__ll int64
 	__ld float64
 }
+type max_align_t = _cgoa_32
+type Max_align_t = _cgoa_32
 type ptrdiff_t = int64
 type Ptrdiff_t = int64
 type struct_lconv struct {
@@ -1681,3 +1704,4 @@ type _cgoa_931 struct {
 	quot int64
 	rem  int64
 }
+type imaxdiv_t = _cgoa_931
