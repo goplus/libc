@@ -12,6 +12,9 @@ memcpy
 memcmp
 getenv
 qsort
+strtof
+strtod
+strtold
 strnlen
 strlen
 strncmp

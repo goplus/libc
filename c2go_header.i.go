@@ -1560,6 +1560,56 @@ func __isspace(_c int32) int32 {
 		}
 	}()
 }
+
+type syscall_arg_t = int64
+
+func __alt_socketcall(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+	var r int64
+	if cp != 0 {
+		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	} else {
+		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	}
+	if r != int64(-38) {
+		return r
+	}
+	return r
+}
+
+type struct__IO_FILE struct {
+	flags        uint32
+	rpos         *uint8
+	rend         *uint8
+	close        func(*struct__IO_FILE) int32
+	wend         *uint8
+	wpos         *uint8
+	mustbezero_1 *uint8
+	wbase        *uint8
+	read         func(*struct__IO_FILE, *uint8, uint64) uint64
+	write        func(*struct__IO_FILE, *uint8, uint64) uint64
+	seek         func(*struct__IO_FILE, int64, int32) int64
+	buf          *uint8
+	buf_size     uint64
+	prev         *struct__IO_FILE
+	next         *struct__IO_FILE
+	fd           int32
+	pipe_pid     int32
+	lockcount    int64
+	mode         int32
+	lock         int32
+	lbf          int32
+	cookie       unsafe.Pointer
+	off          int64
+	getln_buf    *int8
+	mustbezero_2 unsafe.Pointer
+	shend        *uint8
+	shlim        int64
+	shcnt        int64
+	prev_locked  *struct__IO_FILE
+	next_locked  *struct__IO_FILE
+	locale       *struct___locale_struct
+}
+
 func a_fetch_add(p *int32, v int32) int32 {
 	var old int32
 	for {
@@ -1611,10 +1661,10 @@ func a_barrier() {
 	a_cas(&tmp, int32(0), int32(0))
 }
 func a_and_64(p *uint64, v uint64) {
-	type _cgoa_509 struct {
+	type _cgoa_527 struct {
 		v uint64
 	}
-	var u _cgoa_509
+	var u _cgoa_527
 	u.v = v
 	if *(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&*(*[2]uint32)(unsafe.Pointer(&u)))))) + uintptr(int32(0))*4))+uint32(1) != 0 {
 		a_and((*int32)(unsafe.Pointer(p)), int32(*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&*(*[2]uint32)(unsafe.Pointer(&u)))))) + uintptr(int32(0))*4))))
@@ -1624,10 +1674,10 @@ func a_and_64(p *uint64, v uint64) {
 	}
 }
 func a_or_64(p *uint64, v uint64) {
-	type _cgoa_510 struct {
+	type _cgoa_528 struct {
 		v uint64
 	}
-	var u _cgoa_510
+	var u _cgoa_528
 	u.v = v
 	if *(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&*(*[2]uint32)(unsafe.Pointer(&u)))))) + uintptr(int32(0))*4)) != 0 {
 		a_or((*int32)(unsafe.Pointer(p)), int32(*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&*(*[2]uint32)(unsafe.Pointer(&u)))))) + uintptr(int32(0))*4))))
@@ -1647,10 +1697,10 @@ func a_crash() {
 	*(*int8)(nil) = int8(0)
 }
 func a_ctz_32(x uint32) int32 {
-	return int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&debruijn32_cgo511)))) + uintptr(x&-x*uint32(124511785)>>int32(27)))))
+	return int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&debruijn32_cgo529)))) + uintptr(x&-x*uint32(124511785)>>int32(27)))))
 }
 
-var debruijn32_cgo511 [32]int8 = [32]int8{int8(0), int8(1), int8(23), int8(2), int8(29), int8(24), int8(19), int8(3), int8(30), int8(27), int8(25), int8(11), int8(20), int8(8), int8(4), int8(13), int8(31), int8(22), int8(28), int8(18), int8(26), int8(10), int8(7), int8(12), int8(21), int8(17), int8(9), int8(6), int8(16), int8(5), int8(15), int8(14)}
+var debruijn32_cgo529 [32]int8 = [32]int8{int8(0), int8(1), int8(23), int8(2), int8(29), int8(24), int8(19), int8(3), int8(30), int8(27), int8(25), int8(11), int8(20), int8(8), int8(4), int8(13), int8(31), int8(22), int8(28), int8(18), int8(26), int8(10), int8(7), int8(12), int8(21), int8(17), int8(9), int8(6), int8(16), int8(5), int8(15), int8(14)}
 
 func a_ctz_64(x uint64) int32 {
 	if false {
@@ -1661,10 +1711,10 @@ func a_ctz_64(x uint64) int32 {
 		}
 		return a_ctz_32(y)
 	}
-	return int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&debruijn64_cgo512)))) + uintptr(x&-x*uint64(157587932685088877)>>int32(58)))))
+	return int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&debruijn64_cgo530)))) + uintptr(x&-x*uint64(157587932685088877)>>int32(58)))))
 }
 
-var debruijn64_cgo512 [64]int8 = [64]int8{int8(0), int8(1), int8(2), int8(53), int8(3), int8(7), int8(54), int8(27), int8(4), int8(38), int8(41), int8(8), int8(34), int8(55), int8(48), int8(28), int8(62), int8(5), int8(39), int8(46), int8(44), int8(42), int8(22), int8(9), int8(24), int8(35), int8(59), int8(56), int8(49), int8(18), int8(29), int8(11), int8(63), int8(52), int8(6), int8(26), int8(37), int8(40), int8(33), int8(47), int8(61), int8(45), int8(43), int8(21), int8(23), int8(58), int8(17), int8(10), int8(51), int8(25), int8(36), int8(32), int8(60), int8(20), int8(57), int8(16), int8(50), int8(31), int8(19), int8(15), int8(30), int8(14), int8(13), int8(12)}
+var debruijn64_cgo530 [64]int8 = [64]int8{int8(0), int8(1), int8(2), int8(53), int8(3), int8(7), int8(54), int8(27), int8(4), int8(38), int8(41), int8(8), int8(34), int8(55), int8(48), int8(28), int8(62), int8(5), int8(39), int8(46), int8(44), int8(42), int8(22), int8(9), int8(24), int8(35), int8(59), int8(56), int8(49), int8(18), int8(29), int8(11), int8(63), int8(52), int8(6), int8(26), int8(37), int8(40), int8(33), int8(47), int8(61), int8(45), int8(43), int8(21), int8(23), int8(58), int8(17), int8(10), int8(51), int8(25), int8(36), int8(32), int8(60), int8(20), int8(57), int8(16), int8(50), int8(31), int8(19), int8(15), int8(30), int8(14), int8(13), int8(12)}
 
 func a_ctz_l(x uint64) int32 {
 	return func() int32 {
@@ -1744,21 +1794,6 @@ type useconds_t = uint32
 type Useconds_t = uint32
 type mode_t = uint32
 type Mode_t = uint32
-type syscall_arg_t = int64
-
-func __alt_socketcall(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
-	var r int64
-	if cp != 0 {
-		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
-	} else {
-		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
-	}
-	if r != int64(-38) {
-		return r
-	}
-	return r
-}
-
 type struct_flock struct {
 	l_type   int16
 	l_whence int16
@@ -1776,7 +1811,7 @@ type blksize_t = int64
 type Blksize_t = int64
 type blkcnt_t = int64
 type Blkcnt_t = int64
-type _cgoa_594 struct {
+type _cgoa_612 struct {
 	tv_sec  int64
 	tv_nsec int64
 }
@@ -1793,9 +1828,9 @@ type struct_stat struct {
 	st_size            int64
 	st_blksize         int64
 	st_blocks          int64
-	__st_atim32        _cgoa_594
-	__st_mtim32        _cgoa_594
-	__st_ctim32        _cgoa_594
+	__st_atim32        _cgoa_612
+	__st_mtim32        _cgoa_612
+	__st_ctim32        _cgoa_612
 	st_ino             uint64
 	st_atim            struct_timespec
 	st_mtim            struct_timespec
@@ -1822,39 +1857,6 @@ type struct_kstat struct {
 	st_ctime_nsec      int64
 	st_ino             uint64
 }
-type struct__IO_FILE struct {
-	flags        uint32
-	rpos         *uint8
-	rend         *uint8
-	close        func(*struct__IO_FILE) int32
-	wend         *uint8
-	wpos         *uint8
-	mustbezero_1 *uint8
-	wbase        *uint8
-	read         func(*struct__IO_FILE, *uint8, uint64) uint64
-	write        func(*struct__IO_FILE, *uint8, uint64) uint64
-	seek         func(*struct__IO_FILE, int64, int32) int64
-	buf          *uint8
-	buf_size     uint64
-	prev         *struct__IO_FILE
-	next         *struct__IO_FILE
-	fd           int32
-	pipe_pid     int32
-	lockcount    int64
-	mode         int32
-	lock         int32
-	lbf          int32
-	cookie       unsafe.Pointer
-	off          int64
-	getln_buf    *int8
-	mustbezero_2 unsafe.Pointer
-	shend        *uint8
-	shlim        int64
-	shcnt        int64
-	prev_locked  *struct__IO_FILE
-	next_locked  *struct__IO_FILE
-	locale       *struct___locale_struct
-}
 type struct_iovec struct {
 	iov_base unsafe.Pointer
 	iov_len  uint64
@@ -1875,8 +1877,8 @@ type struct___mbstate_t struct {
 }
 type mbstate_t = struct___mbstate_t
 type Mbstate_t = struct___mbstate_t
-type _cgoa_958 struct {
+type _cgoa_976 struct {
 	quot int64
 	rem  int64
 }
-type imaxdiv_t = _cgoa_958
+type imaxdiv_t = _cgoa_976
