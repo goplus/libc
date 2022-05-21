@@ -75,7 +75,10 @@ strnlen
 strpbrk
 strrchr
 strspn
+strtod
+strtof
 strtok
+strtold
 time_t
 timer_t
 uid_t
