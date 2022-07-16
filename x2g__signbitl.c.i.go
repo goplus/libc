@@ -1,5 +1,5 @@
 package libc
 
-func __signbitl(x float64) int32 {
-	return __signbit(float64(x))
+func X__signbitl(x float64) int32 {
+	return X__signbit(float64(x))
 }

@@ -1,5 +1,5 @@
 package libc
 
-func __fpclassifyl(x float64) int32 {
-	return __fpclassify(float64(x))
+func X__fpclassifyl(x float64) int32 {
+	return X__fpclassify(float64(x))
 }

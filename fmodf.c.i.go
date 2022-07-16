@@ -3,12 +3,12 @@ package libc
 import unsafe "unsafe"
 
 func Fmodf(x float32, y float32) float32 {
-	type _cgoa_279 struct {
+	type _cgoa_295 struct {
 		f float32
 	}
-	var ux _cgoa_279
+	var ux _cgoa_295
 	ux.f = x
-	var uy _cgoa_279
+	var uy _cgoa_295
 	uy.f = y
 	var ex int32 = int32(*(*uint32)(unsafe.Pointer(&ux)) >> int32(23) & uint32(255))
 	var ey int32 = int32(*(*uint32)(unsafe.Pointer(&uy)) >> int32(23) & uint32(255))
@@ -18,7 +18,7 @@ func Fmodf(x float32, y float32) float32 {
 	if *(*uint32)(unsafe.Pointer(&uy))<<int32(1) == uint32(0) || func() int32 {
 		if 4 == 4 {
 			return func() int32 {
-				if __FLOAT_BITS(y)&uint32(2147483647) > uint32(2139095040) {
+				if X__FLOAT_BITS(y)&uint32(2147483647) > uint32(2139095040) {
 					return 1
 				} else {
 					return 0
@@ -28,7 +28,7 @@ func Fmodf(x float32, y float32) float32 {
 			return func() int32 {
 				if 4 == 8 {
 					return func() int32 {
-						if __DOUBLE_BITS(float64(y))&9223372036854775807 > 9218868437227405312 {
+						if X__DOUBLE_BITS(float64(y))&9223372036854775807 > 9218868437227405312 {
 							return 1
 						} else {
 							return 0
@@ -36,7 +36,7 @@ func Fmodf(x float32, y float32) float32 {
 					}()
 				} else {
 					return func() int32 {
-						if __fpclassifyl(float64(y)) == int32(0) {
+						if X__fpclassifyl(float64(y)) == int32(0) {
 							return 1
 						} else {
 							return 0

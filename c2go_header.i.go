@@ -237,7 +237,7 @@ type Float_t = float32
 type double_t = float64
 type Double_t = float64
 
-func __FLOAT_BITS(__f float32) uint32 {
+func X__FLOAT_BITS(__f float32) uint32 {
 	type _cgoa_15 struct {
 		__f float32
 	}
@@ -245,7 +245,7 @@ func __FLOAT_BITS(__f float32) uint32 {
 	__u.__f = __f
 	return *(*uint32)(unsafe.Pointer(&__u))
 }
-func __DOUBLE_BITS(__f float64) uint64 {
+func X__DOUBLE_BITS(__f float64) uint64 {
 	type _cgoa_16 struct {
 		__f float64
 	}
@@ -259,7 +259,7 @@ func __islessf(__x float32, __y float32) int32 {
 			if func() int32 {
 				if 4 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS(__x)&uint32(2147483647) > uint32(2139095040) {
+						if X__FLOAT_BITS(__x)&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -269,7 +269,7 @@ func __islessf(__x float32, __y float32) int32 {
 					return func() int32 {
 						if 4 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS(float64(__x))&9223372036854775807 > 9218868437227405312 {
+								if X__DOUBLE_BITS(float64(__x))&9223372036854775807 > 9218868437227405312 {
 									return 1
 								} else {
 									return 0
@@ -277,7 +277,7 @@ func __islessf(__x float32, __y float32) int32 {
 							}()
 						} else {
 							return func() int32 {
-								if __fpclassifyl(float64(__x)) == int32(0) {
+								if X__fpclassifyl(float64(__x)) == int32(0) {
 									return 1
 								} else {
 									return 0
@@ -298,7 +298,7 @@ func __islessf(__x float32, __y float32) int32 {
 				return func() int32 {
 					if 4 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS(__y)&uint32(2147483647) > uint32(2139095040) {
+							if X__FLOAT_BITS(__y)&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -308,7 +308,7 @@ func __islessf(__x float32, __y float32) int32 {
 						return func() int32 {
 							if 4 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS(float64(__y))&9223372036854775807 > 9218868437227405312 {
+									if X__DOUBLE_BITS(float64(__y))&9223372036854775807 > 9218868437227405312 {
 										return 1
 									} else {
 										return 0
@@ -316,7 +316,7 @@ func __islessf(__x float32, __y float32) int32 {
 								}()
 							} else {
 								return func() int32 {
-									if __fpclassifyl(float64(__y)) == int32(0) {
+									if X__fpclassifyl(float64(__y)) == int32(0) {
 										return 1
 									} else {
 										return 0
@@ -340,7 +340,7 @@ func __isless(__x float64, __y float64) int32 {
 			if func() int32 {
 				if 8 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+						if X__FLOAT_BITS(float32(__x))&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -350,7 +350,7 @@ func __isless(__x float64, __y float64) int32 {
 					return func() int32 {
 						if 8 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS(__x)&9223372036854775807 > 9218868437227405312 {
+								if X__DOUBLE_BITS(__x)&9223372036854775807 > 9218868437227405312 {
 									return 1
 								} else {
 									return 0
@@ -358,7 +358,7 @@ func __isless(__x float64, __y float64) int32 {
 							}()
 						} else {
 							return func() int32 {
-								if __fpclassifyl(float64(__x)) == int32(0) {
+								if X__fpclassifyl(float64(__x)) == int32(0) {
 									return 1
 								} else {
 									return 0
@@ -379,7 +379,7 @@ func __isless(__x float64, __y float64) int32 {
 				return func() int32 {
 					if 8 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+							if X__FLOAT_BITS(float32(__y))&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -389,7 +389,7 @@ func __isless(__x float64, __y float64) int32 {
 						return func() int32 {
 							if 8 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS(__y)&9223372036854775807 > 9218868437227405312 {
+									if X__DOUBLE_BITS(__y)&9223372036854775807 > 9218868437227405312 {
 										return 1
 									} else {
 										return 0
@@ -397,7 +397,7 @@ func __isless(__x float64, __y float64) int32 {
 								}()
 							} else {
 								return func() int32 {
-									if __fpclassifyl(float64(__y)) == int32(0) {
+									if X__fpclassifyl(float64(__y)) == int32(0) {
 										return 1
 									} else {
 										return 0
@@ -421,7 +421,7 @@ func __islessl(__x float64, __y float64) int32 {
 			if func() int32 {
 				if 8 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+						if X__FLOAT_BITS(float32(__x))&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -431,7 +431,7 @@ func __islessl(__x float64, __y float64) int32 {
 					return func() int32 {
 						if 8 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS(float64(__x))&9223372036854775807 > 9218868437227405312 {
+								if X__DOUBLE_BITS(float64(__x))&9223372036854775807 > 9218868437227405312 {
 									return 1
 								} else {
 									return 0
@@ -439,7 +439,7 @@ func __islessl(__x float64, __y float64) int32 {
 							}()
 						} else {
 							return func() int32 {
-								if __fpclassifyl(__x) == int32(0) {
+								if X__fpclassifyl(__x) == int32(0) {
 									return 1
 								} else {
 									return 0
@@ -460,7 +460,7 @@ func __islessl(__x float64, __y float64) int32 {
 				return func() int32 {
 					if 8 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+							if X__FLOAT_BITS(float32(__y))&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -470,7 +470,7 @@ func __islessl(__x float64, __y float64) int32 {
 						return func() int32 {
 							if 8 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS(float64(__y))&9223372036854775807 > 9218868437227405312 {
+									if X__DOUBLE_BITS(float64(__y))&9223372036854775807 > 9218868437227405312 {
 										return 1
 									} else {
 										return 0
@@ -478,7 +478,7 @@ func __islessl(__x float64, __y float64) int32 {
 								}()
 							} else {
 								return func() int32 {
-									if __fpclassifyl(__y) == int32(0) {
+									if X__fpclassifyl(__y) == int32(0) {
 										return 1
 									} else {
 										return 0
@@ -502,7 +502,7 @@ func __islessequalf(__x float32, __y float32) int32 {
 			if func() int32 {
 				if 4 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS(__x)&uint32(2147483647) > uint32(2139095040) {
+						if X__FLOAT_BITS(__x)&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -512,7 +512,7 @@ func __islessequalf(__x float32, __y float32) int32 {
 					return func() int32 {
 						if 4 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS(float64(__x))&9223372036854775807 > 9218868437227405312 {
+								if X__DOUBLE_BITS(float64(__x))&9223372036854775807 > 9218868437227405312 {
 									return 1
 								} else {
 									return 0
@@ -520,7 +520,7 @@ func __islessequalf(__x float32, __y float32) int32 {
 							}()
 						} else {
 							return func() int32 {
-								if __fpclassifyl(float64(__x)) == int32(0) {
+								if X__fpclassifyl(float64(__x)) == int32(0) {
 									return 1
 								} else {
 									return 0
@@ -541,7 +541,7 @@ func __islessequalf(__x float32, __y float32) int32 {
 				return func() int32 {
 					if 4 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS(__y)&uint32(2147483647) > uint32(2139095040) {
+							if X__FLOAT_BITS(__y)&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -551,7 +551,7 @@ func __islessequalf(__x float32, __y float32) int32 {
 						return func() int32 {
 							if 4 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS(float64(__y))&9223372036854775807 > 9218868437227405312 {
+									if X__DOUBLE_BITS(float64(__y))&9223372036854775807 > 9218868437227405312 {
 										return 1
 									} else {
 										return 0
@@ -559,7 +559,7 @@ func __islessequalf(__x float32, __y float32) int32 {
 								}()
 							} else {
 								return func() int32 {
-									if __fpclassifyl(float64(__y)) == int32(0) {
+									if X__fpclassifyl(float64(__y)) == int32(0) {
 										return 1
 									} else {
 										return 0
@@ -583,7 +583,7 @@ func __islessequal(__x float64, __y float64) int32 {
 			if func() int32 {
 				if 8 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+						if X__FLOAT_BITS(float32(__x))&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -593,7 +593,7 @@ func __islessequal(__x float64, __y float64) int32 {
 					return func() int32 {
 						if 8 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS(__x)&9223372036854775807 > 9218868437227405312 {
+								if X__DOUBLE_BITS(__x)&9223372036854775807 > 9218868437227405312 {
 									return 1
 								} else {
 									return 0
@@ -601,7 +601,7 @@ func __islessequal(__x float64, __y float64) int32 {
 							}()
 						} else {
 							return func() int32 {
-								if __fpclassifyl(float64(__x)) == int32(0) {
+								if X__fpclassifyl(float64(__x)) == int32(0) {
 									return 1
 								} else {
 									return 0
@@ -622,7 +622,7 @@ func __islessequal(__x float64, __y float64) int32 {
 				return func() int32 {
 					if 8 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+							if X__FLOAT_BITS(float32(__y))&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -632,7 +632,7 @@ func __islessequal(__x float64, __y float64) int32 {
 						return func() int32 {
 							if 8 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS(__y)&9223372036854775807 > 9218868437227405312 {
+									if X__DOUBLE_BITS(__y)&9223372036854775807 > 9218868437227405312 {
 										return 1
 									} else {
 										return 0
@@ -640,7 +640,7 @@ func __islessequal(__x float64, __y float64) int32 {
 								}()
 							} else {
 								return func() int32 {
-									if __fpclassifyl(float64(__y)) == int32(0) {
+									if X__fpclassifyl(float64(__y)) == int32(0) {
 										return 1
 									} else {
 										return 0
@@ -664,7 +664,7 @@ func __islessequall(__x float64, __y float64) int32 {
 			if func() int32 {
 				if 8 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+						if X__FLOAT_BITS(float32(__x))&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -674,7 +674,7 @@ func __islessequall(__x float64, __y float64) int32 {
 					return func() int32 {
 						if 8 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS(float64(__x))&9223372036854775807 > 9218868437227405312 {
+								if X__DOUBLE_BITS(float64(__x))&9223372036854775807 > 9218868437227405312 {
 									return 1
 								} else {
 									return 0
@@ -682,7 +682,7 @@ func __islessequall(__x float64, __y float64) int32 {
 							}()
 						} else {
 							return func() int32 {
-								if __fpclassifyl(__x) == int32(0) {
+								if X__fpclassifyl(__x) == int32(0) {
 									return 1
 								} else {
 									return 0
@@ -703,7 +703,7 @@ func __islessequall(__x float64, __y float64) int32 {
 				return func() int32 {
 					if 8 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+							if X__FLOAT_BITS(float32(__y))&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -713,7 +713,7 @@ func __islessequall(__x float64, __y float64) int32 {
 						return func() int32 {
 							if 8 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS(float64(__y))&9223372036854775807 > 9218868437227405312 {
+									if X__DOUBLE_BITS(float64(__y))&9223372036854775807 > 9218868437227405312 {
 										return 1
 									} else {
 										return 0
@@ -721,7 +721,7 @@ func __islessequall(__x float64, __y float64) int32 {
 								}()
 							} else {
 								return func() int32 {
-									if __fpclassifyl(__y) == int32(0) {
+									if X__fpclassifyl(__y) == int32(0) {
 										return 1
 									} else {
 										return 0
@@ -745,7 +745,7 @@ func __islessgreaterf(__x float32, __y float32) int32 {
 			if func() int32 {
 				if 4 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS(__x)&uint32(2147483647) > uint32(2139095040) {
+						if X__FLOAT_BITS(__x)&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -755,7 +755,7 @@ func __islessgreaterf(__x float32, __y float32) int32 {
 					return func() int32 {
 						if 4 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS(float64(__x))&9223372036854775807 > 9218868437227405312 {
+								if X__DOUBLE_BITS(float64(__x))&9223372036854775807 > 9218868437227405312 {
 									return 1
 								} else {
 									return 0
@@ -763,7 +763,7 @@ func __islessgreaterf(__x float32, __y float32) int32 {
 							}()
 						} else {
 							return func() int32 {
-								if __fpclassifyl(float64(__x)) == int32(0) {
+								if X__fpclassifyl(float64(__x)) == int32(0) {
 									return 1
 								} else {
 									return 0
@@ -784,7 +784,7 @@ func __islessgreaterf(__x float32, __y float32) int32 {
 				return func() int32 {
 					if 4 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS(__y)&uint32(2147483647) > uint32(2139095040) {
+							if X__FLOAT_BITS(__y)&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -794,7 +794,7 @@ func __islessgreaterf(__x float32, __y float32) int32 {
 						return func() int32 {
 							if 4 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS(float64(__y))&9223372036854775807 > 9218868437227405312 {
+									if X__DOUBLE_BITS(float64(__y))&9223372036854775807 > 9218868437227405312 {
 										return 1
 									} else {
 										return 0
@@ -802,7 +802,7 @@ func __islessgreaterf(__x float32, __y float32) int32 {
 								}()
 							} else {
 								return func() int32 {
-									if __fpclassifyl(float64(__y)) == int32(0) {
+									if X__fpclassifyl(float64(__y)) == int32(0) {
 										return 1
 									} else {
 										return 0
@@ -826,7 +826,7 @@ func __islessgreater(__x float64, __y float64) int32 {
 			if func() int32 {
 				if 8 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+						if X__FLOAT_BITS(float32(__x))&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -836,7 +836,7 @@ func __islessgreater(__x float64, __y float64) int32 {
 					return func() int32 {
 						if 8 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS(__x)&9223372036854775807 > 9218868437227405312 {
+								if X__DOUBLE_BITS(__x)&9223372036854775807 > 9218868437227405312 {
 									return 1
 								} else {
 									return 0
@@ -844,7 +844,7 @@ func __islessgreater(__x float64, __y float64) int32 {
 							}()
 						} else {
 							return func() int32 {
-								if __fpclassifyl(float64(__x)) == int32(0) {
+								if X__fpclassifyl(float64(__x)) == int32(0) {
 									return 1
 								} else {
 									return 0
@@ -865,7 +865,7 @@ func __islessgreater(__x float64, __y float64) int32 {
 				return func() int32 {
 					if 8 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+							if X__FLOAT_BITS(float32(__y))&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -875,7 +875,7 @@ func __islessgreater(__x float64, __y float64) int32 {
 						return func() int32 {
 							if 8 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS(__y)&9223372036854775807 > 9218868437227405312 {
+									if X__DOUBLE_BITS(__y)&9223372036854775807 > 9218868437227405312 {
 										return 1
 									} else {
 										return 0
@@ -883,7 +883,7 @@ func __islessgreater(__x float64, __y float64) int32 {
 								}()
 							} else {
 								return func() int32 {
-									if __fpclassifyl(float64(__y)) == int32(0) {
+									if X__fpclassifyl(float64(__y)) == int32(0) {
 										return 1
 									} else {
 										return 0
@@ -907,7 +907,7 @@ func __islessgreaterl(__x float64, __y float64) int32 {
 			if func() int32 {
 				if 8 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+						if X__FLOAT_BITS(float32(__x))&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -917,7 +917,7 @@ func __islessgreaterl(__x float64, __y float64) int32 {
 					return func() int32 {
 						if 8 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS(float64(__x))&9223372036854775807 > 9218868437227405312 {
+								if X__DOUBLE_BITS(float64(__x))&9223372036854775807 > 9218868437227405312 {
 									return 1
 								} else {
 									return 0
@@ -925,7 +925,7 @@ func __islessgreaterl(__x float64, __y float64) int32 {
 							}()
 						} else {
 							return func() int32 {
-								if __fpclassifyl(__x) == int32(0) {
+								if X__fpclassifyl(__x) == int32(0) {
 									return 1
 								} else {
 									return 0
@@ -946,7 +946,7 @@ func __islessgreaterl(__x float64, __y float64) int32 {
 				return func() int32 {
 					if 8 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+							if X__FLOAT_BITS(float32(__y))&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -956,7 +956,7 @@ func __islessgreaterl(__x float64, __y float64) int32 {
 						return func() int32 {
 							if 8 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS(float64(__y))&9223372036854775807 > 9218868437227405312 {
+									if X__DOUBLE_BITS(float64(__y))&9223372036854775807 > 9218868437227405312 {
 										return 1
 									} else {
 										return 0
@@ -964,7 +964,7 @@ func __islessgreaterl(__x float64, __y float64) int32 {
 								}()
 							} else {
 								return func() int32 {
-									if __fpclassifyl(__y) == int32(0) {
+									if X__fpclassifyl(__y) == int32(0) {
 										return 1
 									} else {
 										return 0
@@ -988,7 +988,7 @@ func __isgreaterf(__x float32, __y float32) int32 {
 			if func() int32 {
 				if 4 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS(__x)&uint32(2147483647) > uint32(2139095040) {
+						if X__FLOAT_BITS(__x)&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -998,7 +998,7 @@ func __isgreaterf(__x float32, __y float32) int32 {
 					return func() int32 {
 						if 4 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS(float64(__x))&9223372036854775807 > 9218868437227405312 {
+								if X__DOUBLE_BITS(float64(__x))&9223372036854775807 > 9218868437227405312 {
 									return 1
 								} else {
 									return 0
@@ -1006,7 +1006,7 @@ func __isgreaterf(__x float32, __y float32) int32 {
 							}()
 						} else {
 							return func() int32 {
-								if __fpclassifyl(float64(__x)) == int32(0) {
+								if X__fpclassifyl(float64(__x)) == int32(0) {
 									return 1
 								} else {
 									return 0
@@ -1027,7 +1027,7 @@ func __isgreaterf(__x float32, __y float32) int32 {
 				return func() int32 {
 					if 4 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS(__y)&uint32(2147483647) > uint32(2139095040) {
+							if X__FLOAT_BITS(__y)&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -1037,7 +1037,7 @@ func __isgreaterf(__x float32, __y float32) int32 {
 						return func() int32 {
 							if 4 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS(float64(__y))&9223372036854775807 > 9218868437227405312 {
+									if X__DOUBLE_BITS(float64(__y))&9223372036854775807 > 9218868437227405312 {
 										return 1
 									} else {
 										return 0
@@ -1045,7 +1045,7 @@ func __isgreaterf(__x float32, __y float32) int32 {
 								}()
 							} else {
 								return func() int32 {
-									if __fpclassifyl(float64(__y)) == int32(0) {
+									if X__fpclassifyl(float64(__y)) == int32(0) {
 										return 1
 									} else {
 										return 0
@@ -1069,7 +1069,7 @@ func __isgreater(__x float64, __y float64) int32 {
 			if func() int32 {
 				if 8 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+						if X__FLOAT_BITS(float32(__x))&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -1079,7 +1079,7 @@ func __isgreater(__x float64, __y float64) int32 {
 					return func() int32 {
 						if 8 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS(__x)&9223372036854775807 > 9218868437227405312 {
+								if X__DOUBLE_BITS(__x)&9223372036854775807 > 9218868437227405312 {
 									return 1
 								} else {
 									return 0
@@ -1087,7 +1087,7 @@ func __isgreater(__x float64, __y float64) int32 {
 							}()
 						} else {
 							return func() int32 {
-								if __fpclassifyl(float64(__x)) == int32(0) {
+								if X__fpclassifyl(float64(__x)) == int32(0) {
 									return 1
 								} else {
 									return 0
@@ -1108,7 +1108,7 @@ func __isgreater(__x float64, __y float64) int32 {
 				return func() int32 {
 					if 8 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+							if X__FLOAT_BITS(float32(__y))&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -1118,7 +1118,7 @@ func __isgreater(__x float64, __y float64) int32 {
 						return func() int32 {
 							if 8 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS(__y)&9223372036854775807 > 9218868437227405312 {
+									if X__DOUBLE_BITS(__y)&9223372036854775807 > 9218868437227405312 {
 										return 1
 									} else {
 										return 0
@@ -1126,7 +1126,7 @@ func __isgreater(__x float64, __y float64) int32 {
 								}()
 							} else {
 								return func() int32 {
-									if __fpclassifyl(float64(__y)) == int32(0) {
+									if X__fpclassifyl(float64(__y)) == int32(0) {
 										return 1
 									} else {
 										return 0
@@ -1150,7 +1150,7 @@ func __isgreaterl(__x float64, __y float64) int32 {
 			if func() int32 {
 				if 8 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+						if X__FLOAT_BITS(float32(__x))&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -1160,7 +1160,7 @@ func __isgreaterl(__x float64, __y float64) int32 {
 					return func() int32 {
 						if 8 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS(float64(__x))&9223372036854775807 > 9218868437227405312 {
+								if X__DOUBLE_BITS(float64(__x))&9223372036854775807 > 9218868437227405312 {
 									return 1
 								} else {
 									return 0
@@ -1168,7 +1168,7 @@ func __isgreaterl(__x float64, __y float64) int32 {
 							}()
 						} else {
 							return func() int32 {
-								if __fpclassifyl(__x) == int32(0) {
+								if X__fpclassifyl(__x) == int32(0) {
 									return 1
 								} else {
 									return 0
@@ -1189,7 +1189,7 @@ func __isgreaterl(__x float64, __y float64) int32 {
 				return func() int32 {
 					if 8 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+							if X__FLOAT_BITS(float32(__y))&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -1199,7 +1199,7 @@ func __isgreaterl(__x float64, __y float64) int32 {
 						return func() int32 {
 							if 8 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS(float64(__y))&9223372036854775807 > 9218868437227405312 {
+									if X__DOUBLE_BITS(float64(__y))&9223372036854775807 > 9218868437227405312 {
 										return 1
 									} else {
 										return 0
@@ -1207,7 +1207,7 @@ func __isgreaterl(__x float64, __y float64) int32 {
 								}()
 							} else {
 								return func() int32 {
-									if __fpclassifyl(__y) == int32(0) {
+									if X__fpclassifyl(__y) == int32(0) {
 										return 1
 									} else {
 										return 0
@@ -1231,7 +1231,7 @@ func __isgreaterequalf(__x float32, __y float32) int32 {
 			if func() int32 {
 				if 4 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS(__x)&uint32(2147483647) > uint32(2139095040) {
+						if X__FLOAT_BITS(__x)&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -1241,7 +1241,7 @@ func __isgreaterequalf(__x float32, __y float32) int32 {
 					return func() int32 {
 						if 4 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS(float64(__x))&9223372036854775807 > 9218868437227405312 {
+								if X__DOUBLE_BITS(float64(__x))&9223372036854775807 > 9218868437227405312 {
 									return 1
 								} else {
 									return 0
@@ -1249,7 +1249,7 @@ func __isgreaterequalf(__x float32, __y float32) int32 {
 							}()
 						} else {
 							return func() int32 {
-								if __fpclassifyl(float64(__x)) == int32(0) {
+								if X__fpclassifyl(float64(__x)) == int32(0) {
 									return 1
 								} else {
 									return 0
@@ -1270,7 +1270,7 @@ func __isgreaterequalf(__x float32, __y float32) int32 {
 				return func() int32 {
 					if 4 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS(__y)&uint32(2147483647) > uint32(2139095040) {
+							if X__FLOAT_BITS(__y)&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -1280,7 +1280,7 @@ func __isgreaterequalf(__x float32, __y float32) int32 {
 						return func() int32 {
 							if 4 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS(float64(__y))&9223372036854775807 > 9218868437227405312 {
+									if X__DOUBLE_BITS(float64(__y))&9223372036854775807 > 9218868437227405312 {
 										return 1
 									} else {
 										return 0
@@ -1288,7 +1288,7 @@ func __isgreaterequalf(__x float32, __y float32) int32 {
 								}()
 							} else {
 								return func() int32 {
-									if __fpclassifyl(float64(__y)) == int32(0) {
+									if X__fpclassifyl(float64(__y)) == int32(0) {
 										return 1
 									} else {
 										return 0
@@ -1312,7 +1312,7 @@ func __isgreaterequal(__x float64, __y float64) int32 {
 			if func() int32 {
 				if 8 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+						if X__FLOAT_BITS(float32(__x))&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -1322,7 +1322,7 @@ func __isgreaterequal(__x float64, __y float64) int32 {
 					return func() int32 {
 						if 8 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS(__x)&9223372036854775807 > 9218868437227405312 {
+								if X__DOUBLE_BITS(__x)&9223372036854775807 > 9218868437227405312 {
 									return 1
 								} else {
 									return 0
@@ -1330,7 +1330,7 @@ func __isgreaterequal(__x float64, __y float64) int32 {
 							}()
 						} else {
 							return func() int32 {
-								if __fpclassifyl(float64(__x)) == int32(0) {
+								if X__fpclassifyl(float64(__x)) == int32(0) {
 									return 1
 								} else {
 									return 0
@@ -1351,7 +1351,7 @@ func __isgreaterequal(__x float64, __y float64) int32 {
 				return func() int32 {
 					if 8 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+							if X__FLOAT_BITS(float32(__y))&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -1361,7 +1361,7 @@ func __isgreaterequal(__x float64, __y float64) int32 {
 						return func() int32 {
 							if 8 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS(__y)&9223372036854775807 > 9218868437227405312 {
+									if X__DOUBLE_BITS(__y)&9223372036854775807 > 9218868437227405312 {
 										return 1
 									} else {
 										return 0
@@ -1369,7 +1369,7 @@ func __isgreaterequal(__x float64, __y float64) int32 {
 								}()
 							} else {
 								return func() int32 {
-									if __fpclassifyl(float64(__y)) == int32(0) {
+									if X__fpclassifyl(float64(__y)) == int32(0) {
 										return 1
 									} else {
 										return 0
@@ -1393,7 +1393,7 @@ func __isgreaterequall(__x float64, __y float64) int32 {
 			if func() int32 {
 				if 8 == 4 {
 					return func() int32 {
-						if __FLOAT_BITS(float32(__x))&uint32(2147483647) > uint32(2139095040) {
+						if X__FLOAT_BITS(float32(__x))&uint32(2147483647) > uint32(2139095040) {
 							return 1
 						} else {
 							return 0
@@ -1403,7 +1403,7 @@ func __isgreaterequall(__x float64, __y float64) int32 {
 					return func() int32 {
 						if 8 == 8 {
 							return func() int32 {
-								if __DOUBLE_BITS(float64(__x))&9223372036854775807 > 9218868437227405312 {
+								if X__DOUBLE_BITS(float64(__x))&9223372036854775807 > 9218868437227405312 {
 									return 1
 								} else {
 									return 0
@@ -1411,7 +1411,7 @@ func __isgreaterequall(__x float64, __y float64) int32 {
 							}()
 						} else {
 							return func() int32 {
-								if __fpclassifyl(__x) == int32(0) {
+								if X__fpclassifyl(__x) == int32(0) {
 									return 1
 								} else {
 									return 0
@@ -1432,7 +1432,7 @@ func __isgreaterequall(__x float64, __y float64) int32 {
 				return func() int32 {
 					if 8 == 4 {
 						return func() int32 {
-							if __FLOAT_BITS(float32(__y))&uint32(2147483647) > uint32(2139095040) {
+							if X__FLOAT_BITS(float32(__y))&uint32(2147483647) > uint32(2139095040) {
 								return 1
 							} else {
 								return 0
@@ -1442,7 +1442,7 @@ func __isgreaterequall(__x float64, __y float64) int32 {
 						return func() int32 {
 							if 8 == 8 {
 								return func() int32 {
-									if __DOUBLE_BITS(float64(__y))&9223372036854775807 > 9218868437227405312 {
+									if X__DOUBLE_BITS(float64(__y))&9223372036854775807 > 9218868437227405312 {
 										return 1
 									} else {
 										return 0
@@ -1450,7 +1450,7 @@ func __isgreaterequall(__x float64, __y float64) int32 {
 								}()
 							} else {
 								return func() int32 {
-									if __fpclassifyl(__y) == int32(0) {
+									if X__fpclassifyl(__y) == int32(0) {
 										return 1
 									} else {
 										return 0
@@ -1560,6 +1560,11 @@ type struct___locale_map struct {
 	name     [24]int8
 	next     *struct___locale_map
 }
+type fexcept_t = uint64
+type _cgoa_104 struct {
+	__cw uint64
+}
+type fenv_t = _cgoa_104
 
 func __bswap16(__x uint16) uint16 {
 	return uint16(int32(__x)<<int32(8) | int32(__x)>>int32(8))
@@ -1659,10 +1664,10 @@ func a_barrier() {
 	a_cas(&tmp, int32(0), int32(0))
 }
 func a_and_64(p *uint64, v uint64) {
-	type _cgoa_753 struct {
+	type _cgoa_784 struct {
 		v uint64
 	}
-	var u _cgoa_753
+	var u _cgoa_784
 	u.v = v
 	if *(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&*(*[2]uint32)(unsafe.Pointer(&u)))))) + uintptr(int32(0))*4))+uint32(1) != 0 {
 		a_and((*int32)(unsafe.Pointer(p)), int32(*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&*(*[2]uint32)(unsafe.Pointer(&u)))))) + uintptr(int32(0))*4))))
@@ -1672,10 +1677,10 @@ func a_and_64(p *uint64, v uint64) {
 	}
 }
 func a_or_64(p *uint64, v uint64) {
-	type _cgoa_754 struct {
+	type _cgoa_785 struct {
 		v uint64
 	}
-	var u _cgoa_754
+	var u _cgoa_785
 	u.v = v
 	if *(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&*(*[2]uint32)(unsafe.Pointer(&u)))))) + uintptr(int32(0))*4)) != 0 {
 		a_or((*int32)(unsafe.Pointer(p)), int32(*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&*(*[2]uint32)(unsafe.Pointer(&u)))))) + uintptr(int32(0))*4))))
@@ -1695,10 +1700,10 @@ func a_crash() {
 	*(*int8)(nil) = int8(0)
 }
 func a_ctz_32(x uint32) int32 {
-	return int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&debruijn32_cgo755)))) + uintptr(x&-x*uint32(124511785)>>int32(27)))))
+	return int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&debruijn32_cgo786)))) + uintptr(x&-x*uint32(124511785)>>int32(27)))))
 }
 
-var debruijn32_cgo755 [32]int8 = [32]int8{int8(0), int8(1), int8(23), int8(2), int8(29), int8(24), int8(19), int8(3), int8(30), int8(27), int8(25), int8(11), int8(20), int8(8), int8(4), int8(13), int8(31), int8(22), int8(28), int8(18), int8(26), int8(10), int8(7), int8(12), int8(21), int8(17), int8(9), int8(6), int8(16), int8(5), int8(15), int8(14)}
+var debruijn32_cgo786 [32]int8 = [32]int8{int8(0), int8(1), int8(23), int8(2), int8(29), int8(24), int8(19), int8(3), int8(30), int8(27), int8(25), int8(11), int8(20), int8(8), int8(4), int8(13), int8(31), int8(22), int8(28), int8(18), int8(26), int8(10), int8(7), int8(12), int8(21), int8(17), int8(9), int8(6), int8(16), int8(5), int8(15), int8(14)}
 
 func a_ctz_64(x uint64) int32 {
 	if false {
@@ -1709,10 +1714,10 @@ func a_ctz_64(x uint64) int32 {
 		}
 		return a_ctz_32(y)
 	}
-	return int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&debruijn64_cgo756)))) + uintptr(x&-x*uint64(157587932685088877)>>int32(58)))))
+	return int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&debruijn64_cgo787)))) + uintptr(x&-x*uint64(157587932685088877)>>int32(58)))))
 }
 
-var debruijn64_cgo756 [64]int8 = [64]int8{int8(0), int8(1), int8(2), int8(53), int8(3), int8(7), int8(54), int8(27), int8(4), int8(38), int8(41), int8(8), int8(34), int8(55), int8(48), int8(28), int8(62), int8(5), int8(39), int8(46), int8(44), int8(42), int8(22), int8(9), int8(24), int8(35), int8(59), int8(56), int8(49), int8(18), int8(29), int8(11), int8(63), int8(52), int8(6), int8(26), int8(37), int8(40), int8(33), int8(47), int8(61), int8(45), int8(43), int8(21), int8(23), int8(58), int8(17), int8(10), int8(51), int8(25), int8(36), int8(32), int8(60), int8(20), int8(57), int8(16), int8(50), int8(31), int8(19), int8(15), int8(30), int8(14), int8(13), int8(12)}
+var debruijn64_cgo787 [64]int8 = [64]int8{int8(0), int8(1), int8(2), int8(53), int8(3), int8(7), int8(54), int8(27), int8(4), int8(38), int8(41), int8(8), int8(34), int8(55), int8(48), int8(28), int8(62), int8(5), int8(39), int8(46), int8(44), int8(42), int8(22), int8(9), int8(24), int8(35), int8(59), int8(56), int8(49), int8(18), int8(29), int8(11), int8(63), int8(52), int8(6), int8(26), int8(37), int8(40), int8(33), int8(47), int8(61), int8(45), int8(43), int8(21), int8(23), int8(58), int8(17), int8(10), int8(51), int8(25), int8(36), int8(32), int8(60), int8(20), int8(57), int8(16), int8(50), int8(31), int8(19), int8(15), int8(30), int8(14), int8(13), int8(12)}
 
 func a_ctz_l(x uint64) int32 {
 	return func() int32 {
@@ -1809,7 +1814,7 @@ type blksize_t = int64
 type Blksize_t = int64
 type blkcnt_t = int64
 type Blkcnt_t = int64
-type _cgoa_838 struct {
+type _cgoa_869 struct {
 	tv_sec  int64
 	tv_nsec int64
 }
@@ -1826,9 +1831,9 @@ type struct_stat struct {
 	st_size            int64
 	st_blksize         int64
 	st_blocks          int64
-	__st_atim32        _cgoa_838
-	__st_mtim32        _cgoa_838
-	__st_ctim32        _cgoa_838
+	__st_atim32        _cgoa_869
+	__st_mtim32        _cgoa_869
+	__st_ctim32        _cgoa_869
 	st_ino             uint64
 	st_atim            struct_timespec
 	st_mtim            struct_timespec
@@ -1875,8 +1880,8 @@ type struct___mbstate_t struct {
 }
 type mbstate_t = struct___mbstate_t
 type Mbstate_t = struct___mbstate_t
-type _cgoa_1202 struct {
+type _cgoa_1233 struct {
 	quot int64
 	rem  int64
 }
-type imaxdiv_t = _cgoa_1202
+type imaxdiv_t = _cgoa_1233
