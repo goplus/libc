@@ -3,10 +3,10 @@ package libc
 import unsafe "unsafe"
 
 func X__fpclassify(x float64) int32 {
-	type _cgoa_127 struct {
+	type _cgoa_15___fpclassify struct {
 		f float64
 	}
-	var u _cgoa_127
+	var u _cgoa_15___fpclassify
 	u.f = x
 	var e int32 = int32(*(*uint64)(unsafe.Pointer(&u)) >> int32(52) & uint64(2047))
 	if !(e != 0) {
