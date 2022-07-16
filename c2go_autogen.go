@@ -23,12 +23,6 @@ func __vm_wait() {
 func __wake(addr unsafe.Pointer, cnt int32, priv int32) {
 	panic("notimpl")
 }
-func tolower(int32) int32 {
-	panic("notimpl")
-}
-func towlower(uint32) uint32 {
-	panic("notimpl")
-}
 func wctomb(*int8, uint32) int32 {
 	panic("notimpl")
 }
