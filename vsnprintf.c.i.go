@@ -7,7 +7,7 @@ type struct_cookie struct {
 	n uint64
 }
 
-func sn_write_cgo891(f *struct__IO_FILE, s *uint8, l uint64) uint64 {
+func sn_write_cgo951(f *struct__IO_FILE, s *uint8, l uint64) uint64 {
 	var c *struct_cookie = (*struct_cookie)(f.cookie)
 	var k uint64 = func() uint64 {
 		if c.n < uint64(uintptr(unsafe.Pointer(f.wpos))-uintptr(unsafe.Pointer(f.wbase))) {
@@ -58,7 +58,7 @@ func Vsnprintf(s *int8, n uint64, fmt *int8, ap []interface {
 			return uint64(0)
 		}
 	}()}
-	var f struct__IO_FILE = struct__IO_FILE{0, nil, nil, nil, nil, nil, nil, nil, nil, sn_write_cgo891, nil, (*uint8)(unsafe.Pointer(&buf)), 0, nil, nil, 0, 0, 0, 0, -1, -1, unsafe.Pointer(&c), 0, nil, nil, nil, 0, 0, nil, nil, nil}
+	var f struct__IO_FILE = struct__IO_FILE{0, nil, nil, nil, nil, nil, nil, nil, nil, sn_write_cgo951, nil, (*uint8)(unsafe.Pointer(&buf)), 0, nil, nil, 0, 0, 0, 0, -1, -1, unsafe.Pointer(&c), 0, nil, nil, nil, 0, 0, nil, nil, nil}
 	if n > uint64(2147483647) {
 		*__errno_location() = int32(75)
 		return -1

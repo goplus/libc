@@ -472,8 +472,8 @@ func decfloat_cgo18(f *struct__IO_FILE, c int32, bits int32, emin int32, sign in
 		denormal = int32(1)
 	}
 	if bits < int32(53) {
-		bias = copysignl(float64(scalbn(float64(int32(1)), 106-bits-int32(1))), y)
-		frac = fmodl(y, float64(scalbn(float64(int32(1)), int32(53)-bits)))
+		bias = Copysignl(float64(scalbn(float64(int32(1)), 106-bits-int32(1))), y)
+		frac = Fmodl(y, float64(scalbn(float64(int32(1)), int32(53)-bits)))
 		y -= frac
 		y += bias
 	}
@@ -490,14 +490,14 @@ func decfloat_cgo18(f *struct__IO_FILE, c int32, bits int32, emin int32, sign in
 				frac += float64(0.75 * float64(sign))
 			}
 		}
-		if int32(53)-bits >= int32(2) && !(fmodl(frac, float64(int32(1))) != 0) {
+		if int32(53)-bits >= int32(2) && !(Fmodl(frac, float64(int32(1))) != 0) {
 			frac++
 		}
 	}
 	y += frac
 	y -= bias
 	if (e2+int32(53))&int32(2147483647) > emax-int32(5) {
-		if fabsl(y) >= float64(int32(2))/2.22044604925031308085e-16 {
+		if Fabsl(y) >= float64(int32(2))/2.22044604925031308085e-16 {
 			if denormal != 0 && bits == int32(53)+e2-emin {
 				denormal = int32(0)
 			}
@@ -772,7 +772,7 @@ func hexfloat_cgo21(f *struct__IO_FILE, bits int32, emin int32, sign int32, pok 
 		}
 	}
 	if bits < int32(53) {
-		bias = copysignl(float64(scalbn(float64(int32(1)), 85-bits-int32(1))), float64(sign))
+		bias = Copysignl(float64(scalbn(float64(int32(1)), 85-bits-int32(1))), float64(sign))
 	}
 	if bits < int32(32) && y != 0 && !(x&uint32(1) != 0) {
 		func() float64 {

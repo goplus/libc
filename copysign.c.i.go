@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func copysign(x float64, y float64) float64 {
+func Copysign(x float64, y float64) float64 {
 	type _cgoa_176 struct {
 		f float64
 	}
