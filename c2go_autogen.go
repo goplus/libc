@@ -26,12 +26,6 @@ func __vm_wait() {
 func __wake(addr unsafe.Pointer, cnt int32, priv int32) {
 	panic("notimpl")
 }
-func fabsl(float64) float64 {
-	panic("notimpl")
-}
-func fmodl(float64, float64) float64 {
-	panic("notimpl")
-}
 func wctomb(*int8, uint32) int32 {
 	panic("notimpl")
 }
