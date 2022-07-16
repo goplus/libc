@@ -3,12 +3,12 @@ package libc
 import unsafe "unsafe"
 
 func Fmod(x float64, y float64) float64 {
-	type _cgoa_280 struct {
+	type _cgoa_273 struct {
 		f float64
 	}
-	var ux _cgoa_280
+	var ux _cgoa_273
 	ux.f = x
-	var uy _cgoa_280
+	var uy _cgoa_273
 	uy.f = y
 	var ex int32 = int32(*(*uint64)(unsafe.Pointer(&ux)) >> int32(52) & uint64(2047))
 	var ey int32 = int32(*(*uint64)(unsafe.Pointer(&uy)) >> int32(52) & uint64(2047))

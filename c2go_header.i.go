@@ -1480,21 +1480,21 @@ func __isspace(_c int32) int32 {
 
 type wchar_t = uint32
 type Wchar_t = uint32
-type _cgoa_50 struct {
+type _cgoa_45 struct {
 	quot int32
 	rem  int32
 }
-type div_t = _cgoa_50
-type _cgoa_51 struct {
+type div_t = _cgoa_45
+type _cgoa_46 struct {
 	quot int64
 	rem  int64
 }
-type ldiv_t = _cgoa_51
-type _cgoa_52 struct {
+type ldiv_t = _cgoa_46
+type _cgoa_47 struct {
 	quot int64
 	rem  int64
 }
-type lldiv_t = _cgoa_52
+type lldiv_t = _cgoa_47
 type struct___locale_struct struct {
 	cat [6]*struct___locale_map
 }
@@ -1520,12 +1520,12 @@ type struct___libc struct {
 	page_size       uint64
 	global_locale   struct___locale_struct
 }
-type _cgoa_84 struct {
+type _cgoa_79 struct {
 	__ll int64
 	__ld float64
 }
-type max_align_t = _cgoa_84
-type Max_align_t = _cgoa_84
+type max_align_t = _cgoa_79
+type Max_align_t = _cgoa_79
 type ptrdiff_t = int64
 type Ptrdiff_t = int64
 type struct_lconv struct {
@@ -1561,10 +1561,10 @@ type struct___locale_map struct {
 	next     *struct___locale_map
 }
 type fexcept_t = uint64
-type _cgoa_104 struct {
+type _cgoa_97 struct {
 	__cw uint64
 }
-type fenv_t = _cgoa_104
+type fenv_t = _cgoa_97
 
 func __bswap16(__x uint16) uint16 {
 	return uint16(int32(__x)<<int32(8) | int32(__x)>>int32(8))
@@ -1664,10 +1664,10 @@ func a_barrier() {
 	a_cas(&tmp, int32(0), int32(0))
 }
 func a_and_64(p *uint64, v uint64) {
-	type _cgoa_784 struct {
+	type _cgoa_775 struct {
 		v uint64
 	}
-	var u _cgoa_784
+	var u _cgoa_775
 	u.v = v
 	if *(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&*(*[2]uint32)(unsafe.Pointer(&u)))))) + uintptr(int32(0))*4))+uint32(1) != 0 {
 		a_and((*int32)(unsafe.Pointer(p)), int32(*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&*(*[2]uint32)(unsafe.Pointer(&u)))))) + uintptr(int32(0))*4))))
@@ -1677,10 +1677,10 @@ func a_and_64(p *uint64, v uint64) {
 	}
 }
 func a_or_64(p *uint64, v uint64) {
-	type _cgoa_785 struct {
+	type _cgoa_776 struct {
 		v uint64
 	}
-	var u _cgoa_785
+	var u _cgoa_776
 	u.v = v
 	if *(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&*(*[2]uint32)(unsafe.Pointer(&u)))))) + uintptr(int32(0))*4)) != 0 {
 		a_or((*int32)(unsafe.Pointer(p)), int32(*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&*(*[2]uint32)(unsafe.Pointer(&u)))))) + uintptr(int32(0))*4))))
@@ -1700,10 +1700,10 @@ func a_crash() {
 	*(*int8)(nil) = int8(0)
 }
 func a_ctz_32(x uint32) int32 {
-	return int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&debruijn32_cgo786)))) + uintptr(x&-x*uint32(124511785)>>int32(27)))))
+	return int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&debruijn32_qsort)))) + uintptr(x&-x*uint32(124511785)>>int32(27)))))
 }
 
-var debruijn32_cgo786 [32]int8 = [32]int8{int8(0), int8(1), int8(23), int8(2), int8(29), int8(24), int8(19), int8(3), int8(30), int8(27), int8(25), int8(11), int8(20), int8(8), int8(4), int8(13), int8(31), int8(22), int8(28), int8(18), int8(26), int8(10), int8(7), int8(12), int8(21), int8(17), int8(9), int8(6), int8(16), int8(5), int8(15), int8(14)}
+var debruijn32_qsort [32]int8 = [32]int8{int8(0), int8(1), int8(23), int8(2), int8(29), int8(24), int8(19), int8(3), int8(30), int8(27), int8(25), int8(11), int8(20), int8(8), int8(4), int8(13), int8(31), int8(22), int8(28), int8(18), int8(26), int8(10), int8(7), int8(12), int8(21), int8(17), int8(9), int8(6), int8(16), int8(5), int8(15), int8(14)}
 
 func a_ctz_64(x uint64) int32 {
 	if false {
@@ -1714,10 +1714,10 @@ func a_ctz_64(x uint64) int32 {
 		}
 		return a_ctz_32(y)
 	}
-	return int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&debruijn64_cgo787)))) + uintptr(x&-x*uint64(157587932685088877)>>int32(58)))))
+	return int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&debruijn64_qsort)))) + uintptr(x&-x*uint64(157587932685088877)>>int32(58)))))
 }
 
-var debruijn64_cgo787 [64]int8 = [64]int8{int8(0), int8(1), int8(2), int8(53), int8(3), int8(7), int8(54), int8(27), int8(4), int8(38), int8(41), int8(8), int8(34), int8(55), int8(48), int8(28), int8(62), int8(5), int8(39), int8(46), int8(44), int8(42), int8(22), int8(9), int8(24), int8(35), int8(59), int8(56), int8(49), int8(18), int8(29), int8(11), int8(63), int8(52), int8(6), int8(26), int8(37), int8(40), int8(33), int8(47), int8(61), int8(45), int8(43), int8(21), int8(23), int8(58), int8(17), int8(10), int8(51), int8(25), int8(36), int8(32), int8(60), int8(20), int8(57), int8(16), int8(50), int8(31), int8(19), int8(15), int8(30), int8(14), int8(13), int8(12)}
+var debruijn64_qsort [64]int8 = [64]int8{int8(0), int8(1), int8(2), int8(53), int8(3), int8(7), int8(54), int8(27), int8(4), int8(38), int8(41), int8(8), int8(34), int8(55), int8(48), int8(28), int8(62), int8(5), int8(39), int8(46), int8(44), int8(42), int8(22), int8(9), int8(24), int8(35), int8(59), int8(56), int8(49), int8(18), int8(29), int8(11), int8(63), int8(52), int8(6), int8(26), int8(37), int8(40), int8(33), int8(47), int8(61), int8(45), int8(43), int8(21), int8(23), int8(58), int8(17), int8(10), int8(51), int8(25), int8(36), int8(32), int8(60), int8(20), int8(57), int8(16), int8(50), int8(31), int8(19), int8(15), int8(30), int8(14), int8(13), int8(12)}
 
 func a_ctz_l(x uint64) int32 {
 	return func() int32 {
@@ -1814,7 +1814,7 @@ type blksize_t = int64
 type Blksize_t = int64
 type blkcnt_t = int64
 type Blkcnt_t = int64
-type _cgoa_869 struct {
+type _cgoa_850 struct {
 	tv_sec  int64
 	tv_nsec int64
 }
@@ -1831,9 +1831,9 @@ type struct_stat struct {
 	st_size            int64
 	st_blksize         int64
 	st_blocks          int64
-	__st_atim32        _cgoa_869
-	__st_mtim32        _cgoa_869
-	__st_ctim32        _cgoa_869
+	__st_atim32        _cgoa_850
+	__st_mtim32        _cgoa_850
+	__st_ctim32        _cgoa_850
 	st_ino             uint64
 	st_atim            struct_timespec
 	st_mtim            struct_timespec
@@ -1880,8 +1880,8 @@ type struct___mbstate_t struct {
 }
 type mbstate_t = struct___mbstate_t
 type Mbstate_t = struct___mbstate_t
-type _cgoa_1233 struct {
+type _cgoa_1200 struct {
 	quot int64
 	rem  int64
 }
-type imaxdiv_t = _cgoa_1233
+type imaxdiv_t = _cgoa_1200
