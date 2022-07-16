@@ -2,9 +2,6 @@ package libc
 
 import unsafe "unsafe"
 
-type struct_sigevent struct {
-}
-
 func __aio_close(int32) int32 {
 	panic("notimpl")
 }
@@ -24,6 +21,12 @@ func __vm_wait() {
 	panic("notimpl")
 }
 func __wake(addr unsafe.Pointer, cnt int32, priv int32) {
+	panic("notimpl")
+}
+func tolower(int32) int32 {
+	panic("notimpl")
+}
+func towlower(uint32) uint32 {
 	panic("notimpl")
 }
 func wctomb(*int8, uint32) int32 {
