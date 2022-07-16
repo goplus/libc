@@ -22,71 +22,71 @@ type pthread_key_t = uint32
 type Pthread_key_t = uint32
 type pthread_spinlock_t = int32
 type Pthread_spinlock_t = int32
-type _cgoa_1_floatscan struct {
+type _cgoa_1_bcmp struct {
 	__attr uint32
 }
-type pthread_mutexattr_t = _cgoa_1_floatscan
-type Pthread_mutexattr_t = _cgoa_1_floatscan
-type _cgoa_2_floatscan struct {
+type pthread_mutexattr_t = _cgoa_1_bcmp
+type Pthread_mutexattr_t = _cgoa_1_bcmp
+type _cgoa_2_bcmp struct {
 	__attr uint32
 }
-type pthread_condattr_t = _cgoa_2_floatscan
-type Pthread_condattr_t = _cgoa_2_floatscan
-type _cgoa_3_floatscan struct {
+type pthread_condattr_t = _cgoa_2_bcmp
+type Pthread_condattr_t = _cgoa_2_bcmp
+type _cgoa_3_bcmp struct {
 	__attr uint32
 }
-type pthread_barrierattr_t = _cgoa_3_floatscan
-type Pthread_barrierattr_t = _cgoa_3_floatscan
-type _cgoa_4_floatscan struct {
+type pthread_barrierattr_t = _cgoa_3_bcmp
+type Pthread_barrierattr_t = _cgoa_3_bcmp
+type _cgoa_4_bcmp struct {
 	__attr [2]uint32
 }
-type pthread_rwlockattr_t = _cgoa_4_floatscan
-type Pthread_rwlockattr_t = _cgoa_4_floatscan
+type pthread_rwlockattr_t = _cgoa_4_bcmp
+type Pthread_rwlockattr_t = _cgoa_4_bcmp
 type struct___sigset_t struct {
 	__bits [16]uint64
 }
 type sigset_t = struct___sigset_t
 type Sigset_t = struct___sigset_t
-type _cgoa_6_floatscan struct {
+type _cgoa_6_bcmp struct {
 	__i [14]int32
 }
-type _cgoa_5_floatscan struct {
-	__u _cgoa_6_floatscan
+type _cgoa_5_bcmp struct {
+	__u _cgoa_6_bcmp
 }
-type pthread_attr_t = _cgoa_5_floatscan
-type Pthread_attr_t = _cgoa_5_floatscan
-type _cgoa_8_floatscan struct {
+type pthread_attr_t = _cgoa_5_bcmp
+type Pthread_attr_t = _cgoa_5_bcmp
+type _cgoa_8_bcmp struct {
 	__i [10]int32
 }
-type _cgoa_7_floatscan struct {
-	__u _cgoa_8_floatscan
+type _cgoa_7_bcmp struct {
+	__u _cgoa_8_bcmp
 }
-type pthread_mutex_t = _cgoa_7_floatscan
-type Pthread_mutex_t = _cgoa_7_floatscan
-type _cgoa_10_floatscan struct {
+type pthread_mutex_t = _cgoa_7_bcmp
+type Pthread_mutex_t = _cgoa_7_bcmp
+type _cgoa_10_bcmp struct {
 	__i [12]int32
 }
-type _cgoa_9_floatscan struct {
-	__u _cgoa_10_floatscan
+type _cgoa_9_bcmp struct {
+	__u _cgoa_10_bcmp
 }
-type pthread_cond_t = _cgoa_9_floatscan
-type Pthread_cond_t = _cgoa_9_floatscan
-type _cgoa_12_floatscan struct {
+type pthread_cond_t = _cgoa_9_bcmp
+type Pthread_cond_t = _cgoa_9_bcmp
+type _cgoa_12_bcmp struct {
 	__i [14]int32
 }
-type _cgoa_11_floatscan struct {
-	__u _cgoa_12_floatscan
+type _cgoa_11_bcmp struct {
+	__u _cgoa_12_bcmp
 }
-type pthread_rwlock_t = _cgoa_11_floatscan
-type Pthread_rwlock_t = _cgoa_11_floatscan
-type _cgoa_14_floatscan struct {
+type pthread_rwlock_t = _cgoa_11_bcmp
+type Pthread_rwlock_t = _cgoa_11_bcmp
+type _cgoa_14_bcmp struct {
 	__i [8]int32
 }
-type _cgoa_13_floatscan struct {
-	__u _cgoa_14_floatscan
+type _cgoa_13_bcmp struct {
+	__u _cgoa_14_bcmp
 }
-type pthread_barrier_t = _cgoa_13_floatscan
-type Pthread_barrier_t = _cgoa_13_floatscan
+type pthread_barrier_t = _cgoa_13_bcmp
+type Pthread_barrier_t = _cgoa_13_bcmp
 type pid_t = int32
 type Pid_t = int32
 type struct_sched_param struct {
@@ -129,69 +129,6 @@ type struct___pthread struct {
 	sys_r1    int64
 	locale    *struct___locale_struct
 }
-type syscall_arg_t = int64
-
-func __alt_socketcall(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
-	var r int64
-	if cp != 0 {
-		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
-	} else {
-		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
-	}
-	if r != int64(-38) {
-		return r
-	}
-	return r
-}
-
-type ssize_t = int64
-type Ssize_t = int64
-type off_t = int64
-type Off_t = int64
-type FILE = struct__IO_FILE
-type va_list = []interface {
-}
-type Va_list = []interface {
-}
-type __isoc_va_list = []interface {
-}
-type union__G_fpos64_t struct {
-	__opaque [16]int8
-}
-type fpos_t = union__G_fpos64_t
-type struct__IO_FILE struct {
-	flags        uint32
-	rpos         *uint8
-	rend         *uint8
-	close        func(*struct__IO_FILE) int32
-	wend         *uint8
-	wpos         *uint8
-	mustbezero_1 *uint8
-	wbase        *uint8
-	read         func(*struct__IO_FILE, *uint8, uint64) uint64
-	write        func(*struct__IO_FILE, *uint8, uint64) uint64
-	seek         func(*struct__IO_FILE, int64, int32) int64
-	buf          *uint8
-	buf_size     uint64
-	prev         *struct__IO_FILE
-	next         *struct__IO_FILE
-	fd           int32
-	pipe_pid     int32
-	lockcount    int64
-	mode         int32
-	lock         int32
-	lbf          int32
-	cookie       unsafe.Pointer
-	off          int64
-	getln_buf    *int8
-	mustbezero_2 unsafe.Pointer
-	shend        *uint8
-	shlim        int64
-	shcnt        int64
-	prev_locked  *struct__IO_FILE
-	next_locked  *struct__IO_FILE
-	locale       *struct___locale_struct
-}
 type uintptr_t = uint64
 type Uintptr_t = uint64
 type intptr_t = int64
@@ -232,6 +169,326 @@ type int_fast16_t = int32
 type int_fast32_t = int32
 type uint_fast16_t = uint32
 type uint_fast32_t = uint32
+
+func __bswap16(__x uint16) uint16 {
+	return uint16(int32(__x)<<int32(8) | int32(__x)>>int32(8))
+}
+func __bswap32(__x uint32) uint32 {
+	return __x>>int32(24) | __x>>int32(8)&uint32(65280) | __x<<int32(8)&uint32(16711680) | __x<<int32(24)
+}
+func __bswap64(__x uint64) uint64 {
+	return (uint64(__bswap32(uint32(__x)))+uint64(0))<<int32(32) | uint64(__bswap32(uint32(__x>>int32(32))))
+}
+
+type struct_cpu_set_t struct {
+	__bits [16]uint64
+}
+type cpu_set_t = struct_cpu_set_t
+
+func __CPU_AND_S(__size uint64, __dest *struct_cpu_set_t, __src1 *struct_cpu_set_t, __src2 *struct_cpu_set_t) {
+	var __i uint64
+	for __i = uint64(0); __i < __size/8; __i++ {
+		*(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint64)(unsafe.Pointer(__dest)))) + uintptr(__i)*8)) = *(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint64)(unsafe.Pointer(__src1)))) + uintptr(__i)*8)) & *(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint64)(unsafe.Pointer(__src2)))) + uintptr(__i)*8))
+	}
+}
+func __CPU_OR_S(__size uint64, __dest *struct_cpu_set_t, __src1 *struct_cpu_set_t, __src2 *struct_cpu_set_t) {
+	var __i uint64
+	for __i = uint64(0); __i < __size/8; __i++ {
+		*(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint64)(unsafe.Pointer(__dest)))) + uintptr(__i)*8)) = *(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint64)(unsafe.Pointer(__src1)))) + uintptr(__i)*8)) | *(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint64)(unsafe.Pointer(__src2)))) + uintptr(__i)*8))
+	}
+}
+func __CPU_XOR_S(__size uint64, __dest *struct_cpu_set_t, __src1 *struct_cpu_set_t, __src2 *struct_cpu_set_t) {
+	var __i uint64
+	for __i = uint64(0); __i < __size/8; __i++ {
+		*(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint64)(unsafe.Pointer(__dest)))) + uintptr(__i)*8)) = *(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint64)(unsafe.Pointer(__src1)))) + uintptr(__i)*8)) ^ *(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint64)(unsafe.Pointer(__src2)))) + uintptr(__i)*8))
+	}
+}
+func __isspace(_c int32) int32 {
+	return func() int32 {
+		if _c == ' ' || uint32(_c)-uint32('\t') < uint32(5) {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+
+type wchar_t = uint32
+type Wchar_t = uint32
+type _cgoa_15_strdup struct {
+	quot int32
+	rem  int32
+}
+type div_t = _cgoa_15_strdup
+type _cgoa_16_strdup struct {
+	quot int64
+	rem  int64
+}
+type ldiv_t = _cgoa_16_strdup
+type _cgoa_17_strdup struct {
+	quot int64
+	rem  int64
+}
+type lldiv_t = _cgoa_17_strdup
+type uid_t = uint32
+type Uid_t = uint32
+type stack_t = struct_sigaltstack
+type greg_t = int32
+type gregset_t = [18]int32
+type struct_sigcontext struct {
+	trap_no       uint64
+	error_code    uint64
+	oldmask       uint64
+	arm_r0        uint64
+	arm_r1        uint64
+	arm_r2        uint64
+	arm_r3        uint64
+	arm_r4        uint64
+	arm_r5        uint64
+	arm_r6        uint64
+	arm_r7        uint64
+	arm_r8        uint64
+	arm_r9        uint64
+	arm_r10       uint64
+	arm_fp        uint64
+	arm_ip        uint64
+	arm_sp        uint64
+	arm_lr        uint64
+	arm_pc        uint64
+	arm_cpsr      uint64
+	fault_address uint64
+}
+type mcontext_t = struct_sigcontext
+type struct_sigaltstack struct {
+	ss_sp    unsafe.Pointer
+	ss_flags int32
+	ss_size  uint64
+}
+type struct___ucontext struct {
+	uc_flags    uint64
+	uc_link     *struct___ucontext
+	uc_stack    struct_sigaltstack
+	uc_mcontext struct_sigcontext
+	uc_sigmask  struct___sigset_t
+	uc_regspace [64]uint64
+}
+type ucontext_t = struct___ucontext
+type union_sigval struct {
+	sival_ptr unsafe.Pointer
+}
+type _cgoa_19_strsignal struct {
+	si_pid int32
+	si_uid uint32
+}
+type _cgoa_20_strsignal struct {
+	si_timerid int32
+	si_overrun int32
+}
+type _cgoa_18_strsignal struct {
+	__piduid _cgoa_19_strsignal
+}
+type _cgoa_22_strsignal struct {
+	si_status int32
+	si_utime  int64
+	si_stime  int64
+}
+type _cgoa_21_strsignal struct {
+	__sigchld _cgoa_22_strsignal
+}
+type _cgoa_17_strsignal struct {
+	__first  _cgoa_18_strsignal
+	__second _cgoa_21_strsignal
+}
+type _cgoa_25_strsignal struct {
+	si_lower unsafe.Pointer
+	si_upper unsafe.Pointer
+}
+type _cgoa_24_strsignal struct {
+	__addr_bnd _cgoa_25_strsignal
+}
+type _cgoa_23_strsignal struct {
+	si_addr     unsafe.Pointer
+	si_addr_lsb int16
+	__first     _cgoa_24_strsignal
+}
+type _cgoa_26_strsignal struct {
+	si_band int64
+	si_fd   int32
+}
+type _cgoa_27_strsignal struct {
+	si_call_addr unsafe.Pointer
+	si_syscall   int32
+	si_arch      uint32
+}
+type _cgoa_16_strsignal struct {
+	__pad [112]int8
+}
+type _cgoa_15_strsignal struct {
+	si_signo    int32
+	si_errno    int32
+	si_code     int32
+	__si_fields _cgoa_16_strsignal
+}
+type siginfo_t = _cgoa_15_strsignal
+type _cgoa_28_strsignal struct {
+	sa_handler func(int32)
+}
+type struct_sigaction struct {
+	__sa_handler _cgoa_28_strsignal
+	sa_mask      struct___sigset_t
+	sa_flags     int32
+	sa_restorer  func()
+}
+type _cgoa_30_strsignal struct {
+	sigev_notify_function   func(union_sigval)
+	sigev_notify_attributes *_cgoa_5_bcmp
+}
+type _cgoa_29_strsignal struct {
+	__pad [48]int8
+}
+type struct_sigevent struct {
+	sigev_value  union_sigval
+	sigev_signo  int32
+	sigev_notify int32
+	__sev_fields _cgoa_29_strsignal
+}
+type sig_t = func(int32)
+type sig_atomic_t = int32
+type struct_lconv struct {
+	decimal_point      *int8
+	thousands_sep      *int8
+	grouping           *int8
+	int_curr_symbol    *int8
+	currency_symbol    *int8
+	mon_decimal_point  *int8
+	mon_thousands_sep  *int8
+	mon_grouping       *int8
+	positive_sign      *int8
+	negative_sign      *int8
+	int_frac_digits    int8
+	frac_digits        int8
+	p_cs_precedes      int8
+	p_sep_by_space     int8
+	n_cs_precedes      int8
+	n_sep_by_space     int8
+	p_sign_posn        int8
+	n_sign_posn        int8
+	int_p_cs_precedes  int8
+	int_p_sep_by_space int8
+	int_n_cs_precedes  int8
+	int_n_sep_by_space int8
+	int_p_sign_posn    int8
+	int_n_sign_posn    int8
+}
+type ssize_t = int64
+type Ssize_t = int64
+type off_t = int64
+type Off_t = int64
+type FILE = struct__IO_FILE
+type va_list = []interface {
+}
+type Va_list = []interface {
+}
+type __isoc_va_list = []interface {
+}
+type union__G_fpos64_t struct {
+	__opaque [16]int8
+}
+type fpos_t = union__G_fpos64_t
+type struct___locale_struct struct {
+	cat [6]*struct___locale_map
+}
+type struct_tls_module struct {
+	next   *struct_tls_module
+	image  unsafe.Pointer
+	len    uint64
+	size   uint64
+	align  uint64
+	offset uint64
+}
+type struct___libc struct {
+	can_do_threads  int8
+	threaded        int8
+	secure          int8
+	need_locks      int8
+	threads_minus_1 int32
+	auxv            *uint64
+	tls_head        *struct_tls_module
+	tls_size        uint64
+	tls_align       uint64
+	tls_cnt         uint64
+	page_size       uint64
+	global_locale   struct___locale_struct
+}
+type struct___locale_map struct {
+	map_     unsafe.Pointer
+	map_size uint64
+	name     [24]int8
+	next     *struct___locale_map
+}
+type gid_t = uint32
+type Gid_t = uint32
+type useconds_t = uint32
+type Useconds_t = uint32
+type wint_t = uint32
+type Wint_t = uint32
+type wctype_t = uint64
+type Wctype_t = uint64
+type struct___mbstate_t struct {
+	__opaque1 uint32
+	__opaque2 uint32
+}
+type mbstate_t = struct___mbstate_t
+type Mbstate_t = struct___mbstate_t
+type wctrans_t = *int32
+type syscall_arg_t = int64
+
+func __alt_socketcall(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+	var r int64
+	if cp != 0 {
+		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	} else {
+		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	}
+	if r != int64(-38) {
+		return r
+	}
+	return r
+}
+
+type struct__IO_FILE struct {
+	flags        uint32
+	rpos         *uint8
+	rend         *uint8
+	close        func(*struct__IO_FILE) int32
+	wend         *uint8
+	wpos         *uint8
+	mustbezero_1 *uint8
+	wbase        *uint8
+	read         func(*struct__IO_FILE, *uint8, uint64) uint64
+	write        func(*struct__IO_FILE, *uint8, uint64) uint64
+	seek         func(*struct__IO_FILE, int64, int32) int64
+	buf          *uint8
+	buf_size     uint64
+	prev         *struct__IO_FILE
+	next         *struct__IO_FILE
+	fd           int32
+	pipe_pid     int32
+	lockcount    int64
+	mode         int32
+	lock         int32
+	lbf          int32
+	cookie       unsafe.Pointer
+	off          int64
+	getln_buf    *int8
+	mustbezero_2 unsafe.Pointer
+	shend        *uint8
+	shlim        int64
+	shcnt        int64
+	prev_locked  *struct__IO_FILE
+	next_locked  *struct__IO_FILE
+	locale       *struct___locale_struct
+}
 type float_t = float32
 type Float_t = float32
 type double_t = float64
@@ -1468,58 +1725,7 @@ func __isgreaterequall(__x float64, __y float64) int32 {
 		}
 	}()
 }
-func __isspace(_c int32) int32 {
-	return func() int32 {
-		if _c == ' ' || uint32(_c)-uint32('\t') < uint32(5) {
-			return 1
-		} else {
-			return 0
-		}
-	}()
-}
 
-type wchar_t = uint32
-type Wchar_t = uint32
-type _cgoa_15_c2go struct {
-	quot int32
-	rem  int32
-}
-type div_t = _cgoa_15_c2go
-type _cgoa_16_c2go struct {
-	quot int64
-	rem  int64
-}
-type ldiv_t = _cgoa_16_c2go
-type _cgoa_17_c2go struct {
-	quot int64
-	rem  int64
-}
-type lldiv_t = _cgoa_17_c2go
-type struct___locale_struct struct {
-	cat [6]*struct___locale_map
-}
-type struct_tls_module struct {
-	next   *struct_tls_module
-	image  unsafe.Pointer
-	len    uint64
-	size   uint64
-	align  uint64
-	offset uint64
-}
-type struct___libc struct {
-	can_do_threads  int8
-	threaded        int8
-	secure          int8
-	need_locks      int8
-	threads_minus_1 int32
-	auxv            *uint64
-	tls_head        *struct_tls_module
-	tls_size        uint64
-	tls_align       uint64
-	tls_cnt         uint64
-	page_size       uint64
-	global_locale   struct___locale_struct
-}
 type _cgoa_15_strerror struct {
 	__ll int64
 	__ld float64
@@ -1528,53 +1734,12 @@ type max_align_t = _cgoa_15_strerror
 type Max_align_t = _cgoa_15_strerror
 type ptrdiff_t = int64
 type Ptrdiff_t = int64
-type struct_lconv struct {
-	decimal_point      *int8
-	thousands_sep      *int8
-	grouping           *int8
-	int_curr_symbol    *int8
-	currency_symbol    *int8
-	mon_decimal_point  *int8
-	mon_thousands_sep  *int8
-	mon_grouping       *int8
-	positive_sign      *int8
-	negative_sign      *int8
-	int_frac_digits    int8
-	frac_digits        int8
-	p_cs_precedes      int8
-	p_sep_by_space     int8
-	n_cs_precedes      int8
-	n_sep_by_space     int8
-	p_sign_posn        int8
-	n_sign_posn        int8
-	int_p_cs_precedes  int8
-	int_p_sep_by_space int8
-	int_n_cs_precedes  int8
-	int_n_sep_by_space int8
-	int_p_sign_posn    int8
-	int_n_sign_posn    int8
-}
-type struct___locale_map struct {
-	map_     unsafe.Pointer
-	map_size uint64
-	name     [24]int8
-	next     *struct___locale_map
-}
 type fexcept_t = uint64
 type _cgoa_1_fenv struct {
 	__cw uint64
 }
 type fenv_t = _cgoa_1_fenv
 
-func __bswap16(__x uint16) uint16 {
-	return uint16(int32(__x)<<int32(8) | int32(__x)>>int32(8))
-}
-func __bswap32(__x uint32) uint32 {
-	return __x>>int32(24) | __x>>int32(8)&uint32(65280) | __x<<int32(8)&uint32(16711680) | __x<<int32(24)
-}
-func __bswap64(__x uint64) uint64 {
-	return (uint64(__bswap32(uint32(__x)))+uint64(0))<<int32(32) | uint64(__bswap32(uint32(__x>>int32(32))))
-}
 func eval_as_float(x float32) float32 {
 	var y float32 = x
 	return y
@@ -1789,12 +1954,6 @@ func a_clz_32(x uint32) int32 {
 	return int32(31) - a_ctz_32(x)
 }
 
-type uid_t = uint32
-type Uid_t = uint32
-type gid_t = uint32
-type Gid_t = uint32
-type useconds_t = uint32
-type Useconds_t = uint32
 type mode_t = uint32
 type Mode_t = uint32
 type struct_flock struct {
@@ -1870,16 +2029,6 @@ type struct_winsize struct {
 	ws_xpixel uint16
 	ws_ypixel uint16
 }
-type wint_t = uint32
-type Wint_t = uint32
-type wctype_t = uint64
-type Wctype_t = uint64
-type struct___mbstate_t struct {
-	__opaque1 uint32
-	__opaque2 uint32
-}
-type mbstate_t = struct___mbstate_t
-type Mbstate_t = struct___mbstate_t
 type _cgoa_19_vfprintf struct {
 	quot int64
 	rem  int64
