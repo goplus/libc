@@ -1,3 +1,7 @@
+__builtin_inf
+__builtin_inff
+__builtin_nan
+__builtin_nanf
 abort
 frexp
 frexpl
