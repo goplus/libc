@@ -24,10 +24,10 @@ func frandf_cgo5_rand() float32 {
 func frandl_cgo6_rand() float64 {
 	return float64(rand64_cgo3_rand()) * 5.42101086242752217004e-20
 }
-func t_randseed(s uint64) {
+func T_randseed(s uint64) {
 	seed_cgo1_rand = s
 }
-func t_randn(n uint64) uint64 {
+func T_randn(n uint64) uint64 {
 	var r uint64
 	var m uint64
 	m = uint64(18446744073709551615)
@@ -40,10 +40,10 @@ func t_randn(n uint64) uint64 {
 	}
 	return r % n
 }
-func t_randint(a uint64, b uint64) uint64 {
+func T_randint(a uint64, b uint64) uint64 {
 	var n uint64 = b - a + uint64(1)
 	if n != 0 {
-		return a + t_randn(n)
+		return a + T_randn(n)
 	}
 	return rand64_cgo3_rand()
 }
@@ -51,7 +51,7 @@ func shuffle2_cgo7_rand(p *uint64, q *uint64, np uint64, nq uint64) {
 	var r uint64
 	var t uint64
 	for np != 0 {
-		r = uint64(t_randn(uint64(nq + func() (_cgo_ret uint64) {
+		r = uint64(T_randn(uint64(nq + func() (_cgo_ret uint64) {
 			_cgo_addr := &np
 			_cgo_ret = *_cgo_addr
 			*_cgo_addr--
@@ -67,15 +67,15 @@ func shuffle2_cgo7_rand(p *uint64, q *uint64, np uint64, nq uint64) {
 		}
 	}
 }
-func t_shuffle(p *uint64, n uint64) {
+func T_shuffle(p *uint64, n uint64) {
 	shuffle2_cgo7_rand(p, nil, n, uint64(0))
 }
-func t_randrange(p *uint64, n uint64) {
+func T_randrange(p *uint64, n uint64) {
 	var i uint64
 	for i = uint64(0); i < n; i++ {
 		*(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer(p)) + uintptr(i)*8)) = uint64(i)
 	}
-	t_shuffle(p, n)
+	T_shuffle(p, n)
 }
 func insert_cgo8_rand(tab *uint64, len uint64, v uint64) int32 {
 	var i uint64 = uint64(v & uint64(len-uint64(1)))
@@ -95,7 +95,7 @@ func insert_cgo8_rand(tab *uint64, len uint64, v uint64) int32 {
 	*(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer(tab)) + uintptr(i)*8)) = v
 	return int32(0)
 }
-func t_choose(n uint64, k uint64, p *uint64) int32 {
+func T_choose(n uint64, k uint64, p *uint64) int32 {
 	var tab *uint64
 	var i uint64
 	var j uint64
@@ -105,7 +105,7 @@ func t_choose(n uint64, k uint64, p *uint64) int32 {
 	}
 	if n < uint64(16) {
 		for k != 0 {
-			if t_randn(func() (_cgo_ret uint64) {
+			if T_randn(func() (_cgo_ret uint64) {
 				_cgo_addr := &n
 				_cgo_ret = *_cgo_addr
 				*_cgo_addr--
@@ -122,7 +122,7 @@ func t_choose(n uint64, k uint64, p *uint64) int32 {
 	}
 	if k < uint64(8) {
 		for i = uint64(0); i < k; {
-			*(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer(p)) + uintptr(i)*8)) = t_randn(n)
+			*(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer(p)) + uintptr(i)*8)) = T_randn(n)
 			for j = uint64(0); *(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer(p)) + uintptr(j)*8)) != *(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer(p)) + uintptr(i)*8)); j++ {
 			}
 			if j == i {
@@ -157,7 +157,7 @@ func t_choose(n uint64, k uint64, p *uint64) int32 {
 		return -1
 	}
 	for i = uint64(0); i < k; i++ {
-		for insert_cgo8_rand(tab, len, t_randn(n)+uint64(1)) != 0 {
+		for insert_cgo8_rand(tab, len, T_randn(n)+uint64(1)) != 0 {
 		}
 	}
 	for i = uint64(0); i < len; i++ {

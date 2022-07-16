@@ -5,15 +5,15 @@ import (
 	unsafe "unsafe"
 )
 
-var t_status int32 = int32(0)
+var T_status int32 = int32(0)
 
-func t_printf(s *int8, __cgo_args ...interface {
+func T_printf(s *int8, __cgo_args ...interface {
 }) int32 {
 	var ap []interface {
 	}
 	var buf [512]int8
 	var n int32
-	t_status = int32(1)
+	T_status = int32(1)
 	ap = __cgo_args
 	n = libc.Vsnprintf((*int8)(unsafe.Pointer(&buf)), 512, s, ap)
 	if n < int32(0) {

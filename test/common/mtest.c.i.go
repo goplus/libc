@@ -32,7 +32,7 @@ func eulp(x float64) int32 {
 func eulpl(x float64) int32 {
 	return eulp(float64(x))
 }
-func ulperrf(got float32, want float32, dwant float32) float32 {
+func Ulperrf(got float32, want float32, dwant float32) float32 {
 	if func() int32 {
 		if 4 == 4 {
 			return func() int32 {
@@ -162,7 +162,7 @@ func ulperrf(got float32, want float32, dwant float32) float32 {
 	}
 	return float32(libc.Scalbn(float64(got-want), -eulpf(want)) + float64(dwant))
 }
-func ulperr(got float64, want float64, dwant float32) float32 {
+func Ulperr(got float64, want float64, dwant float32) float32 {
 	if func() int32 {
 		if 8 == 4 {
 			return func() int32 {
@@ -292,8 +292,8 @@ func ulperr(got float64, want float64, dwant float32) float32 {
 	}
 	return float32(libc.Scalbn(got-want, -eulp(want)) + float64(dwant))
 }
-func ulperrl(got float64, want float64, dwant float32) float32 {
-	return ulperr(float64(got), float64(want), dwant)
+func Ulperrl(got float64, want float64, dwant float32) float32 {
+	return Ulperr(float64(got), float64(want), dwant)
 }
 
 type _cgoa_3_mtest struct {
@@ -303,7 +303,7 @@ type _cgoa_3_mtest struct {
 
 var eflags [5]_cgoa_3_mtest = [5]_cgoa_3_mtest{_cgoa_3_mtest{int32(0), (*int8)(unsafe.Pointer(&[8]int8{'I', 'N', 'E', 'X', 'A', 'C', 'T', '\x00'}))}, _cgoa_3_mtest{int32(0), (*int8)(unsafe.Pointer(&[8]int8{'I', 'N', 'V', 'A', 'L', 'I', 'D', '\x00'}))}, _cgoa_3_mtest{int32(0), (*int8)(unsafe.Pointer(&[10]int8{'D', 'I', 'V', 'B', 'Y', 'Z', 'E', 'R', 'O', '\x00'}))}, _cgoa_3_mtest{int32(0), (*int8)(unsafe.Pointer(&[10]int8{'U', 'N', 'D', 'E', 'R', 'F', 'L', 'O', 'W', '\x00'}))}, _cgoa_3_mtest{int32(0), (*int8)(unsafe.Pointer(&[9]int8{'O', 'V', 'E', 'R', 'F', 'L', 'O', 'W', '\x00'}))}}
 
-func estr(f int32) *int8 {
+func Estr(f int32) *int8 {
 	var p *int8 = (*int8)(unsafe.Pointer(&buf_cgo4_mtest))
 	var i int32
 	var all int32 = int32(0)
@@ -341,7 +341,7 @@ func estr(f int32) *int8 {
 
 var buf_cgo4_mtest [256]int8
 
-func rstr(r int32) *int8 {
+func Rstr(r int32) *int8 {
 	switch r {
 	case int32(0):
 		return (*int8)(unsafe.Pointer(&[3]int8{'R', 'N', '\x00'}))
