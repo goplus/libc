@@ -3,10 +3,10 @@ package libc
 import unsafe "unsafe"
 
 func Scalbnf(x float32, n int32) float32 {
-	type _cgoa_376 struct {
+	type _cgoa_15_scalbnf struct {
 		f float32
 	}
-	var u _cgoa_376
+	var u _cgoa_15_scalbnf
 	var y float32 = x
 	if n > int32(127) {
 		y *= float32(1.70141183e+38)
