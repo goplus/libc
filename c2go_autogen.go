@@ -35,12 +35,6 @@ func fabsl(float64) float64 {
 func fmodl(float64, float64) float64 {
 	panic("notimpl")
 }
-func scalbn(float64, int32) float64 {
-	panic("notimpl")
-}
-func scalbnl(float64, int32) float64 {
-	panic("notimpl")
-}
 func wctomb(*int8, uint32) int32 {
 	panic("notimpl")
 }
