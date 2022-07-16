@@ -906,7 +906,7 @@ func __floatscan(f *struct__IO_FILE, prec int32, pok int32) float64 {
 				}
 			}
 		}
-		return float64(float32(sign) * __builtin_inff())
+		return float64(float32(sign) * X__builtin_inff())
 	}
 	if !(i != 0) {
 		for i = uint64(0); i < uint64(3) && c|int32(32) == int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&[4]int8{'n', 'a', 'n', '\x00'})))) + uintptr(i)))); i++ {
@@ -955,7 +955,7 @@ func __floatscan(f *struct__IO_FILE, prec int32, pok int32) float64 {
 					return 0
 				}()
 			}
-			return float64(__builtin_nanf((*int8)(unsafe.Pointer(&[1]int8{'\x00'}))))
+			return float64(X__builtin_nanf((*int8)(unsafe.Pointer(&[1]int8{'\x00'}))))
 		}
 		for i = uint64(1); ; i++ {
 			c = func() int32 {
@@ -974,7 +974,7 @@ func __floatscan(f *struct__IO_FILE, prec int32, pok int32) float64 {
 				continue
 			}
 			if c == ')' {
-				return float64(__builtin_nanf((*int8)(unsafe.Pointer(&[1]int8{'\x00'}))))
+				return float64(X__builtin_nanf((*int8)(unsafe.Pointer(&[1]int8{'\x00'}))))
 			}
 			if f.shlim >= int64(0) {
 				func() int {
@@ -1020,9 +1020,9 @@ func __floatscan(f *struct__IO_FILE, prec int32, pok int32) float64 {
 					}()
 				}
 			}
-			return float64(__builtin_nanf((*int8)(unsafe.Pointer(&[1]int8{'\x00'}))))
+			return float64(X__builtin_nanf((*int8)(unsafe.Pointer(&[1]int8{'\x00'}))))
 		}
-		return float64(__builtin_nanf((*int8)(unsafe.Pointer(&[1]int8{'\x00'}))))
+		return float64(X__builtin_nanf((*int8)(unsafe.Pointer(&[1]int8{'\x00'}))))
 	}
 	if i != 0 {
 		if f.shlim >= int64(0) {
