@@ -8,12 +8,6 @@ type struct_sigevent struct {
 func __aio_close(int32) int32 {
 	panic("notimpl")
 }
-func __builtin_inff() float32 {
-	panic("notimpl")
-}
-func __builtin_nanf(*int8) float32 {
-	panic("notimpl")
-}
 func __futexwait(addr unsafe.Pointer, val int32, priv int32) {
 	panic("notimpl")
 }
