@@ -3,7 +3,17 @@ __builtin_inff
 __builtin_nan
 __builtin_nanf
 abort
+copysign
+copysignf
+copysignl
+fabs
+fabsf
+fabsl
+fmod
+fmodf
+fmodl
 frexp
+frexpf
 frexpl
 isdigit
 malloc

@@ -21,3 +21,5 @@ lib/musl-gcc.specs
 
 build/
 go.work*
+
+test/cmd/test_*/
