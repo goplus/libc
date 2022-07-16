@@ -1,7 +1,13 @@
+__DOUBLE_BITS
+__FLOAT_BITS
 __builtin_inf
 __builtin_inff
 __builtin_nan
 __builtin_nanf
+__fpclassify
+__fpclassifyl
+__signbit
+__signbitl
 abort
 blkcnt_t
 blksize_t
@@ -16,6 +22,13 @@ double_t
 fabs
 fabsf
 fabsl
+feclearexcept
+fegetenv
+fegetround
+feraiseexcept
+fesetenv
+fesetround
+fetestexcept
 float_t
 fmod
 fmodf
@@ -65,6 +78,9 @@ pthread_spinlock_t
 pthread_t
 ptrdiff_t
 qsort
+scalbn
+scalbnf
+scalbnl
 sigset_t
 size_t
 snprintf

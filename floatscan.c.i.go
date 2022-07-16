@@ -472,8 +472,8 @@ func decfloat_cgo18(f *struct__IO_FILE, c int32, bits int32, emin int32, sign in
 		denormal = int32(1)
 	}
 	if bits < int32(53) {
-		bias = Copysignl(float64(scalbn(float64(int32(1)), 106-bits-int32(1))), y)
-		frac = Fmodl(y, float64(scalbn(float64(int32(1)), int32(53)-bits)))
+		bias = Copysignl(float64(Scalbn(float64(int32(1)), 106-bits-int32(1))), y)
+		frac = Fmodl(y, float64(Scalbn(float64(int32(1)), int32(53)-bits)))
 		y -= frac
 		y += bias
 	}
@@ -508,7 +508,7 @@ func decfloat_cgo18(f *struct__IO_FILE, c int32, bits int32, emin int32, sign in
 			*__errno_location() = int32(34)
 		}
 	}
-	return scalbnl(y, e2)
+	return Scalbnl(y, e2)
 }
 
 var th_cgo19 [2]uint32 = [2]uint32{uint32(9007199), uint32(254740991)}
@@ -772,7 +772,7 @@ func hexfloat_cgo21(f *struct__IO_FILE, bits int32, emin int32, sign int32, pok 
 		}
 	}
 	if bits < int32(53) {
-		bias = Copysignl(float64(scalbn(float64(int32(1)), 85-bits-int32(1))), float64(sign))
+		bias = Copysignl(float64(Scalbn(float64(int32(1)), 85-bits-int32(1))), float64(sign))
 	}
 	if bits < int32(32) && y != 0 && !(x&uint32(1) != 0) {
 		func() float64 {
@@ -789,7 +789,7 @@ func hexfloat_cgo21(f *struct__IO_FILE, bits int32, emin int32, sign int32, pok 
 	if !(y != 0) {
 		*__errno_location() = int32(34)
 	}
-	return scalbnl(y, int32(e2))
+	return Scalbnl(y, int32(e2))
 }
 func __floatscan(f *struct__IO_FILE, prec int32, pok int32) float64 {
 	var sign int32 = int32(1)

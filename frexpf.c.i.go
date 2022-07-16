@@ -3,10 +3,10 @@ package libc
 import unsafe "unsafe"
 
 func Frexpf(x float32, e *int32) float32 {
-	type _cgoa_323 struct {
+	type _cgoa_339 struct {
 		f float32
 	}
-	var y _cgoa_323
+	var y _cgoa_339
 	y.f = x
 	var ee int32 = int32(*(*uint32)(unsafe.Pointer(&y)) >> int32(23) & uint32(255))
 	if !(ee != 0) {

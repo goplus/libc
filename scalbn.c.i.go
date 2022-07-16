@@ -2,11 +2,11 @@ package libc
 
 import unsafe "unsafe"
 
-func scalbn(x float64, n int32) float64 {
-	type _cgoa_352 struct {
+func Scalbn(x float64, n int32) float64 {
+	type _cgoa_368 struct {
 		f float64
 	}
-	var u _cgoa_352
+	var u _cgoa_368
 	var y float64 = x
 	if n > int32(1023) {
 		y *= float64(8.9884656743115795e+307)
