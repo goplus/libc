@@ -4,7 +4,7 @@ import unsafe "unsafe"
 
 type cmpfun = func(unsafe.Pointer, unsafe.Pointer) int32
 
-func pntz_cgo513(p *uint64) int32 {
+func pntz_cgo581(p *uint64) int32 {
 	var r int32 = a_ctz_l(*(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer(p)) + uintptr(int32(0))*8)) - uint64(1))
 	if r != int32(0) || uint64(func() (_cgo_ret int32) {
 		_cgo_addr := &r
@@ -15,7 +15,7 @@ func pntz_cgo513(p *uint64) int32 {
 	}
 	return int32(0)
 }
-func cycle_cgo514(width uint64, ar **uint8, n int32) {
+func cycle_cgo582(width uint64, ar **uint8, n int32) {
 	var tmp [256]uint8
 	var l uint64
 	var i int32
@@ -39,7 +39,7 @@ func cycle_cgo514(width uint64, ar **uint8, n int32) {
 		width -= l
 	}
 }
-func shl_cgo515(p *uint64, n int32) {
+func shl_cgo583(p *uint64, n int32) {
 	if uint64(n) >= 64 {
 		n -= int32(64)
 		*(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer(p)) + uintptr(int32(1))*8)) = *(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer(p)) + uintptr(int32(0))*8))
@@ -49,7 +49,7 @@ func shl_cgo515(p *uint64, n int32) {
 	*(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer(p)) + uintptr(int32(1))*8)) |= *(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer(p)) + uintptr(int32(0))*8)) >> (64 - uint64(n))
 	*(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer(p)) + uintptr(int32(0))*8)) <<= n
 }
-func shr_cgo516(p *uint64, n int32) {
+func shr_cgo584(p *uint64, n int32) {
 	if uint64(n) >= 64 {
 		n -= int32(64)
 		*(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer(p)) + uintptr(int32(0))*8)) = *(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer(p)) + uintptr(int32(1))*8))
@@ -59,7 +59,7 @@ func shr_cgo516(p *uint64, n int32) {
 	*(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer(p)) + uintptr(int32(0))*8)) |= *(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer(p)) + uintptr(int32(1))*8)) << (64 - uint64(n))
 	*(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer(p)) + uintptr(int32(1))*8)) >>= n
 }
-func sift_cgo517(head *uint8, width uint64, cmp func(unsafe.Pointer, unsafe.Pointer) int32, pshift int32, lp *uint64) {
+func sift_cgo585(head *uint8, width uint64, cmp func(unsafe.Pointer, unsafe.Pointer) int32, pshift int32, lp *uint64) {
 	var rt *uint8
 	var lf *uint8
 	var ar [113]*uint8
@@ -91,9 +91,9 @@ func sift_cgo517(head *uint8, width uint64, cmp func(unsafe.Pointer, unsafe.Poin
 			pshift -= int32(2)
 		}
 	}
-	cycle_cgo514(width, (**uint8)(unsafe.Pointer(&ar)), i)
+	cycle_cgo582(width, (**uint8)(unsafe.Pointer(&ar)), i)
 }
-func trinkle_cgo518(head *uint8, width uint64, cmp func(unsafe.Pointer, unsafe.Pointer) int32, pp *uint64, pshift int32, trusty int32, lp *uint64) {
+func trinkle_cgo586(head *uint8, width uint64, cmp func(unsafe.Pointer, unsafe.Pointer) int32, pp *uint64, pshift int32, trusty int32, lp *uint64) {
 	var stepson *uint8
 	var rt *uint8
 	var lf *uint8
@@ -123,14 +123,14 @@ func trinkle_cgo518(head *uint8, width uint64, cmp func(unsafe.Pointer, unsafe.P
 			return
 		}())*8)) = stepson
 		head = stepson
-		trail = pntz_cgo513((*uint64)(unsafe.Pointer(&p)))
-		shr_cgo516((*uint64)(unsafe.Pointer(&p)), trail)
+		trail = pntz_cgo581((*uint64)(unsafe.Pointer(&p)))
+		shr_cgo584((*uint64)(unsafe.Pointer(&p)), trail)
 		pshift += trail
 		trusty = int32(0)
 	}
 	if !(trusty != 0) {
-		cycle_cgo514(width, (**uint8)(unsafe.Pointer(&ar)), i)
-		sift_cgo517(head, width, cmp, pshift, lp)
+		cycle_cgo582(width, (**uint8)(unsafe.Pointer(&ar)), i)
+		sift_cgo585(head, width, cmp, pshift, lp)
 	}
 }
 func Qsort(base unsafe.Pointer, nel uint64, width uint64, cmp func(unsafe.Pointer, unsafe.Pointer) int32) {
@@ -166,41 +166,41 @@ func Qsort(base unsafe.Pointer, nel uint64, width uint64, cmp func(unsafe.Pointe
 	}
 	for uintptr(unsafe.Pointer(head)) < uintptr(unsafe.Pointer(high)) {
 		if *(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint64)(unsafe.Pointer(&p)))) + uintptr(int32(0))*8))&uint64(3) == uint64(3) {
-			sift_cgo517(head, width, cmp, pshift, (*uint64)(unsafe.Pointer(&lp)))
-			shr_cgo516((*uint64)(unsafe.Pointer(&p)), int32(2))
+			sift_cgo585(head, width, cmp, pshift, (*uint64)(unsafe.Pointer(&lp)))
+			shr_cgo584((*uint64)(unsafe.Pointer(&p)), int32(2))
 			pshift += int32(2)
 		} else {
 			if *(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint64)(unsafe.Pointer(&lp)))) + uintptr(pshift-int32(1))*8)) >= uint64(uintptr(unsafe.Pointer(high))-uintptr(unsafe.Pointer(head))) {
-				trinkle_cgo518(head, width, cmp, (*uint64)(unsafe.Pointer(&p)), pshift, int32(0), (*uint64)(unsafe.Pointer(&lp)))
+				trinkle_cgo586(head, width, cmp, (*uint64)(unsafe.Pointer(&p)), pshift, int32(0), (*uint64)(unsafe.Pointer(&lp)))
 			} else {
-				sift_cgo517(head, width, cmp, pshift, (*uint64)(unsafe.Pointer(&lp)))
+				sift_cgo585(head, width, cmp, pshift, (*uint64)(unsafe.Pointer(&lp)))
 			}
 			if pshift == int32(1) {
-				shl_cgo515((*uint64)(unsafe.Pointer(&p)), int32(1))
+				shl_cgo583((*uint64)(unsafe.Pointer(&p)), int32(1))
 				pshift = int32(0)
 			} else {
-				shl_cgo515((*uint64)(unsafe.Pointer(&p)), pshift-int32(1))
+				shl_cgo583((*uint64)(unsafe.Pointer(&p)), pshift-int32(1))
 				pshift = int32(1)
 			}
 		}
 		*(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint64)(unsafe.Pointer(&p)))) + uintptr(int32(0))*8)) |= uint64(1)
 		*(*uintptr)(unsafe.Pointer(&head)) += uintptr(width)
 	}
-	trinkle_cgo518(head, width, cmp, (*uint64)(unsafe.Pointer(&p)), pshift, int32(0), (*uint64)(unsafe.Pointer(&lp)))
+	trinkle_cgo586(head, width, cmp, (*uint64)(unsafe.Pointer(&p)), pshift, int32(0), (*uint64)(unsafe.Pointer(&lp)))
 	for pshift != int32(1) || *(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint64)(unsafe.Pointer(&p)))) + uintptr(int32(0))*8)) != uint64(1) || *(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint64)(unsafe.Pointer(&p)))) + uintptr(int32(1))*8)) != uint64(0) {
 		if pshift <= int32(1) {
-			trail = pntz_cgo513((*uint64)(unsafe.Pointer(&p)))
-			shr_cgo516((*uint64)(unsafe.Pointer(&p)), trail)
+			trail = pntz_cgo581((*uint64)(unsafe.Pointer(&p)))
+			shr_cgo584((*uint64)(unsafe.Pointer(&p)), trail)
 			pshift += trail
 		} else {
-			shl_cgo515((*uint64)(unsafe.Pointer(&p)), int32(2))
+			shl_cgo583((*uint64)(unsafe.Pointer(&p)), int32(2))
 			pshift -= int32(2)
 			*(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint64)(unsafe.Pointer(&p)))) + uintptr(int32(0))*8)) ^= uint64(7)
-			shr_cgo516((*uint64)(unsafe.Pointer(&p)), int32(1))
-			trinkle_cgo518((*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(head))-uintptr(*(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint64)(unsafe.Pointer(&lp)))) + uintptr(pshift)*8)))))))-uintptr(width))), width, cmp, (*uint64)(unsafe.Pointer(&p)), pshift+int32(1), int32(1), (*uint64)(unsafe.Pointer(&lp)))
-			shl_cgo515((*uint64)(unsafe.Pointer(&p)), int32(1))
+			shr_cgo584((*uint64)(unsafe.Pointer(&p)), int32(1))
+			trinkle_cgo586((*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(head))-uintptr(*(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint64)(unsafe.Pointer(&lp)))) + uintptr(pshift)*8)))))))-uintptr(width))), width, cmp, (*uint64)(unsafe.Pointer(&p)), pshift+int32(1), int32(1), (*uint64)(unsafe.Pointer(&lp)))
+			shl_cgo583((*uint64)(unsafe.Pointer(&p)), int32(1))
 			*(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint64)(unsafe.Pointer(&p)))) + uintptr(int32(0))*8)) |= uint64(1)
-			trinkle_cgo518((*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(head))-uintptr(width))), width, cmp, (*uint64)(unsafe.Pointer(&p)), pshift, int32(1), (*uint64)(unsafe.Pointer(&lp)))
+			trinkle_cgo586((*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(head))-uintptr(width))), width, cmp, (*uint64)(unsafe.Pointer(&p)), pshift, int32(1), (*uint64)(unsafe.Pointer(&lp)))
 		}
 		*(*uintptr)(unsafe.Pointer(&head)) -= uintptr(width)
 	}

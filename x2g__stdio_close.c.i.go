@@ -1,6 +1,6 @@
 package libc
 
-func dummy_cgo850(fd int32) int32 {
+func dummy_cgo918(fd int32) int32 {
 	return fd
 }
 func __stdio_close(f *struct__IO_FILE) int32 {
