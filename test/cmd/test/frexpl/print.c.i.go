@@ -1,4 +1,4 @@
-package string_memset
+package frexpl
 
 import (
 	libc "github.com/goplus/libc"
