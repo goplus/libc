@@ -41,6 +41,7 @@ frexpl
 fwrite
 getenv
 gid_t
+initstate
 ino_t
 int16_t
 int32_t
@@ -78,13 +79,19 @@ pthread_spinlock_t
 pthread_t
 ptrdiff_t
 qsort
+rand
+rand_r
+random
 scalbn
 scalbnf
 scalbnl
+setstate
 sigset_t
 size_t
 snprintf
 sprintf
+srand
+srandom
 ssize_t
 stderr
 stdin

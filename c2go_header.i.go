@@ -2,6 +2,46 @@ package libc
 
 import unsafe "unsafe"
 
+type uintptr_t = uint64
+type Uintptr_t = uint64
+type intptr_t = int64
+type Intptr_t = int64
+type int8_t = int8
+type Int8_t = int8
+type int16_t = int16
+type Int16_t = int16
+type int32_t = int32
+type Int32_t = int32
+type int64_t = int64
+type Int64_t = int64
+type intmax_t = int64
+type Intmax_t = int64
+type uint8_t = uint8
+type Uint8_t = uint8
+type uint16_t = uint16
+type Uint16_t = uint16
+type uint32_t = uint32
+type Uint32_t = uint32
+type uint64_t = uint64
+type Uint64_t = uint64
+type uintmax_t = uint64
+type Uintmax_t = uint64
+type int_fast8_t = int8
+type int_fast64_t = int64
+type int_least8_t = int8
+type int_least16_t = int16
+type int_least32_t = int32
+type int_least64_t = int64
+type uint_fast8_t = uint8
+type uint_fast64_t = uint64
+type uint_least8_t = uint8
+type uint_least16_t = uint16
+type uint_least32_t = uint32
+type uint_least64_t = uint64
+type int_fast16_t = int32
+type int_fast32_t = int32
+type uint_fast16_t = uint32
+type uint_fast32_t = uint32
 type size_t = uint64
 type Size_t = uint64
 type time_t = int64
@@ -22,71 +62,71 @@ type pthread_key_t = uint32
 type Pthread_key_t = uint32
 type pthread_spinlock_t = int32
 type Pthread_spinlock_t = int32
-type _cgoa_1___ctype_b_loc struct {
+type _cgoa_1___rand48_step struct {
 	__attr uint32
 }
-type pthread_mutexattr_t = _cgoa_1___ctype_b_loc
-type Pthread_mutexattr_t = _cgoa_1___ctype_b_loc
-type _cgoa_2___ctype_b_loc struct {
+type pthread_mutexattr_t = _cgoa_1___rand48_step
+type Pthread_mutexattr_t = _cgoa_1___rand48_step
+type _cgoa_2___rand48_step struct {
 	__attr uint32
 }
-type pthread_condattr_t = _cgoa_2___ctype_b_loc
-type Pthread_condattr_t = _cgoa_2___ctype_b_loc
-type _cgoa_3___ctype_b_loc struct {
+type pthread_condattr_t = _cgoa_2___rand48_step
+type Pthread_condattr_t = _cgoa_2___rand48_step
+type _cgoa_3___rand48_step struct {
 	__attr uint32
 }
-type pthread_barrierattr_t = _cgoa_3___ctype_b_loc
-type Pthread_barrierattr_t = _cgoa_3___ctype_b_loc
-type _cgoa_4___ctype_b_loc struct {
+type pthread_barrierattr_t = _cgoa_3___rand48_step
+type Pthread_barrierattr_t = _cgoa_3___rand48_step
+type _cgoa_4___rand48_step struct {
 	__attr [2]uint32
 }
-type pthread_rwlockattr_t = _cgoa_4___ctype_b_loc
-type Pthread_rwlockattr_t = _cgoa_4___ctype_b_loc
+type pthread_rwlockattr_t = _cgoa_4___rand48_step
+type Pthread_rwlockattr_t = _cgoa_4___rand48_step
 type struct___sigset_t struct {
 	__bits [16]uint64
 }
 type sigset_t = struct___sigset_t
 type Sigset_t = struct___sigset_t
-type _cgoa_6___ctype_b_loc struct {
+type _cgoa_6___rand48_step struct {
 	__i [14]int32
 }
-type _cgoa_5___ctype_b_loc struct {
-	__u _cgoa_6___ctype_b_loc
+type _cgoa_5___rand48_step struct {
+	__u _cgoa_6___rand48_step
 }
-type pthread_attr_t = _cgoa_5___ctype_b_loc
-type Pthread_attr_t = _cgoa_5___ctype_b_loc
-type _cgoa_8___ctype_b_loc struct {
+type pthread_attr_t = _cgoa_5___rand48_step
+type Pthread_attr_t = _cgoa_5___rand48_step
+type _cgoa_8___rand48_step struct {
 	__i [10]int32
 }
-type _cgoa_7___ctype_b_loc struct {
-	__u _cgoa_8___ctype_b_loc
+type _cgoa_7___rand48_step struct {
+	__u _cgoa_8___rand48_step
 }
-type pthread_mutex_t = _cgoa_7___ctype_b_loc
-type Pthread_mutex_t = _cgoa_7___ctype_b_loc
-type _cgoa_10___ctype_b_loc struct {
+type pthread_mutex_t = _cgoa_7___rand48_step
+type Pthread_mutex_t = _cgoa_7___rand48_step
+type _cgoa_10___rand48_step struct {
 	__i [12]int32
 }
-type _cgoa_9___ctype_b_loc struct {
-	__u _cgoa_10___ctype_b_loc
+type _cgoa_9___rand48_step struct {
+	__u _cgoa_10___rand48_step
 }
-type pthread_cond_t = _cgoa_9___ctype_b_loc
-type Pthread_cond_t = _cgoa_9___ctype_b_loc
-type _cgoa_12___ctype_b_loc struct {
+type pthread_cond_t = _cgoa_9___rand48_step
+type Pthread_cond_t = _cgoa_9___rand48_step
+type _cgoa_12___rand48_step struct {
 	__i [14]int32
 }
-type _cgoa_11___ctype_b_loc struct {
-	__u _cgoa_12___ctype_b_loc
+type _cgoa_11___rand48_step struct {
+	__u _cgoa_12___rand48_step
 }
-type pthread_rwlock_t = _cgoa_11___ctype_b_loc
-type Pthread_rwlock_t = _cgoa_11___ctype_b_loc
-type _cgoa_14___ctype_b_loc struct {
+type pthread_rwlock_t = _cgoa_11___rand48_step
+type Pthread_rwlock_t = _cgoa_11___rand48_step
+type _cgoa_14___rand48_step struct {
 	__i [8]int32
 }
-type _cgoa_13___ctype_b_loc struct {
-	__u _cgoa_14___ctype_b_loc
+type _cgoa_13___rand48_step struct {
+	__u _cgoa_14___rand48_step
 }
-type pthread_barrier_t = _cgoa_13___ctype_b_loc
-type Pthread_barrier_t = _cgoa_13___ctype_b_loc
+type pthread_barrier_t = _cgoa_13___rand48_step
+type Pthread_barrier_t = _cgoa_13___rand48_step
 type pid_t = int32
 type Pid_t = int32
 type struct_sched_param struct {
@@ -129,12 +169,28 @@ type struct___pthread struct {
 	sys_r1    int64
 	locale    *struct___locale_struct
 }
-type uint16_t = uint16
-type Uint16_t = uint16
-type uint32_t = uint32
-type Uint32_t = uint32
-type uint64_t = uint64
-type Uint64_t = uint64
+type wchar_t = uint32
+type Wchar_t = uint32
+type _cgoa_15_drand48 struct {
+	quot int32
+	rem  int32
+}
+type div_t = _cgoa_15_drand48
+type _cgoa_16_drand48 struct {
+	quot int64
+	rem  int64
+}
+type ldiv_t = _cgoa_16_drand48
+type _cgoa_17_drand48 struct {
+	quot int64
+	rem  int64
+}
+type lldiv_t = _cgoa_17_drand48
+type _cgoa_18_drand48 struct {
+	quot int64
+	rem  int64
+}
+type imaxdiv_t = _cgoa_18_drand48
 
 func __bswap16(__x uint16) uint16 {
 	return uint16(int32(__x)<<int32(8) | int32(__x)>>int32(8))
@@ -146,23 +202,6 @@ func __bswap64(__x uint64) uint64 {
 	return (uint64(__bswap32(uint32(__x)))+uint64(0))<<int32(32) | uint64(__bswap32(uint32(__x>>int32(32))))
 }
 
-type wchar_t = uint32
-type Wchar_t = uint32
-type _cgoa_15___ctype_get_mb_cur_max struct {
-	quot int32
-	rem  int32
-}
-type div_t = _cgoa_15___ctype_get_mb_cur_max
-type _cgoa_16___ctype_get_mb_cur_max struct {
-	quot int64
-	rem  int64
-}
-type ldiv_t = _cgoa_16___ctype_get_mb_cur_max
-type _cgoa_17___ctype_get_mb_cur_max struct {
-	quot int64
-	rem  int64
-}
-type lldiv_t = _cgoa_17___ctype_get_mb_cur_max
 type struct_lconv struct {
 	decimal_point      *int8
 	thousands_sep      *int8
@@ -235,40 +274,6 @@ type struct___locale_map struct {
 	name     [24]int8
 	next     *struct___locale_map
 }
-type uintptr_t = uint64
-type Uintptr_t = uint64
-type intptr_t = int64
-type Intptr_t = int64
-type int8_t = int8
-type Int8_t = int8
-type int16_t = int16
-type Int16_t = int16
-type int32_t = int32
-type Int32_t = int32
-type int64_t = int64
-type Int64_t = int64
-type intmax_t = int64
-type Intmax_t = int64
-type uint8_t = uint8
-type Uint8_t = uint8
-type uintmax_t = uint64
-type Uintmax_t = uint64
-type int_fast8_t = int8
-type int_fast64_t = int64
-type int_least8_t = int8
-type int_least16_t = int16
-type int_least32_t = int32
-type int_least64_t = int64
-type uint_fast8_t = uint8
-type uint_fast64_t = uint64
-type uint_least8_t = uint8
-type uint_least16_t = uint16
-type uint_least32_t = uint32
-type uint_least64_t = uint64
-type int_fast16_t = int32
-type int_fast32_t = int32
-type uint_fast16_t = uint32
-type uint_fast32_t = uint32
 
 func __isspace(_c int32) int32 {
 	return func() int32 {
@@ -432,7 +437,7 @@ type struct_sigaction struct {
 }
 type _cgoa_30_strsignal struct {
 	sigev_notify_function   func(union_sigval)
-	sigev_notify_attributes *_cgoa_5___ctype_b_loc
+	sigev_notify_attributes *_cgoa_5___rand48_step
 }
 type _cgoa_29_strsignal struct {
 	__pad [48]int8
@@ -2037,8 +2042,3 @@ type struct_winsize struct {
 	ws_xpixel uint16
 	ws_ypixel uint16
 }
-type _cgoa_19_vfprintf struct {
-	quot int64
-	rem  int64
-}
-type imaxdiv_t = _cgoa_19_vfprintf

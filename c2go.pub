@@ -8,6 +8,13 @@ __signbit
 __signbitl
 __FLOAT_BITS
 __DOUBLE_BITS
+initstate
+setstate
+srandom
+srand
+random
+rand
+rand_r
 abort
 feclearexcept
 feraiseexcept
