@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func strverscmp(l0 *int8, r0 *int8) int32 {
+func Strverscmp(l0 *int8, r0 *int8) int32 {
 	var l *uint8 = (*uint8)(unsafe.Pointer(l0))
 	var r *uint8 = (*uint8)(unsafe.Pointer(r0))
 	var i uint64

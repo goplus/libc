@@ -217,7 +217,7 @@ func twoway_strstr_cgo18_strstr(h *uint8, n *uint8) *int8 {
 	}
 	return nil
 }
-func strstr(h *int8, n *int8) *int8 {
+func Strstr(h *int8, n *int8) *int8 {
 	if !(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(n)) + uintptr(int32(0)))) != 0) {
 		return (*int8)(unsafe.Pointer(h))
 	}

@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func strdup(s *int8) *int8 {
+func Strdup(s *int8) *int8 {
 	var l uint64 = Strlen(s)
 	var d *int8 = (*int8)(Malloc(l + uint64(1)))
 	if !(d != nil) {

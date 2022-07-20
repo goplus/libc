@@ -1,9 +1,9 @@
 package libc
 
-func toupper(c int32) int32 {
+func Toupper(c int32) int32 {
 	if func() int32 {
 		if int32(0) != 0 {
-			return islower(c)
+			return Islower(c)
 		} else {
 			return func() int32 {
 				if uint32(c)-uint32('a') < uint32(26) {
@@ -19,5 +19,5 @@ func toupper(c int32) int32 {
 	return c
 }
 func __toupper_l(c int32, l *struct___locale_struct) int32 {
-	return toupper(c)
+	return Toupper(c)
 }
