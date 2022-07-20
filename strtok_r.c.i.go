@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func strtok_r(s *int8, sep *int8, p **int8) *int8 {
+func Strtok_r(s *int8, sep *int8, p **int8) *int8 {
 	if !(s != nil) && !(func() (_cgo_ret *int8) {
 		_cgo_addr := &s
 		*_cgo_addr = *p

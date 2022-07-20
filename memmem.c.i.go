@@ -257,7 +257,7 @@ func twoway_memmem_cgo18_memmem(h *uint8, z *uint8, n *uint8, l uint64) *int8 {
 	}
 	return nil
 }
-func memmem(h0 unsafe.Pointer, k uint64, n0 unsafe.Pointer, l uint64) unsafe.Pointer {
+func Memmem(h0 unsafe.Pointer, k uint64, n0 unsafe.Pointer, l uint64) unsafe.Pointer {
 	var h *uint8 = (*uint8)(h0)
 	var n *uint8 = (*uint8)(n0)
 	if !(l != 0) {

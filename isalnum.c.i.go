@@ -1,10 +1,10 @@
 package libc
 
-func isalnum(c int32) int32 {
+func Isalnum(c int32) int32 {
 	return func() int32 {
 		if func() int32 {
 			if int32(0) != 0 {
-				return isalpha(c)
+				return Isalpha(c)
 			} else {
 				return func() int32 {
 					if uint32(c)|uint32(32)-uint32('a') < uint32(26) {
@@ -34,5 +34,5 @@ func isalnum(c int32) int32 {
 	}()
 }
 func __isalnum_l(c int32, l *struct___locale_struct) int32 {
-	return isalnum(c)
+	return Isalnum(c)
 }

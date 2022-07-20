@@ -1,6 +1,6 @@
 package libc
 
-func islower(c int32) int32 {
+func Islower(c int32) int32 {
 	return func() int32 {
 		if uint32(c)-uint32('a') < uint32(26) {
 			return 1
@@ -10,5 +10,5 @@ func islower(c int32) int32 {
 	}()
 }
 func __islower_l(c int32, l *struct___locale_struct) int32 {
-	return islower(c)
+	return Islower(c)
 }

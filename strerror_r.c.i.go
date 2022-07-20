@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func strerror_r(err int32, buf *int8, buflen uint64) int32 {
+func Strerror_r(err int32, buf *int8, buflen uint64) int32 {
 	var msg *int8 = Strerror(err)
 	var l uint64 = Strlen(msg)
 	if l >= buflen {

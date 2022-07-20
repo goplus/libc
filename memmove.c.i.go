@@ -4,7 +4,7 @@ import unsafe "unsafe"
 
 type WT = uint64
 
-func memmove(dest unsafe.Pointer, src unsafe.Pointer, n uint64) unsafe.Pointer {
+func Memmove(dest unsafe.Pointer, src unsafe.Pointer, n uint64) unsafe.Pointer {
 	var d *int8 = (*int8)(dest)
 	var s *int8 = (*int8)(src)
 	if uintptr(unsafe.Pointer(d)) == uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(s)))) {

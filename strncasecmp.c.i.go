@@ -13,7 +13,7 @@ func strncasecmp(_l *int8, _r *int8, n uint64) int32 {
 	}() != 0) {
 		return int32(0)
 	}
-	for ; int32(*l) != 0 && int32(*r) != 0 && n != 0 && (int32(*l) == int32(*r) || tolower(int32(*l)) == tolower(int32(*r))); func() uint64 {
+	for ; int32(*l) != 0 && int32(*r) != 0 && n != 0 && (int32(*l) == int32(*r) || Tolower(int32(*l)) == Tolower(int32(*r))); func() uint64 {
 		func() *uint8 {
 			*(*uintptr)(unsafe.Pointer(&l))++
 			return func() (_cgo_ret *uint8) {
@@ -31,7 +31,7 @@ func strncasecmp(_l *int8, _r *int8, n uint64) int32 {
 		}()
 	}() {
 	}
-	return tolower(int32(*l)) - tolower(int32(*r))
+	return Tolower(int32(*l)) - Tolower(int32(*r))
 }
 func __strncasecmp_l(l *int8, r *int8, n uint64, loc *struct___locale_struct) int32 {
 	return strncasecmp(l, r, n)

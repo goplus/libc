@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func strsep(str **int8, sep *int8) *int8 {
+func Strsep(str **int8, sep *int8) *int8 {
 	var s *int8 = *str
 	var end *int8
 	if !(s != nil) {

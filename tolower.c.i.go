@@ -1,9 +1,9 @@
 package libc
 
-func tolower(c int32) int32 {
+func Tolower(c int32) int32 {
 	if func() int32 {
 		if int32(0) != 0 {
-			return isupper(c)
+			return Isupper(c)
 		} else {
 			return func() int32 {
 				if uint32(c)-uint32('A') < uint32(26) {
@@ -19,5 +19,5 @@ func tolower(c int32) int32 {
 	return c
 }
 func __tolower_l(c int32, l *struct___locale_struct) int32 {
-	return tolower(c)
+	return Tolower(c)
 }
