@@ -2,7 +2,9 @@
 #define _C2GO_PTHREAD_IMPL_H
 
 #include <pthread.h>
+#include <limits.h>
 #include "atomic_arch.h"
+#include "libc.h"
 
 #define pthread __pthread
 
