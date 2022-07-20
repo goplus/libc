@@ -1513,7 +1513,7 @@ func printf_core_cgo30_vfprintf(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 			return *_cgo_addr
 		}()); i < uint64(p) && *ws != 0 && func() (_cgo_ret int32) {
 			_cgo_addr := &l
-			*_cgo_addr = wctomb((*int8)(unsafe.Pointer(&mb)), *func() (_cgo_ret *uint32) {
+			*_cgo_addr = Wctomb((*int8)(unsafe.Pointer(&mb)), *func() (_cgo_ret *uint32) {
 				_cgo_addr := &ws
 				_cgo_ret = *_cgo_addr
 				*(*uintptr)(unsafe.Pointer(_cgo_addr)) += 4
@@ -1533,7 +1533,7 @@ func printf_core_cgo30_vfprintf(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 		ws = (*uint32)(*(*unsafe.Pointer)(unsafe.Pointer(&arg)))
 		for i = uint64(0); i < uint64(uint32(0)+uint32(p)) && *ws != 0 && i+uint64(func() (_cgo_ret int32) {
 			_cgo_addr := &l
-			*_cgo_addr = wctomb((*int8)(unsafe.Pointer(&mb)), *func() (_cgo_ret *uint32) {
+			*_cgo_addr = Wctomb((*int8)(unsafe.Pointer(&mb)), *func() (_cgo_ret *uint32) {
 				_cgo_addr := &ws
 				_cgo_ret = *_cgo_addr
 				*(*uintptr)(unsafe.Pointer(_cgo_addr)) += 4
