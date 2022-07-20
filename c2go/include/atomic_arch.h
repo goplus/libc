@@ -22,4 +22,7 @@ void *a_cas_p(volatile void *p, void *t, void *s);
 #define a_swap a_swap
 int a_swap(volatile int *p, int v);
 
+#define a_fetch_add a_fetch_add
+int a_fetch_add(volatile int *p, int v);
+
 #endif

@@ -9,12 +9,14 @@ import (
 	teststring "github.com/goplus/libc/test/cmd/test/string"
 
 	"github.com/goplus/libc/test/cmd/test/qsort"
+	"github.com/goplus/libc/test/cmd/test/random"
 	"github.com/goplus/libc/test/cmd/test/string_memcpy"
 	"github.com/goplus/libc/test/cmd/test/string_memset"
 	"github.com/goplus/libc/test/cmd/test/strtod"
 )
 
 func TestFromTestdata(t *testing.T) {
+	random.TestMain(t)
 	qsort.TestMain(t)
 	string_memcpy.TestMain(t)
 	string_memset.TestMain(t)
