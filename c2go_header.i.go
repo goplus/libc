@@ -176,16 +176,19 @@ type _cgoa_15_drand48 struct {
 	rem  int32
 }
 type div_t = _cgoa_15_drand48
+type Div_t = _cgoa_15_drand48
 type _cgoa_16_drand48 struct {
 	quot int64
 	rem  int64
 }
 type ldiv_t = _cgoa_16_drand48
+type Ldiv_t = _cgoa_16_drand48
 type _cgoa_17_drand48 struct {
 	quot int64
 	rem  int64
 }
 type lldiv_t = _cgoa_17_drand48
+type Lldiv_t = _cgoa_17_drand48
 type _cgoa_18_drand48 struct {
 	quot int64
 	rem  int64
