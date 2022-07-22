@@ -2,13 +2,13 @@ package libc
 
 import unsafe "unsafe"
 
-type struct_cookie struct {
+type struct_cookie_2 struct {
 	s *int8
 	n uint64
 }
 
 func sn_write_cgo15_vsnprintf(f *struct__IO_FILE, s *uint8, l uint64) uint64 {
-	var c *struct_cookie = (*struct_cookie)(f.cookie)
+	var c *struct_cookie_2 = (*struct_cookie_2)(f.cookie)
 	var k uint64 = func() uint64 {
 		if c.n < uint64(uintptr(unsafe.Pointer(f.wpos))-uintptr(unsafe.Pointer(f.wbase))) {
 			return c.n
@@ -45,7 +45,7 @@ func Vsnprintf(s *int8, n uint64, fmt *int8, ap []interface {
 }) int32 {
 	var buf [1]uint8
 	var dummy [1]int8
-	var c struct_cookie = struct_cookie{func() *int8 {
+	var c struct_cookie_2 = struct_cookie_2{func() *int8 {
 		if n != 0 {
 			return s
 		} else {

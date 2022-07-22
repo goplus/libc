@@ -11,6 +11,10 @@ func Calloc(size, n uint64) unsafe.Pointer {
 	return Malloc(size * n)
 }
 
+func Realloc(orig unsafe.Pointer, size uint64) unsafe.Pointer {
+	panic("notimpl")
+}
+
 func Free(p unsafe.Pointer) {
 }
 
