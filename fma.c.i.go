@@ -2,19 +2,19 @@ package libc
 
 import unsafe "unsafe"
 
-type struct_num struct {
+type num_cgo22_fma struct {
 	m    uint64
 	e    int32
 	sign int32
 }
 
-func normalize_cgo22_fma(x float64) struct_num {
-	var ix uint64 = *(*uint64)(unsafe.Pointer(&_cgoz_23_fma{x}))
+func normalize_cgo23_fma(x float64) num_cgo22_fma {
+	var ix uint64 = *(*uint64)(unsafe.Pointer(&_cgoz_24_fma{x}))
 	var e int32 = int32(ix >> int32(52))
 	var sign int32 = e & int32(2048)
 	e &= int32(2047)
 	if !(e != 0) {
-		ix = *(*uint64)(unsafe.Pointer(&_cgoz_24_fma{x * 9.2233720368547758e+18}))
+		ix = *(*uint64)(unsafe.Pointer(&_cgoz_25_fma{x * 9.2233720368547758e+18}))
 		e = int32(ix >> int32(52) & uint64(2047))
 		e = func() int32 {
 			if e != 0 {
@@ -28,17 +28,17 @@ func normalize_cgo22_fma(x float64) struct_num {
 	ix |= 4503599627370496
 	ix <<= int32(1)
 	e -= 1076
-	return struct_num{ix, e, sign}
+	return num_cgo22_fma{ix, e, sign}
 }
 
-type _cgoz_23_fma struct {
-	f float64
-}
 type _cgoz_24_fma struct {
 	f float64
 }
+type _cgoz_25_fma struct {
+	f float64
+}
 
-func mul_cgo25_fma(hi *uint64, lo *uint64, x uint64, y uint64) {
+func mul_cgo26_fma(hi *uint64, lo *uint64, x uint64, y uint64) {
 	var t1 uint64
 	var t2 uint64
 	var t3 uint64
@@ -59,12 +59,12 @@ func mul_cgo25_fma(hi *uint64, lo *uint64, x uint64, y uint64) {
 	}()
 }
 func Fma(x float64, y float64, z float64) float64 {
-	var nx struct_num
-	var ny struct_num
-	var nz struct_num
-	nx = normalize_cgo22_fma(x)
-	ny = normalize_cgo22_fma(y)
-	nz = normalize_cgo22_fma(z)
+	var nx num_cgo22_fma
+	var ny num_cgo22_fma
+	var nz num_cgo22_fma
+	nx = normalize_cgo23_fma(x)
+	ny = normalize_cgo23_fma(y)
+	nz = normalize_cgo23_fma(z)
 	if nx.e >= 971 || ny.e >= 971 {
 		return x*y + z
 	}
@@ -78,7 +78,7 @@ func Fma(x float64, y float64, z float64) float64 {
 	var rlo uint64
 	var zhi uint64
 	var zlo uint64
-	mul_cgo25_fma(&rhi, &rlo, nx.m, ny.m)
+	mul_cgo26_fma(&rhi, &rlo, nx.m, ny.m)
 	var e int32 = nx.e + ny.e
 	var d int32 = nz.e - e
 	if d > int32(0) {

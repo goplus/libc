@@ -36,11 +36,11 @@ const (
 
 var states_cgo22_vfprintf [8][58]uint8 = [8][58]uint8{[58]uint8{uint8(25), 0, uint8(10), 0, uint8(25), uint8(25), uint8(25), 0, 0, 0, 0, uint8(5), 0, 0, 0, 0, 0, 0, uint8(9), 0, 0, 0, 0, uint8(11), 0, 0, 0, 0, 0, 0, 0, 0, uint8(25), 0, uint8(17), uint8(10), uint8(25), uint8(25), uint8(25), uint8(3), uint8(10), uint8(7), 0, uint8(1), uint8(27), uint8(9), uint8(11), uint8(24), 0, 0, uint8(9), uint8(6), uint8(11), 0, 0, uint8(11), 0, uint8(6)}, [58]uint8{uint8(25), 0, 0, 0, uint8(25), uint8(25), uint8(25), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(14), 0, 0, 0, 0, 0, 0, 0, 0, uint8(25), 0, uint8(10), uint8(13), uint8(25), uint8(25), uint8(25), 0, uint8(13), 0, 0, uint8(2), 0, uint8(9), uint8(14), 0, 0, 0, uint8(9), 0, uint8(14), 0, 0, uint8(14)}, [58]uint8{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(12), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(19), 0, 0, 0, 0, uint8(19), 0, 0, 0, 0, uint8(9), uint8(12), 0, 0, 0, 0, 0, uint8(12), 0, 0, uint8(12)}, [58]uint8{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(16), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(15), 0, 0, 0, uint8(4), uint8(15), 0, 0, 0, 0, uint8(9), uint8(16), 0, 0, 0, 0, 0, uint8(16), 0, 0, uint8(16)}, [58]uint8{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(18), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(17), 0, 0, 0, 0, uint8(17), 0, 0, 0, 0, uint8(9), uint8(18), 0, 0, 0, 0, 0, uint8(18), 0, 0, uint8(18)}, [58]uint8{uint8(26), 0, 0, 0, uint8(26), uint8(26), uint8(26), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(26), 0, 0, 0, uint8(26), uint8(26), uint8(26), 0, 0, 0, 0, 0, 0, uint8(9)}, [58]uint8{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(20), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(23), 0, 0, 0, 0, uint8(23), 0, 0, 0, 0, uint8(9), uint8(20), 0, 0, 0, 0, 0, uint8(20), 0, 0, uint8(20)}, [58]uint8{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(22), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, uint8(21), 0, 0, 0, 0, uint8(21), 0, 0, 0, 0, uint8(9), uint8(22), 0, 0, 0, 0, 0, uint8(22), 0, 0, uint8(22)}}
 
-type union_arg struct {
+type arg_cgo23_vfprintf struct {
 	i uint64
 }
 
-func pop_arg_cgo23_vfprintf(arg *union_arg, type_ int32, ap *[]interface {
+func pop_arg_cgo24_vfprintf(arg *arg_cgo23_vfprintf, type_ int32, ap *[]interface {
 }) {
 	switch type_ {
 	case PTR:
@@ -268,12 +268,12 @@ func pop_arg_cgo23_vfprintf(arg *union_arg, type_ int32, ap *[]interface {
 		}(*ap)
 	}
 }
-func out_cgo24_vfprintf(f *struct__IO_FILE, s *int8, l uint64) {
+func out_cgo25_vfprintf(f *struct__IO_FILE, s *int8, l uint64) {
 	if !(f.flags&uint32(32) != 0) {
 		__fwritex((*uint8)(unsafe.Pointer(s)), l, f)
 	}
 }
-func pad_cgo25_vfprintf(f *struct__IO_FILE, c int8, w int32, l int32, fl int32) {
+func pad_cgo26_vfprintf(f *struct__IO_FILE, c int8, w int32, l int32, fl int32) {
 	var pad [256]int8
 	if uint32(fl)&73728 != 0 || l >= w {
 		return
@@ -287,24 +287,24 @@ func pad_cgo25_vfprintf(f *struct__IO_FILE, c int8, w int32, l int32, fl int32) 
 		}
 	}())
 	for ; uint64(l) >= 256; l -= int32(256) {
-		out_cgo24_vfprintf(f, (*int8)(unsafe.Pointer(&pad)), 256)
+		out_cgo25_vfprintf(f, (*int8)(unsafe.Pointer(&pad)), 256)
 	}
-	out_cgo24_vfprintf(f, (*int8)(unsafe.Pointer(&pad)), uint64(l))
+	out_cgo25_vfprintf(f, (*int8)(unsafe.Pointer(&pad)), uint64(l))
 }
 
-var xdigits_cgo26_vfprintf [16]int8 = [16]int8{'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'}
+var xdigits_cgo27_vfprintf [16]int8 = [16]int8{'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'}
 
-func fmt_x_cgo27_vfprintf(x uint64, s *int8, lower int32) *int8 {
+func fmt_x_cgo28_vfprintf(x uint64, s *int8, lower int32) *int8 {
 	for ; x != 0; x >>= int32(4) {
 		*func() (_cgo_ret *int8) {
 			_cgo_addr := &s
 			*(*uintptr)(unsafe.Pointer(_cgo_addr))--
 			return *_cgo_addr
-		}() = int8(int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&xdigits_cgo26_vfprintf)))) + uintptr(x&uint64(15))))) | lower)
+		}() = int8(int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&xdigits_cgo27_vfprintf)))) + uintptr(x&uint64(15))))) | lower)
 	}
 	return s
 }
-func fmt_o_cgo28_vfprintf(x uint64, s *int8) *int8 {
+func fmt_o_cgo29_vfprintf(x uint64, s *int8) *int8 {
 	for ; x != 0; x >>= int32(3) {
 		*func() (_cgo_ret *int8) {
 			_cgo_addr := &s
@@ -314,7 +314,7 @@ func fmt_o_cgo28_vfprintf(x uint64, s *int8) *int8 {
 	}
 	return s
 }
-func fmt_u_cgo29_vfprintf(x uint64, s *int8) *int8 {
+func fmt_u_cgo30_vfprintf(x uint64, s *int8) *int8 {
 	var y uint64
 	for ; x > uint64(4294967295); x /= uint64(10) {
 		*func() (_cgo_ret *int8) {
@@ -335,7 +335,7 @@ func fmt_u_cgo29_vfprintf(x uint64, s *int8) *int8 {
 
 type compiler_defines_long_double_incorrectly = int32
 
-func fmt_fp_cgo30_vfprintf(f *struct__IO_FILE, y float64, w int32, p int32, fl int32, t int32) int32 {
+func fmt_fp_cgo31_vfprintf(f *struct__IO_FILE, y float64, w int32, p int32, fl int32, t int32) int32 {
 	var big [126]uint32
 	var a *uint32
 	var d *uint32
@@ -429,10 +429,10 @@ func fmt_fp_cgo30_vfprintf(f *struct__IO_FILE, y float64, w int32, p int32, fl i
 				}
 			}()
 		}
-		pad_cgo25_vfprintf(f, int8(' '), w, int32(3)+pl, int32(uint32(fl)&4294901759))
-		out_cgo24_vfprintf(f, prefix, uint64(pl))
-		out_cgo24_vfprintf(f, s, uint64(3))
-		pad_cgo25_vfprintf(f, int8(' '), w, int32(3)+pl, int32(uint32(fl)^8192))
+		pad_cgo26_vfprintf(f, int8(' '), w, int32(3)+pl, int32(uint32(fl)&4294901759))
+		out_cgo25_vfprintf(f, prefix, uint64(pl))
+		out_cgo25_vfprintf(f, s, uint64(3))
+		pad_cgo26_vfprintf(f, int8(' '), w, int32(3)+pl, int32(uint32(fl)^8192))
 		return func() int32 {
 			if w > int32(3)+pl {
 				return w
@@ -477,7 +477,7 @@ func fmt_fp_cgo30_vfprintf(f *struct__IO_FILE, y float64, w int32, p int32, fl i
 				y -= round
 			}
 		}
-		estr = fmt_u_cgo29_vfprintf(uint64(func() int32 {
+		estr = fmt_u_cgo30_vfprintf(uint64(func() int32 {
 			if e2 < int32(0) {
 				return -e2
 			} else {
@@ -515,7 +515,7 @@ func fmt_fp_cgo30_vfprintf(f *struct__IO_FILE, y float64, w int32, p int32, fl i
 				_cgo_ret = *_cgo_addr
 				*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 				return
-			}() = int8(int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&xdigits_cgo26_vfprintf)))) + uintptr(x)))) | t&int32(32))
+			}() = int8(int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&xdigits_cgo27_vfprintf)))) + uintptr(x)))) | t&int32(32))
 			y = float64(int32(16)) * (y - float64(x))
 			if int64(uintptr(unsafe.Pointer(s))-uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))) == int64(1) && (y != 0 || p > int32(0) || uint32(fl)&8 != 0) {
 				*func() (_cgo_ret *int8) {
@@ -537,13 +537,13 @@ func fmt_fp_cgo30_vfprintf(f *struct__IO_FILE, y float64, w int32, p int32, fl i
 		} else {
 			l = int32(uintptr(unsafe.Pointer(s)) - uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf)))) + (uintptr(unsafe.Pointer(ebuf)) - uintptr(unsafe.Pointer(estr))))
 		}
-		pad_cgo25_vfprintf(f, int8(' '), w, pl+l, fl)
-		out_cgo24_vfprintf(f, prefix, uint64(pl))
-		pad_cgo25_vfprintf(f, int8('0'), w, pl+l, int32(uint32(fl)^65536))
-		out_cgo24_vfprintf(f, (*int8)(unsafe.Pointer(&buf)), uint64(uintptr(unsafe.Pointer(s))-uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))))
-		pad_cgo25_vfprintf(f, int8('0'), int32(int64(l)-int64(uintptr(unsafe.Pointer(ebuf))-uintptr(unsafe.Pointer(estr)))-int64(uintptr(unsafe.Pointer(s))-uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf)))))), int32(0), int32(0))
-		out_cgo24_vfprintf(f, estr, uint64(uintptr(unsafe.Pointer(ebuf))-uintptr(unsafe.Pointer(estr))))
-		pad_cgo25_vfprintf(f, int8(' '), w, pl+l, int32(uint32(fl)^8192))
+		pad_cgo26_vfprintf(f, int8(' '), w, pl+l, fl)
+		out_cgo25_vfprintf(f, prefix, uint64(pl))
+		pad_cgo26_vfprintf(f, int8('0'), w, pl+l, int32(uint32(fl)^65536))
+		out_cgo25_vfprintf(f, (*int8)(unsafe.Pointer(&buf)), uint64(uintptr(unsafe.Pointer(s))-uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))))
+		pad_cgo26_vfprintf(f, int8('0'), int32(int64(l)-int64(uintptr(unsafe.Pointer(ebuf))-uintptr(unsafe.Pointer(estr)))-int64(uintptr(unsafe.Pointer(s))-uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf)))))), int32(0), int32(0))
+		out_cgo25_vfprintf(f, estr, uint64(uintptr(unsafe.Pointer(ebuf))-uintptr(unsafe.Pointer(estr))))
+		pad_cgo26_vfprintf(f, int8(' '), w, pl+l, int32(uint32(fl)^8192))
 		return func() int32 {
 			if w > pl+l {
 				return w
@@ -888,7 +888,7 @@ func fmt_fp_cgo30_vfprintf(f *struct__IO_FILE, y float64, w int32, p int32, fl i
 			l += e
 		}
 	} else {
-		estr = fmt_u_cgo29_vfprintf(uint64(func() int32 {
+		estr = fmt_u_cgo30_vfprintf(uint64(func() int32 {
 			if e < int32(0) {
 				return -e
 			} else {
@@ -926,15 +926,15 @@ func fmt_fp_cgo30_vfprintf(f *struct__IO_FILE, y float64, w int32, p int32, fl i
 	if l > int32(2147483647)-pl {
 		return -1
 	}
-	pad_cgo25_vfprintf(f, int8(' '), w, pl+l, fl)
-	out_cgo24_vfprintf(f, prefix, uint64(pl))
-	pad_cgo25_vfprintf(f, int8('0'), w, pl+l, int32(uint32(fl)^65536))
+	pad_cgo26_vfprintf(f, int8(' '), w, pl+l, fl)
+	out_cgo25_vfprintf(f, prefix, uint64(pl))
+	pad_cgo26_vfprintf(f, int8('0'), w, pl+l, int32(uint32(fl)^65536))
 	if t|int32(32) == 'f' {
 		if uintptr(unsafe.Pointer(a)) > uintptr(unsafe.Pointer(r)) {
 			a = r
 		}
 		for d = a; uintptr(unsafe.Pointer(d)) <= uintptr(unsafe.Pointer(r)); *(*uintptr)(unsafe.Pointer(&d)) += 4 {
-			var s *int8 = fmt_u_cgo29_vfprintf(uint64(*d), (*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))+uintptr(int32(9)))))
+			var s *int8 = fmt_u_cgo30_vfprintf(uint64(*d), (*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))+uintptr(int32(9)))))
 			if uintptr(unsafe.Pointer(d)) != uintptr(unsafe.Pointer(a)) {
 				for uintptr(unsafe.Pointer(s)) > uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf)))) {
 					*func() (_cgo_ret *int8) {
@@ -950,10 +950,10 @@ func fmt_fp_cgo30_vfprintf(f *struct__IO_FILE, y float64, w int32, p int32, fl i
 					return *_cgo_addr
 				}() = int8('0')
 			}
-			out_cgo24_vfprintf(f, s, uint64(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))+uintptr(int32(9))))))-uintptr(unsafe.Pointer(s))))
+			out_cgo25_vfprintf(f, s, uint64(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))+uintptr(int32(9))))))-uintptr(unsafe.Pointer(s))))
 		}
 		if p != 0 || uint32(fl)&8 != 0 {
-			out_cgo24_vfprintf(f, (*int8)(unsafe.Pointer(&[2]int8{'.', '\x00'})), uint64(1))
+			out_cgo25_vfprintf(f, (*int8)(unsafe.Pointer(&[2]int8{'.', '\x00'})), uint64(1))
 		}
 		for ; uintptr(unsafe.Pointer(d)) < uintptr(unsafe.Pointer(z)) && p > int32(0); func() int32 {
 			*(*uintptr)(unsafe.Pointer(&d)) += 4
@@ -963,7 +963,7 @@ func fmt_fp_cgo30_vfprintf(f *struct__IO_FILE, y float64, w int32, p int32, fl i
 				return *_cgo_addr
 			}()
 		}() {
-			var s *int8 = fmt_u_cgo29_vfprintf(uint64(*d), (*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))+uintptr(int32(9)))))
+			var s *int8 = fmt_u_cgo30_vfprintf(uint64(*d), (*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))+uintptr(int32(9)))))
 			for uintptr(unsafe.Pointer(s)) > uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf)))) {
 				*func() (_cgo_ret *int8) {
 					_cgo_addr := &s
@@ -971,7 +971,7 @@ func fmt_fp_cgo30_vfprintf(f *struct__IO_FILE, y float64, w int32, p int32, fl i
 					return *_cgo_addr
 				}() = int8('0')
 			}
-			out_cgo24_vfprintf(f, s, uint64(func() int32 {
+			out_cgo25_vfprintf(f, s, uint64(func() int32 {
 				if int32(9) < p {
 					return int32(9)
 				} else {
@@ -979,13 +979,13 @@ func fmt_fp_cgo30_vfprintf(f *struct__IO_FILE, y float64, w int32, p int32, fl i
 				}
 			}()))
 		}
-		pad_cgo25_vfprintf(f, int8('0'), p+int32(9), int32(9), int32(0))
+		pad_cgo26_vfprintf(f, int8('0'), p+int32(9), int32(9), int32(0))
 	} else {
 		if uintptr(unsafe.Pointer(z)) <= uintptr(unsafe.Pointer(a)) {
 			z = (*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer(a)) + uintptr(int32(1))*4))
 		}
 		for d = a; uintptr(unsafe.Pointer(d)) < uintptr(unsafe.Pointer(z)) && p >= int32(0); *(*uintptr)(unsafe.Pointer(&d)) += 4 {
-			var s *int8 = fmt_u_cgo29_vfprintf(uint64(*d), (*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))+uintptr(int32(9)))))
+			var s *int8 = fmt_u_cgo30_vfprintf(uint64(*d), (*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))+uintptr(int32(9)))))
 			if uintptr(unsafe.Pointer(s)) == uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))+uintptr(int32(9)))))) {
 				*func() (_cgo_ret *int8) {
 					_cgo_addr := &s
@@ -1002,17 +1002,17 @@ func fmt_fp_cgo30_vfprintf(f *struct__IO_FILE, y float64, w int32, p int32, fl i
 					}() = int8('0')
 				}
 			} else {
-				out_cgo24_vfprintf(f, func() (_cgo_ret *int8) {
+				out_cgo25_vfprintf(f, func() (_cgo_ret *int8) {
 					_cgo_addr := &s
 					_cgo_ret = *_cgo_addr
 					*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 					return
 				}(), uint64(1))
 				if p > int32(0) || uint32(fl)&8 != 0 {
-					out_cgo24_vfprintf(f, (*int8)(unsafe.Pointer(&[2]int8{'.', '\x00'})), uint64(1))
+					out_cgo25_vfprintf(f, (*int8)(unsafe.Pointer(&[2]int8{'.', '\x00'})), uint64(1))
 				}
 			}
-			out_cgo24_vfprintf(f, s, uint64(func() int64 {
+			out_cgo25_vfprintf(f, s, uint64(func() int64 {
 				if uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))+uintptr(int32(9))))))-uintptr(unsafe.Pointer(s)) < uintptr(int64(p)) {
 					return int64(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))+uintptr(int32(9)))))) - uintptr(unsafe.Pointer(s)))
 				} else {
@@ -1021,10 +1021,10 @@ func fmt_fp_cgo30_vfprintf(f *struct__IO_FILE, y float64, w int32, p int32, fl i
 			}()))
 			p -= int32(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf))))+uintptr(int32(9)))))) - uintptr(unsafe.Pointer(s)))
 		}
-		pad_cgo25_vfprintf(f, int8('0'), p+int32(18), int32(18), int32(0))
-		out_cgo24_vfprintf(f, estr, uint64(uintptr(unsafe.Pointer(ebuf))-uintptr(unsafe.Pointer(estr))))
+		pad_cgo26_vfprintf(f, int8('0'), p+int32(18), int32(18), int32(0))
+		out_cgo25_vfprintf(f, estr, uint64(uintptr(unsafe.Pointer(ebuf))-uintptr(unsafe.Pointer(estr))))
 	}
-	pad_cgo25_vfprintf(f, int8(' '), w, pl+l, int32(uint32(fl)^8192))
+	pad_cgo26_vfprintf(f, int8(' '), w, pl+l, int32(uint32(fl)^8192))
 	return func() int32 {
 		if w > pl+l {
 			return w
@@ -1033,7 +1033,7 @@ func fmt_fp_cgo30_vfprintf(f *struct__IO_FILE, y float64, w int32, p int32, fl i
 		}
 	}()
 }
-func getint_cgo31_vfprintf(s **int8) int32 {
+func getint_cgo32_vfprintf(s **int8) int32 {
 	var i int32
 	for i = int32(0); func() int32 {
 		if int32(0) != 0 {
@@ -1056,8 +1056,8 @@ func getint_cgo31_vfprintf(s **int8) int32 {
 	}
 	return i
 }
-func printf_core_cgo32_vfprintf(f *struct__IO_FILE, fmt *int8, ap *[]interface {
-}, nl_arg *union_arg, nl_type *int32) int32 {
+func printf_core_cgo33_vfprintf(f *struct__IO_FILE, fmt *int8, ap *[]interface {
+}, nl_arg *arg_cgo23_vfprintf, nl_type *int32) int32 {
 	var (
 		_tag_cgo1 int32
 		_nm_cgo2  bool
@@ -1070,7 +1070,7 @@ func printf_core_cgo32_vfprintf(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 	var w int32
 	var p int32
 	var xp int32
-	var arg union_arg
+	var arg arg_cgo23_vfprintf
 	var argpos int32
 	var st uint32
 	var ps uint32
@@ -1108,7 +1108,7 @@ func printf_core_cgo32_vfprintf(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 		}
 		l = int32(uintptr(unsafe.Pointer(z)) - uintptr(unsafe.Pointer(a)))
 		if f != nil {
-			out_cgo24_vfprintf(f, a, uint64(l))
+			out_cgo25_vfprintf(f, a, uint64(l))
 		}
 		if l != 0 {
 			continue
@@ -1152,7 +1152,7 @@ func printf_core_cgo32_vfprintf(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 			}() != 0 && int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(s)) + uintptr(int32(2))))) == '$' {
 				l10n = uint32(1)
 				*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer(nl_type)) + uintptr(int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(s)) + uintptr(int32(1)))))-'0')*4)) = INT
-				w = int32((*(*union_arg)(unsafe.Pointer(uintptr(unsafe.Pointer(nl_arg)) + uintptr(int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(s)) + uintptr(int32(1)))))-'0')*8))).i)
+				w = int32((*(*arg_cgo23_vfprintf)(unsafe.Pointer(uintptr(unsafe.Pointer(nl_arg)) + uintptr(int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(s)) + uintptr(int32(1)))))-'0')*8))).i)
 				*(*uintptr)(unsafe.Pointer(&s)) += uintptr(int32(3))
 			} else if !(l10n != 0) {
 				w = func() int32 {
@@ -1190,7 +1190,7 @@ func printf_core_cgo32_vfprintf(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 			}
 		} else if func() (_cgo_ret int32) {
 			_cgo_addr := &w
-			*_cgo_addr = getint_cgo31_vfprintf(&s)
+			*_cgo_addr = getint_cgo32_vfprintf(&s)
 			return *_cgo_addr
 		}() < int32(0) {
 			goto overflow
@@ -1210,7 +1210,7 @@ func printf_core_cgo32_vfprintf(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 				}
 			}() != 0 && int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(s)) + uintptr(int32(3))))) == '$' {
 				*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer(nl_type)) + uintptr(int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(s)) + uintptr(int32(2)))))-'0')*4)) = INT
-				p = int32((*(*union_arg)(unsafe.Pointer(uintptr(unsafe.Pointer(nl_arg)) + uintptr(int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(s)) + uintptr(int32(2)))))-'0')*8))).i)
+				p = int32((*(*arg_cgo23_vfprintf)(unsafe.Pointer(uintptr(unsafe.Pointer(nl_arg)) + uintptr(int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(s)) + uintptr(int32(2)))))-'0')*8))).i)
 				*(*uintptr)(unsafe.Pointer(&s)) += uintptr(int32(4))
 			} else if !(l10n != 0) {
 				p = func() int32 {
@@ -1245,7 +1245,7 @@ func printf_core_cgo32_vfprintf(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 			}()
 		} else if int32(*s) == '.' {
 			*(*uintptr)(unsafe.Pointer(&s))++
-			p = getint_cgo31_vfprintf(&s)
+			p = getint_cgo32_vfprintf(&s)
 			xp = int32(1)
 		} else {
 			p = -1
@@ -1275,16 +1275,16 @@ func printf_core_cgo32_vfprintf(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 				goto inval
 			}
 		} else if argpos >= int32(0) {
-			func() union_arg {
+			func() arg_cgo23_vfprintf {
 				*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer(nl_type)) + uintptr(argpos)*4)) = int32(st)
-				return func() (_cgo_ret union_arg) {
+				return func() (_cgo_ret arg_cgo23_vfprintf) {
 					_cgo_addr := &arg
-					*_cgo_addr = *(*union_arg)(unsafe.Pointer(uintptr(unsafe.Pointer(nl_arg)) + uintptr(argpos)*8))
+					*_cgo_addr = *(*arg_cgo23_vfprintf)(unsafe.Pointer(uintptr(unsafe.Pointer(nl_arg)) + uintptr(argpos)*8))
 					return *_cgo_addr
 				}()
 			}()
 		} else if f != nil {
-			pop_arg_cgo23_vfprintf(&arg, int32(st), ap)
+			pop_arg_cgo24_vfprintf(&arg, int32(st), ap)
 		} else {
 			return int32(0)
 		}
@@ -1354,7 +1354,7 @@ func printf_core_cgo32_vfprintf(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 			goto _cgol_4
 		}
 		_nm_cgo2 = false
-		a = fmt_x_cgo27_vfprintf(arg.i, z, t&int32(32))
+		a = fmt_x_cgo28_vfprintf(arg.i, z, t&int32(32))
 		if arg.i != 0 && fl&8 != 0 {
 			func() int32 {
 				*(*uintptr)(unsafe.Pointer(&prefix)) += uintptr(t >> int32(4))
@@ -1373,7 +1373,7 @@ func printf_core_cgo32_vfprintf(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 			goto _cgol_6
 		}
 		_nm_cgo2 = false
-		a = fmt_o_cgo28_vfprintf(arg.i, z)
+		a = fmt_o_cgo29_vfprintf(arg.i, z)
 		if fl&8 != 0 && int64(p) < int64(uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(a))+uintptr(int64(1))) {
 			p = int32(uintptr(unsafe.Pointer(z)) - uintptr(unsafe.Pointer(a)) + uintptr(int64(1)))
 		}
@@ -1406,7 +1406,7 @@ func printf_core_cgo32_vfprintf(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 			goto _cgol_10
 		}
 		_nm_cgo2 = false
-		a = fmt_u_cgo29_vfprintf(arg.i, z)
+		a = fmt_u_cgo30_vfprintf(arg.i, z)
 	_cgol_7:
 		if xp != 0 && p < int32(0) {
 			goto overflow
@@ -1529,7 +1529,7 @@ func printf_core_cgo32_vfprintf(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 			goto overflow
 		}
 		p = int32(i)
-		pad_cgo25_vfprintf(f, int8(' '), w, p, int32(fl))
+		pad_cgo26_vfprintf(f, int8(' '), w, p, int32(fl))
 		ws = (*uint32)(*(*unsafe.Pointer)(unsafe.Pointer(&arg)))
 		for i = uint64(0); i < uint64(uint32(0)+uint32(p)) && *ws != 0 && i+uint64(func() (_cgo_ret int32) {
 			_cgo_addr := &l
@@ -1541,9 +1541,9 @@ func printf_core_cgo32_vfprintf(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 			}())
 			return *_cgo_addr
 		}()) <= uint64(p); i += uint64(l) {
-			out_cgo24_vfprintf(f, (*int8)(unsafe.Pointer(&mb)), uint64(l))
+			out_cgo25_vfprintf(f, (*int8)(unsafe.Pointer(&mb)), uint64(l))
 		}
-		pad_cgo25_vfprintf(f, int8(' '), w, p, int32(fl^8192))
+		pad_cgo26_vfprintf(f, int8(' '), w, p, int32(fl^8192))
 		l = func() int32 {
 			if w > p {
 				return w
@@ -1595,7 +1595,7 @@ func printf_core_cgo32_vfprintf(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 		if xp != 0 && p < int32(0) {
 			goto overflow
 		}
-		l = fmt_fp_cgo30_vfprintf(f, *(*float64)(unsafe.Pointer(&arg)), w, p, int32(fl), t)
+		l = fmt_fp_cgo31_vfprintf(f, *(*float64)(unsafe.Pointer(&arg)), w, p, int32(fl), t)
 		if l < int32(0) {
 			goto overflow
 		}
@@ -1616,12 +1616,12 @@ func printf_core_cgo32_vfprintf(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 		if w > int32(2147483647)-cnt {
 			goto overflow
 		}
-		pad_cgo25_vfprintf(f, int8(' '), w, pl+p, int32(fl))
-		out_cgo24_vfprintf(f, prefix, uint64(pl))
-		pad_cgo25_vfprintf(f, int8('0'), w, pl+p, int32(fl^65536))
-		pad_cgo25_vfprintf(f, int8('0'), p, int32(uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(a))), int32(0))
-		out_cgo24_vfprintf(f, a, uint64(uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(a))))
-		pad_cgo25_vfprintf(f, int8(' '), w, pl+p, int32(fl^8192))
+		pad_cgo26_vfprintf(f, int8(' '), w, pl+p, int32(fl))
+		out_cgo25_vfprintf(f, prefix, uint64(pl))
+		pad_cgo26_vfprintf(f, int8('0'), w, pl+p, int32(fl^65536))
+		pad_cgo26_vfprintf(f, int8('0'), p, int32(uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(a))), int32(0))
+		out_cgo25_vfprintf(f, a, uint64(uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(a))))
+		pad_cgo26_vfprintf(f, int8(' '), w, pl+p, int32(fl^8192))
 		l = w
 	}
 	if f != nil {
@@ -1631,7 +1631,7 @@ func printf_core_cgo32_vfprintf(f *struct__IO_FILE, fmt *int8, ap *[]interface {
 		return int32(0)
 	}
 	for i = uint64(1); i <= uint64(9) && *(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer(nl_type)) + uintptr(i)*4)) != 0; i++ {
-		pop_arg_cgo23_vfprintf((*union_arg)(unsafe.Pointer(uintptr(unsafe.Pointer(nl_arg))+uintptr(i)*8)), *(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer(nl_type)) + uintptr(i)*4)), ap)
+		pop_arg_cgo24_vfprintf((*arg_cgo23_vfprintf)(unsafe.Pointer(uintptr(unsafe.Pointer(nl_arg))+uintptr(i)*8)), *(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer(nl_type)) + uintptr(i)*4)), ap)
 	}
 	for ; i <= uint64(9) && !(*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer(nl_type)) + uintptr(i)*4)) != 0); i++ {
 	}
@@ -1651,13 +1651,13 @@ func Vfprintf(f *struct__IO_FILE, fmt *int8, ap []interface {
 	var ap2 []interface {
 	}
 	var nl_type [10]int32 = [10]int32{int32(0)}
-	var nl_arg [10]union_arg
+	var nl_arg [10]arg_cgo23_vfprintf
 	var internal_buf [80]uint8
 	var saved_buf *uint8 = nil
 	var olderr int32
 	var ret int32
 	ap2 = ap
-	if printf_core_cgo32_vfprintf(nil, fmt, &ap2, (*union_arg)(unsafe.Pointer(&nl_arg)), (*int32)(unsafe.Pointer(&nl_type))) < int32(0) {
+	if printf_core_cgo33_vfprintf(nil, fmt, &ap2, (*arg_cgo23_vfprintf)(unsafe.Pointer(&nl_arg)), (*int32)(unsafe.Pointer(&nl_type))) < int32(0) {
 		return -1
 	}
 	var __need_unlock int32 = func() int32 {
@@ -1688,7 +1688,7 @@ func Vfprintf(f *struct__IO_FILE, fmt *int8, ap []interface {
 	if !(f.wend != nil) && __towrite(f) != 0 {
 		ret = -1
 	} else {
-		ret = printf_core_cgo32_vfprintf(f, fmt, &ap2, (*union_arg)(unsafe.Pointer(&nl_arg)), (*int32)(unsafe.Pointer(&nl_type)))
+		ret = printf_core_cgo33_vfprintf(f, fmt, &ap2, (*arg_cgo23_vfprintf)(unsafe.Pointer(&nl_arg)), (*int32)(unsafe.Pointer(&nl_type)))
 	}
 	if saved_buf != nil {
 		f.write(f, nil, uint64(0))
