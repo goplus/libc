@@ -2,6 +2,21 @@ package libc
 
 import unsafe "unsafe"
 
+func Ilogb(float64) int32 {
+	panic("notimpl")
+}
+func Ilogbf(float32) int32 {
+	panic("notimpl")
+}
+func Logf(float32) float32 {
+	panic("notimpl")
+}
+func Sqrtf(float32) float32 {
+	panic("notimpl")
+}
+func Tgamma(float64) float64 {
+	panic("notimpl")
+}
 func Wctomb(*int8, uint32) int32 {
 	panic("notimpl")
 }

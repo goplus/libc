@@ -15,9 +15,9 @@ func Fegetround() int32 {
 func __fesetround(r int32) int32 {
 	return int32(0)
 }
-func Fegetenv(envp *_cgoa_1_fenv) int32 {
+func Fegetenv(envp *_cgoa_1_fmaf) int32 {
 	return int32(0)
 }
-func Fesetenv(envp *_cgoa_1_fenv) int32 {
+func Fesetenv(envp *_cgoa_1_fmaf) int32 {
 	return int32(0)
 }
