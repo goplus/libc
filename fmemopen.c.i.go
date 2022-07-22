@@ -2,24 +2,24 @@ package libc
 
 import unsafe "unsafe"
 
-type struct_cookie_1 struct {
+type cookie_cgo20_fmemopen struct {
 	pos  uint64
 	len  uint64
 	size uint64
 	buf  *uint8
 	mode int32
 }
-type struct_mem_FILE struct {
+type mem_FILE_cgo21_fmemopen struct {
 	f    struct__IO_FILE
-	c    struct_cookie_1
+	c    cookie_cgo20_fmemopen
 	buf  [1032]uint8
 	buf2 [0]uint8
 }
 
-func mseek_cgo20_fmemopen(f *struct__IO_FILE, off int64, whence int32) int64 {
+func mseek_cgo22_fmemopen(f *struct__IO_FILE, off int64, whence int32) int64 {
 
 	var base int64
-	var c *struct_cookie_1 = (*struct_cookie_1)(f.cookie)
+	var c *cookie_cgo20_fmemopen = (*cookie_cgo20_fmemopen)(f.cookie)
 	if !(uint32(whence) > uint32(2)) {
 		goto _cgol_1
 	}
@@ -39,8 +39,8 @@ _cgol_2:
 		return *_cgo_addr
 	}())
 }
-func mread_cgo21_fmemopen(f *struct__IO_FILE, buf *uint8, len uint64) uint64 {
-	var c *struct_cookie_1 = (*struct_cookie_1)(f.cookie)
+func mread_cgo23_fmemopen(f *struct__IO_FILE, buf *uint8, len uint64) uint64 {
+	var c *cookie_cgo20_fmemopen = (*cookie_cgo20_fmemopen)(f.cookie)
 	var rem uint64 = c.len - c.pos
 	if c.pos > c.len {
 		rem = uint64(0)
@@ -61,13 +61,13 @@ func mread_cgo21_fmemopen(f *struct__IO_FILE, buf *uint8, len uint64) uint64 {
 	c.pos += rem
 	return len
 }
-func mwrite_cgo22_fmemopen(f *struct__IO_FILE, buf *uint8, len uint64) uint64 {
-	var c *struct_cookie_1 = (*struct_cookie_1)(f.cookie)
+func mwrite_cgo24_fmemopen(f *struct__IO_FILE, buf *uint8, len uint64) uint64 {
+	var c *cookie_cgo20_fmemopen = (*cookie_cgo20_fmemopen)(f.cookie)
 	var rem uint64
 	var len2 uint64 = uint64(uintptr(unsafe.Pointer(f.wpos)) - uintptr(unsafe.Pointer(f.wbase)))
 	if len2 != 0 {
 		f.wpos = f.wbase
-		if mwrite_cgo22_fmemopen(f, f.wpos, len2) < len2 {
+		if mwrite_cgo24_fmemopen(f, f.wpos, len2) < len2 {
 			return uint64(0)
 		}
 	}
@@ -90,11 +90,11 @@ func mwrite_cgo22_fmemopen(f *struct__IO_FILE, buf *uint8, len uint64) uint64 {
 	}
 	return len
 }
-func mclose_cgo23_fmemopen(m *struct__IO_FILE) int32 {
+func mclose_cgo25_fmemopen(m *struct__IO_FILE) int32 {
 	return int32(0)
 }
 func Fmemopen(buf unsafe.Pointer, size uint64, mode *int8) *struct__IO_FILE {
-	var f *struct_mem_FILE
+	var f *mem_FILE_cgo21_fmemopen
 	var plus int32 = func() int32 {
 		if !!(Strchr(mode, '+') != nil) {
 			return 1
@@ -110,7 +110,7 @@ func Fmemopen(buf unsafe.Pointer, size uint64, mode *int8) *struct__IO_FILE {
 		*__errno_location() = int32(12)
 		return (*struct__IO_FILE)(nil)
 	}
-	f = (*struct_mem_FILE)(Malloc(1300 + func() uint64 {
+	f = (*mem_FILE_cgo21_fmemopen)(Malloc(1300 + func() uint64 {
 		if buf != nil {
 			return uint64(0)
 		} else {
@@ -153,10 +153,10 @@ func Fmemopen(buf unsafe.Pointer, size uint64, mode *int8) *struct__IO_FILE {
 	} else if plus != 0 {
 		*f.c.buf = uint8(0)
 	}
-	f.f.read = mread_cgo21_fmemopen
-	f.f.write = mwrite_cgo22_fmemopen
-	f.f.seek = mseek_cgo20_fmemopen
-	f.f.close = mclose_cgo23_fmemopen
+	f.f.read = mread_cgo23_fmemopen
+	f.f.write = mwrite_cgo24_fmemopen
+	f.f.seek = mseek_cgo22_fmemopen
+	f.f.close = mclose_cgo25_fmemopen
 	if !(__libc.threaded != 0) {
 		f.f.lock = -1
 	}
