@@ -1770,20 +1770,20 @@ type struct_log2_data struct {
 	tab      [64]_cgoa_18_log2
 	tab2     [64]_cgoa_19_log2
 }
-type _cgoa_18_log2f_data struct {
+type _cgoa_18_log2f struct {
 	invc float64
 	logc float64
 }
 type struct_log2f_data struct {
-	tab  [16]_cgoa_18_log2f_data
+	tab  [16]_cgoa_18_log2f
 	poly [4]float64
 }
-type _cgoa_18_logf_data struct {
+type _cgoa_18_logf struct {
 	invc float64
 	logc float64
 }
 type struct_logf_data struct {
-	tab  [16]_cgoa_18_logf_data
+	tab  [16]_cgoa_18_logf
 	ln2  float64
 	poly [3]float64
 }
@@ -1799,12 +1799,12 @@ type struct_pow_log_data struct {
 	poly  [7]float64
 	tab   [128]_cgoa_18_pow
 }
-type _cgoa_18_powf_data struct {
+type _cgoa_18_powf struct {
 	invc float64
 	logc float64
 }
 type struct_powf_log2_data struct {
-	tab  [16]_cgoa_18_powf_data
+	tab  [16]_cgoa_18_powf
 	poly [5]float64
 }
 type _cgoa_18_drand48 struct {

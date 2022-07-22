@@ -8,9 +8,6 @@ func Ilogb(float64) int32 {
 func Ilogbf(float32) int32 {
 	panic("notimpl")
 }
-func Logf(float32) float32 {
-	panic("notimpl")
-}
 func Sqrtf(float32) float32 {
 	panic("notimpl")
 }
