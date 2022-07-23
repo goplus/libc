@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func scanexp_cgo15_floatscan(f *struct__IO_FILE, pok int32) int64 {
+func scanexp_cgos__floatscan(f *struct__IO_FILE, pok int32) int64 {
 	var c int32
 	var x int32
 	var y int64
@@ -142,7 +142,7 @@ func scanexp_cgo15_floatscan(f *struct__IO_FILE, pok int32) int64 {
 		}
 	}()
 }
-func decfloat_cgo16_floatscan(f *struct__IO_FILE, c int32, bits int32, emin int32, sign int32, pok int32) float64 {
+func decfloat_cgos__floatscan(f *struct__IO_FILE, c int32, bits int32, emin int32, sign int32, pok int32) float64 {
 	var x [128]uint32
 	var i int32
 	var j int32
@@ -264,7 +264,7 @@ func decfloat_cgo16_floatscan(f *struct__IO_FILE, c int32, bits int32, emin int3
 		lrp = dc
 	}
 	if gotdig != 0 && c|int32(32) == 'e' {
-		e10 = scanexp_cgo15_floatscan(f, pok)
+		e10 = scanexp_cgos__floatscan(f, pok)
 		if e10 == -9223372036854775808 {
 			if pok != 0 {
 				if f.shlim >= int64(0) {
@@ -343,11 +343,11 @@ func decfloat_cgo16_floatscan(f *struct__IO_FILE, c int32, bits int32, emin int3
 			return float64(sign) * float64(*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&x)))) + uintptr(int32(0))*4)))
 		}
 		if rp < int32(9) {
-			return float64(sign) * float64(*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&x)))) + uintptr(int32(0))*4))) / float64(*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&p10s_cgo18_floatscan)))) + uintptr(int32(8)-rp)*4)))
+			return float64(sign) * float64(*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&x)))) + uintptr(int32(0))*4))) / float64(*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&p10s_cgos__floatscan)))) + uintptr(int32(8)-rp)*4)))
 		}
 		var bitlim int32 = bits - int32(3)*int32(rp-int32(9))
 		if bitlim > int32(30) || *(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&x)))) + uintptr(int32(0))*4))>>bitlim == uint32(0) {
-			return float64(sign) * float64(*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&x)))) + uintptr(int32(0))*4))) * float64(*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&p10s_cgo18_floatscan)))) + uintptr(rp-int32(10))*4)))
+			return float64(sign) * float64(*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&x)))) + uintptr(int32(0))*4))) * float64(*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&p10s_cgos__floatscan)))) + uintptr(rp-int32(10))*4)))
 		}
 	}
 	for ; !(*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&x)))) + uintptr(z-int32(1))*4)) != 0); z-- {
@@ -360,7 +360,7 @@ func decfloat_cgo16_floatscan(f *struct__IO_FILE, c int32, bits int32, emin int3
 				return rp%int32(9) + int32(9)
 			}
 		}()
-		var p10 int32 = *(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&p10s_cgo18_floatscan)))) + uintptr(int32(8)-rpm9)*4))
+		var p10 int32 = *(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&p10s_cgos__floatscan)))) + uintptr(int32(8)-rpm9)*4))
 		var carry uint32 = uint32(0)
 		for k = a; k != z; k++ {
 			var tmp uint32 = *(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&x)))) + uintptr(k)*4)) % uint32(p10)
@@ -381,7 +381,7 @@ func decfloat_cgo16_floatscan(f *struct__IO_FILE, c int32, bits int32, emin int3
 		}
 		rp += int32(9) - rpm9
 	}
-	for rp < 18 || rp == 18 && *(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&x)))) + uintptr(a)*4)) < *(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&th_cgo17_floatscan)))) + uintptr(int32(0))*4)) {
+	for rp < 18 || rp == 18 && *(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&x)))) + uintptr(a)*4)) < *(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&th_cgos__floatscan)))) + uintptr(int32(0))*4)) {
 		var carry uint32 = uint32(0)
 		e2 -= int32(29)
 		for k = (z - int32(1)) & 127; ; k = (k - int32(1)) & 127 {
@@ -415,11 +415,11 @@ func decfloat_cgo16_floatscan(f *struct__IO_FILE, c int32, bits int32, emin int3
 		var sh int32 = int32(1)
 		for i = int32(0); i < int32(2); i++ {
 			k = (a + i) & 127
-			if k == z || *(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&x)))) + uintptr(k)*4)) < *(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&th_cgo17_floatscan)))) + uintptr(i)*4)) {
+			if k == z || *(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&x)))) + uintptr(k)*4)) < *(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&th_cgos__floatscan)))) + uintptr(i)*4)) {
 				i = int32(2)
 				break
 			}
-			if *(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&x)))) + uintptr((a+i)&127)*4)) > *(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&th_cgo17_floatscan)))) + uintptr(i)*4)) {
+			if *(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&x)))) + uintptr((a+i)&127)*4)) > *(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&th_cgos__floatscan)))) + uintptr(i)*4)) {
 				break
 			}
 		}
@@ -511,10 +511,10 @@ func decfloat_cgo16_floatscan(f *struct__IO_FILE, c int32, bits int32, emin int3
 	return Scalbnl(y, e2)
 }
 
-var th_cgo17_floatscan [2]uint32 = [2]uint32{uint32(9007199), uint32(254740991)}
-var p10s_cgo18_floatscan [8]int32 = [8]int32{int32(10), int32(100), int32(1000), int32(10000), int32(100000), int32(1000000), int32(10000000), int32(100000000)}
+var th_cgos__floatscan [2]uint32 = [2]uint32{uint32(9007199), uint32(254740991)}
+var p10s_cgos__floatscan [8]int32 = [8]int32{int32(10), int32(100), int32(1000), int32(10000), int32(100000), int32(1000000), int32(10000000), int32(100000000)}
 
-func hexfloat_cgo19_floatscan(f *struct__IO_FILE, bits int32, emin int32, sign int32, pok int32) float64 {
+func hexfloat_cgos__floatscan(f *struct__IO_FILE, bits int32, emin int32, sign int32, pok int32) float64 {
 	var x uint32 = uint32(0)
 	var y float64 = float64(int32(0))
 	var scale float64 = float64(int32(1))
@@ -702,7 +702,7 @@ func hexfloat_cgo19_floatscan(f *struct__IO_FILE, bits int32, emin int32, sign i
 		}()
 	}
 	if c|int32(32) == 'p' {
-		e2 = scanexp_cgo15_floatscan(f, pok)
+		e2 = scanexp_cgos__floatscan(f, pok)
 		if e2 == -9223372036854775808 {
 			if pok != 0 {
 				if f.shlim >= int64(0) {
@@ -1059,7 +1059,7 @@ func __floatscan(f *struct__IO_FILE, prec int32, pok int32) float64 {
 			}
 		}()
 		if c|int32(32) == 'x' {
-			return hexfloat_cgo19_floatscan(f, bits, emin, sign, pok)
+			return hexfloat_cgos__floatscan(f, bits, emin, sign, pok)
 		}
 		if f.shlim >= int64(0) {
 			func() int {
@@ -1079,5 +1079,5 @@ func __floatscan(f *struct__IO_FILE, prec int32, pok int32) float64 {
 		}
 		c = int32('0')
 	}
-	return decfloat_cgo16_floatscan(f, c, bits, emin, sign, pok)
+	return decfloat_cgos__floatscan(f, c, bits, emin, sign, pok)
 }

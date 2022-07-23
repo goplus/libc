@@ -2,22 +2,22 @@ package libc
 
 import unsafe "unsafe"
 
-var toint_cgo18___rem_pio2 float64 = 1.5 / 2.2204460492503131e-16
-var pio4_cgo19___rem_pio2 float64 = 0.78539816339744828
-var invpio2_cgo20___rem_pio2 float64 = 0.63661977236758138
-var pio2_1_cgo21___rem_pio2 float64 = 1.5707963267341256
-var pio2_1t_cgo22___rem_pio2 float64 = 6.0771005065061922e-11
-var pio2_2_cgo23___rem_pio2 float64 = 6.077100506303966e-11
-var pio2_2t_cgo24___rem_pio2 float64 = 2.0222662487959506e-21
-var pio2_3_cgo25___rem_pio2 float64 = 2.0222662487111665e-21
-var pio2_3t_cgo26___rem_pio2 float64 = 8.4784276603688995e-32
+var toint_cgos____rem_pio2 float64 = 1.5 / 2.2204460492503131e-16
+var pio4_cgos____rem_pio2 float64 = 0.78539816339744828
+var invpio2_cgos____rem_pio2 float64 = 0.63661977236758138
+var pio2_1_cgos____rem_pio2 float64 = 1.5707963267341256
+var pio2_1t_cgos____rem_pio2 float64 = 6.0771005065061922e-11
+var pio2_2_cgos____rem_pio2 float64 = 6.077100506303966e-11
+var pio2_2t_cgos____rem_pio2 float64 = 2.0222662487959506e-21
+var pio2_3_cgos____rem_pio2 float64 = 2.0222662487111665e-21
+var pio2_3t_cgos____rem_pio2 float64 = 8.4784276603688995e-32
 
 func __rem_pio2(x float64, y *float64) int32 {
 
-	type _cgoa_27___rem_pio2 struct {
+	type _cgoa_18___rem_pio2 struct {
 		f float64
 	}
-	var u _cgoa_27___rem_pio2
+	var u _cgoa_18___rem_pio2
 	u.f = x
 	var z float64
 	var w float64
@@ -44,25 +44,25 @@ func __rem_pio2(x float64, y *float64) int32 {
 _cgol_2:
 	if ix <= uint32(1073928572) {
 		if !(sign != 0) {
-			z = x - pio2_1_cgo21___rem_pio2
-			*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) = z - pio2_1t_cgo22___rem_pio2
-			*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(1))*8)) = z - *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) - pio2_1t_cgo22___rem_pio2
+			z = x - pio2_1_cgos____rem_pio2
+			*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) = z - pio2_1t_cgos____rem_pio2
+			*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(1))*8)) = z - *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) - pio2_1t_cgos____rem_pio2
 			return int32(1)
 		} else {
-			z = x + pio2_1_cgo21___rem_pio2
-			*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) = z + pio2_1t_cgo22___rem_pio2
-			*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(1))*8)) = z - *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) + pio2_1t_cgo22___rem_pio2
+			z = x + pio2_1_cgos____rem_pio2
+			*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) = z + pio2_1t_cgos____rem_pio2
+			*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(1))*8)) = z - *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) + pio2_1t_cgos____rem_pio2
 			return -1
 		}
 	} else if !(sign != 0) {
-		z = x - float64(int32(2))*pio2_1_cgo21___rem_pio2
-		*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) = z - float64(int32(2))*pio2_1t_cgo22___rem_pio2
-		*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(1))*8)) = z - *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) - float64(int32(2))*pio2_1t_cgo22___rem_pio2
+		z = x - float64(int32(2))*pio2_1_cgos____rem_pio2
+		*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) = z - float64(int32(2))*pio2_1t_cgos____rem_pio2
+		*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(1))*8)) = z - *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) - float64(int32(2))*pio2_1t_cgos____rem_pio2
 		return int32(2)
 	} else {
-		z = x + float64(int32(2))*pio2_1_cgo21___rem_pio2
-		*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) = z + float64(int32(2))*pio2_1t_cgo22___rem_pio2
-		*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(1))*8)) = z - *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) + float64(int32(2))*pio2_1t_cgo22___rem_pio2
+		z = x + float64(int32(2))*pio2_1_cgos____rem_pio2
+		*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) = z + float64(int32(2))*pio2_1t_cgos____rem_pio2
+		*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(1))*8)) = z - *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) + float64(int32(2))*pio2_1t_cgos____rem_pio2
 		return -2
 	}
 _cgol_1:
@@ -78,14 +78,14 @@ _cgol_1:
 	goto medium
 _cgol_6:
 	if !(sign != 0) {
-		z = x - float64(int32(3))*pio2_1_cgo21___rem_pio2
-		*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) = z - float64(int32(3))*pio2_1t_cgo22___rem_pio2
-		*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(1))*8)) = z - *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) - float64(int32(3))*pio2_1t_cgo22___rem_pio2
+		z = x - float64(int32(3))*pio2_1_cgos____rem_pio2
+		*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) = z - float64(int32(3))*pio2_1t_cgos____rem_pio2
+		*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(1))*8)) = z - *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) - float64(int32(3))*pio2_1t_cgos____rem_pio2
 		return int32(3)
 	} else {
-		z = x + float64(int32(3))*pio2_1_cgo21___rem_pio2
-		*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) = z + float64(int32(3))*pio2_1t_cgo22___rem_pio2
-		*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(1))*8)) = z - *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) + float64(int32(3))*pio2_1t_cgo22___rem_pio2
+		z = x + float64(int32(3))*pio2_1_cgos____rem_pio2
+		*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) = z + float64(int32(3))*pio2_1t_cgos____rem_pio2
+		*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(1))*8)) = z - *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) + float64(int32(3))*pio2_1t_cgos____rem_pio2
 		return -3
 	}
 	goto _cgol_4
@@ -96,14 +96,14 @@ _cgol_5:
 	goto medium
 _cgol_7:
 	if !(sign != 0) {
-		z = x - float64(int32(4))*pio2_1_cgo21___rem_pio2
-		*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) = z - float64(int32(4))*pio2_1t_cgo22___rem_pio2
-		*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(1))*8)) = z - *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) - float64(int32(4))*pio2_1t_cgo22___rem_pio2
+		z = x - float64(int32(4))*pio2_1_cgos____rem_pio2
+		*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) = z - float64(int32(4))*pio2_1t_cgos____rem_pio2
+		*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(1))*8)) = z - *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) - float64(int32(4))*pio2_1t_cgos____rem_pio2
 		return int32(4)
 	} else {
-		z = x + float64(int32(4))*pio2_1_cgo21___rem_pio2
-		*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) = z + float64(int32(4))*pio2_1t_cgo22___rem_pio2
-		*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(1))*8)) = z - *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) + float64(int32(4))*pio2_1t_cgo22___rem_pio2
+		z = x + float64(int32(4))*pio2_1_cgos____rem_pio2
+		*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) = z + float64(int32(4))*pio2_1t_cgos____rem_pio2
+		*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(1))*8)) = z - *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) + float64(int32(4))*pio2_1t_cgos____rem_pio2
 		return -4
 	}
 _cgol_4:
@@ -113,12 +113,12 @@ _cgol_3:
 		goto _cgol_8
 	}
 medium:
-	fn = float64(x)*invpio2_cgo20___rem_pio2 + toint_cgo18___rem_pio2 - toint_cgo18___rem_pio2
+	fn = float64(x)*invpio2_cgos____rem_pio2 + toint_cgos____rem_pio2 - toint_cgos____rem_pio2
 	n = int32(fn)
-	r = x - fn*pio2_1_cgo21___rem_pio2
-	w = fn * pio2_1t_cgo22___rem_pio2
+	r = x - fn*pio2_1_cgos____rem_pio2
+	w = fn * pio2_1t_cgos____rem_pio2
 	if func() int64 {
-		if r-w < -pio4_cgo19___rem_pio2 {
+		if r-w < -pio4_cgos____rem_pio2 {
 			return 1
 		} else {
 			return 0
@@ -126,10 +126,10 @@ medium:
 	}() == int64(0) {
 		n--
 		fn--
-		r = x - fn*pio2_1_cgo21___rem_pio2
-		w = fn * pio2_1t_cgo22___rem_pio2
+		r = x - fn*pio2_1_cgos____rem_pio2
+		w = fn * pio2_1t_cgos____rem_pio2
 	} else if func() int64 {
-		if r-w > pio4_cgo19___rem_pio2 {
+		if r-w > pio4_cgos____rem_pio2 {
 			return 1
 		} else {
 			return 0
@@ -137,8 +137,8 @@ medium:
 	}() == int64(0) {
 		n++
 		fn++
-		r = x - fn*pio2_1_cgo21___rem_pio2
-		w = fn * pio2_1t_cgo22___rem_pio2
+		r = x - fn*pio2_1_cgos____rem_pio2
+		w = fn * pio2_1t_cgos____rem_pio2
 	}
 	*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) = r - w
 	u.f = *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8))
@@ -146,17 +146,17 @@ medium:
 	ex = int32(ix >> int32(20))
 	if ex-ey > int32(16) {
 		t = r
-		w = fn * pio2_2_cgo23___rem_pio2
+		w = fn * pio2_2_cgos____rem_pio2
 		r = t - w
-		w = fn*pio2_2t_cgo24___rem_pio2 - (t - r - w)
+		w = fn*pio2_2t_cgos____rem_pio2 - (t - r - w)
 		*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) = r - w
 		u.f = *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8))
 		ey = int32(*(*uint64)(unsafe.Pointer(&u)) >> int32(52) & uint64(2047))
 		if ex-ey > int32(49) {
 			t = r
-			w = fn * pio2_3_cgo25___rem_pio2
+			w = fn * pio2_3_cgos____rem_pio2
 			r = t - w
-			w = fn*pio2_3t_cgo26___rem_pio2 - (t - r - w)
+			w = fn*pio2_3t_cgos____rem_pio2 - (t - r - w)
 			*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer(y)) + uintptr(int32(0))*8)) = r - w
 		}
 	}

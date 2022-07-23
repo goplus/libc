@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func strtox_cgo18_strtod(s *int8, p **int8, prec int32) float64 {
+func strtox_cgos__strtod(s *int8, p **int8, prec int32) float64 {
 	var f struct__IO_FILE
 	func() *uint8 {
 		(&f).buf = func() (_cgo_ret *uint8) {
@@ -31,11 +31,11 @@ func strtox_cgo18_strtod(s *int8, p **int8, prec int32) float64 {
 	return y
 }
 func Strtof(s *int8, p **int8) float32 {
-	return float32(strtox_cgo18_strtod(s, p, int32(0)))
+	return float32(strtox_cgos__strtod(s, p, int32(0)))
 }
 func Strtod(s *int8, p **int8) float64 {
-	return float64(strtox_cgo18_strtod(s, p, int32(1)))
+	return float64(strtox_cgos__strtod(s, p, int32(1)))
 }
 func Strtold(s *int8, p **int8) float64 {
-	return strtox_cgo18_strtod(s, p, int32(2))
+	return strtox_cgos__strtod(s, p, int32(2))
 }

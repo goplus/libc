@@ -2,9 +2,9 @@ package libc
 
 import unsafe "unsafe"
 
-var atanhi_cgo18_atan [4]float64 = [4]float64{0.46364760900080609, 0.78539816339744828, 0.98279372324732905, 1.5707963267948966}
-var atanlo_cgo19_atan [4]float64 = [4]float64{2.2698777452961687e-17, 3.061616997868383e-17, 1.3903311031230998e-17, 6.123233995736766e-17}
-var aT_cgo20_atan [11]float64 = [11]float64{0.33333333333332932, -0.19999999999876483, 0.14285714272503466, -0.11111110405462356, 0.090908871334365065, -0.0769187620504483, 0.066610731373875312, -0.058335701337905735, 0.049768779946159324, -0.036531572744216916, 0.016285820115365782}
+var atanhi_cgos__atan [4]float64 = [4]float64{0.46364760900080609, 0.78539816339744828, 0.98279372324732905, 1.5707963267948966}
+var atanlo_cgos__atan [4]float64 = [4]float64{2.2698777452961687e-17, 3.061616997868383e-17, 1.3903311031230998e-17, 6.123233995736766e-17}
+var aT_cgos__atan [11]float64 = [11]float64{0.33333333333332932, -0.19999999999876483, 0.14285714272503466, -0.11111110405462356, 0.090908871334365065, -0.0769187620504483, 0.066610731373875312, -0.058335701337905735, 0.049768779946159324, -0.036531572744216916, 0.016285820115365782}
 
 func Atan(x float64) float64 {
 	var w float64
@@ -15,7 +15,7 @@ func Atan(x float64) float64 {
 	var sign uint32
 	var id int32
 	for {
-		ix = uint32(*(*uint64)(unsafe.Pointer(&_cgoz_21_atan{x})) >> int32(32))
+		ix = uint32(*(*uint64)(unsafe.Pointer(&_cgoz_18_atan{x})) >> int32(32))
 		if true {
 			break
 		}
@@ -56,7 +56,7 @@ func Atan(x float64) float64 {
 		}() != 0 {
 			return x
 		}
-		z = *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&atanhi_cgo18_atan)))) + uintptr(int32(3))*8)) + float64(7.52316385e-37)
+		z = *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&atanhi_cgos__atan)))) + uintptr(int32(3))*8)) + float64(7.52316385e-37)
 		return func() float64 {
 			if sign != 0 {
 				return -z
@@ -104,12 +104,12 @@ func Atan(x float64) float64 {
 	}
 	z = x * x
 	w = z * z
-	s1 = z * (*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&aT_cgo20_atan)))) + uintptr(int32(0))*8)) + w*(*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&aT_cgo20_atan)))) + uintptr(int32(2))*8))+w*(*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&aT_cgo20_atan)))) + uintptr(int32(4))*8))+w*(*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&aT_cgo20_atan)))) + uintptr(int32(6))*8))+w*(*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&aT_cgo20_atan)))) + uintptr(int32(8))*8))+w**(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&aT_cgo20_atan)))) + uintptr(int32(10))*8)))))))
-	s2 = w * (*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&aT_cgo20_atan)))) + uintptr(int32(1))*8)) + w*(*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&aT_cgo20_atan)))) + uintptr(int32(3))*8))+w*(*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&aT_cgo20_atan)))) + uintptr(int32(5))*8))+w*(*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&aT_cgo20_atan)))) + uintptr(int32(7))*8))+w**(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&aT_cgo20_atan)))) + uintptr(int32(9))*8))))))
+	s1 = z * (*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&aT_cgos__atan)))) + uintptr(int32(0))*8)) + w*(*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&aT_cgos__atan)))) + uintptr(int32(2))*8))+w*(*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&aT_cgos__atan)))) + uintptr(int32(4))*8))+w*(*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&aT_cgos__atan)))) + uintptr(int32(6))*8))+w*(*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&aT_cgos__atan)))) + uintptr(int32(8))*8))+w**(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&aT_cgos__atan)))) + uintptr(int32(10))*8)))))))
+	s2 = w * (*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&aT_cgos__atan)))) + uintptr(int32(1))*8)) + w*(*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&aT_cgos__atan)))) + uintptr(int32(3))*8))+w*(*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&aT_cgos__atan)))) + uintptr(int32(5))*8))+w*(*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&aT_cgos__atan)))) + uintptr(int32(7))*8))+w**(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&aT_cgos__atan)))) + uintptr(int32(9))*8))))))
 	if id < int32(0) {
 		return x - x*(s1+s2)
 	}
-	z = *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&atanhi_cgo18_atan)))) + uintptr(id)*8)) - (x*(s1+s2) - *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&atanlo_cgo19_atan)))) + uintptr(id)*8)) - x)
+	z = *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&atanhi_cgos__atan)))) + uintptr(id)*8)) - (x*(s1+s2) - *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&atanlo_cgos__atan)))) + uintptr(id)*8)) - x)
 	return func() float64 {
 		if sign != 0 {
 			return -z
@@ -119,6 +119,6 @@ func Atan(x float64) float64 {
 	}()
 }
 
-type _cgoz_21_atan struct {
+type _cgoz_18_atan struct {
 	_f float64
 }

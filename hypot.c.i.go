@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func sq_cgo18_hypot(hi *float64, lo *float64, x float64) {
+func sq_cgos__hypot(hi *float64, lo *float64, x float64) {
 	var xh float64
 	var xl float64
 	var xc float64
@@ -13,14 +13,14 @@ func sq_cgo18_hypot(hi *float64, lo *float64, x float64) {
 	*lo = xh*xh - *hi + float64(int32(2))*xh*xl + xl*xl
 }
 func Hypot(x float64, y float64) float64 {
-	type _cgoa_19_hypot struct {
+	type _cgoa_18_hypot struct {
 		f float64
 	}
-	var ux _cgoa_19_hypot
+	var ux _cgoa_18_hypot
 	ux.f = x
-	var uy _cgoa_19_hypot
+	var uy _cgoa_18_hypot
 	uy.f = y
-	var ut _cgoa_19_hypot
+	var ut _cgoa_18_hypot
 	var ex int32
 	var ey int32
 	var hx float64
@@ -58,7 +58,7 @@ func Hypot(x float64, y float64) float64 {
 		x *= float64(5.2601359015483735e+210)
 		y *= float64(5.2601359015483735e+210)
 	}
-	sq_cgo18_hypot(&hx, &lx, x)
-	sq_cgo18_hypot(&hy, &ly, y)
+	sq_cgos__hypot(&hx, &lx, x)
+	sq_cgos__hypot(&hy, &ly, y)
 	return z * Sqrt(ly+lx+hy+hx)
 }

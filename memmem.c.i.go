@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func twobyte_memmem_cgo15_memmem(h *uint8, k uint64, n *uint8) *int8 {
+func twobyte_memmem_cgos__memmem(h *uint8, k uint64, n *uint8) *int8 {
 	var nw uint16 = uint16(int32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(n)) + uintptr(int32(0)))))<<int32(8) | int32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(n)) + uintptr(int32(1))))))
 	var hw uint16 = uint16(int32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(h)) + uintptr(int32(0)))))<<int32(8) | int32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(h)) + uintptr(int32(1))))))
 	for func() uint64 {
@@ -37,7 +37,7 @@ func twobyte_memmem_cgo15_memmem(h *uint8, k uint64, n *uint8) *int8 {
 		}
 	}()
 }
-func threebyte_memmem_cgo16_memmem(h *uint8, k uint64, n *uint8) *int8 {
+func threebyte_memmem_cgos__memmem(h *uint8, k uint64, n *uint8) *int8 {
 	var nw uint32 = uint32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(n)) + uintptr(int32(0)))))<<int32(24) | uint32(int32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(n)) + uintptr(int32(1)))))<<int32(16)) | uint32(int32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(n)) + uintptr(int32(2)))))<<int32(8))
 	var hw uint32 = uint32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(h)) + uintptr(int32(0)))))<<int32(24) | uint32(int32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(h)) + uintptr(int32(1)))))<<int32(16)) | uint32(int32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(h)) + uintptr(int32(2)))))<<int32(8))
 	for func() uint64 {
@@ -72,7 +72,7 @@ func threebyte_memmem_cgo16_memmem(h *uint8, k uint64, n *uint8) *int8 {
 		}
 	}()
 }
-func fourbyte_memmem_cgo17_memmem(h *uint8, k uint64, n *uint8) *int8 {
+func fourbyte_memmem_cgos__memmem(h *uint8, k uint64, n *uint8) *int8 {
 	var nw uint32 = uint32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(n)) + uintptr(int32(0)))))<<int32(24) | uint32(int32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(n)) + uintptr(int32(1)))))<<int32(16)) | uint32(int32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(n)) + uintptr(int32(2)))))<<int32(8)) | uint32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(n)) + uintptr(int32(3)))))
 	var hw uint32 = uint32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(h)) + uintptr(int32(0)))))<<int32(24) | uint32(int32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(h)) + uintptr(int32(1)))))<<int32(16)) | uint32(int32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(h)) + uintptr(int32(2)))))<<int32(8)) | uint32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(h)) + uintptr(int32(3)))))
 	for func() uint64 {
@@ -107,7 +107,7 @@ func fourbyte_memmem_cgo17_memmem(h *uint8, k uint64, n *uint8) *int8 {
 		}
 	}()
 }
-func twoway_memmem_cgo18_memmem(h *uint8, z *uint8, n *uint8, l uint64) *int8 {
+func twoway_memmem_cgos__memmem(h *uint8, z *uint8, n *uint8, l uint64) *int8 {
 	var i uint64
 	var ip uint64
 	var jp uint64
@@ -275,13 +275,13 @@ func Memmem(h0 unsafe.Pointer, k uint64, n0 unsafe.Pointer, l uint64) unsafe.Poi
 		return unsafe.Pointer(nil)
 	}
 	if l == uint64(2) {
-		return unsafe.Pointer(twobyte_memmem_cgo15_memmem(h, k, n))
+		return unsafe.Pointer(twobyte_memmem_cgos__memmem(h, k, n))
 	}
 	if l == uint64(3) {
-		return unsafe.Pointer(threebyte_memmem_cgo16_memmem(h, k, n))
+		return unsafe.Pointer(threebyte_memmem_cgos__memmem(h, k, n))
 	}
 	if l == uint64(4) {
-		return unsafe.Pointer(fourbyte_memmem_cgo17_memmem(h, k, n))
+		return unsafe.Pointer(fourbyte_memmem_cgos__memmem(h, k, n))
 	}
-	return unsafe.Pointer(twoway_memmem_cgo18_memmem(h, (*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(h))+uintptr(k))), n, l))
+	return unsafe.Pointer(twoway_memmem_cgos__memmem(h, (*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(h))+uintptr(k))), n, l))
 }

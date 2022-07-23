@@ -2,13 +2,13 @@ package libc
 
 import unsafe "unsafe"
 
-var toint_cgo18_ceil float64 = float64(int32(1)) / 2.2204460492503131e-16
+var toint_cgos__ceil float64 = float64(int32(1)) / 2.2204460492503131e-16
 
 func Ceil(x float64) float64 {
-	type _cgoa_19_ceil struct {
+	type _cgoa_18_ceil struct {
 		f float64
 	}
-	var u _cgoa_19_ceil
+	var u _cgoa_18_ceil
 	u.f = x
 	var e int32 = int32(*(*uint64)(unsafe.Pointer(&u)) >> int32(52) & uint64(2047))
 	var y float64
@@ -16,9 +16,9 @@ func Ceil(x float64) float64 {
 		return x
 	}
 	if *(*uint64)(unsafe.Pointer(&u))>>int32(63) != 0 {
-		y = x - toint_cgo18_ceil + toint_cgo18_ceil - x
+		y = x - toint_cgos__ceil + toint_cgos__ceil - x
 	} else {
-		y = x + toint_cgo18_ceil - toint_cgo18_ceil - x
+		y = x + toint_cgos__ceil - toint_cgos__ceil - x
 	}
 	if e <= 1022 {
 		for {

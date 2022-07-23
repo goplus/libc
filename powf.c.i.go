@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func log2_inline_cgo19_powf(ix uint32) float64 {
+func log2_inline_cgos__powf(ix uint32) float64 {
 	var z float64
 	var r float64
 	var r2 float64
@@ -25,7 +25,7 @@ func log2_inline_cgo19_powf(ix uint32) float64 {
 	k = int32(top) >> 23
 	invc = (*(*_cgoa_18_powf)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_18_powf)(unsafe.Pointer(&__powf_log2_data.tab)))) + uintptr(i)*16))).invc
 	logc = (*(*_cgoa_18_powf)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_18_powf)(unsafe.Pointer(&__powf_log2_data.tab)))) + uintptr(i)*16))).logc
-	z = float64(*(*float32)(unsafe.Pointer(&_cgoz_20_powf{iz})))
+	z = float64(*(*float32)(unsafe.Pointer(&_cgoz_19_powf{iz})))
 	r = z*invc - float64(int32(1))
 	y0 = logc + float64(k)
 	r2 = r * r
@@ -38,11 +38,11 @@ func log2_inline_cgo19_powf(ix uint32) float64 {
 	return y
 }
 
-type _cgoz_20_powf struct {
+type _cgoz_19_powf struct {
 	_i uint32
 }
 
-func exp2_inline_cgo21_powf(xd float64, sign_bias uint32) float32 {
+func exp2_inline_cgos__powf(xd float64, sign_bias uint32) float32 {
 	var ki uint64
 	var ski uint64
 	var t uint64
@@ -53,13 +53,13 @@ func exp2_inline_cgo21_powf(xd float64, sign_bias uint32) float32 {
 	var y float64
 	var s float64
 	kd = eval_as_double(xd + __exp2f_data.shift_scaled)
-	ki = *(*uint64)(unsafe.Pointer(&_cgoz_22_powf{kd}))
+	ki = *(*uint64)(unsafe.Pointer(&_cgoz_20_powf{kd}))
 	kd -= __exp2f_data.shift_scaled
 	r = xd - kd
 	t = *(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint64)(unsafe.Pointer(&__exp2f_data.tab)))) + uintptr(ki%uint64(32))*8))
 	ski = ki + uint64(sign_bias)
 	t += ski << 47
-	s = *(*float64)(unsafe.Pointer(&_cgoz_23_powf{t}))
+	s = *(*float64)(unsafe.Pointer(&_cgoz_21_powf{t}))
 	z = *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&__exp2f_data.poly)))) + uintptr(int32(0))*8))*r + *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&__exp2f_data.poly)))) + uintptr(int32(1))*8))
 	r2 = r * r
 	y = *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&__exp2f_data.poly)))) + uintptr(int32(2))*8))*r + float64(int32(1))
@@ -68,14 +68,14 @@ func exp2_inline_cgo21_powf(xd float64, sign_bias uint32) float32 {
 	return eval_as_float(float32(y))
 }
 
-type _cgoz_22_powf struct {
+type _cgoz_20_powf struct {
 	_f float64
 }
-type _cgoz_23_powf struct {
+type _cgoz_21_powf struct {
 	_i uint64
 }
 
-func checkint_cgo24_powf(iy uint32) int32 {
+func checkint_cgos__powf(iy uint32) int32 {
 	var e int32 = int32(iy >> int32(23) & uint32(255))
 	if e < int32(127) {
 		return int32(0)
@@ -91,7 +91,7 @@ func checkint_cgo24_powf(iy uint32) int32 {
 	}
 	return int32(2)
 }
-func zeroinfnan_cgo25_powf(ix uint32) int32 {
+func zeroinfnan_cgos__powf(ix uint32) int32 {
 	return func() int32 {
 		if uint32(2)*ix-uint32(1) >= 4278190079 {
 			return 1
@@ -104,16 +104,16 @@ func Powf(x float32, y float32) float32 {
 	var sign_bias uint32 = uint32(0)
 	var ix uint32
 	var iy uint32
-	ix = *(*uint32)(unsafe.Pointer(&_cgoz_26_powf{x}))
-	iy = *(*uint32)(unsafe.Pointer(&_cgoz_27_powf{y}))
+	ix = *(*uint32)(unsafe.Pointer(&_cgoz_22_powf{x}))
+	iy = *(*uint32)(unsafe.Pointer(&_cgoz_23_powf{y}))
 	if func() int64 {
-		if ix-uint32(8388608) >= uint32(2130706432) || zeroinfnan_cgo25_powf(iy) != 0 {
+		if ix-uint32(8388608) >= uint32(2130706432) || zeroinfnan_cgos__powf(iy) != 0 {
 			return 1
 		} else {
 			return 0
 		}
 	}() == int64(0) {
-		if int64(zeroinfnan_cgo25_powf(iy)) == int64(0) {
+		if int64(zeroinfnan_cgos__powf(iy)) == int64(0) {
 			if uint32(2)*iy == uint32(0) {
 				return func() float32 {
 					if int32(0) != 0 {
@@ -155,9 +155,9 @@ func Powf(x float32, y float32) float32 {
 			}
 			return y * y
 		}
-		if int64(zeroinfnan_cgo25_powf(ix)) == int64(0) {
+		if int64(zeroinfnan_cgos__powf(ix)) == int64(0) {
 			var x2 float32 = x * x
-			if ix&uint32(2147483648) != 0 && checkint_cgo24_powf(iy) == int32(1) {
+			if ix&uint32(2147483648) != 0 && checkint_cgos__powf(iy) == int32(1) {
 				x2 = -x2
 			}
 			return func() float32 {
@@ -169,7 +169,7 @@ func Powf(x float32, y float32) float32 {
 			}()
 		}
 		if ix&uint32(2147483648) != 0 {
-			var yint int32 = checkint_cgo24_powf(iy)
+			var yint int32 = checkint_cgos__powf(iy)
 			if yint == int32(0) {
 				return __math_invalidf(x)
 			}
@@ -179,15 +179,15 @@ func Powf(x float32, y float32) float32 {
 			ix &= uint32(2147483647)
 		}
 		if ix < uint32(8388608) {
-			ix = *(*uint32)(unsafe.Pointer(&_cgoz_28_powf{x * 8388608}))
+			ix = *(*uint32)(unsafe.Pointer(&_cgoz_24_powf{x * 8388608}))
 			ix &= uint32(2147483647)
 			ix -= uint32(192937984)
 		}
 	}
-	var logx float64 = log2_inline_cgo19_powf(ix)
+	var logx float64 = log2_inline_cgos__powf(ix)
 	var ylogx float64 = float64(y) * logx
 	if func() int64 {
-		if *(*uint64)(unsafe.Pointer(&_cgoz_29_powf{ylogx}))>>int32(47)&uint64(65535) >= *(*uint64)(unsafe.Pointer(&_cgoz_30_powf{126 * float64(1)}))>>int32(47) {
+		if *(*uint64)(unsafe.Pointer(&_cgoz_25_powf{ylogx}))>>int32(47)&uint64(65535) >= *(*uint64)(unsafe.Pointer(&_cgoz_26_powf{126 * float64(1)}))>>int32(47) {
 			return 1
 		} else {
 			return 0
@@ -200,21 +200,21 @@ func Powf(x float32, y float32) float32 {
 			return __math_uflowf(sign_bias)
 		}
 	}
-	return exp2_inline_cgo21_powf(ylogx, sign_bias)
+	return exp2_inline_cgos__powf(ylogx, sign_bias)
 }
 
-type _cgoz_26_powf struct {
+type _cgoz_22_powf struct {
 	_f float32
 }
-type _cgoz_27_powf struct {
+type _cgoz_23_powf struct {
 	_f float32
 }
-type _cgoz_28_powf struct {
+type _cgoz_24_powf struct {
 	_f float32
 }
-type _cgoz_29_powf struct {
+type _cgoz_25_powf struct {
 	_f float64
 }
-type _cgoz_30_powf struct {
+type _cgoz_26_powf struct {
 	_f float64
 }

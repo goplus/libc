@@ -2,12 +2,12 @@ package libc
 
 import unsafe "unsafe"
 
-var o_threshold_cgo18_expm1f float32 = float32(88.721679687999995)
-var ln2_hi_cgo19_expm1f float32 = float32(0.69313812255999996)
-var ln2_lo_cgo20_expm1f float32 = float32(9.0580006144999996e-6)
-var invln2_cgo21_expm1f float32 = float32(1.4426950216000001)
-var Q1_cgo22_expm1f float32 = float32(-0.033333212137000003)
-var Q2_cgo23_expm1f float32 = float32(0.0015807170421000001)
+var o_threshold_cgos__expm1f float32 = float32(88.721679687999995)
+var ln2_hi_cgos__expm1f float32 = float32(0.69313812255999996)
+var ln2_lo_cgos__expm1f float32 = float32(9.0580006144999996e-6)
+var invln2_cgos__expm1f float32 = float32(1.4426950216000001)
+var Q1_cgos__expm1f float32 = float32(-0.033333212137000003)
+var Q2_cgos__expm1f float32 = float32(0.0015807170421000001)
 
 func Expm1f(x float32) float32 {
 	var y float32
@@ -20,10 +20,10 @@ func Expm1f(x float32) float32 {
 	var hfx float32
 	var r1 float32
 	var twopk float32
-	type _cgoa_24_expm1f struct {
+	type _cgoa_18_expm1f struct {
 		f float32
 	}
-	var u _cgoa_24_expm1f
+	var u _cgoa_18_expm1f
 	u.f = x
 	var hx uint32 = *(*uint32)(unsafe.Pointer(&u)) & uint32(2147483647)
 	var k int32
@@ -35,7 +35,7 @@ func Expm1f(x float32) float32 {
 		if sign != 0 {
 			return float32(-1)
 		}
-		if x > o_threshold_cgo18_expm1f {
+		if x > o_threshold_cgos__expm1f {
 			x *= float32(1.70141183e+38)
 			return x
 		}
@@ -43,16 +43,16 @@ func Expm1f(x float32) float32 {
 	if hx > uint32(1051816472) {
 		if hx < uint32(1065686418) {
 			if !(sign != 0) {
-				hi = x - ln2_hi_cgo19_expm1f
-				lo = ln2_lo_cgo20_expm1f
+				hi = x - ln2_hi_cgos__expm1f
+				lo = ln2_lo_cgos__expm1f
 				k = int32(1)
 			} else {
-				hi = x + ln2_hi_cgo19_expm1f
-				lo = -ln2_lo_cgo20_expm1f
+				hi = x + ln2_hi_cgos__expm1f
+				lo = -ln2_lo_cgos__expm1f
 				k = -1
 			}
 		} else {
-			k = int32(invln2_cgo21_expm1f*x + func() float32 {
+			k = int32(invln2_cgos__expm1f*x + func() float32 {
 				if sign != 0 {
 					return -0.5
 				} else {
@@ -60,8 +60,8 @@ func Expm1f(x float32) float32 {
 				}
 			}())
 			t = float32(k)
-			hi = x - t*ln2_hi_cgo19_expm1f
-			lo = t * ln2_lo_cgo20_expm1f
+			hi = x - t*ln2_hi_cgos__expm1f
+			lo = t * ln2_lo_cgos__expm1f
 		}
 		x = hi - lo
 		c = hi - x - lo
@@ -86,7 +86,7 @@ func Expm1f(x float32) float32 {
 	}
 	hfx = 0.5 * x
 	hxs = x * hfx
-	r1 = 1 + hxs*(Q1_cgo22_expm1f+hxs*Q2_cgo23_expm1f)
+	r1 = 1 + hxs*(Q1_cgos__expm1f+hxs*Q2_cgos__expm1f)
 	t = 3 - r1*hfx
 	e = hxs * ((r1 - t) / (6 - x*t))
 	if k == int32(0) {

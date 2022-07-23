@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func twoway_wcsstr_cgo15_wcsstr(h *uint32, n *uint32) *uint32 {
+func twoway_wcsstr_cgos__wcsstr(h *uint32, n *uint32) *uint32 {
 	var z *uint32
 	var l uint64
 	var ip uint64
@@ -155,5 +155,5 @@ func wcsstr(h *uint32, n *uint32) *uint32 {
 	if !(*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer(h)) + uintptr(int32(1))*4)) != 0) {
 		return (*uint32)(nil)
 	}
-	return twoway_wcsstr_cgo15_wcsstr(h, n)
+	return twoway_wcsstr_cgos__wcsstr(h, n)
 }

@@ -2,19 +2,19 @@ package libc
 
 import unsafe "unsafe"
 
-type num_cgo22_fma struct {
+type num_cgos__fma struct {
 	m    uint64
 	e    int32
 	sign int32
 }
 
-func normalize_cgo23_fma(x float64) num_cgo22_fma {
-	var ix uint64 = *(*uint64)(unsafe.Pointer(&_cgoz_24_fma{x}))
+func normalize_cgos__fma(x float64) num_cgos__fma {
+	var ix uint64 = *(*uint64)(unsafe.Pointer(&_cgoz_20_fma{x}))
 	var e int32 = int32(ix >> int32(52))
 	var sign int32 = e & int32(2048)
 	e &= int32(2047)
 	if !(e != 0) {
-		ix = *(*uint64)(unsafe.Pointer(&_cgoz_25_fma{x * 9.2233720368547758e+18}))
+		ix = *(*uint64)(unsafe.Pointer(&_cgoz_21_fma{x * 9.2233720368547758e+18}))
 		e = int32(ix >> int32(52) & uint64(2047))
 		e = func() int32 {
 			if e != 0 {
@@ -28,17 +28,17 @@ func normalize_cgo23_fma(x float64) num_cgo22_fma {
 	ix |= 4503599627370496
 	ix <<= int32(1)
 	e -= 1076
-	return num_cgo22_fma{ix, e, sign}
+	return num_cgos__fma{ix, e, sign}
 }
 
-type _cgoz_24_fma struct {
+type _cgoz_20_fma struct {
 	f float64
 }
-type _cgoz_25_fma struct {
+type _cgoz_21_fma struct {
 	f float64
 }
 
-func mul_cgo26_fma(hi *uint64, lo *uint64, x uint64, y uint64) {
+func mul_cgos__fma(hi *uint64, lo *uint64, x uint64, y uint64) {
 	var t1 uint64
 	var t2 uint64
 	var t3 uint64
@@ -59,12 +59,12 @@ func mul_cgo26_fma(hi *uint64, lo *uint64, x uint64, y uint64) {
 	}()
 }
 func Fma(x float64, y float64, z float64) float64 {
-	var nx num_cgo22_fma
-	var ny num_cgo22_fma
-	var nz num_cgo22_fma
-	nx = normalize_cgo23_fma(x)
-	ny = normalize_cgo23_fma(y)
-	nz = normalize_cgo23_fma(z)
+	var nx num_cgos__fma
+	var ny num_cgos__fma
+	var nz num_cgos__fma
+	nx = normalize_cgos__fma(x)
+	ny = normalize_cgos__fma(y)
+	nz = normalize_cgos__fma(z)
 	if nx.e >= 971 || ny.e >= 971 {
 		return x*y + z
 	}
@@ -78,7 +78,7 @@ func Fma(x float64, y float64, z float64) float64 {
 	var rlo uint64
 	var zhi uint64
 	var zlo uint64
-	mul_cgo26_fma(&rhi, &rlo, nx.m, ny.m)
+	mul_cgos__fma(&rhi, &rlo, nx.m, ny.m)
 	var e int32 = nx.e + ny.e
 	var d int32 = nz.e - e
 	if d > int32(0) {
