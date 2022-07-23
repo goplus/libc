@@ -2,13 +2,13 @@ package libc
 
 import unsafe "unsafe"
 
-var toint_cgo18_floor float64 = float64(int32(1)) / 2.2204460492503131e-16
+var _cgos_toint__floor float64 = float64(int32(1)) / 2.2204460492503131e-16
 
 func Floor(x float64) float64 {
-	type _cgoa_19_floor struct {
+	type _cgoa_18_floor struct {
 		f float64
 	}
-	var u _cgoa_19_floor
+	var u _cgoa_18_floor
 	u.f = x
 	var e int32 = int32(*(*uint64)(unsafe.Pointer(&u)) >> int32(52) & uint64(2047))
 	var y float64
@@ -16,9 +16,9 @@ func Floor(x float64) float64 {
 		return x
 	}
 	if *(*uint64)(unsafe.Pointer(&u))>>int32(63) != 0 {
-		y = x - toint_cgo18_floor + toint_cgo18_floor - x
+		y = x - _cgos_toint__floor + _cgos_toint__floor - x
 	} else {
-		y = x + toint_cgo18_floor - toint_cgo18_floor - x
+		y = x + _cgos_toint__floor - _cgos_toint__floor - x
 	}
 	if e <= 1022 {
 		for {

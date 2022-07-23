@@ -2,11 +2,11 @@ package libc
 
 import unsafe "unsafe"
 
-func top16_cgo20_log2(x float64) uint32 {
-	return uint32(*(*uint64)(unsafe.Pointer(&_cgoz_21_log2{x})) >> int32(48))
+func _cgos_top16__log2(x float64) uint32 {
+	return uint32(*(*uint64)(unsafe.Pointer(&_cgoz_20_log2{x})) >> int32(48))
 }
 
-type _cgoz_21_log2 struct {
+type _cgoz_20_log2 struct {
 	_f float64
 }
 
@@ -31,17 +31,17 @@ func Log2(x float64) float64 {
 	var top uint32
 	var k int32
 	var i int32
-	ix = *(*uint64)(unsafe.Pointer(&_cgoz_22_log2{x}))
-	top = top16_cgo20_log2(x)
+	ix = *(*uint64)(unsafe.Pointer(&_cgoz_21_log2{x}))
+	top = _cgos_top16__log2(x)
 	if func() int64 {
-		if ix-*(*uint64)(unsafe.Pointer(&_cgoz_23_log2{1 - 0.042397022247314453})) < *(*uint64)(unsafe.Pointer(&_cgoz_24_log2{1 + 0.044274330139160156}))-*(*uint64)(unsafe.Pointer(&_cgoz_25_log2{1 - 0.042397022247314453})) {
+		if ix-*(*uint64)(unsafe.Pointer(&_cgoz_22_log2{1 - 0.042397022247314453})) < *(*uint64)(unsafe.Pointer(&_cgoz_23_log2{1 + 0.044274330139160156}))-*(*uint64)(unsafe.Pointer(&_cgoz_24_log2{1 - 0.042397022247314453})) {
 			return 1
 		} else {
 			return 0
 		}
 	}() == int64(0) {
 		if int32(1) != 0 && func() int64 {
-			if ix == *(*uint64)(unsafe.Pointer(&_cgoz_26_log2{1})) {
+			if ix == *(*uint64)(unsafe.Pointer(&_cgoz_25_log2{1})) {
 				return 1
 			} else {
 				return 0
@@ -52,7 +52,7 @@ func Log2(x float64) float64 {
 		r = x - 1
 		var rhi float64
 		var rlo float64
-		rhi = *(*float64)(unsafe.Pointer(&_cgoz_27_log2{*(*uint64)(unsafe.Pointer(&_cgoz_28_log2{r})) & 18446744069414584320}))
+		rhi = *(*float64)(unsafe.Pointer(&_cgoz_26_log2{*(*uint64)(unsafe.Pointer(&_cgoz_27_log2{r})) & 18446744069414584320}))
 		rlo = r - rhi
 		hi = rhi * __log2_data.invln2hi
 		lo = rlo*__log2_data.invln2hi + r*__log2_data.invln2lo
@@ -75,13 +75,13 @@ func Log2(x float64) float64 {
 		if ix*uint64(2) == uint64(0) {
 			return __math_divzero(uint32(1))
 		}
-		if ix == *(*uint64)(unsafe.Pointer(&_cgoz_29_log2{float64(X__builtin_inff())})) {
+		if ix == *(*uint64)(unsafe.Pointer(&_cgoz_28_log2{float64(X__builtin_inff())})) {
 			return x
 		}
 		if top&uint32(32768) != 0 || top&uint32(32752) == uint32(32752) {
 			return __math_invalid(x)
 		}
-		ix = *(*uint64)(unsafe.Pointer(&_cgoz_30_log2{x * 4503599627370496}))
+		ix = *(*uint64)(unsafe.Pointer(&_cgoz_29_log2{x * 4503599627370496}))
 		ix -= 234187180623265792
 	}
 	tmp = ix - uint64(4604367669032910848)
@@ -90,12 +90,12 @@ func Log2(x float64) float64 {
 	iz = ix - tmp&18442240474082181120
 	invc = (*(*_cgoa_18_log2)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_18_log2)(unsafe.Pointer(&__log2_data.tab)))) + uintptr(i)*16))).invc
 	logc = (*(*_cgoa_18_log2)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_18_log2)(unsafe.Pointer(&__log2_data.tab)))) + uintptr(i)*16))).logc
-	z = *(*float64)(unsafe.Pointer(&_cgoz_31_log2{iz}))
+	z = *(*float64)(unsafe.Pointer(&_cgoz_30_log2{iz}))
 	kd = float64(k)
 	var rhi float64
 	var rlo float64
 	r = (z - (*(*_cgoa_19_log2)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_19_log2)(unsafe.Pointer(&__log2_data.tab2)))) + uintptr(i)*16))).chi - (*(*_cgoa_19_log2)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_19_log2)(unsafe.Pointer(&__log2_data.tab2)))) + uintptr(i)*16))).clo) * invc
-	rhi = *(*float64)(unsafe.Pointer(&_cgoz_32_log2{*(*uint64)(unsafe.Pointer(&_cgoz_33_log2{r})) & 18446744069414584320}))
+	rhi = *(*float64)(unsafe.Pointer(&_cgoz_31_log2{*(*uint64)(unsafe.Pointer(&_cgoz_32_log2{r})) & 18446744069414584320}))
 	rlo = r - rhi
 	t1 = rhi * __log2_data.invln2hi
 	t2 = rlo*__log2_data.invln2hi + r*__log2_data.invln2lo
@@ -109,6 +109,9 @@ func Log2(x float64) float64 {
 	return eval_as_double(y)
 }
 
+type _cgoz_21_log2 struct {
+	_f float64
+}
 type _cgoz_22_log2 struct {
 	_f float64
 }
@@ -122,10 +125,10 @@ type _cgoz_25_log2 struct {
 	_f float64
 }
 type _cgoz_26_log2 struct {
-	_f float64
+	_i uint64
 }
 type _cgoz_27_log2 struct {
-	_i uint64
+	_f float64
 }
 type _cgoz_28_log2 struct {
 	_f float64
@@ -134,14 +137,11 @@ type _cgoz_29_log2 struct {
 	_f float64
 }
 type _cgoz_30_log2 struct {
-	_f float64
+	_i uint64
 }
 type _cgoz_31_log2 struct {
 	_i uint64
 }
 type _cgoz_32_log2 struct {
-	_i uint64
-}
-type _cgoz_33_log2 struct {
 	_f float64
 }

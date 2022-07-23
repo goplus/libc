@@ -5,19 +5,10 @@ import unsafe "unsafe"
 func Ftrylockfile(*struct__IO_FILE) int32 {
 	panic("notimpl")
 }
-func Ilogb(float64) int32 {
-	panic("notimpl")
-}
-func Ilogbf(float32) int32 {
-	panic("notimpl")
-}
 func Mbtowc(*uint32, *int8, uint64) int32 {
 	panic("notimpl")
 }
 func Sqrtf(float32) float32 {
-	panic("notimpl")
-}
-func Tgamma(float64) float64 {
 	panic("notimpl")
 }
 func Vfscanf(*struct__IO_FILE, *int8, []interface {

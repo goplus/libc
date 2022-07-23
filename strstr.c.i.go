@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func twobyte_strstr_cgo15_strstr(h *uint8, n *uint8) *int8 {
+func _cgos_twobyte_strstr__strstr(h *uint8, n *uint8) *int8 {
 	var nw uint16 = uint16(int32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(n)) + uintptr(int32(0)))))<<int32(8) | int32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(n)) + uintptr(int32(1))))))
 	var hw uint16 = uint16(int32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(h)) + uintptr(int32(0)))))<<int32(8) | int32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(h)) + uintptr(int32(1))))))
 	for *(*uintptr)(unsafe.Pointer(&h))++; int32(*h) != 0 && int32(hw) != int32(nw); hw = uint16(int32(hw)<<int32(8) | int32(*func() (_cgo_ret *uint8) {
@@ -19,7 +19,7 @@ func twobyte_strstr_cgo15_strstr(h *uint8, n *uint8) *int8 {
 		}
 	}()
 }
-func threebyte_strstr_cgo16_strstr(h *uint8, n *uint8) *int8 {
+func _cgos_threebyte_strstr__strstr(h *uint8, n *uint8) *int8 {
 	var nw uint32 = uint32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(n)) + uintptr(int32(0)))))<<int32(24) | uint32(int32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(n)) + uintptr(int32(1)))))<<int32(16)) | uint32(int32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(n)) + uintptr(int32(2)))))<<int32(8))
 	var hw uint32 = uint32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(h)) + uintptr(int32(0)))))<<int32(24) | uint32(int32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(h)) + uintptr(int32(1)))))<<int32(16)) | uint32(int32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(h)) + uintptr(int32(2)))))<<int32(8))
 	for *(*uintptr)(unsafe.Pointer(&h)) += uintptr(int32(2)); int32(*h) != 0 && hw != nw; hw = (hw | uint32(*func() (_cgo_ret *uint8) {
@@ -36,7 +36,7 @@ func threebyte_strstr_cgo16_strstr(h *uint8, n *uint8) *int8 {
 		}
 	}()
 }
-func fourbyte_strstr_cgo17_strstr(h *uint8, n *uint8) *int8 {
+func _cgos_fourbyte_strstr__strstr(h *uint8, n *uint8) *int8 {
 	var nw uint32 = uint32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(n)) + uintptr(int32(0)))))<<int32(24) | uint32(int32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(n)) + uintptr(int32(1)))))<<int32(16)) | uint32(int32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(n)) + uintptr(int32(2)))))<<int32(8)) | uint32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(n)) + uintptr(int32(3)))))
 	var hw uint32 = uint32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(h)) + uintptr(int32(0)))))<<int32(24) | uint32(int32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(h)) + uintptr(int32(1)))))<<int32(16)) | uint32(int32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(h)) + uintptr(int32(2)))))<<int32(8)) | uint32(*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(h)) + uintptr(int32(3)))))
 	for *(*uintptr)(unsafe.Pointer(&h)) += uintptr(int32(3)); int32(*h) != 0 && hw != nw; hw = hw<<int32(8) | uint32(*func() (_cgo_ret *uint8) {
@@ -53,7 +53,7 @@ func fourbyte_strstr_cgo17_strstr(h *uint8, n *uint8) *int8 {
 		}
 	}()
 }
-func twoway_strstr_cgo18_strstr(h *uint8, n *uint8) *int8 {
+func _cgos_twoway_strstr__strstr(h *uint8, n *uint8) *int8 {
 	var z *uint8
 	var l uint64
 	var ip uint64
@@ -229,19 +229,19 @@ func Strstr(h *int8, n *int8) *int8 {
 		return (*int8)(nil)
 	}
 	if !(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(n)) + uintptr(int32(2)))) != 0) {
-		return twobyte_strstr_cgo15_strstr((*uint8)(unsafe.Pointer(h)), (*uint8)(unsafe.Pointer(n)))
+		return _cgos_twobyte_strstr__strstr((*uint8)(unsafe.Pointer(h)), (*uint8)(unsafe.Pointer(n)))
 	}
 	if !(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(h)) + uintptr(int32(2)))) != 0) {
 		return (*int8)(nil)
 	}
 	if !(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(n)) + uintptr(int32(3)))) != 0) {
-		return threebyte_strstr_cgo16_strstr((*uint8)(unsafe.Pointer(h)), (*uint8)(unsafe.Pointer(n)))
+		return _cgos_threebyte_strstr__strstr((*uint8)(unsafe.Pointer(h)), (*uint8)(unsafe.Pointer(n)))
 	}
 	if !(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(h)) + uintptr(int32(3)))) != 0) {
 		return (*int8)(nil)
 	}
 	if !(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(n)) + uintptr(int32(4)))) != 0) {
-		return fourbyte_strstr_cgo17_strstr((*uint8)(unsafe.Pointer(h)), (*uint8)(unsafe.Pointer(n)))
+		return _cgos_fourbyte_strstr__strstr((*uint8)(unsafe.Pointer(h)), (*uint8)(unsafe.Pointer(n)))
 	}
-	return twoway_strstr_cgo18_strstr((*uint8)(unsafe.Pointer(h)), (*uint8)(unsafe.Pointer(n)))
+	return _cgos_twoway_strstr__strstr((*uint8)(unsafe.Pointer(h)), (*uint8)(unsafe.Pointer(n)))
 }

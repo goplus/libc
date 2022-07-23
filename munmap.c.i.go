@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func dummy_cgo15_munmap() {
+func _cgos_dummy__munmap() {
 }
 func __munmap(start unsafe.Pointer, len uint64) int32 {
 	__vm_wait()

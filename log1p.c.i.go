@@ -2,21 +2,21 @@ package libc
 
 import unsafe "unsafe"
 
-var ln2_hi_cgo18_log1p float64 = 0.69314718036912382
-var ln2_lo_cgo19_log1p float64 = 1.9082149292705877e-10
-var Lg1_cgo20_log1p float64 = 0.66666666666667351
-var Lg2_cgo21_log1p float64 = 0.39999999999409419
-var Lg3_cgo22_log1p float64 = 0.28571428743662391
-var Lg4_cgo23_log1p float64 = 0.22222198432149784
-var Lg5_cgo24_log1p float64 = 0.1818357216161805
-var Lg6_cgo25_log1p float64 = 0.15313837699209373
-var Lg7_cgo26_log1p float64 = 0.14798198605116586
+var _cgos_ln2_hi__log1p float64 = 0.69314718036912382
+var _cgos_ln2_lo__log1p float64 = 1.9082149292705877e-10
+var _cgos_Lg1__log1p float64 = 0.66666666666667351
+var _cgos_Lg2__log1p float64 = 0.39999999999409419
+var _cgos_Lg3__log1p float64 = 0.28571428743662391
+var _cgos_Lg4__log1p float64 = 0.22222198432149784
+var _cgos_Lg5__log1p float64 = 0.1818357216161805
+var _cgos_Lg6__log1p float64 = 0.15313837699209373
+var _cgos_Lg7__log1p float64 = 0.14798198605116586
 
 func Log1p(x float64) float64 {
-	type _cgoa_27_log1p struct {
+	type _cgoa_18_log1p struct {
 		f float64
 	}
-	var u _cgoa_27_log1p
+	var u _cgoa_18_log1p
 	u.f = x
 	var hfsq float64
 	var f float64
@@ -90,9 +90,9 @@ func Log1p(x float64) float64 {
 	s = f / (2 + f)
 	z = s * s
 	w = z * z
-	t1 = w * (Lg2_cgo21_log1p + w*(Lg4_cgo23_log1p+w*Lg6_cgo25_log1p))
-	t2 = z * (Lg1_cgo20_log1p + w*(Lg3_cgo22_log1p+w*(Lg5_cgo24_log1p+w*Lg7_cgo26_log1p)))
+	t1 = w * (_cgos_Lg2__log1p + w*(_cgos_Lg4__log1p+w*_cgos_Lg6__log1p))
+	t2 = z * (_cgos_Lg1__log1p + w*(_cgos_Lg3__log1p+w*(_cgos_Lg5__log1p+w*_cgos_Lg7__log1p)))
 	R = t2 + t1
 	dk = float64(k)
-	return s*(hfsq+R) + (dk*ln2_lo_cgo19_log1p + c) - hfsq + f + dk*ln2_hi_cgo18_log1p
+	return s*(hfsq+R) + (dk*_cgos_ln2_lo__log1p + c) - hfsq + f + dk*_cgos_ln2_hi__log1p
 }

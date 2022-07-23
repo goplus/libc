@@ -2,19 +2,19 @@ package libc
 
 import unsafe "unsafe"
 
-var B1_cgo18_cbrt uint32 = uint32(715094163)
-var B2_cgo19_cbrt uint32 = uint32(696219795)
-var P0_cgo20_cbrt float64 = 1.8759518242717701
-var P1_cgo21_cbrt float64 = -1.8849797954337717
-var P2_cgo22_cbrt float64 = 1.6214297201053545
-var P3_cgo23_cbrt float64 = -0.75839793477876605
-var P4_cgo24_cbrt float64 = 0.14599619288661245
+var _cgos_B1__cbrt uint32 = uint32(715094163)
+var _cgos_B2__cbrt uint32 = uint32(696219795)
+var _cgos_P0__cbrt float64 = 1.8759518242717701
+var _cgos_P1__cbrt float64 = -1.8849797954337717
+var _cgos_P2__cbrt float64 = 1.6214297201053545
+var _cgos_P3__cbrt float64 = -0.75839793477876605
+var _cgos_P4__cbrt float64 = 0.14599619288661245
 
 func Cbrt(x float64) float64 {
-	type _cgoa_25_cbrt struct {
+	type _cgoa_18_cbrt struct {
 		f float64
 	}
-	var u _cgoa_25_cbrt
+	var u _cgoa_18_cbrt
 	u.f = x
 	var r float64
 	var s float64
@@ -30,15 +30,15 @@ func Cbrt(x float64) float64 {
 		if hx == uint32(0) {
 			return x
 		}
-		hx = hx/uint32(3) + B2_cgo19_cbrt
+		hx = hx/uint32(3) + _cgos_B2__cbrt
 	} else {
-		hx = hx/uint32(3) + B1_cgo18_cbrt
+		hx = hx/uint32(3) + _cgos_B1__cbrt
 	}
 	*(*uint64)(unsafe.Pointer(&u)) &= 9223372036854775808
 	*(*uint64)(unsafe.Pointer(&u)) |= uint64(hx) << int32(32)
 	t = u.f
 	r = t * t * (t / x)
-	t = t * (P0_cgo20_cbrt + r*(P1_cgo21_cbrt+r*P2_cgo22_cbrt) + r*r*r*(P3_cgo23_cbrt+r*P4_cgo24_cbrt))
+	t = t * (_cgos_P0__cbrt + r*(_cgos_P1__cbrt+r*_cgos_P2__cbrt) + r*r*r*(_cgos_P3__cbrt+r*_cgos_P4__cbrt))
 	u.f = t
 	*(*uint64)(unsafe.Pointer(&u)) = (*(*uint64)(unsafe.Pointer(&u)) + uint64(2147483648)) & uint64(18446744072635809792)
 	t = u.f

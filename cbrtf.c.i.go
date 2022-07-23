@@ -2,16 +2,16 @@ package libc
 
 import unsafe "unsafe"
 
-var B1_cgo18_cbrtf uint32 = uint32(709958130)
-var B2_cgo19_cbrtf uint32 = uint32(642849266)
+var _cgos_B1__cbrtf uint32 = uint32(709958130)
+var _cgos_B2__cbrtf uint32 = uint32(642849266)
 
 func Cbrtf(x float32) float32 {
 	var r float64
 	var T float64
-	type _cgoa_20_cbrtf struct {
+	type _cgoa_18_cbrtf struct {
 		f float32
 	}
-	var u _cgoa_20_cbrtf
+	var u _cgoa_18_cbrtf
 	u.f = x
 	var hx uint32 = *(*uint32)(unsafe.Pointer(&u)) & uint32(2147483647)
 	if hx >= uint32(2139095040) {
@@ -23,9 +23,9 @@ func Cbrtf(x float32) float32 {
 		}
 		u.f = x * 16777216
 		hx = *(*uint32)(unsafe.Pointer(&u)) & uint32(2147483647)
-		hx = hx/uint32(3) + B2_cgo19_cbrtf
+		hx = hx/uint32(3) + _cgos_B2__cbrtf
 	} else {
-		hx = hx/uint32(3) + B1_cgo18_cbrtf
+		hx = hx/uint32(3) + _cgos_B1__cbrtf
 	}
 	*(*uint32)(unsafe.Pointer(&u)) &= uint32(2147483648)
 	*(*uint32)(unsafe.Pointer(&u)) |= hx

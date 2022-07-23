@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func __fgetwc_unlocked_internal_cgo18_fgetwc(f *struct__IO_FILE) uint32 {
+func _cgos___fgetwc_unlocked_internal__fgetwc(f *struct__IO_FILE) uint32 {
 	var wc uint32
 	var c int32
 	var l uint64
@@ -68,7 +68,7 @@ func __fgetwc_unlocked(f *struct__IO_FILE) uint32 {
 		fwide(f, int32(1))
 	}
 	*ploc = f.locale
-	var wc uint32 = __fgetwc_unlocked_internal_cgo18_fgetwc(f)
+	var wc uint32 = _cgos___fgetwc_unlocked_internal__fgetwc(f)
 	*ploc = loc
 	return wc
 }

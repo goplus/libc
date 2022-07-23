@@ -2,10 +2,10 @@ package libc
 
 import unsafe "unsafe"
 
-var s1pio2_cgo18_sinf float64 = float64(int32(1)) * 1.5707963267948966
-var s2pio2_cgo19_sinf float64 = float64(int32(2)) * 1.5707963267948966
-var s3pio2_cgo20_sinf float64 = float64(int32(3)) * 1.5707963267948966
-var s4pio2_cgo21_sinf float64 = float64(int32(4)) * 1.5707963267948966
+var _cgos_s1pio2__sinf float64 = float64(int32(1)) * 1.5707963267948966
+var _cgos_s2pio2__sinf float64 = float64(int32(2)) * 1.5707963267948966
+var _cgos_s3pio2__sinf float64 = float64(int32(3)) * 1.5707963267948966
+var _cgos_s4pio2__sinf float64 = float64(int32(4)) * 1.5707963267948966
 
 func Sinf(x float32) float32 {
 	var y float64
@@ -13,7 +13,7 @@ func Sinf(x float32) float32 {
 	var n int32
 	var sign int32
 	for {
-		ix = *(*uint32)(unsafe.Pointer(&_cgoz_22_sinf{x}))
+		ix = *(*uint32)(unsafe.Pointer(&_cgoz_18_sinf{x}))
 		if true {
 			break
 		}
@@ -59,32 +59,32 @@ func Sinf(x float32) float32 {
 	if ix <= uint32(1081824209) {
 		if ix <= uint32(1075235811) {
 			if sign != 0 {
-				return -__cosdf(float64(x) + s1pio2_cgo18_sinf)
+				return -__cosdf(float64(x) + _cgos_s1pio2__sinf)
 			} else {
-				return __cosdf(float64(x) - s1pio2_cgo18_sinf)
+				return __cosdf(float64(x) - _cgos_s1pio2__sinf)
 			}
 		}
 		return __sindf(func() float64 {
 			if sign != 0 {
-				return -(float64(x) + s2pio2_cgo19_sinf)
+				return -(float64(x) + _cgos_s2pio2__sinf)
 			} else {
-				return -(float64(x) - s2pio2_cgo19_sinf)
+				return -(float64(x) - _cgos_s2pio2__sinf)
 			}
 		}())
 	}
 	if ix <= uint32(1088565717) {
 		if ix <= uint32(1085271519) {
 			if sign != 0 {
-				return __cosdf(float64(x) + s3pio2_cgo20_sinf)
+				return __cosdf(float64(x) + _cgos_s3pio2__sinf)
 			} else {
-				return -__cosdf(float64(x) - s3pio2_cgo20_sinf)
+				return -__cosdf(float64(x) - _cgos_s3pio2__sinf)
 			}
 		}
 		return __sindf(func() float64 {
 			if sign != 0 {
-				return float64(x) + s4pio2_cgo21_sinf
+				return float64(x) + _cgos_s4pio2__sinf
 			} else {
-				return float64(x) - s4pio2_cgo21_sinf
+				return float64(x) - _cgos_s4pio2__sinf
 			}
 		}())
 	}
@@ -105,6 +105,6 @@ func Sinf(x float32) float32 {
 	return 0
 }
 
-type _cgoz_22_sinf struct {
+type _cgoz_18_sinf struct {
 	_f float32
 }

@@ -2,17 +2,17 @@ package libc
 
 import unsafe "unsafe"
 
-func specialcase_cgo18_exp(tmp float64, sbits uint64, ki uint64) float64 {
+func _cgos_specialcase__exp(tmp float64, sbits uint64, ki uint64) float64 {
 	var scale float64
 	var y float64
 	if ki&uint64(2147483648) == uint64(0) {
 		sbits -= 4544132024016830464
-		scale = *(*float64)(unsafe.Pointer(&_cgoz_19_exp{sbits}))
+		scale = *(*float64)(unsafe.Pointer(&_cgoz_18_exp{sbits}))
 		y = 5.4861240687936887e+303 * (scale + scale*tmp)
 		return eval_as_double(y)
 	}
 	sbits += 4602678819172646912
-	scale = *(*float64)(unsafe.Pointer(&_cgoz_20_exp{sbits}))
+	scale = *(*float64)(unsafe.Pointer(&_cgoz_19_exp{sbits}))
 	y = scale + scale*tmp
 	if y < 1 {
 		var hi float64
@@ -30,18 +30,18 @@ func specialcase_cgo18_exp(tmp float64, sbits uint64, ki uint64) float64 {
 	return eval_as_double(y)
 }
 
+type _cgoz_18_exp struct {
+	_i uint64
+}
 type _cgoz_19_exp struct {
 	_i uint64
 }
+
+func _cgos_top12__exp(x float64) uint32 {
+	return uint32(*(*uint64)(unsafe.Pointer(&_cgoz_20_exp{x})) >> int32(52))
+}
+
 type _cgoz_20_exp struct {
-	_i uint64
-}
-
-func top12_cgo21_exp(x float64) uint32 {
-	return uint32(*(*uint64)(unsafe.Pointer(&_cgoz_22_exp{x})) >> int32(52))
-}
-
-type _cgoz_22_exp struct {
 	_f float64
 }
 
@@ -58,15 +58,15 @@ func Exp(x float64) float64 {
 	var scale float64
 	var tail float64
 	var tmp float64
-	abstop = top12_cgo21_exp(x) & uint32(2047)
+	abstop = _cgos_top12__exp(x) & uint32(2047)
 	if func() int64 {
-		if abstop-top12_cgo21_exp(5.5511151231257827e-17) >= top12_cgo21_exp(512)-top12_cgo21_exp(5.5511151231257827e-17) {
+		if abstop-_cgos_top12__exp(5.5511151231257827e-17) >= _cgos_top12__exp(512)-_cgos_top12__exp(5.5511151231257827e-17) {
 			return 1
 		} else {
 			return 0
 		}
 	}() == int64(0) {
-		if abstop-top12_cgo21_exp(5.5511151231257827e-17) >= uint32(2147483648) {
+		if abstop-_cgos_top12__exp(5.5511151231257827e-17) >= uint32(2147483648) {
 			return func() float64 {
 				if int32(1) != 0 {
 					return 1 + x
@@ -75,14 +75,14 @@ func Exp(x float64) float64 {
 				}
 			}()
 		}
-		if abstop >= top12_cgo21_exp(1024) {
-			if *(*uint64)(unsafe.Pointer(&_cgoz_23_exp{x})) == *(*uint64)(unsafe.Pointer(&_cgoz_24_exp{float64(-X__builtin_inff())})) {
+		if abstop >= _cgos_top12__exp(1024) {
+			if *(*uint64)(unsafe.Pointer(&_cgoz_21_exp{x})) == *(*uint64)(unsafe.Pointer(&_cgoz_22_exp{float64(-X__builtin_inff())})) {
 				return float64(0)
 			}
-			if abstop >= top12_cgo21_exp(float64(X__builtin_inff())) {
+			if abstop >= _cgos_top12__exp(float64(X__builtin_inff())) {
 				return 1 + x
 			}
-			if *(*uint64)(unsafe.Pointer(&_cgoz_25_exp{x}))>>int32(63) != 0 {
+			if *(*uint64)(unsafe.Pointer(&_cgoz_23_exp{x}))>>int32(63) != 0 {
 				return __math_uflow(uint32(0))
 			} else {
 				return __math_oflow(uint32(0))
@@ -92,12 +92,12 @@ func Exp(x float64) float64 {
 	}
 	z = __exp_data.invln2N * x
 	kd = eval_as_double(z + __exp_data.shift)
-	ki = *(*uint64)(unsafe.Pointer(&_cgoz_26_exp{kd}))
+	ki = *(*uint64)(unsafe.Pointer(&_cgoz_24_exp{kd}))
 	kd -= __exp_data.shift
 	r = x + kd*__exp_data.negln2hiN + kd*__exp_data.negln2loN
 	idx = uint64(2) * (ki % uint64(128))
 	top = ki << 45
-	tail = *(*float64)(unsafe.Pointer(&_cgoz_27_exp{*(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint64)(unsafe.Pointer(&__exp_data.tab)))) + uintptr(idx)*8))}))
+	tail = *(*float64)(unsafe.Pointer(&_cgoz_25_exp{*(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint64)(unsafe.Pointer(&__exp_data.tab)))) + uintptr(idx)*8))}))
 	sbits = *(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint64)(unsafe.Pointer(&__exp_data.tab)))) + uintptr(idx+uint64(1))*8)) + top
 	r2 = r * r
 	tmp = tail + r + r2*(*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&__exp_data.poly)))) + uintptr(0)*8))+r**(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&__exp_data.poly)))) + uintptr(1)*8))) + r2*r2*(*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&__exp_data.poly)))) + uintptr(2)*8))+r**(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&__exp_data.poly)))) + uintptr(3)*8)))
@@ -108,12 +108,18 @@ func Exp(x float64) float64 {
 			return 0
 		}
 	}() == int64(0) {
-		return specialcase_cgo18_exp(tmp, sbits, ki)
+		return _cgos_specialcase__exp(tmp, sbits, ki)
 	}
-	scale = *(*float64)(unsafe.Pointer(&_cgoz_28_exp{sbits}))
+	scale = *(*float64)(unsafe.Pointer(&_cgoz_26_exp{sbits}))
 	return eval_as_double(scale + scale*tmp)
 }
 
+type _cgoz_21_exp struct {
+	_f float64
+}
+type _cgoz_22_exp struct {
+	_f float64
+}
 type _cgoz_23_exp struct {
 	_f float64
 }
@@ -121,14 +127,8 @@ type _cgoz_24_exp struct {
 	_f float64
 }
 type _cgoz_25_exp struct {
-	_f float64
-}
-type _cgoz_26_exp struct {
-	_f float64
-}
-type _cgoz_27_exp struct {
 	_i uint64
 }
-type _cgoz_28_exp struct {
+type _cgoz_26_exp struct {
 	_i uint64
 }

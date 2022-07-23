@@ -2,10 +2,10 @@ package libc
 
 import unsafe "unsafe"
 
-var c1pio2_cgo18_cosf float64 = float64(int32(1)) * 1.5707963267948966
-var c2pio2_cgo19_cosf float64 = float64(int32(2)) * 1.5707963267948966
-var c3pio2_cgo20_cosf float64 = float64(int32(3)) * 1.5707963267948966
-var c4pio2_cgo21_cosf float64 = float64(int32(4)) * 1.5707963267948966
+var _cgos_c1pio2__cosf float64 = float64(int32(1)) * 1.5707963267948966
+var _cgos_c2pio2__cosf float64 = float64(int32(2)) * 1.5707963267948966
+var _cgos_c3pio2__cosf float64 = float64(int32(3)) * 1.5707963267948966
+var _cgos_c4pio2__cosf float64 = float64(int32(4)) * 1.5707963267948966
 
 func Cosf(x float32) float32 {
 	var y float64
@@ -13,7 +13,7 @@ func Cosf(x float32) float32 {
 	var n uint32
 	var sign uint32
 	for {
-		ix = *(*uint32)(unsafe.Pointer(&_cgoz_22_cosf{x}))
+		ix = *(*uint32)(unsafe.Pointer(&_cgoz_18_cosf{x}))
 		if true {
 			break
 		}
@@ -42,30 +42,30 @@ func Cosf(x float32) float32 {
 		if ix > uint32(1075235811) {
 			return -__cosdf(func() float64 {
 				if sign != 0 {
-					return float64(x) + c2pio2_cgo19_cosf
+					return float64(x) + _cgos_c2pio2__cosf
 				} else {
-					return float64(x) - c2pio2_cgo19_cosf
+					return float64(x) - _cgos_c2pio2__cosf
 				}
 			}())
 		} else if sign != 0 {
-			return __sindf(float64(x) + c1pio2_cgo18_cosf)
+			return __sindf(float64(x) + _cgos_c1pio2__cosf)
 		} else {
-			return __sindf(c1pio2_cgo18_cosf - float64(x))
+			return __sindf(_cgos_c1pio2__cosf - float64(x))
 		}
 	}
 	if ix <= uint32(1088565717) {
 		if ix > uint32(1085271519) {
 			return __cosdf(func() float64 {
 				if sign != 0 {
-					return float64(x) + c4pio2_cgo21_cosf
+					return float64(x) + _cgos_c4pio2__cosf
 				} else {
-					return float64(x) - c4pio2_cgo21_cosf
+					return float64(x) - _cgos_c4pio2__cosf
 				}
 			}())
 		} else if sign != 0 {
-			return __sindf(float64(-x) - c3pio2_cgo20_cosf)
+			return __sindf(float64(-x) - _cgos_c3pio2__cosf)
 		} else {
-			return __sindf(float64(x) - c3pio2_cgo20_cosf)
+			return __sindf(float64(x) - _cgos_c3pio2__cosf)
 		}
 	}
 	if ix >= uint32(2139095040) {
@@ -85,6 +85,6 @@ func Cosf(x float32) float32 {
 	return 0
 }
 
-type _cgoz_22_cosf struct {
+type _cgoz_18_cosf struct {
 	_f float32
 }

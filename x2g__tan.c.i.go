@@ -2,9 +2,9 @@ package libc
 
 import unsafe "unsafe"
 
-var T_cgo18___tan [13]float64 = [13]float64{0.33333333333333409, 0.13333333333320124, 0.053968253976226052, 0.021869488294859542, 0.0088632398235993, 0.0035920791075913124, 0.0014562094543252903, 5.880412408202641e-4, 2.4646313481846991e-4, 7.8179444293955709e-5, 7.1407249138260819e-5, -1.8558637485527546e-5, 2.5907305186363371e-5}
-var pio4_cgo19___tan float64 = 0.78539816339744828
-var pio4lo_cgo20___tan float64 = 3.061616997868383e-17
+var _cgos_T____tan [13]float64 = [13]float64{0.33333333333333409, 0.13333333333320124, 0.053968253976226052, 0.021869488294859542, 0.0088632398235993, 0.0035920791075913124, 0.0014562094543252903, 5.880412408202641e-4, 2.4646313481846991e-4, 7.8179444293955709e-5, 7.1407249138260819e-5, -1.8558637485527546e-5, 2.5907305186363371e-5}
+var _cgos_pio4____tan float64 = 0.78539816339744828
+var _cgos_pio4lo____tan float64 = 3.061616997868383e-17
 
 func __tan(x float64, y float64, odd int32) float64 {
 	var z float64
@@ -19,7 +19,7 @@ func __tan(x float64, y float64, odd int32) float64 {
 	var big int32
 	var sign int32
 	for {
-		hx = uint32(*(*uint64)(unsafe.Pointer(&_cgoz_21___tan{x})) >> int32(32))
+		hx = uint32(*(*uint64)(unsafe.Pointer(&_cgoz_18___tan{x})) >> int32(32))
 		if true {
 			break
 		}
@@ -37,15 +37,15 @@ func __tan(x float64, y float64, odd int32) float64 {
 			x = -x
 			y = -y
 		}
-		x = pio4_cgo19___tan - x + (pio4lo_cgo20___tan - y)
+		x = _cgos_pio4____tan - x + (_cgos_pio4lo____tan - y)
 		y = float64(0)
 	}
 	z = x * x
 	w = z * z
-	r = *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&T_cgo18___tan)))) + uintptr(int32(1))*8)) + w*(*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&T_cgo18___tan)))) + uintptr(int32(3))*8))+w*(*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&T_cgo18___tan)))) + uintptr(int32(5))*8))+w*(*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&T_cgo18___tan)))) + uintptr(int32(7))*8))+w*(*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&T_cgo18___tan)))) + uintptr(int32(9))*8))+w**(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&T_cgo18___tan)))) + uintptr(int32(11))*8))))))
-	v = z * (*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&T_cgo18___tan)))) + uintptr(int32(2))*8)) + w*(*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&T_cgo18___tan)))) + uintptr(int32(4))*8))+w*(*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&T_cgo18___tan)))) + uintptr(int32(6))*8))+w*(*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&T_cgo18___tan)))) + uintptr(int32(8))*8))+w*(*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&T_cgo18___tan)))) + uintptr(int32(10))*8))+w**(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&T_cgo18___tan)))) + uintptr(int32(12))*8)))))))
+	r = *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&_cgos_T____tan)))) + uintptr(int32(1))*8)) + w*(*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&_cgos_T____tan)))) + uintptr(int32(3))*8))+w*(*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&_cgos_T____tan)))) + uintptr(int32(5))*8))+w*(*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&_cgos_T____tan)))) + uintptr(int32(7))*8))+w*(*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&_cgos_T____tan)))) + uintptr(int32(9))*8))+w**(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&_cgos_T____tan)))) + uintptr(int32(11))*8))))))
+	v = z * (*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&_cgos_T____tan)))) + uintptr(int32(2))*8)) + w*(*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&_cgos_T____tan)))) + uintptr(int32(4))*8))+w*(*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&_cgos_T____tan)))) + uintptr(int32(6))*8))+w*(*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&_cgos_T____tan)))) + uintptr(int32(8))*8))+w*(*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&_cgos_T____tan)))) + uintptr(int32(10))*8))+w**(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&_cgos_T____tan)))) + uintptr(int32(12))*8)))))))
 	s = z * x
-	r = y + z*(s*(r+v)+y) + s**(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&T_cgo18___tan)))) + uintptr(int32(0))*8))
+	r = y + z*(s*(r+v)+y) + s**(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&_cgos_T____tan)))) + uintptr(int32(0))*8))
 	w = x + r
 	if big != 0 {
 		s = float64(int32(1) - int32(2)*odd)
@@ -63,7 +63,7 @@ func __tan(x float64, y float64, odd int32) float64 {
 	}
 	w0 = w
 	for {
-		w0 = *(*float64)(unsafe.Pointer(&_cgoz_22___tan{uint64(*(*uint64)(unsafe.Pointer(&_cgoz_23___tan{w0}))>>int32(32))<<int32(32) | uint64(0)}))
+		w0 = *(*float64)(unsafe.Pointer(&_cgoz_19___tan{uint64(*(*uint64)(unsafe.Pointer(&_cgoz_20___tan{w0}))>>int32(32))<<int32(32) | uint64(0)}))
 		if true {
 			break
 		}
@@ -75,7 +75,7 @@ func __tan(x float64, y float64, odd int32) float64 {
 		return *_cgo_addr
 	}()
 	for {
-		a0 = *(*float64)(unsafe.Pointer(&_cgoz_24___tan{uint64(*(*uint64)(unsafe.Pointer(&_cgoz_25___tan{a0}))>>int32(32))<<int32(32) | uint64(0)}))
+		a0 = *(*float64)(unsafe.Pointer(&_cgoz_21___tan{uint64(*(*uint64)(unsafe.Pointer(&_cgoz_22___tan{a0}))>>int32(32))<<int32(32) | uint64(0)}))
 		if true {
 			break
 		}
@@ -83,18 +83,18 @@ func __tan(x float64, y float64, odd int32) float64 {
 	return a0 + a*(1+a0*w0+a0*v)
 }
 
-type _cgoz_21___tan struct {
+type _cgoz_18___tan struct {
 	_f float64
+}
+type _cgoz_19___tan struct {
+	_i uint64
+}
+type _cgoz_20___tan struct {
+	_f float64
+}
+type _cgoz_21___tan struct {
+	_i uint64
 }
 type _cgoz_22___tan struct {
-	_i uint64
-}
-type _cgoz_23___tan struct {
-	_f float64
-}
-type _cgoz_24___tan struct {
-	_i uint64
-}
-type _cgoz_25___tan struct {
 	_f float64
 }
