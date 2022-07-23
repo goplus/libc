@@ -7,24 +7,24 @@ import (
 	testing "testing"
 )
 
-var buf_cgo1_string_memset [400]int8
-var buf2_cgo2_string_memset [400]int8
-var pmemset_cgo3_string_memset func(unsafe.Pointer, int32, uint64) unsafe.Pointer
+var _cgos_buf_string_memset [400]int8
+var _cgos_buf2_string_memset [400]int8
+var _cgos_pmemset_string_memset func(unsafe.Pointer, int32, uint64) unsafe.Pointer
 
-func aligned_cgo4_string_memset(p unsafe.Pointer) *int8 {
+func _cgos_aligned_string_memset(p unsafe.Pointer) *int8 {
 	return (*int8)(unsafe.Pointer(uintptr((uint64(uintptr(p)) + uint64(63)) & uint64(18446744073709551552))))
 }
-func test_align_cgo5_string_memset(align int32, len int32) {
-	var s *int8 = (*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(aligned_cgo4_string_memset(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf_cgo1_string_memset))))+uintptr(int32(64)))))))) + uintptr(align)))
-	var want *int8 = (*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(aligned_cgo4_string_memset(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf2_cgo2_string_memset))))+uintptr(int32(64)))))))) + uintptr(align)))
+func _cgos_test_align_string_memset(align int32, len int32) {
+	var s *int8 = (*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(_cgos_aligned_string_memset(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&_cgos_buf_string_memset))))+uintptr(int32(64)))))))) + uintptr(align)))
+	var want *int8 = (*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(_cgos_aligned_string_memset(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&_cgos_buf2_string_memset))))+uintptr(int32(64)))))))) + uintptr(align)))
 	var p *int8
 	var i int32
-	if int64(len+int32(64)) > int64(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf_cgo1_string_memset))))+uintptr(int32(400))))))-uintptr(unsafe.Pointer(s))) || int64(len+int32(64)) > int64(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf2_cgo2_string_memset))))+uintptr(int32(400))))))-uintptr(unsafe.Pointer(want))) {
+	if int64(len+int32(64)) > int64(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&_cgos_buf_string_memset))))+uintptr(int32(400))))))-uintptr(unsafe.Pointer(s))) || int64(len+int32(64)) > int64(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&_cgos_buf2_string_memset))))+uintptr(int32(400))))))-uintptr(unsafe.Pointer(want))) {
 		libc.Abort()
 	}
 	for i = int32(0); i < int32(400); i++ {
-		*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf_cgo1_string_memset)))) + uintptr(i))) = func() (_cgo_ret int8) {
-			_cgo_addr := &*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf2_cgo2_string_memset)))) + uintptr(i)))
+		*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&_cgos_buf_string_memset)))) + uintptr(i))) = func() (_cgo_ret int8) {
+			_cgo_addr := &*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&_cgos_buf2_string_memset)))) + uintptr(i)))
 			*_cgo_addr = int8(' ')
 			return *_cgo_addr
 		}()
@@ -32,7 +32,7 @@ func test_align_cgo5_string_memset(align int32, len int32) {
 	for i = int32(0); i < len; i++ {
 		*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(want)) + uintptr(i))) = int8('#')
 	}
-	p = (*int8)(pmemset_cgo3_string_memset(unsafe.Pointer(s), '#', uint64(len)))
+	p = (*int8)(_cgos_pmemset_string_memset(unsafe.Pointer(s), '#', uint64(len)))
 	if uintptr(unsafe.Pointer(p)) != uintptr(unsafe.Pointer(s)) {
 		common.T_printf((*int8)(unsafe.Pointer(&[63]int8{'s', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 't', 'r', 'i', 'n', 'g', '_', 'm', 'e', 'm', 's', 'e', 't', '.', 'c', ':', '3', '2', ':', ' ', 'm', 'e', 'm', 's', 'e', 't', '(', '%', 'p', ',', '.', '.', '.', ')', ' ', 'r', 'e', 't', 'u', 'r', 'n', 'e', 'd', ' ', '%', 'p', '\n', '\x00'})), s, p)
 	}
@@ -45,12 +45,12 @@ func test_align_cgo5_string_memset(align int32, len int32) {
 		}
 	}
 }
-func test_value_cgo6_string_memset(c int32) {
+func _cgos_test_value_string_memset(c int32) {
 	var i int32
-	pmemset_cgo3_string_memset(unsafe.Pointer((*int8)(unsafe.Pointer(&buf_cgo1_string_memset))), c, uint64(10))
+	_cgos_pmemset_string_memset(unsafe.Pointer((*int8)(unsafe.Pointer(&_cgos_buf_string_memset))), c, uint64(10))
 	for i = int32(0); i < int32(10); i++ {
-		if int32(uint8(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf_cgo1_string_memset)))) + uintptr(i))))) != int32(uint8(c)) {
-			common.T_printf((*int8)(unsafe.Pointer(&[62]int8{'s', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 't', 'r', 'i', 'n', 'g', '_', 'm', 'e', 'm', 's', 'e', 't', '.', 'c', ':', '4', '9', ':', ' ', 'm', 'e', 'm', 's', 'e', 't', '(', '%', 'd', ')', ' ', 'f', 'a', 'i', 'l', 'e', 'd', ':', ' ', 'g', 'o', 't', ' ', '%', 'd', '\n', '\x00'})), c, int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&buf_cgo1_string_memset)))) + uintptr(i)))))
+		if int32(uint8(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&_cgos_buf_string_memset)))) + uintptr(i))))) != int32(uint8(c)) {
+			common.T_printf((*int8)(unsafe.Pointer(&[62]int8{'s', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 't', 'r', 'i', 'n', 'g', '_', 'm', 'e', 'm', 's', 'e', 't', '.', 'c', ':', '4', '9', ':', ' ', 'm', 'e', 'm', 's', 'e', 't', '(', '%', 'd', ')', ' ', 'f', 'a', 'i', 'l', 'e', 'd', ':', ' ', 'g', 'o', 't', ' ', '%', 'd', '\n', '\x00'})), c, int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&_cgos_buf_string_memset)))) + uintptr(i)))))
 			break
 		}
 	}
@@ -58,17 +58,17 @@ func test_value_cgo6_string_memset(c int32) {
 func _cgo_main() int32 {
 	var i int32
 	var j int32
-	pmemset_cgo3_string_memset = libc.Memset
+	_cgos_pmemset_string_memset = libc.Memset
 	for i = int32(0); i < int32(16); i++ {
 		for j = int32(0); j < int32(200); j++ {
-			test_align_cgo5_string_memset(i, j)
+			_cgos_test_align_string_memset(i, j)
 		}
 	}
-	test_value_cgo6_string_memset('c')
-	test_value_cgo6_string_memset(int32(0))
-	test_value_cgo6_string_memset(-1)
-	test_value_cgo6_string_memset(-5)
-	test_value_cgo6_string_memset(int32(171))
+	_cgos_test_value_string_memset('c')
+	_cgos_test_value_string_memset(int32(0))
+	_cgos_test_value_string_memset(-1)
+	_cgos_test_value_string_memset(-5)
+	_cgos_test_value_string_memset(int32(171))
 	return common.T_status
 }
 func TestMain(t *testing.T) {
