@@ -2,12 +2,12 @@ package libc
 
 import unsafe "unsafe"
 
-var ln2_hi_cgos__log1pf float32 = float32(0.69313812255999996)
-var ln2_lo_cgos__log1pf float32 = float32(9.0580006144999996e-6)
-var Lg1_cgos__log1pf float32 = float32(0.66666662693023682)
-var Lg2_cgos__log1pf float32 = float32(0.40000972151756287)
-var Lg3_cgos__log1pf float32 = float32(0.28498786687850952)
-var Lg4_cgos__log1pf float32 = float32(0.24279078841209412)
+var _cgos_ln2_hi__log1pf float32 = float32(0.69313812255999996)
+var _cgos_ln2_lo__log1pf float32 = float32(9.0580006144999996e-6)
+var _cgos_Lg1__log1pf float32 = float32(0.66666662693023682)
+var _cgos_Lg2__log1pf float32 = float32(0.40000972151756287)
+var _cgos_Lg3__log1pf float32 = float32(0.28498786687850952)
+var _cgos_Lg4__log1pf float32 = float32(0.24279078841209412)
 
 func Log1pf(x float32) float32 {
 	type _cgoa_18_log1pf struct {
@@ -86,10 +86,10 @@ func Log1pf(x float32) float32 {
 	s = f / (2 + f)
 	z = s * s
 	w = z * z
-	t1 = w * (Lg2_cgos__log1pf + w*Lg4_cgos__log1pf)
-	t2 = z * (Lg1_cgos__log1pf + w*Lg3_cgos__log1pf)
+	t1 = w * (_cgos_Lg2__log1pf + w*_cgos_Lg4__log1pf)
+	t2 = z * (_cgos_Lg1__log1pf + w*_cgos_Lg3__log1pf)
 	R = t2 + t1
 	hfsq = 0.5 * f * f
 	dk = float32(k)
-	return s*(hfsq+R) + (dk*ln2_lo_cgos__log1pf + c) - hfsq + f + dk*ln2_hi_cgos__log1pf
+	return s*(hfsq+R) + (dk*_cgos_ln2_lo__log1pf + c) - hfsq + f + dk*_cgos_ln2_hi__log1pf
 }

@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func dummy_cgos__mmap() {
+func _cgos_dummy__mmap() {
 }
 func __mmap(start unsafe.Pointer, len uint64, prot int32, flags int32, fd int32, off int64) unsafe.Pointer {
 	var ret int64

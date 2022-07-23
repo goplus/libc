@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-var toint_cgos__roundf float32 = float32(int32(1)) / 1.1920929e-7
+var _cgos_toint__roundf float32 = float32(int32(1)) / 1.1920929e-7
 
 func Roundf(x float32) float32 {
 	type _cgoa_18_roundf struct {
@@ -21,11 +21,11 @@ func Roundf(x float32) float32 {
 	if e < 126 {
 		for {
 			if 4 == 4 {
-				fp_force_evalf(x + toint_cgos__roundf)
+				fp_force_evalf(x + _cgos_toint__roundf)
 			} else if 4 == 8 {
-				fp_force_eval(float64(x + toint_cgos__roundf))
+				fp_force_eval(float64(x + _cgos_toint__roundf))
 			} else {
-				fp_force_evall(float64(x + toint_cgos__roundf))
+				fp_force_evall(float64(x + _cgos_toint__roundf))
 			}
 			if true {
 				break
@@ -33,7 +33,7 @@ func Roundf(x float32) float32 {
 		}
 		return float32(int32(0)) * u.f
 	}
-	y = x + toint_cgos__roundf - toint_cgos__roundf - x
+	y = x + _cgos_toint__roundf - _cgos_toint__roundf - x
 	if y > 0.5 {
 		y = y + x - float32(int32(1))
 	} else if y <= -0.5 {

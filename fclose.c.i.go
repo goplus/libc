@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func dummy_cgos__fclose(f *struct__IO_FILE) {
+func _cgos_dummy__fclose(f *struct__IO_FILE) {
 }
 func Fclose(f *struct__IO_FILE) int32 {
 	var r int32

@@ -2,8 +2,8 @@ package libc
 
 import unsafe "unsafe"
 
-var B1_cgos__cbrtf uint32 = uint32(709958130)
-var B2_cgos__cbrtf uint32 = uint32(642849266)
+var _cgos_B1__cbrtf uint32 = uint32(709958130)
+var _cgos_B2__cbrtf uint32 = uint32(642849266)
 
 func Cbrtf(x float32) float32 {
 	var r float64
@@ -23,9 +23,9 @@ func Cbrtf(x float32) float32 {
 		}
 		u.f = x * 16777216
 		hx = *(*uint32)(unsafe.Pointer(&u)) & uint32(2147483647)
-		hx = hx/uint32(3) + B2_cgos__cbrtf
+		hx = hx/uint32(3) + _cgos_B2__cbrtf
 	} else {
-		hx = hx/uint32(3) + B1_cgos__cbrtf
+		hx = hx/uint32(3) + _cgos_B1__cbrtf
 	}
 	*(*uint32)(unsafe.Pointer(&u)) &= uint32(2147483648)
 	*(*uint32)(unsafe.Pointer(&u)) |= hx

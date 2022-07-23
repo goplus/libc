@@ -2,14 +2,14 @@ package libc
 
 import unsafe "unsafe"
 
-var ivln10hi_cgos__log10f float32 = float32(0.43432617188)
-var ivln10lo_cgos__log10f float32 = float32(-3.1689971364999999e-5)
-var log10_2hi_cgos__log10f float32 = float32(0.30102920531999999)
-var log10_2lo_cgos__log10f float32 = float32(7.9034151667999997e-7)
-var Lg1_cgos__log10f float32 = float32(0.66666662693023682)
-var Lg2_cgos__log10f float32 = float32(0.40000972151756287)
-var Lg3_cgos__log10f float32 = float32(0.28498786687850952)
-var Lg4_cgos__log10f float32 = float32(0.24279078841209412)
+var _cgos_ivln10hi__log10f float32 = float32(0.43432617188)
+var _cgos_ivln10lo__log10f float32 = float32(-3.1689971364999999e-5)
+var _cgos_log10_2hi__log10f float32 = float32(0.30102920531999999)
+var _cgos_log10_2lo__log10f float32 = float32(7.9034151667999997e-7)
+var _cgos_Lg1__log10f float32 = float32(0.66666662693023682)
+var _cgos_Lg2__log10f float32 = float32(0.40000972151756287)
+var _cgos_Lg3__log10f float32 = float32(0.28498786687850952)
+var _cgos_Lg4__log10f float32 = float32(0.24279078841209412)
 
 func Log10f(x float32) float32 {
 	type _cgoa_18_log10f struct {
@@ -57,8 +57,8 @@ func Log10f(x float32) float32 {
 	s = f / (2 + f)
 	z = s * s
 	w = z * z
-	t1 = w * (Lg2_cgos__log10f + w*Lg4_cgos__log10f)
-	t2 = z * (Lg1_cgos__log10f + w*Lg3_cgos__log10f)
+	t1 = w * (_cgos_Lg2__log10f + w*_cgos_Lg4__log10f)
+	t2 = z * (_cgos_Lg1__log10f + w*_cgos_Lg3__log10f)
 	R = t2 + t1
 	hfsq = 0.5 * f * f
 	hi = f - hfsq
@@ -67,5 +67,5 @@ func Log10f(x float32) float32 {
 	hi = u.f
 	lo = f - hi - hfsq + s*(hfsq+R)
 	dk = float32(k)
-	return dk*log10_2lo_cgos__log10f + (lo+hi)*ivln10lo_cgos__log10f + lo*ivln10hi_cgos__log10f + hi*ivln10hi_cgos__log10f + dk*log10_2hi_cgos__log10f
+	return dk*_cgos_log10_2lo__log10f + (lo+hi)*_cgos_ivln10lo__log10f + lo*_cgos_ivln10hi__log10f + hi*_cgos_ivln10hi__log10f + dk*_cgos_log10_2hi__log10f
 }

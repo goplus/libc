@@ -2,17 +2,17 @@ package libc
 
 import unsafe "unsafe"
 
-var ivln10hi_cgos__log10 float64 = 0.43429448187816888
-var ivln10lo_cgos__log10 float64 = 2.5082946711645275e-11
-var log10_2hi_cgos__log10 float64 = 0.30102999566361177
-var log10_2lo_cgos__log10 float64 = 3.6942390771589308e-13
-var Lg1_cgos__log10 float64 = 0.66666666666667351
-var Lg2_cgos__log10 float64 = 0.39999999999409419
-var Lg3_cgos__log10 float64 = 0.28571428743662391
-var Lg4_cgos__log10 float64 = 0.22222198432149784
-var Lg5_cgos__log10 float64 = 0.1818357216161805
-var Lg6_cgos__log10 float64 = 0.15313837699209373
-var Lg7_cgos__log10 float64 = 0.14798198605116586
+var _cgos_ivln10hi__log10 float64 = 0.43429448187816888
+var _cgos_ivln10lo__log10 float64 = 2.5082946711645275e-11
+var _cgos_log10_2hi__log10 float64 = 0.30102999566361177
+var _cgos_log10_2lo__log10 float64 = 3.6942390771589308e-13
+var _cgos_Lg1__log10 float64 = 0.66666666666667351
+var _cgos_Lg2__log10 float64 = 0.39999999999409419
+var _cgos_Lg3__log10 float64 = 0.28571428743662391
+var _cgos_Lg4__log10 float64 = 0.22222198432149784
+var _cgos_Lg5__log10 float64 = 0.1818357216161805
+var _cgos_Lg6__log10 float64 = 0.15313837699209373
+var _cgos_Lg7__log10 float64 = 0.14798198605116586
 
 func Log10(x float64) float64 {
 	type _cgoa_18_log10 struct {
@@ -64,18 +64,18 @@ func Log10(x float64) float64 {
 	s = f / (2 + f)
 	z = s * s
 	w = z * z
-	t1 = w * (Lg2_cgos__log10 + w*(Lg4_cgos__log10+w*Lg6_cgos__log10))
-	t2 = z * (Lg1_cgos__log10 + w*(Lg3_cgos__log10+w*(Lg5_cgos__log10+w*Lg7_cgos__log10)))
+	t1 = w * (_cgos_Lg2__log10 + w*(_cgos_Lg4__log10+w*_cgos_Lg6__log10))
+	t2 = z * (_cgos_Lg1__log10 + w*(_cgos_Lg3__log10+w*(_cgos_Lg5__log10+w*_cgos_Lg7__log10)))
 	R = t2 + t1
 	hi = f - hfsq
 	u.f = hi
 	*(*uint64)(unsafe.Pointer(&u)) &= 18446744069414584320
 	hi = u.f
 	lo = f - hi - hfsq + s*(hfsq+R)
-	val_hi = hi * ivln10hi_cgos__log10
+	val_hi = hi * _cgos_ivln10hi__log10
 	dk = float64(k)
-	y = dk * log10_2hi_cgos__log10
-	val_lo = dk*log10_2lo_cgos__log10 + (lo+hi)*ivln10lo_cgos__log10 + lo*ivln10hi_cgos__log10
+	y = dk * _cgos_log10_2hi__log10
+	val_lo = dk*_cgos_log10_2lo__log10 + (lo+hi)*_cgos_ivln10lo__log10 + lo*_cgos_ivln10hi__log10
 	w = y + val_hi
 	val_lo += y - w + val_hi
 	val_hi = w

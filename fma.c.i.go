@@ -2,13 +2,13 @@ package libc
 
 import unsafe "unsafe"
 
-type num_cgos__fma struct {
+type _cgos_num__fma struct {
 	m    uint64
 	e    int32
 	sign int32
 }
 
-func normalize_cgos__fma(x float64) num_cgos__fma {
+func _cgos_normalize__fma(x float64) _cgos_num__fma {
 	var ix uint64 = *(*uint64)(unsafe.Pointer(&_cgoz_20_fma{x}))
 	var e int32 = int32(ix >> int32(52))
 	var sign int32 = e & int32(2048)
@@ -28,7 +28,7 @@ func normalize_cgos__fma(x float64) num_cgos__fma {
 	ix |= 4503599627370496
 	ix <<= int32(1)
 	e -= 1076
-	return num_cgos__fma{ix, e, sign}
+	return _cgos_num__fma{ix, e, sign}
 }
 
 type _cgoz_20_fma struct {
@@ -38,7 +38,7 @@ type _cgoz_21_fma struct {
 	f float64
 }
 
-func mul_cgos__fma(hi *uint64, lo *uint64, x uint64, y uint64) {
+func _cgos_mul__fma(hi *uint64, lo *uint64, x uint64, y uint64) {
 	var t1 uint64
 	var t2 uint64
 	var t3 uint64
@@ -59,12 +59,12 @@ func mul_cgos__fma(hi *uint64, lo *uint64, x uint64, y uint64) {
 	}()
 }
 func Fma(x float64, y float64, z float64) float64 {
-	var nx num_cgos__fma
-	var ny num_cgos__fma
-	var nz num_cgos__fma
-	nx = normalize_cgos__fma(x)
-	ny = normalize_cgos__fma(y)
-	nz = normalize_cgos__fma(z)
+	var nx _cgos_num__fma
+	var ny _cgos_num__fma
+	var nz _cgos_num__fma
+	nx = _cgos_normalize__fma(x)
+	ny = _cgos_normalize__fma(y)
+	nz = _cgos_normalize__fma(z)
 	if nx.e >= 971 || ny.e >= 971 {
 		return x*y + z
 	}
@@ -78,7 +78,7 @@ func Fma(x float64, y float64, z float64) float64 {
 	var rlo uint64
 	var zhi uint64
 	var zlo uint64
-	mul_cgos__fma(&rhi, &rlo, nx.m, ny.m)
+	_cgos_mul__fma(&rhi, &rlo, nx.m, ny.m)
 	var e int32 = nx.e + ny.e
 	var d int32 = nz.e - e
 	if d > int32(0) {

@@ -2,10 +2,10 @@ package libc
 
 import unsafe "unsafe"
 
-func mul32_cgos__sqrt(a uint32, b uint32) uint32 {
+func _cgos_mul32__sqrt(a uint32, b uint32) uint32 {
 	return uint32(uint64(a) * uint64(b) >> int32(32))
 }
-func mul64_cgos__sqrt(a uint64, b uint64) uint64 {
+func _cgos_mul64__sqrt(a uint64, b uint64) uint64 {
 	var ahi uint64 = a >> int32(32)
 	var alo uint64 = a & uint64(4294967295)
 	var bhi uint64 = b >> int32(32)
@@ -51,19 +51,19 @@ func Sqrt(x float64) float64 {
 	var i uint64
 	i = ix >> int32(46) % uint64(128)
 	r = uint64(uint32(*(*uint16)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint16)(unsafe.Pointer(&__rsqrt_tab)))) + uintptr(i)*2))) << int32(16))
-	s = uint64(mul32_cgos__sqrt(uint32(m>>int32(32)), uint32(r)))
-	d = uint64(mul32_cgos__sqrt(uint32(s), uint32(r)))
-	u = three_cgos__sqrt - d
-	r = uint64(mul32_cgos__sqrt(uint32(r), uint32(u)) << int32(1))
-	s = uint64(mul32_cgos__sqrt(uint32(s), uint32(u)) << int32(1))
-	d = uint64(mul32_cgos__sqrt(uint32(s), uint32(r)))
-	u = three_cgos__sqrt - d
-	r = uint64(mul32_cgos__sqrt(uint32(r), uint32(u)) << int32(1))
+	s = uint64(_cgos_mul32__sqrt(uint32(m>>int32(32)), uint32(r)))
+	d = uint64(_cgos_mul32__sqrt(uint32(s), uint32(r)))
+	u = _cgos_three__sqrt - d
+	r = uint64(_cgos_mul32__sqrt(uint32(r), uint32(u)) << int32(1))
+	s = uint64(_cgos_mul32__sqrt(uint32(s), uint32(u)) << int32(1))
+	d = uint64(_cgos_mul32__sqrt(uint32(s), uint32(r)))
+	u = _cgos_three__sqrt - d
+	r = uint64(_cgos_mul32__sqrt(uint32(r), uint32(u)) << int32(1))
 	r = r << int32(32)
-	s = mul64_cgos__sqrt(m, r)
-	d = mul64_cgos__sqrt(s, r)
-	u = three_cgos__sqrt<<int32(32) - d
-	s = mul64_cgos__sqrt(s, u)
+	s = _cgos_mul64__sqrt(m, r)
+	d = _cgos_mul64__sqrt(s, r)
+	u = _cgos_three__sqrt<<int32(32) - d
+	s = _cgos_mul64__sqrt(s, u)
 	s = (s - uint64(2)) >> int32(9)
 	var d0 uint64
 	var d1 uint64
@@ -105,7 +105,7 @@ type _cgoz_19_sqrt struct {
 	_f float64
 }
 
-var three_cgos__sqrt uint64 = uint64(3221225472)
+var _cgos_three__sqrt uint64 = uint64(3221225472)
 
 type _cgoz_20_sqrt struct {
 	_i uint64

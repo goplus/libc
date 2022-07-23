@@ -2,10 +2,10 @@ package libc
 
 import unsafe "unsafe"
 
-var t1pio2_cgos__tanf float64 = float64(int32(1)) * 1.5707963267948966
-var t2pio2_cgos__tanf float64 = float64(int32(2)) * 1.5707963267948966
-var t3pio2_cgos__tanf float64 = float64(int32(3)) * 1.5707963267948966
-var t4pio2_cgos__tanf float64 = float64(int32(4)) * 1.5707963267948966
+var _cgos_t1pio2__tanf float64 = float64(int32(1)) * 1.5707963267948966
+var _cgos_t2pio2__tanf float64 = float64(int32(2)) * 1.5707963267948966
+var _cgos_t3pio2__tanf float64 = float64(int32(3)) * 1.5707963267948966
+var _cgos_t4pio2__tanf float64 = float64(int32(4)) * 1.5707963267948966
 
 func Tanf(x float32) float32 {
 	var y float64
@@ -60,17 +60,17 @@ func Tanf(x float32) float32 {
 		if ix <= uint32(1075235811) {
 			return __tandf(func() float64 {
 				if sign != 0 {
-					return float64(x) + t1pio2_cgos__tanf
+					return float64(x) + _cgos_t1pio2__tanf
 				} else {
-					return float64(x) - t1pio2_cgos__tanf
+					return float64(x) - _cgos_t1pio2__tanf
 				}
 			}(), int32(1))
 		} else {
 			return __tandf(func() float64 {
 				if sign != 0 {
-					return float64(x) + t2pio2_cgos__tanf
+					return float64(x) + _cgos_t2pio2__tanf
 				} else {
-					return float64(x) - t2pio2_cgos__tanf
+					return float64(x) - _cgos_t2pio2__tanf
 				}
 			}(), int32(0))
 		}
@@ -79,17 +79,17 @@ func Tanf(x float32) float32 {
 		if ix <= uint32(1085271519) {
 			return __tandf(func() float64 {
 				if sign != 0 {
-					return float64(x) + t3pio2_cgos__tanf
+					return float64(x) + _cgos_t3pio2__tanf
 				} else {
-					return float64(x) - t3pio2_cgos__tanf
+					return float64(x) - _cgos_t3pio2__tanf
 				}
 			}(), int32(1))
 		} else {
 			return __tandf(func() float64 {
 				if sign != 0 {
-					return float64(x) + t4pio2_cgos__tanf
+					return float64(x) + _cgos_t4pio2__tanf
 				} else {
-					return float64(x) - t4pio2_cgos__tanf
+					return float64(x) - _cgos_t4pio2__tanf
 				}
 			}(), int32(0))
 		}

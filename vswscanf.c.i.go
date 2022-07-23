@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func wstring_read_cgos__vswscanf(f *struct__IO_FILE, buf *uint8, len uint64) uint64 {
+func _cgos_wstring_read__vswscanf(f *struct__IO_FILE, buf *uint8, len uint64) uint64 {
 	var src *uint32 = (*uint32)(f.cookie)
 	var k uint64
 	if !(src != nil) {
@@ -34,6 +34,6 @@ func wstring_read_cgos__vswscanf(f *struct__IO_FILE, buf *uint8, len uint64) uin
 func vswscanf(s *uint32, fmt *uint32, ap []interface {
 }) int32 {
 	var buf [256]uint8
-	var f struct__IO_FILE = struct__IO_FILE{0, nil, nil, nil, nil, nil, nil, nil, wstring_read_cgos__vswscanf, nil, nil, (*uint8)(unsafe.Pointer(&buf)), 256, nil, nil, 0, 0, 0, 0, -1, 0, unsafe.Pointer(s), 0, nil, nil, nil, 0, 0, nil, nil, nil}
+	var f struct__IO_FILE = struct__IO_FILE{0, nil, nil, nil, nil, nil, nil, nil, _cgos_wstring_read__vswscanf, nil, nil, (*uint8)(unsafe.Pointer(&buf)), 256, nil, nil, 0, 0, 0, 0, -1, 0, unsafe.Pointer(s), 0, nil, nil, nil, 0, 0, nil, nil, nil}
 	return vfwscanf(&f, fmt, ap)
 }

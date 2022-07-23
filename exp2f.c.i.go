@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func top12_cgos__exp2f(x float32) uint32 {
+func _cgos_top12__exp2f(x float32) uint32 {
 	return *(*uint32)(unsafe.Pointer(&_cgoz_18_exp2f{x})) >> int32(20)
 }
 
@@ -22,9 +22,9 @@ func Exp2f(x float32) float32 {
 	var y float64
 	var s float64
 	xd = float64(x)
-	abstop = top12_cgos__exp2f(x) & uint32(2047)
+	abstop = _cgos_top12__exp2f(x) & uint32(2047)
 	if func() int64 {
-		if abstop >= top12_cgos__exp2f(128) {
+		if abstop >= _cgos_top12__exp2f(128) {
 			return 1
 		} else {
 			return 0
@@ -33,7 +33,7 @@ func Exp2f(x float32) float32 {
 		if *(*uint32)(unsafe.Pointer(&_cgoz_19_exp2f{x})) == *(*uint32)(unsafe.Pointer(&_cgoz_20_exp2f{-X__builtin_inff()})) {
 			return float32(0)
 		}
-		if abstop >= top12_cgos__exp2f(X__builtin_inff()) {
+		if abstop >= _cgos_top12__exp2f(X__builtin_inff()) {
 			return x + x
 		}
 		if x > 0 {

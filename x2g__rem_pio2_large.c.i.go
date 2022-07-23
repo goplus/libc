@@ -2,9 +2,9 @@ package libc
 
 import unsafe "unsafe"
 
-var init_jk_cgos____rem_pio2_large [4]int32 = [4]int32{int32(3), int32(4), int32(4), int32(6)}
-var ipio2_cgos____rem_pio2_large [66]int32 = [66]int32{int32(10680707), int32(7228996), int32(1387004), int32(2578385), int32(16069853), int32(12639074), int32(9804092), int32(4427841), int32(16666979), int32(11263675), int32(12935607), int32(2387514), int32(4345298), int32(14681673), int32(3074569), int32(13734428), int32(16653803), int32(1880361), int32(10960616), int32(8533493), int32(3062596), int32(8710556), int32(7349940), int32(6258241), int32(3772886), int32(3769171), int32(3798172), int32(8675211), int32(12450088), int32(3874808), int32(9961438), int32(366607), int32(15675153), int32(9132554), int32(7151469), int32(3571407), int32(2607881), int32(12013382), int32(4155038), int32(6285869), int32(7677882), int32(13102053), int32(15825725), int32(473591), int32(9065106), int32(15363067), int32(6271263), int32(9264392), int32(5636912), int32(4652155), int32(7056368), int32(13614112), int32(10155062), int32(1944035), int32(9527646), int32(15080200), int32(6658437), int32(6231200), int32(6832269), int32(16767104), int32(5075751), int32(3212806), int32(1398474), int32(7579849), int32(6349435), int32(12618859)}
-var PIo2_cgos____rem_pio2_large [8]float64 = [8]float64{1.5707962512969971, 7.5497894158615964e-8, 5.3903025299577648e-15, 3.2820034158079129e-22, 1.2706557530806761e-29, 1.2293330898111133e-36, 2.7337005381646456e-44, 2.1674168387780482e-51}
+var _cgos_init_jk____rem_pio2_large [4]int32 = [4]int32{int32(3), int32(4), int32(4), int32(6)}
+var _cgos_ipio2____rem_pio2_large [66]int32 = [66]int32{int32(10680707), int32(7228996), int32(1387004), int32(2578385), int32(16069853), int32(12639074), int32(9804092), int32(4427841), int32(16666979), int32(11263675), int32(12935607), int32(2387514), int32(4345298), int32(14681673), int32(3074569), int32(13734428), int32(16653803), int32(1880361), int32(10960616), int32(8533493), int32(3062596), int32(8710556), int32(7349940), int32(6258241), int32(3772886), int32(3769171), int32(3798172), int32(8675211), int32(12450088), int32(3874808), int32(9961438), int32(366607), int32(15675153), int32(9132554), int32(7151469), int32(3571407), int32(2607881), int32(12013382), int32(4155038), int32(6285869), int32(7677882), int32(13102053), int32(15825725), int32(473591), int32(9065106), int32(15363067), int32(6271263), int32(9264392), int32(5636912), int32(4652155), int32(7056368), int32(13614112), int32(10155062), int32(1944035), int32(9527646), int32(15080200), int32(6658437), int32(6231200), int32(6832269), int32(16767104), int32(5075751), int32(3212806), int32(1398474), int32(7579849), int32(6349435), int32(12618859)}
+var _cgos_PIo2____rem_pio2_large [8]float64 = [8]float64{1.5707962512969971, 7.5497894158615964e-8, 5.3903025299577648e-15, 3.2820034158079129e-22, 1.2706557530806761e-29, 1.2293330898111133e-36, 2.7337005381646456e-44, 2.1674168387780482e-51}
 
 func __rem_pio2_large(x *float64, y *float64, e0 int32, nx int32, prec int32) int32 {
 	var jz int32
@@ -26,7 +26,7 @@ func __rem_pio2_large(x *float64, y *float64, e0 int32, nx int32, prec int32) in
 	var f [20]float64
 	var fq [20]float64
 	var q [20]float64
-	jk = *(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&init_jk_cgos____rem_pio2_large)))) + uintptr(prec)*4))
+	jk = *(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&_cgos_init_jk____rem_pio2_large)))) + uintptr(prec)*4))
 	jp = jk
 	jx = nx - int32(1)
 	jv = (e0 - int32(3)) / int32(24)
@@ -49,7 +49,7 @@ func __rem_pio2_large(x *float64, y *float64, e0 int32, nx int32, prec int32) in
 			if j < int32(0) {
 				return 0
 			} else {
-				return float64(*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&ipio2_cgos____rem_pio2_large)))) + uintptr(j)*4)))
+				return float64(*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&_cgos_ipio2____rem_pio2_large)))) + uintptr(j)*4)))
 			}
 		}()
 	}
@@ -150,7 +150,7 @@ recompute:
 			for k = int32(1); *(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&iq)))) + uintptr(jk-k)*4)) == int32(0); k++ {
 			}
 			for i = jz + int32(1); i <= jz+k; i++ {
-				*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&f)))) + uintptr(jx+i)*8)) = float64(*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&ipio2_cgos____rem_pio2_large)))) + uintptr(jv+i)*4)))
+				*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&f)))) + uintptr(jx+i)*8)) = float64(*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&_cgos_ipio2____rem_pio2_large)))) + uintptr(jv+i)*4)))
 				for func() float64 {
 					j = int32(0)
 					return func() (_cgo_ret float64) {
@@ -200,7 +200,7 @@ recompute:
 				return *_cgo_addr
 			}()
 		}(); k <= jp && k <= jz-i; k++ {
-			fw += *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&PIo2_cgos____rem_pio2_large)))) + uintptr(k)*8)) * *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&q)))) + uintptr(i+k)*8))
+			fw += *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&_cgos_PIo2____rem_pio2_large)))) + uintptr(k)*8)) * *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&q)))) + uintptr(i+k)*8))
 		}
 		*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&fq)))) + uintptr(jz-i)*8)) = fw
 	}
