@@ -2,15 +2,15 @@ package libc
 
 import unsafe "unsafe"
 
-var _cgos_o_threshold__expm1 float64 = 709.78271289338397
-var _cgos_ln2_hi__expm1 float64 = 0.69314718036912382
-var _cgos_ln2_lo__expm1 float64 = 1.9082149292705877e-10
-var _cgos_invln2__expm1 float64 = 1.4426950408889634
-var _cgos_Q1__expm1 float64 = -0.033333333333333132
-var _cgos_Q2__expm1 float64 = 0.0015873015872548146
-var _cgos_Q3__expm1 float64 = -7.9365075786748794e-5
-var _cgos_Q4__expm1 float64 = 4.0082178273293624e-6
-var _cgos_Q5__expm1 float64 = -2.0109921818362437e-7
+var _cgos_o_threshold_expm1 float64 = 709.78271289338397
+var _cgos_ln2_hi_expm1 float64 = 0.69314718036912382
+var _cgos_ln2_lo_expm1 float64 = 1.9082149292705877e-10
+var _cgos_invln2_expm1 float64 = 1.4426950408889634
+var _cgos_Q1_expm1 float64 = -0.033333333333333132
+var _cgos_Q2_expm1 float64 = 0.0015873015872548146
+var _cgos_Q3_expm1 float64 = -7.9365075786748794e-5
+var _cgos_Q4_expm1 float64 = 4.0082178273293624e-6
+var _cgos_Q5_expm1 float64 = -2.0109921818362437e-7
 
 func Expm1(x float64) float64 {
 	var y float64
@@ -68,7 +68,7 @@ func Expm1(x float64) float64 {
 		if sign != 0 {
 			return float64(-1)
 		}
-		if x > _cgos_o_threshold__expm1 {
+		if x > _cgos_o_threshold_expm1 {
 			x *= float64(8.9884656743115795e+307)
 			return x
 		}
@@ -76,16 +76,16 @@ func Expm1(x float64) float64 {
 	if hx > uint32(1071001154) {
 		if hx < uint32(1072734898) {
 			if !(sign != 0) {
-				hi = x - _cgos_ln2_hi__expm1
-				lo = _cgos_ln2_lo__expm1
+				hi = x - _cgos_ln2_hi_expm1
+				lo = _cgos_ln2_lo_expm1
 				k = int32(1)
 			} else {
-				hi = x + _cgos_ln2_hi__expm1
-				lo = -_cgos_ln2_lo__expm1
+				hi = x + _cgos_ln2_hi_expm1
+				lo = -_cgos_ln2_lo_expm1
 				k = -1
 			}
 		} else {
-			k = int32(_cgos_invln2__expm1*x + func() float64 {
+			k = int32(_cgos_invln2_expm1*x + func() float64 {
 				if sign != 0 {
 					return -0.5
 				} else {
@@ -93,8 +93,8 @@ func Expm1(x float64) float64 {
 				}
 			}())
 			t = float64(k)
-			hi = x - t*_cgos_ln2_hi__expm1
-			lo = t * _cgos_ln2_lo__expm1
+			hi = x - t*_cgos_ln2_hi_expm1
+			lo = t * _cgos_ln2_lo_expm1
 		}
 		x = hi - lo
 		c = hi - x - lo
@@ -119,7 +119,7 @@ func Expm1(x float64) float64 {
 	}
 	hfx = 0.5 * x
 	hxs = x * hfx
-	r1 = 1 + hxs*(_cgos_Q1__expm1+hxs*(_cgos_Q2__expm1+hxs*(_cgos_Q3__expm1+hxs*(_cgos_Q4__expm1+hxs*_cgos_Q5__expm1))))
+	r1 = 1 + hxs*(_cgos_Q1_expm1+hxs*(_cgos_Q2_expm1+hxs*(_cgos_Q3_expm1+hxs*(_cgos_Q4_expm1+hxs*_cgos_Q5_expm1))))
 	t = 3 - r1*hfx
 	e = hxs * ((r1 - t) / (6 - x*t))
 	if k == int32(0) {

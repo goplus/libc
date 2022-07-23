@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func _cgos_log2_inline__powf(ix uint32) float64 {
+func _cgos_log2_inline_powf(ix uint32) float64 {
 	var z float64
 	var r float64
 	var r2 float64
@@ -42,7 +42,7 @@ type _cgoz_19_powf struct {
 	_i uint32
 }
 
-func _cgos_exp2_inline__powf(xd float64, sign_bias uint32) float32 {
+func _cgos_exp2_inline_powf(xd float64, sign_bias uint32) float32 {
 	var ki uint64
 	var ski uint64
 	var t uint64
@@ -75,7 +75,7 @@ type _cgoz_21_powf struct {
 	_i uint64
 }
 
-func _cgos_checkint__powf(iy uint32) int32 {
+func _cgos_checkint_powf(iy uint32) int32 {
 	var e int32 = int32(iy >> int32(23) & uint32(255))
 	if e < int32(127) {
 		return int32(0)
@@ -91,7 +91,7 @@ func _cgos_checkint__powf(iy uint32) int32 {
 	}
 	return int32(2)
 }
-func _cgos_zeroinfnan__powf(ix uint32) int32 {
+func _cgos_zeroinfnan_powf(ix uint32) int32 {
 	return func() int32 {
 		if uint32(2)*ix-uint32(1) >= 4278190079 {
 			return 1
@@ -107,13 +107,13 @@ func Powf(x float32, y float32) float32 {
 	ix = *(*uint32)(unsafe.Pointer(&_cgoz_22_powf{x}))
 	iy = *(*uint32)(unsafe.Pointer(&_cgoz_23_powf{y}))
 	if func() int64 {
-		if ix-uint32(8388608) >= uint32(2130706432) || _cgos_zeroinfnan__powf(iy) != 0 {
+		if ix-uint32(8388608) >= uint32(2130706432) || _cgos_zeroinfnan_powf(iy) != 0 {
 			return 1
 		} else {
 			return 0
 		}
 	}() == int64(0) {
-		if int64(_cgos_zeroinfnan__powf(iy)) == int64(0) {
+		if int64(_cgos_zeroinfnan_powf(iy)) == int64(0) {
 			if uint32(2)*iy == uint32(0) {
 				return func() float32 {
 					if int32(0) != 0 {
@@ -155,9 +155,9 @@ func Powf(x float32, y float32) float32 {
 			}
 			return y * y
 		}
-		if int64(_cgos_zeroinfnan__powf(ix)) == int64(0) {
+		if int64(_cgos_zeroinfnan_powf(ix)) == int64(0) {
 			var x2 float32 = x * x
-			if ix&uint32(2147483648) != 0 && _cgos_checkint__powf(iy) == int32(1) {
+			if ix&uint32(2147483648) != 0 && _cgos_checkint_powf(iy) == int32(1) {
 				x2 = -x2
 			}
 			return func() float32 {
@@ -169,7 +169,7 @@ func Powf(x float32, y float32) float32 {
 			}()
 		}
 		if ix&uint32(2147483648) != 0 {
-			var yint int32 = _cgos_checkint__powf(iy)
+			var yint int32 = _cgos_checkint_powf(iy)
 			if yint == int32(0) {
 				return __math_invalidf(x)
 			}
@@ -184,7 +184,7 @@ func Powf(x float32, y float32) float32 {
 			ix -= uint32(192937984)
 		}
 	}
-	var logx float64 = _cgos_log2_inline__powf(ix)
+	var logx float64 = _cgos_log2_inline_powf(ix)
 	var ylogx float64 = float64(y) * logx
 	if func() int64 {
 		if *(*uint64)(unsafe.Pointer(&_cgoz_25_powf{ylogx}))>>int32(47)&uint64(65535) >= *(*uint64)(unsafe.Pointer(&_cgoz_26_powf{126 * float64(1)}))>>int32(47) {
@@ -200,7 +200,7 @@ func Powf(x float32, y float32) float32 {
 			return __math_uflowf(sign_bias)
 		}
 	}
-	return _cgos_exp2_inline__powf(ylogx, sign_bias)
+	return _cgos_exp2_inline_powf(ylogx, sign_bias)
 }
 
 type _cgoz_22_powf struct {

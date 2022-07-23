@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func _cgos_specialcase__exp2(tmp float64, sbits uint64, ki uint64) float64 {
+func _cgos_specialcase_exp2(tmp float64, sbits uint64, ki uint64) float64 {
 	var scale float64
 	var y float64
 	if ki&uint64(2147483648) == uint64(0) {
@@ -37,7 +37,7 @@ type _cgoz_19_exp2 struct {
 	_i uint64
 }
 
-func _cgos_top12__exp2(x float64) uint32 {
+func _cgos_top12_exp2(x float64) uint32 {
 	return uint32(*(*uint64)(unsafe.Pointer(&_cgoz_20_exp2{x})) >> int32(52))
 }
 
@@ -57,15 +57,15 @@ func Exp2(x float64) float64 {
 	var scale float64
 	var tail float64
 	var tmp float64
-	abstop = _cgos_top12__exp2(x) & uint32(2047)
+	abstop = _cgos_top12_exp2(x) & uint32(2047)
 	if func() int64 {
-		if abstop-_cgos_top12__exp2(5.5511151231257827e-17) >= _cgos_top12__exp2(512)-_cgos_top12__exp2(5.5511151231257827e-17) {
+		if abstop-_cgos_top12_exp2(5.5511151231257827e-17) >= _cgos_top12_exp2(512)-_cgos_top12_exp2(5.5511151231257827e-17) {
 			return 1
 		} else {
 			return 0
 		}
 	}() == int64(0) {
-		if abstop-_cgos_top12__exp2(5.5511151231257827e-17) >= uint32(2147483648) {
+		if abstop-_cgos_top12_exp2(5.5511151231257827e-17) >= uint32(2147483648) {
 			return func() float64 {
 				if int32(1) != 0 {
 					return 1 + x
@@ -74,11 +74,11 @@ func Exp2(x float64) float64 {
 				}
 			}()
 		}
-		if abstop >= _cgos_top12__exp2(1024) {
+		if abstop >= _cgos_top12_exp2(1024) {
 			if *(*uint64)(unsafe.Pointer(&_cgoz_21_exp2{x})) == *(*uint64)(unsafe.Pointer(&_cgoz_22_exp2{float64(-X__builtin_inff())})) {
 				return float64(0)
 			}
-			if abstop >= _cgos_top12__exp2(float64(X__builtin_inff())) {
+			if abstop >= _cgos_top12_exp2(float64(X__builtin_inff())) {
 				return 1 + x
 			}
 			if !(*(*uint64)(unsafe.Pointer(&_cgoz_23_exp2{x}))>>int32(63) != 0) {
@@ -108,7 +108,7 @@ func Exp2(x float64) float64 {
 			return 0
 		}
 	}() == int64(0) {
-		return _cgos_specialcase__exp2(tmp, sbits, ki)
+		return _cgos_specialcase_exp2(tmp, sbits, ki)
 	}
 	scale = *(*float64)(unsafe.Pointer(&_cgoz_30_exp2{sbits}))
 	return eval_as_double(scale + scale*tmp)

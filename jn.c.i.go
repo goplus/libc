@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-var _cgos_invsqrtpi__jn float64 = 0.56418958354775628
+var _cgos_invsqrtpi_jn float64 = 0.56418958354775628
 
 func Jn(n int32, x float64) float64 {
 	var ix uint32
@@ -61,7 +61,7 @@ func Jn(n int32, x float64) float64 {
 				temp = Cos(x) + Sin(x)
 				break
 			}
-			b = _cgos_invsqrtpi__jn * temp / Sqrt(x)
+			b = _cgos_invsqrtpi_jn * temp / Sqrt(x)
 		} else {
 			a = J0(x)
 			b = J1(x)
@@ -228,7 +228,7 @@ func Yn(n int32, x float64) float64 {
 			temp = Sin(x) - Cos(x)
 			break
 		}
-		b = _cgos_invsqrtpi__jn * temp / Sqrt(x)
+		b = _cgos_invsqrtpi_jn * temp / Sqrt(x)
 	} else {
 		a = Y0(x)
 		b = Y1(x)

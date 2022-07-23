@@ -2,8 +2,8 @@ package libc
 
 import unsafe "unsafe"
 
-var _cgos_pi__atan2 float64 = 3.1415926535897931
-var _cgos_pi_lo__atan2 float64 = 1.2246467991473532e-16
+var _cgos_pi_atan2 float64 = 3.1415926535897931
+var _cgos_pi_lo_atan2 float64 = 1.2246467991473532e-16
 
 func Atan2(y float64, x float64) float64 {
 	var z float64
@@ -104,17 +104,17 @@ func Atan2(y float64, x float64) float64 {
 		case uint32(1):
 			return y
 		case uint32(2):
-			return _cgos_pi__atan2
+			return _cgos_pi_atan2
 		case uint32(3):
-			return -_cgos_pi__atan2
+			return -_cgos_pi_atan2
 		}
 	}
 	if ix|lx == uint32(0) {
 		return func() float64 {
 			if m&uint32(1) != 0 {
-				return -_cgos_pi__atan2 / float64(int32(2))
+				return -_cgos_pi_atan2 / float64(int32(2))
 			} else {
-				return _cgos_pi__atan2 / float64(int32(2))
+				return _cgos_pi_atan2 / float64(int32(2))
 			}
 		}()
 	}
@@ -122,13 +122,13 @@ func Atan2(y float64, x float64) float64 {
 		if iy == uint32(2146435072) {
 			switch m {
 			case uint32(0):
-				return _cgos_pi__atan2 / float64(int32(4))
+				return _cgos_pi_atan2 / float64(int32(4))
 			case uint32(1):
-				return -_cgos_pi__atan2 / float64(int32(4))
+				return -_cgos_pi_atan2 / float64(int32(4))
 			case uint32(2):
-				return float64(int32(3)) * _cgos_pi__atan2 / float64(int32(4))
+				return float64(int32(3)) * _cgos_pi_atan2 / float64(int32(4))
 			case uint32(3):
-				return float64(-3) * _cgos_pi__atan2 / float64(int32(4))
+				return float64(-3) * _cgos_pi_atan2 / float64(int32(4))
 			}
 		} else {
 			switch m {
@@ -137,18 +137,18 @@ func Atan2(y float64, x float64) float64 {
 			case uint32(1):
 				return float64(-0)
 			case uint32(2):
-				return _cgos_pi__atan2
+				return _cgos_pi_atan2
 			case uint32(3):
-				return -_cgos_pi__atan2
+				return -_cgos_pi_atan2
 			}
 		}
 	}
 	if ix+uint32(67108864) < iy || iy == uint32(2146435072) {
 		return func() float64 {
 			if m&uint32(1) != 0 {
-				return -_cgos_pi__atan2 / float64(int32(2))
+				return -_cgos_pi_atan2 / float64(int32(2))
 			} else {
-				return _cgos_pi__atan2 / float64(int32(2))
+				return _cgos_pi_atan2 / float64(int32(2))
 			}
 		}()
 	}
@@ -163,9 +163,9 @@ func Atan2(y float64, x float64) float64 {
 	case uint32(1):
 		return -z
 	case uint32(2):
-		return _cgos_pi__atan2 - (z - _cgos_pi_lo__atan2)
+		return _cgos_pi_atan2 - (z - _cgos_pi_lo_atan2)
 	default:
-		return z - _cgos_pi_lo__atan2 - _cgos_pi__atan2
+		return z - _cgos_pi_lo_atan2 - _cgos_pi_atan2
 	}
 	return 0
 }

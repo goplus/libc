@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func _cgos_top12__pow(x float64) uint32 {
+func _cgos_top12_pow(x float64) uint32 {
 	return uint32(*(*uint64)(unsafe.Pointer(&_cgoz_19_pow{x})) >> int32(52))
 }
 
@@ -10,7 +10,7 @@ type _cgoz_19_pow struct {
 	_f float64
 }
 
-func _cgos_log_inline__pow(ix uint64, tail *float64) float64 {
+func _cgos_log_inline_pow(ix uint64, tail *float64) float64 {
 	var z float64
 	var r float64
 	var y float64
@@ -74,7 +74,7 @@ type _cgoz_21_pow struct {
 	_i uint64
 }
 
-func _cgos_specialcase__pow(tmp float64, sbits uint64, ki uint64) float64 {
+func _cgos_specialcase_pow(tmp float64, sbits uint64, ki uint64) float64 {
 	var scale float64
 	var y float64
 	if ki&uint64(2147483648) == uint64(0) {
@@ -116,7 +116,7 @@ type _cgoz_24_pow struct {
 	_i uint64
 }
 
-func _cgos_exp_inline__pow(x float64, xtail float64, sign_bias uint32) float64 {
+func _cgos_exp_inline_pow(x float64, xtail float64, sign_bias uint32) float64 {
 	var abstop uint32
 	var ki uint64
 	var idx uint64
@@ -129,15 +129,15 @@ func _cgos_exp_inline__pow(x float64, xtail float64, sign_bias uint32) float64 {
 	var scale float64
 	var tail float64
 	var tmp float64
-	abstop = _cgos_top12__pow(x) & uint32(2047)
+	abstop = _cgos_top12_pow(x) & uint32(2047)
 	if func() int64 {
-		if abstop-_cgos_top12__pow(5.5511151231257827e-17) >= _cgos_top12__pow(512)-_cgos_top12__pow(5.5511151231257827e-17) {
+		if abstop-_cgos_top12_pow(5.5511151231257827e-17) >= _cgos_top12_pow(512)-_cgos_top12_pow(5.5511151231257827e-17) {
 			return 1
 		} else {
 			return 0
 		}
 	}() == int64(0) {
-		if abstop-_cgos_top12__pow(5.5511151231257827e-17) >= uint32(2147483648) {
+		if abstop-_cgos_top12_pow(5.5511151231257827e-17) >= uint32(2147483648) {
 			var one float64 = func() float64 {
 				if int32(1) != 0 {
 					return 1 + x
@@ -153,7 +153,7 @@ func _cgos_exp_inline__pow(x float64, xtail float64, sign_bias uint32) float64 {
 				}
 			}()
 		}
-		if abstop >= _cgos_top12__pow(1024) {
+		if abstop >= _cgos_top12_pow(1024) {
 			if *(*uint64)(unsafe.Pointer(&_cgoz_25_pow{x}))>>int32(63) != 0 {
 				return __math_uflow(sign_bias)
 			} else {
@@ -181,7 +181,7 @@ func _cgos_exp_inline__pow(x float64, xtail float64, sign_bias uint32) float64 {
 			return 0
 		}
 	}() == int64(0) {
-		return _cgos_specialcase__pow(tmp, sbits, ki)
+		return _cgos_specialcase_pow(tmp, sbits, ki)
 	}
 	scale = *(*float64)(unsafe.Pointer(&_cgoz_28_pow{sbits}))
 	return eval_as_double(scale + scale*tmp)
@@ -200,7 +200,7 @@ type _cgoz_28_pow struct {
 	_i uint64
 }
 
-func _cgos_checkint__pow(iy uint64) int32 {
+func _cgos_checkint_pow(iy uint64) int32 {
 	var e int32 = int32(iy >> int32(52) & uint64(2047))
 	if e < int32(1023) {
 		return int32(0)
@@ -216,7 +216,7 @@ func _cgos_checkint__pow(iy uint64) int32 {
 	}
 	return int32(2)
 }
-func _cgos_zeroinfnan__pow(i uint64) int32 {
+func _cgos_zeroinfnan_pow(i uint64) int32 {
 	return func() int32 {
 		if uint64(2)*i-uint64(1) >= uint64(2)**(*uint64)(unsafe.Pointer(&_cgoz_29_pow{float64(X__builtin_inff())}))-uint64(1) {
 			return 1
@@ -238,8 +238,8 @@ func Pow(x float64, y float64) float64 {
 	var topy uint32
 	ix = *(*uint64)(unsafe.Pointer(&_cgoz_30_pow{x}))
 	iy = *(*uint64)(unsafe.Pointer(&_cgoz_31_pow{y}))
-	topx = _cgos_top12__pow(x)
-	topy = _cgos_top12__pow(y)
+	topx = _cgos_top12_pow(x)
+	topy = _cgos_top12_pow(y)
 	if func() int64 {
 		if topx-uint32(1) >= uint32(2046) || topy&uint32(2047)-uint32(958) >= uint32(128) {
 			return 1
@@ -247,7 +247,7 @@ func Pow(x float64, y float64) float64 {
 			return 0
 		}
 	}() == int64(0) {
-		if int64(_cgos_zeroinfnan__pow(iy)) == int64(0) {
+		if int64(_cgos_zeroinfnan_pow(iy)) == int64(0) {
 			if uint64(2)*iy == uint64(0) {
 				return func() float64 {
 					if int32(0) != 0 {
@@ -289,9 +289,9 @@ func Pow(x float64, y float64) float64 {
 			}
 			return y * y
 		}
-		if int64(_cgos_zeroinfnan__pow(ix)) == int64(0) {
+		if int64(_cgos_zeroinfnan_pow(ix)) == int64(0) {
 			var x2 float64 = x * x
-			if ix>>int32(63) != 0 && _cgos_checkint__pow(iy) == int32(1) {
+			if ix>>int32(63) != 0 && _cgos_checkint_pow(iy) == int32(1) {
 				x2 = -x2
 			}
 			return func() float64 {
@@ -303,7 +303,7 @@ func Pow(x float64, y float64) float64 {
 			}()
 		}
 		if ix>>int32(63) != 0 {
-			var yint int32 = _cgos_checkint__pow(iy)
+			var yint int32 = _cgos_checkint_pow(iy)
 			if yint == int32(0) {
 				return __math_invalid(x)
 			}
@@ -357,7 +357,7 @@ func Pow(x float64, y float64) float64 {
 		}
 	}
 	var lo float64
-	var hi float64 = _cgos_log_inline__pow(ix, &lo)
+	var hi float64 = _cgos_log_inline_pow(ix, &lo)
 	var ehi float64
 	var elo float64
 	var yhi float64 = *(*float64)(unsafe.Pointer(&_cgoz_41_pow{iy & 18446744073575333888}))
@@ -366,7 +366,7 @@ func Pow(x float64, y float64) float64 {
 	var llo float64 = hi - lhi + lo
 	ehi = yhi * lhi
 	elo = ylo*lhi + y*llo
-	return _cgos_exp_inline__pow(ehi, elo, sign_bias)
+	return _cgos_exp_inline_pow(ehi, elo, sign_bias)
 }
 
 type _cgoz_30_pow struct {

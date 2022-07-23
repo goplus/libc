@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-var _cgos_toint__rint float64 = float64(int32(1)) / 2.2204460492503131e-16
+var _cgos_toint_rint float64 = float64(int32(1)) / 2.2204460492503131e-16
 
 func Rint(x float64) float64 {
 	type _cgoa_18_rint struct {
@@ -17,9 +17,9 @@ func Rint(x float64) float64 {
 		return x
 	}
 	if s != 0 {
-		y = x - _cgos_toint__rint + _cgos_toint__rint
+		y = x - _cgos_toint_rint + _cgos_toint_rint
 	} else {
-		y = x + _cgos_toint__rint - _cgos_toint__rint
+		y = x + _cgos_toint_rint - _cgos_toint_rint
 	}
 	if y == float64(int32(0)) {
 		return func() float64 {

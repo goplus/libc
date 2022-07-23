@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-var _cgos_dummy__fflush *struct__IO_FILE = nil
+var _cgos_dummy_fflush *struct__IO_FILE = nil
 
 func Fflush(f *struct__IO_FILE) int32 {
 	if !(f != nil) {

@@ -2,10 +2,10 @@ package libc
 
 import unsafe "unsafe"
 
-var _cgos_s1pio2__sinf float64 = float64(int32(1)) * 1.5707963267948966
-var _cgos_s2pio2__sinf float64 = float64(int32(2)) * 1.5707963267948966
-var _cgos_s3pio2__sinf float64 = float64(int32(3)) * 1.5707963267948966
-var _cgos_s4pio2__sinf float64 = float64(int32(4)) * 1.5707963267948966
+var _cgos_s1pio2_sinf float64 = float64(int32(1)) * 1.5707963267948966
+var _cgos_s2pio2_sinf float64 = float64(int32(2)) * 1.5707963267948966
+var _cgos_s3pio2_sinf float64 = float64(int32(3)) * 1.5707963267948966
+var _cgos_s4pio2_sinf float64 = float64(int32(4)) * 1.5707963267948966
 
 func Sinf(x float32) float32 {
 	var y float64
@@ -59,32 +59,32 @@ func Sinf(x float32) float32 {
 	if ix <= uint32(1081824209) {
 		if ix <= uint32(1075235811) {
 			if sign != 0 {
-				return -__cosdf(float64(x) + _cgos_s1pio2__sinf)
+				return -__cosdf(float64(x) + _cgos_s1pio2_sinf)
 			} else {
-				return __cosdf(float64(x) - _cgos_s1pio2__sinf)
+				return __cosdf(float64(x) - _cgos_s1pio2_sinf)
 			}
 		}
 		return __sindf(func() float64 {
 			if sign != 0 {
-				return -(float64(x) + _cgos_s2pio2__sinf)
+				return -(float64(x) + _cgos_s2pio2_sinf)
 			} else {
-				return -(float64(x) - _cgos_s2pio2__sinf)
+				return -(float64(x) - _cgos_s2pio2_sinf)
 			}
 		}())
 	}
 	if ix <= uint32(1088565717) {
 		if ix <= uint32(1085271519) {
 			if sign != 0 {
-				return __cosdf(float64(x) + _cgos_s3pio2__sinf)
+				return __cosdf(float64(x) + _cgos_s3pio2_sinf)
 			} else {
-				return -__cosdf(float64(x) - _cgos_s3pio2__sinf)
+				return -__cosdf(float64(x) - _cgos_s3pio2_sinf)
 			}
 		}
 		return __sindf(func() float64 {
 			if sign != 0 {
-				return float64(x) + _cgos_s4pio2__sinf
+				return float64(x) + _cgos_s4pio2_sinf
 			} else {
-				return float64(x) - _cgos_s4pio2__sinf
+				return float64(x) - _cgos_s4pio2_sinf
 			}
 		}())
 	}
