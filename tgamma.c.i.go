@@ -2,16 +2,16 @@ package libc
 
 import unsafe "unsafe"
 
-var _cgos_pi__tgamma float64 = 3.1415926535897931
+var _cgos_pi_tgamma float64 = 3.1415926535897931
 
-func _cgos_sinpi__tgamma(x float64) float64 {
+func _cgos_sinpi_tgamma(x float64) float64 {
 	var n int32
 	x = x * 0.5
 	x = float64(int32(2)) * (x - Floor(x))
 	n = int32(float64(int32(4)) * x)
 	n = (n + int32(1)) / int32(2)
 	x -= float64(n) * 0.5
-	x *= _cgos_pi__tgamma
+	x *= _cgos_pi_tgamma
 	switch n {
 	default:
 		fallthrough
@@ -27,24 +27,24 @@ func _cgos_sinpi__tgamma(x float64) float64 {
 	return 0
 }
 
-var _cgos_gmhalf__tgamma float64 = 5.5246800407767296
-var _cgos_Snum__tgamma [13]float64 = [13]float64{23531376880.410759, 42919803642.649101, 35711959237.355667, 17921034426.037209, 6039542586.3520279, 1439720407.3117216, 248874557.86205417, 31426415.585400194, 2876370.6289353725, 186056.26539522348, 8071.6720023658163, 210.82427775157936, 2.5066282746310002}
-var _cgos_Sden__tgamma [13]float64 = [13]float64{float64(int32(0)), float64(int32(39916800)), float64(int32(120543840)), float64(int32(150917976)), float64(int32(105258076)), float64(int32(45995730)), float64(int32(13339535)), float64(int32(2637558)), float64(int32(357423)), float64(int32(32670)), float64(int32(1925)), float64(int32(66)), float64(int32(1))}
-var _cgos_fact__tgamma [23]float64 = [23]float64{float64(int32(1)), float64(int32(1)), float64(int32(2)), float64(int32(6)), float64(int32(24)), float64(int32(120)), float64(int32(720)), 5040, 40320, 362880, 3628800, 39916800, 479001600, 6227020800, 87178291200, 1307674368000, 20922789888000, 355687428096000, 6402373705728000, 1.21645100408832e+17, 2.43290200817664e+18, 5.109094217170944e+19, 1.1240007277776077e+21}
+var _cgos_gmhalf_tgamma float64 = 5.5246800407767296
+var _cgos_Snum_tgamma [13]float64 = [13]float64{23531376880.410759, 42919803642.649101, 35711959237.355667, 17921034426.037209, 6039542586.3520279, 1439720407.3117216, 248874557.86205417, 31426415.585400194, 2876370.6289353725, 186056.26539522348, 8071.6720023658163, 210.82427775157936, 2.5066282746310002}
+var _cgos_Sden_tgamma [13]float64 = [13]float64{float64(int32(0)), float64(int32(39916800)), float64(int32(120543840)), float64(int32(150917976)), float64(int32(105258076)), float64(int32(45995730)), float64(int32(13339535)), float64(int32(2637558)), float64(int32(357423)), float64(int32(32670)), float64(int32(1925)), float64(int32(66)), float64(int32(1))}
+var _cgos_fact_tgamma [23]float64 = [23]float64{float64(int32(1)), float64(int32(1)), float64(int32(2)), float64(int32(6)), float64(int32(24)), float64(int32(120)), float64(int32(720)), 5040, 40320, 362880, 3628800, 39916800, 479001600, 6227020800, 87178291200, 1307674368000, 20922789888000, 355687428096000, 6402373705728000, 1.21645100408832e+17, 2.43290200817664e+18, 5.109094217170944e+19, 1.1240007277776077e+21}
 
-func _cgos_S__tgamma(x float64) float64 {
+func _cgos_S_tgamma(x float64) float64 {
 	var num float64 = float64(int32(0))
 	var den float64 = float64(int32(0))
 	var i int32
 	if x < float64(int32(8)) {
 		for i = int32(12); i >= int32(0); i-- {
-			num = num*x + *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&_cgos_Snum__tgamma)))) + uintptr(i)*8))
-			den = den*x + *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&_cgos_Sden__tgamma)))) + uintptr(i)*8))
+			num = num*x + *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&_cgos_Snum_tgamma)))) + uintptr(i)*8))
+			den = den*x + *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&_cgos_Sden_tgamma)))) + uintptr(i)*8))
 		}
 	} else {
 		for i = int32(0); i <= int32(12); i++ {
-			num = num/x + *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&_cgos_Snum__tgamma)))) + uintptr(i)*8))
-			den = den/x + *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&_cgos_Sden__tgamma)))) + uintptr(i)*8))
+			num = num/x + *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&_cgos_Snum_tgamma)))) + uintptr(i)*8))
+			den = den/x + *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&_cgos_Sden_tgamma)))) + uintptr(i)*8))
 		}
 	}
 	return num / den
@@ -75,7 +75,7 @@ func Tgamma(x float64) float64 {
 			}() / 0
 		}
 		if x <= float64(184/8) {
-			return *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&_cgos_fact__tgamma)))) + uintptr(int32(x)-int32(1))*8))
+			return *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&_cgos_fact_tgamma)))) + uintptr(int32(x)-int32(1))*8))
 		}
 	}
 	if ix >= uint32(1080492032) {
@@ -107,22 +107,22 @@ func Tgamma(x float64) float64 {
 			return x
 		}
 	}()
-	y = absx + _cgos_gmhalf__tgamma
-	if absx > _cgos_gmhalf__tgamma {
+	y = absx + _cgos_gmhalf_tgamma
+	if absx > _cgos_gmhalf_tgamma {
 		dy = y - absx
-		dy -= _cgos_gmhalf__tgamma
+		dy -= _cgos_gmhalf_tgamma
 	} else {
-		dy = y - _cgos_gmhalf__tgamma
+		dy = y - _cgos_gmhalf_tgamma
 		dy -= absx
 	}
 	z = absx - 0.5
-	r = _cgos_S__tgamma(absx) * Exp(-y)
+	r = _cgos_S_tgamma(absx) * Exp(-y)
 	if x < float64(int32(0)) {
-		r = -_cgos_pi__tgamma / (_cgos_sinpi__tgamma(absx) * absx * r)
+		r = -_cgos_pi_tgamma / (_cgos_sinpi_tgamma(absx) * absx * r)
 		dy = -dy
 		z = -z
 	}
-	r += dy * (_cgos_gmhalf__tgamma + 0.5) * r / y
+	r += dy * (_cgos_gmhalf_tgamma + 0.5) * r / y
 	z = Pow(y, 0.5*z)
 	y = r * z * z
 	return y

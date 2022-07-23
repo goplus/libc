@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-var _cgos_toint__rintf float32 = float32(int32(1)) / 1.1920929e-7
+var _cgos_toint_rintf float32 = float32(int32(1)) / 1.1920929e-7
 
 func Rintf(x float32) float32 {
 	type _cgoa_18_rintf struct {
@@ -17,9 +17,9 @@ func Rintf(x float32) float32 {
 		return x
 	}
 	if s != 0 {
-		y = x - _cgos_toint__rintf + _cgos_toint__rintf
+		y = x - _cgos_toint_rintf + _cgos_toint_rintf
 	} else {
-		y = x + _cgos_toint__rintf - _cgos_toint__rintf
+		y = x + _cgos_toint_rintf - _cgos_toint_rintf
 	}
 	if y == float32(int32(0)) {
 		return func() float32 {

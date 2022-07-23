@@ -14,7 +14,7 @@ func Tmpnam(buf *int8) *int8 {
 				if buf != nil {
 					return buf
 				} else {
-					return (*int8)(unsafe.Pointer(&_cgos_internal__tmpnam))
+					return (*int8)(unsafe.Pointer(&_cgos_internal_tmpnam))
 				}
 			}(), (*int8)(unsafe.Pointer(&s)))
 		}
@@ -22,4 +22,4 @@ func Tmpnam(buf *int8) *int8 {
 	return (*int8)(nil)
 }
 
-var _cgos_internal__tmpnam [20]int8
+var _cgos_internal_tmpnam [20]int8

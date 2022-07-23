@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func _cgos_sq__hypot(hi *float64, lo *float64, x float64) {
+func _cgos_sq_hypot(hi *float64, lo *float64, x float64) {
 	var xh float64
 	var xl float64
 	var xc float64
@@ -58,7 +58,7 @@ func Hypot(x float64, y float64) float64 {
 		x *= float64(5.2601359015483735e+210)
 		y *= float64(5.2601359015483735e+210)
 	}
-	_cgos_sq__hypot(&hx, &lx, x)
-	_cgos_sq__hypot(&hy, &ly, y)
+	_cgos_sq_hypot(&hx, &lx, x)
+	_cgos_sq_hypot(&hy, &ly, y)
 	return z * Sqrt(ly+lx+hy+hx)
 }

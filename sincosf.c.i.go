@@ -2,10 +2,10 @@ package libc
 
 import unsafe "unsafe"
 
-var _cgos_s1pio2__sincosf float64 = float64(int32(1)) * 1.5707963267948966
-var _cgos_s2pio2__sincosf float64 = float64(int32(2)) * 1.5707963267948966
-var _cgos_s3pio2__sincosf float64 = float64(int32(3)) * 1.5707963267948966
-var _cgos_s4pio2__sincosf float64 = float64(int32(4)) * 1.5707963267948966
+var _cgos_s1pio2_sincosf float64 = float64(int32(1)) * 1.5707963267948966
+var _cgos_s2pio2_sincosf float64 = float64(int32(2)) * 1.5707963267948966
+var _cgos_s3pio2_sincosf float64 = float64(int32(3)) * 1.5707963267948966
+var _cgos_s4pio2_sincosf float64 = float64(int32(4)) * 1.5707963267948966
 
 func Sincosf(x float32, sin *float32, cos *float32) {
 	var y float64
@@ -65,26 +65,26 @@ func Sincosf(x float32, sin *float32, cos *float32) {
 	if ix <= uint32(1081824209) {
 		if ix <= uint32(1075235811) {
 			if sign != 0 {
-				*sin = -__cosdf(float64(x) + _cgos_s1pio2__sincosf)
-				*cos = __sindf(float64(x) + _cgos_s1pio2__sincosf)
+				*sin = -__cosdf(float64(x) + _cgos_s1pio2_sincosf)
+				*cos = __sindf(float64(x) + _cgos_s1pio2_sincosf)
 			} else {
-				*sin = __cosdf(_cgos_s1pio2__sincosf - float64(x))
-				*cos = __sindf(_cgos_s1pio2__sincosf - float64(x))
+				*sin = __cosdf(_cgos_s1pio2_sincosf - float64(x))
+				*cos = __sindf(_cgos_s1pio2_sincosf - float64(x))
 			}
 			return
 		}
 		*sin = -__sindf(func() float64 {
 			if sign != 0 {
-				return float64(x) + _cgos_s2pio2__sincosf
+				return float64(x) + _cgos_s2pio2_sincosf
 			} else {
-				return float64(x) - _cgos_s2pio2__sincosf
+				return float64(x) - _cgos_s2pio2_sincosf
 			}
 		}())
 		*cos = -__cosdf(func() float64 {
 			if sign != 0 {
-				return float64(x) + _cgos_s2pio2__sincosf
+				return float64(x) + _cgos_s2pio2_sincosf
 			} else {
-				return float64(x) - _cgos_s2pio2__sincosf
+				return float64(x) - _cgos_s2pio2_sincosf
 			}
 		}())
 		return
@@ -92,26 +92,26 @@ func Sincosf(x float32, sin *float32, cos *float32) {
 	if ix <= uint32(1088565717) {
 		if ix <= uint32(1085271519) {
 			if sign != 0 {
-				*sin = __cosdf(float64(x) + _cgos_s3pio2__sincosf)
-				*cos = -__sindf(float64(x) + _cgos_s3pio2__sincosf)
+				*sin = __cosdf(float64(x) + _cgos_s3pio2_sincosf)
+				*cos = -__sindf(float64(x) + _cgos_s3pio2_sincosf)
 			} else {
-				*sin = -__cosdf(float64(x) - _cgos_s3pio2__sincosf)
-				*cos = __sindf(float64(x) - _cgos_s3pio2__sincosf)
+				*sin = -__cosdf(float64(x) - _cgos_s3pio2_sincosf)
+				*cos = __sindf(float64(x) - _cgos_s3pio2_sincosf)
 			}
 			return
 		}
 		*sin = __sindf(func() float64 {
 			if sign != 0 {
-				return float64(x) + _cgos_s4pio2__sincosf
+				return float64(x) + _cgos_s4pio2_sincosf
 			} else {
-				return float64(x) - _cgos_s4pio2__sincosf
+				return float64(x) - _cgos_s4pio2_sincosf
 			}
 		}())
 		*cos = __cosdf(func() float64 {
 			if sign != 0 {
-				return float64(x) + _cgos_s4pio2__sincosf
+				return float64(x) + _cgos_s4pio2_sincosf
 			} else {
-				return float64(x) - _cgos_s4pio2__sincosf
+				return float64(x) - _cgos_s4pio2_sincosf
 			}
 		}())
 		return

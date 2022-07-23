@@ -2,9 +2,9 @@ package libc
 
 import unsafe "unsafe"
 
-var _cgos_atanhi__atanf [4]float32 = [4]float32{float32(0.46364760398999999), float32(0.78539812565), float32(0.98279368876999995), float32(1.5707962513)}
-var _cgos_atanlo__atanf [4]float32 = [4]float32{float32(5.0121582440000004e-9), float32(3.7748947078999999e-8), float32(3.4473217170000002e-8), float32(7.5497894159e-8)}
-var _cgos_aT__atanf [5]float32 = [5]float32{float32(0.33333328365999998), float32(-0.19999158382000001), float32(0.14253635705000001), float32(-0.10648017377000001), float32(0.061687607318)}
+var _cgos_atanhi_atanf [4]float32 = [4]float32{float32(0.46364760398999999), float32(0.78539812565), float32(0.98279368876999995), float32(1.5707962513)}
+var _cgos_atanlo_atanf [4]float32 = [4]float32{float32(5.0121582440000004e-9), float32(3.7748947078999999e-8), float32(3.4473217170000002e-8), float32(7.5497894159e-8)}
+var _cgos_aT_atanf [5]float32 = [5]float32{float32(0.33333328365999998), float32(-0.19999158382000001), float32(0.14253635705000001), float32(-0.10648017377000001), float32(0.061687607318)}
 
 func Atanf(x float32) float32 {
 	var w float32
@@ -56,7 +56,7 @@ func Atanf(x float32) float32 {
 		}() != 0 {
 			return x
 		}
-		z = *(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer((*float32)(unsafe.Pointer(&_cgos_atanhi__atanf)))) + uintptr(int32(3))*4)) + 7.52316385e-37
+		z = *(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer((*float32)(unsafe.Pointer(&_cgos_atanhi_atanf)))) + uintptr(int32(3))*4)) + 7.52316385e-37
 		return func() float32 {
 			if sign != 0 {
 				return -z
@@ -104,12 +104,12 @@ func Atanf(x float32) float32 {
 	}
 	z = x * x
 	w = z * z
-	s1 = z * (*(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer((*float32)(unsafe.Pointer(&_cgos_aT__atanf)))) + uintptr(int32(0))*4)) + w*(*(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer((*float32)(unsafe.Pointer(&_cgos_aT__atanf)))) + uintptr(int32(2))*4))+w**(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer((*float32)(unsafe.Pointer(&_cgos_aT__atanf)))) + uintptr(int32(4))*4))))
-	s2 = w * (*(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer((*float32)(unsafe.Pointer(&_cgos_aT__atanf)))) + uintptr(int32(1))*4)) + w**(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer((*float32)(unsafe.Pointer(&_cgos_aT__atanf)))) + uintptr(int32(3))*4)))
+	s1 = z * (*(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer((*float32)(unsafe.Pointer(&_cgos_aT_atanf)))) + uintptr(int32(0))*4)) + w*(*(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer((*float32)(unsafe.Pointer(&_cgos_aT_atanf)))) + uintptr(int32(2))*4))+w**(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer((*float32)(unsafe.Pointer(&_cgos_aT_atanf)))) + uintptr(int32(4))*4))))
+	s2 = w * (*(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer((*float32)(unsafe.Pointer(&_cgos_aT_atanf)))) + uintptr(int32(1))*4)) + w**(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer((*float32)(unsafe.Pointer(&_cgos_aT_atanf)))) + uintptr(int32(3))*4)))
 	if id < int32(0) {
 		return x - x*(s1+s2)
 	}
-	z = *(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer((*float32)(unsafe.Pointer(&_cgos_atanhi__atanf)))) + uintptr(id)*4)) - (x*(s1+s2) - *(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer((*float32)(unsafe.Pointer(&_cgos_atanlo__atanf)))) + uintptr(id)*4)) - x)
+	z = *(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer((*float32)(unsafe.Pointer(&_cgos_atanhi_atanf)))) + uintptr(id)*4)) - (x*(s1+s2) - *(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer((*float32)(unsafe.Pointer(&_cgos_atanlo_atanf)))) + uintptr(id)*4)) - x)
 	return func() float32 {
 		if sign != 0 {
 			return -z

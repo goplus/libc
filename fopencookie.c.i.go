@@ -2,18 +2,18 @@ package libc
 
 import unsafe "unsafe"
 
-type _cgos_fcookie__fopencookie struct {
+type _cgos_fcookie_fopencookie struct {
 	cookie  unsafe.Pointer
 	iofuncs struct__IO_cookie_io_functions_t
 }
-type _cgos_cookie_FILE__fopencookie struct {
+type _cgos_cookie_FILE_fopencookie struct {
 	f   struct__IO_FILE
-	fc  _cgos_fcookie__fopencookie
+	fc  _cgos_fcookie_fopencookie
 	buf [1032]uint8
 }
 
-func _cgos_cookieread__fopencookie(f *struct__IO_FILE, buf *uint8, len uint64) uint64 {
-	var fc *_cgos_fcookie__fopencookie = (*_cgos_fcookie__fopencookie)(f.cookie)
+func _cgos_cookieread_fopencookie(f *struct__IO_FILE, buf *uint8, len uint64) uint64 {
+	var fc *_cgos_fcookie_fopencookie = (*_cgos_fcookie_fopencookie)(f.cookie)
 	var ret int64 = int64(-1)
 	var remain uint64 = len
 	var readlen uint64 = uint64(0)
@@ -77,8 +77,8 @@ bail:
 	}()
 	return readlen
 }
-func _cgos_cookiewrite__fopencookie(f *struct__IO_FILE, buf *uint8, len uint64) uint64 {
-	var fc *_cgos_fcookie__fopencookie = (*_cgos_fcookie__fopencookie)(f.cookie)
+func _cgos_cookiewrite_fopencookie(f *struct__IO_FILE, buf *uint8, len uint64) uint64 {
+	var fc *_cgos_fcookie_fopencookie = (*_cgos_fcookie_fopencookie)(f.cookie)
 	var ret int64
 	var len2 uint64 = uint64(uintptr(unsafe.Pointer(f.wpos)) - uintptr(unsafe.Pointer(f.wbase)))
 	if !(fc.iofuncs.write != nil) {
@@ -86,7 +86,7 @@ func _cgos_cookiewrite__fopencookie(f *struct__IO_FILE, buf *uint8, len uint64) 
 	}
 	if len2 != 0 {
 		f.wpos = f.wbase
-		if _cgos_cookiewrite__fopencookie(f, f.wpos, len2) < len2 {
+		if _cgos_cookiewrite_fopencookie(f, f.wpos, len2) < len2 {
 			return uint64(0)
 		}
 	}
@@ -106,8 +106,8 @@ func _cgos_cookiewrite__fopencookie(f *struct__IO_FILE, buf *uint8, len uint64) 
 	}
 	return uint64(ret)
 }
-func _cgos_cookieseek__fopencookie(f *struct__IO_FILE, off int64, whence int32) int64 {
-	var fc *_cgos_fcookie__fopencookie = (*_cgos_fcookie__fopencookie)(f.cookie)
+func _cgos_cookieseek_fopencookie(f *struct__IO_FILE, off int64, whence int32) int64 {
+	var fc *_cgos_fcookie_fopencookie = (*_cgos_fcookie_fopencookie)(f.cookie)
 	var res int32
 	if uint32(whence) > uint32(2) {
 		*__errno_location() = int32(22)
@@ -123,22 +123,22 @@ func _cgos_cookieseek__fopencookie(f *struct__IO_FILE, off int64, whence int32) 
 	}
 	return off
 }
-func _cgos_cookieclose__fopencookie(f *struct__IO_FILE) int32 {
-	var fc *_cgos_fcookie__fopencookie = (*_cgos_fcookie__fopencookie)(f.cookie)
+func _cgos_cookieclose_fopencookie(f *struct__IO_FILE) int32 {
+	var fc *_cgos_fcookie_fopencookie = (*_cgos_fcookie_fopencookie)(f.cookie)
 	if fc.iofuncs.close != nil {
 		return fc.iofuncs.close(fc.cookie)
 	}
 	return int32(0)
 }
 func Fopencookie(cookie unsafe.Pointer, mode *int8, iofuncs struct__IO_cookie_io_functions_t) *struct__IO_FILE {
-	var f *_cgos_cookie_FILE__fopencookie
+	var f *_cgos_cookie_FILE_fopencookie
 	if !(Strchr((*int8)(unsafe.Pointer(&[4]int8{'r', 'w', 'a', '\x00'})), int32(*mode)) != nil) {
 		*__errno_location() = int32(22)
 		return (*struct__IO_FILE)(nil)
 	}
-	if !(func() (_cgo_ret *_cgos_cookie_FILE__fopencookie) {
+	if !(func() (_cgo_ret *_cgos_cookie_FILE_fopencookie) {
 		_cgo_addr := &f
-		*_cgo_addr = (*_cgos_cookie_FILE__fopencookie)(Malloc(1304))
+		*_cgo_addr = (*_cgos_cookie_FILE_fopencookie)(Malloc(1304))
 		return *_cgo_addr
 	}() != nil) {
 		return (*struct__IO_FILE)(nil)
@@ -160,9 +160,9 @@ func Fopencookie(cookie unsafe.Pointer, mode *int8, iofuncs struct__IO_cookie_io
 	f.f.buf = (*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint8)(unsafe.Pointer(&f.buf)))) + uintptr(int32(8))))
 	f.f.buf_size = 1024
 	f.f.lbf = -1
-	f.f.read = _cgos_cookieread__fopencookie
-	f.f.write = _cgos_cookiewrite__fopencookie
-	f.f.seek = _cgos_cookieseek__fopencookie
-	f.f.close = _cgos_cookieclose__fopencookie
+	f.f.read = _cgos_cookieread_fopencookie
+	f.f.write = _cgos_cookiewrite_fopencookie
+	f.f.seek = _cgos_cookieseek_fopencookie
+	f.f.close = _cgos_cookieclose_fopencookie
 	return __ofl_add(&f.f)
 }

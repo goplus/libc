@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func _cgos_top16__log(x float64) uint32 {
+func _cgos_top16_log(x float64) uint32 {
 	return uint32(*(*uint64)(unsafe.Pointer(&_cgoz_20_log{x})) >> int32(48))
 }
 
@@ -29,7 +29,7 @@ func Log(x float64) float64 {
 	var k int32
 	var i int32
 	ix = *(*uint64)(unsafe.Pointer(&_cgoz_21_log{x}))
-	top = _cgos_top16__log(x)
+	top = _cgos_top16_log(x)
 	if func() int64 {
 		if ix-*(*uint64)(unsafe.Pointer(&_cgoz_22_log{1 - 0.0625})) < *(*uint64)(unsafe.Pointer(&_cgoz_23_log{1 + 0.064697265625}))-*(*uint64)(unsafe.Pointer(&_cgoz_24_log{1 - 0.0625})) {
 			return 1

@@ -2,12 +2,12 @@ package libc
 
 import unsafe "unsafe"
 
-var _cgos_o_threshold__expm1f float32 = float32(88.721679687999995)
-var _cgos_ln2_hi__expm1f float32 = float32(0.69313812255999996)
-var _cgos_ln2_lo__expm1f float32 = float32(9.0580006144999996e-6)
-var _cgos_invln2__expm1f float32 = float32(1.4426950216000001)
-var _cgos_Q1__expm1f float32 = float32(-0.033333212137000003)
-var _cgos_Q2__expm1f float32 = float32(0.0015807170421000001)
+var _cgos_o_threshold_expm1f float32 = float32(88.721679687999995)
+var _cgos_ln2_hi_expm1f float32 = float32(0.69313812255999996)
+var _cgos_ln2_lo_expm1f float32 = float32(9.0580006144999996e-6)
+var _cgos_invln2_expm1f float32 = float32(1.4426950216000001)
+var _cgos_Q1_expm1f float32 = float32(-0.033333212137000003)
+var _cgos_Q2_expm1f float32 = float32(0.0015807170421000001)
 
 func Expm1f(x float32) float32 {
 	var y float32
@@ -35,7 +35,7 @@ func Expm1f(x float32) float32 {
 		if sign != 0 {
 			return float32(-1)
 		}
-		if x > _cgos_o_threshold__expm1f {
+		if x > _cgos_o_threshold_expm1f {
 			x *= float32(1.70141183e+38)
 			return x
 		}
@@ -43,16 +43,16 @@ func Expm1f(x float32) float32 {
 	if hx > uint32(1051816472) {
 		if hx < uint32(1065686418) {
 			if !(sign != 0) {
-				hi = x - _cgos_ln2_hi__expm1f
-				lo = _cgos_ln2_lo__expm1f
+				hi = x - _cgos_ln2_hi_expm1f
+				lo = _cgos_ln2_lo_expm1f
 				k = int32(1)
 			} else {
-				hi = x + _cgos_ln2_hi__expm1f
-				lo = -_cgos_ln2_lo__expm1f
+				hi = x + _cgos_ln2_hi_expm1f
+				lo = -_cgos_ln2_lo_expm1f
 				k = -1
 			}
 		} else {
-			k = int32(_cgos_invln2__expm1f*x + func() float32 {
+			k = int32(_cgos_invln2_expm1f*x + func() float32 {
 				if sign != 0 {
 					return -0.5
 				} else {
@@ -60,8 +60,8 @@ func Expm1f(x float32) float32 {
 				}
 			}())
 			t = float32(k)
-			hi = x - t*_cgos_ln2_hi__expm1f
-			lo = t * _cgos_ln2_lo__expm1f
+			hi = x - t*_cgos_ln2_hi_expm1f
+			lo = t * _cgos_ln2_lo_expm1f
 		}
 		x = hi - lo
 		c = hi - x - lo
@@ -86,7 +86,7 @@ func Expm1f(x float32) float32 {
 	}
 	hfx = 0.5 * x
 	hxs = x * hfx
-	r1 = 1 + hxs*(_cgos_Q1__expm1f+hxs*_cgos_Q2__expm1f)
+	r1 = 1 + hxs*(_cgos_Q1_expm1f+hxs*_cgos_Q2_expm1f)
 	t = 3 - r1*hfx
 	e = hxs * ((r1 - t) / (6 - x*t))
 	if k == int32(0) {

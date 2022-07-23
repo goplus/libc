@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func _cgos_dummy____lctrans(msg *int8, lm *struct___locale_map) *int8 {
+func _cgos_dummy___lctrans(msg *int8, lm *struct___locale_map) *int8 {
 	return msg
 }
 func __lctrans(msg *int8, lm *struct___locale_map) *int8 {

@@ -2,15 +2,15 @@ package libc
 
 import unsafe "unsafe"
 
-var _cgos_ln2_hi__log1p float64 = 0.69314718036912382
-var _cgos_ln2_lo__log1p float64 = 1.9082149292705877e-10
-var _cgos_Lg1__log1p float64 = 0.66666666666667351
-var _cgos_Lg2__log1p float64 = 0.39999999999409419
-var _cgos_Lg3__log1p float64 = 0.28571428743662391
-var _cgos_Lg4__log1p float64 = 0.22222198432149784
-var _cgos_Lg5__log1p float64 = 0.1818357216161805
-var _cgos_Lg6__log1p float64 = 0.15313837699209373
-var _cgos_Lg7__log1p float64 = 0.14798198605116586
+var _cgos_ln2_hi_log1p float64 = 0.69314718036912382
+var _cgos_ln2_lo_log1p float64 = 1.9082149292705877e-10
+var _cgos_Lg1_log1p float64 = 0.66666666666667351
+var _cgos_Lg2_log1p float64 = 0.39999999999409419
+var _cgos_Lg3_log1p float64 = 0.28571428743662391
+var _cgos_Lg4_log1p float64 = 0.22222198432149784
+var _cgos_Lg5_log1p float64 = 0.1818357216161805
+var _cgos_Lg6_log1p float64 = 0.15313837699209373
+var _cgos_Lg7_log1p float64 = 0.14798198605116586
 
 func Log1p(x float64) float64 {
 	type _cgoa_18_log1p struct {
@@ -90,9 +90,9 @@ func Log1p(x float64) float64 {
 	s = f / (2 + f)
 	z = s * s
 	w = z * z
-	t1 = w * (_cgos_Lg2__log1p + w*(_cgos_Lg4__log1p+w*_cgos_Lg6__log1p))
-	t2 = z * (_cgos_Lg1__log1p + w*(_cgos_Lg3__log1p+w*(_cgos_Lg5__log1p+w*_cgos_Lg7__log1p)))
+	t1 = w * (_cgos_Lg2_log1p + w*(_cgos_Lg4_log1p+w*_cgos_Lg6_log1p))
+	t2 = z * (_cgos_Lg1_log1p + w*(_cgos_Lg3_log1p+w*(_cgos_Lg5_log1p+w*_cgos_Lg7_log1p)))
 	R = t2 + t1
 	dk = float64(k)
-	return s*(hfsq+R) + (dk*_cgos_ln2_lo__log1p + c) - hfsq + f + dk*_cgos_ln2_hi__log1p
+	return s*(hfsq+R) + (dk*_cgos_ln2_lo_log1p + c) - hfsq + f + dk*_cgos_ln2_hi_log1p
 }
