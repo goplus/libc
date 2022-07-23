@@ -193,6 +193,7 @@ grantpt
 hypot
 hypotf
 hypotl
+id_t
 ilogb
 ilogbf
 ilogbl
@@ -474,6 +475,7 @@ strtoull
 strverscmp
 strxfrm
 strxfrm_l
+suseconds_t
 system
 tan
 tanf
