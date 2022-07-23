@@ -9,12 +9,12 @@ type _cgos_num_fma struct {
 }
 
 func _cgos_normalize_fma(x float64) _cgos_num_fma {
-	var ix uint64 = *(*uint64)(unsafe.Pointer(&_cgoz_20_fma{x}))
+	var ix uint64 = *(*uint64)(unsafe.Pointer(&_cgoz_18_fma{x}))
 	var e int32 = int32(ix >> int32(52))
 	var sign int32 = e & int32(2048)
 	e &= int32(2047)
 	if !(e != 0) {
-		ix = *(*uint64)(unsafe.Pointer(&_cgoz_21_fma{x * 9.2233720368547758e+18}))
+		ix = *(*uint64)(unsafe.Pointer(&_cgoz_19_fma{x * 9.2233720368547758e+18}))
 		e = int32(ix >> int32(52) & uint64(2047))
 		e = func() int32 {
 			if e != 0 {
@@ -31,10 +31,10 @@ func _cgos_normalize_fma(x float64) _cgos_num_fma {
 	return _cgos_num_fma{ix, e, sign}
 }
 
-type _cgoz_20_fma struct {
+type _cgoz_18_fma struct {
 	f float64
 }
-type _cgoz_21_fma struct {
+type _cgoz_19_fma struct {
 	f float64
 }
 

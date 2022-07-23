@@ -1,4 +1,4 @@
-package frexpl
+package acos
 
 import (
 	unsafe "unsafe"

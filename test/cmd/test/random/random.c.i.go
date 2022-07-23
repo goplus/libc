@@ -7,7 +7,7 @@ import (
 	testing "testing"
 )
 
-func chkmissing_cgo1_random(x *int64) int32 {
+func _cgos_chkmissing_random(x *int64) int32 {
 	var d [8]int32 = [8]int32{int32(0)}
 	var i int32
 	for i = int32(0); i < int32(100); i++ {
@@ -20,7 +20,7 @@ func chkmissing_cgo1_random(x *int64) int32 {
 	}
 	return int32(0)
 }
-func chkrepeat_cgo2_random(x *int64) int32 {
+func _cgos_chkrepeat_random(x *int64) int32 {
 	var i int32
 	var j int32
 	for i = int32(0); i < int32(100); i++ {
@@ -33,16 +33,16 @@ func chkrepeat_cgo2_random(x *int64) int32 {
 	return int32(0)
 }
 
-var orx_cgo3_random uint32
+var _cgos_orx_random uint32
 
-func chkones_cgo4_random(x *int64) int32 {
+func _cgos_chkones_random(x *int64) int32 {
 	var i int32
-	orx_cgo3_random = uint32(0)
+	_cgos_orx_random = uint32(0)
 	for i = int32(0); i < int32(20); i++ {
-		orx_cgo3_random |= uint32(*(*int64)(unsafe.Pointer(uintptr(unsafe.Pointer(x)) + uintptr(i)*8)))
+		_cgos_orx_random |= uint32(*(*int64)(unsafe.Pointer(uintptr(unsafe.Pointer(x)) + uintptr(i)*8)))
 	}
 	return func() int32 {
-		if orx_cgo3_random != uint32(2147483647) {
+		if _cgos_orx_random != uint32(2147483647) {
 			return 1
 		} else {
 			return 0
@@ -55,14 +55,14 @@ func checkseed(seed uint32, x *int64) {
 	for i = int32(0); i < int32(100); i++ {
 		*(*int64)(unsafe.Pointer(uintptr(unsafe.Pointer(x)) + uintptr(i)*8)) = libc.Random()
 	}
-	if chkmissing_cgo1_random(x) != 0 {
+	if _cgos_chkmissing_random(x) != 0 {
 		common.T_printf((*int8)(unsafe.Pointer(&[71]int8{'s', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'r', 'a', 'n', 'd', 'o', 'm', '.', 'c', ':', '5', '0', ':', ' ', 'w', 'e', 'a', 'k', ' ', 's', 'e', 'e', 'd', ' ', '%', 'd', ',', ' ', 'm', 'i', 's', 's', 'i', 'n', 'g', ' ', 'p', 'a', 't', 't', 'e', 'r', 'n', ' ', 'i', 'n', ' ', 'l', 'o', 'w', ' ', 'b', 'i', 't', 's', '\n', '\x00'})), seed)
 	}
-	if chkrepeat_cgo2_random(x) != 0 {
+	if _cgos_chkrepeat_random(x) != 0 {
 		common.T_printf((*int8)(unsafe.Pointer(&[57]int8{'s', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'r', 'a', 'n', 'd', 'o', 'm', '.', 'c', ':', '5', '2', ':', ' ', 'w', 'e', 'a', 'k', ' ', 's', 'e', 'e', 'd', ' ', '%', 'd', ',', ' ', 'e', 'x', 'a', 'c', 't', ' ', 'r', 'e', 'p', 'e', 'a', 't', 's', '\n', '\x00'})), seed)
 	}
-	if chkones_cgo4_random(x) != 0 {
-		common.T_printf((*int8)(unsafe.Pointer(&[62]int8{'s', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'r', 'a', 'n', 'd', 'o', 'm', '.', 'c', ':', '5', '4', ':', ' ', 'w', 'e', 'a', 'k', ' ', 's', 'e', 'e', 'd', ' ', '%', 'd', ',', ' ', 'o', 'r', ' ', 'p', 'a', 't', 't', 'e', 'r', 'n', ':', ' ', '0', 'x', '%', '0', '8', 'x', '\n', '\x00'})), seed, orx_cgo3_random)
+	if _cgos_chkones_random(x) != 0 {
+		common.T_printf((*int8)(unsafe.Pointer(&[62]int8{'s', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'r', 'a', 'n', 'd', 'o', 'm', '.', 'c', ':', '5', '4', ':', ' ', 'w', 'e', 'a', 'k', ' ', 's', 'e', 'e', 'd', ' ', '%', 'd', ',', ' ', 'o', 'r', ' ', 'p', 'a', 't', 't', 'e', 'r', 'n', ':', ' ', '0', 'x', '%', '0', '8', 'x', '\n', '\x00'})), seed, _cgos_orx_random)
 	}
 }
 func _cgo_main() int32 {
