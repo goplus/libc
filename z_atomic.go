@@ -21,3 +21,7 @@ func a_cas(p *int32, t int32, s int32) int32 {
 	}
 	return atomic.LoadInt32(p)
 }
+
+func a_fetch_add(p *int32, v int32) int32 {
+	return atomic.AddInt32(p, v)
+}

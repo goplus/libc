@@ -57,9 +57,6 @@ func __wake(addr unsafe.Pointer, cnt int32, priv int32) {
 func _exit(status int32) {
 	panic("notimpl")
 }
-func a_fetch_add(p *int32, v int32) int32 {
-	panic("notimpl")
-}
 func close(fd int32) int32 {
 	panic("notimpl")
 }
