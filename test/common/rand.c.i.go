@@ -5,27 +5,27 @@ import (
 	libc "github.com/goplus/libc"
 )
 
-var seed_cgo1_rand uint64 = uint64(18446744073709551615)
+var _cgos_seed_rand uint64 = uint64(18446744073709551615)
 
-func rand32_cgo2_rand() uint32 {
-	seed_cgo1_rand = uint64(6364136223846793005)*seed_cgo1_rand + uint64(1)
-	return uint32(seed_cgo1_rand >> int32(32))
+func _cgos_rand32_rand() uint32 {
+	_cgos_seed_rand = uint64(6364136223846793005)*_cgos_seed_rand + uint64(1)
+	return uint32(_cgos_seed_rand >> int32(32))
 }
-func rand64_cgo3_rand() uint64 {
-	var u uint64 = uint64(rand32_cgo2_rand())
-	return u<<int32(32) | uint64(rand32_cgo2_rand())
+func _cgos_rand64_rand() uint64 {
+	var u uint64 = uint64(_cgos_rand32_rand())
+	return u<<int32(32) | uint64(_cgos_rand32_rand())
 }
-func frand_cgo4_rand() float64 {
-	return float64(rand64_cgo3_rand()) * 5.4210108624275222e-20
+func _cgos_frand_rand() float64 {
+	return float64(_cgos_rand64_rand()) * 5.4210108624275222e-20
 }
-func frandf_cgo5_rand() float32 {
-	return float32(rand32_cgo2_rand()) * 2.32830644e-10
+func _cgos_frandf_rand() float32 {
+	return float32(_cgos_rand32_rand()) * 2.32830644e-10
 }
-func frandl_cgo6_rand() float64 {
-	return float64(rand64_cgo3_rand()) * 5.42101086242752217004e-20
+func _cgos_frandl_rand() float64 {
+	return float64(_cgos_rand64_rand()) * 5.42101086242752217004e-20
 }
 func T_randseed(s uint64) {
-	seed_cgo1_rand = s
+	_cgos_seed_rand = s
 }
 func T_randn(n uint64) uint64 {
 	var r uint64
@@ -34,7 +34,7 @@ func T_randn(n uint64) uint64 {
 	m -= m % n
 	for func() (_cgo_ret uint64) {
 		_cgo_addr := &r
-		*_cgo_addr = rand64_cgo3_rand()
+		*_cgo_addr = _cgos_rand64_rand()
 		return *_cgo_addr
 	}() >= m {
 	}
@@ -45,9 +45,9 @@ func T_randint(a uint64, b uint64) uint64 {
 	if n != 0 {
 		return a + T_randn(n)
 	}
-	return rand64_cgo3_rand()
+	return _cgos_rand64_rand()
 }
-func shuffle2_cgo7_rand(p *uint64, q *uint64, np uint64, nq uint64) {
+func _cgos_shuffle2_rand(p *uint64, q *uint64, np uint64, nq uint64) {
 	var r uint64
 	var t uint64
 	for np != 0 {
@@ -68,7 +68,7 @@ func shuffle2_cgo7_rand(p *uint64, q *uint64, np uint64, nq uint64) {
 	}
 }
 func T_shuffle(p *uint64, n uint64) {
-	shuffle2_cgo7_rand(p, nil, n, uint64(0))
+	_cgos_shuffle2_rand(p, nil, n, uint64(0))
 }
 func T_randrange(p *uint64, n uint64) {
 	var i uint64
@@ -77,7 +77,7 @@ func T_randrange(p *uint64, n uint64) {
 	}
 	T_shuffle(p, n)
 }
-func insert_cgo8_rand(tab *uint64, len uint64, v uint64) int32 {
+func _cgos_insert_rand(tab *uint64, len uint64, v uint64) int32 {
 	var i uint64 = uint64(v & uint64(len-uint64(1)))
 	var j uint64 = uint64(1)
 	for *(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer(tab)) + uintptr(i)*8)) != 0 {
@@ -143,9 +143,9 @@ func T_choose(n uint64, k uint64, p *uint64) int32 {
 			*(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer(tab)) + uintptr(i-k)*8)) = uint64(i)
 		}
 		if uint64(k) < n-uint64(k) {
-			shuffle2_cgo7_rand(p, tab, k, uint64(n-uint64(k)))
+			_cgos_shuffle2_rand(p, tab, k, uint64(n-uint64(k)))
 		} else {
-			shuffle2_cgo7_rand(tab, p, uint64(n-uint64(k)), k)
+			_cgos_shuffle2_rand(tab, p, uint64(n-uint64(k)), k)
 		}
 		libc.Free(unsafe.Pointer(tab))
 		return int32(0)
@@ -157,7 +157,7 @@ func T_choose(n uint64, k uint64, p *uint64) int32 {
 		return -1
 	}
 	for i = uint64(0); i < k; i++ {
-		for insert_cgo8_rand(tab, len, T_randn(n)+uint64(1)) != 0 {
+		for _cgos_insert_rand(tab, len, T_randn(n)+uint64(1)) != 0 {
 		}
 	}
 	for i = uint64(0); i < len; i++ {

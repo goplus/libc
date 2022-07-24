@@ -472,6 +472,16 @@ strtold_l
 strtoll
 strtoul
 strtoull
+struct__IO_FILE
+struct__IO_cookie_io_functions_t
+struct___locale_struct
+struct___mbstate_t
+struct___pthread
+struct___sigset_t
+struct_iovec
+struct_timespec
+struct_timeval
+struct_winsize
 strverscmp
 strxfrm
 strxfrm_l
@@ -507,6 +517,7 @@ uint8_t
 uintmax_t
 uintptr_t
 ungetc
+union__G_fpos64_t
 unlockpt
 unsetenv
 useconds_t
