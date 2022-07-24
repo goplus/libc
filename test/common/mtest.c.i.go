@@ -304,7 +304,7 @@ type _cgoa_3_mtest struct {
 var eflags [5]_cgoa_3_mtest = [5]_cgoa_3_mtest{_cgoa_3_mtest{int32(0), (*int8)(unsafe.Pointer(&[8]int8{'I', 'N', 'E', 'X', 'A', 'C', 'T', '\x00'}))}, _cgoa_3_mtest{int32(0), (*int8)(unsafe.Pointer(&[8]int8{'I', 'N', 'V', 'A', 'L', 'I', 'D', '\x00'}))}, _cgoa_3_mtest{int32(0), (*int8)(unsafe.Pointer(&[10]int8{'D', 'I', 'V', 'B', 'Y', 'Z', 'E', 'R', 'O', '\x00'}))}, _cgoa_3_mtest{int32(0), (*int8)(unsafe.Pointer(&[10]int8{'U', 'N', 'D', 'E', 'R', 'F', 'L', 'O', 'W', '\x00'}))}, _cgoa_3_mtest{int32(0), (*int8)(unsafe.Pointer(&[9]int8{'O', 'V', 'E', 'R', 'F', 'L', 'O', 'W', '\x00'}))}}
 
 func Estr(f int32) *int8 {
-	var p *int8 = (*int8)(unsafe.Pointer(&buf_cgo4_mtest))
+	var p *int8 = (*int8)(unsafe.Pointer(&_cgos_buf_mtest))
 	var i int32
 	var all int32 = int32(0)
 	for i = int32(0); uint64(i) < 5; i++ {
@@ -336,10 +336,10 @@ func Estr(f int32) *int8 {
 			return (*int8)(unsafe.Pointer(&[2]int8{'0', '\x00'}))
 		}
 	}()))
-	return (*int8)(unsafe.Pointer(&buf_cgo4_mtest))
+	return (*int8)(unsafe.Pointer(&_cgos_buf_mtest))
 }
 
-var buf_cgo4_mtest [256]int8
+var _cgos_buf_mtest [256]int8
 
 func Rstr(r int32) *int8 {
 	switch r {
