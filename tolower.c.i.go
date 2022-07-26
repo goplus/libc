@@ -18,6 +18,6 @@ func Tolower(c int32) int32 {
 	}
 	return c
 }
-func __tolower_l(c int32, l *struct___locale_struct) int32 {
+func __tolower_l(c int32, l *Struct___locale_struct) int32 {
 	return Tolower(c)
 }

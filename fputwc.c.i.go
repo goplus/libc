@@ -2,15 +2,15 @@ package libc
 
 import unsafe "unsafe"
 
-func __fputwc_unlocked(c uint32, f *struct__IO_FILE) uint32 {
+func __fputwc_unlocked(c uint32, f *Struct__IO_FILE) uint32 {
 	var mbc [4]int8
 	var l int32
-	var ploc **struct___locale_struct = &__pthread_self().locale
-	var loc *struct___locale_struct = *ploc
-	if f.mode <= int32(0) {
+	var ploc **Struct___locale_struct = &__pthread_self().Locale
+	var loc *Struct___locale_struct = *ploc
+	if f.Mode <= int32(0) {
 		fwide(f, int32(1))
 	}
-	*ploc = f.locale
+	*ploc = f.Locale
 	if func() int32 {
 		if int32(0) != 0 {
 			return Isascii(int32(c))
@@ -25,10 +25,10 @@ func __fputwc_unlocked(c uint32, f *struct__IO_FILE) uint32 {
 		}
 	}() != 0 {
 		c = uint32(func() int32 {
-			if int32(uint8(c)) != f.lbf && uintptr(unsafe.Pointer(f.wpos)) != uintptr(unsafe.Pointer(f.wend)) {
+			if int32(uint8(c)) != f.Lbf && uintptr(unsafe.Pointer(f.Wpos)) != uintptr(unsafe.Pointer(f.Wend)) {
 				return int32(func() (_cgo_ret uint8) {
 					_cgo_addr := &*func() (_cgo_ret *uint8) {
-						_cgo_addr := &f.wpos
+						_cgo_addr := &f.Wpos
 						_cgo_ret = *_cgo_addr
 						*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 						return
@@ -40,12 +40,12 @@ func __fputwc_unlocked(c uint32, f *struct__IO_FILE) uint32 {
 				return __overflow(f, int32(uint8(c)))
 			}
 		}())
-	} else if uintptr(unsafe.Pointer((*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(f.wpos))+uintptr(int32(4)))))) < uintptr(unsafe.Pointer(f.wend)) {
-		l = Wctomb((*int8)(unsafe.Pointer(f.wpos)), c)
+	} else if uintptr(unsafe.Pointer((*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(f.Wpos))+uintptr(int32(4)))))) < uintptr(unsafe.Pointer(f.Wend)) {
+		l = Wctomb((*int8)(unsafe.Pointer(f.Wpos)), c)
 		if l < int32(0) {
 			c = uint32(4294967295)
 		} else {
-			*(*uintptr)(unsafe.Pointer(&f.wpos)) += uintptr(l)
+			*(*uintptr)(unsafe.Pointer(&f.Wpos)) += uintptr(l)
 		}
 	} else {
 		l = Wctomb((*int8)(unsafe.Pointer(&mbc)), c)
@@ -54,14 +54,14 @@ func __fputwc_unlocked(c uint32, f *struct__IO_FILE) uint32 {
 		}
 	}
 	if c == uint32(4294967295) {
-		f.flags |= uint32(32)
+		f.Flags |= uint32(32)
 	}
 	*ploc = loc
 	return c
 }
-func fputwc(c uint32, f *struct__IO_FILE) uint32 {
+func fputwc(c uint32, f *Struct__IO_FILE) uint32 {
 	var __need_unlock int32 = func() int32 {
-		if f.lock >= int32(0) {
+		if f.Lock >= int32(0) {
 			return __lockfile(f)
 		} else {
 			return int32(0)

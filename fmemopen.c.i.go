@@ -10,16 +10,16 @@ type _cgos_cookie_fmemopen struct {
 	mode int32
 }
 type _cgos_mem_FILE_fmemopen struct {
-	f    struct__IO_FILE
+	f    Struct__IO_FILE
 	c    _cgos_cookie_fmemopen
 	buf  [1032]uint8
 	buf2 [0]uint8
 }
 
-func _cgos_mseek_fmemopen(f *struct__IO_FILE, off int64, whence int32) int64 {
+func _cgos_mseek_fmemopen(f *Struct__IO_FILE, off int64, whence int32) int64 {
 
 	var base int64
-	var c *_cgos_cookie_fmemopen = (*_cgos_cookie_fmemopen)(f.cookie)
+	var c *_cgos_cookie_fmemopen = (*_cgos_cookie_fmemopen)(f.Cookie)
 	if !(uint32(whence) > uint32(2)) {
 		goto _cgol_1
 	}
@@ -39,35 +39,35 @@ _cgol_2:
 		return *_cgo_addr
 	}())
 }
-func _cgos_mread_fmemopen(f *struct__IO_FILE, buf *uint8, len uint64) uint64 {
-	var c *_cgos_cookie_fmemopen = (*_cgos_cookie_fmemopen)(f.cookie)
+func _cgos_mread_fmemopen(f *Struct__IO_FILE, buf *uint8, len uint64) uint64 {
+	var c *_cgos_cookie_fmemopen = (*_cgos_cookie_fmemopen)(f.Cookie)
 	var rem uint64 = c.len - c.pos
 	if c.pos > c.len {
 		rem = uint64(0)
 	}
 	if len > rem {
 		len = rem
-		f.flags |= uint32(16)
+		f.Flags |= uint32(16)
 	}
 	Memcpy(unsafe.Pointer(buf), unsafe.Pointer((*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(c.buf))+uintptr(c.pos)))), len)
 	c.pos += len
 	rem -= len
-	if rem > f.buf_size {
-		rem = f.buf_size
+	if rem > f.Buf_size {
+		rem = f.Buf_size
 	}
-	f.rpos = f.buf
-	f.rend = (*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(f.buf)) + uintptr(rem)))
-	Memcpy(unsafe.Pointer(f.rpos), unsafe.Pointer((*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(c.buf))+uintptr(c.pos)))), rem)
+	f.Rpos = f.Buf
+	f.Rend = (*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(f.Buf)) + uintptr(rem)))
+	Memcpy(unsafe.Pointer(f.Rpos), unsafe.Pointer((*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(c.buf))+uintptr(c.pos)))), rem)
 	c.pos += rem
 	return len
 }
-func _cgos_mwrite_fmemopen(f *struct__IO_FILE, buf *uint8, len uint64) uint64 {
-	var c *_cgos_cookie_fmemopen = (*_cgos_cookie_fmemopen)(f.cookie)
+func _cgos_mwrite_fmemopen(f *Struct__IO_FILE, buf *uint8, len uint64) uint64 {
+	var c *_cgos_cookie_fmemopen = (*_cgos_cookie_fmemopen)(f.Cookie)
 	var rem uint64
-	var len2 uint64 = uint64(uintptr(unsafe.Pointer(f.wpos)) - uintptr(unsafe.Pointer(f.wbase)))
+	var len2 uint64 = uint64(uintptr(unsafe.Pointer(f.Wpos)) - uintptr(unsafe.Pointer(f.Wbase)))
 	if len2 != 0 {
-		f.wpos = f.wbase
-		if _cgos_mwrite_fmemopen(f, f.wpos, len2) < len2 {
+		f.Wpos = f.Wbase
+		if _cgos_mwrite_fmemopen(f, f.Wpos, len2) < len2 {
 			return uint64(0)
 		}
 	}
@@ -84,16 +84,16 @@ func _cgos_mwrite_fmemopen(f *struct__IO_FILE, buf *uint8, len uint64) uint64 {
 		c.len = c.pos
 		if c.len < c.size {
 			*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(c.buf)) + uintptr(c.len))) = uint8(0)
-		} else if f.flags&uint32(4) != 0 && c.size != 0 {
+		} else if f.Flags&uint32(4) != 0 && c.size != 0 {
 			*(*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer(c.buf)) + uintptr(c.size-uint64(1)))) = uint8(0)
 		}
 	}
 	return len
 }
-func _cgos_mclose_fmemopen(m *struct__IO_FILE) int32 {
+func _cgos_mclose_fmemopen(m *Struct__IO_FILE) int32 {
 	return int32(0)
 }
-func Fmemopen(buf unsafe.Pointer, size uint64, mode *int8) *struct__IO_FILE {
+func Fmemopen(buf unsafe.Pointer, size uint64, mode *int8) *Struct__IO_FILE {
 	var f *_cgos_mem_FILE_fmemopen
 	var plus int32 = func() int32 {
 		if !!(Strchr(mode, '+') != nil) {
@@ -104,11 +104,11 @@ func Fmemopen(buf unsafe.Pointer, size uint64, mode *int8) *struct__IO_FILE {
 	}()
 	if !(Strchr((*int8)(unsafe.Pointer(&[4]int8{'r', 'w', 'a', '\x00'})), int32(*mode)) != nil) {
 		*__errno_location() = int32(22)
-		return (*struct__IO_FILE)(nil)
+		return (*Struct__IO_FILE)(nil)
 	}
 	if !(buf != nil) && size > uint64(2147483647) {
 		*__errno_location() = int32(12)
-		return (*struct__IO_FILE)(nil)
+		return (*Struct__IO_FILE)(nil)
 	}
 	f = (*_cgos_mem_FILE_fmemopen)(Malloc(1300 + func() uint64 {
 		if buf != nil {
@@ -118,14 +118,14 @@ func Fmemopen(buf unsafe.Pointer, size uint64, mode *int8) *struct__IO_FILE {
 		}
 	}()))
 	if !(f != nil) {
-		return (*struct__IO_FILE)(nil)
+		return (*Struct__IO_FILE)(nil)
 	}
 	Memset(unsafe.Pointer(f), int32(0), 268)
-	f.f.cookie = unsafe.Pointer(&f.c)
-	f.f.fd = -1
-	f.f.lbf = -1
-	f.f.buf = (*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint8)(unsafe.Pointer(&f.buf)))) + uintptr(int32(8))))
-	f.f.buf_size = 1024
+	f.f.Cookie = unsafe.Pointer(&f.c)
+	f.f.Fd = -1
+	f.f.Lbf = -1
+	f.f.Buf = (*uint8)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint8)(unsafe.Pointer(&f.buf)))) + uintptr(int32(8))))
+	f.f.Buf_size = 1024
 	if !(buf != nil) {
 		buf = unsafe.Pointer((*uint8)(unsafe.Pointer(&f.buf2)))
 		Memset(buf, int32(0), size)
@@ -134,7 +134,7 @@ func Fmemopen(buf unsafe.Pointer, size uint64, mode *int8) *struct__IO_FILE {
 	f.c.size = size
 	f.c.mode = int32(*mode)
 	if !(plus != 0) {
-		f.f.flags = uint32(func() int32 {
+		f.f.Flags = uint32(func() int32 {
 			if int32(*mode) == 'r' {
 				return int32(8)
 			} else {
@@ -153,12 +153,12 @@ func Fmemopen(buf unsafe.Pointer, size uint64, mode *int8) *struct__IO_FILE {
 	} else if plus != 0 {
 		*f.c.buf = uint8(0)
 	}
-	f.f.read = _cgos_mread_fmemopen
-	f.f.write = _cgos_mwrite_fmemopen
-	f.f.seek = _cgos_mseek_fmemopen
-	f.f.close = _cgos_mclose_fmemopen
+	f.f.Read = _cgos_mread_fmemopen
+	f.f.Write = _cgos_mwrite_fmemopen
+	f.f.Seek = _cgos_mseek_fmemopen
+	f.f.Close = _cgos_mclose_fmemopen
 	if !(__libc.threaded != 0) {
-		f.f.lock = -1
+		f.f.Lock = -1
 	}
 	return __ofl_add(&f.f)
 }

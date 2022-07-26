@@ -2,15 +2,15 @@ package libc
 
 import unsafe "unsafe"
 
-func forkpty(pm *int32, name *int8, tio *struct_termios, ws *struct_winsize) int32 {
+func forkpty(pm *int32, name *int8, tio *struct_termios, ws *Struct_winsize) int32 {
 	var m int32
 	var s int32
 	var ec int32 = int32(0)
 	var p [2]int32
 	var cs int32
 	var pid int32 = -1
-	var set struct___sigset_t
-	var oldset struct___sigset_t
+	var set Struct___sigset_t
+	var oldset Struct___sigset_t
 	if openpty(&m, &s, name, tio, ws) < int32(0) {
 		return -1
 	}

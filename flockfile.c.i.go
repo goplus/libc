@@ -1,6 +1,6 @@
 package libc
 
-func Flockfile(f *struct__IO_FILE) {
+func Flockfile(f *Struct__IO_FILE) {
 	if !(Ftrylockfile(f) != 0) {
 		return
 	}

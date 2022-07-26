@@ -2,10 +2,10 @@ package libc
 
 import unsafe "unsafe"
 
-func Pclose(f *struct__IO_FILE) int32 {
+func Pclose(f *Struct__IO_FILE) int32 {
 	var status int32
 	var r int32
-	var pid int32 = f.pipe_pid
+	var pid int32 = f.Pipe_pid
 	Fclose(f)
 	for func() (_cgo_ret int32) {
 		_cgo_addr := &r

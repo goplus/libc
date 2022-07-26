@@ -2,10 +2,10 @@ package libc
 
 import unsafe "unsafe"
 
-func Tmpfile() *struct__IO_FILE {
+func Tmpfile() *Struct__IO_FILE {
 	var s [20]int8 = [20]int8{'/', 't', 'm', 'p', '/', 't', 'm', 'p', 'f', 'i', 'l', 'e', '_', 'X', 'X', 'X', 'X', 'X', 'X', '\x00'}
 	var fd int32
-	var f *struct__IO_FILE
+	var f *Struct__IO_FILE
 	var try int32
 	for try = int32(0); try < int32(100); try++ {
 		__randname((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&s)))) + uintptr(int32(13)))))
@@ -19,5 +19,5 @@ func Tmpfile() *struct__IO_FILE {
 			return f
 		}
 	}
-	return (*struct__IO_FILE)(nil)
+	return (*Struct__IO_FILE)(nil)
 }

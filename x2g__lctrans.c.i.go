@@ -9,5 +9,5 @@ func __lctrans(msg *int8, lm *struct___locale_map) *int8 {
 	return __lctrans_impl(msg, lm)
 }
 func __lctrans_cur(msg *int8) *int8 {
-	return __lctrans_impl(msg, *(**struct___locale_map)(unsafe.Pointer(uintptr(unsafe.Pointer((**struct___locale_map)(unsafe.Pointer(&__pthread_self().locale.cat)))) + uintptr(int32(5))*8)))
+	return __lctrans_impl(msg, *(**struct___locale_map)(unsafe.Pointer(uintptr(unsafe.Pointer((**struct___locale_map)(unsafe.Pointer(&__pthread_self().Locale.Cat)))) + uintptr(int32(5))*8)))
 }

@@ -7,7 +7,7 @@ func _cgos_reap_wordexp(pid int32) {
 	for waitpid(pid, &status, int32(0)) < int32(0) && *__errno_location() == int32(4) {
 	}
 }
-func _cgos_getword_wordexp(f *struct__IO_FILE) *int8 {
+func _cgos_getword_wordexp(f *Struct__IO_FILE) *int8 {
 	var s *int8 = nil
 	return func() *int8 {
 		if Getdelim(&s, (*uint64)(unsafe.Pointer(&[1]uint64{uint64(0)})), int32(0), f) < int64(0) {
@@ -33,12 +33,12 @@ func _cgos_do_wordexp_wordexp(s *int8, we *_cgoa_18_wordexp, flags int32) int32 
 		}
 	}()
 	var err int32 = int32(0)
-	var f *struct__IO_FILE
+	var f *Struct__IO_FILE
 	var wc uint64 = uint64(0)
 	var wv **int8 = nil
 	var p [2]int32
 	var pid int32
-	var set struct___sigset_t
+	var set Struct___sigset_t
 	if flags&int32(8) != 0 {
 		wordfree(we)
 	}

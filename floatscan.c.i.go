@@ -2,15 +2,15 @@ package libc
 
 import unsafe "unsafe"
 
-func _cgos_scanexp_floatscan(f *struct__IO_FILE, pok int32) int64 {
+func _cgos_scanexp_floatscan(f *Struct__IO_FILE, pok int32) int64 {
 	var c int32
 	var x int32
 	var y int64
 	var neg int32 = int32(0)
 	c = func() int32 {
-		if uintptr(unsafe.Pointer(f.rpos)) != uintptr(unsafe.Pointer(f.shend)) {
+		if uintptr(unsafe.Pointer(f.Rpos)) != uintptr(unsafe.Pointer(f.Shend)) {
 			return int32(*func() (_cgo_ret *uint8) {
-				_cgo_addr := &f.rpos
+				_cgo_addr := &f.Rpos
 				_cgo_ret = *_cgo_addr
 				*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 				return
@@ -28,9 +28,9 @@ func _cgos_scanexp_floatscan(f *struct__IO_FILE, pok int32) int64 {
 			}
 		}()
 		c = func() int32 {
-			if uintptr(unsafe.Pointer(f.rpos)) != uintptr(unsafe.Pointer(f.shend)) {
+			if uintptr(unsafe.Pointer(f.Rpos)) != uintptr(unsafe.Pointer(f.Shend)) {
 				return int32(*func() (_cgo_ret *uint8) {
-					_cgo_addr := &f.rpos
+					_cgo_addr := &f.Rpos
 					_cgo_ret = *_cgo_addr
 					*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 					return
@@ -40,10 +40,10 @@ func _cgos_scanexp_floatscan(f *struct__IO_FILE, pok int32) int64 {
 			}
 		}()
 		if uint32(c-'0') >= uint32(10) && pok != 0 {
-			if f.shlim >= int64(0) {
+			if f.Shlim >= int64(0) {
 				func() int {
 					_ = func() (_cgo_ret *uint8) {
-						_cgo_addr := &f.rpos
+						_cgo_addr := &f.Rpos
 						_cgo_ret = *_cgo_addr
 						*(*uintptr)(unsafe.Pointer(_cgo_addr))--
 						return
@@ -59,10 +59,10 @@ func _cgos_scanexp_floatscan(f *struct__IO_FILE, pok int32) int64 {
 		}
 	}
 	if uint32(c-'0') >= uint32(10) {
-		if f.shlim >= int64(0) {
+		if f.Shlim >= int64(0) {
 			func() int {
 				_ = func() (_cgo_ret *uint8) {
-					_cgo_addr := &f.rpos
+					_cgo_addr := &f.Rpos
 					_cgo_ret = *_cgo_addr
 					*(*uintptr)(unsafe.Pointer(_cgo_addr))--
 					return
@@ -78,9 +78,9 @@ func _cgos_scanexp_floatscan(f *struct__IO_FILE, pok int32) int64 {
 		return -9223372036854775808
 	}
 	for x = int32(0); uint32(c-'0') < uint32(10) && x < 214748364; c = func() int32 {
-		if uintptr(unsafe.Pointer(f.rpos)) != uintptr(unsafe.Pointer(f.shend)) {
+		if uintptr(unsafe.Pointer(f.Rpos)) != uintptr(unsafe.Pointer(f.Shend)) {
 			return int32(*func() (_cgo_ret *uint8) {
-				_cgo_addr := &f.rpos
+				_cgo_addr := &f.Rpos
 				_cgo_ret = *_cgo_addr
 				*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 				return
@@ -92,9 +92,9 @@ func _cgos_scanexp_floatscan(f *struct__IO_FILE, pok int32) int64 {
 		x = int32(10)*x + c - '0'
 	}
 	for y = int64(x); uint32(c-'0') < uint32(10) && y < 92233720368547758; c = func() int32 {
-		if uintptr(unsafe.Pointer(f.rpos)) != uintptr(unsafe.Pointer(f.shend)) {
+		if uintptr(unsafe.Pointer(f.Rpos)) != uintptr(unsafe.Pointer(f.Shend)) {
 			return int32(*func() (_cgo_ret *uint8) {
-				_cgo_addr := &f.rpos
+				_cgo_addr := &f.Rpos
 				_cgo_ret = *_cgo_addr
 				*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 				return
@@ -106,9 +106,9 @@ func _cgos_scanexp_floatscan(f *struct__IO_FILE, pok int32) int64 {
 		y = int64(10)*y + int64(c) - int64('0')
 	}
 	for ; uint32(c-'0') < uint32(10); c = func() int32 {
-		if uintptr(unsafe.Pointer(f.rpos)) != uintptr(unsafe.Pointer(f.shend)) {
+		if uintptr(unsafe.Pointer(f.Rpos)) != uintptr(unsafe.Pointer(f.Shend)) {
 			return int32(*func() (_cgo_ret *uint8) {
-				_cgo_addr := &f.rpos
+				_cgo_addr := &f.Rpos
 				_cgo_ret = *_cgo_addr
 				*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 				return
@@ -118,10 +118,10 @@ func _cgos_scanexp_floatscan(f *struct__IO_FILE, pok int32) int64 {
 		}
 	}() {
 	}
-	if f.shlim >= int64(0) {
+	if f.Shlim >= int64(0) {
 		func() int {
 			_ = func() (_cgo_ret *uint8) {
-				_cgo_addr := &f.rpos
+				_cgo_addr := &f.Rpos
 				_cgo_ret = *_cgo_addr
 				*(*uintptr)(unsafe.Pointer(_cgo_addr))--
 				return
@@ -142,7 +142,7 @@ func _cgos_scanexp_floatscan(f *struct__IO_FILE, pok int32) int64 {
 		}
 	}()
 }
-func _cgos_decfloat_floatscan(f *struct__IO_FILE, c int32, bits int32, emin int32, sign int32, pok int32) float64 {
+func _cgos_decfloat_floatscan(f *Struct__IO_FILE, c int32, bits int32, emin int32, sign int32, pok int32) float64 {
 	var x [128]uint32
 	var i int32
 	var j int32
@@ -165,9 +165,9 @@ func _cgos_decfloat_floatscan(f *struct__IO_FILE, c int32, bits int32, emin int3
 	j = int32(0)
 	k = int32(0)
 	for ; c == '0'; c = func() int32 {
-		if uintptr(unsafe.Pointer(f.rpos)) != uintptr(unsafe.Pointer(f.shend)) {
+		if uintptr(unsafe.Pointer(f.Rpos)) != uintptr(unsafe.Pointer(f.Shend)) {
 			return int32(*func() (_cgo_ret *uint8) {
-				_cgo_addr := &f.rpos
+				_cgo_addr := &f.Rpos
 				_cgo_ret = *_cgo_addr
 				*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 				return
@@ -181,9 +181,9 @@ func _cgos_decfloat_floatscan(f *struct__IO_FILE, c int32, bits int32, emin int3
 	if c == '.' {
 		gotrad = int32(1)
 		for c = func() int32 {
-			if uintptr(unsafe.Pointer(f.rpos)) != uintptr(unsafe.Pointer(f.shend)) {
+			if uintptr(unsafe.Pointer(f.Rpos)) != uintptr(unsafe.Pointer(f.Shend)) {
 				return int32(*func() (_cgo_ret *uint8) {
-					_cgo_addr := &f.rpos
+					_cgo_addr := &f.Rpos
 					_cgo_ret = *_cgo_addr
 					*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 					return
@@ -192,9 +192,9 @@ func _cgos_decfloat_floatscan(f *struct__IO_FILE, c int32, bits int32, emin int3
 				return __shgetc(f)
 			}
 		}(); c == '0'; c = func() int32 {
-			if uintptr(unsafe.Pointer(f.rpos)) != uintptr(unsafe.Pointer(f.shend)) {
+			if uintptr(unsafe.Pointer(f.Rpos)) != uintptr(unsafe.Pointer(f.Shend)) {
 				return int32(*func() (_cgo_ret *uint8) {
-					_cgo_addr := &f.rpos
+					_cgo_addr := &f.Rpos
 					_cgo_ret = *_cgo_addr
 					*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 					return
@@ -216,9 +216,9 @@ func _cgos_decfloat_floatscan(f *struct__IO_FILE, c int32, bits int32, emin int3
 	}
 	*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&x)))) + uintptr(int32(0))*4)) = uint32(0)
 	for ; uint32(c-'0') < uint32(10) || c == '.'; c = func() int32 {
-		if uintptr(unsafe.Pointer(f.rpos)) != uintptr(unsafe.Pointer(f.shend)) {
+		if uintptr(unsafe.Pointer(f.Rpos)) != uintptr(unsafe.Pointer(f.Shend)) {
 			return int32(*func() (_cgo_ret *uint8) {
-				_cgo_addr := &f.rpos
+				_cgo_addr := &f.Rpos
 				_cgo_ret = *_cgo_addr
 				*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 				return
@@ -267,10 +267,10 @@ func _cgos_decfloat_floatscan(f *struct__IO_FILE, c int32, bits int32, emin int3
 		e10 = _cgos_scanexp_floatscan(f, pok)
 		if e10 == -9223372036854775808 {
 			if pok != 0 {
-				if f.shlim >= int64(0) {
+				if f.Shlim >= int64(0) {
 					func() int {
 						_ = func() (_cgo_ret *uint8) {
-							_cgo_addr := &f.rpos
+							_cgo_addr := &f.Rpos
 							_cgo_ret = *_cgo_addr
 							*(*uintptr)(unsafe.Pointer(_cgo_addr))--
 							return
@@ -291,10 +291,10 @@ func _cgos_decfloat_floatscan(f *struct__IO_FILE, c int32, bits int32, emin int3
 		}
 		lrp += e10
 	} else if c >= int32(0) {
-		if f.shlim >= int64(0) {
+		if f.Shlim >= int64(0) {
 			func() int {
 				_ = func() (_cgo_ret *uint8) {
-					_cgo_addr := &f.rpos
+					_cgo_addr := &f.Rpos
 					_cgo_ret = *_cgo_addr
 					*(*uintptr)(unsafe.Pointer(_cgo_addr))--
 					return
@@ -514,7 +514,7 @@ func _cgos_decfloat_floatscan(f *struct__IO_FILE, c int32, bits int32, emin int3
 var _cgos_th_floatscan [2]uint32 = [2]uint32{uint32(9007199), uint32(254740991)}
 var _cgos_p10s_floatscan [8]int32 = [8]int32{int32(10), int32(100), int32(1000), int32(10000), int32(100000), int32(1000000), int32(10000000), int32(100000000)}
 
-func _cgos_hexfloat_floatscan(f *struct__IO_FILE, bits int32, emin int32, sign int32, pok int32) float64 {
+func _cgos_hexfloat_floatscan(f *Struct__IO_FILE, bits int32, emin int32, sign int32, pok int32) float64 {
 	var x uint32 = uint32(0)
 	var y float64 = float64(int32(0))
 	var scale float64 = float64(int32(1))
@@ -528,9 +528,9 @@ func _cgos_hexfloat_floatscan(f *struct__IO_FILE, bits int32, emin int32, sign i
 	var d int32
 	var c int32
 	c = func() int32 {
-		if uintptr(unsafe.Pointer(f.rpos)) != uintptr(unsafe.Pointer(f.shend)) {
+		if uintptr(unsafe.Pointer(f.Rpos)) != uintptr(unsafe.Pointer(f.Shend)) {
 			return int32(*func() (_cgo_ret *uint8) {
-				_cgo_addr := &f.rpos
+				_cgo_addr := &f.Rpos
 				_cgo_ret = *_cgo_addr
 				*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 				return
@@ -540,9 +540,9 @@ func _cgos_hexfloat_floatscan(f *struct__IO_FILE, bits int32, emin int32, sign i
 		}
 	}()
 	for ; c == '0'; c = func() int32 {
-		if uintptr(unsafe.Pointer(f.rpos)) != uintptr(unsafe.Pointer(f.shend)) {
+		if uintptr(unsafe.Pointer(f.Rpos)) != uintptr(unsafe.Pointer(f.Shend)) {
 			return int32(*func() (_cgo_ret *uint8) {
-				_cgo_addr := &f.rpos
+				_cgo_addr := &f.Rpos
 				_cgo_ret = *_cgo_addr
 				*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 				return
@@ -556,9 +556,9 @@ func _cgos_hexfloat_floatscan(f *struct__IO_FILE, bits int32, emin int32, sign i
 	if c == '.' {
 		gotrad = int32(1)
 		c = func() int32 {
-			if uintptr(unsafe.Pointer(f.rpos)) != uintptr(unsafe.Pointer(f.shend)) {
+			if uintptr(unsafe.Pointer(f.Rpos)) != uintptr(unsafe.Pointer(f.Shend)) {
 				return int32(*func() (_cgo_ret *uint8) {
-					_cgo_addr := &f.rpos
+					_cgo_addr := &f.Rpos
 					_cgo_ret = *_cgo_addr
 					*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 					return
@@ -569,9 +569,9 @@ func _cgos_hexfloat_floatscan(f *struct__IO_FILE, bits int32, emin int32, sign i
 		}()
 		for rp = int64(0); c == '0'; func() int64 {
 			c = func() int32 {
-				if uintptr(unsafe.Pointer(f.rpos)) != uintptr(unsafe.Pointer(f.shend)) {
+				if uintptr(unsafe.Pointer(f.Rpos)) != uintptr(unsafe.Pointer(f.Shend)) {
 					return int32(*func() (_cgo_ret *uint8) {
-						_cgo_addr := &f.rpos
+						_cgo_addr := &f.Rpos
 						_cgo_ret = *_cgo_addr
 						*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 						return
@@ -591,9 +591,9 @@ func _cgos_hexfloat_floatscan(f *struct__IO_FILE, bits int32, emin int32, sign i
 		}
 	}
 	for ; uint32(c-'0') < uint32(10) || uint32(c|int32(32)-'a') < uint32(6) || c == '.'; c = func() int32 {
-		if uintptr(unsafe.Pointer(f.rpos)) != uintptr(unsafe.Pointer(f.shend)) {
+		if uintptr(unsafe.Pointer(f.Rpos)) != uintptr(unsafe.Pointer(f.Shend)) {
 			return int32(*func() (_cgo_ret *uint8) {
-				_cgo_addr := &f.rpos
+				_cgo_addr := &f.Rpos
 				_cgo_ret = *_cgo_addr
 				*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 				return
@@ -631,10 +631,10 @@ func _cgos_hexfloat_floatscan(f *struct__IO_FILE, bits int32, emin int32, sign i
 		}
 	}
 	if !(gotdig != 0) {
-		if f.shlim >= int64(0) {
+		if f.Shlim >= int64(0) {
 			func() int {
 				_ = func() (_cgo_ret *uint8) {
-					_cgo_addr := &f.rpos
+					_cgo_addr := &f.Rpos
 					_cgo_ret = *_cgo_addr
 					*(*uintptr)(unsafe.Pointer(_cgo_addr))--
 					return
@@ -648,10 +648,10 @@ func _cgos_hexfloat_floatscan(f *struct__IO_FILE, bits int32, emin int32, sign i
 			}()
 		}
 		if pok != 0 {
-			if f.shlim >= int64(0) {
+			if f.Shlim >= int64(0) {
 				func() int {
 					_ = func() (_cgo_ret *uint8) {
-						_cgo_addr := &f.rpos
+						_cgo_addr := &f.Rpos
 						_cgo_ret = *_cgo_addr
 						*(*uintptr)(unsafe.Pointer(_cgo_addr))--
 						return
@@ -665,10 +665,10 @@ func _cgos_hexfloat_floatscan(f *struct__IO_FILE, bits int32, emin int32, sign i
 				}()
 			}
 			if gotrad != 0 {
-				if f.shlim >= int64(0) {
+				if f.Shlim >= int64(0) {
 					func() int {
 						_ = func() (_cgo_ret *uint8) {
-							_cgo_addr := &f.rpos
+							_cgo_addr := &f.Rpos
 							_cgo_ret = *_cgo_addr
 							*(*uintptr)(unsafe.Pointer(_cgo_addr))--
 							return
@@ -705,10 +705,10 @@ func _cgos_hexfloat_floatscan(f *struct__IO_FILE, bits int32, emin int32, sign i
 		e2 = _cgos_scanexp_floatscan(f, pok)
 		if e2 == -9223372036854775808 {
 			if pok != 0 {
-				if f.shlim >= int64(0) {
+				if f.Shlim >= int64(0) {
 					func() int {
 						_ = func() (_cgo_ret *uint8) {
-							_cgo_addr := &f.rpos
+							_cgo_addr := &f.Rpos
 							_cgo_ret = *_cgo_addr
 							*(*uintptr)(unsafe.Pointer(_cgo_addr))--
 							return
@@ -727,10 +727,10 @@ func _cgos_hexfloat_floatscan(f *struct__IO_FILE, bits int32, emin int32, sign i
 			}
 			e2 = int64(0)
 		}
-	} else if f.shlim >= int64(0) {
+	} else if f.Shlim >= int64(0) {
 		func() int {
 			_ = func() (_cgo_ret *uint8) {
-				_cgo_addr := &f.rpos
+				_cgo_addr := &f.Rpos
 				_cgo_ret = *_cgo_addr
 				*(*uintptr)(unsafe.Pointer(_cgo_addr))--
 				return
@@ -791,7 +791,7 @@ func _cgos_hexfloat_floatscan(f *struct__IO_FILE, bits int32, emin int32, sign i
 	}
 	return Scalbnl(y, int32(e2))
 }
-func __floatscan(f *struct__IO_FILE, prec int32, pok int32) float64 {
+func __floatscan(f *Struct__IO_FILE, prec int32, pok int32) float64 {
 	var sign int32 = int32(1)
 	var i uint64
 	var bits int32
@@ -813,12 +813,12 @@ func __floatscan(f *struct__IO_FILE, prec int32, pok int32) float64 {
 	default:
 		return float64(int32(0))
 	}
-	for __isspace(func() (_cgo_ret int32) {
+	for X__isspace(func() (_cgo_ret int32) {
 		_cgo_addr := &c
 		*_cgo_addr = func() int32 {
-			if uintptr(unsafe.Pointer(f.rpos)) != uintptr(unsafe.Pointer(f.shend)) {
+			if uintptr(unsafe.Pointer(f.Rpos)) != uintptr(unsafe.Pointer(f.Shend)) {
 				return int32(*func() (_cgo_ret *uint8) {
-					_cgo_addr := &f.rpos
+					_cgo_addr := &f.Rpos
 					_cgo_ret = *_cgo_addr
 					*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 					return
@@ -839,9 +839,9 @@ func __floatscan(f *struct__IO_FILE, prec int32, pok int32) float64 {
 			}
 		}()
 		c = func() int32 {
-			if uintptr(unsafe.Pointer(f.rpos)) != uintptr(unsafe.Pointer(f.shend)) {
+			if uintptr(unsafe.Pointer(f.Rpos)) != uintptr(unsafe.Pointer(f.Shend)) {
 				return int32(*func() (_cgo_ret *uint8) {
-					_cgo_addr := &f.rpos
+					_cgo_addr := &f.Rpos
 					_cgo_ret = *_cgo_addr
 					*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 					return
@@ -854,9 +854,9 @@ func __floatscan(f *struct__IO_FILE, prec int32, pok int32) float64 {
 	for i = uint64(0); i < uint64(8) && c|int32(32) == int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&[9]int8{'i', 'n', 'f', 'i', 'n', 'i', 't', 'y', '\x00'})))) + uintptr(i)))); i++ {
 		if i < uint64(7) {
 			c = func() int32 {
-				if uintptr(unsafe.Pointer(f.rpos)) != uintptr(unsafe.Pointer(f.shend)) {
+				if uintptr(unsafe.Pointer(f.Rpos)) != uintptr(unsafe.Pointer(f.Shend)) {
 					return int32(*func() (_cgo_ret *uint8) {
-						_cgo_addr := &f.rpos
+						_cgo_addr := &f.Rpos
 						_cgo_ret = *_cgo_addr
 						*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 						return
@@ -869,10 +869,10 @@ func __floatscan(f *struct__IO_FILE, prec int32, pok int32) float64 {
 	}
 	if i == uint64(3) || i == uint64(8) || i > uint64(3) && pok != 0 {
 		if i != uint64(8) {
-			if f.shlim >= int64(0) {
+			if f.Shlim >= int64(0) {
 				func() int {
 					_ = func() (_cgo_ret *uint8) {
-						_cgo_addr := &f.rpos
+						_cgo_addr := &f.Rpos
 						_cgo_ret = *_cgo_addr
 						*(*uintptr)(unsafe.Pointer(_cgo_addr))--
 						return
@@ -887,10 +887,10 @@ func __floatscan(f *struct__IO_FILE, prec int32, pok int32) float64 {
 			}
 			if pok != 0 {
 				for ; i > uint64(3); i-- {
-					if f.shlim >= int64(0) {
+					if f.Shlim >= int64(0) {
 						func() int {
 							_ = func() (_cgo_ret *uint8) {
-								_cgo_addr := &f.rpos
+								_cgo_addr := &f.Rpos
 								_cgo_ret = *_cgo_addr
 								*(*uintptr)(unsafe.Pointer(_cgo_addr))--
 								return
@@ -912,9 +912,9 @@ func __floatscan(f *struct__IO_FILE, prec int32, pok int32) float64 {
 		for i = uint64(0); i < uint64(3) && c|int32(32) == int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&[4]int8{'n', 'a', 'n', '\x00'})))) + uintptr(i)))); i++ {
 			if i < uint64(2) {
 				c = func() int32 {
-					if uintptr(unsafe.Pointer(f.rpos)) != uintptr(unsafe.Pointer(f.shend)) {
+					if uintptr(unsafe.Pointer(f.Rpos)) != uintptr(unsafe.Pointer(f.Shend)) {
 						return int32(*func() (_cgo_ret *uint8) {
-							_cgo_addr := &f.rpos
+							_cgo_addr := &f.Rpos
 							_cgo_ret = *_cgo_addr
 							*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 							return
@@ -928,9 +928,9 @@ func __floatscan(f *struct__IO_FILE, prec int32, pok int32) float64 {
 	}
 	if i == uint64(3) {
 		if func() int32 {
-			if uintptr(unsafe.Pointer(f.rpos)) != uintptr(unsafe.Pointer(f.shend)) {
+			if uintptr(unsafe.Pointer(f.Rpos)) != uintptr(unsafe.Pointer(f.Shend)) {
 				return int32(*func() (_cgo_ret *uint8) {
-					_cgo_addr := &f.rpos
+					_cgo_addr := &f.Rpos
 					_cgo_ret = *_cgo_addr
 					*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 					return
@@ -939,10 +939,10 @@ func __floatscan(f *struct__IO_FILE, prec int32, pok int32) float64 {
 				return __shgetc(f)
 			}
 		}() != '(' {
-			if f.shlim >= int64(0) {
+			if f.Shlim >= int64(0) {
 				func() int {
 					_ = func() (_cgo_ret *uint8) {
-						_cgo_addr := &f.rpos
+						_cgo_addr := &f.Rpos
 						_cgo_ret = *_cgo_addr
 						*(*uintptr)(unsafe.Pointer(_cgo_addr))--
 						return
@@ -959,9 +959,9 @@ func __floatscan(f *struct__IO_FILE, prec int32, pok int32) float64 {
 		}
 		for i = uint64(1); ; i++ {
 			c = func() int32 {
-				if uintptr(unsafe.Pointer(f.rpos)) != uintptr(unsafe.Pointer(f.shend)) {
+				if uintptr(unsafe.Pointer(f.Rpos)) != uintptr(unsafe.Pointer(f.Shend)) {
 					return int32(*func() (_cgo_ret *uint8) {
-						_cgo_addr := &f.rpos
+						_cgo_addr := &f.Rpos
 						_cgo_ret = *_cgo_addr
 						*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 						return
@@ -976,10 +976,10 @@ func __floatscan(f *struct__IO_FILE, prec int32, pok int32) float64 {
 			if c == ')' {
 				return float64(X__builtin_nanf((*int8)(unsafe.Pointer(&[1]int8{'\x00'}))))
 			}
-			if f.shlim >= int64(0) {
+			if f.Shlim >= int64(0) {
 				func() int {
 					_ = func() (_cgo_ret *uint8) {
-						_cgo_addr := &f.rpos
+						_cgo_addr := &f.Rpos
 						_cgo_ret = *_cgo_addr
 						*(*uintptr)(unsafe.Pointer(_cgo_addr))--
 						return
@@ -1003,10 +1003,10 @@ func __floatscan(f *struct__IO_FILE, prec int32, pok int32) float64 {
 				*_cgo_addr--
 				return
 			}() != 0 {
-				if f.shlim >= int64(0) {
+				if f.Shlim >= int64(0) {
 					func() int {
 						_ = func() (_cgo_ret *uint8) {
-							_cgo_addr := &f.rpos
+							_cgo_addr := &f.Rpos
 							_cgo_ret = *_cgo_addr
 							*(*uintptr)(unsafe.Pointer(_cgo_addr))--
 							return
@@ -1025,10 +1025,10 @@ func __floatscan(f *struct__IO_FILE, prec int32, pok int32) float64 {
 		return float64(X__builtin_nanf((*int8)(unsafe.Pointer(&[1]int8{'\x00'}))))
 	}
 	if i != 0 {
-		if f.shlim >= int64(0) {
+		if f.Shlim >= int64(0) {
 			func() int {
 				_ = func() (_cgo_ret *uint8) {
-					_cgo_addr := &f.rpos
+					_cgo_addr := &f.Rpos
 					_cgo_ret = *_cgo_addr
 					*(*uintptr)(unsafe.Pointer(_cgo_addr))--
 					return
@@ -1047,9 +1047,9 @@ func __floatscan(f *struct__IO_FILE, prec int32, pok int32) float64 {
 	}
 	if c == '0' {
 		c = func() int32 {
-			if uintptr(unsafe.Pointer(f.rpos)) != uintptr(unsafe.Pointer(f.shend)) {
+			if uintptr(unsafe.Pointer(f.Rpos)) != uintptr(unsafe.Pointer(f.Shend)) {
 				return int32(*func() (_cgo_ret *uint8) {
-					_cgo_addr := &f.rpos
+					_cgo_addr := &f.Rpos
 					_cgo_ret = *_cgo_addr
 					*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 					return
@@ -1061,10 +1061,10 @@ func __floatscan(f *struct__IO_FILE, prec int32, pok int32) float64 {
 		if c|int32(32) == 'x' {
 			return _cgos_hexfloat_floatscan(f, bits, emin, sign, pok)
 		}
-		if f.shlim >= int64(0) {
+		if f.Shlim >= int64(0) {
 			func() int {
 				_ = func() (_cgo_ret *uint8) {
-					_cgo_addr := &f.rpos
+					_cgo_addr := &f.Rpos
 					_cgo_ret = *_cgo_addr
 					*(*uintptr)(unsafe.Pointer(_cgo_addr))--
 					return

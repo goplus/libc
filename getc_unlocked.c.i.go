@@ -2,11 +2,11 @@ package libc
 
 import unsafe "unsafe"
 
-func Getc_unlocked(f *struct__IO_FILE) int32 {
+func Getc_unlocked(f *Struct__IO_FILE) int32 {
 	return func() int32 {
-		if uintptr(unsafe.Pointer(f.rpos)) != uintptr(unsafe.Pointer(f.rend)) {
+		if uintptr(unsafe.Pointer(f.Rpos)) != uintptr(unsafe.Pointer(f.Rend)) {
 			return int32(*func() (_cgo_ret *uint8) {
-				_cgo_addr := &f.rpos
+				_cgo_addr := &f.Rpos
 				_cgo_ret = *_cgo_addr
 				*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 				return

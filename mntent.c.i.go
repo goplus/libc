@@ -5,16 +5,16 @@ import unsafe "unsafe"
 var _cgos_internal_buf_mntent *int8
 var _cgos_internal_bufsize_mntent uint64
 
-func setmntent(name *int8, mode *int8) *struct__IO_FILE {
+func setmntent(name *int8, mode *int8) *Struct__IO_FILE {
 	return Fopen(name, mode)
 }
-func endmntent(f *struct__IO_FILE) int32 {
+func endmntent(f *Struct__IO_FILE) int32 {
 	if f != nil {
 		Fclose(f)
 	}
 	return int32(1)
 }
-func getmntent_r(f *struct__IO_FILE, mnt *struct_mntent, linebuf *int8, buflen int32) *struct_mntent {
+func getmntent_r(f *Struct__IO_FILE, mnt *struct_mntent, linebuf *int8, buflen int32) *struct_mntent {
 	var cnt int32
 	var n [8]int32
 	var use_internal int32 = func() int32 {
@@ -56,13 +56,13 @@ func getmntent_r(f *struct__IO_FILE, mnt *struct_mntent, linebuf *int8, buflen i
 	mnt.mnt_opts = (*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(linebuf)) + uintptr(*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&n)))) + uintptr(int32(6))*4)))))
 	return mnt
 }
-func getmntent(f *struct__IO_FILE) *struct_mntent {
+func getmntent(f *Struct__IO_FILE) *struct_mntent {
 	return getmntent_r(f, &_cgos_mnt_mntent, (*int8)(unsafe.Pointer(&_cgos_internal_buf_mntent)), int32(0))
 }
 
 var _cgos_mnt_mntent struct_mntent
 
-func addmntent(f *struct__IO_FILE, mnt *struct_mntent) int32 {
+func addmntent(f *Struct__IO_FILE, mnt *struct_mntent) int32 {
 	if Fseek(f, int64(0), int32(2)) != 0 {
 		return int32(1)
 	}

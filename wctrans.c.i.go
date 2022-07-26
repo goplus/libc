@@ -20,9 +20,9 @@ func towctrans(wc uint32, trans *int32) uint32 {
 	}
 	return wc
 }
-func __wctrans_l(s *int8, l *struct___locale_struct) *int32 {
+func __wctrans_l(s *int8, l *Struct___locale_struct) *int32 {
 	return wctrans(s)
 }
-func __towctrans_l(c uint32, t *int32, l *struct___locale_struct) uint32 {
+func __towctrans_l(c uint32, t *int32, l *Struct___locale_struct) uint32 {
 	return towctrans(c, t)
 }

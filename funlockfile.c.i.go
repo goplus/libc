@@ -1,11 +1,11 @@
 package libc
 
-func Funlockfile(f *struct__IO_FILE) {
-	if f.lockcount == int64(1) {
+func Funlockfile(f *Struct__IO_FILE) {
+	if f.Lockcount == int64(1) {
 		__unlist_locked_file(f)
-		f.lockcount = int64(0)
+		f.Lockcount = int64(0)
 		__unlockfile(f)
 	} else {
-		f.lockcount--
+		f.Lockcount--
 	}
 }

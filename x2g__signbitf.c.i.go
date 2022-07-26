@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func __signbitf(x float32) int32 {
+func X__signbitf(x float32) int32 {
 	type _cgoa_18___signbitf struct {
 		f float32
 	}

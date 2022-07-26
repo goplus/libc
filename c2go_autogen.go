@@ -5,10 +5,10 @@ import unsafe "unsafe"
 type struct___dirstream struct {
 }
 
-func Fdopen(int32, *int8) *struct__IO_FILE {
+func Fdopen(int32, *int8) *Struct__IO_FILE {
 	panic("notimpl")
 }
-func Ftrylockfile(*struct__IO_FILE) int32 {
+func Ftrylockfile(*Struct__IO_FILE) int32 {
 	panic("notimpl")
 }
 func Mblen(*int8, uint64) int32 {
@@ -20,7 +20,7 @@ func Mbtowc(*uint32, *int8, uint64) int32 {
 func Sqrtf(float32) float32 {
 	panic("notimpl")
 }
-func Vfscanf(*struct__IO_FILE, *int8, []interface {
+func Vfscanf(*Struct__IO_FILE, *int8, []interface {
 }) int32 {
 	panic("notimpl")
 }
@@ -39,13 +39,13 @@ func __futexwait(addr unsafe.Pointer, val int32, priv int32) {
 func __randname(*int8) *int8 {
 	panic("notimpl")
 }
-func __register_locked_file(*struct__IO_FILE, *struct___pthread) {
+func __register_locked_file(*Struct__IO_FILE, *Struct___pthread) {
 	panic("notimpl")
 }
 func __restore_sigs(unsafe.Pointer) {
 	panic("notimpl")
 }
-func __unlist_locked_file(*struct__IO_FILE) {
+func __unlist_locked_file(*Struct__IO_FILE) {
 	panic("notimpl")
 }
 func __vm_wait() {
@@ -102,7 +102,7 @@ func kill(int32, int32) int32 {
 func lstat(*int8, *struct_stat) int32 {
 	panic("notimpl")
 }
-func mbrtowc(*uint32, *int8, uint64, *struct___mbstate_t) uint64 {
+func mbrtowc(*uint32, *int8, uint64, *Struct___mbstate_t) uint64 {
 	panic("notimpl")
 }
 func open(*int8, int32, ...interface {
@@ -115,7 +115,7 @@ func pipe2(fd *int32, flag int32) int32 {
 func pthread_setcancelstate(int32, *int32) int32 {
 	panic("notimpl")
 }
-func pthread_sigmask(int32, *struct___sigset_t, *struct___sigset_t) int32 {
+func pthread_sigmask(int32, *Struct___sigset_t, *Struct___sigset_t) int32 {
 	panic("notimpl")
 }
 func read(fd int32, buf unsafe.Pointer, count uint64) int64 {
@@ -130,7 +130,7 @@ func setgroups(uint64, *uint32) int32 {
 func setsid() int32 {
 	panic("notimpl")
 }
-func sigfillset(*struct___sigset_t) int32 {
+func sigfillset(*Struct___sigset_t) int32 {
 	panic("notimpl")
 }
 func stat(*int8, *struct_stat) int32 {
@@ -142,11 +142,11 @@ func tcsetattr(int32, int32, *struct_termios) int32 {
 func uname(*struct_utsname) int32 {
 	panic("notimpl")
 }
-func vfwprintf(*struct__IO_FILE, *uint32, []interface {
+func vfwprintf(*Struct__IO_FILE, *uint32, []interface {
 }) int32 {
 	panic("notimpl")
 }
-func vfwscanf(*struct__IO_FILE, *uint32, []interface {
+func vfwscanf(*Struct__IO_FILE, *uint32, []interface {
 }) int32 {
 	panic("notimpl")
 }
@@ -157,9 +157,9 @@ func vswprintf(*uint32, uint64, *uint32, []interface {
 func waitpid(int32, *int32, int32) int32 {
 	panic("notimpl")
 }
-func wcrtomb(*int8, uint32, *struct___mbstate_t) uint64 {
+func wcrtomb(*int8, uint32, *Struct___mbstate_t) uint64 {
 	panic("notimpl")
 }
-func wcsrtombs(*int8, **uint32, uint64, *struct___mbstate_t) uint64 {
+func wcsrtombs(*int8, **uint32, uint64, *Struct___mbstate_t) uint64 {
 	panic("notimpl")
 }

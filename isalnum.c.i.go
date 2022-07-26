@@ -33,6 +33,6 @@ func Isalnum(c int32) int32 {
 		}
 	}()
 }
-func __isalnum_l(c int32, l *struct___locale_struct) int32 {
+func __isalnum_l(c int32, l *Struct___locale_struct) int32 {
 	return Isalnum(c)
 }

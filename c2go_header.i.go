@@ -2,94 +2,74 @@ package libc
 
 import unsafe "unsafe"
 
-type size_t = uint64
 type Size_t = uint64
-type time_t = int64
 type Time_t = int64
-type clockid_t = int32
 type Clockid_t = int32
-type struct_timespec struct {
-	tv_sec  int64
+type Struct_timespec struct {
+	Tv_sec  int64
 	Xbf_0   int32
-	tv_nsec int64
+	Tv_nsec int64
 	Xbf_1   int32
 }
-type Struct_timespec = struct_timespec
-type pthread_t = *struct___pthread
-type Pthread_t = *struct___pthread
-type pthread_once_t = int32
+type Pthread_t = *Struct___pthread
 type Pthread_once_t = int32
-type pthread_key_t = uint32
 type Pthread_key_t = uint32
-type pthread_spinlock_t = int32
 type Pthread_spinlock_t = int32
 type _cgoa_1_a64l struct {
-	__attr uint32
+	X__attr uint32
 }
-type pthread_mutexattr_t = _cgoa_1_a64l
 type Pthread_mutexattr_t = _cgoa_1_a64l
 type _cgoa_2_a64l struct {
-	__attr uint32
+	X__attr uint32
 }
-type pthread_condattr_t = _cgoa_2_a64l
 type Pthread_condattr_t = _cgoa_2_a64l
 type _cgoa_3_a64l struct {
-	__attr uint32
+	X__attr uint32
 }
-type pthread_barrierattr_t = _cgoa_3_a64l
 type Pthread_barrierattr_t = _cgoa_3_a64l
 type _cgoa_4_a64l struct {
-	__attr [2]uint32
+	X__attr [2]uint32
 }
-type pthread_rwlockattr_t = _cgoa_4_a64l
 type Pthread_rwlockattr_t = _cgoa_4_a64l
-type struct___sigset_t struct {
-	__bits [16]uint64
+type Struct___sigset_t struct {
+	X__bits [16]uint64
 }
-type Struct___sigset_t = struct___sigset_t
-type sigset_t = struct___sigset_t
-type Sigset_t = struct___sigset_t
+type Sigset_t = Struct___sigset_t
 type _cgoa_6_a64l struct {
-	__i [14]int32
+	X__i [14]int32
 }
 type _cgoa_5_a64l struct {
-	__u _cgoa_6_a64l
+	X__u _cgoa_6_a64l
 }
-type pthread_attr_t = _cgoa_5_a64l
 type Pthread_attr_t = _cgoa_5_a64l
 type _cgoa_8_a64l struct {
-	__i [10]int32
+	X__i [10]int32
 }
 type _cgoa_7_a64l struct {
-	__u _cgoa_8_a64l
+	X__u _cgoa_8_a64l
 }
-type pthread_mutex_t = _cgoa_7_a64l
 type Pthread_mutex_t = _cgoa_7_a64l
 type _cgoa_10_a64l struct {
-	__i [12]int32
+	X__i [12]int32
 }
 type _cgoa_9_a64l struct {
-	__u _cgoa_10_a64l
+	X__u _cgoa_10_a64l
 }
-type pthread_cond_t = _cgoa_9_a64l
 type Pthread_cond_t = _cgoa_9_a64l
 type _cgoa_12_a64l struct {
-	__i [14]int32
+	X__i [14]int32
 }
 type _cgoa_11_a64l struct {
-	__u _cgoa_12_a64l
+	X__u _cgoa_12_a64l
 }
-type pthread_rwlock_t = _cgoa_11_a64l
 type Pthread_rwlock_t = _cgoa_11_a64l
 type _cgoa_14_a64l struct {
-	__i [8]int32
+	X__i [8]int32
 }
 type _cgoa_13_a64l struct {
-	__u _cgoa_14_a64l
+	X__u _cgoa_14_a64l
 }
-type pthread_barrier_t = _cgoa_13_a64l
 type Pthread_barrier_t = _cgoa_13_a64l
-type pid_t = int32
 type Pid_t = int32
 type struct_sched_param struct {
 	sched_priority int32
@@ -97,12 +77,9 @@ type struct_sched_param struct {
 	__reserved2    [4]int64
 	__reserved3    int32
 }
-type timer_t = unsafe.Pointer
 type Timer_t = unsafe.Pointer
-type clock_t = int64
 type Clock_t = int64
-type locale_t = *struct___locale_struct
-type Locale_t = *struct___locale_struct
+type Locale_t = *Struct___locale_struct
 type struct_tm struct {
 	tm_sec    int32
 	tm_min    int32
@@ -117,35 +94,28 @@ type struct_tm struct {
 	tm_zone   *int8
 }
 type struct_itimerspec struct {
-	it_interval struct_timespec
-	it_value    struct_timespec
+	it_interval Struct_timespec
+	it_value    Struct_timespec
 }
 type struct___ptcb struct {
 	__f    func(unsafe.Pointer)
 	__x    unsafe.Pointer
 	__next *struct___ptcb
 }
-type ssize_t = int64
 type Ssize_t = int64
-type off_t = int64
 type Off_t = int64
-type FILE = struct__IO_FILE
-type va_list = []interface {
-}
+type FILE = Struct__IO_FILE
 type Va_list = []interface {
 }
-type __isoc_va_list = []interface {
+type X__isoc_va_list = []interface {
 }
-type union__G_fpos64_t struct {
-	__opaque [16]int8
+type Union__G_fpos64_t struct {
+	X__opaque [16]int8
 }
-type Union__G_fpos64_t = union__G_fpos64_t
-type fpos_t = union__G_fpos64_t
-type Fpos_t = union__G_fpos64_t
-type struct___locale_struct struct {
-	cat [6]*struct___locale_map
+type Fpos_t = Union__G_fpos64_t
+type Struct___locale_struct struct {
+	Cat [6]*struct___locale_map
 }
-type Struct___locale_struct = struct___locale_struct
 type struct_tls_module struct {
 	next   *struct_tls_module
 	image  unsafe.Pointer
@@ -166,58 +136,41 @@ type struct___libc struct {
 	tls_align       uint64
 	tls_cnt         uint64
 	page_size       uint64
-	global_locale   struct___locale_struct
+	global_locale   Struct___locale_struct
 }
-type struct___pthread struct {
-	tid       int32
-	errno_val int32
-	sys_r1    int64
-	locale    *struct___locale_struct
+type Struct___pthread struct {
+	Tid       int32
+	Errno_val int32
+	Sys_r1    int64
+	Locale    *Struct___locale_struct
 }
-type Struct___pthread = struct___pthread
-type wchar_t = uint32
 type Wchar_t = uint32
 type _cgoa_15_a64l struct {
-	quot int32
-	rem  int32
+	Quot int32
+	Rem  int32
 }
-type div_t = _cgoa_15_a64l
 type Div_t = _cgoa_15_a64l
 type _cgoa_16_a64l struct {
-	quot int64
-	rem  int64
+	Quot int64
+	Rem  int64
 }
-type ldiv_t = _cgoa_16_a64l
 type Ldiv_t = _cgoa_16_a64l
 type _cgoa_17_a64l struct {
-	quot int64
-	rem  int64
+	Quot int64
+	Rem  int64
 }
-type lldiv_t = _cgoa_17_a64l
 type Lldiv_t = _cgoa_17_a64l
-type uintptr_t = uint64
 type Uintptr_t = uint64
-type intptr_t = int64
 type Intptr_t = int64
-type int8_t = int8
 type Int8_t = int8
-type int16_t = int16
 type Int16_t = int16
-type int32_t = int32
 type Int32_t = int32
-type int64_t = int64
 type Int64_t = int64
-type intmax_t = int64
 type Intmax_t = int64
-type uint8_t = uint8
 type Uint8_t = uint8
-type uint16_t = uint16
 type Uint16_t = uint16
-type uint32_t = uint32
 type Uint32_t = uint32
-type uint64_t = uint64
 type Uint64_t = uint64
-type uintmax_t = uint64
 type Uintmax_t = uint64
 type int_fast8_t = int8
 type int_fast64_t = int64
@@ -402,7 +355,6 @@ func a_clz_32(x uint32) int32 {
 	return int32(31) - a_ctz_32(x)
 }
 
-type mode_t = uint32
 type Mode_t = uint32
 type struct_flock struct {
 	l_type   int16
@@ -411,19 +363,15 @@ type struct_flock struct {
 	l_len    int64
 	l_pid    int32
 }
-type uid_t = uint32
 type Uid_t = uint32
-type gid_t = uint32
 type Gid_t = uint32
-type useconds_t = uint32
 type Useconds_t = uint32
-type struct_winsize struct {
-	ws_row    uint16
-	ws_col    uint16
-	ws_xpixel uint16
-	ws_ypixel uint16
+type Struct_winsize struct {
+	Ws_row    uint16
+	Ws_col    uint16
+	Ws_xpixel uint16
+	Ws_ypixel uint16
 }
-type Struct_winsize = struct_winsize
 type cc_t = uint8
 type speed_t = uint32
 type tcflag_t = uint32
@@ -437,13 +385,11 @@ type struct_termios struct {
 	__c_ispeed uint32
 	__c_ospeed uint32
 }
-type suseconds_t = int64
 type Suseconds_t = int64
-type struct_timeval struct {
-	tv_sec  int64
-	tv_usec int64
+type Struct_timeval struct {
+	Tv_sec  int64
+	Tv_usec int64
 }
-type Struct_timeval = struct_timeval
 type _cgoa_18_forkpty struct {
 	__e_termination int16
 	__e_exit        int16
@@ -459,7 +405,7 @@ type struct_utmpx struct {
 	ut_exit    _cgoa_18_forkpty
 	ut_session int32
 	__ut_pad2  int32
-	ut_tv      struct_timeval
+	ut_tv      Struct_timeval
 	ut_addr_v6 [4]uint32
 	__unused   [20]int8
 }
@@ -468,7 +414,6 @@ type struct_lastlog struct {
 	ll_line [32]int8
 	ll_host [256]int8
 }
-type id_t = uint32
 type Id_t = uint32
 
 const (
@@ -516,7 +461,7 @@ type struct___ucontext struct {
 	uc_link     *struct___ucontext
 	uc_stack    struct_sigaltstack
 	uc_mcontext struct_sigcontext
-	uc_sigmask  struct___sigset_t
+	uc_sigmask  Struct___sigset_t
 	uc_regspace [64]uint64
 }
 type ucontext_t = struct___ucontext
@@ -582,7 +527,7 @@ type _cgoa_32_forkpty struct {
 }
 type struct_sigaction struct {
 	__sa_handler _cgoa_32_forkpty
-	sa_mask      struct___sigset_t
+	sa_mask      Struct___sigset_t
 	sa_flags     int32
 	sa_restorer  func()
 }
@@ -607,8 +552,8 @@ type _cgoa_35_forkpty struct {
 }
 type fd_set = _cgoa_35_forkpty
 type struct_itimerval struct {
-	it_interval struct_timeval
-	it_value    struct_timeval
+	it_interval Struct_timeval
+	it_value    Struct_timeval
 }
 type struct_timezone struct {
 	tz_minuteswest int32
@@ -620,8 +565,8 @@ type struct_rlimit struct {
 	rlim_max uint64
 }
 type struct_rusage struct {
-	ru_utime    struct_timeval
-	ru_stime    struct_timeval
+	ru_utime    Struct_timeval
+	ru_stime    Struct_timeval
 	ru_maxrss   int64
 	ru_ixrss    int64
 	ru_idrss    int64
@@ -662,32 +607,21 @@ func __CPU_XOR_S(__size uint64, __dest *struct_cpu_set_t, __src1 *struct_cpu_set
 	}
 }
 
-type cookie_read_function_t = func(unsafe.Pointer, *int8, uint64) int64
 type Cookie_read_function_t = func(unsafe.Pointer, *int8, uint64) int64
-type cookie_write_function_t = func(unsafe.Pointer, *int8, uint64) int64
 type Cookie_write_function_t = func(unsafe.Pointer, *int8, uint64) int64
-type cookie_seek_function_t = func(unsafe.Pointer, *int64, int32) int32
 type Cookie_seek_function_t = func(unsafe.Pointer, *int64, int32) int32
-type cookie_close_function_t = func(unsafe.Pointer) int32
 type Cookie_close_function_t = func(unsafe.Pointer) int32
-type struct__IO_cookie_io_functions_t struct {
-	read  func(unsafe.Pointer, *int8, uint64) int64
-	write func(unsafe.Pointer, *int8, uint64) int64
-	seek  func(unsafe.Pointer, *int64, int32) int32
-	close func(unsafe.Pointer) int32
+type Struct__IO_cookie_io_functions_t struct {
+	Read  func(unsafe.Pointer, *int8, uint64) int64
+	Write func(unsafe.Pointer, *int8, uint64) int64
+	Seek  func(unsafe.Pointer, *int64, int32) int32
+	Close func(unsafe.Pointer) int32
 }
-type Struct__IO_cookie_io_functions_t = struct__IO_cookie_io_functions_t
-type cookie_io_functions_t = struct__IO_cookie_io_functions_t
-type Cookie_io_functions_t = struct__IO_cookie_io_functions_t
-type nlink_t = uint32
+type Cookie_io_functions_t = Struct__IO_cookie_io_functions_t
 type Nlink_t = uint32
-type ino_t = uint64
 type Ino_t = uint64
-type dev_t = uint64
 type Dev_t = uint64
-type blksize_t = int64
 type Blksize_t = int64
-type blkcnt_t = int64
 type Blkcnt_t = int64
 type _cgoa_18_get_current_dir_name struct {
 	tv_sec  int64
@@ -710,9 +644,9 @@ type struct_stat struct {
 	__st_mtim32        _cgoa_18_get_current_dir_name
 	__st_ctim32        _cgoa_18_get_current_dir_name
 	st_ino             uint64
-	st_atim            struct_timespec
-	st_mtim            struct_timespec
-	st_ctim            struct_timespec
+	st_atim            Struct_timespec
+	st_mtim            Struct_timespec
+	st_ctim            Struct_timespec
 }
 type Elf32_Half = uint16
 type Elf64_Half = uint16
@@ -1081,17 +1015,13 @@ type struct_utsname struct {
 	machine    [65]int8
 	domainname [65]int8
 }
-type wint_t = uint32
 type Wint_t = uint32
-type wctype_t = uint64
 type Wctype_t = uint64
-type struct___mbstate_t struct {
-	__opaque1 uint32
-	__opaque2 uint32
+type Struct___mbstate_t struct {
+	X__opaque1 uint32
+	X__opaque2 uint32
 }
-type Struct___mbstate_t = struct___mbstate_t
-type mbstate_t = struct___mbstate_t
-type Mbstate_t = struct___mbstate_t
+type Mbstate_t = Struct___mbstate_t
 type struct_lconv struct {
 	decimal_point      *int8
 	thousands_sep      *int8
@@ -1139,47 +1069,44 @@ func __alt_socketcall(sys int32, sock int32, cp int32, a int64, b int64, c int64
 	return r
 }
 
-type struct__IO_FILE struct {
-	flags        uint32
-	rpos         *uint8
-	rend         *uint8
-	close        func(*struct__IO_FILE) int32
-	wend         *uint8
-	wpos         *uint8
-	mustbezero_1 *uint8
-	wbase        *uint8
-	read         func(*struct__IO_FILE, *uint8, uint64) uint64
-	write        func(*struct__IO_FILE, *uint8, uint64) uint64
-	seek         func(*struct__IO_FILE, int64, int32) int64
-	buf          *uint8
-	buf_size     uint64
-	prev         *struct__IO_FILE
-	next         *struct__IO_FILE
-	fd           int32
-	pipe_pid     int32
-	lockcount    int64
-	mode         int32
-	lock         int32
-	lbf          int32
-	cookie       unsafe.Pointer
-	off          int64
-	getln_buf    *int8
-	mustbezero_2 unsafe.Pointer
-	shend        *uint8
-	shlim        int64
-	shcnt        int64
-	prev_locked  *struct__IO_FILE
-	next_locked  *struct__IO_FILE
-	locale       *struct___locale_struct
+type Struct__IO_FILE struct {
+	Flags        uint32
+	Rpos         *uint8
+	Rend         *uint8
+	Close        func(*Struct__IO_FILE) int32
+	Wend         *uint8
+	Wpos         *uint8
+	Mustbezero_1 *uint8
+	Wbase        *uint8
+	Read         func(*Struct__IO_FILE, *uint8, uint64) uint64
+	Write        func(*Struct__IO_FILE, *uint8, uint64) uint64
+	Seek         func(*Struct__IO_FILE, int64, int32) int64
+	Buf          *uint8
+	Buf_size     uint64
+	Prev         *Struct__IO_FILE
+	Next         *Struct__IO_FILE
+	Fd           int32
+	Pipe_pid     int32
+	Lockcount    int64
+	Mode         int32
+	Lock         int32
+	Lbf          int32
+	Cookie       unsafe.Pointer
+	Off          int64
+	Getln_buf    *int8
+	Mustbezero_2 unsafe.Pointer
+	Shend        *uint8
+	Shlim        int64
+	Shcnt        int64
+	Prev_locked  *Struct__IO_FILE
+	Next_locked  *Struct__IO_FILE
+	Locale       *Struct___locale_struct
 }
-type Struct__IO_FILE = struct__IO_FILE
 type _cgoa_1_getopt_long struct {
-	__ll int64
-	__ld float64
+	X__ll int64
+	X__ld float64
 }
-type max_align_t = _cgoa_1_getopt_long
 type Max_align_t = _cgoa_1_getopt_long
-type ptrdiff_t = int64
 type Ptrdiff_t = int64
 type struct_option struct {
 	name    *int8
@@ -1219,9 +1146,7 @@ type _cgoa_18_wordexp struct {
 	we_offs  uint64
 }
 type wordexp_t = _cgoa_18_wordexp
-type float_t = float32
 type Float_t = float32
-type double_t = float64
 type Double_t = float64
 
 func X__FLOAT_BITS(__f float32) uint32 {
@@ -1240,7 +1165,7 @@ func X__DOUBLE_BITS(__f float64) uint64 {
 	__u.__f = __f
 	return *(*uint64)(unsafe.Pointer(&__u))
 }
-func __islessf(__x float32, __y float32) int32 {
+func X__islessf(__x float32, __y float32) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
@@ -1321,7 +1246,7 @@ func __islessf(__x float32, __y float32) int32 {
 		}
 	}()
 }
-func __isless(__x float64, __y float64) int32 {
+func X__isless(__x float64, __y float64) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
@@ -1402,7 +1327,7 @@ func __isless(__x float64, __y float64) int32 {
 		}
 	}()
 }
-func __islessl(__x float64, __y float64) int32 {
+func X__islessl(__x float64, __y float64) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
@@ -1483,7 +1408,7 @@ func __islessl(__x float64, __y float64) int32 {
 		}
 	}()
 }
-func __islessequalf(__x float32, __y float32) int32 {
+func X__islessequalf(__x float32, __y float32) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
@@ -1564,7 +1489,7 @@ func __islessequalf(__x float32, __y float32) int32 {
 		}
 	}()
 }
-func __islessequal(__x float64, __y float64) int32 {
+func X__islessequal(__x float64, __y float64) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
@@ -1645,7 +1570,7 @@ func __islessequal(__x float64, __y float64) int32 {
 		}
 	}()
 }
-func __islessequall(__x float64, __y float64) int32 {
+func X__islessequall(__x float64, __y float64) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
@@ -1726,7 +1651,7 @@ func __islessequall(__x float64, __y float64) int32 {
 		}
 	}()
 }
-func __islessgreaterf(__x float32, __y float32) int32 {
+func X__islessgreaterf(__x float32, __y float32) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
@@ -1807,7 +1732,7 @@ func __islessgreaterf(__x float32, __y float32) int32 {
 		}
 	}()
 }
-func __islessgreater(__x float64, __y float64) int32 {
+func X__islessgreater(__x float64, __y float64) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
@@ -1888,7 +1813,7 @@ func __islessgreater(__x float64, __y float64) int32 {
 		}
 	}()
 }
-func __islessgreaterl(__x float64, __y float64) int32 {
+func X__islessgreaterl(__x float64, __y float64) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
@@ -1969,7 +1894,7 @@ func __islessgreaterl(__x float64, __y float64) int32 {
 		}
 	}()
 }
-func __isgreaterf(__x float32, __y float32) int32 {
+func X__isgreaterf(__x float32, __y float32) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
@@ -2050,7 +1975,7 @@ func __isgreaterf(__x float32, __y float32) int32 {
 		}
 	}()
 }
-func __isgreater(__x float64, __y float64) int32 {
+func X__isgreater(__x float64, __y float64) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
@@ -2131,7 +2056,7 @@ func __isgreater(__x float64, __y float64) int32 {
 		}
 	}()
 }
-func __isgreaterl(__x float64, __y float64) int32 {
+func X__isgreaterl(__x float64, __y float64) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
@@ -2212,7 +2137,7 @@ func __isgreaterl(__x float64, __y float64) int32 {
 		}
 	}()
 }
-func __isgreaterequalf(__x float32, __y float32) int32 {
+func X__isgreaterequalf(__x float32, __y float32) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
@@ -2293,7 +2218,7 @@ func __isgreaterequalf(__x float32, __y float32) int32 {
 		}
 	}()
 }
-func __isgreaterequal(__x float64, __y float64) int32 {
+func X__isgreaterequal(__x float64, __y float64) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
@@ -2374,7 +2299,7 @@ func __isgreaterequal(__x float64, __y float64) int32 {
 		}
 	}()
 }
-func __isgreaterequall(__x float64, __y float64) int32 {
+func X__isgreaterequall(__x float64, __y float64) int32 {
 	return func() int32 {
 		if !(func() int32 {
 			if func() int32 {
@@ -2595,20 +2520,19 @@ type struct_powf_log2_data struct {
 	tab  [16]_cgoa_18_powf
 	poly [5]float64
 }
-type struct_iovec struct {
-	iov_base unsafe.Pointer
-	iov_len  uint64
+type Struct_iovec struct {
+	Iov_base unsafe.Pointer
+	Iov_len  uint64
 }
-type Struct_iovec = struct_iovec
 
-func locking_getc(f *struct__IO_FILE) int32 {
-	if a_cas(&f.lock, int32(0), 1073741823) != 0 {
+func locking_getc(f *Struct__IO_FILE) int32 {
+	if a_cas(&f.Lock, int32(0), 1073741823) != 0 {
 		__lockfile(f)
 	}
 	var c int32 = func() int32 {
-		if uintptr(unsafe.Pointer(f.rpos)) != uintptr(unsafe.Pointer(f.rend)) {
+		if uintptr(unsafe.Pointer(f.Rpos)) != uintptr(unsafe.Pointer(f.Rend)) {
 			return int32(*func() (_cgo_ret *uint8) {
-				_cgo_addr := &f.rpos
+				_cgo_addr := &f.Rpos
 				_cgo_ret = *_cgo_addr
 				*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 				return
@@ -2617,18 +2541,18 @@ func locking_getc(f *struct__IO_FILE) int32 {
 			return __uflow(f)
 		}
 	}()
-	if a_swap(&f.lock, int32(0))&int32(1073741824) != 0 {
-		__wake(unsafe.Pointer(&f.lock), int32(1), int32(1))
+	if a_swap(&f.Lock, int32(0))&int32(1073741824) != 0 {
+		__wake(unsafe.Pointer(&f.Lock), int32(1), int32(1))
 	}
 	return c
 }
-func do_getc(f *struct__IO_FILE) int32 {
-	var l int32 = f.lock
-	if l < int32(0) || l != 0 && l&-1073741825 == __pthread_self().tid {
+func do_getc(f *Struct__IO_FILE) int32 {
+	var l int32 = f.Lock
+	if l < int32(0) || l != 0 && l&-1073741825 == __pthread_self().Tid {
 		return func() int32 {
-			if uintptr(unsafe.Pointer(f.rpos)) != uintptr(unsafe.Pointer(f.rend)) {
+			if uintptr(unsafe.Pointer(f.Rpos)) != uintptr(unsafe.Pointer(f.Rend)) {
 				return int32(*func() (_cgo_ret *uint8) {
-					_cgo_addr := &f.rpos
+					_cgo_addr := &f.Rpos
 					_cgo_ret = *_cgo_addr
 					*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 					return
@@ -2656,15 +2580,15 @@ type struct_f_owner_ex struct {
 	pid   int32
 }
 
-func locking_putc(c int32, f *struct__IO_FILE) int32 {
-	if a_cas(&f.lock, int32(0), 1073741823) != 0 {
+func locking_putc(c int32, f *Struct__IO_FILE) int32 {
+	if a_cas(&f.Lock, int32(0), 1073741823) != 0 {
 		__lockfile(f)
 	}
 	c = func() int32 {
-		if int32(uint8(c)) != f.lbf && uintptr(unsafe.Pointer(f.wpos)) != uintptr(unsafe.Pointer(f.wend)) {
+		if int32(uint8(c)) != f.Lbf && uintptr(unsafe.Pointer(f.Wpos)) != uintptr(unsafe.Pointer(f.Wend)) {
 			return int32(func() (_cgo_ret uint8) {
 				_cgo_addr := &*func() (_cgo_ret *uint8) {
-					_cgo_addr := &f.wpos
+					_cgo_addr := &f.Wpos
 					_cgo_ret = *_cgo_addr
 					*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 					return
@@ -2676,19 +2600,19 @@ func locking_putc(c int32, f *struct__IO_FILE) int32 {
 			return __overflow(f, int32(uint8(c)))
 		}
 	}()
-	if a_swap(&f.lock, int32(0))&int32(1073741824) != 0 {
-		__wake(unsafe.Pointer(&f.lock), int32(1), int32(1))
+	if a_swap(&f.Lock, int32(0))&int32(1073741824) != 0 {
+		__wake(unsafe.Pointer(&f.Lock), int32(1), int32(1))
 	}
 	return c
 }
-func do_putc(c int32, f *struct__IO_FILE) int32 {
-	var l int32 = f.lock
-	if l < int32(0) || l != 0 && l&-1073741825 == __pthread_self().tid {
+func do_putc(c int32, f *Struct__IO_FILE) int32 {
+	var l int32 = f.Lock
+	if l < int32(0) || l != 0 && l&-1073741825 == __pthread_self().Tid {
 		return func() int32 {
-			if int32(uint8(c)) != f.lbf && uintptr(unsafe.Pointer(f.wpos)) != uintptr(unsafe.Pointer(f.wend)) {
+			if int32(uint8(c)) != f.Lbf && uintptr(unsafe.Pointer(f.Wpos)) != uintptr(unsafe.Pointer(f.Wend)) {
 				return int32(func() (_cgo_ret uint8) {
 					_cgo_addr := &*func() (_cgo_ret *uint8) {
-						_cgo_addr := &f.wpos
+						_cgo_addr := &f.Wpos
 						_cgo_ret = *_cgo_addr
 						*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 						return
@@ -2703,7 +2627,7 @@ func do_putc(c int32, f *struct__IO_FILE) int32 {
 	}
 	return locking_putc(c, f)
 }
-func __isspace(_c int32) int32 {
+func X__isspace(_c int32) int32 {
 	return func() int32 {
 		if _c == ' ' || uint32(_c)-uint32('\t') < uint32(5) {
 			return 1

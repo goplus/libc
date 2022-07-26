@@ -17,6 +17,6 @@ func strcasecmp(_l *int8, _r *int8) int32 {
 	}
 	return Tolower(int32(*l)) - Tolower(int32(*r))
 }
-func __strcasecmp_l(l *int8, r *int8, loc *struct___locale_struct) int32 {
+func __strcasecmp_l(l *int8, r *int8, loc *Struct___locale_struct) int32 {
 	return strcasecmp(l, r)
 }
