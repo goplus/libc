@@ -34,7 +34,7 @@ func _cgo_main() int32 {
 		return *_cgo_addr
 	}() == int32(6)) {
 		func() int32 {
-			common.T_printf((*int8)(unsafe.Pointer(&[69]int8{'s', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 'n', 'p', 'r', 'i', 'n', 't', 'f', '.', 'c', ':', '1', '4', '8', ':', ' ', '%', 's', ' ', 'f', 'a', 'i', 'l', 'e', 'd', ' ', '(', 'l', 'e', 'n', 'g', 't', 'h', ' ', 'r', 'e', 't', 'u', 'r', 'n', 'e', 'd', ' ', '%', 'd', ' ', '!', '=', ' ', '%', 'd', ')', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[29]int8{'s', 'n', 'p', 'r', 'i', 'n', 't', 'f', '(', '0', ',', ' ', '0', ',', ' ', '"', '%', 'd', '"', ',', ' ', '1', '2', '3', '4', '5', '6', ')', '\x00'})), i, int32(6))
+			common.T_printf((*int8)(unsafe.Pointer(&[100]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 'n', 'p', 'r', 'i', 'n', 't', 'f', '.', 'c', ':', '1', '4', '8', ':', ' ', '%', 's', ' ', 'f', 'a', 'i', 'l', 'e', 'd', ' ', '(', 'l', 'e', 'n', 'g', 't', 'h', ' ', 'r', 'e', 't', 'u', 'r', 'n', 'e', 'd', ' ', '%', 'd', ' ', '!', '=', ' ', '%', 'd', ')', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[29]int8{'s', 'n', 'p', 'r', 'i', 'n', 't', 'f', '(', '0', ',', ' ', '0', ',', ' ', '"', '%', 'd', '"', ',', ' ', '1', '2', '3', '4', '5', '6', ')', '\x00'})), i, int32(6))
 			return int32(0)
 		}()
 	}
@@ -44,7 +44,7 @@ func _cgo_main() int32 {
 		return *_cgo_addr
 	}() == int32(4)) {
 		func() int32 {
-			common.T_printf((*int8)(unsafe.Pointer(&[69]int8{'s', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 'n', 'p', 'r', 'i', 'n', 't', 'f', '.', 'c', ':', '1', '4', '9', ':', ' ', '%', 's', ' ', 'f', 'a', 'i', 'l', 'e', 'd', ' ', '(', 'l', 'e', 'n', 'g', 't', 'h', ' ', 'r', 'e', 't', 'u', 'r', 'n', 'e', 'd', ' ', '%', 'd', ' ', '!', '=', ' ', '%', 'd', ')', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[32]int8{'s', 'n', 'p', 'r', 'i', 'n', 't', 'f', '(', '0', ',', ' ', '0', ',', ' ', '"', '%', '.', '4', 's', '"', ',', ' ', '"', 'h', 'e', 'l', 'l', 'o', '"', ')', '\x00'})), i, int32(4))
+			common.T_printf((*int8)(unsafe.Pointer(&[100]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 'n', 'p', 'r', 'i', 'n', 't', 'f', '.', 'c', ':', '1', '4', '9', ':', ' ', '%', 's', ' ', 'f', 'a', 'i', 'l', 'e', 'd', ' ', '(', 'l', 'e', 'n', 'g', 't', 'h', ' ', 'r', 'e', 't', 'u', 'r', 'n', 'e', 'd', ' ', '%', 'd', ' ', '!', '=', ' ', '%', 'd', ')', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[32]int8{'s', 'n', 'p', 'r', 'i', 'n', 't', 'f', '(', '0', ',', ' ', '0', ',', ' ', '"', '%', '.', '4', 's', '"', ',', ' ', '"', 'h', 'e', 'l', 'l', 'o', '"', ')', '\x00'})), i, int32(4))
 			return int32(0)
 		}()
 	}
@@ -54,7 +54,7 @@ func _cgo_main() int32 {
 		return *_cgo_addr
 	}() == int32(0)) {
 		func() int32 {
-			common.T_printf((*int8)(unsafe.Pointer(&[69]int8{'s', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 'n', 'p', 'r', 'i', 'n', 't', 'f', '.', 'c', ':', '1', '5', '0', ':', ' ', '%', 's', ' ', 'f', 'a', 'i', 'l', 'e', 'd', ' ', '(', 'l', 'e', 'n', 'g', 't', 'h', ' ', 'r', 'e', 't', 'u', 'r', 'n', 'e', 'd', ' ', '%', 'd', ' ', '!', '=', ' ', '%', 'd', ')', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[34]int8{'s', 'n', 'p', 'r', 'i', 'n', 't', 'f', '(', 'b', ',', ' ', '0', ',', ' ', '"', '%', '.', '0', 's', '"', ',', ' ', '"', 'g', 'o', 'o', 'd', 'b', 'y', 'e', '"', ')', '\x00'})), i, int32(0))
+			common.T_printf((*int8)(unsafe.Pointer(&[100]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 'n', 'p', 'r', 'i', 'n', 't', 'f', '.', 'c', ':', '1', '5', '0', ':', ' ', '%', 's', ' ', 'f', 'a', 'i', 'l', 'e', 'd', ' ', '(', 'l', 'e', 'n', 'g', 't', 'h', ' ', 'r', 'e', 't', 'u', 'r', 'n', 'e', 'd', ' ', '%', 'd', ' ', '!', '=', ' ', '%', 'd', ')', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[34]int8{'s', 'n', 'p', 'r', 'i', 'n', 't', 'f', '(', 'b', ',', ' ', '0', ',', ' ', '"', '%', '.', '0', 's', '"', ',', ' ', '"', 'g', 'o', 'o', 'd', 'b', 'y', 'e', '"', ')', '\x00'})), i, int32(0))
 			return int32(0)
 		}()
 	}
@@ -65,13 +65,13 @@ func _cgo_main() int32 {
 		return *_cgo_addr
 	}() == int32(6)) {
 		func() int32 {
-			common.T_printf((*int8)(unsafe.Pointer(&[69]int8{'s', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 'n', 'p', 'r', 'i', 'n', 't', 'f', '.', 'c', ':', '1', '5', '3', ':', ' ', '%', 's', ' ', 'f', 'a', 'i', 'l', 'e', 'd', ' ', '(', 'l', 'e', 'n', 'g', 't', 'h', ' ', 'r', 'e', 't', 'u', 'r', 'n', 'e', 'd', ' ', '%', 'd', ' ', '!', '=', ' ', '%', 'd', ')', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[29]int8{'s', 'n', 'p', 'r', 'i', 'n', 't', 'f', '(', 'b', ',', ' ', '4', ',', ' ', '"', '%', 'd', '"', ',', ' ', '1', '2', '3', '4', '5', '6', ')', '\x00'})), i, int32(6))
+			common.T_printf((*int8)(unsafe.Pointer(&[100]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 'n', 'p', 'r', 'i', 'n', 't', 'f', '.', 'c', ':', '1', '5', '3', ':', ' ', '%', 's', ' ', 'f', 'a', 'i', 'l', 'e', 'd', ' ', '(', 'l', 'e', 'n', 'g', 't', 'h', ' ', 'r', 'e', 't', 'u', 'r', 'n', 'e', 'd', ' ', '%', 'd', ' ', '!', '=', ' ', '%', 'd', ')', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[29]int8{'s', 'n', 'p', 'r', 'i', 'n', 't', 'f', '(', 'b', ',', ' ', '4', ',', ' ', '"', '%', 'd', '"', ',', ' ', '1', '2', '3', '4', '5', '6', ')', '\x00'})), i, int32(6))
 			return int32(0)
 		}()
 	}
 	if !!(libc.Strcmp((*int8)(unsafe.Pointer(&b)), (*int8)(unsafe.Pointer(&[4]int8{'1', '2', '3', '\x00'}))) != 0) {
 		func() int32 {
-			common.T_printf((*int8)(unsafe.Pointer(&[50]int8{'s', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 'n', 'p', 'r', 'i', 'n', 't', 'f', '.', 'c', ':', '1', '5', '4', ':', ' ', '[', '%', 's', ']', ' ', '!', '=', ' ', '[', '%', 's', ']', ' ', '(', '%', 's', ')', '\n', '\x00'})), (*int8)(unsafe.Pointer(&b)), (*int8)(unsafe.Pointer(&[4]int8{'1', '2', '3', '\x00'})), (*int8)(unsafe.Pointer(&[17]int8{'i', 'n', 'c', 'o', 'r', 'r', 'e', 'c', 't', ' ', 'o', 'u', 't', 'p', 'u', 't', '\x00'})))
+			common.T_printf((*int8)(unsafe.Pointer(&[81]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 'n', 'p', 'r', 'i', 'n', 't', 'f', '.', 'c', ':', '1', '5', '4', ':', ' ', '[', '%', 's', ']', ' ', '!', '=', ' ', '[', '%', 's', ']', ' ', '(', '%', 's', ')', '\n', '\x00'})), (*int8)(unsafe.Pointer(&b)), (*int8)(unsafe.Pointer(&[4]int8{'1', '2', '3', '\x00'})), (*int8)(unsafe.Pointer(&[17]int8{'i', 'n', 'c', 'o', 'r', 'r', 'e', 'c', 't', ' ', 'o', 'u', 't', 'p', 'u', 't', '\x00'})))
 			return int32(0)
 		}()
 	}
@@ -81,7 +81,7 @@ func _cgo_main() int32 {
 		return *_cgo_addr
 	}() == 'x') {
 		func() int32 {
-			common.T_printf((*int8)(unsafe.Pointer(&[59]int8{'s', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 'n', 'p', 'r', 'i', 'n', 't', 'f', '.', 'c', ':', '1', '5', '5', ':', ' ', '%', 's', ' ', 'f', 'a', 'i', 'l', 'e', 'd', ' ', '(', 'b', 'u', 'f', 'f', 'e', 'r', ' ', 'o', 'v', 'e', 'r', 'r', 'u', 'n', ')', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[5]int8{'b', '[', '5', ']', '\x00'})), i, 'x')
+			common.T_printf((*int8)(unsafe.Pointer(&[90]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 'n', 'p', 'r', 'i', 'n', 't', 'f', '.', 'c', ':', '1', '5', '5', ':', ' ', '%', 's', ' ', 'f', 'a', 'i', 'l', 'e', 'd', ' ', '(', 'b', 'u', 'f', 'f', 'e', 'r', ' ', 'o', 'v', 'e', 'r', 'r', 'u', 'n', ')', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[5]int8{'b', '[', '5', ']', '\x00'})), i, 'x')
 			return int32(0)
 		}()
 	}
@@ -91,7 +91,7 @@ func _cgo_main() int32 {
 		return *_cgo_addr
 	}() == int32(1024)) {
 		func() int32 {
-			common.T_printf((*int8)(unsafe.Pointer(&[53]int8{'s', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 'n', 'p', 'r', 'i', 'n', 't', 'f', '.', 'c', ':', '1', '5', '8', ':', ' ', '%', 's', ' ', 'f', 'a', 'i', 'l', 'e', 'd', ' ', '(', '%', 'd', ' ', '!', '=', ' ', '%', 'd', ')', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[44]int8{'s', 'n', 'p', 'r', 'i', 'n', 't', 'f', '(', 'b', ',', ' ', 's', 'i', 'z', 'e', 'o', 'f', ' ', 'b', ',', ' ', '"', '%', '.', '1', '0', '2', '2', 'f', '"', ',', ' ', '0', 'x', '1', 'p', '-', '1', '0', '2', '1', ')', '\x00'})), i, int32(1024))
+			common.T_printf((*int8)(unsafe.Pointer(&[84]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 'n', 'p', 'r', 'i', 'n', 't', 'f', '.', 'c', ':', '1', '5', '8', ':', ' ', '%', 's', ' ', 'f', 'a', 'i', 'l', 'e', 'd', ' ', '(', '%', 'd', ' ', '!', '=', ' ', '%', 'd', ')', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[44]int8{'s', 'n', 'p', 'r', 'i', 'n', 't', 'f', '(', 'b', ',', ' ', 's', 'i', 'z', 'e', 'o', 'f', ' ', 'b', ',', ' ', '"', '%', '.', '1', '0', '2', '2', 'f', '"', ',', ' ', '0', 'x', '1', 'p', '-', '1', '0', '2', '1', ')', '\x00'})), i, int32(1024))
 			return int32(0)
 		}()
 	}
@@ -132,7 +132,7 @@ func _cgo_main() int32 {
 		return *_cgo_addr
 	}() == '1') {
 		func() int32 {
-			common.T_printf((*int8)(unsafe.Pointer(&[57]int8{'s', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 'n', 'p', 'r', 'i', 'n', 't', 'f', '.', 'c', ':', '1', '6', '6', ':', ' ', '%', 's', ' ', 'f', 'a', 'i', 'l', 'e', 'd', ' ', '(', '\'', '%', 'c', '\'', ' ', '!', '=', ' ', '\'', '%', 'c', '\'', ')', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[5]int8{'b', '[', '1', ']', '\x00'})), i, '1')
+			common.T_printf((*int8)(unsafe.Pointer(&[88]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 'n', 'p', 'r', 'i', 'n', 't', 'f', '.', 'c', ':', '1', '6', '6', ':', ' ', '%', 's', ' ', 'f', 'a', 'i', 'l', 'e', 'd', ' ', '(', '\'', '%', 'c', '\'', ' ', '!', '=', ' ', '\'', '%', 'c', '\'', ')', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[5]int8{'b', '[', '1', ']', '\x00'})), i, '1')
 			return int32(0)
 		}()
 	}
@@ -144,26 +144,26 @@ func _cgo_main() int32 {
 		return *_cgo_addr
 	}() == int32(1024)) {
 		func() int32 {
-			common.T_printf((*int8)(unsafe.Pointer(&[53]int8{'s', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 'n', 'p', 'r', 'i', 'n', 't', 'f', '.', 'c', ':', '1', '6', '8', ':', ' ', '%', 's', ' ', 'f', 'a', 'i', 'l', 'e', 'd', ' ', '(', '%', 'd', ' ', '!', '=', ' ', '%', 'd', ')', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[2]int8{'j', '\x00'})), i, int32(1024))
+			common.T_printf((*int8)(unsafe.Pointer(&[84]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 'n', 'p', 'r', 'i', 'n', 't', 'f', '.', 'c', ':', '1', '6', '8', ':', ' ', '%', 's', ' ', 'f', 'a', 'i', 'l', 'e', 'd', ' ', '(', '%', 'd', ' ', '!', '=', ' ', '%', 'd', ')', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[2]int8{'j', '\x00'})), i, int32(1024))
 			return int32(0)
 		}()
 	}
 	for j = int32(0); (*(*_cgoa_1_snprintf)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_1_snprintf)(unsafe.Pointer(&int_tests)))) + uintptr(j)*24))).fmt != nil; j++ {
 		i = libc.Snprintf((*int8)(unsafe.Pointer(&b)), 2000, (*(*_cgoa_1_snprintf)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_1_snprintf)(unsafe.Pointer(&int_tests)))) + uintptr(j)*24))).fmt, (*(*_cgoa_1_snprintf)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_1_snprintf)(unsafe.Pointer(&int_tests)))) + uintptr(j)*24))).i)
 		if uint64(i) != libc.Strlen((*(*_cgoa_1_snprintf)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_1_snprintf)(unsafe.Pointer(&int_tests)))) + uintptr(j)*24))).expect) {
-			common.T_printf((*int8)(unsafe.Pointer(&[86]int8{'s', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 'n', 'p', 'r', 'i', 'n', 't', 'f', '.', 'c', ':', '1', '8', '1', ':', ' ', 's', 'n', 'p', 'r', 'i', 'n', 't', 'f', '(', 'b', ',', ' ', 's', 'i', 'z', 'e', 'o', 'f', ' ', 'b', ',', ' ', '"', '%', 's', '"', ',', ' ', '%', 'd', ')', ' ', 'r', 'e', 't', 'u', 'r', 'n', 'e', 'd', ' ', '%', 'd', ' ', 'w', 'a', 'n', 't', 'e', 'd', ' ', '%', 'd', '\n', '\x00'})), (*(*_cgoa_1_snprintf)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_1_snprintf)(unsafe.Pointer(&int_tests)))) + uintptr(j)*24))).fmt, (*(*_cgoa_1_snprintf)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_1_snprintf)(unsafe.Pointer(&int_tests)))) + uintptr(j)*24))).i, i, libc.Strlen((*(*_cgoa_1_snprintf)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_1_snprintf)(unsafe.Pointer(&int_tests)))) + uintptr(j)*24))).expect))
+			common.T_printf((*int8)(unsafe.Pointer(&[117]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 'n', 'p', 'r', 'i', 'n', 't', 'f', '.', 'c', ':', '1', '8', '1', ':', ' ', 's', 'n', 'p', 'r', 'i', 'n', 't', 'f', '(', 'b', ',', ' ', 's', 'i', 'z', 'e', 'o', 'f', ' ', 'b', ',', ' ', '"', '%', 's', '"', ',', ' ', '%', 'd', ')', ' ', 'r', 'e', 't', 'u', 'r', 'n', 'e', 'd', ' ', '%', 'd', ' ', 'w', 'a', 'n', 't', 'e', 'd', ' ', '%', 'd', '\n', '\x00'})), (*(*_cgoa_1_snprintf)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_1_snprintf)(unsafe.Pointer(&int_tests)))) + uintptr(j)*24))).fmt, (*(*_cgoa_1_snprintf)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_1_snprintf)(unsafe.Pointer(&int_tests)))) + uintptr(j)*24))).i, i, libc.Strlen((*(*_cgoa_1_snprintf)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_1_snprintf)(unsafe.Pointer(&int_tests)))) + uintptr(j)*24))).expect))
 		}
 		if libc.Strcmp((*int8)(unsafe.Pointer(&b)), (*(*_cgoa_1_snprintf)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_1_snprintf)(unsafe.Pointer(&int_tests)))) + uintptr(j)*24))).expect) != int32(0) {
-			common.T_printf((*int8)(unsafe.Pointer(&[76]int8{'s', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 'n', 'p', 'r', 'i', 'n', 't', 'f', '.', 'c', ':', '1', '8', '4', ':', ' ', 'b', 'a', 'd', ' ', 'i', 'n', 't', 'e', 'g', 'e', 'r', ' ', 'c', 'o', 'n', 'v', 'e', 'r', 's', 'i', 'o', 'n', ':', ' ', 'g', 'o', 't', ' ', '"', '%', 's', '"', ',', ' ', 'w', 'a', 'n', 't', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&b)), (*(*_cgoa_1_snprintf)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_1_snprintf)(unsafe.Pointer(&int_tests)))) + uintptr(j)*24))).expect)
+			common.T_printf((*int8)(unsafe.Pointer(&[107]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 'n', 'p', 'r', 'i', 'n', 't', 'f', '.', 'c', ':', '1', '8', '4', ':', ' ', 'b', 'a', 'd', ' ', 'i', 'n', 't', 'e', 'g', 'e', 'r', ' ', 'c', 'o', 'n', 'v', 'e', 'r', 's', 'i', 'o', 'n', ':', ' ', 'g', 'o', 't', ' ', '"', '%', 's', '"', ',', ' ', 'w', 'a', 'n', 't', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&b)), (*(*_cgoa_1_snprintf)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_1_snprintf)(unsafe.Pointer(&int_tests)))) + uintptr(j)*24))).expect)
 		}
 	}
 	for j = int32(0); (*(*_cgoa_2_snprintf)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_2_snprintf)(unsafe.Pointer(&fp_tests)))) + uintptr(j)*24))).fmt != nil; j++ {
 		i = libc.Snprintf((*int8)(unsafe.Pointer(&b)), 2000, (*(*_cgoa_2_snprintf)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_2_snprintf)(unsafe.Pointer(&fp_tests)))) + uintptr(j)*24))).fmt, (*(*_cgoa_2_snprintf)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_2_snprintf)(unsafe.Pointer(&fp_tests)))) + uintptr(j)*24))).f)
 		if uint64(i) != libc.Strlen((*(*_cgoa_2_snprintf)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_2_snprintf)(unsafe.Pointer(&fp_tests)))) + uintptr(j)*24))).expect) {
-			common.T_printf((*int8)(unsafe.Pointer(&[86]int8{'s', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 'n', 'p', 'r', 'i', 'n', 't', 'f', '.', 'c', ':', '1', '9', '1', ':', ' ', 's', 'n', 'p', 'r', 'i', 'n', 't', 'f', '(', 'b', ',', ' ', 's', 'i', 'z', 'e', 'o', 'f', ' ', 'b', ',', ' ', '"', '%', 's', '"', ',', ' ', '%', 'f', ')', ' ', 'r', 'e', 't', 'u', 'r', 'n', 'e', 'd', ' ', '%', 'd', ' ', 'w', 'a', 'n', 't', 'e', 'd', ' ', '%', 'd', '\n', '\x00'})), (*(*_cgoa_2_snprintf)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_2_snprintf)(unsafe.Pointer(&fp_tests)))) + uintptr(j)*24))).fmt, (*(*_cgoa_2_snprintf)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_2_snprintf)(unsafe.Pointer(&fp_tests)))) + uintptr(j)*24))).f, i, libc.Strlen((*(*_cgoa_2_snprintf)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_2_snprintf)(unsafe.Pointer(&fp_tests)))) + uintptr(j)*24))).expect))
+			common.T_printf((*int8)(unsafe.Pointer(&[117]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 'n', 'p', 'r', 'i', 'n', 't', 'f', '.', 'c', ':', '1', '9', '1', ':', ' ', 's', 'n', 'p', 'r', 'i', 'n', 't', 'f', '(', 'b', ',', ' ', 's', 'i', 'z', 'e', 'o', 'f', ' ', 'b', ',', ' ', '"', '%', 's', '"', ',', ' ', '%', 'f', ')', ' ', 'r', 'e', 't', 'u', 'r', 'n', 'e', 'd', ' ', '%', 'd', ' ', 'w', 'a', 'n', 't', 'e', 'd', ' ', '%', 'd', '\n', '\x00'})), (*(*_cgoa_2_snprintf)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_2_snprintf)(unsafe.Pointer(&fp_tests)))) + uintptr(j)*24))).fmt, (*(*_cgoa_2_snprintf)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_2_snprintf)(unsafe.Pointer(&fp_tests)))) + uintptr(j)*24))).f, i, libc.Strlen((*(*_cgoa_2_snprintf)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_2_snprintf)(unsafe.Pointer(&fp_tests)))) + uintptr(j)*24))).expect))
 		}
 		if libc.Strcmp((*int8)(unsafe.Pointer(&b)), (*(*_cgoa_2_snprintf)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_2_snprintf)(unsafe.Pointer(&fp_tests)))) + uintptr(j)*24))).expect) != int32(0) {
-			common.T_printf((*int8)(unsafe.Pointer(&[83]int8{'s', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 'n', 'p', 'r', 'i', 'n', 't', 'f', '.', 'c', ':', '1', '9', '4', ':', ' ', 'b', 'a', 'd', ' ', 'f', 'l', 'o', 'a', 't', 'i', 'n', 'g', '-', 'p', 'o', 'i', 'n', 't', ' ', 'c', 'o', 'n', 'v', 'e', 'r', 's', 'i', 'o', 'n', ':', ' ', 'g', 'o', 't', ' ', '"', '%', 's', '"', ',', ' ', 'w', 'a', 'n', 't', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&b)), (*(*_cgoa_2_snprintf)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_2_snprintf)(unsafe.Pointer(&fp_tests)))) + uintptr(j)*24))).expect)
+			common.T_printf((*int8)(unsafe.Pointer(&[114]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 'n', 'p', 'r', 'i', 'n', 't', 'f', '.', 'c', ':', '1', '9', '4', ':', ' ', 'b', 'a', 'd', ' ', 'f', 'l', 'o', 'a', 't', 'i', 'n', 'g', '-', 'p', 'o', 'i', 'n', 't', ' ', 'c', 'o', 'n', 'v', 'e', 'r', 's', 'i', 'o', 'n', ':', ' ', 'g', 'o', 't', ' ', '"', '%', 's', '"', ',', ' ', 'w', 'a', 'n', 't', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&b)), (*(*_cgoa_2_snprintf)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_2_snprintf)(unsafe.Pointer(&fp_tests)))) + uintptr(j)*24))).expect)
 		}
 	}
 	if !(func() (_cgo_ret int32) {
@@ -172,7 +172,7 @@ func _cgo_main() int32 {
 		return *_cgo_addr
 	}() == int32(11)) {
 		func() int32 {
-			common.T_printf((*int8)(unsafe.Pointer(&[53]int8{'s', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 'n', 'p', 'r', 'i', 'n', 't', 'f', '.', 'c', ':', '1', '9', '7', ':', ' ', '%', 's', ' ', 'f', 'a', 'i', 'l', 'e', 'd', ' ', '(', '%', 'd', ' ', '!', '=', ' ', '%', 'd', ')', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[28]int8{'s', 'n', 'p', 'r', 'i', 'n', 't', 'f', '(', '0', ',', ' ', '0', ',', ' ', '"', '%', '.', '4', 'a', '"', ',', ' ', '1', '.', '0', ')', '\x00'})), i, int32(11))
+			common.T_printf((*int8)(unsafe.Pointer(&[84]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 'n', 'p', 'r', 'i', 'n', 't', 'f', '.', 'c', ':', '1', '9', '7', ':', ' ', '%', 's', ' ', 'f', 'a', 'i', 'l', 'e', 'd', ' ', '(', '%', 'd', ' ', '!', '=', ' ', '%', 'd', ')', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[28]int8{'s', 'n', 'p', 'r', 'i', 'n', 't', 'f', '(', '0', ',', ' ', '0', ',', ' ', '"', '%', '.', '4', 'a', '"', ',', ' ', '1', '.', '0', ')', '\x00'})), i, int32(11))
 			return int32(0)
 		}()
 	}
