@@ -21,7 +21,7 @@ func _cgo_main() int32 {
 	for i = int32(0); uint64(i) < 31; i++ {
 		x = libc.Strtod((*(*_cgoa_1_strtod)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_1_strtod)(unsafe.Pointer(&t)))) + uintptr(i)*16))).s, &p)
 		if x != (*(*_cgoa_1_strtod)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_1_strtod)(unsafe.Pointer(&t)))) + uintptr(i)*16))).f {
-			common.T_printf((*int8)(unsafe.Pointer(&[57]int8{'s', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 't', 'r', 't', 'o', 'd', '.', 'c', ':', '7', '1', ':', ' ', 's', 't', 'r', 't', 'o', 'd', '(', '"', '%', 's', '"', ')', ' ', 'w', 'a', 'n', 't', ' ', '%', 'a', ' ', 'g', 'o', 't', ' ', '%', 'a', '\n', '\x00'})), (*(*_cgoa_1_strtod)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_1_strtod)(unsafe.Pointer(&t)))) + uintptr(i)*16))).s, (*(*_cgoa_1_strtod)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_1_strtod)(unsafe.Pointer(&t)))) + uintptr(i)*16))).f, x)
+			common.T_printf((*int8)(unsafe.Pointer(&[88]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 't', 'r', 't', 'o', 'd', '.', 'c', ':', '7', '1', ':', ' ', 's', 't', 'r', 't', 'o', 'd', '(', '"', '%', 's', '"', ')', ' ', 'w', 'a', 'n', 't', ' ', '%', 'a', ' ', 'g', 'o', 't', ' ', '%', 'a', '\n', '\x00'})), (*(*_cgoa_1_strtod)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_1_strtod)(unsafe.Pointer(&t)))) + uintptr(i)*16))).s, (*(*_cgoa_1_strtod)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_1_strtod)(unsafe.Pointer(&t)))) + uintptr(i)*16))).f, x)
 		}
 	}
 	return common.T_status

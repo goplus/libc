@@ -34,11 +34,11 @@ func _cgos_test_align_string_memset(align int32, len int32) {
 	}
 	p = (*int8)(_cgos_pmemset_string_memset(unsafe.Pointer(s), '#', uint64(len)))
 	if uintptr(unsafe.Pointer(p)) != uintptr(unsafe.Pointer(s)) {
-		common.T_printf((*int8)(unsafe.Pointer(&[63]int8{'s', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 't', 'r', 'i', 'n', 'g', '_', 'm', 'e', 'm', 's', 'e', 't', '.', 'c', ':', '3', '2', ':', ' ', 'm', 'e', 'm', 's', 'e', 't', '(', '%', 'p', ',', '.', '.', '.', ')', ' ', 'r', 'e', 't', 'u', 'r', 'n', 'e', 'd', ' ', '%', 'p', '\n', '\x00'})), s, p)
+		common.T_printf((*int8)(unsafe.Pointer(&[94]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 't', 'r', 'i', 'n', 'g', '_', 'm', 'e', 'm', 's', 'e', 't', '.', 'c', ':', '3', '2', ':', ' ', 'm', 'e', 'm', 's', 'e', 't', '(', '%', 'p', ',', '.', '.', '.', ')', ' ', 'r', 'e', 't', 'u', 'r', 'n', 'e', 'd', ' ', '%', 'p', '\n', '\x00'})), s, p)
 	}
 	for i = -64; i < len+int32(64); i++ {
 		if int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(s)) + uintptr(i)))) != int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(want)) + uintptr(i)))) {
-			common.T_printf((*int8)(unsafe.Pointer(&[79]int8{'s', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 't', 'r', 'i', 'n', 'g', '_', 'm', 'e', 'm', 's', 'e', 't', '.', 'c', ':', '3', '5', ':', ' ', 'm', 'e', 'm', 's', 'e', 't', '(', 'a', 'l', 'i', 'g', 'n', ' ', '%', 'd', ',', ' ', '\'', '#', '\'', ',', ' ', '%', 'd', ')', ' ', 'f', 'a', 'i', 'l', 'e', 'd', ' ', 'a', 't', ' ', 'p', 'o', 's', ' ', '%', 'd', '\n', '\x00'})), align, len, i)
+			common.T_printf((*int8)(unsafe.Pointer(&[110]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 't', 'r', 'i', 'n', 'g', '_', 'm', 'e', 'm', 's', 'e', 't', '.', 'c', ':', '3', '5', ':', ' ', 'm', 'e', 'm', 's', 'e', 't', '(', 'a', 'l', 'i', 'g', 'n', ' ', '%', 'd', ',', ' ', '\'', '#', '\'', ',', ' ', '%', 'd', ')', ' ', 'f', 'a', 'i', 'l', 'e', 'd', ' ', 'a', 't', ' ', 'p', 'o', 's', ' ', '%', 'd', '\n', '\x00'})), align, len, i)
 			common.T_printf((*int8)(unsafe.Pointer(&[14]int8{'g', 'o', 't', ' ', ':', ' ', '\'', '%', '.', '*', 's', '\'', '\n', '\x00'})), len+int32(128), (*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(s))-uintptr(int32(64)))))
 			common.T_printf((*int8)(unsafe.Pointer(&[14]int8{'w', 'a', 'n', 't', ':', ' ', '\'', '%', '.', '*', 's', '\'', '\n', '\x00'})), len+int32(128), (*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(want))-uintptr(int32(64)))))
 			break
@@ -50,7 +50,7 @@ func _cgos_test_value_string_memset(c int32) {
 	_cgos_pmemset_string_memset(unsafe.Pointer((*int8)(unsafe.Pointer(&_cgos_buf_string_memset))), c, uint64(10))
 	for i = int32(0); i < int32(10); i++ {
 		if int32(uint8(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&_cgos_buf_string_memset)))) + uintptr(i))))) != int32(uint8(c)) {
-			common.T_printf((*int8)(unsafe.Pointer(&[62]int8{'s', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 't', 'r', 'i', 'n', 'g', '_', 'm', 'e', 'm', 's', 'e', 't', '.', 'c', ':', '4', '9', ':', ' ', 'm', 'e', 'm', 's', 'e', 't', '(', '%', 'd', ')', ' ', 'f', 'a', 'i', 'l', 'e', 'd', ':', ' ', 'g', 'o', 't', ' ', '%', 'd', '\n', '\x00'})), c, int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&_cgos_buf_string_memset)))) + uintptr(i)))))
+			common.T_printf((*int8)(unsafe.Pointer(&[93]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 's', 't', 'r', 'i', 'n', 'g', '_', 'm', 'e', 'm', 's', 'e', 't', '.', 'c', ':', '4', '9', ':', ' ', 'm', 'e', 'm', 's', 'e', 't', '(', '%', 'd', ')', ' ', 'f', 'a', 'i', 'l', 'e', 'd', ':', ' ', 'g', 'o', 't', ' ', '%', 'd', '\n', '\x00'})), c, int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer((*int8)(unsafe.Pointer(&_cgos_buf_string_memset)))) + uintptr(i)))))
 			break
 		}
 	}
