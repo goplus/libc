@@ -2,22 +2,22 @@ package libc
 
 import unsafe "unsafe"
 
-func Getdelim(s **int8, n *uint64, delim int32, f *struct__IO_FILE) int64 {
+func Getdelim(s **int8, n *uint64, delim int32, f *Struct__IO_FILE) int64 {
 	var tmp *int8
 	var z *uint8
 	var k uint64
 	var i uint64 = uint64(0)
 	var c int32
 	var __need_unlock int32 = func() int32 {
-		if f.lock >= int32(0) {
+		if f.Lock >= int32(0) {
 			return __lockfile(f)
 		} else {
 			return int32(0)
 		}
 	}()
 	if !(n != nil) || !(s != nil) {
-		f.mode |= f.mode - int32(1)
-		f.flags |= uint32(32)
+		f.Mode |= f.Mode - int32(1)
+		f.Flags |= uint32(32)
 		for {
 			if __need_unlock != 0 {
 				__unlockfile(f)
@@ -33,13 +33,13 @@ func Getdelim(s **int8, n *uint64, delim int32, f *struct__IO_FILE) int64 {
 		*n = uint64(0)
 	}
 	for {
-		if uintptr(unsafe.Pointer(f.rpos)) != uintptr(unsafe.Pointer(f.rend)) {
-			z = (*uint8)(Memchr(unsafe.Pointer(f.rpos), delim, uint64(uintptr(unsafe.Pointer(f.rend))-uintptr(unsafe.Pointer(f.rpos)))))
+		if uintptr(unsafe.Pointer(f.Rpos)) != uintptr(unsafe.Pointer(f.Rend)) {
+			z = (*uint8)(Memchr(unsafe.Pointer(f.Rpos), delim, uint64(uintptr(unsafe.Pointer(f.Rend))-uintptr(unsafe.Pointer(f.Rpos)))))
 			k = uint64(func() int64 {
 				if z != nil {
-					return int64(uintptr(unsafe.Pointer(z)) - uintptr(unsafe.Pointer(f.rpos)) + uintptr(int64(1)))
+					return int64(uintptr(unsafe.Pointer(z)) - uintptr(unsafe.Pointer(f.Rpos)) + uintptr(int64(1)))
 				} else {
-					return int64(uintptr(unsafe.Pointer(f.rend)) - uintptr(unsafe.Pointer(f.rpos)))
+					return int64(uintptr(unsafe.Pointer(f.Rend)) - uintptr(unsafe.Pointer(f.Rpos)))
 				}
 			}())
 		} else {
@@ -57,10 +57,10 @@ func Getdelim(s **int8, n *uint64, delim int32, f *struct__IO_FILE) int64 {
 				tmp = (*int8)(Realloc(unsafe.Pointer(*s), m))
 				if !(tmp != nil) {
 					k = *n - i
-					Memcpy(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(*s))+uintptr(i)))), unsafe.Pointer(f.rpos), k)
-					*(*uintptr)(unsafe.Pointer(&f.rpos)) += uintptr(k)
-					f.mode |= f.mode - int32(1)
-					f.flags |= uint32(32)
+					Memcpy(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(*s))+uintptr(i)))), unsafe.Pointer(f.Rpos), k)
+					*(*uintptr)(unsafe.Pointer(&f.Rpos)) += uintptr(k)
+					f.Mode |= f.Mode - int32(1)
+					f.Flags |= uint32(32)
 					for {
 						if __need_unlock != 0 {
 							__unlockfile(f)
@@ -76,8 +76,8 @@ func Getdelim(s **int8, n *uint64, delim int32, f *struct__IO_FILE) int64 {
 			*s = tmp
 			*n = m
 		}
-		Memcpy(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(*s))+uintptr(i)))), unsafe.Pointer(f.rpos), k)
-		*(*uintptr)(unsafe.Pointer(&f.rpos)) += uintptr(k)
+		Memcpy(unsafe.Pointer((*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(*s))+uintptr(i)))), unsafe.Pointer(f.Rpos), k)
+		*(*uintptr)(unsafe.Pointer(&f.Rpos)) += uintptr(k)
 		i += k
 		if z != nil {
 			break
@@ -85,9 +85,9 @@ func Getdelim(s **int8, n *uint64, delim int32, f *struct__IO_FILE) int64 {
 		if func() (_cgo_ret int32) {
 			_cgo_addr := &c
 			*_cgo_addr = func() int32 {
-				if uintptr(unsafe.Pointer(f.rpos)) != uintptr(unsafe.Pointer(f.rend)) {
+				if uintptr(unsafe.Pointer(f.Rpos)) != uintptr(unsafe.Pointer(f.Rend)) {
 					return int32(*func() (_cgo_ret *uint8) {
-						_cgo_addr := &f.rpos
+						_cgo_addr := &f.Rpos
 						_cgo_ret = *_cgo_addr
 						*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 						return
@@ -98,7 +98,7 @@ func Getdelim(s **int8, n *uint64, delim int32, f *struct__IO_FILE) int64 {
 			}()
 			return *_cgo_addr
 		}() == -1 {
-			if !(i != 0) || !(f.flags&uint32(16) != 0) {
+			if !(i != 0) || !(f.Flags&uint32(16) != 0) {
 				for {
 					if __need_unlock != 0 {
 						__unlockfile(f)
@@ -113,7 +113,7 @@ func Getdelim(s **int8, n *uint64, delim int32, f *struct__IO_FILE) int64 {
 		}
 		if i+uint64(1) >= *n {
 			*func() (_cgo_ret *uint8) {
-				_cgo_addr := &f.rpos
+				_cgo_addr := &f.Rpos
 				*(*uintptr)(unsafe.Pointer(_cgo_addr))--
 				return *_cgo_addr
 			}() = uint8(c)

@@ -10,10 +10,10 @@ var __optpos int32
 var __optreset int32 = int32(0)
 
 func __getopt_msg(a *int8, b *int8, c *int8, l uint64) {
-	var f *struct__IO_FILE = &__stderr_FILE
+	var f *Struct__IO_FILE = &__stderr_FILE
 	b = __lctrans_cur(b)
 	var __need_unlock int32 = func() int32 {
-		if f.lock >= int32(0) {
+		if f.Lock >= int32(0) {
 			return __lockfile(f)
 		} else {
 			return int32(0)

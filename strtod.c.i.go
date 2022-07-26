@@ -3,22 +3,22 @@ package libc
 import unsafe "unsafe"
 
 func _cgos_strtox_strtod(s *int8, p **int8, prec int32) float64 {
-	var f struct__IO_FILE
+	var f Struct__IO_FILE
 	func() *uint8 {
-		(&f).buf = func() (_cgo_ret *uint8) {
-			_cgo_addr := &(&f).rpos
+		(&f).Buf = func() (_cgo_ret *uint8) {
+			_cgo_addr := &(&f).Rpos
 			*_cgo_addr = (*uint8)(unsafe.Pointer(s))
 			return *_cgo_addr
 		}()
 		return func() (_cgo_ret *uint8) {
-			_cgo_addr := &(&f).rend
+			_cgo_addr := &(&f).Rend
 			*_cgo_addr = (*uint8)(unsafe.Pointer(uintptr(18446744073709551615)))
 			return *_cgo_addr
 		}()
 	}()
 	__shlim(&f, int64(0))
 	var y float64 = __floatscan(&f, prec, int32(1))
-	var cnt int64 = (&f).shcnt + int64(uintptr(unsafe.Pointer((&f).rpos))-uintptr(unsafe.Pointer((&f).buf)))
+	var cnt int64 = (&f).Shcnt + int64(uintptr(unsafe.Pointer((&f).Rpos))-uintptr(unsafe.Pointer((&f).Buf)))
 	if p != nil {
 		*p = func() *int8 {
 			if cnt != 0 {

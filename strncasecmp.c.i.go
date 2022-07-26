@@ -33,6 +33,6 @@ func strncasecmp(_l *int8, _r *int8, n uint64) int32 {
 	}
 	return Tolower(int32(*l)) - Tolower(int32(*r))
 }
-func __strncasecmp_l(l *int8, r *int8, n uint64, loc *struct___locale_struct) int32 {
+func __strncasecmp_l(l *int8, r *int8, n uint64, loc *Struct___locale_struct) int32 {
 	return strncasecmp(l, r, n)
 }

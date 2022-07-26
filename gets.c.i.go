@@ -6,7 +6,7 @@ func gets(s *int8) *int8 {
 	var i uint64 = uint64(0)
 	var c int32
 	var __need_unlock int32 = func() int32 {
-		if (&__stdin_FILE).lock >= int32(0) {
+		if (&__stdin_FILE).Lock >= int32(0) {
 			return __lockfile(&__stdin_FILE)
 		} else {
 			return int32(0)
@@ -15,9 +15,9 @@ func gets(s *int8) *int8 {
 	for func() (_cgo_ret int32) {
 		_cgo_addr := &c
 		*_cgo_addr = func() int32 {
-			if uintptr(unsafe.Pointer((&__stdin_FILE).rpos)) != uintptr(unsafe.Pointer((&__stdin_FILE).rend)) {
+			if uintptr(unsafe.Pointer((&__stdin_FILE).Rpos)) != uintptr(unsafe.Pointer((&__stdin_FILE).Rend)) {
 				return int32(*func() (_cgo_ret *uint8) {
-					_cgo_addr := &(&__stdin_FILE).rpos
+					_cgo_addr := &(&__stdin_FILE).Rpos
 					_cgo_ret = *_cgo_addr
 					*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 					return
@@ -36,7 +36,7 @@ func gets(s *int8) *int8 {
 		}()))) = int8(c)
 	}
 	*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(s)) + uintptr(i))) = int8(0)
-	if c != '\n' && (!((&__stdin_FILE).flags&uint32(16) != 0) || !(i != 0)) {
+	if c != '\n' && (!((&__stdin_FILE).Flags&uint32(16) != 0) || !(i != 0)) {
 		s = (*int8)(nil)
 	}
 	for {

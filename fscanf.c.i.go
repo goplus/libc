@@ -1,6 +1,6 @@
 package libc
 
-func Fscanf(f *struct__IO_FILE, fmt *int8, __cgo_args ...interface {
+func Fscanf(f *Struct__IO_FILE, fmt *int8, __cgo_args ...interface {
 }) int32 {
 	var ret int32
 	var ap []interface {

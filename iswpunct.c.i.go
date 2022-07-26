@@ -10,6 +10,6 @@ func iswpunct(wc uint32) int32 {
 	}
 	return int32(0)
 }
-func __iswpunct_l(c uint32, l *struct___locale_struct) int32 {
+func __iswpunct_l(c uint32, l *Struct___locale_struct) int32 {
 	return iswpunct(c)
 }

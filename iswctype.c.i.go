@@ -70,9 +70,9 @@ func wctype(s *int8) uint64 {
 
 var _cgos_names_iswctype [73]int8 = [73]int8{'a', 'l', 'n', 'u', 'm', '\x00', 'a', 'l', 'p', 'h', 'a', '\x00', 'b', 'l', 'a', 'n', 'k', '\x00', 'c', 'n', 't', 'r', 'l', '\x00', 'd', 'i', 'g', 'i', 't', '\x00', 'g', 'r', 'a', 'p', 'h', '\x00', 'l', 'o', 'w', 'e', 'r', '\x00', 'p', 'r', 'i', 'n', 't', '\x00', 'p', 'u', 'n', 'c', 't', '\x00', 's', 'p', 'a', 'c', 'e', '\x00', 'u', 'p', 'p', 'e', 'r', '\x00', 'x', 'd', 'i', 'g', 'i', 't', '\x00'}
 
-func __iswctype_l(c uint32, t uint64, l *struct___locale_struct) int32 {
+func __iswctype_l(c uint32, t uint64, l *Struct___locale_struct) int32 {
 	return iswctype(c, t)
 }
-func __wctype_l(s *int8, l *struct___locale_struct) uint64 {
+func __wctype_l(s *int8, l *Struct___locale_struct) uint64 {
 	return wctype(s)
 }

@@ -4,10 +4,10 @@ import unsafe "unsafe"
 
 func Putchar_unlocked(c int32) int32 {
 	return func() int32 {
-		if int32(uint8(c)) != (&__stdout_FILE).lbf && uintptr(unsafe.Pointer((&__stdout_FILE).wpos)) != uintptr(unsafe.Pointer((&__stdout_FILE).wend)) {
+		if int32(uint8(c)) != (&__stdout_FILE).Lbf && uintptr(unsafe.Pointer((&__stdout_FILE).Wpos)) != uintptr(unsafe.Pointer((&__stdout_FILE).Wend)) {
 			return int32(func() (_cgo_ret uint8) {
 				_cgo_addr := &*func() (_cgo_ret *uint8) {
-					_cgo_addr := &(&__stdout_FILE).wpos
+					_cgo_addr := &(&__stdout_FILE).Wpos
 					_cgo_ret = *_cgo_addr
 					*(*uintptr)(unsafe.Pointer(_cgo_addr))++
 					return

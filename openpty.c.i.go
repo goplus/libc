@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func openpty(pm *int32, ps *int32, name *int8, tio *struct_termios, ws *struct_winsize) int32 {
+func openpty(pm *int32, ps *int32, name *int8, tio *struct_termios, ws *Struct_winsize) int32 {
 	var m int32
 	var s int32
 	var n int32 = int32(0)

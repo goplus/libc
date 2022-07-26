@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func __fpclassifyf(x float32) int32 {
+func X__fpclassifyf(x float32) int32 {
 	type _cgoa_18___fpclassifyf struct {
 		f float32
 	}

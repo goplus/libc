@@ -268,12 +268,12 @@ func _cgos_pop_arg_vfprintf(arg *_cgos_arg_vfprintf, type_ int32, ap *[]interfac
 		}(*ap)
 	}
 }
-func _cgos_out_vfprintf(f *struct__IO_FILE, s *int8, l uint64) {
-	if !(f.flags&uint32(32) != 0) {
+func _cgos_out_vfprintf(f *Struct__IO_FILE, s *int8, l uint64) {
+	if !(f.Flags&uint32(32) != 0) {
 		__fwritex((*uint8)(unsafe.Pointer(s)), l, f)
 	}
 }
-func _cgos_pad_vfprintf(f *struct__IO_FILE, c int8, w int32, l int32, fl int32) {
+func _cgos_pad_vfprintf(f *Struct__IO_FILE, c int8, w int32, l int32, fl int32) {
 	var pad [256]int8
 	if uint32(fl)&73728 != 0 || l >= w {
 		return
@@ -335,7 +335,7 @@ func _cgos_fmt_u_vfprintf(x uint64, s *int8) *int8 {
 
 type compiler_defines_long_double_incorrectly = int32
 
-func _cgos_fmt_fp_vfprintf(f *struct__IO_FILE, y float64, w int32, p int32, fl int32, t int32) int32 {
+func _cgos_fmt_fp_vfprintf(f *Struct__IO_FILE, y float64, w int32, p int32, fl int32, t int32) int32 {
 	var big [126]uint32
 	var a *uint32
 	var d *uint32
@@ -1056,7 +1056,7 @@ func _cgos_getint_vfprintf(s **int8) int32 {
 	}
 	return i
 }
-func _cgos_printf_core_vfprintf(f *struct__IO_FILE, fmt *int8, ap *[]interface {
+func _cgos_printf_core_vfprintf(f *Struct__IO_FILE, fmt *int8, ap *[]interface {
 }, nl_arg *_cgos_arg_vfprintf, nl_type *int32) int32 {
 	var (
 		_tag_cgo1 int32
@@ -1646,7 +1646,7 @@ overflow:
 	*__errno_location() = int32(75)
 	return -1
 }
-func Vfprintf(f *struct__IO_FILE, fmt *int8, ap []interface {
+func Vfprintf(f *Struct__IO_FILE, fmt *int8, ap []interface {
 }) int32 {
 	var ap2 []interface {
 	}
@@ -1661,56 +1661,56 @@ func Vfprintf(f *struct__IO_FILE, fmt *int8, ap []interface {
 		return -1
 	}
 	var __need_unlock int32 = func() int32 {
-		if f.lock >= int32(0) {
+		if f.Lock >= int32(0) {
 			return __lockfile(f)
 		} else {
 			return int32(0)
 		}
 	}()
-	olderr = int32(f.flags & uint32(32))
-	if f.mode < int32(1) {
-		f.flags &= uint32(4294967263)
+	olderr = int32(f.Flags & uint32(32))
+	if f.Mode < int32(1) {
+		f.Flags &= uint32(4294967263)
 	}
-	if !(f.buf_size != 0) {
-		saved_buf = f.buf
-		f.buf = (*uint8)(unsafe.Pointer(&internal_buf))
-		f.buf_size = uint64(80)
-		f.wpos = func() (_cgo_ret *uint8) {
-			_cgo_addr := &f.wbase
+	if !(f.Buf_size != 0) {
+		saved_buf = f.Buf
+		f.Buf = (*uint8)(unsafe.Pointer(&internal_buf))
+		f.Buf_size = uint64(80)
+		f.Wpos = func() (_cgo_ret *uint8) {
+			_cgo_addr := &f.Wbase
 			*_cgo_addr = func() (_cgo_ret *uint8) {
-				_cgo_addr := &f.wend
+				_cgo_addr := &f.Wend
 				*_cgo_addr = (*uint8)(nil)
 				return *_cgo_addr
 			}()
 			return *_cgo_addr
 		}()
 	}
-	if !(f.wend != nil) && __towrite(f) != 0 {
+	if !(f.Wend != nil) && __towrite(f) != 0 {
 		ret = -1
 	} else {
 		ret = _cgos_printf_core_vfprintf(f, fmt, &ap2, (*_cgos_arg_vfprintf)(unsafe.Pointer(&nl_arg)), (*int32)(unsafe.Pointer(&nl_type)))
 	}
 	if saved_buf != nil {
-		f.write(f, nil, uint64(0))
-		if !(f.wpos != nil) {
+		f.Write(f, nil, uint64(0))
+		if !(f.Wpos != nil) {
 			ret = -1
 		}
-		f.buf = saved_buf
-		f.buf_size = uint64(0)
-		f.wpos = func() (_cgo_ret *uint8) {
-			_cgo_addr := &f.wbase
+		f.Buf = saved_buf
+		f.Buf_size = uint64(0)
+		f.Wpos = func() (_cgo_ret *uint8) {
+			_cgo_addr := &f.Wbase
 			*_cgo_addr = func() (_cgo_ret *uint8) {
-				_cgo_addr := &f.wend
+				_cgo_addr := &f.Wend
 				*_cgo_addr = (*uint8)(nil)
 				return *_cgo_addr
 			}()
 			return *_cgo_addr
 		}()
 	}
-	if f.flags&uint32(32) != 0 {
+	if f.Flags&uint32(32) != 0 {
 		ret = -1
 	}
-	f.flags |= uint32(olderr)
+	f.Flags |= uint32(olderr)
 	for {
 		if __need_unlock != 0 {
 			__unlockfile(f)

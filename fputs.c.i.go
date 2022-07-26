@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func Fputs(s *int8, f *struct__IO_FILE) int32 {
+func Fputs(s *int8, f *Struct__IO_FILE) int32 {
 	var l uint64 = Strlen(s)
 	return func() int32 {
 		if Fwrite(unsafe.Pointer(s), uint64(1), l, f) == l {

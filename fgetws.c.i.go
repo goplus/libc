@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func fgetws(s *uint32, n int32, f *struct__IO_FILE) *uint32 {
+func fgetws(s *uint32, n int32, f *Struct__IO_FILE) *uint32 {
 	var p *uint32 = s
 	if !(func() (_cgo_ret int32) {
 		_cgo_addr := &n
@@ -13,7 +13,7 @@ func fgetws(s *uint32, n int32, f *struct__IO_FILE) *uint32 {
 		return s
 	}
 	var __need_unlock int32 = func() int32 {
-		if f.lock >= int32(0) {
+		if f.Lock >= int32(0) {
 			return __lockfile(f)
 		} else {
 			return int32(0)
@@ -36,7 +36,7 @@ func fgetws(s *uint32, n int32, f *struct__IO_FILE) *uint32 {
 		}
 	}
 	*p = uint32(0)
-	if f.flags&uint32(32) != 0 || *__errno_location() == int32(84) {
+	if f.Flags&uint32(32) != 0 || *__errno_location() == int32(84) {
 		p = s
 	}
 	for {

@@ -2,25 +2,25 @@ package libc
 
 import unsafe "unsafe"
 
-func __freadahead(f *struct__IO_FILE) uint64 {
+func __freadahead(f *Struct__IO_FILE) uint64 {
 	return uint64(func() int64 {
-		if f.rend != nil {
-			return int64(uintptr(unsafe.Pointer(f.rend)) - uintptr(unsafe.Pointer(f.rpos)))
+		if f.Rend != nil {
+			return int64(uintptr(unsafe.Pointer(f.Rend)) - uintptr(unsafe.Pointer(f.Rpos)))
 		} else {
 			return int64(0)
 		}
 	}())
 }
-func __freadptr(f *struct__IO_FILE, sizep *uint64) *int8 {
-	if uintptr(unsafe.Pointer(f.rpos)) == uintptr(unsafe.Pointer(f.rend)) {
+func __freadptr(f *Struct__IO_FILE, sizep *uint64) *int8 {
+	if uintptr(unsafe.Pointer(f.Rpos)) == uintptr(unsafe.Pointer(f.Rend)) {
 		return (*int8)(nil)
 	}
-	*sizep = uint64(uintptr(unsafe.Pointer(f.rend)) - uintptr(unsafe.Pointer(f.rpos)))
-	return (*int8)(unsafe.Pointer(f.rpos))
+	*sizep = uint64(uintptr(unsafe.Pointer(f.Rend)) - uintptr(unsafe.Pointer(f.Rpos)))
+	return (*int8)(unsafe.Pointer(f.Rpos))
 }
-func __freadptrinc(f *struct__IO_FILE, inc uint64) {
-	*(*uintptr)(unsafe.Pointer(&f.rpos)) += uintptr(inc)
+func __freadptrinc(f *Struct__IO_FILE, inc uint64) {
+	*(*uintptr)(unsafe.Pointer(&f.Rpos)) += uintptr(inc)
 }
-func __fseterr(f *struct__IO_FILE) {
-	f.flags |= uint32(32)
+func __fseterr(f *Struct__IO_FILE) {
+	f.Flags |= uint32(32)
 }

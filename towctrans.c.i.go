@@ -64,9 +64,9 @@ func towlower(wc uint32) uint32 {
 func towupper(wc uint32) uint32 {
 	return uint32(_cgos_casemap_towctrans(wc, int32(1)))
 }
-func __towupper_l(c uint32, l *struct___locale_struct) uint32 {
+func __towupper_l(c uint32, l *Struct___locale_struct) uint32 {
 	return towupper(c)
 }
-func __towlower_l(c uint32, l *struct___locale_struct) uint32 {
+func __towlower_l(c uint32, l *Struct___locale_struct) uint32 {
 	return towlower(c)
 }
