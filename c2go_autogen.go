@@ -17,9 +17,6 @@ func Mblen(*int8, uint64) int32 {
 func Mbtowc(*uint32, *int8, uint64) int32 {
 	panic("notimpl")
 }
-func Sqrtf(float32) float32 {
-	panic("notimpl")
-}
 func Vfscanf(*Struct__IO_FILE, *int8, []interface {
 }) int32 {
 	panic("notimpl")
@@ -112,6 +109,18 @@ func open(*int8, int32, ...interface {
 func pipe2(fd *int32, flag int32) int32 {
 	panic("notimpl")
 }
+func posix_spawn(*int32, *int8, *_cgoa_19_popen, *_cgoa_18_popen, **int8, **int8) int32 {
+	panic("notimpl")
+}
+func posix_spawn_file_actions_adddup2(*_cgoa_19_popen, int32, int32) int32 {
+	panic("notimpl")
+}
+func posix_spawn_file_actions_destroy(*_cgoa_19_popen) int32 {
+	panic("notimpl")
+}
+func posix_spawn_file_actions_init(*_cgoa_19_popen) int32 {
+	panic("notimpl")
+}
 func pthread_setcancelstate(int32, *int32) int32 {
 	panic("notimpl")
 }
@@ -147,10 +156,6 @@ func vfwprintf(*Struct__IO_FILE, *uint32, []interface {
 	panic("notimpl")
 }
 func vfwscanf(*Struct__IO_FILE, *uint32, []interface {
-}) int32 {
-	panic("notimpl")
-}
-func vswprintf(*uint32, uint64, *uint32, []interface {
 }) int32 {
 	panic("notimpl")
 }

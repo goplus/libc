@@ -2637,6 +2637,23 @@ func X__isspace(_c int32) int32 {
 	}()
 }
 
+type _cgoa_18_popen struct {
+	__flags int32
+	__pgrp  int32
+	__def   Struct___sigset_t
+	__mask  Struct___sigset_t
+	__prio  int32
+	__pol   int32
+	__fn    unsafe.Pointer
+	__pad   [56]int8
+}
+type posix_spawnattr_t = _cgoa_18_popen
+type _cgoa_19_popen struct {
+	__pad0    [2]int32
+	__actions unsafe.Pointer
+	__pad     [16]int32
+}
+type posix_spawn_file_actions_t = _cgoa_19_popen
 type struct_kstat struct {
 	st_dev             uint64
 	__st_dev_padding   int32
