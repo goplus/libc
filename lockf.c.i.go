@@ -8,7 +8,7 @@ func lockf(fd int32, op int32, size int64) int32 {
 		if fcntl(fd, int32(12), &l) < int32(0) {
 			return -1
 		}
-		if int32(l.l_type) == int32(2) || l.l_pid == getpid() {
+		if int32(l.l_type) == int32(2) || l.l_pid == Getpid() {
 			return int32(0)
 		}
 		*__errno_location() = int32(13)

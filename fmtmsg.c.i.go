@@ -87,7 +87,7 @@ func fmtmsg(classification int64, label *int8, severity int32, text *int8, actio
 			}()) < int32(1) {
 				ret = int32(4)
 			}
-			close(consolefd)
+			Close(consolefd)
 		}
 	}
 	if classification&int64(256) != 0 {

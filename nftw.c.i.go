@@ -93,7 +93,7 @@ func _cgos_do_nftw_nftw(path *int8, fn func(*int8, *struct_stat, int32, *struct_
 			type_ = int32(3)
 		}
 		if !(fd_limit != 0) {
-			close(dfd)
+			Close(dfd)
 		}
 	}
 	if !(flags&int32(8) != 0) && func() (_cgo_ret int32) {
@@ -142,7 +142,7 @@ func _cgos_do_nftw_nftw(path *int8, fn func(*int8, *struct_stat, int32, *struct_
 			}
 			closedir(d)
 		} else {
-			close(dfd)
+			Close(dfd)
 			return -1
 		}
 	}

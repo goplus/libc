@@ -13,7 +13,7 @@ func openpty(pm *int32, ps *int32, name *int8, tio *struct_termios, ws *Struct_w
 		return -1
 	}
 	pthread_setcancelstate(int32(1), &cs)
-	if ioctl(m, int32(1074025521), &n) != 0 || ioctl(m, int32(-2147199952), &n) != 0 {
+	if Ioctl(m, int32(1074025521), &n) != 0 || Ioctl(m, int32(-2147199952), &n) != 0 {
 		goto fail
 	}
 	if !(name != nil) {
@@ -31,14 +31,14 @@ func openpty(pm *int32, ps *int32, name *int8, tio *struct_termios, ws *Struct_w
 		tcsetattr(s, int32(0), tio)
 	}
 	if ws != nil {
-		ioctl(s, int32(21524), ws)
+		Ioctl(s, int32(21524), ws)
 	}
 	*pm = m
 	*ps = s
 	pthread_setcancelstate(cs, nil)
 	return int32(0)
 fail:
-	close(m)
+	Close(m)
 	pthread_setcancelstate(cs, nil)
 	return -1
 }

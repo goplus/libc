@@ -14,7 +14,7 @@ func Grantpt(fd int32) int32 {
 }
 func Unlockpt(fd int32) int32 {
 	var unlock int32 = int32(0)
-	return ioctl(fd, int32(1074025521), &unlock)
+	return Ioctl(fd, int32(1074025521), &unlock)
 }
 func __ptsname_r(fd int32, buf *int8, len uint64) int32 {
 	var pty int32
