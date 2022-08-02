@@ -1,5 +1,5 @@
 package libc
 
-func sync() {
+func Sync() {
 	__syscall0(int64(36))
 }
