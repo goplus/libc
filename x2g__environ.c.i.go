@@ -1,3 +1,3 @@
 package libc
 
-var __environ **int8 = nil
+var X__environ **int8 = nil

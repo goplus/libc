@@ -125,30 +125,30 @@ func _cgos_do_wordexp_wordexp(s *int8, we *_cgoa_18_wordexp, flags int32) int32 
 	} else {
 		we.we_offs = uint64(0)
 	}
-	if pipe2((*int32)(unsafe.Pointer(&p)), int32(524288)) < int32(0) {
+	if Pipe2((*int32)(unsafe.Pointer(&p)), int32(524288)) < int32(0) {
 		goto nospace
 	}
 	__block_all_sigs(unsafe.Pointer(&set))
-	pid = fork()
+	pid = Fork()
 	__restore_sigs(unsafe.Pointer(&set))
 	if pid < int32(0) {
-		close(*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&p)))) + uintptr(int32(0))*4)))
-		close(*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&p)))) + uintptr(int32(1))*4)))
+		Close(*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&p)))) + uintptr(int32(0))*4)))
+		Close(*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&p)))) + uintptr(int32(1))*4)))
 		goto nospace
 	}
 	if !(pid != 0) {
 		if *(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&p)))) + uintptr(int32(1))*4)) == int32(1) {
 			fcntl(int32(1), int32(2), int32(0))
 		} else {
-			dup2(*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&p)))) + uintptr(int32(1))*4)), int32(1))
+			Dup2(*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&p)))) + uintptr(int32(1))*4)), int32(1))
 		}
-		execl((*int8)(unsafe.Pointer(&[8]int8{'/', 'b', 'i', 'n', '/', 's', 'h', '\x00'})), (*int8)(unsafe.Pointer(&[3]int8{'s', 'h', '\x00'})), (*int8)(unsafe.Pointer(&[3]int8{'-', 'c', '\x00'})), (*int8)(unsafe.Pointer(&[30]int8{'e', 'v', 'a', 'l', ' ', '"', 'p', 'r', 'i', 'n', 't', 'f', ' ', '%', 's', '\\', '\\', '\\', '\\', '0', ' ', 'x', ' ', '$', '1', ' ', '$', '2', '"', '\x00'})), (*int8)(unsafe.Pointer(&[3]int8{'s', 'h', '\x00'})), s, redir, (*int8)(nil))
-		_exit(int32(1))
+		Execl((*int8)(unsafe.Pointer(&[8]int8{'/', 'b', 'i', 'n', '/', 's', 'h', '\x00'})), (*int8)(unsafe.Pointer(&[3]int8{'s', 'h', '\x00'})), (*int8)(unsafe.Pointer(&[3]int8{'-', 'c', '\x00'})), (*int8)(unsafe.Pointer(&[30]int8{'e', 'v', 'a', 'l', ' ', '"', 'p', 'r', 'i', 'n', 't', 'f', ' ', '%', 's', '\\', '\\', '\\', '\\', '0', ' ', 'x', ' ', '$', '1', ' ', '$', '2', '"', '\x00'})), (*int8)(unsafe.Pointer(&[3]int8{'s', 'h', '\x00'})), s, redir, (*int8)(nil))
+		X_exit(int32(1))
 	}
-	close(*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&p)))) + uintptr(int32(1))*4)))
+	Close(*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&p)))) + uintptr(int32(1))*4)))
 	f = Fdopen(*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&p)))) + uintptr(int32(0))*4)), (*int8)(unsafe.Pointer(&[2]int8{'r', '\x00'})))
 	if !(f != nil) {
-		close(*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&p)))) + uintptr(int32(0))*4)))
+		Close(*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&p)))) + uintptr(int32(0))*4)))
 		kill(pid, int32(9))
 		_cgos_reap_wordexp(pid)
 		goto nospace
