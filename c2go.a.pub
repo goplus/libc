@@ -7,6 +7,7 @@ __builtin_inff
 __builtin_nan
 __builtin_nanf
 __ctype_get_mb_cur_max
+__environ
 __fpclassify
 __fpclassifyf
 __fpclassifyl
@@ -27,9 +28,11 @@ __islessgreaterl
 __islessl
 __isoc_va_list
 __isspace
+__lseek
 __signbit
 __signbitf
 __signbitl
+_exit
 a64l
 abort
 abs
@@ -78,6 +81,7 @@ clearerr
 clearerr_unlocked
 clock_t
 clockid_t
+close
 cookie_close_function_t
 cookie_io_functions_t
 cookie_read_function_t
@@ -102,6 +106,7 @@ dprintf
 drand48
 drem
 dremf
+dup2
 ecvt
 erand48
 erf
@@ -110,6 +115,7 @@ erfcf
 erfcl
 erff
 erfl
+execl
 exit
 exp
 exp10
@@ -176,6 +182,7 @@ fmodf
 fmodl
 fopen
 fopencookie
+fork
 fpos_t
 fprintf
 fputc
@@ -204,10 +211,13 @@ getc
 getc_unlocked
 getchar
 getchar_unlocked
+getcwd
 getdelim
 getenv
 getline
 getloadavg
+getlogin
+getpid
 getsubopt
 getw
 gid_t
@@ -227,6 +237,7 @@ int64_t
 int8_t
 intmax_t
 intptr_t
+ioctl
 isalnum
 isalnum_l
 isalpha
@@ -351,6 +362,8 @@ open_memstream
 pclose
 perror
 pid_t
+pipe
+pipe2
 popen
 posix_memalign
 posix_openpt
@@ -384,11 +397,14 @@ putchar_unlocked
 putenv
 puts
 putw
+pwrite
 qsort
 quick_exit
 rand
 rand_r
 random
+read
+readlink
 realloc
 reallocarray
 realpath
@@ -424,6 +440,8 @@ setbuffer
 setenv
 setkey
 setlinebuf
+setpgrp
+setsid
 setstate
 setvbuf
 signgam
@@ -508,6 +526,7 @@ strverscmp
 strxfrm
 strxfrm_l
 suseconds_t
+sync
 system
 tan
 tanf
