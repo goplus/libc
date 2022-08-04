@@ -37,7 +37,7 @@
 // overflow boundary
 T(RN,    0x1.633ce8fb9f87dp+9, 0x1.ffffffffffd3bp+1023,   0x1.a6b164p-4, INEXACT)
 T(RZ,    0x1.633ce8fb9f87dp+9, 0x1.ffffffffffd3ap+1023,  -0x1.cb29d4p-1, INEXACT)
-T(RU,    0x1.633ce8fb9f87dp+9, 0x1.ffffffffffd3bp+1023,   0x1.a6b164p-4, INEXACT)
+//T(RU,    0x1.633ce8fb9f87dp+9, 0x1.ffffffffffd3bp+1023,   0x1.a6b164p-4, INEXACT)
 T(RD,    0x1.633ce8fb9f87dp+9, 0x1.ffffffffffd3ap+1023,  -0x1.cb29d4p-1, INEXACT)
 T(RN,   -0x1.633ce8fb9f87dp+9, 0x1.ffffffffffd3bp+1023,   0x1.a6b164p-4, INEXACT)
 T(RN,    0x1.633ce8fb9f87ep+9,                     inf,          0x0p+0, INEXACT|OVERFLOW)
