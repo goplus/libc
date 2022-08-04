@@ -18,7 +18,26 @@ import (
 
 	"github.com/goplus/libc/test/cmd/test/atan"
 	"github.com/goplus/libc/test/cmd/test/atanf"
+	"github.com/goplus/libc/test/cmd/test/atanl"
+
 	"github.com/goplus/libc/test/cmd/test/atanh"
+	"github.com/goplus/libc/test/cmd/test/atanhf"
+	"github.com/goplus/libc/test/cmd/test/atanhl"
+
+	"github.com/goplus/libc/test/cmd/test/cbrt"
+	"github.com/goplus/libc/test/cmd/test/cbrtf"
+	"github.com/goplus/libc/test/cmd/test/cbrtl"
+
+	"github.com/goplus/libc/test/cmd/test/ceil"
+	"github.com/goplus/libc/test/cmd/test/ceilf"
+	"github.com/goplus/libc/test/cmd/test/ceill"
+
+	"github.com/goplus/libc/test/cmd/test/copysign"
+	"github.com/goplus/libc/test/cmd/test/copysignl"
+
+	"github.com/goplus/libc/test/cmd/test/erf"
+	"github.com/goplus/libc/test/cmd/test/erff"
+	"github.com/goplus/libc/test/cmd/test/erfl"
 
 	"github.com/goplus/libc/test/cmd/test/qsort"
 	"github.com/goplus/libc/test/cmd/test/random"
@@ -38,7 +57,26 @@ func TestFromTestdata(t *testing.T) {
 
 	atan.TestMain(t)
 	atanf.TestMain(t)
+	atanl.TestMain(t)
+
 	atanh.TestMain(t)
+	atanhf.TestMain(t)
+	atanhl.TestMain(t)
+
+	cbrt.TestMain(t)
+	cbrtf.TestMain(t)
+	cbrtl.TestMain(t)
+
+	ceil.TestMain(t)
+	ceilf.TestMain(t)
+	ceill.TestMain(t)
+
+	copysign.TestMain(t)
+	copysignl.TestMain(t)
+
+	erf.TestMain(t)
+	erff.TestMain(t)
+	erfl.TestMain(t)
 
 	qsort.TestMain(t)
 	random.TestMain(t)
