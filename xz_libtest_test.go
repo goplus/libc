@@ -66,6 +66,36 @@ import (
 	"github.com/goplus/libc/test/cmd/test/hypot"
 	"github.com/goplus/libc/test/cmd/test/hypotl"
 
+	"github.com/goplus/libc/test/cmd/test/ldexp"
+	"github.com/goplus/libc/test/cmd/test/ldexpl"
+
+	"github.com/goplus/libc/test/cmd/test/log1p"
+	"github.com/goplus/libc/test/cmd/test/log1pf"
+	"github.com/goplus/libc/test/cmd/test/log1pl"
+
+	"github.com/goplus/libc/test/cmd/test/log10"
+	"github.com/goplus/libc/test/cmd/test/log10f"
+	"github.com/goplus/libc/test/cmd/test/log10l"
+
+	"github.com/goplus/libc/test/cmd/test/logb"
+	"github.com/goplus/libc/test/cmd/test/logbf"
+	"github.com/goplus/libc/test/cmd/test/logbl"
+
+	"github.com/goplus/libc/test/cmd/test/nearbyint"
+	"github.com/goplus/libc/test/cmd/test/nearbyintf"
+	"github.com/goplus/libc/test/cmd/test/nearbyintl"
+
+	"github.com/goplus/libc/test/cmd/test/nextafter"
+	"github.com/goplus/libc/test/cmd/test/nextafterl"
+
+	"github.com/goplus/libc/test/cmd/test/nexttoward"
+	"github.com/goplus/libc/test/cmd/test/nexttowardf"
+	"github.com/goplus/libc/test/cmd/test/nexttowardl"
+
+	"github.com/goplus/libc/test/cmd/test/rint"
+	"github.com/goplus/libc/test/cmd/test/rintf"
+	"github.com/goplus/libc/test/cmd/test/rintl"
+
 	"github.com/goplus/libc/test/cmd/test/qsort"
 	"github.com/goplus/libc/test/cmd/test/random"
 	"github.com/goplus/libc/test/cmd/test/string_memcpy"
@@ -131,6 +161,36 @@ func TestFromTestdata(t *testing.T) {
 
 	hypot.TestMain(t)
 	hypotl.TestMain(t)
+
+	ldexp.TestMain(t)
+	ldexpl.TestMain(t)
+
+	log1p.TestMain(t)
+	log1pf.TestMain(t)
+	log1pl.TestMain(t)
+
+	log10.TestMain(t)
+	log10f.TestMain(t)
+	log10l.TestMain(t)
+
+	logb.TestMain(t)
+	logbf.TestMain(t)
+	logbl.TestMain(t)
+
+	nearbyint.TestMain(t)
+	nearbyintf.TestMain(t)
+	nearbyintl.TestMain(t)
+
+	nextafter.TestMain(t)
+	nextafterl.TestMain(t)
+
+	nexttoward.TestMain(t)
+	nexttowardf.TestMain(t)
+	nexttowardl.TestMain(t)
+
+	rint.TestMain(t)
+	rintf.TestMain(t)
+	rintl.TestMain(t)
 
 	qsort.TestMain(t)
 	random.TestMain(t)
