@@ -39,6 +39,33 @@ import (
 	"github.com/goplus/libc/test/cmd/test/erff"
 	"github.com/goplus/libc/test/cmd/test/erfl"
 
+	"github.com/goplus/libc/test/cmd/test/expm1"
+	"github.com/goplus/libc/test/cmd/test/expm1f"
+	"github.com/goplus/libc/test/cmd/test/expm1l"
+
+	"github.com/goplus/libc/test/cmd/test/fabs"
+	"github.com/goplus/libc/test/cmd/test/fabsf"
+	"github.com/goplus/libc/test/cmd/test/fabsl"
+
+	"github.com/goplus/libc/test/cmd/test/fdim"
+	"github.com/goplus/libc/test/cmd/test/fdiml"
+
+	"github.com/goplus/libc/test/cmd/test/floor"
+	"github.com/goplus/libc/test/cmd/test/floorf"
+	"github.com/goplus/libc/test/cmd/test/floorl"
+
+	"github.com/goplus/libc/test/cmd/test/fma"
+	"github.com/goplus/libc/test/cmd/test/fmal"
+
+	"github.com/goplus/libc/test/cmd/test/fmax"
+	"github.com/goplus/libc/test/cmd/test/fmaxl"
+
+	"github.com/goplus/libc/test/cmd/test/fmin"
+	"github.com/goplus/libc/test/cmd/test/fminl"
+
+	"github.com/goplus/libc/test/cmd/test/hypot"
+	"github.com/goplus/libc/test/cmd/test/hypotl"
+
 	"github.com/goplus/libc/test/cmd/test/qsort"
 	"github.com/goplus/libc/test/cmd/test/random"
 	"github.com/goplus/libc/test/cmd/test/string_memcpy"
@@ -77,6 +104,33 @@ func TestFromTestdata(t *testing.T) {
 	erf.TestMain(t)
 	erff.TestMain(t)
 	erfl.TestMain(t)
+
+	expm1.TestMain(t)
+	expm1f.TestMain(t)
+	expm1l.TestMain(t)
+
+	fabs.TestMain(t)
+	fabsf.TestMain(t)
+	fabsl.TestMain(t)
+
+	fdim.TestMain(t)
+	fdiml.TestMain(t)
+
+	floor.TestMain(t)
+	floorf.TestMain(t)
+	floorl.TestMain(t)
+
+	fma.TestMain(t)
+	fmal.TestMain(t)
+
+	fmax.TestMain(t)
+	fmaxl.TestMain(t)
+
+	fmin.TestMain(t)
+	fminl.TestMain(t)
+
+	hypot.TestMain(t)
+	hypotl.TestMain(t)
 
 	qsort.TestMain(t)
 	random.TestMain(t)
