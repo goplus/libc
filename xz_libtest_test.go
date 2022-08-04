@@ -16,6 +16,10 @@ import (
 	"github.com/goplus/libc/test/cmd/test/asinf"
 	"github.com/goplus/libc/test/cmd/test/asinl"
 
+	"github.com/goplus/libc/test/cmd/test/atan"
+	"github.com/goplus/libc/test/cmd/test/atanf"
+	"github.com/goplus/libc/test/cmd/test/atanh"
+
 	"github.com/goplus/libc/test/cmd/test/qsort"
 	"github.com/goplus/libc/test/cmd/test/random"
 	"github.com/goplus/libc/test/cmd/test/string_memcpy"
@@ -31,6 +35,10 @@ func TestFromTestdata(t *testing.T) {
 	asin.TestMain(t)
 	asinf.TestMain(t)
 	asinl.TestMain(t)
+
+	atan.TestMain(t)
+	atanf.TestMain(t)
+	atanh.TestMain(t)
 
 	qsort.TestMain(t)
 	random.TestMain(t)
