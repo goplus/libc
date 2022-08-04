@@ -9,6 +9,7 @@ import (
 	teststring "github.com/goplus/libc/test/cmd/test/string"
 
 	"github.com/goplus/libc/test/cmd/test/acos"
+	"github.com/goplus/libc/test/cmd/test/acosf"
 	"github.com/goplus/libc/test/cmd/test/qsort"
 	"github.com/goplus/libc/test/cmd/test/random"
 	"github.com/goplus/libc/test/cmd/test/string_memcpy"
@@ -18,6 +19,7 @@ import (
 
 func TestFromTestdata(t *testing.T) {
 	acos.TestMain(t)
+	acosf.TestMain(t)
 	qsort.TestMain(t)
 	random.TestMain(t)
 	string_memcpy.TestMain(t)
