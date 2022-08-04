@@ -96,6 +96,16 @@ import (
 	"github.com/goplus/libc/test/cmd/test/rintf"
 	"github.com/goplus/libc/test/cmd/test/rintl"
 
+	"github.com/goplus/libc/test/cmd/test/scalbln"
+	"github.com/goplus/libc/test/cmd/test/scalblnl"
+
+	"github.com/goplus/libc/test/cmd/test/scalbn"
+	"github.com/goplus/libc/test/cmd/test/scalbnl"
+
+	"github.com/goplus/libc/test/cmd/test/tanh"
+	"github.com/goplus/libc/test/cmd/test/tanhf"
+	"github.com/goplus/libc/test/cmd/test/tanhl"
+
 	"github.com/goplus/libc/test/cmd/test/qsort"
 	"github.com/goplus/libc/test/cmd/test/random"
 	"github.com/goplus/libc/test/cmd/test/string_memcpy"
@@ -191,6 +201,16 @@ func TestFromTestdata(t *testing.T) {
 	rint.TestMain(t)
 	rintf.TestMain(t)
 	rintl.TestMain(t)
+
+	scalbln.TestMain(t)
+	scalblnl.TestMain(t)
+
+	scalbn.TestMain(t)
+	scalbnl.TestMain(t)
+
+	tanh.TestMain(t)
+	tanhf.TestMain(t)
+	tanhl.TestMain(t)
 
 	qsort.TestMain(t)
 	random.TestMain(t)
