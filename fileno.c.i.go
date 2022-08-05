@@ -18,7 +18,7 @@ func Fileno(f *Struct__IO_FILE) int32 {
 		}
 	}
 	if fd < int32(0) {
-		*__errno_location() = int32(9)
+		*X__errno_location() = int32(9)
 		return -1
 	}
 	return fd

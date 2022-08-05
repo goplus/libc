@@ -4,7 +4,7 @@ import unsafe "unsafe"
 
 func Perror(msg *int8) {
 	var f *Struct__IO_FILE = &__stderr_FILE
-	var errstr *int8 = Strerror(*__errno_location())
+	var errstr *int8 = Strerror(*X__errno_location())
 	var __need_unlock int32 = func() int32 {
 		if f.Lock >= int32(0) {
 			return __lockfile(f)

@@ -24,7 +24,7 @@ func _cgos_mseek_fmemopen(f *Struct__IO_FILE, off int64, whence int32) int64 {
 		goto _cgol_1
 	}
 fail:
-	*__errno_location() = int32(22)
+	*X__errno_location() = int32(22)
 	return int64(-1)
 _cgol_1:
 	base = int64(*(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint64)(unsafe.Pointer(&[3]uint64{uint64(0), c.pos, c.len})))) + uintptr(whence)*8)))
@@ -103,11 +103,11 @@ func Fmemopen(buf unsafe.Pointer, size uint64, mode *int8) *Struct__IO_FILE {
 		}
 	}()
 	if !(Strchr((*int8)(unsafe.Pointer(&[4]int8{'r', 'w', 'a', '\x00'})), int32(*mode)) != nil) {
-		*__errno_location() = int32(22)
+		*X__errno_location() = int32(22)
 		return (*Struct__IO_FILE)(nil)
 	}
 	if !(buf != nil) && size > uint64(2147483647) {
-		*__errno_location() = int32(12)
+		*X__errno_location() = int32(12)
 		return (*Struct__IO_FILE)(nil)
 	}
 	f = (*_cgos_mem_FILE_fmemopen)(Malloc(1300 + func() uint64 {

@@ -42,7 +42,7 @@ func _cgos___fgetwc_unlocked_internal_fgetwc(f *Struct__IO_FILE) uint32 {
 		if c < int32(0) {
 			if !(first != 0) {
 				f.Flags |= uint32(32)
-				*__errno_location() = int32(84)
+				*X__errno_location() = int32(84)
 			}
 			return uint32(4294967295)
 		}

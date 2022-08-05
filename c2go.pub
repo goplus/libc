@@ -2,12 +2,14 @@ __builtin_inf
 __builtin_inff
 __builtin_nan
 __builtin_nanf
+__errno_location
 __fpclassify
 __fpclassifyl
 __signbit
 __signbitl
 __FLOAT_BITS
 __DOUBLE_BITS
+dirname
 sync
 basename
 initstate

@@ -39,9 +39,9 @@ func _cgos_do_nftw_nftw(path *int8, fn func(*int8, *struct_stat, int32, *struct_
 			}()
 		}
 	}() != 0 {
-		if !(flags&int32(1) != 0) && *__errno_location() == int32(2) && !(lstat(path, &st) != 0) {
+		if !(flags&int32(1) != 0) && *X__errno_location() == int32(2) && !(lstat(path, &st) != 0) {
 			type_ = int32(7)
-		} else if *__errno_location() != int32(13) {
+		} else if *X__errno_location() != int32(13) {
 			return -1
 		} else {
 			type_ = int32(4)
@@ -88,7 +88,7 @@ func _cgos_do_nftw_nftw(path *int8, fn func(*int8, *struct_stat, int32, *struct_
 	}
 	if type_ == int32(2) || type_ == int32(6) {
 		dfd = open(path, int32(0))
-		err = *__errno_location()
+		err = *X__errno_location()
 		if dfd < int32(0) && err == int32(13) {
 			type_ = int32(3)
 		}
@@ -110,7 +110,7 @@ func _cgos_do_nftw_nftw(path *int8, fn func(*int8, *struct_stat, int32, *struct_
 	}
 	if (type_ == int32(2) || type_ == int32(6)) && fd_limit != 0 {
 		if dfd < int32(0) {
-			*__errno_location() = err
+			*X__errno_location() = err
 			return -1
 		}
 		var d *struct___dirstream = fdopendir(dfd)
@@ -125,7 +125,7 @@ func _cgos_do_nftw_nftw(path *int8, fn func(*int8, *struct_stat, int32, *struct_
 					continue
 				}
 				if Strlen((*int8)(unsafe.Pointer(&de.d_name))) >= uint64(4096)-l {
-					*__errno_location() = int32(36)
+					*X__errno_location() = int32(36)
 					closedir(d)
 					return -1
 				}
@@ -166,7 +166,7 @@ func nftw(path *int8, fn func(*int8, *struct_stat, int32, *struct_FTW) int32, fd
 	}
 	l = Strlen(path)
 	if l > uint64(4096) {
-		*__errno_location() = int32(36)
+		*X__errno_location() = int32(36)
 		return -1
 	}
 	Memcpy(unsafe.Pointer((*int8)(unsafe.Pointer(&pathbuf))), unsafe.Pointer(path), l+uint64(1))

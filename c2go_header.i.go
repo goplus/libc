@@ -15,61 +15,61 @@ type Pthread_t = *Struct___pthread
 type Pthread_once_t = int32
 type Pthread_key_t = uint32
 type Pthread_spinlock_t = int32
-type _cgoa_1__exit struct {
+type _cgoa_1___environ struct {
 	X__attr uint32
 }
-type Pthread_mutexattr_t = _cgoa_1__exit
-type _cgoa_2__exit struct {
+type Pthread_mutexattr_t = _cgoa_1___environ
+type _cgoa_2___environ struct {
 	X__attr uint32
 }
-type Pthread_condattr_t = _cgoa_2__exit
-type _cgoa_3__exit struct {
+type Pthread_condattr_t = _cgoa_2___environ
+type _cgoa_3___environ struct {
 	X__attr uint32
 }
-type Pthread_barrierattr_t = _cgoa_3__exit
-type _cgoa_4__exit struct {
+type Pthread_barrierattr_t = _cgoa_3___environ
+type _cgoa_4___environ struct {
 	X__attr [2]uint32
 }
-type Pthread_rwlockattr_t = _cgoa_4__exit
+type Pthread_rwlockattr_t = _cgoa_4___environ
 type Struct___sigset_t struct {
 	X__bits [16]uint64
 }
 type Sigset_t = Struct___sigset_t
-type _cgoa_6__exit struct {
+type _cgoa_6___environ struct {
 	X__i [14]int32
 }
-type _cgoa_5__exit struct {
-	X__u _cgoa_6__exit
+type _cgoa_5___environ struct {
+	X__u _cgoa_6___environ
 }
-type Pthread_attr_t = _cgoa_5__exit
-type _cgoa_8__exit struct {
+type Pthread_attr_t = _cgoa_5___environ
+type _cgoa_8___environ struct {
 	X__i [10]int32
 }
-type _cgoa_7__exit struct {
-	X__u _cgoa_8__exit
+type _cgoa_7___environ struct {
+	X__u _cgoa_8___environ
 }
-type Pthread_mutex_t = _cgoa_7__exit
-type _cgoa_10__exit struct {
+type Pthread_mutex_t = _cgoa_7___environ
+type _cgoa_10___environ struct {
 	X__i [12]int32
 }
-type _cgoa_9__exit struct {
-	X__u _cgoa_10__exit
+type _cgoa_9___environ struct {
+	X__u _cgoa_10___environ
 }
-type Pthread_cond_t = _cgoa_9__exit
-type _cgoa_12__exit struct {
+type Pthread_cond_t = _cgoa_9___environ
+type _cgoa_12___environ struct {
 	X__i [14]int32
 }
-type _cgoa_11__exit struct {
-	X__u _cgoa_12__exit
+type _cgoa_11___environ struct {
+	X__u _cgoa_12___environ
 }
-type Pthread_rwlock_t = _cgoa_11__exit
-type _cgoa_14__exit struct {
+type Pthread_rwlock_t = _cgoa_11___environ
+type _cgoa_14___environ struct {
 	X__i [8]int32
 }
-type _cgoa_13__exit struct {
-	X__u _cgoa_14__exit
+type _cgoa_13___environ struct {
+	X__u _cgoa_14___environ
 }
-type Pthread_barrier_t = _cgoa_13__exit
+type Pthread_barrier_t = _cgoa_13___environ
 type Pid_t = int32
 type struct_sched_param struct {
 	sched_priority int32
@@ -103,21 +103,21 @@ type struct___ptcb struct {
 	__next *struct___ptcb
 }
 type Wchar_t = uint32
-type _cgoa_15__exit struct {
+type _cgoa_15___environ struct {
 	Quot int32
 	Rem  int32
 }
-type Div_t = _cgoa_15__exit
-type _cgoa_16__exit struct {
+type Div_t = _cgoa_15___environ
+type _cgoa_16___environ struct {
 	Quot int64
 	Rem  int64
 }
-type Ldiv_t = _cgoa_16__exit
-type _cgoa_17__exit struct {
+type Ldiv_t = _cgoa_16___environ
+type _cgoa_17___environ struct {
 	Quot int64
 	Rem  int64
 }
-type Lldiv_t = _cgoa_17__exit
+type Lldiv_t = _cgoa_17___environ
 type Ssize_t = int64
 type Off_t = int64
 type FILE = Struct__IO_FILE
@@ -164,29 +164,6 @@ type Intptr_t = int64
 type Uid_t = uint32
 type Gid_t = uint32
 type Useconds_t = uint32
-type Mode_t = uint32
-type struct_flock struct {
-	l_type   int16
-	l_whence int16
-	l_start  int64
-	l_len    int64
-	l_pid    int32
-}
-type syscall_arg_t = int64
-
-func __alt_socketcall(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
-	var r int64
-	if cp != 0 {
-		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
-	} else {
-		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
-	}
-	if r != int64(-38) {
-		return r
-	}
-	return r
-}
-
 type struct_cpu_set_t struct {
 	__bits [16]uint64
 }
@@ -222,6 +199,75 @@ type Struct__IO_cookie_io_functions_t struct {
 	Close func(unsafe.Pointer) int32
 }
 type Cookie_io_functions_t = Struct__IO_cookie_io_functions_t
+type struct_crypt_data struct {
+	initialized int32
+	__buf       [256]int8
+}
+type Uintptr_t = uint64
+type Int8_t = int8
+type Int16_t = int16
+type Int32_t = int32
+type Int64_t = int64
+type Intmax_t = int64
+type Uint8_t = uint8
+type Uint16_t = uint16
+type Uint32_t = uint32
+type Uint64_t = uint64
+type Uintmax_t = uint64
+type int_fast8_t = int8
+type int_fast64_t = int64
+type int_least8_t = int8
+type int_least16_t = int16
+type int_least32_t = int32
+type int_least64_t = int64
+type uint_fast8_t = uint8
+type uint_fast64_t = uint64
+type uint_least8_t = uint8
+type uint_least16_t = uint16
+type uint_least32_t = uint32
+type uint_least64_t = uint64
+type int_fast16_t = int32
+type int_fast32_t = int32
+type uint_fast16_t = uint32
+type uint_fast32_t = uint32
+type struct_expanded_key struct {
+	l [16]uint32
+	r [16]uint32
+}
+
+func X__isspace(_c int32) int32 {
+	return func() int32 {
+		if _c == ' ' || uint32(_c)-uint32('\t') < uint32(5) {
+			return 1
+		} else {
+			return 0
+		}
+	}()
+}
+
+type Mode_t = uint32
+type struct_flock struct {
+	l_type   int16
+	l_whence int16
+	l_start  int64
+	l_len    int64
+	l_pid    int32
+}
+type syscall_arg_t = int64
+
+func __alt_socketcall(sys int32, sock int32, cp int32, a int64, b int64, c int64, d int64, e int64, f int64) int64 {
+	var r int64
+	if cp != 0 {
+		r = __syscall_cp(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	} else {
+		r = __syscall6(int64(sys), int64(a), int64(b), int64(c), int64(d), int64(e), int64(f))
+	}
+	if r != int64(-38) {
+		return r
+	}
+	return r
+}
+
 type Suseconds_t = int64
 type Struct_timeval struct {
 	Tv_sec  int64
@@ -392,7 +438,7 @@ type struct_sigaction struct {
 }
 type _cgoa_33_setxid struct {
 	sigev_notify_function   func(union_sigval)
-	sigev_notify_attributes *_cgoa_5__exit
+	sigev_notify_attributes *_cgoa_5___environ
 }
 type _cgoa_32_setxid struct {
 	__pad [48]int8
@@ -418,33 +464,6 @@ type struct_termios struct {
 	__c_ispeed uint32
 	__c_ospeed uint32
 }
-type Uintptr_t = uint64
-type Int8_t = int8
-type Int16_t = int16
-type Int32_t = int32
-type Int64_t = int64
-type Intmax_t = int64
-type Uint8_t = uint8
-type Uint16_t = uint16
-type Uint32_t = uint32
-type Uint64_t = uint64
-type Uintmax_t = uint64
-type int_fast8_t = int8
-type int_fast64_t = int64
-type int_least8_t = int8
-type int_least16_t = int16
-type int_least32_t = int32
-type int_least64_t = int64
-type uint_fast8_t = uint8
-type uint_fast64_t = uint64
-type uint_least8_t = uint8
-type uint_least16_t = uint16
-type uint_least32_t = uint32
-type uint_least64_t = uint64
-type int_fast16_t = int32
-type int_fast32_t = int32
-type uint_fast16_t = uint32
-type uint_fast32_t = uint32
 
 func a_fetch_and(p *int32, v int32) int32 {
 	var old int32
@@ -2626,15 +2645,6 @@ func do_putc(c int32, f *Struct__IO_FILE) int32 {
 		}()
 	}
 	return locking_putc(c, f)
-}
-func X__isspace(_c int32) int32 {
-	return func() int32 {
-		if _c == ' ' || uint32(_c)-uint32('\t') < uint32(5) {
-			return 1
-		} else {
-			return 0
-		}
-	}()
 }
 
 type struct_kstat struct {

@@ -7,11 +7,11 @@ func _cgos_dummy_mmap() {
 func __mmap(start unsafe.Pointer, len uint64, prot int32, flags int32, fd int32, off int64) unsafe.Pointer {
 	var ret int64
 	if uint64(off)&4095 != 0 {
-		*__errno_location() = int32(22)
+		*X__errno_location() = int32(22)
 		return unsafe.Pointer(uintptr(18446744073709551615))
 	}
 	if len >= uint64(2147483647) {
-		*__errno_location() = int32(12)
+		*X__errno_location() = int32(12)
 		return unsafe.Pointer(uintptr(18446744073709551615))
 	}
 	if flags&int32(16) != 0 {

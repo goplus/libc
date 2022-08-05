@@ -110,11 +110,11 @@ func _cgos_cookieseek_fopencookie(f *Struct__IO_FILE, off int64, whence int32) i
 	var fc *_cgos_fcookie_fopencookie = (*_cgos_fcookie_fopencookie)(f.Cookie)
 	var res int32
 	if uint32(whence) > uint32(2) {
-		*__errno_location() = int32(22)
+		*X__errno_location() = int32(22)
 		return int64(-1)
 	}
 	if !(fc.iofuncs.Seek != nil) {
-		*__errno_location() = int32(95)
+		*X__errno_location() = int32(95)
 		return int64(-1)
 	}
 	res = fc.iofuncs.Seek(fc.cookie, &off, whence)
@@ -133,7 +133,7 @@ func _cgos_cookieclose_fopencookie(f *Struct__IO_FILE) int32 {
 func Fopencookie(cookie unsafe.Pointer, mode *int8, iofuncs Struct__IO_cookie_io_functions_t) *Struct__IO_FILE {
 	var f *_cgos_cookie_FILE_fopencookie
 	if !(Strchr((*int8)(unsafe.Pointer(&[4]int8{'r', 'w', 'a', '\x00'})), int32(*mode)) != nil) {
-		*__errno_location() = int32(22)
+		*X__errno_location() = int32(22)
 		return (*Struct__IO_FILE)(nil)
 	}
 	if !(func() (_cgo_ret *_cgos_cookie_FILE_fopencookie) {

@@ -106,6 +106,8 @@ import (
 	"github.com/goplus/libc/test/cmd/test/tanhf"
 	"github.com/goplus/libc/test/cmd/test/tanhl"
 
+	"github.com/goplus/libc/test/cmd/test/basename"
+	"github.com/goplus/libc/test/cmd/test/dirname"
 	"github.com/goplus/libc/test/cmd/test/qsort"
 	"github.com/goplus/libc/test/cmd/test/random"
 	"github.com/goplus/libc/test/cmd/test/string_memcpy"
@@ -212,6 +214,8 @@ func TestFromTestdata(t *testing.T) {
 	tanhf.TestMain(t)
 	tanhl.TestMain(t)
 
+	basename.TestMain(t)
+	dirname.TestMain(t)
 	qsort.TestMain(t)
 	random.TestMain(t)
 	string_memcpy.TestMain(t)

@@ -309,7 +309,7 @@ func _cgos_decfloat_floatscan(f *Struct__IO_FILE, c int32, bits int32, emin int3
 		}
 	}
 	if !(gotdig != 0) {
-		*__errno_location() = int32(22)
+		*X__errno_location() = int32(22)
 		__shlim(f, int64(0))
 		return float64(int32(0))
 	}
@@ -320,11 +320,11 @@ func _cgos_decfloat_floatscan(f *Struct__IO_FILE, c int32, bits int32, emin int3
 		return float64(sign) * float64(*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&x)))) + uintptr(int32(0))*4)))
 	}
 	if lrp > int64(-emin/int32(2)) {
-		*__errno_location() = int32(34)
+		*X__errno_location() = int32(34)
 		return float64(sign) * 1.79769313486231570815e+308 * 1.79769313486231570815e+308
 	}
 	if lrp < int64(emin-106) {
-		*__errno_location() = int32(34)
+		*X__errno_location() = int32(34)
 		return float64(sign) * 2.22507385850720138309e-308 * 2.22507385850720138309e-308
 	}
 	if j != 0 {
@@ -505,7 +505,7 @@ func _cgos_decfloat_floatscan(f *Struct__IO_FILE, c int32, bits int32, emin int3
 			e2++
 		}
 		if e2+int32(53) > emax || denormal != 0 && frac != 0 {
-			*__errno_location() = int32(34)
+			*X__errno_location() = int32(34)
 		}
 	}
 	return Scalbnl(y, e2)
@@ -748,11 +748,11 @@ func _cgos_hexfloat_floatscan(f *Struct__IO_FILE, bits int32, emin int32, sign i
 		return float64(float64(sign) * 0)
 	}
 	if e2 > int64(-emin) {
-		*__errno_location() = int32(34)
+		*X__errno_location() = int32(34)
 		return float64(sign) * 1.79769313486231570815e+308 * 1.79769313486231570815e+308
 	}
 	if e2 < int64(emin-106) {
-		*__errno_location() = int32(34)
+		*X__errno_location() = int32(34)
 		return float64(sign) * 2.22507385850720138309e-308 * 2.22507385850720138309e-308
 	}
 	for x < uint32(2147483648) {
@@ -787,7 +787,7 @@ func _cgos_hexfloat_floatscan(f *Struct__IO_FILE, bits int32, emin int32, sign i
 	y = bias + float64(sign)*float64(x) + float64(sign)*y
 	y -= bias
 	if !(y != 0) {
-		*__errno_location() = int32(34)
+		*X__errno_location() = int32(34)
 	}
 	return Scalbnl(y, int32(e2))
 }
@@ -993,7 +993,7 @@ func __floatscan(f *Struct__IO_FILE, prec int32, pok int32) float64 {
 				}()
 			}
 			if !(pok != 0) {
-				*__errno_location() = int32(22)
+				*X__errno_location() = int32(22)
 				__shlim(f, int64(0))
 				return float64(int32(0))
 			}
@@ -1041,7 +1041,7 @@ func __floatscan(f *Struct__IO_FILE, prec int32, pok int32) float64 {
 				return 0
 			}()
 		}
-		*__errno_location() = int32(22)
+		*X__errno_location() = int32(22)
 		__shlim(f, int64(0))
 		return float64(int32(0))
 	}

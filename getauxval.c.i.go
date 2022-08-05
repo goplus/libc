@@ -12,6 +12,6 @@ func __getauxval(item uint64) uint64 {
 			return *(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer(auxv)) + uintptr(int32(1))*8))
 		}
 	}
-	*__errno_location() = int32(2)
+	*X__errno_location() = int32(2)
 	return uint64(0)
 }

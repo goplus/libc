@@ -26,7 +26,7 @@ func forkpty(pm *int32, name *int8, tio *struct_termios, ws *Struct_winsize) int
 		Close(m)
 		Close(*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&p)))) + uintptr(int32(0))*4)))
 		if login_tty(s) != 0 {
-			Write(*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&p)))) + uintptr(int32(1))*4)), unsafe.Pointer(&*__errno_location()), 4)
+			Write(*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&p)))) + uintptr(int32(1))*4)), unsafe.Pointer(&*X__errno_location()), 4)
 			X_exit(int32(127))
 		}
 		Close(*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&p)))) + uintptr(int32(1))*4)))
@@ -40,7 +40,7 @@ func forkpty(pm *int32, name *int8, tio *struct_termios, ws *Struct_winsize) int
 		var status int32
 		waitpid(pid, &status, int32(0))
 		pid = -1
-		*__errno_location() = ec
+		*X__errno_location() = ec
 	}
 	Close(*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&p)))) + uintptr(int32(0))*4)))
 out:

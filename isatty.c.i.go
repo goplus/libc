@@ -8,8 +8,8 @@ func isatty(fd int32) int32 {
 	if r == uint64(0) {
 		return int32(1)
 	}
-	if *__errno_location() != int32(9) {
-		*__errno_location() = int32(25)
+	if *X__errno_location() != int32(9) {
+		*X__errno_location() = int32(25)
 	}
 	return int32(0)
 }

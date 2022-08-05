@@ -43,7 +43,7 @@ func __ftello(f *Struct__IO_FILE) int64 {
 func Ftell(f *Struct__IO_FILE) int64 {
 	var pos int64 = __ftello(f)
 	if pos > int64(2147483647) {
-		*__errno_location() = int32(75)
+		*X__errno_location() = int32(75)
 		return int64(-1)
 	}
 	return int64(pos)

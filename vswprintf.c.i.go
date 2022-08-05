@@ -55,7 +55,7 @@ func vswprintf(s *uint32, n uint64, fmt *uint32, ap []interface {
 	if !(n != 0) {
 		return -1
 	} else if n > uint64(2147483647) {
-		*__errno_location() = int32(75)
+		*X__errno_location() = int32(75)
 		return -1
 	}
 	r = vfwprintf(&f, fmt, ap)
