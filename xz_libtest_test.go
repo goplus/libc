@@ -110,9 +110,17 @@ import (
 	"github.com/goplus/libc/test/cmd/test/dirname"
 	"github.com/goplus/libc/test/cmd/test/qsort"
 	"github.com/goplus/libc/test/cmd/test/random"
+
 	"github.com/goplus/libc/test/cmd/test/string_memcpy"
+	"github.com/goplus/libc/test/cmd/test/string_memmem"
 	"github.com/goplus/libc/test/cmd/test/string_memset"
+	"github.com/goplus/libc/test/cmd/test/string_strchr"
+	"github.com/goplus/libc/test/cmd/test/string_strcspn"
+	"github.com/goplus/libc/test/cmd/test/string_strstr"
 	"github.com/goplus/libc/test/cmd/test/strtod"
+	"github.com/goplus/libc/test/cmd/test/strtod_long"
+	"github.com/goplus/libc/test/cmd/test/strtod_simple"
+	"github.com/goplus/libc/test/cmd/test/strtold"
 )
 
 func TestFromTestdata(t *testing.T) {
@@ -218,8 +226,16 @@ func TestFromTestdata(t *testing.T) {
 	dirname.TestMain(t)
 	qsort.TestMain(t)
 	random.TestMain(t)
-	string_memcpy.TestMain(t)
-	string_memset.TestMain(t)
 	teststring.TestMain(t)
+
+	string_memcpy.TestMain(t)
+	string_memmem.TestMain(t)
+	string_memset.TestMain(t)
+	string_strchr.TestMain(t)
+	string_strcspn.TestMain(t)
+	string_strstr.TestMain(t)
+	strtod_long.TestMain(t)
+	strtod_simple.TestMain(t)
 	strtod.TestMain(t)
+	strtold.TestMain(t)
 }
