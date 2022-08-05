@@ -48,6 +48,7 @@ import (
 	"github.com/goplus/libc/test/cmd/test/fabsl"
 
 	"github.com/goplus/libc/test/cmd/test/fdim"
+	"github.com/goplus/libc/test/cmd/test/fdimf"
 	"github.com/goplus/libc/test/cmd/test/fdiml"
 
 	"github.com/goplus/libc/test/cmd/test/floor"
@@ -58,15 +59,19 @@ import (
 	"github.com/goplus/libc/test/cmd/test/fmal"
 
 	"github.com/goplus/libc/test/cmd/test/fmax"
+	"github.com/goplus/libc/test/cmd/test/fmaxf"
 	"github.com/goplus/libc/test/cmd/test/fmaxl"
 
 	"github.com/goplus/libc/test/cmd/test/fmin"
+	"github.com/goplus/libc/test/cmd/test/fminf"
 	"github.com/goplus/libc/test/cmd/test/fminl"
 
 	"github.com/goplus/libc/test/cmd/test/hypot"
+	"github.com/goplus/libc/test/cmd/test/hypotf"
 	"github.com/goplus/libc/test/cmd/test/hypotl"
 
 	"github.com/goplus/libc/test/cmd/test/ldexp"
+	"github.com/goplus/libc/test/cmd/test/ldexpf"
 	"github.com/goplus/libc/test/cmd/test/ldexpl"
 
 	"github.com/goplus/libc/test/cmd/test/log1p"
@@ -86,6 +91,7 @@ import (
 	"github.com/goplus/libc/test/cmd/test/nearbyintl"
 
 	"github.com/goplus/libc/test/cmd/test/nextafter"
+	"github.com/goplus/libc/test/cmd/test/nextafterf"
 	"github.com/goplus/libc/test/cmd/test/nextafterl"
 
 	"github.com/goplus/libc/test/cmd/test/nexttoward"
@@ -97,9 +103,11 @@ import (
 	"github.com/goplus/libc/test/cmd/test/rintl"
 
 	"github.com/goplus/libc/test/cmd/test/scalbln"
+	"github.com/goplus/libc/test/cmd/test/scalblnf"
 	"github.com/goplus/libc/test/cmd/test/scalblnl"
 
 	"github.com/goplus/libc/test/cmd/test/scalbn"
+	"github.com/goplus/libc/test/cmd/test/scalbnf"
 	"github.com/goplus/libc/test/cmd/test/scalbnl"
 
 	"github.com/goplus/libc/test/cmd/test/tanh"
@@ -164,6 +172,7 @@ func TestFromTestdata(t *testing.T) {
 	fabsl.TestMain(t)
 
 	fdim.TestMain(t)
+	fdimf.TestMain(t)
 	fdiml.TestMain(t)
 
 	floor.TestMain(t)
@@ -174,15 +183,19 @@ func TestFromTestdata(t *testing.T) {
 	fmal.TestMain(t)
 
 	fmax.TestMain(t)
+	fmaxf.TestMain(t)
 	fmaxl.TestMain(t)
 
 	fmin.TestMain(t)
+	fminf.TestMain(t)
 	fminl.TestMain(t)
 
 	hypot.TestMain(t)
+	hypotf.TestMain(t)
 	hypotl.TestMain(t)
 
 	ldexp.TestMain(t)
+	ldexpf.TestMain(t)
 	ldexpl.TestMain(t)
 
 	log1p.TestMain(t)
@@ -202,6 +215,7 @@ func TestFromTestdata(t *testing.T) {
 	nearbyintl.TestMain(t)
 
 	nextafter.TestMain(t)
+	nextafterf.TestMain(t)
 	nextafterl.TestMain(t)
 
 	nexttoward.TestMain(t)
@@ -213,9 +227,11 @@ func TestFromTestdata(t *testing.T) {
 	rintl.TestMain(t)
 
 	scalbln.TestMain(t)
+	scalblnf.TestMain(t)
 	scalblnl.TestMain(t)
 
 	scalbn.TestMain(t)
+	scalbnf.TestMain(t)
 	scalbnl.TestMain(t)
 
 	tanh.TestMain(t)
