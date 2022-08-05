@@ -38,7 +38,7 @@ func getmntent_r(f *Struct__IO_FILE, mnt *struct_mntent, linebuf *int8, buflen i
 		}
 		if !(Strchr(linebuf, '\n') != nil) {
 			Fscanf(f, (*int8)(unsafe.Pointer(&[12]int8{'%', '*', '[', '^', '\n', ']', '%', '*', '[', '\n', ']', '\x00'})))
-			*__errno_location() = int32(34)
+			*X__errno_location() = int32(34)
 			return (*struct_mntent)(nil)
 		}
 		cnt = Sscanf(linebuf, (*int8)(unsafe.Pointer(&[39]int8{' ', '%', 'n', '%', '*', 's', '%', 'n', ' ', '%', 'n', '%', '*', 's', '%', 'n', ' ', '%', 'n', '%', '*', 's', '%', 'n', ' ', '%', 'n', '%', '*', 's', '%', 'n', ' ', '%', 'd', ' ', '%', 'd', '\x00'})), (*int32)(unsafe.Pointer(&n)), (*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&n))))+uintptr(int32(1))*4)), (*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&n))))+uintptr(int32(2))*4)), (*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&n))))+uintptr(int32(3))*4)), (*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&n))))+uintptr(int32(4))*4)), (*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&n))))+uintptr(int32(5))*4)), (*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&n))))+uintptr(int32(6))*4)), (*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&n))))+uintptr(int32(7))*4)), &mnt.mnt_freq, &mnt.mnt_passno)

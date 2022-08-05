@@ -19,7 +19,7 @@ func Tempnam(dir *int8, pfx *int8) *int8 {
 	pl = Strlen(pfx)
 	l = dl + uint64(1) + pl + uint64(1) + uint64(6)
 	if l >= uint64(4096) {
-		*__errno_location() = int32(36)
+		*X__errno_location() = int32(36)
 		return (*int8)(nil)
 	}
 	Memcpy(unsafe.Pointer((*int8)(unsafe.Pointer(&s))), unsafe.Pointer(dir), dl)

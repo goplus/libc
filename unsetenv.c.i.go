@@ -7,7 +7,7 @@ func _cgos_dummy_unsetenv(old *int8, new *int8) {
 func Unsetenv(name *int8) int32 {
 	var l uint64 = uint64(uintptr(unsafe.Pointer(__strchrnul(name, '='))) - uintptr(unsafe.Pointer(name)))
 	if !(l != 0) || int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(name)) + uintptr(l)))) != 0 {
-		*__errno_location() = int32(22)
+		*X__errno_location() = int32(22)
 		return -1
 	}
 	if X__environ != nil {

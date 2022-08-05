@@ -19,7 +19,7 @@ func fgetws(s *uint32, n int32, f *Struct__IO_FILE) *uint32 {
 			return int32(0)
 		}
 	}()
-	*__errno_location() = int32(11)
+	*X__errno_location() = int32(11)
 	for ; n != 0; n-- {
 		var c uint32 = __fgetwc_unlocked(f)
 		if c == uint32(4294967295) {
@@ -36,7 +36,7 @@ func fgetws(s *uint32, n int32, f *Struct__IO_FILE) *uint32 {
 		}
 	}
 	*p = uint32(0)
-	if f.Flags&uint32(32) != 0 || *__errno_location() == int32(84) {
+	if f.Flags&uint32(32) != 0 || *X__errno_location() == int32(84) {
 		p = s
 	}
 	for {

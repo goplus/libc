@@ -6,7 +6,7 @@ func __fdopen(fd int32, mode *int8) *Struct__IO_FILE {
 	var f *Struct__IO_FILE
 	var wsz Struct_winsize
 	if !(Strchr((*int8)(unsafe.Pointer(&[4]int8{'r', 'w', 'a', '\x00'})), int32(*mode)) != nil) {
-		*__errno_location() = int32(22)
+		*X__errno_location() = int32(22)
 		return (*Struct__IO_FILE)(nil)
 	}
 	if !(func() (_cgo_ret *Struct__IO_FILE) {

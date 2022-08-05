@@ -44,7 +44,7 @@ func Setenv(var_ *int8, value *int8, overwrite int32) int32 {
 		*_cgo_addr = uint64(uintptr(unsafe.Pointer(__strchrnul(var_, '='))) - uintptr(unsafe.Pointer(var_)))
 		return *_cgo_addr
 	}() != 0) || int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(var_)) + uintptr(l1)))) != 0 {
-		*__errno_location() = int32(22)
+		*X__errno_location() = int32(22)
 		return -1
 	}
 	if !(overwrite != 0) && Getenv(var_) != nil {

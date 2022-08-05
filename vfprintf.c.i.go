@@ -1462,7 +1462,7 @@ func _cgos_printf_core_vfprintf(f *Struct__IO_FILE, fmt *int8, ap *[]interface {
 		if false {
 			goto _cgol_15
 		}
-		a = Strerror(*__errno_location())
+		a = Strerror(*X__errno_location())
 		goto _cgol_14
 	_cgol_15:
 		;
@@ -1640,10 +1640,10 @@ func _cgos_printf_core_vfprintf(f *Struct__IO_FILE, fmt *int8, ap *[]interface {
 	}
 	return int32(1)
 inval:
-	*__errno_location() = int32(22)
+	*X__errno_location() = int32(22)
 	return -1
 overflow:
-	*__errno_location() = int32(75)
+	*X__errno_location() = int32(75)
 	return -1
 }
 func Vfprintf(f *Struct__IO_FILE, fmt *int8, ap []interface {

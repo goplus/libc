@@ -4,8 +4,8 @@ import unsafe "unsafe"
 
 func Posix_openpt(flags int32) int32 {
 	var r int32 = open((*int8)(unsafe.Pointer(&[10]int8{'/', 'd', 'e', 'v', '/', 'p', 't', 'm', 'x', '\x00'})), flags)
-	if r < int32(0) && *__errno_location() == int32(28) {
-		*__errno_location() = int32(11)
+	if r < int32(0) && *X__errno_location() == int32(28) {
+		*X__errno_location() = int32(11)
 	}
 	return r
 }

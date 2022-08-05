@@ -7,7 +7,7 @@ func Fopen(filename *int8, mode *int8) *Struct__IO_FILE {
 	var fd int32
 	var flags int32
 	if !(Strchr((*int8)(unsafe.Pointer(&[4]int8{'r', 'w', 'a', '\x00'})), int32(*mode)) != nil) {
-		*__errno_location() = int32(22)
+		*X__errno_location() = int32(22)
 		return (*Struct__IO_FILE)(nil)
 	}
 	flags = __fmodeflags(mode)

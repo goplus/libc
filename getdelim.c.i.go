@@ -26,7 +26,7 @@ func Getdelim(s **int8, n *uint64, delim int32, f *Struct__IO_FILE) int64 {
 				break
 			}
 		}
-		*__errno_location() = int32(22)
+		*X__errno_location() = int32(22)
 		return int64(-1)
 	}
 	if !(*s != nil) {
@@ -69,7 +69,7 @@ func Getdelim(s **int8, n *uint64, delim int32, f *Struct__IO_FILE) int64 {
 							break
 						}
 					}
-					*__errno_location() = int32(12)
+					*X__errno_location() = int32(12)
 					return int64(-1)
 				}
 			}

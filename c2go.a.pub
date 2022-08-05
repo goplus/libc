@@ -8,6 +8,7 @@ __builtin_nan
 __builtin_nanf
 __ctype_get_mb_cur_max
 __environ
+__errno_location
 __fpclassify
 __fpclassifyf
 __fpclassifyl

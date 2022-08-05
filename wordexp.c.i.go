@@ -4,7 +4,7 @@ import unsafe "unsafe"
 
 func _cgos_reap_wordexp(pid int32) {
 	var status int32
-	for waitpid(pid, &status, int32(0)) < int32(0) && *__errno_location() == int32(4) {
+	for waitpid(pid, &status, int32(0)) < int32(0) && *X__errno_location() == int32(4) {
 	}
 }
 func _cgos_getword_wordexp(f *Struct__IO_FILE) *int8 {
