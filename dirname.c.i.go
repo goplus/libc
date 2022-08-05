@@ -2,7 +2,7 @@ package libc
 
 import unsafe "unsafe"
 
-func dirname(s *int8) *int8 {
+func Dirname(s *int8) *int8 {
 	var i uint64
 	if !(s != nil) || !(*s != 0) {
 		return (*int8)(unsafe.Pointer(&[2]int8{'.', '\x00'}))

@@ -8,6 +8,7 @@ __signbit
 __signbitl
 __FLOAT_BITS
 __DOUBLE_BITS
+dirname
 sync
 basename
 initstate

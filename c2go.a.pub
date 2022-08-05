@@ -99,6 +99,7 @@ cosl
 ctermid
 cuserid
 dev_t
+dirname
 div
 div_t
 double_t
