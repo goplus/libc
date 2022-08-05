@@ -34,6 +34,9 @@ func Mbtowc(*uint32, *int8, uint64) int32 {
 func Pipe2(fd *int32, flag int32) int32 {
 	panic("notimpl")
 }
+func Strtoul(*int8, **int8, int32) uint64 {
+	panic("notimpl")
+}
 func Vfscanf(*Struct__IO_FILE, *int8, []interface {
 }) int32 {
 	panic("notimpl")
@@ -48,6 +51,9 @@ func __aio_close(int32) int32 {
 	panic("notimpl")
 }
 func __block_all_sigs(unsafe.Pointer) {
+	panic("notimpl")
+}
+func __crypt_blowfish(*int8, *int8, *int8) *int8 {
 	panic("notimpl")
 }
 func __futexwait(addr unsafe.Pointer, val int32, priv int32) {
