@@ -16,8 +16,8 @@ func _cgo_main() int32 {
 	var i int32
 	var err int32 = int32(0)
 	var p *common.Struct_fi_f
-	for i = int32(0); uint64(i) < 29; i++ {
-		p = (*common.Struct_fi_f)(unsafe.Pointer(uintptr(unsafe.Pointer((*common.Struct_fi_f)(unsafe.Pointer(&_cgos_t_scalblnf)))) + uintptr(i)*44))
+	for i = int32(0); uint64(i) < 27; i++ {
+		p = (*common.Struct_fi_f)(unsafe.Pointer(uintptr(unsafe.Pointer((*common.Struct_fi_f)(unsafe.Pointer(&_cgos_t_scalblnf)))) + uintptr(i)*48))
 		if p.R < int32(0) {
 			continue
 		}
