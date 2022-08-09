@@ -4,8 +4,10 @@ import (
 	"unsafe"
 )
 
+type rawBytes = *[1 << 30]byte
+
 func toBytes(buf *int8, size uint64) []byte {
-	return (*[1 << 30]byte)(unsafe.Pointer(buf))[:size:size]
+	return rawBytes(unsafe.Pointer(buf))[:size:size]
 }
 
 func setErrno(err error) {
