@@ -18,9 +18,6 @@ func Fork() int32 {
 func Ftrylockfile(*Struct__IO_FILE) int32 {
 	panic("notimpl")
 }
-func Getcwd(buf *int8, size uint64) *int8 {
-	panic("notimpl")
-}
 func Ioctl(fd int32, req int32, __cgo_args ...interface {
 }) int32 {
 	panic("notimpl")
