@@ -110,7 +110,7 @@ func Fmemopen(buf unsafe.Pointer, size uint64, mode *int8) *Struct__IO_FILE {
 		*X__errno_location() = int32(12)
 		return (*Struct__IO_FILE)(nil)
 	}
-	f = (*_cgos_mem_FILE_fmemopen)(Malloc(1300 + func() uint64 {
+	f = (*_cgos_mem_FILE_fmemopen)(Malloc(1304 + func() uint64 {
 		if buf != nil {
 			return uint64(0)
 		} else {

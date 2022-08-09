@@ -74,8 +74,8 @@ func _cgos___getopt_long_core_getopt_long(argc int32, argv **int8, optstring *in
 			_cgo_addr := &i
 			*_cgo_addr = int32(0)
 			return *_cgo_addr
-		}(); (*(*struct_option)(unsafe.Pointer(uintptr(unsafe.Pointer(longopts)) + uintptr(i)*28))).name != nil; i++ {
-			var name *int8 = (*(*struct_option)(unsafe.Pointer(uintptr(unsafe.Pointer(longopts)) + uintptr(i)*28))).name
+		}(); (*(*struct_option)(unsafe.Pointer(uintptr(unsafe.Pointer(longopts)) + uintptr(i)*32))).name != nil; i++ {
+			var name *int8 = (*(*struct_option)(unsafe.Pointer(uintptr(unsafe.Pointer(longopts)) + uintptr(i)*32))).name
 			opt = start
 			if int32(*opt) == '-' {
 				*(*uintptr)(unsafe.Pointer(&opt))++
@@ -119,29 +119,29 @@ func _cgos___getopt_long_core_getopt_long(argc int32, argv **int8, optstring *in
 			opt = arg
 			optind++
 			if int32(*opt) == '=' {
-				if !((*(*struct_option)(unsafe.Pointer(uintptr(unsafe.Pointer(longopts)) + uintptr(i)*28))).has_arg != 0) {
-					optopt = (*(*struct_option)(unsafe.Pointer(uintptr(unsafe.Pointer(longopts)) + uintptr(i)*28))).val
+				if !((*(*struct_option)(unsafe.Pointer(uintptr(unsafe.Pointer(longopts)) + uintptr(i)*32))).has_arg != 0) {
+					optopt = (*(*struct_option)(unsafe.Pointer(uintptr(unsafe.Pointer(longopts)) + uintptr(i)*32))).val
 					if colon != 0 || !(opterr != 0) {
 						return int32('?')
 					}
-					__getopt_msg(*(**int8)(unsafe.Pointer(uintptr(unsafe.Pointer(argv)) + uintptr(int32(0))*8)), (*int8)(unsafe.Pointer(&[37]int8{':', ' ', 'o', 'p', 't', 'i', 'o', 'n', ' ', 'd', 'o', 'e', 's', ' ', 'n', 'o', 't', ' ', 't', 'a', 'k', 'e', ' ', 'a', 'n', ' ', 'a', 'r', 'g', 'u', 'm', 'e', 'n', 't', ':', ' ', '\x00'})), (*(*struct_option)(unsafe.Pointer(uintptr(unsafe.Pointer(longopts)) + uintptr(i)*28))).name, Strlen((*(*struct_option)(unsafe.Pointer(uintptr(unsafe.Pointer(longopts)) + uintptr(i)*28))).name))
+					__getopt_msg(*(**int8)(unsafe.Pointer(uintptr(unsafe.Pointer(argv)) + uintptr(int32(0))*8)), (*int8)(unsafe.Pointer(&[37]int8{':', ' ', 'o', 'p', 't', 'i', 'o', 'n', ' ', 'd', 'o', 'e', 's', ' ', 'n', 'o', 't', ' ', 't', 'a', 'k', 'e', ' ', 'a', 'n', ' ', 'a', 'r', 'g', 'u', 'm', 'e', 'n', 't', ':', ' ', '\x00'})), (*(*struct_option)(unsafe.Pointer(uintptr(unsafe.Pointer(longopts)) + uintptr(i)*32))).name, Strlen((*(*struct_option)(unsafe.Pointer(uintptr(unsafe.Pointer(longopts)) + uintptr(i)*32))).name))
 					return int32('?')
 				}
 				optarg = (*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(opt)) + uintptr(int32(1))))
-			} else if (*(*struct_option)(unsafe.Pointer(uintptr(unsafe.Pointer(longopts)) + uintptr(i)*28))).has_arg == int32(1) {
+			} else if (*(*struct_option)(unsafe.Pointer(uintptr(unsafe.Pointer(longopts)) + uintptr(i)*32))).has_arg == int32(1) {
 				if !(func() (_cgo_ret *int8) {
 					_cgo_addr := &optarg
 					*_cgo_addr = *(**int8)(unsafe.Pointer(uintptr(unsafe.Pointer(argv)) + uintptr(optind)*8))
 					return *_cgo_addr
 				}() != nil) {
-					optopt = (*(*struct_option)(unsafe.Pointer(uintptr(unsafe.Pointer(longopts)) + uintptr(i)*28))).val
+					optopt = (*(*struct_option)(unsafe.Pointer(uintptr(unsafe.Pointer(longopts)) + uintptr(i)*32))).val
 					if colon != 0 {
 						return int32(':')
 					}
 					if !(opterr != 0) {
 						return int32('?')
 					}
-					__getopt_msg(*(**int8)(unsafe.Pointer(uintptr(unsafe.Pointer(argv)) + uintptr(int32(0))*8)), (*int8)(unsafe.Pointer(&[32]int8{':', ' ', 'o', 'p', 't', 'i', 'o', 'n', ' ', 'r', 'e', 'q', 'u', 'i', 'r', 'e', 's', ' ', 'a', 'n', ' ', 'a', 'r', 'g', 'u', 'm', 'e', 'n', 't', ':', ' ', '\x00'})), (*(*struct_option)(unsafe.Pointer(uintptr(unsafe.Pointer(longopts)) + uintptr(i)*28))).name, Strlen((*(*struct_option)(unsafe.Pointer(uintptr(unsafe.Pointer(longopts)) + uintptr(i)*28))).name))
+					__getopt_msg(*(**int8)(unsafe.Pointer(uintptr(unsafe.Pointer(argv)) + uintptr(int32(0))*8)), (*int8)(unsafe.Pointer(&[32]int8{':', ' ', 'o', 'p', 't', 'i', 'o', 'n', ' ', 'r', 'e', 'q', 'u', 'i', 'r', 'e', 's', ' ', 'a', 'n', ' ', 'a', 'r', 'g', 'u', 'm', 'e', 'n', 't', ':', ' ', '\x00'})), (*(*struct_option)(unsafe.Pointer(uintptr(unsafe.Pointer(longopts)) + uintptr(i)*32))).name, Strlen((*(*struct_option)(unsafe.Pointer(uintptr(unsafe.Pointer(longopts)) + uintptr(i)*32))).name))
 					return int32('?')
 				}
 				optind++
@@ -149,11 +149,11 @@ func _cgos___getopt_long_core_getopt_long(argc int32, argv **int8, optstring *in
 			if idx != nil {
 				*idx = i
 			}
-			if (*(*struct_option)(unsafe.Pointer(uintptr(unsafe.Pointer(longopts)) + uintptr(i)*28))).flag != nil {
-				*(*(*struct_option)(unsafe.Pointer(uintptr(unsafe.Pointer(longopts)) + uintptr(i)*28))).flag = (*(*struct_option)(unsafe.Pointer(uintptr(unsafe.Pointer(longopts)) + uintptr(i)*28))).val
+			if (*(*struct_option)(unsafe.Pointer(uintptr(unsafe.Pointer(longopts)) + uintptr(i)*32))).flag != nil {
+				*(*(*struct_option)(unsafe.Pointer(uintptr(unsafe.Pointer(longopts)) + uintptr(i)*32))).flag = (*(*struct_option)(unsafe.Pointer(uintptr(unsafe.Pointer(longopts)) + uintptr(i)*32))).val
 				return int32(0)
 			}
-			return (*(*struct_option)(unsafe.Pointer(uintptr(unsafe.Pointer(longopts)) + uintptr(i)*28))).val
+			return (*(*struct_option)(unsafe.Pointer(uintptr(unsafe.Pointer(longopts)) + uintptr(i)*32))).val
 		}
 		if int32(*(*int8)(unsafe.Pointer(uintptr(unsafe.Pointer(*(**int8)(unsafe.Pointer(uintptr(unsafe.Pointer(argv)) + uintptr(optind)*8)))) + uintptr(int32(1))))) == '-' {
 			optopt = int32(0)
