@@ -14,8 +14,7 @@ func Getcwd(buf *int8, size uint64) *int8 {
 		setErrno(e)
 		return nil
 	}
-	return string(utf16.Decode(b[0:n])), nil
-	return buf
+	return fromUtf8(buf, size, b[0:n])
 }
 
 // TODO: can be faster
