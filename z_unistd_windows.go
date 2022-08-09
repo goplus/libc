@@ -3,6 +3,7 @@ package libc
 import (
 	"syscall"
 	"unicode/utf16"
+	"unsafe"
 )
 
 func Getcwd(buf *int8, size uint64) *int8 {
