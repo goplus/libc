@@ -119,6 +119,8 @@ import (
 	"github.com/goplus/libc/test/cmd/test/qsort"
 	"github.com/goplus/libc/test/cmd/test/random"
 
+	"github.com/goplus/libc/test/cmd/test/snprintf"
+
 	"github.com/goplus/libc/test/cmd/test/string_memcpy"
 	"github.com/goplus/libc/test/cmd/test/string_memmem"
 	"github.com/goplus/libc/test/cmd/test/string_memset"
@@ -243,6 +245,8 @@ func TestFromTestdata(t *testing.T) {
 	qsort.TestMain(t)
 	random.TestMain(t)
 	teststring.TestMain(t)
+
+	snprintf.TestMain(t)
 
 	string_memcpy.TestMain(t)
 	string_memmem.TestMain(t)
