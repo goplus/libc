@@ -36,6 +36,6 @@ func Coshf(x float32) float32 {
 		t = Expf(x)
 		return 0.5 * (t + float32(int32(1))/t)
 	}
-	t = __expo2f(x, 1)
+	t = __expo2f(x, 1.0)
 	return t
 }

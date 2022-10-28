@@ -89,17 +89,17 @@ func Atan(x float64) float64 {
 		if ix < uint32(1072889856) {
 			if ix < uint32(1072037888) {
 				id = int32(0)
-				x = (2*x - 1) / (2 + x)
+				x = (2.0*x - 1.0) / (2.0 + x)
 			} else {
 				id = int32(1)
-				x = (x - 1) / (x + 1)
+				x = (x - 1.0) / (x + 1.0)
 			}
 		} else if ix < uint32(1073971200) {
 			id = int32(2)
-			x = (x - 1.5) / (1 + 1.5*x)
+			x = (x - 1.5) / (1.0 + 1.5*x)
 		} else {
 			id = int32(3)
-			x = -1 / x
+			x = -1.0 / x
 		}
 	}
 	z = x * x

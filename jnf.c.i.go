@@ -37,14 +37,14 @@ func Jnf(n int32, x float32) float32 {
 	sign &= n
 	x = Fabsf(x)
 	if ix == uint32(0) || ix == uint32(2139095040) {
-		b = float32(0)
+		b = float32(0.0)
 	} else if float32(nm1) < x {
 		a = J0f(x)
 		b = J1f(x)
 		for i = int32(0); i < nm1; {
 			i++
 			temp = b
-			b = b*(2*float32(i)/x) - a
+			b = b*(2.0*float32(i)/x) - a
 			a = temp
 		}
 	} else if ix < uint32(897581056) {
@@ -53,7 +53,7 @@ func Jnf(n int32, x float32) float32 {
 		}
 		temp = 0.5 * x
 		b = temp
-		a = float32(1)
+		a = float32(1.0)
 		for i = int32(2); i <= nm1+int32(1); i++ {
 			a *= float32(i)
 			b *= temp
@@ -69,12 +69,12 @@ func Jnf(n int32, x float32) float32 {
 		var tmp float32
 		var nf float32
 		var k int32
-		nf = float32(nm1) + 1
+		nf = float32(nm1) + 1.0
 		w = float32(int32(2)) * nf / x
 		h = float32(int32(2)) / x
 		z = w + h
 		q0 = w
-		q1 = w*z - 1
+		q1 = w*z - 1.0
 		k = int32(1)
 		for q1 < 1.0e+4 {
 			k += int32(1)
@@ -84,33 +84,33 @@ func Jnf(n int32, x float32) float32 {
 			q1 = tmp
 		}
 		for func() int32 {
-			t = float32(0)
+			t = float32(0.0)
 			return func() (_cgo_ret int32) {
 				_cgo_addr := &i
 				*_cgo_addr = k
 				return *_cgo_addr
 			}()
 		}(); i >= int32(0); i-- {
-			t = 1 / (float32(int32(2))*(float32(i)+nf)/x - t)
+			t = 1.0 / (float32(int32(2))*(float32(i)+nf)/x - t)
 		}
 		a = t
-		b = float32(1)
+		b = float32(1.0)
 		tmp = nf * Logf(Fabsf(w))
 		if tmp < 88.7216796 {
 			for i = nm1; i > int32(0); i-- {
 				temp = b
-				b = 2*float32(i)*b/x - a
+				b = 2.0*float32(i)*b/x - a
 				a = temp
 			}
 		} else {
 			for i = nm1; i > int32(0); i-- {
 				temp = b
-				b = 2*float32(i)*b/x - a
+				b = 2.0*float32(i)*b/x - a
 				a = temp
 				if b > 1.1529215e+18 {
 					a /= b
 					t /= b
-					b = float32(1)
+					b = float32(1.0)
 				}
 			}
 		}
@@ -158,10 +158,10 @@ func Ynf(n int32, x float32) float32 {
 	if sign != 0 && ix != uint32(0) {
 		return func() float32 {
 			return float32(int32(0))
-		}() / 0
+		}() / 0.0
 	}
 	if ix == uint32(2139095040) {
-		return float32(0)
+		return float32(0.0)
 	}
 	if n == int32(0) {
 		return Y0f(x)
@@ -193,7 +193,7 @@ func Ynf(n int32, x float32) float32 {
 	for i = int32(0); i < nm1 && ib != uint32(4286578688); {
 		i++
 		temp = b
-		b = 2*float32(i)/x*b - a
+		b = 2.0*float32(i)/x*b - a
 		for {
 			ib = *(*uint32)(unsafe.Pointer(&_cgoz_21_jnf{b}))
 			if true {

@@ -17,15 +17,15 @@ func Ilogb(x float64) int32 {
 				if 4 == 4 {
 					fp_force_evalf(func() float32 {
 						return float32(int32(0))
-					}() / 0)
+					}() / 0.0)
 				} else if 4 == 8 {
 					fp_force_eval(float64(func() float32 {
 						return float32(int32(0))
-					}() / 0))
+					}() / 0.0))
 				} else {
 					fp_force_evall(float64(func() float32 {
 						return float32(int32(0))
-					}() / 0))
+					}() / 0.0))
 				}
 				if true {
 					break
@@ -49,15 +49,15 @@ func Ilogb(x float64) int32 {
 			if 4 == 4 {
 				fp_force_evalf(func() float32 {
 					return float32(int32(0))
-				}() / 0)
+				}() / 0.0)
 			} else if 4 == 8 {
 				fp_force_eval(float64(func() float32 {
 					return float32(int32(0))
-				}() / 0))
+				}() / 0.0))
 			} else {
 				fp_force_evall(float64(func() float32 {
 					return float32(int32(0))
-				}() / 0))
+				}() / 0.0))
 			}
 			if true {
 				break

@@ -24,7 +24,7 @@ func Rint(x float64) float64 {
 	if y == float64(int32(0)) {
 		return func() float64 {
 			if s != 0 {
-				return -0
+				return -0.0
 			} else {
 				return float64(int32(0))
 			}

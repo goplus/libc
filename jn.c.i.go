@@ -42,7 +42,7 @@ func Jn(n int32, x float64) float64 {
 	sign &= n
 	x = Fabs(x)
 	if ix|lx == uint32(0) || ix == uint32(2146435072) {
-		b = float64(0)
+		b = float64(0.0)
 	} else if float64(nm1) < x {
 		if ix >= uint32(1389363200) {
 			switch nm1 & int32(3) {
@@ -68,17 +68,17 @@ func Jn(n int32, x float64) float64 {
 			for i = int32(0); i < nm1; {
 				i++
 				temp = b
-				b = b*(2*float64(i)/x) - a
+				b = b*(2.0*float64(i)/x) - a
 				a = temp
 			}
 		}
 	} else if ix < uint32(1041235968) {
 		if nm1 > int32(32) {
-			b = float64(0)
+			b = float64(0.0)
 		} else {
 			temp = x * 0.5
 			b = temp
-			a = float64(1)
+			a = float64(1.0)
 			for i = int32(2); i <= nm1+int32(1); i++ {
 				a *= float64(i)
 				b *= temp
@@ -95,12 +95,12 @@ func Jn(n int32, x float64) float64 {
 		var tmp float64
 		var nf float64
 		var k int32
-		nf = float64(nm1) + 1
+		nf = float64(nm1) + 1.0
 		w = float64(int32(2)) * nf / x
 		h = float64(int32(2)) / x
 		z = w + h
 		q0 = w
-		q1 = w*z - 1
+		q1 = w*z - 1.0
 		k = int32(1)
 		for q1 < 1.0e+9 {
 			k += int32(1)
@@ -110,7 +110,7 @@ func Jn(n int32, x float64) float64 {
 			q1 = tmp
 		}
 		for func() int32 {
-			t = float64(0)
+			t = float64(0.0)
 			return func() (_cgo_ret int32) {
 				_cgo_addr := &i
 				*_cgo_addr = k
@@ -120,23 +120,23 @@ func Jn(n int32, x float64) float64 {
 			t = float64(int32(1)) / (float64(int32(2))*(float64(i)+nf)/x - t)
 		}
 		a = t
-		b = float64(1)
+		b = float64(1.0)
 		tmp = nf * Log(Fabs(w))
 		if tmp < 709.78271289338397 {
 			for i = nm1; i > int32(0); i-- {
 				temp = b
-				b = b*(2*float64(i))/x - a
+				b = b*(2.0*float64(i))/x - a
 				a = temp
 			}
 		} else {
 			for i = nm1; i > int32(0); i-- {
 				temp = b
-				b = b*(2*float64(i))/x - a
+				b = b*(2.0*float64(i))/x - a
 				a = temp
 				if b > 3.2733906078961419e+150 {
 					a /= b
 					t /= b
-					b = float64(1)
+					b = float64(1.0)
 				}
 			}
 		}
@@ -187,10 +187,10 @@ func Yn(n int32, x float64) float64 {
 	if sign != 0 && ix|lx != uint32(0) {
 		return func() float64 {
 			return float64(int32(0))
-		}() / 0
+		}() / 0.0
 	}
 	if ix == uint32(2146435072) {
-		return float64(0)
+		return float64(0.0)
 	}
 	if n == int32(0) {
 		return Y0(x)
@@ -241,7 +241,7 @@ func Yn(n int32, x float64) float64 {
 		for i = int32(0); i < nm1 && ib != uint32(4293918720); {
 			i++
 			temp = b
-			b = 2*float64(i)/x*b - a
+			b = 2.0*float64(i)/x*b - a
 			for {
 				ib = uint32(*(*uint64)(unsafe.Pointer(&_cgoz_21_jn{b})) >> int32(32))
 				if true {

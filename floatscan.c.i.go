@@ -314,7 +314,7 @@ func _cgos_decfloat_floatscan(f *Struct__IO_FILE, c int32, bits int32, emin int3
 		return float64(int32(0))
 	}
 	if !(*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&x)))) + uintptr(int32(0))*4)) != 0) {
-		return float64(float64(sign) * 0)
+		return float64(float64(sign) * 0.0)
 	}
 	if lrp == dc && dc < int64(10) && (bits > int32(30) || *(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&x)))) + uintptr(int32(0))*4))>>bits == uint32(0)) {
 		return float64(sign) * float64(*(*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(&x)))) + uintptr(int32(0))*4)))
@@ -685,7 +685,7 @@ func _cgos_hexfloat_floatscan(f *Struct__IO_FILE, bits int32, emin int32, sign i
 		} else {
 			__shlim(f, int64(0))
 		}
-		return float64(float64(sign) * 0)
+		return float64(float64(sign) * 0.0)
 	}
 	if !(gotrad != 0) {
 		rp = dc
@@ -745,7 +745,7 @@ func _cgos_hexfloat_floatscan(f *Struct__IO_FILE, bits int32, emin int32, sign i
 	}
 	e2 += int64(4)*rp - int64(32)
 	if !(x != 0) {
-		return float64(float64(sign) * 0)
+		return float64(float64(sign) * 0.0)
 	}
 	if e2 > int64(-emin) {
 		*X__errno_location() = int32(34)

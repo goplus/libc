@@ -37,10 +37,10 @@ func Log10f(x float32) float32 {
 			return float32(-1) / (x * x)
 		}
 		if ix>>int32(31) != 0 {
-			return (x - x) / 0
+			return (x - x) / 0.0
 		}
 		k -= int32(25)
-		x *= float32(33554432)
+		x *= float32(33554432.0)
 		u.f = x
 		ix = *(*uint32)(unsafe.Pointer(&u))
 	} else if ix >= uint32(2139095040) {
@@ -53,8 +53,8 @@ func Log10f(x float32) float32 {
 	ix = ix&uint32(8388607) + uint32(1060439283)
 	*(*uint32)(unsafe.Pointer(&u)) = ix
 	x = u.f
-	f = x - 1
-	s = f / (2 + f)
+	f = x - 1.0
+	s = f / (2.0 + f)
 	z = s * s
 	w = z * z
 	t1 = w * (_cgos_Lg2_log10f + w*_cgos_Lg4_log10f)

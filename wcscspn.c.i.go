@@ -18,7 +18,7 @@ func wcscspn(s *uint32, c *uint32) uint64 {
 				}(), *c)
 				return *_cgo_addr
 			}() != nil {
-				return uint64((uintptr(unsafe.Pointer(s)) - uintptr(unsafe.Pointer(a))) * 4)
+				return uint64((uintptr(unsafe.Pointer(s)) - uintptr(unsafe.Pointer(a))) / 4)
 			} else {
 				return wcslen(a)
 			}
@@ -26,5 +26,5 @@ func wcscspn(s *uint32, c *uint32) uint64 {
 	}
 	for a = s; *s != 0 && !(wcschr(c, *s) != nil); *(*uintptr)(unsafe.Pointer(&s)) += 4 {
 	}
-	return uint64((uintptr(unsafe.Pointer(s)) - uintptr(unsafe.Pointer(a))) * 4)
+	return uint64((uintptr(unsafe.Pointer(s)) - uintptr(unsafe.Pointer(a))) / 4)
 }

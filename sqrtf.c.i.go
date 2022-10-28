@@ -29,7 +29,7 @@ func Sqrtf(x float32) float32 {
 		if ix > uint32(2139095040) {
 			return __math_invalidf(x)
 		}
-		ix = *(*uint32)(unsafe.Pointer(&_cgoz_19_sqrtf{x * 8388608}))
+		ix = *(*uint32)(unsafe.Pointer(&_cgoz_19_sqrtf{x * 8388608.0}))
 		ix -= uint32(192937984)
 	}
 	even = ix & uint32(8388608)

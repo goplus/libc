@@ -38,7 +38,7 @@ func __tan(x float64, y float64, odd int32) float64 {
 			y = -y
 		}
 		x = _cgos_pio4___tan - x + (_cgos_pio4lo___tan - y)
-		y = float64(0)
+		y = float64(0.0)
 	}
 	z = x * x
 	w = z * z
@@ -49,7 +49,7 @@ func __tan(x float64, y float64, odd int32) float64 {
 	w = x + r
 	if big != 0 {
 		s = float64(int32(1) - int32(2)*odd)
-		v = s - 2*(x+(r-w*w/(w+s)))
+		v = s - 2.0*(x+(r-w*w/(w+s)))
 		return func() float64 {
 			if sign != 0 {
 				return -v
@@ -71,7 +71,7 @@ func __tan(x float64, y float64, odd int32) float64 {
 	v = r - (w0 - x)
 	a0 = func() (_cgo_ret float64) {
 		_cgo_addr := &a
-		*_cgo_addr = -1 / w
+		*_cgo_addr = -1.0 / w
 		return *_cgo_addr
 	}()
 	for {
@@ -80,7 +80,7 @@ func __tan(x float64, y float64, odd int32) float64 {
 			break
 		}
 	}
-	return a0 + a*(1+a0*w0+a0*v)
+	return a0 + a*(1.0+a0*w0+a0*v)
 }
 
 type _cgoz_18___tan struct {

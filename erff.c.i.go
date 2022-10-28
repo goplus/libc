@@ -79,10 +79,10 @@ func _cgos_erfc2_erff(ix uint32, x float32) float32 {
 	s = float32(int32(1)) / (x * x)
 	if ix < uint32(1077336941) {
 		R = _cgos_ra0_erff + s*(_cgos_ra1_erff+s*(_cgos_ra2_erff+s*(_cgos_ra3_erff+s*(_cgos_ra4_erff+s*(_cgos_ra5_erff+s*(_cgos_ra6_erff+s*_cgos_ra7_erff))))))
-		S = 1 + s*(_cgos_sa1_erff+s*(_cgos_sa2_erff+s*(_cgos_sa3_erff+s*(_cgos_sa4_erff+s*(_cgos_sa5_erff+s*(_cgos_sa6_erff+s*(_cgos_sa7_erff+s*_cgos_sa8_erff)))))))
+		S = 1.0 + s*(_cgos_sa1_erff+s*(_cgos_sa2_erff+s*(_cgos_sa3_erff+s*(_cgos_sa4_erff+s*(_cgos_sa5_erff+s*(_cgos_sa6_erff+s*(_cgos_sa7_erff+s*_cgos_sa8_erff)))))))
 	} else {
 		R = _cgos_rb0_erff + s*(_cgos_rb1_erff+s*(_cgos_rb2_erff+s*(_cgos_rb3_erff+s*(_cgos_rb4_erff+s*(_cgos_rb5_erff+s*_cgos_rb6_erff)))))
-		S = 1 + s*(_cgos_sb1_erff+s*(_cgos_sb2_erff+s*(_cgos_sb3_erff+s*(_cgos_sb4_erff+s*(_cgos_sb5_erff+s*(_cgos_sb6_erff+s*_cgos_sb7_erff))))))
+		S = 1.0 + s*(_cgos_sb1_erff+s*(_cgos_sb2_erff+s*(_cgos_sb3_erff+s*(_cgos_sb4_erff+s*(_cgos_sb5_erff+s*(_cgos_sb6_erff+s*_cgos_sb7_erff))))))
 	}
 	for {
 		ix = *(*uint32)(unsafe.Pointer(&_cgoz_18_erff{x}))
@@ -172,14 +172,14 @@ func Erfcf(x float32) float32 {
 	}
 	if ix < uint32(1062731776) {
 		if ix < uint32(595591168) {
-			return 1 - x
+			return 1.0 - x
 		}
 		z = x * x
 		r = _cgos_pp0_erff + z*(_cgos_pp1_erff+z*(_cgos_pp2_erff+z*(_cgos_pp3_erff+z*_cgos_pp4_erff)))
-		s = 1 + z*(_cgos_qq1_erff+z*(_cgos_qq2_erff+z*(_cgos_qq3_erff+z*(_cgos_qq4_erff+z*_cgos_qq5_erff))))
+		s = 1.0 + z*(_cgos_qq1_erff+z*(_cgos_qq2_erff+z*(_cgos_qq3_erff+z*(_cgos_qq4_erff+z*_cgos_qq5_erff))))
 		y = r / s
 		if sign != 0 || ix < uint32(1048576000) {
-			return 1 - (x + x*y)
+			return 1.0 - (x + x*y)
 		}
 		return 0.5 - (x - 0.5 + x*y)
 	}

@@ -95,7 +95,7 @@ func Scalbf(x float32, fn float32) float32 {
 			}()
 		}
 	}() != 0) {
-		if fn > 0 {
+		if fn > 0.0 {
 			return x * fn
 		} else {
 			return x / -fn
@@ -104,10 +104,10 @@ func Scalbf(x float32, fn float32) float32 {
 	if Rintf(fn) != fn {
 		return (fn - fn) / (fn - fn)
 	}
-	if fn > 65000 {
+	if fn > 65000.0 {
 		return Scalbnf(x, int32(65000))
 	}
-	if -fn > 65000 {
+	if -fn > 65000.0 {
 		return Scalbnf(x, -65000)
 	}
 	return Scalbnf(x, int32(fn))

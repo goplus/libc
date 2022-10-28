@@ -12,7 +12,7 @@ func _cgos_R_asinf(z float32) float32 {
 	var p float32
 	var q float32
 	p = z * (_cgos_pS0_asinf + z*(_cgos_pS1_asinf+z*_cgos_pS2_asinf))
-	q = 1 + z*_cgos_qS1_asinf
+	q = 1.0 + z*_cgos_qS1_asinf
 	return p / q
 }
 func Asinf(x float32) float32 {

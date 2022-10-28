@@ -43,10 +43,10 @@ func Log10(x float64) float64 {
 			return float64(-1) / (x * x)
 		}
 		if hx>>int32(31) != 0 {
-			return (x - x) / 0
+			return (x - x) / 0.0
 		}
 		k -= int32(54)
-		x *= float64(18014398509481984)
+		x *= float64(18014398509481984.0)
 		u.f = x
 		hx = uint32(*(*uint64)(unsafe.Pointer(&u)) >> int32(32))
 	} else if hx >= uint32(2146435072) {
@@ -59,9 +59,9 @@ func Log10(x float64) float64 {
 	hx = hx&uint32(1048575) + uint32(1072079006)
 	*(*uint64)(unsafe.Pointer(&u)) = uint64(hx)<<int32(32) | *(*uint64)(unsafe.Pointer(&u))&uint64(4294967295)
 	x = u.f
-	f = x - 1
+	f = x - 1.0
 	hfsq = 0.5 * f * f
-	s = f / (2 + f)
+	s = f / (2.0 + f)
 	z = s * s
 	w = z * z
 	t1 = w * (_cgos_Lg2_log10 + w*(_cgos_Lg4_log10+w*_cgos_Lg6_log10))

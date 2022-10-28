@@ -12,5 +12,5 @@ func __cosdf(x float64) float32 {
 	z = x * x
 	w = z * z
 	r = _cgos_C2___cosdf + z*_cgos_C3___cosdf
-	return float32(1 + z*_cgos_C0___cosdf + w*_cgos_C1___cosdf + w*z*r)
+	return float32(1.0 + z*_cgos_C0___cosdf + w*_cgos_C1___cosdf + w*z*r)
 }

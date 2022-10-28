@@ -36,9 +36,9 @@ func Log1p(x float64) float64 {
 	if hx < uint32(1071284858) || hx>>int32(31) != 0 {
 		if hx >= uint32(3220176896) {
 			if x == float64(-1) {
-				return x / 0
+				return x / 0.0
 			}
-			return (x - x) / 0
+			return (x - x) / 0.0
 		}
 		if hx<<int32(1) < uint32(2034237440) {
 			if hx&uint32(2146435072) == uint32(0) {
@@ -87,7 +87,7 @@ func Log1p(x float64) float64 {
 		f = u.f - float64(int32(1))
 	}
 	hfsq = 0.5 * f * f
-	s = f / (2 + f)
+	s = f / (2.0 + f)
 	z = s * s
 	w = z * z
 	t1 = w * (_cgos_Lg2_log1p + w*(_cgos_Lg4_log1p+w*_cgos_Lg6_log1p))

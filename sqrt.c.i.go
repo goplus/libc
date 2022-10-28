@@ -34,7 +34,7 @@ func Sqrt(x float64) float64 {
 		if ix > uint64(9218868437227405312) {
 			return __math_invalid(x)
 		}
-		ix = *(*uint64)(unsafe.Pointer(&_cgoz_19_sqrt{x * 4503599627370496}))
+		ix = *(*uint64)(unsafe.Pointer(&_cgoz_19_sqrt{x * 4503599627370496.0}))
 		top = ix >> int32(52)
 		top -= uint64(52)
 	}

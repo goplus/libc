@@ -21,7 +21,7 @@ func Cbrtf(x float32) float32 {
 		if hx == uint32(0) {
 			return x
 		}
-		u.f = x * 16777216
+		u.f = x * 16777216.0
 		hx = *(*uint32)(unsafe.Pointer(&u)) & uint32(2147483647)
 		hx = hx/uint32(3) + _cgos_B2_cbrtf
 	} else {

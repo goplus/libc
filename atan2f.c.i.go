@@ -127,9 +127,9 @@ func Atan2f(y float32, x float32) float32 {
 		} else {
 			switch m {
 			case uint32(0):
-				return float32(0)
+				return float32(0.0)
 			case uint32(1):
-				return float32(-0)
+				return float32(-0.0)
 			case uint32(2):
 				return _cgos_pi_atan2f
 			case uint32(3):
@@ -147,7 +147,7 @@ func Atan2f(y float32, x float32) float32 {
 		}()
 	}
 	if m&uint32(2) != 0 && iy+uint32(218103808) < ix {
-		z = float32(0)
+		z = float32(0.0)
 	} else {
 		z = Atanf(Fabsf(y / x))
 	}

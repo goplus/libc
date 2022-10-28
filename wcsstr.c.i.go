@@ -106,12 +106,12 @@ func _cgos_twoway_wcsstr_wcsstr(h *uint32, n *uint32) *uint32 {
 	mem = uint64(0)
 	z = h
 	for {
-		if uint64((uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(h)))*4) < l {
+		if uint64((uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(h)))/4) < l {
 			var grow uint64 = l | uint64(63)
 			var z2 *uint32 = wmemchr(z, uint32(0), grow)
 			if z2 != nil {
 				z = z2
-				if uint64((uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(h)))*4) < l {
+				if uint64((uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(h)))/4) < l {
 					return (*uint32)(nil)
 				}
 			} else {

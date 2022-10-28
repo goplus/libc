@@ -14,15 +14,15 @@ func _cgos_specialcase_exp2(tmp float64, sbits uint64, ki uint64) float64 {
 	sbits += 4602678819172646912
 	scale = *(*float64)(unsafe.Pointer(&_cgoz_19_exp2{sbits}))
 	y = scale + scale*tmp
-	if y < 1 {
+	if y < 1.0 {
 		var hi float64
 		var lo float64
 		lo = scale - y + scale*tmp
-		hi = 1 + y
-		lo = 1 - hi + y + lo
-		y = eval_as_double(hi+lo) - 1
-		if int32(1) != 0 && y == 0 {
-			y = float64(0)
+		hi = 1.0 + y
+		lo = 1.0 - hi + y + lo
+		y = eval_as_double(hi+lo) - 1.0
+		if int32(1) != 0 && y == 0.0 {
+			y = float64(0.0)
 		}
 		fp_force_eval(fp_barrier(2.2250738585072014e-308) * 2.2250738585072014e-308)
 	}
@@ -59,7 +59,7 @@ func Exp2(x float64) float64 {
 	var tmp float64
 	abstop = _cgos_top12_exp2(x) & uint32(2047)
 	if func() int64 {
-		if abstop-_cgos_top12_exp2(5.5511151231257827e-17) >= _cgos_top12_exp2(512)-_cgos_top12_exp2(5.5511151231257827e-17) {
+		if abstop-_cgos_top12_exp2(5.5511151231257827e-17) >= _cgos_top12_exp2(512.0)-_cgos_top12_exp2(5.5511151231257827e-17) {
 			return 1
 		} else {
 			return 0
@@ -68,26 +68,26 @@ func Exp2(x float64) float64 {
 		if abstop-_cgos_top12_exp2(5.5511151231257827e-17) >= uint32(2147483648) {
 			return func() float64 {
 				if int32(1) != 0 {
-					return 1 + x
+					return 1.0 + x
 				} else {
-					return 1
+					return 1.0
 				}
 			}()
 		}
-		if abstop >= _cgos_top12_exp2(1024) {
+		if abstop >= _cgos_top12_exp2(1024.0) {
 			if *(*uint64)(unsafe.Pointer(&_cgoz_21_exp2{x})) == *(*uint64)(unsafe.Pointer(&_cgoz_22_exp2{float64(-X__builtin_inff())})) {
-				return float64(0)
+				return float64(0.0)
 			}
 			if abstop >= _cgos_top12_exp2(float64(X__builtin_inff())) {
-				return 1 + x
+				return 1.0 + x
 			}
 			if !(*(*uint64)(unsafe.Pointer(&_cgoz_23_exp2{x}))>>int32(63) != 0) {
 				return __math_oflow(uint32(0))
-			} else if *(*uint64)(unsafe.Pointer(&_cgoz_24_exp2{x})) >= *(*uint64)(unsafe.Pointer(&_cgoz_25_exp2{-1075})) {
+			} else if *(*uint64)(unsafe.Pointer(&_cgoz_24_exp2{x})) >= *(*uint64)(unsafe.Pointer(&_cgoz_25_exp2{-1075.0})) {
 				return __math_uflow(uint32(0))
 			}
 		}
-		if uint64(2)**(*uint64)(unsafe.Pointer(&_cgoz_26_exp2{x})) > uint64(2)**(*uint64)(unsafe.Pointer(&_cgoz_27_exp2{928})) {
+		if uint64(2)**(*uint64)(unsafe.Pointer(&_cgoz_26_exp2{x})) > uint64(2)**(*uint64)(unsafe.Pointer(&_cgoz_27_exp2{928.0})) {
 			abstop = uint32(0)
 		}
 	}

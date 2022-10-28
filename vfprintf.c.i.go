@@ -446,7 +446,7 @@ func _cgos_fmt_fp_vfprintf(f *Struct__IO_FILE, y float64, w int32, p int32, fl i
 		e2--
 	}
 	if t|int32(32) == 'a' {
-		var round float64 = float64(8)
+		var round float64 = float64(8.0)
 		var re int32
 		if t&int32(32) != 0 {
 			*(*uintptr)(unsafe.Pointer(&prefix)) += uintptr(int32(9))
@@ -557,7 +557,7 @@ func _cgos_fmt_fp_vfprintf(f *Struct__IO_FILE, y float64, w int32, p int32, fl i
 	}
 	if y != 0 {
 		func() int32 {
-			y *= float64(268435456)
+			y *= float64(268435456.0)
 			return func() (_cgo_ret int32) {
 				_cgo_addr := &e2
 				*_cgo_addr -= int32(28)
@@ -658,7 +658,7 @@ func _cgos_fmt_fp_vfprintf(f *Struct__IO_FILE, y float64, w int32, p int32, fl i
 				return a
 			}
 		}()
-		if (uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(b)))*4 > uintptr(int64(need)) {
+		if (uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(b)))/4 > uintptr(int64(need)) {
 			z = (*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer(b)) + uintptr(need)*4))
 		}
 		e2 += sh
@@ -668,7 +668,7 @@ func _cgos_fmt_fp_vfprintf(f *Struct__IO_FILE, y float64, w int32, p int32, fl i
 			i = int32(10)
 			return func() (_cgo_ret int32) {
 				_cgo_addr := &e
-				*_cgo_addr = int32(int64(9) * int64((uintptr(unsafe.Pointer(r))-uintptr(unsafe.Pointer(a)))*4))
+				*_cgo_addr = int32(int64(9) * int64((uintptr(unsafe.Pointer(r))-uintptr(unsafe.Pointer(a)))/4))
 				return *_cgo_addr
 			}()
 		}(); *a >= uint32(i); func() int32 {
@@ -697,7 +697,7 @@ func _cgos_fmt_fp_vfprintf(f *Struct__IO_FILE, y float64, w int32, p int32, fl i
 			return 0
 		}
 	}()
-	if int64(j) < int64(9)*int64((uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(r)))*4-uintptr(int64(1))) {
+	if int64(j) < int64(9)*int64((uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(r)))/4-uintptr(int64(1))) {
 		var x uint32
 		d = (*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer(r))+uintptr(int32(1))*4)))) + uintptr((j+9216)/int32(9)-int32(1024))*4))
 		j += 9216
@@ -730,7 +730,7 @@ func _cgos_fmt_fp_vfprintf(f *Struct__IO_FILE, y float64, w int32, p int32, fl i
 			if x < uint32(i/int32(2)) {
 				small = float64(0.5)
 			} else if x == uint32(i/int32(2)) && uintptr(unsafe.Pointer((*uint32)(unsafe.Pointer(uintptr(unsafe.Pointer(d))+uintptr(int32(1))*4)))) == uintptr(unsafe.Pointer(z)) {
-				small = float64(1)
+				small = float64(1.0)
 			} else {
 				small = float64(1.5)
 			}
@@ -767,7 +767,7 @@ func _cgos_fmt_fp_vfprintf(f *Struct__IO_FILE, y float64, w int32, p int32, fl i
 					i = int32(10)
 					return func() (_cgo_ret int32) {
 						_cgo_addr := &e
-						*_cgo_addr = int32(int64(9) * int64((uintptr(unsafe.Pointer(r))-uintptr(unsafe.Pointer(a)))*4))
+						*_cgo_addr = int32(int64(9) * int64((uintptr(unsafe.Pointer(r))-uintptr(unsafe.Pointer(a)))/4))
 						return *_cgo_addr
 					}()
 				}(); *a >= uint32(i); func() int32 {
@@ -824,19 +824,19 @@ func _cgos_fmt_fp_vfprintf(f *Struct__IO_FILE, y float64, w int32, p int32, fl i
 			if t|int32(32) == 'f' {
 				p = int32(func() int64 {
 					if int64(p) < func() int64 {
-						if int64(0) > int64(9)*int64((uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(r)))*4-uintptr(int64(1)))-int64(j) {
+						if int64(0) > int64(9)*int64((uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(r)))/4-uintptr(int64(1)))-int64(j) {
 							return int64(0)
 						} else {
-							return int64(9)*int64((uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(r)))*4-uintptr(int64(1))) - int64(j)
+							return int64(9)*int64((uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(r)))/4-uintptr(int64(1))) - int64(j)
 						}
 					}() {
 						return int64(p)
 					} else {
 						return func() int64 {
-							if int64(0) > int64(9)*int64((uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(r)))*4-uintptr(int64(1)))-int64(j) {
+							if int64(0) > int64(9)*int64((uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(r)))/4-uintptr(int64(1)))-int64(j) {
 								return int64(0)
 							} else {
-								return int64(9)*int64((uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(r)))*4-uintptr(int64(1))) - int64(j)
+								return int64(9)*int64((uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(r)))/4-uintptr(int64(1))) - int64(j)
 							}
 						}()
 					}
@@ -844,19 +844,19 @@ func _cgos_fmt_fp_vfprintf(f *Struct__IO_FILE, y float64, w int32, p int32, fl i
 			} else {
 				p = int32(func() int64 {
 					if int64(p) < func() int64 {
-						if int64(0) > int64(9)*int64((uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(r)))*4-uintptr(int64(1)))+int64(e)-int64(j) {
+						if int64(0) > int64(9)*int64((uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(r)))/4-uintptr(int64(1)))+int64(e)-int64(j) {
 							return int64(0)
 						} else {
-							return int64(9)*int64((uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(r)))*4-uintptr(int64(1))) + int64(e) - int64(j)
+							return int64(9)*int64((uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(r)))/4-uintptr(int64(1))) + int64(e) - int64(j)
 						}
 					}() {
 						return int64(p)
 					} else {
 						return func() int64 {
-							if int64(0) > int64(9)*int64((uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(r)))*4-uintptr(int64(1)))+int64(e)-int64(j) {
+							if int64(0) > int64(9)*int64((uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(r)))/4-uintptr(int64(1)))+int64(e)-int64(j) {
 								return int64(0)
 							} else {
-								return int64(9)*int64((uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(r)))*4-uintptr(int64(1))) + int64(e) - int64(j)
+								return int64(9)*int64((uintptr(unsafe.Pointer(z))-uintptr(unsafe.Pointer(r)))/4-uintptr(int64(1))) + int64(e) - int64(j)
 							}
 						}()
 					}

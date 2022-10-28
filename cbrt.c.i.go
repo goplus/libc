@@ -25,7 +25,7 @@ func Cbrt(x float64) float64 {
 		return x + x
 	}
 	if hx < uint32(1048576) {
-		u.f = x * 18014398509481984
+		u.f = x * 18014398509481984.0
 		hx = uint32(*(*uint64)(unsafe.Pointer(&u)) >> int32(32) & uint64(2147483647))
 		if hx == uint32(0) {
 			return x

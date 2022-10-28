@@ -67,8 +67,8 @@ var _cgos_w6_lgamma_r float64 = -0.0016309293409657527
 
 func _cgos_sin_pi_lgamma_r(x float64) float64 {
 	var n int32
-	x = 2 * (x*0.5 - Floor(x*0.5))
-	n = int32(x * 4)
+	x = 2.0 * (x*0.5 - Floor(x*0.5))
+	n = int32(x * 4.0)
 	n = (n + int32(1)) / int32(2)
 	x -= float64(float32(n) * 0.5)
 	x *= _cgos_pi_lgamma_r
@@ -76,13 +76,13 @@ func _cgos_sin_pi_lgamma_r(x float64) float64 {
 	default:
 		fallthrough
 	case int32(0):
-		return __sin(x, 0, int32(0))
+		return __sin(x, 0.0, int32(0))
 	case int32(1):
-		return __cos(x, 0)
+		return __cos(x, 0.0)
 	case int32(2):
-		return __sin(-x, 0, int32(0))
+		return __sin(-x, 0.0, int32(0))
 	case int32(3):
-		return -__cos(x, 0)
+		return -__cos(x, 0.0)
 	}
 	return 0
 }
@@ -122,10 +122,10 @@ func __lgamma_r(x float64, signgamp *int32) float64 {
 	if sign != 0 {
 		x = -x
 		t = _cgos_sin_pi_lgamma_r(x)
-		if t == 0 {
-			return 1 / (x - x)
+		if t == 0.0 {
+			return 1.0 / (x - x)
 		}
-		if t > 0 {
+		if t > 0.0 {
 			*signgamp = -1
 		} else {
 			t = -t
@@ -138,25 +138,25 @@ func __lgamma_r(x float64, signgamp *int32) float64 {
 		if ix <= uint32(1072483532) {
 			r = -Log(x)
 			if ix >= uint32(1072130372) {
-				y = 1 - x
+				y = 1.0 - x
 				i = int32(0)
 			} else if ix >= uint32(1070442081) {
-				y = x - (_cgos_tc_lgamma_r - 1)
+				y = x - (_cgos_tc_lgamma_r - 1.0)
 				i = int32(1)
 			} else {
 				y = x
 				i = int32(2)
 			}
 		} else {
-			r = float64(0)
+			r = float64(0.0)
 			if ix >= uint32(1073460419) {
-				y = 2 - x
+				y = 2.0 - x
 				i = int32(0)
 			} else if ix >= uint32(1072936132) {
 				y = x - _cgos_tc_lgamma_r
 				i = int32(1)
 			} else {
-				y = x - 1
+				y = x - 1.0
 				i = int32(2)
 			}
 		}
@@ -179,38 +179,38 @@ func __lgamma_r(x float64, signgamp *int32) float64 {
 			break
 		case int32(2):
 			p1 = y * (_cgos_u0_lgamma_r + y*(_cgos_u1_lgamma_r+y*(_cgos_u2_lgamma_r+y*(_cgos_u3_lgamma_r+y*(_cgos_u4_lgamma_r+y*_cgos_u5_lgamma_r)))))
-			p2 = 1 + y*(_cgos_v1_lgamma_r+y*(_cgos_v2_lgamma_r+y*(_cgos_v3_lgamma_r+y*(_cgos_v4_lgamma_r+y*_cgos_v5_lgamma_r))))
+			p2 = 1.0 + y*(_cgos_v1_lgamma_r+y*(_cgos_v2_lgamma_r+y*(_cgos_v3_lgamma_r+y*(_cgos_v4_lgamma_r+y*_cgos_v5_lgamma_r))))
 			r += -0.5*y + p1/p2
 		}
 	} else if ix < uint32(1075838976) {
 		i = int32(x)
 		y = x - float64(i)
 		p = y * (_cgos_s0_lgamma_r + y*(_cgos_s1_lgamma_r+y*(_cgos_s2_lgamma_r+y*(_cgos_s3_lgamma_r+y*(_cgos_s4_lgamma_r+y*(_cgos_s5_lgamma_r+y*_cgos_s6_lgamma_r))))))
-		q = 1 + y*(_cgos_r1_lgamma_r+y*(_cgos_r2_lgamma_r+y*(_cgos_r3_lgamma_r+y*(_cgos_r4_lgamma_r+y*(_cgos_r5_lgamma_r+y*_cgos_r6_lgamma_r)))))
+		q = 1.0 + y*(_cgos_r1_lgamma_r+y*(_cgos_r2_lgamma_r+y*(_cgos_r3_lgamma_r+y*(_cgos_r4_lgamma_r+y*(_cgos_r5_lgamma_r+y*_cgos_r6_lgamma_r)))))
 		r = 0.5*y + p/q
-		z = float64(1)
+		z = float64(1.0)
 		switch i {
 		case int32(7):
-			z *= y + 6
+			z *= y + 6.0
 		case int32(6):
-			z *= y + 5
+			z *= y + 5.0
 		case int32(5):
-			z *= y + 4
+			z *= y + 4.0
 		case int32(4):
-			z *= y + 3
+			z *= y + 3.0
 		case int32(3):
-			z *= y + 2
+			z *= y + 2.0
 			r += Log(z)
 			break
 		}
 	} else if ix < uint32(1133510656) {
 		t = Log(x)
-		z = 1 / x
+		z = 1.0 / x
 		y = z * z
 		w = _cgos_w0_lgamma_r + z*(_cgos_w1_lgamma_r+y*(_cgos_w2_lgamma_r+y*(_cgos_w3_lgamma_r+y*(_cgos_w4_lgamma_r+y*(_cgos_w5_lgamma_r+y*_cgos_w6_lgamma_r)))))
-		r = (x-0.5)*(t-1) + w
+		r = (x-0.5)*(t-1.0) + w
 	} else {
-		r = x * (Log(x) - 1)
+		r = x * (Log(x) - 1.0)
 	}
 	if sign != 0 {
 		r = nadj - r

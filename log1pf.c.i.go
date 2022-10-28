@@ -33,9 +33,9 @@ func Log1pf(x float32) float32 {
 	if ix < uint32(1054086096) || ix>>int32(31) != 0 {
 		if ix >= uint32(3212836864) {
 			if x == float32(-1) {
-				return x / 0
+				return x / 0.0
 			}
-			return (x - x) / 0
+			return (x - x) / 0.0
 		}
 		if ix<<int32(1) < uint32(1728053248) {
 			if ix&uint32(2139095040) == uint32(0) {
@@ -83,7 +83,7 @@ func Log1pf(x float32) float32 {
 		*(*uint32)(unsafe.Pointer(&u)) = iu
 		f = u.f - float32(int32(1))
 	}
-	s = f / (2 + f)
+	s = f / (2.0 + f)
 	z = s * s
 	w = z * z
 	t1 = w * (_cgos_Lg2_log1pf + w*_cgos_Lg4_log1pf)

@@ -40,7 +40,7 @@ func _cgos_log_inline_pow(ix uint64, tail *float64) float64 {
 	logctail = (*(*_cgoa_18_pow)(unsafe.Pointer(uintptr(unsafe.Pointer((*_cgoa_18_pow)(unsafe.Pointer(&__pow_log_data.tab)))) + uintptr(i)*32))).logctail
 	var zhi float64 = *(*float64)(unsafe.Pointer(&_cgoz_21_pow{(iz + 2147483648) & 18446744069414584320}))
 	var zlo float64 = z - zhi
-	var rhi float64 = zhi*invc - 1
+	var rhi float64 = zhi*invc - 1.0
 	var rlo float64 = zlo * invc
 	r = rhi + rlo
 	t1 = kd*__pow_log_data.ln2hi + logc
@@ -86,18 +86,18 @@ func _cgos_specialcase_pow(tmp float64, sbits uint64, ki uint64) float64 {
 	sbits += 4602678819172646912
 	scale = *(*float64)(unsafe.Pointer(&_cgoz_23_pow{sbits}))
 	y = scale + scale*tmp
-	if Fabs(y) < 1 {
+	if Fabs(y) < 1.0 {
 		var hi float64
 		var lo float64
-		var one float64 = 1
-		if y < 0 {
-			one = float64(-1)
+		var one float64 = 1.0
+		if y < 0.0 {
+			one = float64(-1.0)
 		}
 		lo = scale - y + scale*tmp
 		hi = one + y
 		lo = one - hi + y + lo
 		y = eval_as_double(hi+lo) - one
-		if y == 0 {
+		if y == 0.0 {
 			y = *(*float64)(unsafe.Pointer(&_cgoz_24_pow{sbits & uint64(9223372036854775808)}))
 		}
 		fp_force_eval(fp_barrier(2.2250738585072014e-308) * 2.2250738585072014e-308)
@@ -131,7 +131,7 @@ func _cgos_exp_inline_pow(x float64, xtail float64, sign_bias uint32) float64 {
 	var tmp float64
 	abstop = _cgos_top12_pow(x) & uint32(2047)
 	if func() int64 {
-		if abstop-_cgos_top12_pow(5.5511151231257827e-17) >= _cgos_top12_pow(512)-_cgos_top12_pow(5.5511151231257827e-17) {
+		if abstop-_cgos_top12_pow(5.5511151231257827e-17) >= _cgos_top12_pow(512.0)-_cgos_top12_pow(5.5511151231257827e-17) {
 			return 1
 		} else {
 			return 0
@@ -140,9 +140,9 @@ func _cgos_exp_inline_pow(x float64, xtail float64, sign_bias uint32) float64 {
 		if abstop-_cgos_top12_pow(5.5511151231257827e-17) >= uint32(2147483648) {
 			var one float64 = func() float64 {
 				if int32(1) != 0 {
-					return 1 + x
+					return 1.0 + x
 				} else {
-					return 1
+					return 1.0
 				}
 			}()
 			return func() float64 {
@@ -153,7 +153,7 @@ func _cgos_exp_inline_pow(x float64, xtail float64, sign_bias uint32) float64 {
 				}
 			}()
 		}
-		if abstop >= _cgos_top12_pow(1024) {
+		if abstop >= _cgos_top12_pow(1024.0) {
 			if *(*uint64)(unsafe.Pointer(&_cgoz_25_pow{x}))>>int32(63) != 0 {
 				return __math_uflow(sign_bias)
 			} else {
@@ -253,27 +253,27 @@ func Pow(x float64, y float64) float64 {
 					if int32(0) != 0 {
 						return x + y
 					} else {
-						return 1
+						return 1.0
 					}
 				}()
 			}
-			if ix == *(*uint64)(unsafe.Pointer(&_cgoz_32_pow{1})) {
+			if ix == *(*uint64)(unsafe.Pointer(&_cgoz_32_pow{1.0})) {
 				return func() float64 {
 					if int32(0) != 0 {
 						return x + y
 					} else {
-						return 1
+						return 1.0
 					}
 				}()
 			}
 			if uint64(2)*ix > uint64(2)**(*uint64)(unsafe.Pointer(&_cgoz_33_pow{float64(X__builtin_inff())})) || uint64(2)*iy > uint64(2)**(*uint64)(unsafe.Pointer(&_cgoz_34_pow{float64(X__builtin_inff())})) {
 				return x + y
 			}
-			if uint64(2)*ix == uint64(2)**(*uint64)(unsafe.Pointer(&_cgoz_35_pow{1})) {
-				return float64(1)
+			if uint64(2)*ix == uint64(2)**(*uint64)(unsafe.Pointer(&_cgoz_35_pow{1.0})) {
+				return float64(1.0)
 			}
 			if func() int32 {
-				if uint64(2)*ix < uint64(2)**(*uint64)(unsafe.Pointer(&_cgoz_36_pow{1})) {
+				if uint64(2)*ix < uint64(2)**(*uint64)(unsafe.Pointer(&_cgoz_36_pow{1.0})) {
 					return 1
 				} else {
 					return 0
@@ -285,7 +285,7 @@ func Pow(x float64, y float64) float64 {
 					return 0
 				}
 			}() {
-				return float64(0)
+				return float64(0.0)
 			}
 			return y * y
 		}
@@ -314,25 +314,25 @@ func Pow(x float64, y float64) float64 {
 			topx &= uint32(2047)
 		}
 		if topy&uint32(2047)-uint32(958) >= uint32(128) {
-			if ix == *(*uint64)(unsafe.Pointer(&_cgoz_37_pow{1})) {
-				return float64(1)
+			if ix == *(*uint64)(unsafe.Pointer(&_cgoz_37_pow{1.0})) {
+				return float64(1.0)
 			}
 			if topy&uint32(2047) < uint32(958) {
 				if int32(1) != 0 {
 					return func() float64 {
-						if ix > *(*uint64)(unsafe.Pointer(&_cgoz_38_pow{1})) {
-							return 1 + y
+						if ix > *(*uint64)(unsafe.Pointer(&_cgoz_38_pow{1.0})) {
+							return 1.0 + y
 						} else {
-							return 1 - y
+							return 1.0 - y
 						}
 					}()
 				} else {
-					return float64(1)
+					return float64(1.0)
 				}
 			}
 			return func() float64 {
 				if func() int32 {
-					if ix > *(*uint64)(unsafe.Pointer(&_cgoz_39_pow{1})) {
+					if ix > *(*uint64)(unsafe.Pointer(&_cgoz_39_pow{1.0})) {
 						return 1
 					} else {
 						return 0
@@ -351,7 +351,7 @@ func Pow(x float64, y float64) float64 {
 			}()
 		}
 		if topx == uint32(0) {
-			ix = *(*uint64)(unsafe.Pointer(&_cgoz_40_pow{x * 4503599627370496}))
+			ix = *(*uint64)(unsafe.Pointer(&_cgoz_40_pow{x * 4503599627370496.0}))
 			ix &= uint64(9223372036854775807)
 			ix -= 234187180623265792
 		}

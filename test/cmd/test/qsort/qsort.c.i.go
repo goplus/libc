@@ -44,7 +44,7 @@ func _cgos_str_test_qsort(a **int8, a_sorted **int8, len int32) {
 	libc.Qsort(unsafe.Pointer(a), uint64(len), 8, _cgos_scmp_qsort)
 	for i = int32(0); i < len; i++ {
 		if libc.Strcmp(*(**int8)(unsafe.Pointer(uintptr(unsafe.Pointer(a)) + uintptr(i)*8)), *(**int8)(unsafe.Pointer(uintptr(unsafe.Pointer(a_sorted)) + uintptr(i)*8))) != int32(0) {
-			common.T_printf((*int8)(unsafe.Pointer(&[90]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '6', '6', ':', ' ', 's', 't', 'r', 'i', 'n', 'g', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', ' ', 'a', 't', ' ', 'i', 'n', 'd', 'e', 'x', ' ', '%', 'd', '\n', '\x00'})), i)
+			common.T_printf((*int8)(unsafe.Pointer(&[87]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'v', 'f', 'c', '/', 'g', 'o', 'p', 'l', 'u', 's', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '6', '6', ':', ' ', 's', 't', 'r', 'i', 'n', 'g', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', ' ', 'a', 't', ' ', 'i', 'n', 'd', 'e', 'x', ' ', '%', 'd', '\n', '\x00'})), i)
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'i', '\t', 'g', 'o', 't', '\t', 'w', 'a', 'n', 't', '\n', '\x00'})))
 			for i = int32(0); i < len; i++ {
 				common.T_printf((*int8)(unsafe.Pointer(&[11]int8{'\t', '%', 'd', '\t', '%', 's', '\t', '%', 's', '\n', '\x00'})), i, *(**int8)(unsafe.Pointer(uintptr(unsafe.Pointer(a)) + uintptr(i)*8)), *(**int8)(unsafe.Pointer(uintptr(unsafe.Pointer(a_sorted)) + uintptr(i)*8)))
@@ -58,7 +58,7 @@ func _cgos_int_test_qsort(a *int32, a_sorted *int32, len int32) {
 	libc.Qsort(unsafe.Pointer(a), uint64(len), 4, _cgos_icmp_qsort)
 	for i = int32(0); i < len; i++ {
 		if *(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer(a)) + uintptr(i)*4)) != *(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer(a_sorted)) + uintptr(i)*4)) {
-			common.T_printf((*int8)(unsafe.Pointer(&[91]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '8', '1', ':', ' ', 'i', 'n', 't', 'e', 'g', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', ' ', 'a', 't', ' ', 'i', 'n', 'd', 'e', 'x', ' ', '%', 'd', '\n', '\x00'})), i)
+			common.T_printf((*int8)(unsafe.Pointer(&[88]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'v', 'f', 'c', '/', 'g', 'o', 'p', 'l', 'u', 's', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '8', '1', ':', ' ', 'i', 'n', 't', 'e', 'g', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', ' ', 'a', 't', ' ', 'i', 'n', 'd', 'e', 'x', ' ', '%', 'd', '\n', '\x00'})), i)
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'i', '\t', 'g', 'o', 't', '\t', 'w', 'a', 'n', 't', '\n', '\x00'})))
 			for i = int32(0); i < len; i++ {
 				common.T_printf((*int8)(unsafe.Pointer(&[11]int8{'\t', '%', 'd', '\t', '%', 'd', '\t', '%', 'd', '\n', '\x00'})), i, *(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer(a)) + uintptr(i)*4)), *(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer(a_sorted)) + uintptr(i)*4)))
@@ -83,7 +83,7 @@ func _cgos_uint64_test_qsort(a *uint64, a_sorted *uint64, len int32) {
 	libc.Qsort(unsafe.Pointer(a), uint64(len), 8, _cgos_cmp64_qsort)
 	for i = int32(0); i < len; i++ {
 		if *(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer(a)) + uintptr(i)*8)) != *(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer(a_sorted)) + uintptr(i)*8)) {
-			common.T_printf((*int8)(unsafe.Pointer(&[91]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '0', '9', ':', ' ', 'u', 'i', 'n', 't', '6', '4', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', ' ', 'a', 't', ' ', 'i', 'n', 'd', 'e', 'x', ' ', '%', 'd', '\n', '\x00'})), i)
+			common.T_printf((*int8)(unsafe.Pointer(&[88]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'v', 'f', 'c', '/', 'g', 'o', 'p', 'l', 'u', 's', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '0', '9', ':', ' ', 'u', 'i', 'n', 't', '6', '4', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', ' ', 'a', 't', ' ', 'i', 'n', 'd', 'e', 'x', ' ', '%', 'd', '\n', '\x00'})), i)
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'i', '\t', 'g', 'o', 't', '\t', 'w', 'a', 'n', 't', '\n', '\x00'})))
 			for i = int32(0); i < len; i++ {
 				common.T_printf((*int8)(unsafe.Pointer(&[15]int8{'\t', '%', 'd', '\t', '%', 'l', 'l', 'u', '\t', '%', 'l', 'l', 'u', '\n', '\x00'})), i, *(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer(a)) + uintptr(i)*8)), *(*uint64)(unsafe.Pointer(uintptr(unsafe.Pointer(a_sorted)) + uintptr(i)*8)))
@@ -97,7 +97,7 @@ func _cgos_char_test_qsort() {
 		var p [1]int8 = [1]int8{'\x00'}
 		libc.Qsort(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), 0, uint64(1), _cgos_ccmp_qsort)
 		if libc.Memcmp(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), unsafe.Pointer((*int8)(unsafe.Pointer(&[1]int8{'\x00'}))), 1) != int32(0) {
-			common.T_printf((*int8)(unsafe.Pointer(&[82]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '3', '0', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
+			common.T_printf((*int8)(unsafe.Pointer(&[79]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'v', 'f', 'c', '/', 'g', 'o', 'p', 'l', 'u', 's', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '3', '0', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'g', 'o', 't', ':', ' ', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&p)))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'w', 'a', 'n', 't', ':', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[1]int8{'\x00'})))
 		}
@@ -109,7 +109,7 @@ func _cgos_char_test_qsort() {
 		var p [2]int8 = [2]int8{'1', '\x00'}
 		libc.Qsort(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), 1, uint64(1), _cgos_ccmp_qsort)
 		if libc.Memcmp(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), unsafe.Pointer((*int8)(unsafe.Pointer(&[2]int8{'1', '\x00'}))), 2) != int32(0) {
-			common.T_printf((*int8)(unsafe.Pointer(&[82]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '3', '1', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
+			common.T_printf((*int8)(unsafe.Pointer(&[79]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'v', 'f', 'c', '/', 'g', 'o', 'p', 'l', 'u', 's', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '3', '1', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'g', 'o', 't', ':', ' ', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&p)))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'w', 'a', 'n', 't', ':', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[2]int8{'1', '\x00'})))
 		}
@@ -121,7 +121,7 @@ func _cgos_char_test_qsort() {
 		var p [3]int8 = [3]int8{'1', '1', '\x00'}
 		libc.Qsort(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), 2, uint64(1), _cgos_ccmp_qsort)
 		if libc.Memcmp(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), unsafe.Pointer((*int8)(unsafe.Pointer(&[3]int8{'1', '1', '\x00'}))), 3) != int32(0) {
-			common.T_printf((*int8)(unsafe.Pointer(&[82]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '3', '2', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
+			common.T_printf((*int8)(unsafe.Pointer(&[79]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'v', 'f', 'c', '/', 'g', 'o', 'p', 'l', 'u', 's', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '3', '2', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'g', 'o', 't', ':', ' ', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&p)))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'w', 'a', 'n', 't', ':', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[3]int8{'1', '1', '\x00'})))
 		}
@@ -133,7 +133,7 @@ func _cgos_char_test_qsort() {
 		var p [3]int8 = [3]int8{'1', '2', '\x00'}
 		libc.Qsort(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), 2, uint64(1), _cgos_ccmp_qsort)
 		if libc.Memcmp(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), unsafe.Pointer((*int8)(unsafe.Pointer(&[3]int8{'1', '2', '\x00'}))), 3) != int32(0) {
-			common.T_printf((*int8)(unsafe.Pointer(&[82]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '3', '3', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
+			common.T_printf((*int8)(unsafe.Pointer(&[79]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'v', 'f', 'c', '/', 'g', 'o', 'p', 'l', 'u', 's', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '3', '3', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'g', 'o', 't', ':', ' ', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&p)))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'w', 'a', 'n', 't', ':', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[3]int8{'1', '2', '\x00'})))
 		}
@@ -145,7 +145,7 @@ func _cgos_char_test_qsort() {
 		var p [3]int8 = [3]int8{'2', '1', '\x00'}
 		libc.Qsort(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), 2, uint64(1), _cgos_ccmp_qsort)
 		if libc.Memcmp(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), unsafe.Pointer((*int8)(unsafe.Pointer(&[3]int8{'1', '2', '\x00'}))), 3) != int32(0) {
-			common.T_printf((*int8)(unsafe.Pointer(&[82]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '3', '4', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
+			common.T_printf((*int8)(unsafe.Pointer(&[79]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'v', 'f', 'c', '/', 'g', 'o', 'p', 'l', 'u', 's', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '3', '4', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'g', 'o', 't', ':', ' ', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&p)))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'w', 'a', 'n', 't', ':', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[3]int8{'1', '2', '\x00'})))
 		}
@@ -157,7 +157,7 @@ func _cgos_char_test_qsort() {
 		var p [4]int8 = [4]int8{'1', '1', '1', '\x00'}
 		libc.Qsort(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), 3, uint64(1), _cgos_ccmp_qsort)
 		if libc.Memcmp(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), unsafe.Pointer((*int8)(unsafe.Pointer(&[4]int8{'1', '1', '1', '\x00'}))), 4) != int32(0) {
-			common.T_printf((*int8)(unsafe.Pointer(&[82]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '3', '5', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
+			common.T_printf((*int8)(unsafe.Pointer(&[79]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'v', 'f', 'c', '/', 'g', 'o', 'p', 'l', 'u', 's', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '3', '5', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'g', 'o', 't', ':', ' ', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&p)))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'w', 'a', 'n', 't', ':', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[4]int8{'1', '1', '1', '\x00'})))
 		}
@@ -169,7 +169,7 @@ func _cgos_char_test_qsort() {
 		var p [4]int8 = [4]int8{'2', '1', '1', '\x00'}
 		libc.Qsort(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), 3, uint64(1), _cgos_ccmp_qsort)
 		if libc.Memcmp(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), unsafe.Pointer((*int8)(unsafe.Pointer(&[4]int8{'1', '1', '2', '\x00'}))), 4) != int32(0) {
-			common.T_printf((*int8)(unsafe.Pointer(&[82]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '3', '6', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
+			common.T_printf((*int8)(unsafe.Pointer(&[79]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'v', 'f', 'c', '/', 'g', 'o', 'p', 'l', 'u', 's', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '3', '6', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'g', 'o', 't', ':', ' ', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&p)))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'w', 'a', 'n', 't', ':', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[4]int8{'1', '1', '2', '\x00'})))
 		}
@@ -181,7 +181,7 @@ func _cgos_char_test_qsort() {
 		var p [4]int8 = [4]int8{'1', '2', '1', '\x00'}
 		libc.Qsort(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), 3, uint64(1), _cgos_ccmp_qsort)
 		if libc.Memcmp(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), unsafe.Pointer((*int8)(unsafe.Pointer(&[4]int8{'1', '1', '2', '\x00'}))), 4) != int32(0) {
-			common.T_printf((*int8)(unsafe.Pointer(&[82]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '3', '7', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
+			common.T_printf((*int8)(unsafe.Pointer(&[79]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'v', 'f', 'c', '/', 'g', 'o', 'p', 'l', 'u', 's', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '3', '7', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'g', 'o', 't', ':', ' ', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&p)))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'w', 'a', 'n', 't', ':', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[4]int8{'1', '1', '2', '\x00'})))
 		}
@@ -193,7 +193,7 @@ func _cgos_char_test_qsort() {
 		var p [4]int8 = [4]int8{'1', '1', '2', '\x00'}
 		libc.Qsort(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), 3, uint64(1), _cgos_ccmp_qsort)
 		if libc.Memcmp(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), unsafe.Pointer((*int8)(unsafe.Pointer(&[4]int8{'1', '1', '2', '\x00'}))), 4) != int32(0) {
-			common.T_printf((*int8)(unsafe.Pointer(&[82]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '3', '8', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
+			common.T_printf((*int8)(unsafe.Pointer(&[79]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'v', 'f', 'c', '/', 'g', 'o', 'p', 'l', 'u', 's', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '3', '8', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'g', 'o', 't', ':', ' ', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&p)))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'w', 'a', 'n', 't', ':', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[4]int8{'1', '1', '2', '\x00'})))
 		}
@@ -205,7 +205,7 @@ func _cgos_char_test_qsort() {
 		var p [4]int8 = [4]int8{'2', '2', '1', '\x00'}
 		libc.Qsort(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), 3, uint64(1), _cgos_ccmp_qsort)
 		if libc.Memcmp(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), unsafe.Pointer((*int8)(unsafe.Pointer(&[4]int8{'1', '2', '2', '\x00'}))), 4) != int32(0) {
-			common.T_printf((*int8)(unsafe.Pointer(&[82]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '3', '9', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
+			common.T_printf((*int8)(unsafe.Pointer(&[79]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'v', 'f', 'c', '/', 'g', 'o', 'p', 'l', 'u', 's', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '3', '9', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'g', 'o', 't', ':', ' ', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&p)))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'w', 'a', 'n', 't', ':', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[4]int8{'1', '2', '2', '\x00'})))
 		}
@@ -217,7 +217,7 @@ func _cgos_char_test_qsort() {
 		var p [4]int8 = [4]int8{'2', '1', '2', '\x00'}
 		libc.Qsort(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), 3, uint64(1), _cgos_ccmp_qsort)
 		if libc.Memcmp(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), unsafe.Pointer((*int8)(unsafe.Pointer(&[4]int8{'1', '2', '2', '\x00'}))), 4) != int32(0) {
-			common.T_printf((*int8)(unsafe.Pointer(&[82]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '4', '0', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
+			common.T_printf((*int8)(unsafe.Pointer(&[79]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'v', 'f', 'c', '/', 'g', 'o', 'p', 'l', 'u', 's', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '4', '0', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'g', 'o', 't', ':', ' ', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&p)))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'w', 'a', 'n', 't', ':', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[4]int8{'1', '2', '2', '\x00'})))
 		}
@@ -229,7 +229,7 @@ func _cgos_char_test_qsort() {
 		var p [4]int8 = [4]int8{'1', '2', '2', '\x00'}
 		libc.Qsort(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), 3, uint64(1), _cgos_ccmp_qsort)
 		if libc.Memcmp(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), unsafe.Pointer((*int8)(unsafe.Pointer(&[4]int8{'1', '2', '2', '\x00'}))), 4) != int32(0) {
-			common.T_printf((*int8)(unsafe.Pointer(&[82]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '4', '1', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
+			common.T_printf((*int8)(unsafe.Pointer(&[79]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'v', 'f', 'c', '/', 'g', 'o', 'p', 'l', 'u', 's', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '4', '1', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'g', 'o', 't', ':', ' ', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&p)))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'w', 'a', 'n', 't', ':', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[4]int8{'1', '2', '2', '\x00'})))
 		}
@@ -241,7 +241,7 @@ func _cgos_char_test_qsort() {
 		var p [4]int8 = [4]int8{'1', '2', '3', '\x00'}
 		libc.Qsort(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), 3, uint64(1), _cgos_ccmp_qsort)
 		if libc.Memcmp(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), unsafe.Pointer((*int8)(unsafe.Pointer(&[4]int8{'1', '2', '3', '\x00'}))), 4) != int32(0) {
-			common.T_printf((*int8)(unsafe.Pointer(&[82]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '4', '2', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
+			common.T_printf((*int8)(unsafe.Pointer(&[79]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'v', 'f', 'c', '/', 'g', 'o', 'p', 'l', 'u', 's', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '4', '2', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'g', 'o', 't', ':', ' ', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&p)))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'w', 'a', 'n', 't', ':', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[4]int8{'1', '2', '3', '\x00'})))
 		}
@@ -253,7 +253,7 @@ func _cgos_char_test_qsort() {
 		var p [4]int8 = [4]int8{'1', '3', '2', '\x00'}
 		libc.Qsort(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), 3, uint64(1), _cgos_ccmp_qsort)
 		if libc.Memcmp(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), unsafe.Pointer((*int8)(unsafe.Pointer(&[4]int8{'1', '2', '3', '\x00'}))), 4) != int32(0) {
-			common.T_printf((*int8)(unsafe.Pointer(&[82]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '4', '3', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
+			common.T_printf((*int8)(unsafe.Pointer(&[79]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'v', 'f', 'c', '/', 'g', 'o', 'p', 'l', 'u', 's', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '4', '3', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'g', 'o', 't', ':', ' ', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&p)))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'w', 'a', 'n', 't', ':', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[4]int8{'1', '2', '3', '\x00'})))
 		}
@@ -265,7 +265,7 @@ func _cgos_char_test_qsort() {
 		var p [4]int8 = [4]int8{'2', '1', '3', '\x00'}
 		libc.Qsort(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), 3, uint64(1), _cgos_ccmp_qsort)
 		if libc.Memcmp(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), unsafe.Pointer((*int8)(unsafe.Pointer(&[4]int8{'1', '2', '3', '\x00'}))), 4) != int32(0) {
-			common.T_printf((*int8)(unsafe.Pointer(&[82]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '4', '4', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
+			common.T_printf((*int8)(unsafe.Pointer(&[79]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'v', 'f', 'c', '/', 'g', 'o', 'p', 'l', 'u', 's', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '4', '4', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'g', 'o', 't', ':', ' ', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&p)))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'w', 'a', 'n', 't', ':', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[4]int8{'1', '2', '3', '\x00'})))
 		}
@@ -277,7 +277,7 @@ func _cgos_char_test_qsort() {
 		var p [4]int8 = [4]int8{'2', '3', '1', '\x00'}
 		libc.Qsort(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), 3, uint64(1), _cgos_ccmp_qsort)
 		if libc.Memcmp(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), unsafe.Pointer((*int8)(unsafe.Pointer(&[4]int8{'1', '2', '3', '\x00'}))), 4) != int32(0) {
-			common.T_printf((*int8)(unsafe.Pointer(&[82]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '4', '5', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
+			common.T_printf((*int8)(unsafe.Pointer(&[79]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'v', 'f', 'c', '/', 'g', 'o', 'p', 'l', 'u', 's', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '4', '5', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'g', 'o', 't', ':', ' ', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&p)))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'w', 'a', 'n', 't', ':', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[4]int8{'1', '2', '3', '\x00'})))
 		}
@@ -289,7 +289,7 @@ func _cgos_char_test_qsort() {
 		var p [4]int8 = [4]int8{'3', '2', '1', '\x00'}
 		libc.Qsort(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), 3, uint64(1), _cgos_ccmp_qsort)
 		if libc.Memcmp(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), unsafe.Pointer((*int8)(unsafe.Pointer(&[4]int8{'1', '2', '3', '\x00'}))), 4) != int32(0) {
-			common.T_printf((*int8)(unsafe.Pointer(&[82]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '4', '6', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
+			common.T_printf((*int8)(unsafe.Pointer(&[79]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'v', 'f', 'c', '/', 'g', 'o', 'p', 'l', 'u', 's', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '4', '6', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'g', 'o', 't', ':', ' ', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&p)))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'w', 'a', 'n', 't', ':', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[4]int8{'1', '2', '3', '\x00'})))
 		}
@@ -301,7 +301,7 @@ func _cgos_char_test_qsort() {
 		var p [4]int8 = [4]int8{'3', '1', '2', '\x00'}
 		libc.Qsort(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), 3, uint64(1), _cgos_ccmp_qsort)
 		if libc.Memcmp(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), unsafe.Pointer((*int8)(unsafe.Pointer(&[4]int8{'1', '2', '3', '\x00'}))), 4) != int32(0) {
-			common.T_printf((*int8)(unsafe.Pointer(&[82]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '4', '7', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
+			common.T_printf((*int8)(unsafe.Pointer(&[79]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'v', 'f', 'c', '/', 'g', 'o', 'p', 'l', 'u', 's', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '4', '7', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'g', 'o', 't', ':', ' ', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&p)))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'w', 'a', 'n', 't', ':', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[4]int8{'1', '2', '3', '\x00'})))
 		}
@@ -313,7 +313,7 @@ func _cgos_char_test_qsort() {
 		var p [5]int8 = [5]int8{'1', '4', '2', '3', '\x00'}
 		libc.Qsort(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), 4, uint64(1), _cgos_ccmp_qsort)
 		if libc.Memcmp(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), unsafe.Pointer((*int8)(unsafe.Pointer(&[5]int8{'1', '2', '3', '4', '\x00'}))), 5) != int32(0) {
-			common.T_printf((*int8)(unsafe.Pointer(&[82]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '4', '8', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
+			common.T_printf((*int8)(unsafe.Pointer(&[79]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'v', 'f', 'c', '/', 'g', 'o', 'p', 'l', 'u', 's', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '4', '8', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'g', 'o', 't', ':', ' ', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&p)))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'w', 'a', 'n', 't', ':', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[5]int8{'1', '2', '3', '4', '\x00'})))
 		}
@@ -325,7 +325,7 @@ func _cgos_char_test_qsort() {
 		var p [6]int8 = [6]int8{'5', '1', '3', '4', '2', '\x00'}
 		libc.Qsort(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), 5, uint64(1), _cgos_ccmp_qsort)
 		if libc.Memcmp(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), unsafe.Pointer((*int8)(unsafe.Pointer(&[6]int8{'1', '2', '3', '4', '5', '\x00'}))), 6) != int32(0) {
-			common.T_printf((*int8)(unsafe.Pointer(&[82]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '4', '9', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
+			common.T_printf((*int8)(unsafe.Pointer(&[79]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'v', 'f', 'c', '/', 'g', 'o', 'p', 'l', 'u', 's', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '4', '9', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'g', 'o', 't', ':', ' ', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&p)))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'w', 'a', 'n', 't', ':', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[6]int8{'1', '2', '3', '4', '5', '\x00'})))
 		}
@@ -337,7 +337,7 @@ func _cgos_char_test_qsort() {
 		var p [7]int8 = [7]int8{'2', '6', '1', '4', '3', '5', '\x00'}
 		libc.Qsort(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), 6, uint64(1), _cgos_ccmp_qsort)
 		if libc.Memcmp(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), unsafe.Pointer((*int8)(unsafe.Pointer(&[7]int8{'1', '2', '3', '4', '5', '6', '\x00'}))), 7) != int32(0) {
-			common.T_printf((*int8)(unsafe.Pointer(&[82]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '5', '0', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
+			common.T_printf((*int8)(unsafe.Pointer(&[79]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'v', 'f', 'c', '/', 'g', 'o', 'p', 'l', 'u', 's', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '5', '0', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'g', 'o', 't', ':', ' ', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&p)))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'w', 'a', 'n', 't', ':', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[7]int8{'1', '2', '3', '4', '5', '6', '\x00'})))
 		}
@@ -349,7 +349,7 @@ func _cgos_char_test_qsort() {
 		var p [8]int8 = [8]int8{'4', '5', '1', '7', '2', '6', '3', '\x00'}
 		libc.Qsort(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), 7, uint64(1), _cgos_ccmp_qsort)
 		if libc.Memcmp(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), unsafe.Pointer((*int8)(unsafe.Pointer(&[8]int8{'1', '2', '3', '4', '5', '6', '7', '\x00'}))), 8) != int32(0) {
-			common.T_printf((*int8)(unsafe.Pointer(&[82]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '5', '1', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
+			common.T_printf((*int8)(unsafe.Pointer(&[79]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'v', 'f', 'c', '/', 'g', 'o', 'p', 'l', 'u', 's', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '5', '1', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'g', 'o', 't', ':', ' ', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&p)))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'w', 'a', 'n', 't', ':', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[8]int8{'1', '2', '3', '4', '5', '6', '7', '\x00'})))
 		}
@@ -361,7 +361,7 @@ func _cgos_char_test_qsort() {
 		var p [9]int8 = [9]int8{'3', '7', '2', '4', '5', '6', '1', '8', '\x00'}
 		libc.Qsort(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), 8, uint64(1), _cgos_ccmp_qsort)
 		if libc.Memcmp(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), unsafe.Pointer((*int8)(unsafe.Pointer(&[9]int8{'1', '2', '3', '4', '5', '6', '7', '8', '\x00'}))), 9) != int32(0) {
-			common.T_printf((*int8)(unsafe.Pointer(&[82]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '5', '2', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
+			common.T_printf((*int8)(unsafe.Pointer(&[79]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'v', 'f', 'c', '/', 'g', 'o', 'p', 'l', 'u', 's', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '5', '2', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'g', 'o', 't', ':', ' ', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&p)))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'w', 'a', 'n', 't', ':', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[9]int8{'1', '2', '3', '4', '5', '6', '7', '8', '\x00'})))
 		}
@@ -373,7 +373,7 @@ func _cgos_char_test_qsort() {
 		var p [10]int8 = [10]int8{'8', '1', '2', '4', '3', '6', '5', '9', '7', '\x00'}
 		libc.Qsort(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), 9, uint64(1), _cgos_ccmp_qsort)
 		if libc.Memcmp(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), unsafe.Pointer((*int8)(unsafe.Pointer(&[10]int8{'1', '2', '3', '4', '5', '6', '7', '8', '9', '\x00'}))), 10) != int32(0) {
-			common.T_printf((*int8)(unsafe.Pointer(&[82]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '5', '3', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
+			common.T_printf((*int8)(unsafe.Pointer(&[79]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'v', 'f', 'c', '/', 'g', 'o', 'p', 'l', 'u', 's', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '5', '3', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'g', 'o', 't', ':', ' ', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&p)))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'w', 'a', 'n', 't', ':', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[10]int8{'1', '2', '3', '4', '5', '6', '7', '8', '9', '\x00'})))
 		}
@@ -385,7 +385,7 @@ func _cgos_char_test_qsort() {
 		var p [10]int8 = [10]int8{'9', '8', '7', '6', '5', '4', '3', '2', '1', '\x00'}
 		libc.Qsort(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), 9, uint64(1), _cgos_ccmp_qsort)
 		if libc.Memcmp(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), unsafe.Pointer((*int8)(unsafe.Pointer(&[10]int8{'1', '2', '3', '4', '5', '6', '7', '8', '9', '\x00'}))), 10) != int32(0) {
-			common.T_printf((*int8)(unsafe.Pointer(&[82]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '5', '4', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
+			common.T_printf((*int8)(unsafe.Pointer(&[79]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'v', 'f', 'c', '/', 'g', 'o', 'p', 'l', 'u', 's', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '5', '4', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'g', 'o', 't', ':', ' ', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&p)))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'w', 'a', 'n', 't', ':', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[10]int8{'1', '2', '3', '4', '5', '6', '7', '8', '9', '\x00'})))
 		}
@@ -397,7 +397,7 @@ func _cgos_char_test_qsort() {
 		var p [10]int8 = [10]int8{'3', '2', '1', '3', '2', '1', '3', '2', '1', '\x00'}
 		libc.Qsort(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), 9, uint64(1), _cgos_ccmp_qsort)
 		if libc.Memcmp(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), unsafe.Pointer((*int8)(unsafe.Pointer(&[10]int8{'1', '1', '1', '2', '2', '2', '3', '3', '3', '\x00'}))), 10) != int32(0) {
-			common.T_printf((*int8)(unsafe.Pointer(&[82]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '5', '5', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
+			common.T_printf((*int8)(unsafe.Pointer(&[79]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'v', 'f', 'c', '/', 'g', 'o', 'p', 'l', 'u', 's', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '5', '5', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'g', 'o', 't', ':', ' ', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&p)))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'w', 'a', 'n', 't', ':', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[10]int8{'1', '1', '1', '2', '2', '2', '3', '3', '3', '\x00'})))
 		}
@@ -409,7 +409,7 @@ func _cgos_char_test_qsort() {
 		var p [18]int8 = [18]int8{'4', '9', '7', '3', '5', '8', '6', '2', '1', '8', '5', '2', '3', '6', '1', '7', '4', '\x00'}
 		libc.Qsort(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), 17, uint64(1), _cgos_ccmp_qsort)
 		if libc.Memcmp(unsafe.Pointer((*int8)(unsafe.Pointer(&p))), unsafe.Pointer((*int8)(unsafe.Pointer(&[18]int8{'1', '1', '2', '2', '3', '3', '4', '4', '5', '5', '6', '6', '7', '7', '8', '8', '9', '\x00'}))), 18) != int32(0) {
-			common.T_printf((*int8)(unsafe.Pointer(&[82]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'x', 'u', 's', 'h', 'i', 'w', 'e', 'i', '/', 'w', 'o', 'r', 'k', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '5', '6', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
+			common.T_printf((*int8)(unsafe.Pointer(&[79]int8{'/', 'U', 's', 'e', 'r', 's', '/', 'v', 'f', 'c', '/', 'g', 'o', 'p', 'l', 'u', 's', '/', 'l', 'i', 'b', 'c', '/', 't', 'e', 's', 't', '/', 's', 'r', 'c', '/', 'f', 'u', 'n', 'c', 't', 'i', 'o', 'n', 'a', 'l', '/', 'q', 's', 'o', 'r', 't', '.', 'c', ':', '1', '5', '6', ':', ' ', 'c', 'h', 'a', 'r', 'a', 'c', 't', 'e', 'r', ' ', 's', 'o', 'r', 't', ' ', 'f', 'a', 'i', 'l', 'e', 'd', '\n', '\x00'})))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'g', 'o', 't', ':', ' ', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&p)))
 			common.T_printf((*int8)(unsafe.Pointer(&[13]int8{'\t', 'w', 'a', 'n', 't', ':', ' ', '"', '%', 's', '"', '\n', '\x00'})), (*int8)(unsafe.Pointer(&[18]int8{'1', '1', '2', '2', '3', '3', '4', '4', '5', '5', '6', '6', '7', '7', '8', '8', '9', '\x00'})))
 		}

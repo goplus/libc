@@ -86,9 +86,9 @@ func Expm1f(x float32) float32 {
 	}
 	hfx = 0.5 * x
 	hxs = x * hfx
-	r1 = 1 + hxs*(_cgos_Q1_expm1f+hxs*_cgos_Q2_expm1f)
-	t = 3 - r1*hfx
-	e = hxs * ((r1 - t) / (6 - x*t))
+	r1 = 1.0 + hxs*(_cgos_Q1_expm1f+hxs*_cgos_Q2_expm1f)
+	t = 3.0 - r1*hfx
+	e = hxs * ((r1 - t) / (6.0 - x*t))
 	if k == int32(0) {
 		return x - (x*e - hxs)
 	}
@@ -99,20 +99,20 @@ func Expm1f(x float32) float32 {
 	}
 	if k == int32(1) {
 		if x < -0.25 {
-			return -2 * (e - (x + 0.5))
+			return -2.0 * (e - (x + 0.5))
 		}
-		return 1 + 2*(x-e)
+		return 1.0 + 2.0*(x-e)
 	}
 	*(*uint32)(unsafe.Pointer(&u)) = uint32((int32(127) + k) << int32(23))
 	twopk = u.f
 	if k < int32(0) || k > int32(56) {
-		y = x - e + 1
+		y = x - e + 1.0
 		if k == int32(128) {
-			y = y * 2 * 1.70141183e+38
+			y = y * 2.0 * 1.70141183e+38
 		} else {
 			y = y * twopk
 		}
-		return y - 1
+		return y - 1.0
 	}
 	*(*uint32)(unsafe.Pointer(&u)) = uint32((int32(127) - k) << int32(23))
 	if k < int32(23) {

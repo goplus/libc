@@ -19,7 +19,7 @@ func _cgos_R_asin(z float64) float64 {
 	var p float64
 	var q float64
 	p = z * (_cgos_pS0_asin + z*(_cgos_pS1_asin+z*(_cgos_pS2_asin+z*(_cgos_pS3_asin+z*(_cgos_pS4_asin+z*_cgos_pS5_asin)))))
-	q = 1 + z*(_cgos_qS1_asin+z*(_cgos_qS2_asin+z*(_cgos_qS3_asin+z*_cgos_qS4_asin)))
+	q = 1.0 + z*(_cgos_qS1_asin+z*(_cgos_qS2_asin+z*(_cgos_qS3_asin+z*_cgos_qS4_asin)))
 	return p / q
 }
 func Asin(x float64) float64 {

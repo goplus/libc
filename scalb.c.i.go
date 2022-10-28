@@ -95,7 +95,7 @@ func Scalb(x float64, fn float64) float64 {
 			}()
 		}
 	}() != 0) {
-		if fn > 0 {
+		if fn > 0.0 {
 			return x * fn
 		} else {
 			return x / -fn
@@ -104,10 +104,10 @@ func Scalb(x float64, fn float64) float64 {
 	if Rint(fn) != fn {
 		return (fn - fn) / (fn - fn)
 	}
-	if fn > 65000 {
+	if fn > 65000.0 {
 		return Scalbn(x, int32(65000))
 	}
-	if -fn > 65000 {
+	if -fn > 65000.0 {
 		return Scalbn(x, -65000)
 	}
 	return Scalbn(x, int32(fn))

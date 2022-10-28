@@ -50,7 +50,7 @@ func Floorf(x float32) float32 {
 		if *(*uint32)(unsafe.Pointer(&u))>>int32(31) == uint32(0) {
 			*(*uint32)(unsafe.Pointer(&u)) = uint32(0)
 		} else if *(*uint32)(unsafe.Pointer(&u))<<int32(1) != 0 {
-			u.f = float32(-1)
+			u.f = float32(-1.0)
 		}
 	}
 	return u.f
