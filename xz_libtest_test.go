@@ -56,6 +56,7 @@ import (
 	"github.com/goplus/libc/test/cmd/test/floorl"
 
 	"github.com/goplus/libc/test/cmd/test/fma"
+	"github.com/goplus/libc/test/cmd/test/fmaf"
 	"github.com/goplus/libc/test/cmd/test/fmal"
 
 	"github.com/goplus/libc/test/cmd/test/fmax"
@@ -182,6 +183,7 @@ func TestFromTestdata(t *testing.T) {
 	floorl.TestMain(t)
 
 	fma.TestMain(t)
+	fmaf.TestMain(t)
 	fmal.TestMain(t)
 
 	fmax.TestMain(t)
