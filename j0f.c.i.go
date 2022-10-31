@@ -105,12 +105,12 @@ func Y0f(x float32) float32 {
 	if ix&uint32(2147483647) == uint32(0) {
 		return func() float32 {
 			return float32(-1)
-		}() / 0
+		}() / 0.0
 	}
 	if ix>>int32(31) != 0 {
 		return func() float32 {
 			return float32(int32(0))
-		}() / 0
+		}() / 0.0
 	}
 	if ix >= uint32(2139095040) {
 		return float32(int32(1)) / x
@@ -131,7 +131,7 @@ type _cgoz_19_j0f struct {
 	_f float32
 }
 
-var _cgos_pR8_j0f [6]float32 = [6]float32{float32(0), float32(-0.0703125), float32(-8.0816707610999998), float32(-257.06311034999999), float32(-2485.2163086), float32(-5253.0439452999999)}
+var _cgos_pR8_j0f [6]float32 = [6]float32{float32(0.0), float32(-0.0703125), float32(-8.0816707610999998), float32(-257.06311034999999), float32(-2485.2163086), float32(-5253.0439452999999)}
 var _cgos_pS8_j0f [5]float32 = [5]float32{float32(116.53436279), float32(3833.7448730000001), float32(40597.855469000002), float32(116752.96875), float32(47627.726562000003)}
 var _cgos_pR5_j0f [6]float32 = [6]float32{float32(-1.1412546255e-11), float32(-0.070312492549000002), float32(-4.1596107483000004), float32(-67.674766540999997), float32(-331.23129272), float32(-346.43338012999999)}
 var _cgos_pS5_j0f [5]float32 = [5]float32{float32(60.753936768000003), float32(1051.2523193), float32(5978.9707030999998), float32(9625.4453125), float32(2406.0581054999998)}
@@ -167,17 +167,17 @@ func _cgos_pzerof_j0f(x float32) float32 {
 		p = (*float32)(unsafe.Pointer(&_cgos_pR2_j0f))
 		q = (*float32)(unsafe.Pointer(&_cgos_pS2_j0f))
 	}
-	z = 1 / (x * x)
+	z = 1.0 / (x * x)
 	r = *(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(p)) + uintptr(int32(0))*4)) + z*(*(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(p)) + uintptr(int32(1))*4))+z*(*(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(p)) + uintptr(int32(2))*4))+z*(*(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(p)) + uintptr(int32(3))*4))+z*(*(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(p)) + uintptr(int32(4))*4))+z**(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(p)) + uintptr(int32(5))*4))))))
-	s = 1 + z*(*(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(q)) + uintptr(int32(0))*4))+z*(*(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(q)) + uintptr(int32(1))*4))+z*(*(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(q)) + uintptr(int32(2))*4))+z*(*(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(q)) + uintptr(int32(3))*4))+z**(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(q)) + uintptr(int32(4))*4))))))
-	return 1 + r/s
+	s = 1.0 + z*(*(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(q)) + uintptr(int32(0))*4))+z*(*(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(q)) + uintptr(int32(1))*4))+z*(*(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(q)) + uintptr(int32(2))*4))+z*(*(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(q)) + uintptr(int32(3))*4))+z**(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(q)) + uintptr(int32(4))*4))))))
+	return 1.0 + r/s
 }
 
 type _cgoz_20_j0f struct {
 	_f float32
 }
 
-var _cgos_qR8_j0f [6]float32 = [6]float32{float32(0), float32(0.0732421875), float32(11.768206596000001), float32(557.67340088000003), float32(8859.1972655999998), float32(37014.625)}
+var _cgos_qR8_j0f [6]float32 = [6]float32{float32(0.0), float32(0.0732421875), float32(11.768206596000001), float32(557.67340088000003), float32(8859.1972655999998), float32(37014.625)}
 var _cgos_qS8_j0f [6]float32 = [6]float32{float32(163.77603149000001), float32(8098.3447266000003), float32(142538.29688000001), float32(803309.25), float32(840501.5625), float32(-343899.28125)}
 var _cgos_qR5_j0f [6]float32 = [6]float32{float32(1.8408595828e-11), float32(0.073242180049000002), float32(5.8356351852000001), float32(135.11157227000001), float32(1027.2437743999999), float32(1989.9779053)}
 var _cgos_qS5_j0f [6]float32 = [6]float32{float32(82.776611328000001), float32(2077.8142090000001), float32(18847.289062), float32(56751.113280999998), float32(35976.753905999998), float32(-5354.3427733999997)}
@@ -213,9 +213,9 @@ func _cgos_qzerof_j0f(x float32) float32 {
 		p = (*float32)(unsafe.Pointer(&_cgos_qR2_j0f))
 		q = (*float32)(unsafe.Pointer(&_cgos_qS2_j0f))
 	}
-	z = 1 / (x * x)
+	z = 1.0 / (x * x)
 	r = *(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(p)) + uintptr(int32(0))*4)) + z*(*(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(p)) + uintptr(int32(1))*4))+z*(*(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(p)) + uintptr(int32(2))*4))+z*(*(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(p)) + uintptr(int32(3))*4))+z*(*(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(p)) + uintptr(int32(4))*4))+z**(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(p)) + uintptr(int32(5))*4))))))
-	s = 1 + z*(*(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(q)) + uintptr(int32(0))*4))+z*(*(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(q)) + uintptr(int32(1))*4))+z*(*(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(q)) + uintptr(int32(2))*4))+z*(*(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(q)) + uintptr(int32(3))*4))+z*(*(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(q)) + uintptr(int32(4))*4))+z**(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(q)) + uintptr(int32(5))*4)))))))
+	s = 1.0 + z*(*(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(q)) + uintptr(int32(0))*4))+z*(*(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(q)) + uintptr(int32(1))*4))+z*(*(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(q)) + uintptr(int32(2))*4))+z*(*(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(q)) + uintptr(int32(3))*4))+z*(*(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(q)) + uintptr(int32(4))*4))+z**(*float32)(unsafe.Pointer(uintptr(unsafe.Pointer(q)) + uintptr(int32(5))*4)))))))
 	return (-0.125 + r/s) / x
 }
 

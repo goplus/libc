@@ -19,7 +19,7 @@ func _cgos_R_acos(z float64) float64 {
 	var p float64
 	var q float64
 	p = z * (_cgos_pS0_acos + z*(_cgos_pS1_acos+z*(_cgos_pS2_acos+z*(_cgos_pS3_acos+z*(_cgos_pS4_acos+z*_cgos_pS5_acos)))))
-	q = 1 + z*(_cgos_qS1_acos+z*(_cgos_qS2_acos+z*(_cgos_qS3_acos+z*_cgos_qS4_acos)))
+	q = 1.0 + z*(_cgos_qS1_acos+z*(_cgos_qS2_acos+z*(_cgos_qS3_acos+z*_cgos_qS4_acos)))
 	return p / q
 }
 func Acos(x float64) float64 {
@@ -60,12 +60,12 @@ func Acos(x float64) float64 {
 		return _cgos_pio2_hi_acos - (x - (_cgos_pio2_lo_acos - x*_cgos_R_acos(x*x)))
 	}
 	if hx>>int32(31) != 0 {
-		z = (1 + x) * 0.5
+		z = (1.0 + x) * 0.5
 		s = Sqrt(z)
 		w = _cgos_R_acos(z)*s - _cgos_pio2_lo_acos
 		return float64(int32(2)) * (_cgos_pio2_hi_acos - (s + w))
 	}
-	z = (1 - x) * 0.5
+	z = (1.0 - x) * 0.5
 	s = Sqrt(z)
 	df = s
 	for {

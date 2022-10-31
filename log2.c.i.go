@@ -34,14 +34,14 @@ func Log2(x float64) float64 {
 	ix = *(*uint64)(unsafe.Pointer(&_cgoz_21_log2{x}))
 	top = _cgos_top16_log2(x)
 	if func() int64 {
-		if ix-*(*uint64)(unsafe.Pointer(&_cgoz_22_log2{1 - 0.042397022247314453})) < *(*uint64)(unsafe.Pointer(&_cgoz_23_log2{1 + 0.044274330139160156}))-*(*uint64)(unsafe.Pointer(&_cgoz_24_log2{1 - 0.042397022247314453})) {
+		if ix-*(*uint64)(unsafe.Pointer(&_cgoz_22_log2{1.0 - 0.042397022247314453})) < *(*uint64)(unsafe.Pointer(&_cgoz_23_log2{1.0 + 0.044274330139160156}))-*(*uint64)(unsafe.Pointer(&_cgoz_24_log2{1.0 - 0.042397022247314453})) {
 			return 1
 		} else {
 			return 0
 		}
 	}() == int64(0) {
 		if int32(1) != 0 && func() int64 {
-			if ix == *(*uint64)(unsafe.Pointer(&_cgoz_25_log2{1})) {
+			if ix == *(*uint64)(unsafe.Pointer(&_cgoz_25_log2{1.0})) {
 				return 1
 			} else {
 				return 0
@@ -49,7 +49,7 @@ func Log2(x float64) float64 {
 		}() == int64(0) {
 			return float64(int32(0))
 		}
-		r = x - 1
+		r = x - 1.0
 		var rhi float64
 		var rlo float64
 		rhi = *(*float64)(unsafe.Pointer(&_cgoz_26_log2{*(*uint64)(unsafe.Pointer(&_cgoz_27_log2{r})) & 18446744069414584320}))
@@ -81,7 +81,7 @@ func Log2(x float64) float64 {
 		if top&uint32(32768) != 0 || top&uint32(32752) == uint32(32752) {
 			return __math_invalid(x)
 		}
-		ix = *(*uint64)(unsafe.Pointer(&_cgoz_29_log2{x * 4503599627370496}))
+		ix = *(*uint64)(unsafe.Pointer(&_cgoz_29_log2{x * 4503599627370496.0}))
 		ix -= 234187180623265792
 	}
 	tmp = ix - uint64(4604367669032910848)

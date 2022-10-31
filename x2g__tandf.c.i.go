@@ -20,7 +20,7 @@ func __tandf(x float64, odd int32) float32 {
 	r = x + s*u + s*w*(t+w*r)
 	return float32(func() float64 {
 		if odd != 0 {
-			return -1 / r
+			return -1.0 / r
 		} else {
 			return r
 		}

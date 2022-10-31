@@ -55,7 +55,7 @@ func Sincosf(x float32, sin *float32, cos *float32) {
 				}
 			}
 			*sin = x
-			*cos = float32(1)
+			*cos = float32(1.0)
 			return
 		}
 		*sin = __sindf(float64(x))

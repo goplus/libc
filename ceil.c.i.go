@@ -35,7 +35,7 @@ func Ceil(x float64) float64 {
 		}
 		return func() float64 {
 			if *(*uint64)(unsafe.Pointer(&u))>>int32(63) != 0 {
-				return -0
+				return -0.0
 			} else {
 				return float64(int32(1))
 			}

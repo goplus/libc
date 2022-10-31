@@ -43,7 +43,7 @@ func Log2f(x float32) float32 {
 		if ix&uint32(2147483648) != 0 || ix*uint32(2) >= uint32(4278190080) {
 			return __math_invalidf(x)
 		}
-		ix = *(*uint32)(unsafe.Pointer(&_cgoz_20_log2f{x * 8388608}))
+		ix = *(*uint32)(unsafe.Pointer(&_cgoz_20_log2f{x * 8388608.0}))
 		ix -= uint32(192937984)
 	}
 	tmp = ix - uint32(1060306944)

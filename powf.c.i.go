@@ -119,7 +119,7 @@ func Powf(x float32, y float32) float32 {
 					if int32(0) != 0 {
 						return x + y
 					} else {
-						return 1
+						return 1.0
 					}
 				}()
 			}
@@ -128,7 +128,7 @@ func Powf(x float32, y float32) float32 {
 					if int32(0) != 0 {
 						return x + y
 					} else {
-						return 1
+						return 1.0
 					}
 				}()
 			}
@@ -136,7 +136,7 @@ func Powf(x float32, y float32) float32 {
 				return x + y
 			}
 			if uint32(2)*ix == uint32(2130706432) {
-				return float32(1)
+				return float32(1.0)
 			}
 			if func() int32 {
 				if uint32(2)*ix < uint32(2130706432) {
@@ -151,7 +151,7 @@ func Powf(x float32, y float32) float32 {
 					return 0
 				}
 			}() {
-				return float32(0)
+				return float32(0.0)
 			}
 			return y * y
 		}
@@ -179,7 +179,7 @@ func Powf(x float32, y float32) float32 {
 			ix &= uint32(2147483647)
 		}
 		if ix < uint32(8388608) {
-			ix = *(*uint32)(unsafe.Pointer(&_cgoz_24_powf{x * 8388608}))
+			ix = *(*uint32)(unsafe.Pointer(&_cgoz_24_powf{x * 8388608.0}))
 			ix &= uint32(2147483647)
 			ix -= uint32(192937984)
 		}
@@ -187,7 +187,7 @@ func Powf(x float32, y float32) float32 {
 	var logx float64 = _cgos_log2_inline_powf(ix)
 	var ylogx float64 = float64(y) * logx
 	if func() int64 {
-		if *(*uint64)(unsafe.Pointer(&_cgoz_25_powf{ylogx}))>>int32(47)&uint64(65535) >= *(*uint64)(unsafe.Pointer(&_cgoz_26_powf{126 * float64(1)}))>>int32(47) {
+		if *(*uint64)(unsafe.Pointer(&_cgoz_25_powf{ylogx}))>>int32(47)&uint64(65535) >= *(*uint64)(unsafe.Pointer(&_cgoz_26_powf{126.0 * float64(1)}))>>int32(47) {
 			return 1
 		} else {
 			return 0
@@ -196,7 +196,7 @@ func Powf(x float32, y float32) float32 {
 		if ylogx > 127.99999995700433*float64(1) {
 			return __math_oflowf(sign_bias)
 		}
-		if ylogx <= -150*float64(1) {
+		if ylogx <= -150.0*float64(1) {
 			return __math_uflowf(sign_bias)
 		}
 	}

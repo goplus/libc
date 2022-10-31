@@ -34,7 +34,7 @@ func Cosf(x float32) float32 {
 					break
 				}
 			}
-			return float32(1)
+			return float32(1.0)
 		}
 		return __cosdf(float64(x))
 	}

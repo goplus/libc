@@ -27,7 +27,7 @@ func Cos(x float64) float64 {
 					break
 				}
 			}
-			return float64(1)
+			return float64(1.0)
 		}
 		return __cos(x, float64(int32(0)))
 	}

@@ -16,6 +16,6 @@ func __cos(x float64, y float64) float64 {
 	w = z * z
 	r = z*(_cgos_C1___cos+z*(_cgos_C2___cos+z*_cgos_C3___cos)) + w*w*(_cgos_C4___cos+z*(_cgos_C5___cos+z*_cgos_C6___cos))
 	hz = 0.5 * z
-	w = 1 - hz
-	return w + (1 - w - hz + (z*r - x*y))
+	w = 1.0 - hz
+	return w + (1.0 - w - hz + (z*r - x*y))
 }

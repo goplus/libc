@@ -47,7 +47,7 @@ func Tan(x float64) float64 {
 			}
 			return x
 		}
-		return __tan(x, 0, int32(0))
+		return __tan(x, 0.0, int32(0))
 	}
 	if ix >= uint32(2146435072) {
 		return x - x

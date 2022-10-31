@@ -47,7 +47,7 @@ func __rem_pio2_large(x *float64, y *float64, e0 int32, nx int32, prec int32) in
 	}() {
 		*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&f)))) + uintptr(i)*8)) = func() float64 {
 			if j < int32(0) {
-				return 0
+				return 0.0
 			} else {
 				return float64(*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&_cgos_ipio2___rem_pio2_large)))) + uintptr(j)*4)))
 			}
@@ -58,7 +58,7 @@ func __rem_pio2_large(x *float64, y *float64, e0 int32, nx int32, prec int32) in
 			j = int32(0)
 			return func() (_cgo_ret float64) {
 				_cgo_addr := &fw
-				*_cgo_addr = float64(0)
+				*_cgo_addr = float64(0.0)
 				return *_cgo_addr
 			}()
 		}(); j <= jx; j++ {
@@ -92,11 +92,11 @@ recompute:
 		}()
 	}() {
 		fw = float64(int32(5.9604644775390625e-8 * z))
-		*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&iq)))) + uintptr(i)*4)) = int32(z - 16777216*fw)
+		*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&iq)))) + uintptr(i)*4)) = int32(z - 16777216.0*fw)
 		z = *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&q)))) + uintptr(j-int32(1))*8)) + fw
 	}
 	z = Scalbn(z, q0)
-	z -= 8 * Floor(z*0.125)
+	z -= 8.0 * Floor(z*0.125)
 	n = int32(z)
 	z -= float64(n)
 	ih = int32(0)
@@ -135,13 +135,13 @@ recompute:
 			}
 		}
 		if ih == int32(2) {
-			z = 1 - z
+			z = 1.0 - z
 			if carry != int32(0) {
-				z -= Scalbn(1, q0)
+				z -= Scalbn(1.0, q0)
 			}
 		}
 	}
-	if z == 0 {
+	if z == 0.0 {
 		j = int32(0)
 		for i = jz - int32(1); i >= jk; i-- {
 			j |= *(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&iq)))) + uintptr(i)*4))
@@ -155,7 +155,7 @@ recompute:
 					j = int32(0)
 					return func() (_cgo_ret float64) {
 						_cgo_addr := &fw
-						*_cgo_addr = float64(0)
+						*_cgo_addr = float64(0.0)
 						return *_cgo_addr
 					}()
 				}(); j <= jx; j++ {
@@ -167,7 +167,7 @@ recompute:
 			goto recompute
 		}
 	}
-	if z == 0 {
+	if z == 0.0 {
 		jz -= int32(1)
 		q0 -= int32(24)
 		for *(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&iq)))) + uintptr(jz)*4)) == int32(0) {
@@ -176,9 +176,9 @@ recompute:
 		}
 	} else {
 		z = Scalbn(z, -q0)
-		if z >= 16777216 {
+		if z >= 16777216.0 {
 			fw = float64(int32(5.9604644775390625e-8 * z))
-			*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&iq)))) + uintptr(jz)*4)) = int32(z - 16777216*fw)
+			*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&iq)))) + uintptr(jz)*4)) = int32(z - 16777216.0*fw)
 			jz += int32(1)
 			q0 += int32(24)
 			*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&iq)))) + uintptr(jz)*4)) = int32(fw)
@@ -186,14 +186,14 @@ recompute:
 			*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&iq)))) + uintptr(jz)*4)) = int32(z)
 		}
 	}
-	fw = Scalbn(1, q0)
+	fw = Scalbn(1.0, q0)
 	for i = jz; i >= int32(0); i-- {
 		*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&q)))) + uintptr(i)*8)) = fw * float64(*(*int32)(unsafe.Pointer(uintptr(unsafe.Pointer((*int32)(unsafe.Pointer(&iq)))) + uintptr(i)*4)))
 		fw *= float64(5.9604644775390625e-8)
 	}
 	for i = jz; i >= int32(0); i-- {
 		for func() int32 {
-			fw = float64(0)
+			fw = float64(0.0)
 			return func() (_cgo_ret int32) {
 				_cgo_addr := &k
 				*_cgo_addr = int32(0)
@@ -206,7 +206,7 @@ recompute:
 	}
 	switch prec {
 	case int32(0):
-		fw = float64(0)
+		fw = float64(0.0)
 		for i = jz; i >= int32(0); i-- {
 			fw += *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&fq)))) + uintptr(i)*8))
 		}
@@ -221,7 +221,7 @@ recompute:
 	case int32(1):
 		fallthrough
 	case int32(2):
-		fw = float64(0)
+		fw = float64(0.0)
 		for i = jz; i >= int32(0); i-- {
 			fw += *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&fq)))) + uintptr(i)*8))
 		}
@@ -257,7 +257,7 @@ recompute:
 			*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&fq)))) + uintptr(i-int32(1))*8)) = fw
 		}
 		for func() int32 {
-			fw = float64(0)
+			fw = float64(0.0)
 			return func() (_cgo_ret int32) {
 				_cgo_addr := &i
 				*_cgo_addr = jz

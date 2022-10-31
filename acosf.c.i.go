@@ -13,7 +13,7 @@ func _cgos_R_acosf(z float32) float32 {
 	var p float32
 	var q float32
 	p = z * (_cgos_pS0_acosf + z*(_cgos_pS1_acosf+z*_cgos_pS2_acosf))
-	q = 1 + z*_cgos_qS1_acosf
+	q = 1.0 + z*_cgos_qS1_acosf
 	return p / q
 }
 func Acosf(x float32) float32 {

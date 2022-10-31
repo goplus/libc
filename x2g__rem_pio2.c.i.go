@@ -177,10 +177,10 @@ _cgol_8:
 	z = u.f
 	for i = int32(0); i < int32(2); i++ {
 		*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&tx)))) + uintptr(i)*8)) = float64(int32(z))
-		z = (z - *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&tx)))) + uintptr(i)*8))) * 16777216
+		z = (z - *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&tx)))) + uintptr(i)*8))) * 16777216.0
 	}
 	*(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&tx)))) + uintptr(i)*8)) = z
-	for *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&tx)))) + uintptr(i)*8)) == 0 {
+	for *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&tx)))) + uintptr(i)*8)) == 0.0 {
 		i--
 	}
 	n = __rem_pio2_large((*float64)(unsafe.Pointer(&tx)), (*float64)(unsafe.Pointer(&ty)), int32(ix>>int32(20))-1046, i+int32(1), int32(1))

@@ -56,6 +56,7 @@ import (
 	"github.com/goplus/libc/test/cmd/test/floorl"
 
 	"github.com/goplus/libc/test/cmd/test/fma"
+	"github.com/goplus/libc/test/cmd/test/fmaf"
 	"github.com/goplus/libc/test/cmd/test/fmal"
 
 	"github.com/goplus/libc/test/cmd/test/fmax"
@@ -119,6 +120,8 @@ import (
 	"github.com/goplus/libc/test/cmd/test/qsort"
 	"github.com/goplus/libc/test/cmd/test/random"
 
+	"github.com/goplus/libc/test/cmd/test/snprintf"
+
 	"github.com/goplus/libc/test/cmd/test/string_memcpy"
 	"github.com/goplus/libc/test/cmd/test/string_memmem"
 	"github.com/goplus/libc/test/cmd/test/string_memset"
@@ -180,6 +183,7 @@ func TestFromTestdata(t *testing.T) {
 	floorl.TestMain(t)
 
 	fma.TestMain(t)
+	fmaf.TestMain(t)
 	fmal.TestMain(t)
 
 	fmax.TestMain(t)
@@ -243,6 +247,8 @@ func TestFromTestdata(t *testing.T) {
 	qsort.TestMain(t)
 	random.TestMain(t)
 	teststring.TestMain(t)
+
+	snprintf.TestMain(t)
 
 	string_memcpy.TestMain(t)
 	string_memmem.TestMain(t)

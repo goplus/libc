@@ -79,10 +79,10 @@ func _cgos_erfc2_erf(ix uint32, x float64) float64 {
 	s = float64(int32(1)) / (x * x)
 	if ix < uint32(1074191213) {
 		R = _cgos_ra0_erf + s*(_cgos_ra1_erf+s*(_cgos_ra2_erf+s*(_cgos_ra3_erf+s*(_cgos_ra4_erf+s*(_cgos_ra5_erf+s*(_cgos_ra6_erf+s*_cgos_ra7_erf))))))
-		S = 1 + s*(_cgos_sa1_erf+s*(_cgos_sa2_erf+s*(_cgos_sa3_erf+s*(_cgos_sa4_erf+s*(_cgos_sa5_erf+s*(_cgos_sa6_erf+s*(_cgos_sa7_erf+s*_cgos_sa8_erf)))))))
+		S = 1.0 + s*(_cgos_sa1_erf+s*(_cgos_sa2_erf+s*(_cgos_sa3_erf+s*(_cgos_sa4_erf+s*(_cgos_sa5_erf+s*(_cgos_sa6_erf+s*(_cgos_sa7_erf+s*_cgos_sa8_erf)))))))
 	} else {
 		R = _cgos_rb0_erf + s*(_cgos_rb1_erf+s*(_cgos_rb2_erf+s*(_cgos_rb3_erf+s*(_cgos_rb4_erf+s*(_cgos_rb5_erf+s*_cgos_rb6_erf)))))
-		S = 1 + s*(_cgos_sb1_erf+s*(_cgos_sb2_erf+s*(_cgos_sb3_erf+s*(_cgos_sb4_erf+s*(_cgos_sb5_erf+s*(_cgos_sb6_erf+s*_cgos_sb7_erf))))))
+		S = 1.0 + s*(_cgos_sb1_erf+s*(_cgos_sb2_erf+s*(_cgos_sb3_erf+s*(_cgos_sb4_erf+s*(_cgos_sb5_erf+s*(_cgos_sb6_erf+s*_cgos_sb7_erf))))))
 	}
 	z = x
 	for {
@@ -125,7 +125,7 @@ func Erf(x float64) float64 {
 		}
 		z = x * x
 		r = _cgos_pp0_erf + z*(_cgos_pp1_erf+z*(_cgos_pp2_erf+z*(_cgos_pp3_erf+z*_cgos_pp4_erf)))
-		s = 1 + z*(_cgos_qq1_erf+z*(_cgos_qq2_erf+z*(_cgos_qq3_erf+z*(_cgos_qq4_erf+z*_cgos_qq5_erf))))
+		s = 1.0 + z*(_cgos_qq1_erf+z*(_cgos_qq2_erf+z*(_cgos_qq3_erf+z*(_cgos_qq4_erf+z*_cgos_qq5_erf))))
 		y = r / s
 		return x + x*y
 	}
@@ -167,14 +167,14 @@ func Erfc(x float64) float64 {
 	}
 	if ix < uint32(1072365568) {
 		if ix < uint32(1013972992) {
-			return 1 - x
+			return 1.0 - x
 		}
 		z = x * x
 		r = _cgos_pp0_erf + z*(_cgos_pp1_erf+z*(_cgos_pp2_erf+z*(_cgos_pp3_erf+z*_cgos_pp4_erf)))
-		s = 1 + z*(_cgos_qq1_erf+z*(_cgos_qq2_erf+z*(_cgos_qq3_erf+z*(_cgos_qq4_erf+z*_cgos_qq5_erf))))
+		s = 1.0 + z*(_cgos_qq1_erf+z*(_cgos_qq2_erf+z*(_cgos_qq3_erf+z*(_cgos_qq4_erf+z*_cgos_qq5_erf))))
 		y = r / s
 		if sign != 0 || ix < uint32(1070596096) {
-			return 1 - (x + x*y)
+			return 1.0 - (x + x*y)
 		}
 		return 0.5 - (x - 0.5 + x*y)
 	}

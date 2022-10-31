@@ -89,17 +89,17 @@ func Atanf(x float32) float32 {
 		if ix < uint32(1066926080) {
 			if ix < uint32(1060110336) {
 				id = int32(0)
-				x = (2*x - 1) / (2 + x)
+				x = (2.0*x - 1.0) / (2.0 + x)
 			} else {
 				id = int32(1)
-				x = (x - 1) / (x + 1)
+				x = (x - 1.0) / (x + 1.0)
 			}
 		} else if ix < uint32(1075576832) {
 			id = int32(2)
-			x = (x - 1.5) / (1 + 1.5*x)
+			x = (x - 1.5) / (1.0 + 1.5*x)
 		} else {
 			id = int32(3)
-			x = -1 / x
+			x = -1.0 / x
 		}
 	}
 	z = x * x

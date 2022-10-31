@@ -119,9 +119,9 @@ func Expm1(x float64) float64 {
 	}
 	hfx = 0.5 * x
 	hxs = x * hfx
-	r1 = 1 + hxs*(_cgos_Q1_expm1+hxs*(_cgos_Q2_expm1+hxs*(_cgos_Q3_expm1+hxs*(_cgos_Q4_expm1+hxs*_cgos_Q5_expm1))))
-	t = 3 - r1*hfx
-	e = hxs * ((r1 - t) / (6 - x*t))
+	r1 = 1.0 + hxs*(_cgos_Q1_expm1+hxs*(_cgos_Q2_expm1+hxs*(_cgos_Q3_expm1+hxs*(_cgos_Q4_expm1+hxs*_cgos_Q5_expm1))))
+	t = 3.0 - r1*hfx
+	e = hxs * ((r1 - t) / (6.0 - x*t))
 	if k == int32(0) {
 		return x - (x*e - hxs)
 	}
@@ -132,20 +132,20 @@ func Expm1(x float64) float64 {
 	}
 	if k == int32(1) {
 		if x < -0.25 {
-			return -2 * (e - (x + 0.5))
+			return -2.0 * (e - (x + 0.5))
 		}
-		return 1 + 2*(x-e)
+		return 1.0 + 2.0*(x-e)
 	}
 	*(*uint64)(unsafe.Pointer(&u)) = uint64(int32(1023)+k) << int32(52)
 	twopk = u.f
 	if k < int32(0) || k > int32(56) {
-		y = x - e + 1
+		y = x - e + 1.0
 		if k == int32(1024) {
-			y = y * 2 * 8.9884656743115795e+307
+			y = y * 2.0 * 8.9884656743115795e+307
 		} else {
 			y = y * twopk
 		}
-		return y - 1
+		return y - 1.0
 	}
 	*(*uint64)(unsafe.Pointer(&u)) = uint64(int32(1023)-k) << int32(52)
 	if k < int32(20) {

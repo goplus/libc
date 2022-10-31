@@ -133,9 +133,9 @@ func Atan2(y float64, x float64) float64 {
 		} else {
 			switch m {
 			case uint32(0):
-				return float64(0)
+				return float64(0.0)
 			case uint32(1):
-				return float64(-0)
+				return float64(-0.0)
 			case uint32(2):
 				return _cgos_pi_atan2
 			case uint32(3):

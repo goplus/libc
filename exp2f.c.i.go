@@ -24,22 +24,22 @@ func Exp2f(x float32) float32 {
 	xd = float64(x)
 	abstop = _cgos_top12_exp2f(x) & uint32(2047)
 	if func() int64 {
-		if abstop >= _cgos_top12_exp2f(128) {
+		if abstop >= _cgos_top12_exp2f(128.0) {
 			return 1
 		} else {
 			return 0
 		}
 	}() == int64(0) {
 		if *(*uint32)(unsafe.Pointer(&_cgoz_19_exp2f{x})) == *(*uint32)(unsafe.Pointer(&_cgoz_20_exp2f{-X__builtin_inff()})) {
-			return float32(0)
+			return float32(0.0)
 		}
 		if abstop >= _cgos_top12_exp2f(X__builtin_inff()) {
 			return x + x
 		}
-		if x > 0 {
+		if x > 0.0 {
 			return __math_oflowf(uint32(0))
 		}
-		if x <= -150 {
+		if x <= -150.0 {
 			return __math_uflowf(uint32(0))
 		}
 	}

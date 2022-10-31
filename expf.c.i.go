@@ -24,14 +24,14 @@ func Expf(x float32) float32 {
 	xd = float64(x)
 	abstop = _cgos_top12_expf(x) & uint32(2047)
 	if func() int64 {
-		if abstop >= _cgos_top12_expf(88) {
+		if abstop >= _cgos_top12_expf(88.0) {
 			return 1
 		} else {
 			return 0
 		}
 	}() == int64(0) {
 		if *(*uint32)(unsafe.Pointer(&_cgoz_19_expf{x})) == *(*uint32)(unsafe.Pointer(&_cgoz_20_expf{-X__builtin_inff()})) {
-			return float32(0)
+			return float32(0.0)
 		}
 		if abstop >= _cgos_top12_expf(X__builtin_inff()) {
 			return x + x

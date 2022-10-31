@@ -24,9 +24,9 @@ func Rintf(x float32) float32 {
 	if y == float32(int32(0)) {
 		return func() float32 {
 			if s != 0 {
-				return -0
+				return -0.0
 			} else {
-				return 0
+				return 0.0
 			}
 		}()
 	}

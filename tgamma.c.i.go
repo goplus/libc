@@ -30,7 +30,7 @@ func _cgos_sinpi_tgamma(x float64) float64 {
 var _cgos_gmhalf_tgamma float64 = 5.5246800407767296
 var _cgos_Snum_tgamma [13]float64 = [13]float64{23531376880.410759, 42919803642.649101, 35711959237.355667, 17921034426.037209, 6039542586.3520279, 1439720407.3117216, 248874557.86205417, 31426415.585400194, 2876370.6289353725, 186056.26539522348, 8071.6720023658163, 210.82427775157936, 2.5066282746310002}
 var _cgos_Sden_tgamma [13]float64 = [13]float64{float64(int32(0)), float64(int32(39916800)), float64(int32(120543840)), float64(int32(150917976)), float64(int32(105258076)), float64(int32(45995730)), float64(int32(13339535)), float64(int32(2637558)), float64(int32(357423)), float64(int32(32670)), float64(int32(1925)), float64(int32(66)), float64(int32(1))}
-var _cgos_fact_tgamma [23]float64 = [23]float64{float64(int32(1)), float64(int32(1)), float64(int32(2)), float64(int32(6)), float64(int32(24)), float64(int32(120)), float64(int32(720)), 5040, 40320, 362880, 3628800, 39916800, 479001600, 6227020800, 87178291200, 1307674368000, 20922789888000, 355687428096000, 6402373705728000, 1.21645100408832e+17, 2.43290200817664e+18, 5.109094217170944e+19, 1.1240007277776077e+21}
+var _cgos_fact_tgamma [23]float64 = [23]float64{float64(int32(1)), float64(int32(1)), float64(int32(2)), float64(int32(6)), float64(int32(24)), float64(int32(120)), float64(int32(720)), 5040.0, 40320.0, 362880.0, 3628800.0, 39916800.0, 479001600.0, 6227020800.0, 87178291200.0, 1307674368000.0, 20922789888000.0, 355687428096000.0, 6402373705728000.0, 1.21645100408832e+17, 2.43290200817664e+18, 5.109094217170944e+19, 1.1240007277776077e+21}
 
 func _cgos_S_tgamma(x float64) float64 {
 	var num float64 = float64(int32(0))
@@ -72,7 +72,7 @@ func Tgamma(x float64) float64 {
 		if sign != 0 {
 			return func() float64 {
 				return float64(int32(0))
-			}() / 0
+			}() / 0.0
 		}
 		if x <= float64(184/8) {
 			return *(*float64)(unsafe.Pointer(uintptr(unsafe.Pointer((*float64)(unsafe.Pointer(&_cgos_fact_tgamma)))) + uintptr(int32(x)-int32(1))*8))
@@ -95,7 +95,7 @@ func Tgamma(x float64) float64 {
 			if Floor(x)*0.5 == Floor(x*0.5) {
 				return float64(int32(0))
 			}
-			return float64(-0)
+			return float64(-0.0)
 		}
 		x *= float64(8.9884656743115795e+307)
 		return x

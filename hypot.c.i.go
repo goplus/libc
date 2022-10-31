@@ -6,7 +6,7 @@ func _cgos_sq_hypot(hi *float64, lo *float64, x float64) {
 	var xh float64
 	var xl float64
 	var xc float64
-	xc = float64(x) * (134217728 + float64(int32(1)))
+	xc = float64(x) * (134217728.0 + float64(int32(1)))
 	xh = x - xc + xc
 	xl = x - xh
 	*hi = float64(x) * x

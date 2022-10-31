@@ -123,10 +123,10 @@ func __lgammaf_r(x float32, signgamp *int32) float32 {
 	if sign != 0 {
 		x = -x
 		t = _cgos_sin_pi_lgammaf_r(x)
-		if t == 0 {
-			return 1 / (x - x)
+		if t == 0.0 {
+			return 1.0 / (x - x)
 		}
-		if t > 0 {
+		if t > 0.0 {
 			*signgamp = -1
 		} else {
 			t = -t
@@ -139,25 +139,25 @@ func __lgammaf_r(x float32, signgamp *int32) float32 {
 		if ix <= uint32(1063675494) {
 			r = -Logf(x)
 			if ix >= uint32(1060850208) {
-				y = 1 - x
+				y = 1.0 - x
 				i = int32(0)
 			} else if ix >= uint32(1047343880) {
-				y = x - (_cgos_tc_lgammaf_r - 1)
+				y = x - (_cgos_tc_lgammaf_r - 1.0)
 				i = int32(1)
 			} else {
 				y = x
 				i = int32(2)
 			}
 		} else {
-			r = float32(0)
+			r = float32(0.0)
 			if ix >= uint32(1071490584) {
-				y = 2 - x
+				y = 2.0 - x
 				i = int32(0)
 			} else if ix >= uint32(1067296288) {
 				y = x - _cgos_tc_lgammaf_r
 				i = int32(1)
 			} else {
-				y = x - 1
+				y = x - 1.0
 				i = int32(2)
 			}
 		}
@@ -180,38 +180,38 @@ func __lgammaf_r(x float32, signgamp *int32) float32 {
 			break
 		case int32(2):
 			p1 = y * (_cgos_u0_lgammaf_r + y*(_cgos_u1_lgammaf_r+y*(_cgos_u2_lgammaf_r+y*(_cgos_u3_lgammaf_r+y*(_cgos_u4_lgammaf_r+y*_cgos_u5_lgammaf_r)))))
-			p2 = 1 + y*(_cgos_v1_lgammaf_r+y*(_cgos_v2_lgammaf_r+y*(_cgos_v3_lgammaf_r+y*(_cgos_v4_lgammaf_r+y*_cgos_v5_lgammaf_r))))
+			p2 = 1.0 + y*(_cgos_v1_lgammaf_r+y*(_cgos_v2_lgammaf_r+y*(_cgos_v3_lgammaf_r+y*(_cgos_v4_lgammaf_r+y*_cgos_v5_lgammaf_r))))
 			r += -0.5*y + p1/p2
 		}
 	} else if ix < uint32(1090519040) {
 		i = int32(x)
 		y = x - float32(i)
 		p = y * (_cgos_s0_lgammaf_r + y*(_cgos_s1_lgammaf_r+y*(_cgos_s2_lgammaf_r+y*(_cgos_s3_lgammaf_r+y*(_cgos_s4_lgammaf_r+y*(_cgos_s5_lgammaf_r+y*_cgos_s6_lgammaf_r))))))
-		q = 1 + y*(_cgos_r1_lgammaf_r+y*(_cgos_r2_lgammaf_r+y*(_cgos_r3_lgammaf_r+y*(_cgos_r4_lgammaf_r+y*(_cgos_r5_lgammaf_r+y*_cgos_r6_lgammaf_r)))))
+		q = 1.0 + y*(_cgos_r1_lgammaf_r+y*(_cgos_r2_lgammaf_r+y*(_cgos_r3_lgammaf_r+y*(_cgos_r4_lgammaf_r+y*(_cgos_r5_lgammaf_r+y*_cgos_r6_lgammaf_r)))))
 		r = 0.5*y + p/q
-		z = float32(1)
+		z = float32(1.0)
 		switch i {
 		case int32(7):
-			z *= y + 6
+			z *= y + 6.0
 		case int32(6):
-			z *= y + 5
+			z *= y + 5.0
 		case int32(5):
-			z *= y + 4
+			z *= y + 4.0
 		case int32(4):
-			z *= y + 3
+			z *= y + 3.0
 		case int32(3):
-			z *= y + 2
+			z *= y + 2.0
 			r += Logf(z)
 			break
 		}
 	} else if ix < uint32(1551892480) {
 		t = Logf(x)
-		z = 1 / x
+		z = 1.0 / x
 		y = z * z
 		w = _cgos_w0_lgammaf_r + z*(_cgos_w1_lgammaf_r+y*(_cgos_w2_lgammaf_r+y*(_cgos_w3_lgammaf_r+y*(_cgos_w4_lgammaf_r+y*(_cgos_w5_lgammaf_r+y*_cgos_w6_lgammaf_r)))))
-		r = (x-0.5)*(t-1) + w
+		r = (x-0.5)*(t-1.0) + w
 	} else {
-		r = x * (Logf(x) - 1)
+		r = x * (Logf(x) - 1.0)
 	}
 	if sign != 0 {
 		r = nadj - r

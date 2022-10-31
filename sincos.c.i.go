@@ -48,11 +48,11 @@ func Sincos(x float64, sin *float64, cos *float64) {
 				}
 			}
 			*sin = x
-			*cos = float64(1)
+			*cos = float64(1.0)
 			return
 		}
-		*sin = __sin(x, 0, int32(0))
-		*cos = __cos(x, 0)
+		*sin = __sin(x, 0.0, int32(0))
+		*cos = __cos(x, 0.0)
 		return
 	}
 	if ix >= uint32(2146435072) {
