@@ -5,5 +5,5 @@ go 1.16
 require (
 	github.com/goplus/c2go v0.7.13
 	github.com/petermattis/goid v0.0.0-20220331194723-8ee3e6ded87a
-	golang.org/x/sys v0.6.0
+	golang.org/x/sys v0.12.0
 )
